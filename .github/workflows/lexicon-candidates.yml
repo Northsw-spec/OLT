@@ -1,0 +1,55 @@
+name: Build full OT source-lexicon candidate join
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_lexicon_candidates.py"
+      - "tests/test_lexicon_candidates.py"
+      - ".github/workflows/lexicon-candidates.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-lexicon-candidates
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit-test lexical identifiers
+        run: python -m unittest discover -s tests -p 'test_lexicon_candidates.py' -v
+      - name: Build source-derived lexicon candidates and Genesis owner lock anchors
+        run: python scripts/build_lexicon_candidates.py
+      - name: Validate complete candidate coverage and review limitations
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/quality")
+          a=json.loads((p/"corpus_audit.json").read_text())
+          r=json.loads((p/"lexicon_join_report.json").read_text())
+          assert r["observed_source_lemma_keys"]==a["distinct_exact_lemma_keys"]
+          assert r["status"]=="AUTOMATED_CANDIDATE_JOIN_NOT_LEXICALLY_APPROVED"
+          assert r["all_english_approval"]=="NOT_DONE"
+          assert r["genesis_1_owner_lock_candidates"]["bara"]==5
+          assert r["genesis_1_owner_lock_candidates"]["asah"]==7
+          print("PASS: candidate identity coverage; NO philological signoff")
+          PY
+      - name: Commit candidate join products
+        run: |
+          git config user.name "olt-lexicon[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quality
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Add full source-lexicon candidate join and Genesis 1 owner-lock matches"
+            git push origin HEAD:main
+          fi
