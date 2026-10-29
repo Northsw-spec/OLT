@@ -2,7 +2,7 @@ import copy,sys,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
-from genesis_literal_proposals import source_verse_1,candidate_verse_1,priority_queue,VERSE_PRIMARY,read
+from genesis_literal_proposals import source_verse_1,candidate_verse_1,priority_queue,VERSE_PRIMARY,GRAMMAR_ONLY,read
 
 class FirstLexicalProposalTests(unittest.TestCase):
     @classmethod
@@ -66,6 +66,11 @@ class FirstLexicalProposalTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"Grammar-only source morphology"):
             priority_queue(self.cards,d)
 
+    def test_it_in_grammar_only_proposal_fails(self):
+        from unittest.mock import patch
+        with patch.dict(GRAMMAR_ONLY, {"01SV6":("Gen.1.11","b","HR/Sp3ms","in it","3rd masculine singular")}):
+            with self.assertRaisesRegex(ValueError,"Neutral English pronoun"):
+                priority_queue(self.cards,self.source)
     def test_ranked_queue_has_no_94_automatic_english_approvals(self):
         q=priority_queue(self.cards,self.source)
         self.assertEqual(q["all_genesis_1_unique_lemma_ids"],97)

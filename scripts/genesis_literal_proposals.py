@@ -190,7 +190,7 @@ def priority_queue(study_cards,source_dossier):
             "treated_as_numeric_dictionary_lemma":False,
             "not_an_omitted_word":True,
         })
-    if any(re.search(r"\\b(?:it|its|itself)\\b",r["proposed_english_surface"],re.I)
+    if any(re.search(r"\b(?:it|its|itself)\b",r["proposed_english_surface"],re.I)
            for r in grammar_only):
         raise ValueError("Neutral English pronoun in grammar-only source token")
 
