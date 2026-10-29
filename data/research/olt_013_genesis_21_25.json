@@ -1,0 +1,2516 @@
+{
+  "checkpoint": "OLT-013",
+  "end_verse": 25,
+  "full_english_lexicon_approved": false,
+  "independent_hebrew_morphology_signed_off": false,
+  "non_numeric_grammar_token_ids": [],
+  "observed_exact_lemma_ids": 37,
+  "owner_lock_checks": [
+    "bara=shape",
+    "asah=make",
+    "raqia=firmament",
+    "waw=and"
+  ],
+  "project": "Olund's Linked Translation",
+  "provenance": "Pinned OSHB/WLC original source words and source-linked BDB/Strong dictionary cards; proposal is editorial and unapproved.",
+  "publication_status": "BLOCKED",
+  "research_notes": [
+    {
+      "lemma": "1254 a",
+      "reference": "Gen.1.21",
+      "status": "OWNER_LOCK",
+      "text": "Bara is a Qal wayyiqtol verb here. The OLT owner-lock is shaped, not created. English past follows the actual source form.",
+      "type": "OWNER_LOCK"
+    },
+    {
+      "lemma": "8577 b",
+      "reference": "Gen.1.21",
+      "status": "RESEARCH_ONLY",
+      "text": "Tanninim is plurally aquatic-context creatures; traditional versions include sea monsters, dragons and great sea creatures. 'Great sea-creatures' remains a nonapproved English semantic proposal.",
+      "type": "LEXICAL_ALTERNATIVES"
+    },
+    {
+      "lemma": "5315",
+      "reference": "Gen.1.21",
+      "status": "RESEARCH_ONLY",
+      "text": "Nefesh has a wider source range than a modern immaterial 'soul'. 'Living soul' deliberately preserves the Hebrew noun/adjective distinction; its contextual sense remains under editorial review.",
+      "type": "LEXICAL_SEMANTICS"
+    },
+    {
+      "lemma": "8317",
+      "reference": "Gen.1.21",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Shartzu is source-tagged Qal qatal 3cp; 'swarmed' does not derive from the wayyiqtol mandate here.",
+      "type": "QATAL_NOT_WAYYIQTOL"
+    },
+    {
+      "lemma": "1288",
+      "reference": "Gen.1.22",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Vayvarekh is Piel wayyiqtol 3ms; English blessed is simple past.",
+      "type": "PIEL_WAYYIQTOL"
+    },
+    {
+      "lemma": "853",
+      "reference": "Gen.1.22",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Otam = direct-object marker plus 3mp pronominal suffix and receives them; bare et in the same verse has a zero standalone English gloss.",
+      "type": "PRONOMINAL_OBJECT"
+    },
+    {
+      "lemma": "6509",
+      "reference": "Gen.1.22",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Peru is Qal imperative 2mp; Be fruitful is a command, never a wayyiqtol narrative past.",
+      "type": "IMPERATIVE"
+    },
+    {
+      "lemma": "7235 a",
+      "reference": "Gen.1.22",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Urvu is imperative 2mp, but following yirev is jussive 3ms; both may have command force while their morphology differs.",
+      "type": "IMPERATIVE_JUSSIVE_DISTINCTION"
+    },
+    {
+      "lemma": "4327",
+      "reference": "Gen.1.24",
+      "status": "RESEARCH_ONLY",
+      "text": "Lemīnah here has a third feminine-singular suffix, expressed in OLT as her kind. This is a grammatical convention, not a repeated Bible-wide gender disclaimer.",
+      "type": "FEMININE_SUFFIX"
+    },
+    {
+      "lemma": "6213 a",
+      "reference": "Gen.1.25",
+      "status": "OWNER_LOCK",
+      "text": "Asah, here a wayyiqtol, must render He made, never shaped; the different Hebrew verb bara used in Gen 1:21 remains shaped.",
+      "type": "OWNER_LOCK"
+    },
+    {
+      "lemma": "1254 a",
+      "reference": "Gen.1.21",
+      "status": "RESEARCH_ONLY",
+      "text": "A Christian canonical reader can compare divine agency in Genesis 1 with John 1:3. This is interpretive theological cross-reference, not proof that Hebrew bara lexically denotes Christ or shares a Greek homonym.",
+      "type": "CANONICAL_TYPOLOGY_CANDIDATE"
+    }
+  ],
+  "source_token_count": 74,
+  "source_wayyiqtol_count": 9,
+  "start_verse": 21,
+  "status": "SOURCE_ALIGNED_ENGLISH_RESEARCH_ONLY",
+  "under_word_homonym_presentation": "UNDER_ENGLISH_WORD",
+  "verse_research": [
+    {
+      "english_main_research_proposal": "And God — He shaped the great sea-creatures, and every living soul creeping, which the waters swarmed to their kinds, and every bird of wing to his kind; and God — He saw that — good.",
+      "original_word_alignments": [
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "b.cw.aa"
+              ],
+              "source_lemma": "1254 a",
+              "strong_ids": [
+                "H1254"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He shaped",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 1,
+          "original_exact_lemma_ids": [
+            "1254 a"
+          ],
+          "pointed_hebrew": "וַ/יִּבְרָ֣א",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "c/1254 a",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "016kU",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 2,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "01qry",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 3,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "אֶת",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "853",
+          "source_morphology_raw": "HTo",
+          "source_token_id": "01bvP",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "w.be.ac"
+              ],
+              "source_lemma": "8577 b",
+              "strong_ids": [
+                "H8577"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the great sea-creatures",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 4,
+          "original_exact_lemma_ids": [
+            "8577 b"
+          ],
+          "pointed_hebrew": "הַ/תַּנִּינִ֖ם",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "d/8577 b",
+          "source_morphology_raw": "HTd/Ncmpa",
+          "source_token_id": "01wjj",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "c.aq.ae"
+              ],
+              "source_lemma": "1419 a",
+              "strong_ids": [
+                "H1419"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the great",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 5,
+          "original_exact_lemma_ids": [
+            "1419 a"
+          ],
+          "pointed_hebrew": "הַ/גְּדֹלִ֑ים",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "d/1419 a",
+          "source_morphology_raw": "HTd/Aampa",
+          "source_token_id": "01Tn7",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 6,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "וְ/אֵ֣ת",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "c/853",
+          "source_morphology_raw": "HC/To",
+          "source_token_id": "01hEs",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.bn.ab"
+              ],
+              "source_lemma": "3605",
+              "strong_ids": [
+                "H3605"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "every",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 7,
+          "original_exact_lemma_ids": [
+            "3605"
+          ],
+          "pointed_hebrew": "כָּל",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "3605",
+          "source_morphology_raw": "HNcmsc",
+          "source_token_id": "01xAF",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "n.en.ab"
+              ],
+              "source_lemma": "5315",
+              "strong_ids": [
+                "H5315"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "soul",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 8,
+          "original_exact_lemma_ids": [
+            "5315"
+          ],
+          "pointed_hebrew": "נֶ֣פֶשׁ",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "5315",
+          "source_morphology_raw": "HNcbsa",
+          "source_token_id": "01qg1",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "h.cd.ab"
+              ],
+              "source_lemma": "2416 a",
+              "strong_ids": [
+                "H2416"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the living",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 9,
+          "original_exact_lemma_ids": [
+            "2416 a"
+          ],
+          "pointed_hebrew": "הַֽ/חַיָּ֣ה",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "d/2416 a",
+          "source_morphology_raw": "HTd/Aafsa",
+          "source_token_id": "016w9",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.dc.aa"
+              ],
+              "source_lemma": "7430",
+              "strong_ids": [
+                "H7430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the creeping",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 10,
+          "original_exact_lemma_ids": [
+            "7430"
+          ],
+          "pointed_hebrew": "הָֽ/רֹמֶ֡שֶׂת",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "d/7430",
+          "source_morphology_raw": "HTd/Vqrfsa",
+          "source_token_id": "01wA4",
+          "source_verb_form": "r",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gk.aa"
+              ],
+              "source_lemma": "834 a",
+              "strong_ids": [
+                "H834"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "which",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 11,
+          "original_exact_lemma_ids": [
+            "834 a"
+          ],
+          "pointed_hebrew": "אֲשֶׁר֩",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "834 a",
+          "source_morphology_raw": "HTr",
+          "source_token_id": "01ibe",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "v.gc.aa"
+              ],
+              "source_lemma": "8317",
+              "strong_ids": [
+                "H8317"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "swarmed",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 12,
+          "original_exact_lemma_ids": [
+            "8317"
+          ],
+          "pointed_hebrew": "שָׁרְצ֨וּ",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "8317",
+          "source_morphology_raw": "HVqp3cp",
+          "source_token_id": "01v8V",
+          "source_verb_form": "p",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bt.aa"
+              ],
+              "source_lemma": "4325",
+              "strong_ids": [
+                "H4325"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the waters",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 13,
+          "original_exact_lemma_ids": [
+            "4325"
+          ],
+          "pointed_hebrew": "הַ/מַּ֜יִם",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "d/4325",
+          "source_morphology_raw": "HTd/Ncmpa",
+          "source_token_id": "01T2S",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to their kinds",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 14,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִֽינֵ/הֶ֗ם",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3mp",
+          "source_token_id": "01tkJ",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 15,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "וְ/אֵ֨ת",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "c/853",
+          "source_morphology_raw": "HC/To",
+          "source_token_id": "01EXL",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.bn.ab"
+              ],
+              "source_lemma": "3605",
+              "strong_ids": [
+                "H3605"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "every",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 16,
+          "original_exact_lemma_ids": [
+            "3605"
+          ],
+          "pointed_hebrew": "כָּל",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "3605",
+          "source_morphology_raw": "HNcmsc",
+          "source_token_id": "01ZPN",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "p.bk.ab"
+              ],
+              "source_lemma": "5775",
+              "strong_ids": [
+                "H5775"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "bird",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 17,
+          "original_exact_lemma_ids": [
+            "5775"
+          ],
+          "pointed_hebrew": "ע֤וֹף",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "5775",
+          "source_morphology_raw": "HNcmsa",
+          "source_token_id": "01q1G",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.ce.ab"
+              ],
+              "source_lemma": "3671",
+              "strong_ids": [
+                "H3671"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "of wing",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 18,
+          "original_exact_lemma_ids": [
+            "3671"
+          ],
+          "pointed_hebrew": "כָּנָף֙",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "3671",
+          "source_morphology_raw": "HNcfsa",
+          "source_token_id": "01bYD",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to his kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 19,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינֵ֔/הוּ",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3ms",
+          "source_token_id": "01v2F",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.ab.aa"
+              ],
+              "source_lemma": "7200",
+              "strong_ids": [
+                "H7200"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He saw",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 20,
+          "original_exact_lemma_ids": [
+            "7200"
+          ],
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "c/7200",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "017vt",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 21,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "01kDm",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.bg.aa"
+              ],
+              "source_lemma": "3588 a",
+              "strong_ids": [
+                "H3588"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "that",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 22,
+          "original_exact_lemma_ids": [
+            "3588 a"
+          ],
+          "pointed_hebrew": "כִּי",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "3588 a",
+          "source_morphology_raw": "HC",
+          "source_token_id": "01doW",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "i.ai.ab"
+              ],
+              "source_lemma": "2896 a",
+              "strong_ids": [
+                "H2896"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "good",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 23,
+          "original_exact_lemma_ids": [
+            "2896 a"
+          ],
+          "pointed_hebrew": "טֽוֹב",
+          "reference": "Gen.1.21",
+          "source_lemma_raw": "2896 a",
+          "source_morphology_raw": "HAamsa",
+          "source_token_id": "01eRa",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        }
+      ],
+      "reference": "Gen.1.21",
+      "source_token_count": 23,
+      "source_wayyiqtol_count": 2,
+      "status": "DRAFT_NOT_PUBLISHED"
+    },
+    {
+      "english_main_research_proposal": "And God — He blessed them, saying: Be fruitful, and multiply, and fill the waters in the Seas; and the bird — let [he] multiply in the Earth.",
+      "original_word_alignments": [
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "b.dd.aa"
+              ],
+              "source_lemma": "1288",
+              "strong_ids": [
+                "H1288"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He blessed",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 1,
+          "original_exact_lemma_ids": [
+            "1288"
+          ],
+          "pointed_hebrew": "וַ/יְבָ֧רֶךְ",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "c/1288",
+          "source_morphology_raw": "HC/Vpw3ms",
+          "source_token_id": "01kDf",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "them",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 2,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "אֹתָ֛/ם",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "853",
+          "source_morphology_raw": "HTo/Sp3mp",
+          "source_token_id": "0163G",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 3,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "01WPn",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.ea.aa"
+              ],
+              "source_lemma": "559",
+              "strong_ids": [
+                "H559"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "saying",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 4,
+          "original_exact_lemma_ids": [
+            "559"
+          ],
+          "pointed_hebrew": "לֵ/אמֹ֑ר",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "l/559",
+          "source_morphology_raw": "HR/Vqc",
+          "source_token_id": "011jv",
+          "source_verb_form": "c",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "q.cv.aa"
+              ],
+              "source_lemma": "6509",
+              "strong_ids": [
+                "H6509"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "Be fruitful",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 5,
+          "original_exact_lemma_ids": [
+            "6509"
+          ],
+          "pointed_hebrew": "פְּר֣וּ",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "6509",
+          "source_morphology_raw": "HVqv2mp",
+          "source_token_id": "01cK8",
+          "source_verb_form": "v",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.ai.aa"
+              ],
+              "source_lemma": "7235 a",
+              "strong_ids": [
+                "H7235"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and multiply",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 6,
+          "original_exact_lemma_ids": [
+            "7235 a"
+          ],
+          "pointed_hebrew": "וּ/רְב֗וּ",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "c/7235 a",
+          "source_morphology_raw": "HC/Vqv2mp",
+          "source_token_id": "01DDb",
+          "source_verb_form": "v",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bz.aa"
+              ],
+              "source_lemma": "4390",
+              "strong_ids": [
+                "H4390"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and fill",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 7,
+          "original_exact_lemma_ids": [
+            "4390"
+          ],
+          "pointed_hebrew": "וּ/מִלְא֤וּ",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "c/4390",
+          "source_morphology_raw": "HC/Vqv2mp",
+          "source_token_id": "01RCg",
+          "source_verb_form": "v",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 8,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "אֶת",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "853",
+          "source_morphology_raw": "HTo",
+          "source_token_id": "015KE",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bt.aa"
+              ],
+              "source_lemma": "4325",
+              "strong_ids": [
+                "H4325"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the waters",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 9,
+          "original_exact_lemma_ids": [
+            "4325"
+          ],
+          "pointed_hebrew": "הַ/מַּ֨יִם֙",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "d/4325",
+          "source_morphology_raw": "HTd/Ncmpa",
+          "source_token_id": "01qVd",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "j.br.ab"
+              ],
+              "source_lemma": "3220",
+              "strong_ids": [
+                "H3220"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "in the Seas",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 10,
+          "original_exact_lemma_ids": [
+            "3220"
+          ],
+          "pointed_hebrew": "בַּ/יַּמִּ֔ים",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "b/3220",
+          "source_morphology_raw": "HRd/Ncmpa",
+          "source_token_id": "01koG",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "p.bk.ab"
+              ],
+              "source_lemma": "5775",
+              "strong_ids": [
+                "H5775"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and the bird",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 11,
+          "original_exact_lemma_ids": [
+            "5775"
+          ],
+          "pointed_hebrew": "וְ/הָ/ע֖וֹף",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "c/d/5775",
+          "source_morphology_raw": "HC/Td/Ncmsa",
+          "source_token_id": "01e6B",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.ai.aa"
+              ],
+              "source_lemma": "7235 a",
+              "strong_ids": [
+                "H7235"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "let [he] multiply",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 12,
+          "original_exact_lemma_ids": [
+            "7235 a"
+          ],
+          "pointed_hebrew": "יִ֥רֶב",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "7235 a",
+          "source_morphology_raw": "HVqj3ms",
+          "source_token_id": "018GY",
+          "source_verb_form": "j",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.fx.aa"
+              ],
+              "source_lemma": "776",
+              "strong_ids": [
+                "H776"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "in the Earth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 13,
+          "original_exact_lemma_ids": [
+            "776"
+          ],
+          "pointed_hebrew": "בָּ/אָֽרֶץ",
+          "reference": "Gen.1.22",
+          "source_lemma_raw": "b/776",
+          "source_morphology_raw": "HRd/Ncbsa",
+          "source_token_id": "01GpK",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        }
+      ],
+      "reference": "Gen.1.22",
+      "source_token_count": 13,
+      "source_wayyiqtol_count": 1,
+      "status": "DRAFT_NOT_PUBLISHED"
+    },
+    {
+      "english_main_research_proposal": "And was evening, and was morning: day fifth.",
+      "original_word_alignments": [
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "e.bf.aa"
+              ],
+              "source_lemma": "1961",
+              "strong_ids": [
+                "H1961"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and was",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 1,
+          "original_exact_lemma_ids": [
+            "1961"
+          ],
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "c/1961",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "0168C",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "p.ff.ab"
+              ],
+              "source_lemma": "6153",
+              "strong_ids": [
+                "H6153"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "evening",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 2,
+          "original_exact_lemma_ids": [
+            "6153"
+          ],
+          "pointed_hebrew": "עֶ֥רֶב",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "6153",
+          "source_morphology_raw": "HNcmsa",
+          "source_token_id": "01CMz",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "e.bf.aa"
+              ],
+              "source_lemma": "1961",
+              "strong_ids": [
+                "H1961"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and was",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 3,
+          "original_exact_lemma_ids": [
+            "1961"
+          ],
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "c/1961",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "01D4c",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "b.cu.ad"
+              ],
+              "source_lemma": "1242",
+              "strong_ids": [
+                "H1242"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "morning",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 4,
+          "original_exact_lemma_ids": [
+            "1242"
+          ],
+          "pointed_hebrew": "בֹ֖קֶר",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "1242",
+          "source_morphology_raw": "HNcmsa",
+          "source_token_id": "01ta1",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "j.ay.aa"
+              ],
+              "source_lemma": "3117",
+              "strong_ids": [
+                "H3117"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "day",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 5,
+          "original_exact_lemma_ids": [
+            "3117"
+          ],
+          "pointed_hebrew": "י֥וֹם",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "3117",
+          "source_morphology_raw": "HNcmsa",
+          "source_token_id": "01JnD",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "h.dr.af"
+              ],
+              "source_lemma": "2549",
+              "strong_ids": [
+                "H2549"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "fifth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 6,
+          "original_exact_lemma_ids": [
+            "2549"
+          ],
+          "pointed_hebrew": "חֲמִישִֽׁי",
+          "reference": "Gen.1.23",
+          "source_lemma_raw": "2549",
+          "source_morphology_raw": "HAomsa",
+          "source_token_id": "01jfz",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        }
+      ],
+      "reference": "Gen.1.23",
+      "source_token_count": 6,
+      "source_wayyiqtol_count": 2,
+      "status": "DRAFT_NOT_PUBLISHED"
+    },
+    {
+      "english_main_research_proposal": "And God — He said: Let the Earth bring forth living soul to her kind, cattle, and creeping thing, and beast of Earth to her kind; and so was.",
+      "original_word_alignments": [
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.ea.aa"
+              ],
+              "source_lemma": "559",
+              "strong_ids": [
+                "H559"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He said",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 1,
+          "original_exact_lemma_ids": [
+            "559"
+          ],
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "c/559",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "01ErQ",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 2,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "014fv",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "j.cq.aa"
+              ],
+              "source_lemma": "3318",
+              "strong_ids": [
+                "H3318"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "Let bring forth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 3,
+          "original_exact_lemma_ids": [
+            "3318"
+          ],
+          "pointed_hebrew": "תּוֹצֵ֨א",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "3318",
+          "source_morphology_raw": "HVhj3fs",
+          "source_token_id": "01yDv",
+          "source_verb_form": "j",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.fx.aa"
+              ],
+              "source_lemma": "776",
+              "strong_ids": [
+                "H776"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the Earth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 4,
+          "original_exact_lemma_ids": [
+            "776"
+          ],
+          "pointed_hebrew": "הָ/אָ֜רֶץ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "d/776",
+          "source_morphology_raw": "HTd/Ncbsa",
+          "source_token_id": "01jyT",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "n.en.ab"
+              ],
+              "source_lemma": "5315",
+              "strong_ids": [
+                "H5315"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "soul",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 5,
+          "original_exact_lemma_ids": [
+            "5315"
+          ],
+          "pointed_hebrew": "נֶ֤פֶשׁ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "5315",
+          "source_morphology_raw": "HNcbsa",
+          "source_token_id": "01Unh",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "h.cd.ab"
+              ],
+              "source_lemma": "2416 a",
+              "strong_ids": [
+                "H2416"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "living",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 6,
+          "original_exact_lemma_ids": [
+            "2416 a"
+          ],
+          "pointed_hebrew": "חַיָּה֙",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "2416 a",
+          "source_morphology_raw": "HAafsa",
+          "source_token_id": "01QH2",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to her kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 7,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינָ֔/הּ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3fs",
+          "source_token_id": "01xxn",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "b.al.ab"
+              ],
+              "source_lemma": "929",
+              "strong_ids": [
+                "H929"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "cattle",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 8,
+          "original_exact_lemma_ids": [
+            "929"
+          ],
+          "pointed_hebrew": "בְּהֵמָ֥ה",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "929",
+          "source_morphology_raw": "HNcfsa",
+          "source_token_id": "01ou4",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.dc.ab"
+              ],
+              "source_lemma": "7431",
+              "strong_ids": [
+                "H7431"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and creeping thing",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 9,
+          "original_exact_lemma_ids": [
+            "7431"
+          ],
+          "pointed_hebrew": "וָ/רֶ֛מֶשׂ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "c/7431",
+          "source_morphology_raw": "HC/Ncmsa",
+          "source_token_id": "013KZ",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "h.cd.ad"
+              ],
+              "source_lemma": "2416 c",
+              "strong_ids": [
+                "H2416"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and beast of",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 10,
+          "original_exact_lemma_ids": [
+            "2416 c"
+          ],
+          "pointed_hebrew": "וְ/חַֽיְתוֹ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "c/2416 c",
+          "source_morphology_raw": "HC/Ncfsc",
+          "source_token_id": "01jNE",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.fx.aa"
+              ],
+              "source_lemma": "776",
+              "strong_ids": [
+                "H776"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "Earth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 11,
+          "original_exact_lemma_ids": [
+            "776"
+          ],
+          "pointed_hebrew": "אֶ֖רֶץ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "776",
+          "source_morphology_raw": "HNcbsa",
+          "source_token_id": "01hj3",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to her kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 12,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינָ֑/הּ",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3fs",
+          "source_token_id": "01iDs",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "e.bf.aa"
+              ],
+              "source_lemma": "1961",
+              "strong_ids": [
+                "H1961"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and was",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 13,
+          "original_exact_lemma_ids": [
+            "1961"
+          ],
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "c/1961",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "016Lo",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.by.aa"
+              ],
+              "source_lemma": "3651 c",
+              "strong_ids": [
+                "H3651"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "so",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 14,
+          "original_exact_lemma_ids": [
+            "3651 c"
+          ],
+          "pointed_hebrew": "כֵֽן",
+          "reference": "Gen.1.24",
+          "source_lemma_raw": "3651 c",
+          "source_morphology_raw": "HD",
+          "source_token_id": "01JZq",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        }
+      ],
+      "reference": "Gen.1.24",
+      "source_token_count": 14,
+      "source_wayyiqtol_count": 2,
+      "status": "DRAFT_NOT_PUBLISHED"
+    },
+    {
+      "english_main_research_proposal": "And God — He made the beast of the Earth to her kind, and the cattle to her kind, and every creeping thing of the ground to his kind; and God — He saw that — good.",
+      "original_word_alignments": [
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "p.fy.aa"
+              ],
+              "source_lemma": "6213 a",
+              "strong_ids": [
+                "H6213"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He made",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 1,
+          "original_exact_lemma_ids": [
+            "6213 a"
+          ],
+          "pointed_hebrew": "וַ/יַּ֣עַשׂ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "c/6213 a",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "01ZpQ",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 2,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִים֩",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "019gS",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 3,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "אֶת",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "853",
+          "source_morphology_raw": "HTo",
+          "source_token_id": "01LAe",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "h.cd.ad"
+              ],
+              "source_lemma": "2416 c",
+              "strong_ids": [
+                "H2416"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the beast of",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 4,
+          "original_exact_lemma_ids": [
+            "2416 c"
+          ],
+          "pointed_hebrew": "חַיַּ֨ת",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "2416 c",
+          "source_morphology_raw": "HNcfsc",
+          "source_token_id": "01qK3",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.fx.aa"
+              ],
+              "source_lemma": "776",
+              "strong_ids": [
+                "H776"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the Earth",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 5,
+          "original_exact_lemma_ids": [
+            "776"
+          ],
+          "pointed_hebrew": "הָ/אָ֜רֶץ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "d/776",
+          "source_morphology_raw": "HTd/Ncbsa",
+          "source_token_id": "011Cv",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to her kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 6,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינָ֗/הּ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3fs",
+          "source_token_id": "01PBQ",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 7,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "וְ/אֶת",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "c/853",
+          "source_morphology_raw": "HC/To",
+          "source_token_id": "01mr5",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "b.al.ab"
+              ],
+              "source_lemma": "929",
+              "strong_ids": [
+                "H929"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the cattle",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 8,
+          "original_exact_lemma_ids": [
+            "929"
+          ],
+          "pointed_hebrew": "הַ/בְּהֵמָה֙",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "d/929",
+          "source_morphology_raw": "HTd/Ncfsa",
+          "source_token_id": "01QDu",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to her kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 9,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינָ֔/הּ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3fs",
+          "source_token_id": "01PbY",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.gm.aa"
+              ],
+              "source_lemma": "853",
+              "strong_ids": [
+                "H853"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "and",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 10,
+          "original_exact_lemma_ids": [
+            "853"
+          ],
+          "pointed_hebrew": "וְ/אֵ֛ת",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "c/853",
+          "source_morphology_raw": "HC/To",
+          "source_token_id": "01Ew6",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.bn.ab"
+              ],
+              "source_lemma": "3605",
+              "strong_ids": [
+                "H3605"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "every",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 11,
+          "original_exact_lemma_ids": [
+            "3605"
+          ],
+          "pointed_hebrew": "כָּל",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "3605",
+          "source_morphology_raw": "HNcmsc",
+          "source_token_id": "0174R",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.dc.ab"
+              ],
+              "source_lemma": "7431",
+              "strong_ids": [
+                "H7431"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "creeping thing of",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 12,
+          "original_exact_lemma_ids": [
+            "7431"
+          ],
+          "pointed_hebrew": "רֶ֥מֶשׂ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "7431",
+          "source_morphology_raw": "HNcmsc",
+          "source_token_id": "016zt",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.bc.ac"
+              ],
+              "source_lemma": "127",
+              "strong_ids": [
+                "H127"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "the ground",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 13,
+          "original_exact_lemma_ids": [
+            "127"
+          ],
+          "pointed_hebrew": "הָֽ/אֲדָמָ֖ה",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "d/127",
+          "source_morphology_raw": "HTd/Ncfsa",
+          "source_token_id": "01zEm",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "m.bv.ab"
+              ],
+              "source_lemma": "4327",
+              "strong_ids": [
+                "H4327"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "to his kind",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 14,
+          "original_exact_lemma_ids": [
+            "4327"
+          ],
+          "pointed_hebrew": "לְ/מִינֵ֑/הוּ",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "l/4327",
+          "source_morphology_raw": "HR/Ncmsc/Sp3ms",
+          "source_token_id": "012dm",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "t.ab.aa"
+              ],
+              "source_lemma": "7200",
+              "strong_ids": [
+                "H7200"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "And He saw",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": true,
+          "ordinal": 15,
+          "original_exact_lemma_ids": [
+            "7200"
+          ],
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "c/7200",
+          "source_morphology_raw": "HC/Vqw3ms",
+          "source_token_id": "01uYh",
+          "source_verb_form": "w",
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "a.dl.ad"
+              ],
+              "source_lemma": "430",
+              "strong_ids": [
+                "H430"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "God",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 16,
+          "original_exact_lemma_ids": [
+            "430"
+          ],
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "430",
+          "source_morphology_raw": "HNcmpa",
+          "source_token_id": "01YxK",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "k.bg.aa"
+              ],
+              "source_lemma": "3588 a",
+              "strong_ids": [
+                "H3588"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "that",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 17,
+          "original_exact_lemma_ids": [
+            "3588 a"
+          ],
+          "pointed_hebrew": "כִּי",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "3588 a",
+          "source_morphology_raw": "HC",
+          "source_token_id": "01aSJ",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        },
+        {
+          "below_word_homonym_links": {
+            "approved_links": [],
+            "presentation": "UNDER_ENGLISH_WORD"
+          },
+          "dictionary_ids": [
+            {
+              "bdb_ids": [
+                "i.ai.ab"
+              ],
+              "source_lemma": "2896 a",
+              "strong_ids": [
+                "H2896"
+              ]
+            }
+          ],
+          "english_fragment_research_only": "good",
+          "english_lexical_approval": false,
+          "independent_morphology_approval": false,
+          "is_source_tagged_wayyiqtol": false,
+          "ordinal": 18,
+          "original_exact_lemma_ids": [
+            "2896 a"
+          ],
+          "pointed_hebrew": "טֽוֹב",
+          "reference": "Gen.1.25",
+          "source_lemma_raw": "2896 a",
+          "source_morphology_raw": "HAamsa",
+          "source_token_id": "01Kz2",
+          "source_verb_form": null,
+          "token_status": "ORIGINAL_SOURCE_ANCHORED_NOT_INDEPENDENTLY_APPROVED"
+        }
+      ],
+      "reference": "Gen.1.25",
+      "source_token_count": 18,
+      "source_wayyiqtol_count": 2,
+      "status": "DRAFT_NOT_PUBLISHED"
+    }
+  ]
+}
