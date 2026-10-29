@@ -61,3 +61,18 @@ These verify implemented scope only, not the entire Bible translation.
 - [OLT-008 GitHub Actions PASS](https://github.com/Northsw-spec/OLT/actions/runs/40929329346): source fixture/proposal checks only, not independent grammar or publication approval.
 
 **Still blocked:** The proposed Genesis 1:1 English is *not a published approved verse*. Genesis 1 remaining 94 new English word families, full 434 word alignments, independent Hebrew morphology, original Hebrew+English ODT/PDF, all real footnotes, optional typological links, and human final philological review remain unfinished.
+
+## OLT-009 — Genesis 1:2–5 real Hebrew token alignment / research proposals
+
+- All **45 of 45** actual original source word tokens across Genesis 1:2–5 have a fresh proposed English source span, original Hebrew form, OSHB ID, exact lemma, morphology code, and linked dictionary references in `data/research/genesis_01_verses_02_to_05_research.json`.
+- Source token counts: Genesis 1:2 (**14**), 1:3 (**6**), 1:4 (**12**), 1:5 (**13**).
+- **Seven source-tagged wayyiqtol forms** are rendered in English simple past. Gen 1:3 `yehi` remains jussive and Gen 1:2 `merachephet` remains Piel feminine participle. Gen 1:5 second `qara` remains qatal, not wayyiqtol.
+- Genesis 1:4 EXACT approved first clause: `And God — He saw the light, that [he was] — good.`
+- The four English verse paragraphs and **9** scholarly-note outlines are research proposals, not independent lexical approval.
+- Genesis 1:2 `ruach` is recorded as potentially **spirit/wind/breath**; the OLT choice `Spirit of God` is still a researched proposed interpretation.
+- The general grammatical-gender explanation is restricted to Bible page one, never repeated as boilerplate.
+- Combined Gen 1:1–5 source-aligned research now covers **52 original word tokens**, of 434 in full Genesis 1. This is not a finalized 52-word Bible translation.
+- Negative tests now include wrong source IDs, incorrect morphological form, invalid wayyiqtol English tense, false jussive/participle classification, wrong feminine `Earth — she was` agreement, owner-locked Gen 1:4 wording violation, prohibited `it`, invented object-marker rendering and typology wrongly upgraded to lexical homonymy.
+- [OLT-009 source-scoped CI](https://github.com/Northsw-spec/OLT/actions/runs/40931923716) and [working original-token research dataset](../data/research/genesis_01_verses_02_to_05_research.json).
+
+**Release remains BLOCKED:** the other 382 original Gen 1 word-token English alignments, independent morphological review, remaining 94 owner-unapproved lexical families, detailed footnotes, printed English/Hebrew ODT/PDF, scholarly signoff and validated under-word links.
