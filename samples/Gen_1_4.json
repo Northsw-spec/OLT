@@ -1,0 +1,16 @@
+{
+  "verse": "Gen.1.4",
+  "translation": "And God — He saw the light, that [he was] — good.",
+  "original": "וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב",
+  "source_status": "MANUALLY_ENTERED_NOT_INDEPENDENTLY_VERIFIED",
+  "morphology": [
+    {
+      "lemma_id": "raah",
+      "hebrew": "וַיַּרְא",
+      "claimed_form": "WAYYIQTOL",
+      "english": "saw",
+      "english_tense": "SIMPLE_PAST"
+    }
+  ],
+  "status": "EXAMPLE_ONLY"
+}

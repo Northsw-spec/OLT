@@ -1,0 +1,116 @@
+{
+  "layout": "VERTICAL_UNDER_WORD",
+  "entries": [
+    {
+      "id": "noah-rest",
+      "verse": "Gen.5.29",
+      "word": "Noah",
+      "below": "Rest",
+      "relation": "NAME_ASSOCIATION",
+      "lemma_ids": [
+        "noah",
+        "nuach"
+      ],
+      "note": "Hebrew name association; Gen 5:29 comfort differs in root.",
+      "refs": [
+        "Gen.5.29",
+        "Gen.8.9"
+      ],
+      "position": "below",
+      "status": "PROVISIONAL",
+      "note_required": true,
+      "colors": {
+        "main": "#5B277D",
+        "linked": "#2463A6"
+      }
+    },
+    {
+      "id": "dove-rest",
+      "verse": "Gen.8.9",
+      "word": "Resting place",
+      "below": "Rest for foot",
+      "relation": "DIRECT_INTERTEXT",
+      "lemma_ids": [
+        "manoach"
+      ],
+      "note": "Wording parallels Deut 28:65; Sinai is typological commentary only.",
+      "refs": [
+        "Gen.8.9",
+        "Deut.28.65"
+      ],
+      "position": "below",
+      "status": "PROVISIONAL",
+      "note_required": true,
+      "colors": {
+        "main": "#5B277D",
+        "linked": "#2463A6"
+      }
+    },
+    {
+      "id": "serpent-divination",
+      "verse": "Gen.3.1",
+      "word": "Serpent",
+      "below": "Divination",
+      "relation": "HOMOGRAPH",
+      "lemma_ids": [
+        "serpent",
+        "divine"
+      ],
+      "note": "Distinct noun and verb with נחש consonants; not interchangeable meanings.",
+      "refs": [
+        "Gen.3.1",
+        "Gen.30.27"
+      ],
+      "position": "below",
+      "status": "PROVISIONAL",
+      "note_required": true,
+      "colors": {
+        "main": "#5B277D",
+        "linked": "#2463A6"
+      }
+    },
+    {
+      "id": "pitch-atonement",
+      "verse": "Gen.6.14",
+      "word": "Pitch",
+      "below": "Atonement",
+      "relation": "DISPUTED",
+      "lemma_ids": [
+        "coat",
+        "atone"
+      ],
+      "note": "Historical root/homonym relationship disputed; note atonement not literal coating meaning.",
+      "refs": [
+        "Gen.6.14",
+        "Lev.16.16"
+      ],
+      "position": "below",
+      "status": "PROVISIONAL",
+      "note_required": true,
+      "colors": {
+        "main": "#5B277D",
+        "linked": "#2463A6"
+      }
+    },
+    {
+      "id": "ark-christ",
+      "verse": "Gen.6.14",
+      "word": "Ark",
+      "below": "Deliverance",
+      "relation": "TYPOLOGY",
+      "lemma_ids": [],
+      "note": "A theological link, not a statement that the boat was cross-shaped.",
+      "refs": [
+        "Gen.6.14",
+        "1Pet.3.20-21"
+      ],
+      "position": "below",
+      "status": "PROVISIONAL",
+      "note_required": true,
+      "colors": {
+        "main": "#5B277D",
+        "linked": "#2463A6"
+      }
+    }
+  ]
+}

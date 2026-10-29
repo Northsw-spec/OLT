@@ -1,0 +1,7 @@
+:root{--olt-main:#5B277D;--olt-secondary:#2463A6}
+.olt-verse{font:16pt/1.38 Georgia,serif}
+.olt-link{display:inline-flex;flex-direction:column;vertical-align:baseline;text-align:center;white-space:nowrap;break-inside:avoid}
+.olt-link .main{display:block;color:var(--olt-main)}
+.olt-link .below{display:block;color:var(--olt-secondary);font-size:.72em;line-height:1.12}
+.olt-hebrew{direction:rtl;unicode-bidi:isolate;font-size:13.5pt}
+.olt-note{font-size:11pt;line-height:1.3}

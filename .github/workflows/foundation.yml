@@ -1,0 +1,24 @@
+name: OLT fresh foundation (NOT translation certification)
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate policy and lexical/link seeds
+        run: python scripts/check.py
+      - name: Run regression and negative tests
+        run: python -m unittest discover -s tests -v
+      - name: Assert release is still blocked
+        run: |
+          if python scripts/check.py --release; then
+            echo "ERROR: release gate falsely passed"
+            exit 1
+          fi
+          echo "Expected: Source verification and Genesis release BLOCKED"
