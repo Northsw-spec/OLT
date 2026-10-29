@@ -1,0 +1,64 @@
+name: Import complete Masoretic OT and open Hebrew lexicon
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import_ot.py"
+      - ".github/workflows/import-ot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: olt-source-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch pinned OSHB and Hebrew Lexicon revisions
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/olt-input
+          git clone --quiet https://github.com/openscriptures/morphhb.git /tmp/olt-input/morphhb
+          git -C /tmp/olt-input/morphhb checkout --quiet 3d15126fb1ef74867fc1434be1942e837932691f
+          git clone --quiet https://github.com/openscriptures/HebrewLexicon.git /tmp/olt-input/HebrewLexicon
+          git -C /tmp/olt-input/HebrewLexicon checkout --quiet 21c9add13bc727d3a951361778e97e3ff7afd1ce
+      - name: Create complete machine-readable Hebrew corpus and lexical source catalog
+        run: |
+          python scripts/import_ot.py --morph-dir /tmp/olt-input/morphhb/wlc --lexicon-dir /tmp/olt-input/HebrewLexicon --out data/imported
+      - name: Validate imported scope, recorded licenses, and noncertification
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("data/imported/manifest.json").read_text())
+          assert m["corpus"]["books"] == 39
+          assert m["corpus"]["word_tokens"]>200000
+          assert m["lexicon"]["strongs"]>8000
+          assert m["hard_limits"]["genesis_1_publication"]=="BLOCKED"
+          assert m["hard_limits"]["morphology"]=="EXTERNAL_TAGS_IMPORTED_UNREVIEWED"
+          assert len(list(Path("data/imported/books").glob("*.json")))==39
+          print("PASS: import coverage, not semantic verification")
+          PY
+      - name: Commit derived source dataset
+        run: |
+          set -euo pipefail
+          git config user.name "olt-data-import[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/imported
+          if git diff --cached --quiet; then
+            echo "No derived changes to commit"
+          else
+            git commit -m "Import pinned OSHB OT corpus and Hebrew dictionaries (unreviewed)"
+            git push origin HEAD:main
+          fi
