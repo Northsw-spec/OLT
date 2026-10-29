@@ -124,3 +124,9 @@ Five source-linked, explicitly research-only scholarly dossiers have been added 
 Research source limitations are disclosed, including abstract-only conclusions when full journal articles were unavailable. [OLT-017A GitHub Actions](https://github.com/Northsw-spec/OLT/actions/runs/40943849658) validates research metadata, not the scholarly conclusions themselves.
 
 Approved new English word families: **0**. Approved homonym links: **0**. The 94 unapproved Genesis 1 English lexical families, all independently reviewed word-level semantics and the final bilingual edition remain **BLOCKED**.
+
+## OLT-018 — Genesis 1:1 bracketed intertextual supplement placed in MAIN research text
+- Supersedes the prior OLT-008 plain-primary/optional-bracket draft (historical entries above remain for checkpoint traceability).
+- Current main research reading: **In the Beginning [of His Power] God — He shaped the Heavens and the Earth.**
+- The exact phrase `[of His Power]` is an owner-selected editorial/theological supplement, not an original Hebrew expression, and must carry a note comparing Gen 49:3 (`וְרֵאשִׁית אֹונִי`) and Deut 21:17 (`רֵאשִׁית אֹנוֹ`). Those passages use the separate noun `אֹון` meaning strength/vigor. `His` is also supplied.
+- Original seven source word IDs and all lexical owner locks are unchanged. Stage: owner wording/placement accepted; independent philological proofread and publication remain BLOCKED.

@@ -4,7 +4,7 @@
 
 ## 1. Genesis 1:1 — Bereshit syntax
 
-Our primary research line is “In the Beginning”, with the owner's theological option “[of His Power]” kept separate from literal source alignment. Benjamin Kantor's 2025 *Journal of Biblical Literature* article argues, on the basis of historically attested Hebrew reading traditions, that the lack of an article can be compatible with an adverbial opening. Robert Holmstedt's 2022 abstract, however, argues that neither of two plausible syntactic analyses matches the traditional opening. This is a **genuine scholarly disagreement**. The English line remains a research candidate, not an adjudicated grammatical fact.
+Our primary research line is “In the Beginning”, with the owner's theological supplement “[of His Power]” now included in the MAIN English research line by OLT-018. The supplement remains separate from the seven Hebrew tokens and must have its explanatory footnote. Benjamin Kantor's 2025 *Journal of Biblical Literature* article argues, on the basis of historically attested Hebrew reading traditions, that the lack of an article can be compatible with an adverbial opening. Robert Holmstedt's 2022 abstract, however, argues that neither of two plausible syntactic analyses matches the traditional opening. This is a **genuine scholarly disagreement**. The English line remains a research candidate, not an adjudicated grammatical fact.
 
 Sources: https://doi.org/10.15699/jbl.1444.2025.2 and https://journals.co.za/doi/10.25159/2663-6573/11647 . Both claims here are based on accessible abstracts.
 

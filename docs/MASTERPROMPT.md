@@ -42,7 +42,7 @@ Investigate:
 ## Notes and documentary layout
 Adopt the user's original Genesis ODT only as a STRUCTURAL MODEL, never as unquestioned source data. Print in generous A4 reading type: English 15.5–16pt, Hebrew/Greek 13–14pt, notes 10.5–11pt initially, refine by visual inspection. True page-bottom footnotes: English source-language research, precise quotations and their English literal translations, clearly marked interpretive additions and source citation. No repeated boilerplate about gender after the Bible's first page. Do not insert irrelevant comments about modern scientific duration.
 
-One proposed interpretation such as **“In the Beginning [of His Power]”** requires explicit note evidence in Gen 49:3 and Deut 21:17; bracketed words are not claimed to occur literally in Gen 1:1.
+**OLT-018 CURRENT OWNER-APPROVED PLACEMENT (supersedes the earlier optional-only placement):** Genesis 1:1's MAIN English research line is **“In the Beginning [of His Power] God — He shaped the Heavens and the Earth.”** The bracketed phrase is a deliberately supplied THEOLOGICAL supplement in the main text, with a mandatory linked footnote citing **Gen 49:3** (וְרֵאשִׁית אֹונִי, 'and the beginning of my strength') and **Deut 21:17** (רֵאשִׁית אֹנוֹ, 'the beginning of his strength'). In these other passages, 'strength' is the SEPARATE noun אֹון, absent from Gen 1:1. The 'His' possessive is also supplied. This is NOT a dictionary gloss of רֵאשִׁית and does not convert the verse into a final philologically approved edition.
 
 ## Five hard release stages
 1. **RESEARCH:** multiple independent source-aware waves: edition, morphology, dictionary, linguistic theory, biblical links, literary context.
