@@ -80,7 +80,6 @@ def build(data_dir=DATA, output=TARGET):
     # Genesis 1 source-lock anchors remain suggestions until independently reviewed:
     approved_conventions={
         "1254 a":{"seed":"bara","base":"shape"},
-        "6213":{"seed":"asah","base":"make"},
         "7549":{"seed":"raqia","base":"firmament"}
     }
     seed_lookup={x["id"]:x for x in seed}
@@ -88,6 +87,18 @@ def build(data_dir=DATA, output=TARGET):
         if x["seed"] not in seed_lookup or seed_lookup[x["seed"]]["english_base"]!=x["base"]:
             raise RuntimeError("Owner lock corrupted: "+key)
     gen=loadjson(data_dir/"quality"/"genesis_01_morphology.json")["verses"]
+    # Discover the exact OSHB extension used for asah in Genesis 1.
+    # We do NOT merge possible 6213 a / 6213 b homonyms by base number.
+    asah_observed=Counter()
+    for verse in gen:
+        for token in verse["tokens"]:
+            for item in token["lemma_parts"]:
+                if item["kind"] in ("LEXEME","LEXEME_FLAGGED") and item["strong_number"]=="6213":
+                    asah_observed[item["exact_key"]]+=1
+    if sum(asah_observed.values())!=7 or len(asah_observed)!=1:
+        raise RuntimeError("Ambiguous Genesis asah OSHB exact-key alignment: "+str(dict(asah_observed)))
+    asah_exact=next(iter(asah_observed))
+    approved_conventions[asah_exact]={"seed":"asah","base":"make"}
     anchors=[]
     counts=Counter()
     for verse in gen:
@@ -117,6 +128,7 @@ def build(data_dir=DATA, output=TARGET):
         "candidate_id_matching":dict(dictionary_ids_used),
         "bdb_direct_crosswalk_status":"NOT_IMPLEMENTED_NO_GUESSING",
         "genesis_1_owner_lock_candidates":dict(counts),
+        "genesis_1_asah_exact_source_key":asah_exact,
         "genesis_1_candidate_token_count":len(anchors),
         "all_english_approval":"NOT_DONE",
         "notes":[

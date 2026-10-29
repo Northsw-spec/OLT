@@ -13,8 +13,10 @@ remain unresolved.
 
 `genesis_01_owner_lock_anchors.json` connects known owner-lock families
 to exact Genesis 1 OSHB tokens where the imported lemma is unambiguous:
-`1254 a` → `shape`, `6213` → `make`, `7549` → `firmament`.
+`1254 a` → `shape`, the unique discovered exact Genesis 1 `6213`-family lemma → `make`, and `7549` → `firmament`.
 This is a preliminary source-to-style anchor, NOT yet a full verse translation,
 and the underlying OSHB morphology is not independently audited.
 
 Any source record with no match stays REVIEW_REQUIRED. No fill-by-guessing.
+
+Source matching for asah must examine the actual OSHB extension and fail if 6213 has multiple variants in Genesis 1; the prior assumed bare identifier is not sufficient.

@@ -1,11 +1,5 @@
 name: Build full OT source-lexicon candidate join
 on:
-  push:
-    branches: [main]
-    paths:
-      - "scripts/build_lexicon_candidates.py"
-      - "tests/test_lexicon_candidates.py"
-      - ".github/workflows/lexicon-candidates.yml"
   workflow_dispatch:
 permissions:
   contents: write

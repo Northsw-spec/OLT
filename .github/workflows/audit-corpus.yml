@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - "scripts/audit_corpus.py"
+      - "scripts/build_lexicon_candidates.py"
+      - "tests/test_lexicon_candidates.py"
       - "tests/test_corpus_audit.py"
       - ".github/workflows/audit-corpus.yml"
   workflow_dispatch:
@@ -28,8 +30,12 @@ jobs:
           python-version: "3.12"
       - name: Morphology parser regression tests
         run: python -m unittest discover -s tests -p 'test_corpus_audit.py' -v
+      - name: Candidate lexicon ID parser tests
+        run: python -m unittest discover -s tests -p 'test_lexicon_candidates.py' -v
       - name: Audit ALL imported OT words and build Genesis 1 source tag ledger
         run: python scripts/audit_corpus.py
+      - name: Build ALL lemma candidates from fresh audit and actual Genesis keys
+        run: python scripts/build_lexicon_candidates.py
       - name: Verify source-derived report and no fake release status
         run: |
           python - <<'PY'
@@ -44,6 +50,12 @@ jobs:
           assert a["genesis_1_source_tokens"]>400
           assert a["genesis_1_wayyiqtol_source_tag_count"]==50, a["genesis_1_wayyiqtol_source_tag_count"]
           assert a["editorial_certification"]=="NOT_PERFORMED"
+          c=json.loads((p/"lexicon_join_report.json").read_text())
+          assert c["observed_source_lemma_keys"]==a["distinct_exact_lemma_keys"]
+          assert c["genesis_1_owner_lock_candidates"]["asah"]==7
+          assert c["genesis_1_owner_lock_candidates"]["bara"]==5
+          assert c["genesis_1_owner_lock_candidates"]["raqia"]==9
+          assert c["all_english_approval"]=="NOT_DONE"
           z=json.loads((p/"genesis_01_morphology.json").read_text())
           assert z["status"]=="IMPORTED_SOURCE_MORPHOLOGY_NOT_INDEPENDENTLY_REVIEWED"
           print("SOURCE TAG AUDIT PASS, NOT MANUAL PHILOLOGICAL SIGNOFF")
@@ -57,6 +69,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Reports unchanged"
           else
-            git commit -m "Add source-derived exact lemma and Genesis morphology audit reports"
+            git commit -m "Audit exact OT lemma identities and build all lexical candidate records"
             git push origin HEAD:main
           fi

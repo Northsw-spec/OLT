@@ -70,6 +70,7 @@ def scan(path:Path):
     count=0
     verse_count=0
     all_lex=Counter()
+    flagged_lemmas=Counter()
     forms=Counter()
     prefix=Counter()
     invalid_annotations=Counter()
