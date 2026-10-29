@@ -1,0 +1,299 @@
+{
+  "aug_duplicate_source_keys": {},
+  "aug_index_keys": 9299,
+  "bdb_entry_ids": 11845,
+  "bdb_explicit_reference_results": {
+    "FOUND": 9252
+  },
+  "duplicate_aug_key_counts": {},
+  "exact_mapping_status": {
+    "EXACT_AUG_TO_LEXICAL_INDEX": 9252,
+    "NO_EXACT_AUG_INDEX_ENTRY": 267
+  },
+  "lexical_index_entries": 10221,
+  "meaning_status": "NOT_APPROVED",
+  "notes": [
+    "Spaces before a letter on OSHB exact IDs are removed ONLY for documented AugIndex key comparison.",
+    "Plus markers are not stripped or equated to unmarked IDs.",
+    "The candidate count concerns source identity, not approved English meanings.",
+    "BDB/Strong IDs are validated using explicit LexicalIndex xref attributes.",
+    "Every absent or dangling reference remains unresolved; no homonym meaning inferred."
+  ],
+  "observed": 9519,
+  "release_status": "BLOCKED_NOT_EDITORIALLY_REVIEWED",
+  "scope": "ALL_OBSERVED_EXACT_LEMMA_COMPONENT_IDENTIFIERS",
+  "source_lexicon_commit": "21c9add13bc727d3a951361778e97e3ff7afd1ce",
+  "source_morphhb_commit": "3d15126fb1ef74867fc1434be1942e837932691f",
+  "source_sha256": {
+    "AugIndex.xml": "e7217ca8ff8ff3f21f9cf1bbe87411adf55f6aa88bcf5ed9ddc886cc6b160c5d",
+    "BrownDriverBriggs.xml": "2b52658a4323d91674cda4090ab8b3ebddfff640f4f18143c28300e80b2c38f8",
+    "HebrewStrong.xml": "a628f4f89f8bdaf2483fd3faf1abc8653cc6717758dfc9f24beb7571d9bdd0c4",
+    "LexicalIndex.xml": "8f7a605c58899d2f44430149c143c00903976e1e91232476677972a69e5bc85f"
+  },
+  "strong_entry_ids": 8674,
+  "strong_explicit_reference_results": {
+    "DANGLING": 9252
+  },
+  "xref_aug_disagreements_examples": [
+    {
+      "aug_normalized": "122a",
+      "entry": "afc",
+      "key": "122 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "122b",
+      "entry": "aez",
+      "key": "122 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "176a",
+      "entry": "ahf",
+      "key": "176 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "176b",
+      "entry": "ahe",
+      "key": "176 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "193a",
+      "entry": "aia",
+      "key": "193 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "193b",
+      "entry": "aib",
+      "key": "193 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "217a",
+      "entry": "aje",
+      "key": "217 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "217b",
+      "entry": "bdo",
+      "key": "217 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "218a",
+      "entry": "ajd",
+      "key": "218 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "218b",
+      "entry": "ajc",
+      "key": "218 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "219a",
+      "entry": "ajh",
+      "key": "219 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "219b",
+      "entry": "ajg",
+      "key": "219 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "223a",
+      "entry": "ajk",
+      "key": "223 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "223b",
+      "entry": "ajl",
+      "key": "223 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "227a",
+      "entry": "ajp",
+      "key": "227 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "227b",
+      "entry": "gih",
+      "key": "227 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "244a",
+      "entry": "ake",
+      "key": "244 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "244b",
+      "entry": "akf",
+      "key": "244 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "310a",
+      "entry": "amu",
+      "key": "310 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "310b",
+      "entry": "amz",
+      "key": "310 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "328a",
+      "entry": "anl",
+      "key": "328 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "328b",
+      "entry": "ang",
+      "key": "328 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "349a",
+      "entry": "aoe",
+      "key": "349 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "349b",
+      "entry": "aog",
+      "key": "349 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "349c",
+      "entry": "aoi",
+      "key": "349 c",
+      "xref_aug": "c"
+    },
+    {
+      "aug_normalized": "352a",
+      "entry": "aon",
+      "key": "352 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "352b",
+      "entry": "aom",
+      "key": "352 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "352c",
+      "entry": "aok",
+      "key": "352 c",
+      "xref_aug": "c"
+    },
+    {
+      "aug_normalized": "352d",
+      "entry": "aol",
+      "key": "352 d",
+      "xref_aug": "d"
+    },
+    {
+      "aug_normalized": "359a",
+      "entry": "aox",
+      "key": "359 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "359b",
+      "entry": "aou",
+      "key": "359 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "441a",
+      "entry": "arw",
+      "key": "441 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "441b",
+      "entry": "arx",
+      "key": "441 b",
+      "xref_aug": "b"
+    },
+    {
+      "aug_normalized": "454a",
+      "entry": "ask",
+      "key": "454 a",
+      "xref_aug": "a"
+    },
+    {
+      "aug_normalized": "454b",
+      "entry": "asl",
+      "key": "454 b",
+      "xref_aug": "b"
+    }
+  ],
+  "xref_unparsed_examples": [
+    {
+      "entry": "oap",
+      "field": "twot",
+      "key": "563",
+      "unparsed": [
+        "2585?"
+      ]
+    },
+    {
+      "entry": "azk",
+      "field": "twot",
+      "key": "642",
+      "unparsed": [
+        "142.1b?"
+      ]
+    },
+    {
+      "entry": "cqh",
+      "field": "twot",
+      "key": "1695",
+      "unparsed": [
+        "398?"
+      ]
+    },
+    {
+      "entry": "ofq",
+      "field": "twot",
+      "key": "1780",
+      "unparsed": [
+        "2674?"
+      ]
+    },
+    {
+      "entry": "dsm",
+      "field": "twot",
+      "key": "2390",
+      "unparsed": [
+        "636a?"
+      ]
+    },
+    {
+      "entry": "nwv",
+      "field": "twot",
+      "key": "8618",
+      "unparsed": [
+        "1999?"
+      ]
+    }
+  ]
+}
