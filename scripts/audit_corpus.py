@@ -128,8 +128,8 @@ def scan(path:Path):
         raise ValueError(f"Source counts changed unexpectedly: {count}, {verse_count}")
     rows=[{
         "exact_lemma_key":key,
-        "strong_number":key.split(" ")[0],
-        "extension":key.split(" ",1)[1] if " " in key else None,
+        "strong_number":re.match(r"^\d+",key).group(0),
+        "extension":re.match(r"^\d+\s+([a-z])",key).group(1) if re.match(r"^\d+\s+([a-z])",key) else None,
         "special_marker":"+" if key.endswith("+") else None,
         "requires_special_marker_review":key.endswith("+"),
         "occurrences_of_component":freq,
