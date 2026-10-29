@@ -1,0 +1,52 @@
+name: OLT-009 Genesis 1:2-5 source-first lexical review
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/genesis_02_05_research.py"
+      - "tests/test_genesis_02_05_research.py"
+      - ".github/workflows/genesis-02-05.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-009-lexical-review
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ten actual-source coverage and negative tests
+        run: python -m unittest discover -s tests -p 'test_genesis_02_05_research.py' -v
+      - name: Generate 45-source-token lexical research
+        run: python scripts/genesis_02_05_research.py
+      - name: Check scope, tense and explicit publication blocker
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          j=json.loads(Path('data/research/genesis_01_verses_02_to_05_research.json').read_text())
+          assert j['source_token_count']==45
+          assert j['source_tagged_wayyiqtol_count']==7
+          assert j['release_status']=='BLOCKED'
+          assert j['independent_philological_review']=='NOT_DONE'
+          assert j['english_lexical_approvals']=='NONE_NEW'
+          assert all(len(v['source_aligned_tokens'])==v['source_word_count'] for v in j['verses'])
+          print('PASS: source research proposal only; not approved Bible text')
+          PY
+      - name: Commit derived research data
+        run: |
+          git config user.name "olt-source-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/genesis_01_verses_02_to_05_research.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Add Genesis 1:2-5 Hebrew source-aligned literal research"
+            git push origin HEAD:main
+          fi
