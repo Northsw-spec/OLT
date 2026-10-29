@@ -10,7 +10,7 @@ class GenesisDossierTests(unittest.TestCase):
         verses=[{"verse":"Gen.1."+str(i),"tokens":[]} for i in range(1,32)]
         return {"status":"IMPORTED_SOURCE_MORPHOLOGY_NOT_INDEPENDENTLY_REVIEWED","verses":verses}
     def test_missing_tokens_is_rejected(self):
-        with self.assertRaisesRegex(ValueError,"434"):
+        with self.assertRaisesRegex(ValueError,"Source word count changed"):
             generate(self.sample(),[])
     def test_missing_chapter_verse_is_rejected(self):
         s=self.sample()
