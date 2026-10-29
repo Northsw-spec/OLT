@@ -1,0 +1,5909 @@
+{
+  "cards": [
+    {
+      "actual_original_spellings": [
+        "אֱלֹהִ֑ים",
+        "אֱלֹהִ֔ים",
+        "אֱלֹהִ֖ים",
+        "אֱלֹהִ֗ים",
+        "אֱלֹהִ֛ים",
+        "אֱלֹהִ֤ים",
+        "אֱלֹהִים֒",
+        "אֱלֹהִים֙",
+        "אֱלֹהִים֩",
+        "אֱלֹהִים֮"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1",
+        "Gen.1.2",
+        "Gen.1.3",
+        "Gen.1.4",
+        "Gen.1.5",
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.8",
+        "Gen.1.9",
+        "Gen.1.10",
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.14",
+        "Gen.1.16",
+        "Gen.1.17",
+        "Gen.1.18",
+        "Gen.1.20",
+        "Gen.1.21",
+        "Gen.1.22",
+        "Gen.1.24",
+        "Gen.1.25",
+        "Gen.1.26",
+        "Gen.1.27",
+        "Gen.1.28",
+        "Gen.1.29",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01TyA",
+        "01x9c",
+        "01JM7",
+        "01v6U",
+        "01794",
+        "01kfX",
+        "01hh7",
+        "01FV9",
+        "01fQr",
+        "01PzC",
+        "01iy2",
+        "01dns",
+        "01zio",
+        "01RmH",
+        "01Ap3",
+        "01XyU",
+        "01cn3",
+        "016qf",
+        "01dAC",
+        "01qry",
+        "01kDm",
+        "01WPn",
+        "014fv",
+        "019gS",
+        "01YxK",
+        "01azZ",
+        "0179E",
+        "01BnR",
+        "01BJv",
+        "01mP3",
+        "01bsu",
+        "01Mxy"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֱלֹהִים",
+            "id": "a.dl.ad",
+            "pos": "",
+            "source_fields": {
+              "pos": "n.m.pl"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֱלֹהִים",
+            "id": "H430",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "gods in the ordinary sense; but specifically used (in the plural thus, especially with the article) of the supreme God; occasionally applied by way of deference to magistrates; and sometimes as a superlative",
+              "source": "plural of 433;",
+              "usage": "angels, × exceeding, God (gods) (-dess, -ly), × (very) great, judges, × mighty."
+            },
+            "transliteration": "ʼĕlôhîym"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 32,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "arn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "430",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הָיְתָ֥ה",
+        "וְ/הָי֤וּ",
+        "וִ/יהִ֣י",
+        "וַֽ/יְהִי",
+        "וַֽ/יְהִי",
+        "יְהִ֣י",
+        "יְהִ֤י",
+        "יְהִ֥י",
+        "יִֽהְיֶ֖ה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2",
+        "Gen.1.3",
+        "Gen.1.5",
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.8",
+        "Gen.1.9",
+        "Gen.1.11",
+        "Gen.1.13",
+        "Gen.1.14",
+        "Gen.1.15",
+        "Gen.1.19",
+        "Gen.1.23",
+        "Gen.1.24",
+        "Gen.1.29",
+        "Gen.1.30",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01Qzf",
+        "01fpo",
+        "01yw4",
+        "01Y3z",
+        "01uLf",
+        "01BsK",
+        "01qty",
+        "019qY",
+        "01dNE",
+        "01AYg",
+        "01KvD",
+        "01Gq9",
+        "013Lj",
+        "01WTe",
+        "01CEu",
+        "01btu",
+        "01xva",
+        "01MmM",
+        "013k3",
+        "01W2c",
+        "0168C",
+        "01D4c",
+        "016Lo",
+        "01Rvc",
+        "01HoD",
+        "01vLv",
+        "01Sxc"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "הָיָה",
+            "id": "e.bf.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "fall out",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "הָיָה",
+            "id": "H1961",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to exist, i.e. be or become, come to pass (always emphatic, and not a mere copula or auxiliary)",
+              "source": "a primitive root (compare 1933);",
+              "usage": "beacon, × altogether, be(-come), accomplished, committed, like), break, cause, come (to pass), do, faint, fall, follow, happen, × have, last, pertain, quit (one-) self, require, × use."
+            },
+            "transliteration": "hâyâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 27,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "daq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1961",
+      "source_morphological_wayyiqtol_count": 19,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אֵ֥ת",
+        "אֶת",
+        "אֹת֑/וֹ",
+        "אֹתָ/ם֮",
+        "אֹתָ֛/ם",
+        "אֹתָֽ/ם",
+        "וְ/אֵ֖ת",
+        "וְ/אֵ֛ת",
+        "וְ/אֵ֣ת",
+        "וְ/אֵ֥ת",
+        "וְ/אֵ֨ת",
+        "וְ/אֶת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1",
+        "Gen.1.4",
+        "Gen.1.7",
+        "Gen.1.16",
+        "Gen.1.17",
+        "Gen.1.21",
+        "Gen.1.22",
+        "Gen.1.25",
+        "Gen.1.27",
+        "Gen.1.28",
+        "Gen.1.29",
+        "Gen.1.30",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01vuQ",
+        "01k5P",
+        "015SS",
+        "01Xm1",
+        "01BG4",
+        "013eS",
+        "01PGK",
+        "01Xa1",
+        "01bju",
+        "01bvP",
+        "01hEs",
+        "01EXL",
+        "0163G",
+        "015KE",
+        "01LAe",
+        "01mr5",
+        "01Ew6",
+        "01Zuo",
+        "01pUN",
+        "013gY",
+        "01WFU",
+        "01MEz",
+        "01mVV",
+        "01tKf",
+        "01xp4",
+        "01w6u"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֵת",
+            "id": "a.gm.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "mark of the accusative"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֵת",
+            "id": "H853",
+            "pos": "prt",
+            "source_fields": {
+              "meaning": "properly, self (but generally used to point out more definitely the object of a verb or preposition, even or namely)",
+              "source": "apparent contracted from 226 in the demonstrative sense of entity;",
+              "usage": "[as such unrepresented in English]."
+            },
+            "transliteration": "ʼêth"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 26,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bhu"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "853",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אֶ֔רֶץ",
+        "אֶ֖רֶץ",
+        "בָּ/אָֽרֶץ",
+        "הָ/אָ֑רֶץ",
+        "הָ/אָ֔רֶץ",
+        "הָ/אָ֖רֶץ",
+        "הָ/אָ֗רֶץ",
+        "הָ/אָ֜רֶץ",
+        "הָ/אָ֨רֶץ֙",
+        "הָ/אָֽרֶץ",
+        "הָ֠/אָרֶץ",
+        "וְ/הָ/אָ֗רֶץ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1",
+        "Gen.1.2",
+        "Gen.1.10",
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.15",
+        "Gen.1.17",
+        "Gen.1.20",
+        "Gen.1.22",
+        "Gen.1.24",
+        "Gen.1.25",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.29",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01nPh",
+        "01LN3",
+        "01Wxx",
+        "01zTj",
+        "01vzS",
+        "01Y4K",
+        "014W9",
+        "01pqY",
+        "01gV8",
+        "01GpK",
+        "01jyT",
+        "01hj3",
+        "011Cv",
+        "01d3U",
+        "01JyD",
+        "01Q2u",
+        "014vX",
+        "01uUA",
+        "01rGa",
+        "01eyL"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֶ֫רֶץ",
+            "id": "a.fx.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "earth",
+              "pos": "n. f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֶרֶץ",
+            "id": "H776",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "the earth (at large, or partitively a land)",
+              "source": "from an unused root probably meaning to be firm;",
+              "usage": "× common, country, earth, field, ground, land, × natins, way, + wilderness, world."
+            },
+            "transliteration": "ʼerets"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 20,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bep"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "776",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/בְ/כָל",
+        "וּ/לְ/כָל",
+        "וּ/לְ/כֹ֣ל",
+        "וּֽ/לְ/כָל",
+        "כָל",
+        "כָּל"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.21",
+        "Gen.1.25",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.29",
+        "Gen.1.30",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01xAF",
+        "01ZPN",
+        "0174R",
+        "01HjU",
+        "01NtK",
+        "01hS1",
+        "01FMa",
+        "01jEX",
+        "01awE",
+        "018eM",
+        "01fp1",
+        "01gBW",
+        "01Hki",
+        "01e3z"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כֹּל",
+            "id": "k.bn.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "the whole",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כֹּל",
+            "id": "H3605",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, the whole; hence, all, any or every (in the singular only, but often in a plural sense)",
+              "source": "or (Jeremiah 33:8) כּוֹל; from 3634;",
+              "usage": "(in) all (manner, (ye)), altogether, any (manner), enough, every (one, place, thing), howsoever, as many as, (no-) thing, ought, whatsoever, (the) whole, whoso(-ever)."
+            },
+            "transliteration": "kôl"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 14,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fsb"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3605",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "מֵ/עַ֣ל",
+        "עַל"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2",
+        "Gen.1.7",
+        "Gen.1.11",
+        "Gen.1.15",
+        "Gen.1.17",
+        "Gen.1.20",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.29",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01qNN",
+        "0129t",
+        "01sRU",
+        "01G83",
+        "01SaV",
+        "01RXg",
+        "01CCj",
+        "01Czz",
+        "016JA",
+        "01G6E",
+        "01zkA",
+        "0193F"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עַל",
+            "id": "p.cs.ar",
+            "pos": "",
+            "source_fields": {}
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עַל",
+            "id": "H5921",
+            "pos": "prep",
+            "source_fields": {
+              "meaning": "above, over, upon, or against (yet always in this last relation with a downward aspect) in a great variety of applications",
+              "source": "properly, the same as 5920 used as a preposition (in the singular or plural often with prefix, or as conjunction with a particle following);",
+              "usage": "above, according to(-ly), after, (as) against, among, and, × as, at, because of, beside (the rest of), between, beyond the time, × both and, by (reason of), × had the charge of, concerning for, in (that), (forth, out) of, (from) (off), (up-) on, over, than, through(-out), to, touching, × with."
+            },
+            "transliteration": "ʻal"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 12,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jkq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5921 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בַּ/יּ֣וֹם",
+        "הַ/יּ֔וֹם",
+        "הַ/יּ֖וֹם",
+        "וּ/לְ/יָמִ֖ים",
+        "י֔וֹם",
+        "י֥וֹם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.8",
+        "Gen.1.13",
+        "Gen.1.14",
+        "Gen.1.16",
+        "Gen.1.18",
+        "Gen.1.19",
+        "Gen.1.23",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01wrL",
+        "013TS",
+        "01Snp",
+        "01sKn",
+        "01LFW",
+        "01VuH",
+        "01PVx",
+        "01gYe",
+        "01zfc",
+        "01JnD",
+        "01GjY"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "יוֹם",
+            "id": "j.ay.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "day",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "יוֹם",
+            "id": "H3117",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a day (as the warm hours), whether literal (from sunrise to sunset, or from one sunset to the next), or figurative (a space of time defined by an associated term), (often used adverb)",
+              "source": "from an unused root meaning to be hot;",
+              "usage": "age, always, chronicals, continually(-ance), daily, ((birth-), each, to) day, (now a, two) days (agone), elder, × end, evening, (for) ever(-lasting, -more), × full, life, as (so) long as (... live), (even) now, old, outlived, perpetually, presently, remaineth, × required, season, × since, space, then, (process of) time, as at other times, in trouble, weather, (as) when, (a, the, within a) while (that), × whole ( age), (full) year(-ly), younger."
+            },
+            "transliteration": "yôwm"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 11,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "exs"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3117",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/מַּ֔יִם",
+        "הַ/מַּ֖יִם",
+        "הַ/מַּ֜יִם",
+        "הַ/מַּ֨יִם֙",
+        "הַ/מָּ֑יִם",
+        "הַ/מָּֽיִם",
+        "לָ/מָֽיִם",
+        "מַ֖יִם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2",
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.9",
+        "Gen.1.10",
+        "Gen.1.20",
+        "Gen.1.21",
+        "Gen.1.22"
+      ],
+      "actual_word_token_ids": [
+        "01TZE",
+        "01wM5",
+        "01eHJ",
+        "01H6L",
+        "01A4a",
+        "01tKT",
+        "01d5m",
+        "01Haa",
+        "01chR",
+        "01T2S",
+        "01qVd"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מַי",
+            "id": "m.bt.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "waters",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מַיִם",
+            "id": "H4325",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "water; figuratively, juice; by euphemism, urine, semen",
+              "source": "dual of a primitive noun (but used in a singular sense);",
+              "usage": "piss, wasting, water(-ing, (-course, -flood, -spring))."
+            },
+            "transliteration": "mayim"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 11,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gvs"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4325",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יֹּ֣אמֶר",
+        "וַ/יֹּ֥אמֶר",
+        "וַ/יֹּ֨אמֶר",
+        "לֵ/אמֹ֑ר"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.3",
+        "Gen.1.6",
+        "Gen.1.9",
+        "Gen.1.11",
+        "Gen.1.14",
+        "Gen.1.20",
+        "Gen.1.22",
+        "Gen.1.24",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01thY",
+        "017am",
+        "01nLp",
+        "01cpb",
+        "01AxB",
+        "01GvF",
+        "011jv",
+        "01ErQ",
+        "01YhQ",
+        "01ExP",
+        "01X1R"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אָמַר",
+            "id": "a.ea.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "utter",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אָמַר",
+            "id": "H559",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to say (used with great latitude)",
+              "source": "a primitive root;",
+              "usage": "answer, appoint, avouch, bid, boast self, call, certify, challenge, charge, (at the, give) command(-ment), commune, consider, declare, demand, × desire, determine, × expressly, × indeed, × intend, name, × plainly, promise, publish, report, require, say, speak (against, of), × still, × suppose, talk, tell, term, × that is, × think, use (speech), utter, × verily, × yet."
+            },
+            "transliteration": "ʼâmar"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 11,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "awn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "559",
+      "source_morphological_wayyiqtol_count": 10,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "לְ/מִֽינֵ/הֶ֗ם",
+        "לְ/מִינ֔/וֹ",
+        "לְ/מִינֵ֑/הוּ",
+        "לְ/מִינֵ֔/הוּ",
+        "לְ/מִינָ֑/הּ",
+        "לְ/מִינָ֔/הּ",
+        "לְ/מִינָ֗/הּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.21",
+        "Gen.1.24",
+        "Gen.1.25"
+      ],
+      "actual_word_token_ids": [
+        "017ZG",
+        "01rAQ",
+        "01U4n",
+        "01tkJ",
+        "01v2F",
+        "01xxn",
+        "01iDs",
+        "01PBQ",
+        "01PbY",
+        "012dm"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מִין",
+            "id": "m.bv.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "kind",
+              "pos": "n.[m.]"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מִין",
+            "id": "H4327",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a sort, i.e. species",
+              "source": "from an unused root meaning to portion out;",
+              "usage": "kind. Compare 4480."
+            },
+            "transliteration": "mîyn"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 10,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gwi"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4327",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/שָּׁמַ֔יִם",
+        "הַ/שָּׁמַ֖יִם",
+        "הַ/שָּׁמַ֗יִם",
+        "הַ/שָּׁמַ֜יִם",
+        "הַ/שָּׁמַ֨יִם֙",
+        "הַ/שָּׁמָ֑יִם",
+        "הַ/שָּׁמָֽיִם",
+        "שָׁמָ֑יִם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1",
+        "Gen.1.8",
+        "Gen.1.9",
+        "Gen.1.14",
+        "Gen.1.15",
+        "Gen.1.17",
+        "Gen.1.20",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01TSc",
+        "01A74",
+        "01LJh",
+        "01cLk",
+        "01372",
+        "01dJe",
+        "01Qnr",
+        "01ygU",
+        "01bPJ",
+        "01mGU"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שָׁמַי",
+            "id": "v.dy.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "heavens",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שָׁמַיִם",
+            "id": "H8064",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "the sky (as aloft; the dual perhaps alluding to the visible arch in which the clouds move, as well as to the higher ether where the celestial bodies revolve)",
+              "source": "dual of an unused singular שָׁמֶה; from an unused root meaning to be lofty;",
+              "usage": "air, × astrologer, heaven(-s)."
+            },
+            "transliteration": "shâmayim"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 10,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "mzj"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8064",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בִּ/רְקִ֣יעַ",
+        "הָ/רָקִיעַ֒",
+        "לָ/רָקִ֑יעַ",
+        "לָ/רָקִ֔יעַ",
+        "לָֽ/רָקִ֖יעַ",
+        "רְקִ֥יעַ",
+        "רָקִ֖יעַ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.8",
+        "Gen.1.14",
+        "Gen.1.15",
+        "Gen.1.17",
+        "Gen.1.20"
+      ],
+      "actual_word_token_ids": [
+        "01fsu",
+        "01UE6",
+        "01Mnv",
+        "01Wxq",
+        "01L7t",
+        "01FiN",
+        "01iAD",
+        "017mS",
+        "01xCL"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָקִיעַ",
+            "id": "t.eo.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "extended surface",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָקִיעַ",
+            "id": "H7549",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, an expanse, i.e. the firmament or (apparently) visible arch of the sky",
+              "source": "from 7554;",
+              "usage": "firmament."
+            },
+            "transliteration": "râqîyaʻ"
+          }
+        ]
+      },
+      "editorial_status": "OWNER_LEXICAL_FAMILY_LOCKED_MORPH_REVIEW_PENDING",
+      "genesis_occurrences": 9,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "mdw"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": "firmament",
+      "owner_lock_id": "raqia",
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7549",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אֲשֶׁ֖ר",
+        "אֲשֶׁ֣ר",
+        "אֲשֶׁ֥ר",
+        "אֲשֶׁר",
+        "אֲשֶׁר֙",
+        "אֲשֶׁר֩"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.7",
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.21",
+        "Gen.1.29",
+        "Gen.1.30",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "015Pr",
+        "01NRT",
+        "01B2d",
+        "019Hv",
+        "01ibe",
+        "01HWo",
+        "01Azu",
+        "01pm7",
+        "012c6"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֲשֶׁר",
+            "id": "a.gk.aa",
+            "pos": "",
+            "source_fields": {
+              "pos": "part. of relation"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֲשֶׁר",
+            "id": "H834",
+            "pos": "r",
+            "source_fields": {
+              "meaning": "who, which, what, that; also (as an adverb and a conjunction) when, where, how, because, in order that, etc.",
+              "source": "a primitive relative pronoun (of every gender and number);",
+              "usage": "× after, × alike, as (soon as), because, × every, for, + forasmuch, + from whence, + how(-soever), × if, (so) that ((thing) which, wherein), × though, + until, + whatsoever, when, where (+ -as, -in, -of, -on, -soever, -with), which, whilst, + whither(-soever), who(-m, -soever, -se). As it is indeclinable, it is often accompanied by the personal pronoun expletively, used to show the connection."
+            },
+            "transliteration": "ʼăsher"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 9,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bgz"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "834 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בֵּ֤ין",
+        "בֵּ֥ין",
+        "וּ/בֵ֣ין",
+        "וּ/בֵ֥ין"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.4",
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.14",
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01CsU",
+        "01KvS",
+        "01Xw6",
+        "01CyH",
+        "01mwU",
+        "01j63",
+        "01FbT",
+        "01v5z",
+        "016By"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בַּ֫יִן",
+            "id": "b.bo.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "interval",
+              "pos": "subst"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בֵּין",
+            "id": "H996",
+            "pos": "prep",
+            "source_fields": {
+              "meaning": "between (repeated before each noun, often with other particles); also as a conjunction, either...or",
+              "source": "(sometimes in the plural masculine or feminine); properly, the constructive form of an otherwise unused noun from 995; a distinction; but used only as a preposition,",
+              "usage": "among, asunder, at, between (-twixt...and), + from (the widest), × in, out of, whether (it be...or), within."
+            },
+            "transliteration": "bêyn"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 9,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bnz"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "996",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/תֵרָאֶ֖ה",
+        "וַ/יַּ֤רְא",
+        "וַ/יַּ֥רְא",
+        "וַ/יַּ֧רְא"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.4",
+        "Gen.1.9",
+        "Gen.1.10",
+        "Gen.1.12",
+        "Gen.1.18",
+        "Gen.1.21",
+        "Gen.1.25",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01USR",
+        "01QwM",
+        "01F1s",
+        "012Kt",
+        "01VTb",
+        "017vt",
+        "01uYh",
+        "015QX"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָאָה",
+            "id": "t.ab.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "see",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָאָה",
+            "id": "H7200",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to see, literally or figuratively (in numerous applications, direct and implied, transitive, intransitive and causative)",
+              "source": "a primitive root;",
+              "usage": "advise self, appear, approve, behold, × certainly, consider, discern, (make to) enjoy, have experience, gaze, take heed, × indeed, × joyfully, lo, look (on, one another, one on another, one upon another, out, up, upon), mark, meet, × be near, perceive, present, provide, regard, (have) respect, (fore-, cause to, let) see(-r, -m, one another), shew (self), × sight of others, (e-) spy, stare, × surely, × think, view, visions."
+            },
+            "transliteration": "râʼâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 8,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lpd"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7200",
+      "source_morphological_wayyiqtol_count": 7,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "ט֑וֹב",
+        "ט֖וֹב",
+        "טֽוֹב"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.4",
+        "Gen.1.10",
+        "Gen.1.12",
+        "Gen.1.18",
+        "Gen.1.21",
+        "Gen.1.25",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01g2y",
+        "01nRZ",
+        "0175P",
+        "01QG5",
+        "01eRa",
+        "01Kz2",
+        "01ce9"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "טוֹב",
+            "id": "i.ai.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "pleasant",
+              "pos": "adj"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "טוֹב",
+            "id": "H2896",
+            "pos": "a n-m n-f",
+            "source_fields": {
+              "meaning": "good (as an adjective) in the widest sense; used likewise as a noun, both in the masculine and the feminine, the singular and the plural (good, a good or good thing, a good man or woman; the good, goods or good things, good men or women), also as an adverb (well)",
+              "source": "from 2895;",
+              "usage": "beautiful, best, better, bountiful, cheerful, at ease, × fair (word), (be in) favour, fine, glad, good (deed, -lier, -liest, -ly, -ness, -s), graciously, joyful, kindly, kindness, liketh (best), loving, merry, × most, pleasant, pleaseth, pleasure, precious, prosperity, ready, sweet, wealth, welfare, (be) well(-favoured)."
+            },
+            "transliteration": "ṭôwb"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 7,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "epg"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2896 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יַּ֣עַשׂ",
+        "נַֽעֲשֶׂ֥ה",
+        "עָשָׂ֔ה",
+        "עֹ֤שֶׂה",
+        "עֹֽשֶׂה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.7",
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.16",
+        "Gen.1.25",
+        "Gen.1.26",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01bmv",
+        "01V27",
+        "01Ptj",
+        "01CQo",
+        "01ZpQ",
+        "01oiy",
+        "013RL"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עָשָׂה",
+            "id": "p.fy.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "do",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עָשָׂה",
+            "id": "H6213",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to do or make, in the broadest sense and widest application",
+              "source": "a primitive root;",
+              "usage": "accomplish, advance, appoint, apt, be at, become, bear, bestow, bring forth, bruise, be busy, × certainly, have the charge of, commit, deal (with), deck, displease, do, (ready) dress(-ed), (put in) execute(-ion), exercise, fashion, feast, (fight-) ing man, finish, fit, fly, follow, fulfill, furnish, gather, get, go about, govern, grant, great, hinder, hold (a feast), × indeed, be industrious, journey, keep, labour, maintain, make, be meet, observe, be occupied, offer, officer, pare, bring (come) to pass, perform, pracise, prepare, procure, provide, put, requite, × sacrifice, serve, set, shew, × sin, spend, × surely, take, × thoroughly, trim, × very, vex, be (warr-) ior, work(-man), yield, use."
+            },
+            "transliteration": "ʻâsâh"
+          }
+        ]
+      },
+      "editorial_status": "OWNER_LEXICAL_FAMILY_LOCKED_MORPH_REVIEW_PENDING",
+      "genesis_occurrences": 7,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jxj"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": "make",
+      "owner_lock_id": "asah",
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6213 a",
+      "source_morphological_wayyiqtol_count": 3,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בֹ֖קֶר"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.8",
+        "Gen.1.13",
+        "Gen.1.19",
+        "Gen.1.23",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01kA7",
+        "01Ls9",
+        "016VM",
+        "01mL3",
+        "01ta1",
+        "01xwN"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בֹּ֫קֶר",
+            "id": "b.cu.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "morning",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בֹּקֶר",
+            "id": "H1242",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, dawn (as the break of day); generally, morning",
+              "source": "from 1239;",
+              "usage": "( ) day, early, morning, morrow."
+            },
+            "transliteration": "bôqer"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bxm"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1242",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "א֑וֹר",
+        "אֽוֹר",
+        "הָ/א֖וֹר",
+        "לָ/אוֹר֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.3",
+        "Gen.1.4",
+        "Gen.1.5",
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01W26",
+        "01jbg",
+        "01GzE",
+        "01XR4",
+        "01Wkf",
+        "01bCC"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אוֹר",
+            "id": "a.cd.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "light",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אוֹר",
+            "id": "H216",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "illumination or (concrete) luminary (in every sense, including lightning, happiness, etc.)",
+              "source": "from 215;",
+              "usage": "bright, clear, day, light (-ning), morning, sun."
+            },
+            "transliteration": "ʼôwr"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "aja"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "216",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "זֶ֔רַע",
+        "זֶ֗רַע",
+        "זֶ֨רַע֙",
+        "זַרְע/וֹ",
+        "זָ֑רַע"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01VA9",
+        "01ewe",
+        "01YWU",
+        "01j1i",
+        "015pZ",
+        "01D3a"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "זֶ֫רַע",
+            "id": "g.cl.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "sowing",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "זֶרַע",
+            "id": "H2233",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "seed; figuratively, fruit, plant, sowing-time, posterity",
+              "source": "from 2232;",
+              "usage": "× carnally, child, fruitful, seed(-time), sowing-time."
+            },
+            "transliteration": "zeraʻ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dlw"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2233",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "כִּי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.4",
+        "Gen.1.10",
+        "Gen.1.12",
+        "Gen.1.18",
+        "Gen.1.21",
+        "Gen.1.25"
+      ],
+      "actual_word_token_ids": [
+        "01qCU",
+        "01GK3",
+        "01SWL",
+        "01efz",
+        "01doW",
+        "01aSJ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כִּי",
+            "id": "k.bg.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "that",
+              "pos": "conj"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כִּי",
+            "id": "H3588",
+            "pos": "conj",
+            "source_fields": {
+              "meaning": "(by implication) very widely used as a relative conjunction or adverb (as below); often largely modified by other particles annexed",
+              "source": "a primitive particle (the full form of the prepositional prefix) indicating causal relations of all kinds, antecedent or consequent;",
+              "usage": "and, (forasmuch, inasmuch, where-) as, assured(-ly), but, certainly, doubtless, else, even, except, for, how, (because, in, so, than) that, nevertheless, now, rightly, seeing, since, surely, then, therefore, (al-) though, till, truly, until, when, whether, while, whom, yea, yet."
+            },
+            "transliteration": "kîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "frf"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3588 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "כֵֽן"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.7",
+        "Gen.1.9",
+        "Gen.1.11",
+        "Gen.1.15",
+        "Gen.1.24",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01n5f",
+        "01GLz",
+        "013y8",
+        "01wJn",
+        "01JZq",
+        "01P5s"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כֵּן",
+            "id": "k.by.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "so",
+              "pos": "adv"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כֵּן",
+            "id": "H3651",
+            "pos": "adv",
+            "source_fields": {
+              "meaning": "properly, set upright; hence (figuratively as adjective) just; but usually (as adverb or conjunction) rightly or so (in various applications to manner, time and relation; often with other particles)",
+              "source": "from 3559;",
+              "usage": "after that (this, -ward, -wards), as... as, (for-) asmuch as yet, be (for which) cause, following, howbeit, in (the) like (manner, -wise), × the more, right, (even) so, state, straightway, such (thing), surely, there (where) -fore, this, thus, true, well, × you."
+            },
+            "transliteration": "kên"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fug"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3651 c",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/הָ/ע֖וֹף",
+        "וְ/עוֹף֙",
+        "וּ/בְ/ע֣וֹף",
+        "ע֤וֹף",
+        "ע֨וֹף"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20",
+        "Gen.1.21",
+        "Gen.1.22",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "012tG",
+        "01q1G",
+        "01e6B",
+        "01EVu",
+        "01Wjz",
+        "01Y9g"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עוֹף",
+            "id": "p.bk.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "flying creatures",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עוֹף",
+            "id": "H5775",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a bird (as covered with feathers, or rather as covering with wings), often collectively",
+              "source": "from 5774;",
+              "usage": "bird, that flieth, flying, fowl."
+            },
+            "transliteration": "ʻôwph"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jem"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5775",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "עֶ֥רֶב"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.8",
+        "Gen.1.13",
+        "Gen.1.19",
+        "Gen.1.23",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01NQN",
+        "01xdF",
+        "01Qa3",
+        "011rL",
+        "01CMz",
+        "01UrG"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עֶ֫רֶב",
+            "id": "p.ff.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "set",
+              "pos": "n.[m.]"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עֶרֶב",
+            "id": "H6153",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "dusk",
+              "source": "from 6150;",
+              "usage": "day, even(-ing, tide), night."
+            },
+            "transliteration": "ʻereb"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 6,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jum"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6153",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בָּרָ֣א",
+        "בָּרָ֥א",
+        "וַ/יִּבְרָ֣א",
+        "וַ/יִּבְרָ֨א"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1",
+        "Gen.1.21",
+        "Gen.1.27"
+      ],
+      "actual_word_token_ids": [
+        "01Nvk",
+        "016kU",
+        "01jjy",
+        "01PUg",
+        "01SAE"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בָּרָא",
+            "id": "b.cw.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "shape",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בָּרָא",
+            "id": "H1254",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "(absolutely) to create; (qualified) to cut down (a wood), select, feed (as formative processes)",
+              "source": "a primitive root;",
+              "usage": "choose, create (creator), cut down, dispatch, do, make (fat)."
+            },
+            "transliteration": "bârâʼ"
+          }
+        ]
+      },
+      "editorial_status": "OWNER_LEXICAL_FAMILY_LOCKED_MORPH_REVIEW_PENDING",
+      "genesis_occurrences": 5,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bxy"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": "shape",
+      "owner_lock_id": "bara",
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1254 a",
+      "source_morphological_wayyiqtol_count": 2,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַֽ/חַיָּ֣ה",
+        "חַיָּ֑ה",
+        "חַיָּ֔ה",
+        "חַיָּ֖ה",
+        "חַיָּה֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20",
+        "Gen.1.21",
+        "Gen.1.24",
+        "Gen.1.28",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01ecS",
+        "016w9",
+        "01QH2",
+        "01h53",
+        "01MRA"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "חַי",
+            "id": "h.cd.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "alive",
+              "pos": "adj"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "חַי",
+            "id": "H2416",
+            "pos": "a n-m n-f",
+            "source_fields": {
+              "meaning": "alive; hence, raw (flesh); fresh (plant, water, year), strong; also (as noun, especially in the feminine singular and masculine plural) life (or living thing), whether literally or figuratively",
+              "source": "from 2421;",
+              "usage": "age, alive, appetite, (wild) beast, company, congregation, life(-time), live(-ly), living (creature, thing), maintenance, merry, multitude, (be) old, quick, raw, running, springing, troop."
+            },
+            "transliteration": "chay"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 5,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dts"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2416 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/מְּאֹרֹ֖ת",
+        "הַ/מָּא֤וֹר",
+        "לִ/מְאוֹרֹת֙",
+        "מְאֹרֹת֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.14",
+        "Gen.1.15",
+        "Gen.1.16"
+      ],
+      "actual_word_token_ids": [
+        "01zpy",
+        "01NrT",
+        "01sHf",
+        "01ddd",
+        "01U4a"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מָאוֹר",
+            "id": "a.cd.ao",
+            "pos": "",
+            "source_fields": {
+              "def": "luminary",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מָאוֹר",
+            "id": "H3974",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, a luminous body or luminary, i.e. (abstractly) light (as an element); figuratively, brightness, i.e.cheerfulness; specifically, a chandelier",
+              "source": "or מָאֹר; also (in plural) feminine מְאוֹרָה; or מְאֹרָה; from 215;",
+              "usage": "bright, light."
+            },
+            "transliteration": "mâʼôwr"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 5,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gif"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3974",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יִּקְרָ֧א",
+        "וַ/יִּקְרָ֨א",
+        "קָ֣רָא",
+        "קָרָ֣א"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.8",
+        "Gen.1.10"
+      ],
+      "actual_word_token_ids": [
+        "01nAB",
+        "01LeN",
+        "01YUq",
+        "01BU7",
+        "01fJN"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "קָרָא",
+            "id": "s.cy.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "call",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "קָרָא",
+            "id": "H7121",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to call out to (i.e. properly, address by name, but used in a wide variety of applications)",
+              "source": "a primitive root (rather identical with 7122 through the idea of accosting a person met);",
+              "usage": "bewray (self), that are bidden, call (for, forth, self, upon), cry (unto), (be) famous, guest, invite, mention, (give) name, preach, (make) proclaim(-ation), pronounce, publish, read, renowned, say."
+            },
+            "transliteration": "qârâʼ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 5,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lln"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7121",
+      "source_morphological_wayyiqtol_count": 3,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יַּבְדֵּ֗ל",
+        "וַ/יַּבְדֵּ֣ל",
+        "וּֽ/לֲ/הַבְדִּ֔יל",
+        "לְ/הַבְדִּ֕יל",
+        "מַבְדִּ֔יל"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.4",
+        "Gen.1.6",
+        "Gen.1.7",
+        "Gen.1.14",
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01jQb",
+        "015gQ",
+        "01goK",
+        "0192v",
+        "018ro"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בָּדַל",
+            "id": "b.ah.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "be divided",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בָּדַל",
+            "id": "H914",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to divide (in variation senses literally or figuratively, separate, distinguish, differ, select, etc.)",
+              "source": "a primitive root;",
+              "usage": "(make, put) difference, divide (asunder), (make) separate (self, -ation), sever (out), × utterly."
+            },
+            "transliteration": "bâdal"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 5,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bki"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "914",
+      "source_morphological_wayyiqtol_count": 2,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "זֹרֵ֣עַ",
+        "מַזְרִ֣יעַ",
+        "מַזְרִ֤יעַ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01Bbz",
+        "01Cof",
+        "01ki2",
+        "01Xh9"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "זָרַע",
+            "id": "g.cl.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "sow",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "זָרַע",
+            "id": "H2232",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to sow; figuratively, to disseminate, plant, fructify",
+              "source": "a primitive root;",
+              "usage": "bear, conceive seed, set with sow(-er), yield."
+            },
+            "transliteration": "zâraʻ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dlx"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2232",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/חֹ֑שֶׁךְ",
+        "הַ/חֹֽשֶׁךְ",
+        "וְ/חֹ֖שֶׁךְ",
+        "וְ/לַ/חֹ֖שֶׁךְ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2",
+        "Gen.1.4",
+        "Gen.1.5",
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01C5U",
+        "01dBc",
+        "013TL",
+        "01CZB"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "חֹ֫שֶׁךְ",
+            "id": "h.gt.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "darkness",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "חֹשֶׁךְ",
+            "id": "H2822",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "the dark; hence (literally) darkness; figuratively, misery, destruction, death, ignorance, sorrow, wickedness",
+              "source": "from 2821;",
+              "usage": "dark(-ness), night, obscurity."
+            },
+            "transliteration": "chôshek"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "emb"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2822",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בַּ/יַּמִּ֔ים",
+        "הַ/יָּ֜ם",
+        "הַ/יָּם֙",
+        "יַמִּ֑ים"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.10",
+        "Gen.1.22",
+        "Gen.1.26",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "019KV",
+        "01koG",
+        "012tS",
+        "01AXb"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "יָם",
+            "id": "j.br.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "sea",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "יָם",
+            "id": "H3220",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a sea (as breaking in noisy surf) or large body of water; specifically (with the article), the Mediterranean Sea; sometimes a large river, or an artifical basin; locally, the west, or (rarely) the south",
+              "source": "from an unused root meaning to roar;",
+              "usage": "sea (× -faring man, (-shore)), south, west (-ern, side, -ward)."
+            },
+            "transliteration": "yâm"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fby"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3220",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/לַּ֔יְלָה",
+        "הַ/לָּ֑יְלָה",
+        "וּ/בַ/לַּ֔יְלָה",
+        "לָ֑יְלָה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.14",
+        "Gen.1.16",
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01sMn",
+        "01Bx7",
+        "01ndZ",
+        "01eXj"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "לַ֫יְלָה",
+            "id": "l.bm.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "night",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "לַיִל",
+            "id": "H3915",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, a twist (away of the light), i.e. night; figuratively, adversity",
+              "source": "or (Isaiah 21:11) לֵיל; also לַיְלָה; from the same as 3883;",
+              "usage": "(mid-)night (season)."
+            },
+            "transliteration": "layil"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gfp"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3915",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "נֶ֣פֶשׁ",
+        "נֶ֤פֶשׁ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20",
+        "Gen.1.21",
+        "Gen.1.24",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01dSp",
+        "01qg1",
+        "01Unh",
+        "01c58"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "נֶ֫פֶשׁ",
+            "id": "n.en.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "soul",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "נֶפֶשׁ",
+            "id": "H5315",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "properly, a breathing creature, i.e. animal of (abstractly) vitality; used very widely in a literal, accommodated or figurative sense (bodily or mental)",
+              "source": "from 5314;",
+              "usage": "any, appetite, beast, body, breath, creature, × dead(-ly), desire, × (dis-) contented, × fish, ghost, greedy, he, heart(-y), (hath, × jeopardy of) life (× in jeopardy), lust, man, me, mind, mortally, one, own, person, pleasure, (her-, him-, my-, thy-) self, them (your) -selves, slay, soul, tablet, they, thing, (× she) will, × would have it."
+            },
+            "transliteration": "nephesh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ikq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5315",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הָ/עֵ֛ץ",
+        "וְ/עֵ֧ץ",
+        "עֵ֖ץ",
+        "עֵ֣ץ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01fV3",
+        "01fLi",
+        "01yNT",
+        "01mrn"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עֵץ",
+            "id": "p.em.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "tree",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עֵץ",
+            "id": "H6086",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a tree (from its firmness); hence, wood (plural sticks)",
+              "source": "from 6095;",
+              "usage": "carpenter, gallows, helve, pine, plank, staff, stalk, stick, stock, timber, tree, wood."
+            },
+            "transliteration": "ʻêts"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jrn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6086",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "עֵ֖שֶׂב",
+        "עֵ֚שֶׂב",
+        "עֵ֣שֶׂב"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.29",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01GYe",
+        "01aMT",
+        "01KPU",
+        "01S38"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עֵ֫שֶׂב",
+            "id": "p.fx.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "herb",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עֶשֶׂב",
+            "id": "H6212",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "grass (or any tender shoot)",
+              "source": "from an unused root meaning to glisten (or be green);",
+              "usage": "grass, herb."
+            },
+            "transliteration": "ʻeseb"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jxh"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6212",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "פְּנֵ֖י",
+        "פְּנֵ֣י",
+        "פְּנֵ֥י"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2",
+        "Gen.1.20",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01EVS",
+        "01KZG",
+        "01uXX",
+        "01JMT"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "פָּנֶה",
+            "id": "q.bu.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "face",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "פָּנִים",
+            "id": "H6440",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "the face (as the part that turns); used in a great variety of applications (literally and figuratively); also (with prepositional prefix) as a preposition (before, etc.)",
+              "source": "plural (but always as singular) of an unused noun פָּנֶה; from 6437);",
+              "usage": "accept, a-(be-) fore(-time), against, anger, × as (long as), at, battle, because (of), beseech, countenance, edge, employ, endure, enquire, face, favour, fear of, for, forefront(-part), form(-er time, -ward), from, front, heaviness, × him(-self), honourable, impudent, in, it, look(-eth) (-s), × me, meet, × more than, mouth, of, off, (of) old (time), × on, open, out of, over against, the partial, person, please, presence, propect, was purposed, by reason of, regard, right forth, serve, × shewbread, sight, state, straight, street, × thee, × them(-selves), through ( -out), till, time(-s) past, (un-) to(-ward), upon, upside ( down), with(-in, -stand), × ye, × you."
+            },
+            "transliteration": "pânîym"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "kgr"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6440",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "פְרִי",
+        "פְּרִ֛י",
+        "פְּרִ֞י",
+        "פְּרִי֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01Sov",
+        "01ifp",
+        "01AJj",
+        "01XMu"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "פְּרִי",
+            "id": "q.cv.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "fruit",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "פְּרִי",
+            "id": "H6529",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "fruit (literally or figuratively)",
+              "source": "from 6509;",
+              "usage": "bough, (first-)fruit(-ful), reward."
+            },
+            "transliteration": "pᵉrîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "kkn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6529",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הָֽ/רֹמֶ֡שֶׂת",
+        "הָֽ/רֹמֵ֥שׂ",
+        "הָֽ/רֹמֶ֥שֶׂת",
+        "רוֹמֵ֣שׂ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.21",
+        "Gen.1.26",
+        "Gen.1.28",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01wA4",
+        "01zqr",
+        "01vpK",
+        "01eLD"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָמַשׂ",
+            "id": "t.dc.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "creep",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָמַשׂ",
+            "id": "H7430",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "properly, to glide swiftly, i.e. to crawl or move with short steps; by analogy to swarm",
+              "source": "a primitive root;",
+              "usage": "creep, move."
+            },
+            "transliteration": "râmas"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 4,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lyu"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7430",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/גְּדֹלִ֑ים",
+        "הַ/גָּדֹל֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.16",
+        "Gen.1.21"
+      ],
+      "actual_word_token_ids": [
+        "01iee",
+        "01hxo",
+        "01Tn7"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "גָּדוֹל",
+            "id": "c.aq.ae",
+            "pos": "",
+            "source_fields": {
+              "def": "great",
+              "pos": "adj"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "גָּדוֹל",
+            "id": "H1419",
+            "pos": "a n-pr-m",
+            "source_fields": {
+              "meaning": "great (in any sense); hence, older; also insolent",
+              "source": "or גָּדֹל; (shortened) from 1431;",
+              "usage": "aloud, elder(-est), exceeding(-ly), far, (man of) great (man, matter, thing,-er,-ness), high, long, loud, mighty, more, much, noble, proud thing, × sore, (×) very."
+            },
+            "transliteration": "gâdôwl"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "cev"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1419 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/חַֽיְתוֹ",
+        "חַיַּ֣ת",
+        "חַיַּ֨ת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.24",
+        "Gen.1.25",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01jNE",
+        "01qK3",
+        "01xkK"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "חַיָּה",
+            "id": "h.cd.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "living thing",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "חַי",
+            "id": "H2416",
+            "pos": "a n-m n-f",
+            "source_fields": {
+              "meaning": "alive; hence, raw (flesh); fresh (plant, water, year), strong; also (as noun, especially in the feminine singular and masculine plural) life (or living thing), whether literally or figuratively",
+              "source": "from 2421;",
+              "usage": "age, alive, appetite, (wild) beast, company, congregation, life(-time), live(-ly), living (creature, thing), maintenance, merry, multitude, (be) old, quick, raw, running, springing, troop."
+            },
+            "transliteration": "chay"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dtv"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2416 c",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בְּ/צֶ֥לֶם",
+        "בְּ/צַלְמ֔/וֹ",
+        "בְּ/צַלְמֵ֖/נוּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.26",
+        "Gen.1.27"
+      ],
+      "actual_word_token_ids": [
+        "01gtq",
+        "01mR4",
+        "01MC8"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "צֶ֫לֶם",
+            "id": "r.ce.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "image",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "צֶלֶם",
+            "id": "H6754",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a phantom, i.e. (figuratively) illusion, resemblance; hence, a representative figure, especially an idol",
+              "source": "from an unused root meaning to shade;",
+              "usage": "image, vain shew."
+            },
+            "transliteration": "tselem"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "kuu"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6754",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/רְב֗וּ",
+        "וּ/רְב֛וּ",
+        "יִ֥רֶב"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.22",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01DDb",
+        "018GY",
+        "01suQ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָבָה",
+            "id": "t.ai.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "be",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָבָה",
+            "id": "H7235",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to increase (in whatever respect)",
+              "source": "a primitive root;",
+              "usage": "(bring in) abundance (× -antly), archer (by mistake for 7232), be in authority, bring up, × continue, enlarge, excel, exceeding(-ly), be full of, (be, make) great(-er, -ly, × -ness), grow up, heap, increase, be long, (be, give, have, make, use) many (a time), (any, be, give, give the, have) more (in number), (ask, be, be so, gather, over, take, yield) much (greater, more), (make to) multiply, nourish, plenty(-eous), × process (of time), sore, store, thoroughly, very."
+            },
+            "transliteration": "râbâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lqo"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7235 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הָ/רֶ֖מֶשׂ",
+        "וָ/רֶ֛מֶשׂ",
+        "רֶ֥מֶשׂ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.24",
+        "Gen.1.25",
+        "Gen.1.26"
+      ],
+      "actual_word_token_ids": [
+        "013KZ",
+        "016zt",
+        "01U94"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רֶ֫מֶשׂ",
+            "id": "t.dc.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "creeping things",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רֶמֶשׂ",
+            "id": "H7431",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a reptile or any other rapidly moving animal",
+              "source": "from 7430;",
+              "usage": "that creepeth, creeping (moving) thing."
+            },
+            "transliteration": "remes"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lyt"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7431",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בְּהֵמָ֥ה",
+        "הַ/בְּהֵמָה֙",
+        "וּ/בַ/בְּהֵמָה֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.24",
+        "Gen.1.25",
+        "Gen.1.26"
+      ],
+      "actual_word_token_ids": [
+        "01ou4",
+        "01QDu",
+        "01swV"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בְּהֵמָה",
+            "id": "b.al.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "beast",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בְּהֵמָה",
+            "id": "H929",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "properly, a dumb beast; especially any large quadruped or animal (often collective)",
+              "source": "from an unused root (probably meaning to be mute);",
+              "usage": "beast, cattle."
+            },
+            "transliteration": "bᵉhêmâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 3,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bkx"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "929",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אָדָ֛ם",
+        "הָֽ/אָדָם֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.26",
+        "Gen.1.27"
+      ],
+      "actual_word_token_ids": [
+        "01gPX",
+        "01LXS"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אָדָם",
+            "id": "a.bc.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "man",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אָדָם",
+            "id": "H120",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "ruddy i.e. a human being (an individual or the species, mankind, etc.)",
+              "source": "from 119;",
+              "usage": "× another, hypocrite, common sort, × low, man (mean, of low degree), person."
+            },
+            "transliteration": "ʼâdâm"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "afb"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "120",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יְבָ֣רֶךְ",
+        "וַ/יְבָ֧רֶךְ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.22",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01kDf",
+        "01RuM"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בָּרַךְ",
+            "id": "b.dd.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "kneel",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בָּרַךְ",
+            "id": "H1288",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to kneel; by implication to bless God (as an act of adoration), and (vice-versa) man (as a benefit); also (by euphemism) to curse (God or the king, as treason)",
+              "source": "a primitive root;",
+              "usage": "× abundantly, × altogether, × at all, blaspheme, bless, congratulate, curse, × greatly, × indeed, kneel (down), praise, salute, × still, thank."
+            },
+            "transliteration": "bârak"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bzi"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1288",
+      "source_morphological_wayyiqtol_count": 2,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בִ/דְגַ֨ת",
+        "בִּ/דְגַ֤ת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.26",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01k1L",
+        "01F88"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "דָּגָה",
+            "id": "d.ak.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "fish",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "דָּגָה",
+            "id": "H1710",
+            "pos": "n-f",
+            "source_fields": {
+              "source": "feminine of 1709, and meaning the same",
+              "usage": "fish."
+            },
+            "transliteration": "dâgâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "cqz"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1710",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "דֶּ֔שֶׁא",
+        "דֶּ֠שֶׁא"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11",
+        "Gen.1.12"
+      ],
+      "actual_word_token_ids": [
+        "01fPi",
+        "01C32"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "דֶּ֫שֶׁא",
+            "id": "d.cn.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "grass",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "דֶּשֶׁא",
+            "id": "H1877",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a sprout; by analogy, grass",
+              "source": "from 1876;",
+              "usage": "(tender) grass, green, (tender) herb."
+            },
+            "transliteration": "desheʼ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "cxg"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1877",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הִנֵּה֩",
+        "וְ/הִנֵּה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.29",
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01Ygn",
+        "01JUf"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "הִנֵּה",
+            "id": "e.bz.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "lo!",
+              "pos": "demonstr.part"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "הִנֵּה",
+            "id": "H2009",
+            "pos": "dp",
+            "source_fields": {
+              "meaning": "lo!",
+              "source": "prolongation for 2005;",
+              "usage": "behold, lo, see."
+            },
+            "transliteration": "hinnêh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dck"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2009",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "לְ/הָאִ֖יר"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.15",
+        "Gen.1.17"
+      ],
+      "actual_word_token_ids": [
+        "01FMU",
+        "01WvG"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אוֹר",
+            "id": "a.cd.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "be",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אוֹר",
+            "id": "H215",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to be (causative, make) luminous (literally and metaphorically)",
+              "source": "a primitive root;",
+              "usage": "× break of day, glorious, kindle, (be, en-, give, show) light (-en, -ened), set on fire, shine."
+            },
+            "transliteration": "ʼôwr"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ajb"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "215",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אֶחָ֔ד",
+        "אֶחָֽד"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.5",
+        "Gen.1.9"
+      ],
+      "actual_word_token_ids": [
+        "01NFp",
+        "01dv1"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֶחָד",
+            "id": "a.cj.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "one",
+              "pos": "adj.num"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֶחָד",
+            "id": "H259",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "properly, united, i.e. one; or (as an ordinal) first",
+              "source": "a numeral from 258;",
+              "usage": "a, alike, alone, altogether, and, any(-thing), apiece, a certain, (dai-) ly, each (one), eleven, every, few, first, highway, a man, once, one, only, other, some, together,"
+            },
+            "transliteration": "ʼechâd"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "aks"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "259",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/יַּבָּשָׁ֑ה",
+        "לַ/יַּבָּשָׁה֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.9",
+        "Gen.1.10"
+      ],
+      "actual_word_token_ids": [
+        "01a62",
+        "01zQ2"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "יַבָּשָׁה",
+            "id": "j.aj.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "dry land",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "יַבָּשָׁה",
+            "id": "H3004",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "dry ground",
+              "source": "from 3001;",
+              "usage": "dry (ground, land)."
+            },
+            "transliteration": "yabbâshâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "etk"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3004",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/תּוֹצֵ֨א",
+        "תּוֹצֵ֨א"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.12",
+        "Gen.1.24"
+      ],
+      "actual_word_token_ids": [
+        "01TXw",
+        "01yDv"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "יָצָא",
+            "id": "j.cq.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "go",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "יָצָא",
+            "id": "H3318",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to go (causatively, bring) out, in a great variety of applications, literally and figuratively, direct and proxim.",
+              "source": "a primitive root;",
+              "usage": "× after, appear, × assuredly, bear out, × begotten, break out, bring forth (out, up), carry out, come (abroad, out, thereat, without), be condemned, depart(-ing, -ure), draw forth, in the end, escape, exact, fail, fall (out), fetch forth (out), get away (forth, hence, out), (able to, cause to, let) go abroad (forth, on, out), going out, grow, have forth (out), issue out, lay (lie) out, lead out, pluck out, proceed, pull out, put away, be risen, × scarce, send with commandment, shoot forth, spread, spring out, stand out, × still, × surely, take forth (out), at any time, × to (and fro), utter."
+            },
+            "transliteration": "yâtsâʼ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fga"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3318",
+      "source_morphological_wayyiqtol_count": 1,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "לְ/אָכְלָ֑ה",
+        "לְ/אָכְלָֽה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.29",
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01c6V",
+        "01eN1"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אָכְלָה",
+            "id": "a.dc.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "food",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אׇכְלָה",
+            "id": "H402",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "food",
+              "source": "feminine of 401;",
+              "usage": "consume, devour, eat, food, meat."
+            },
+            "transliteration": "ʼoklâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "aqj"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "402",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/מִלְא֤וּ",
+        "וּ/מִלְא֥וּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.22",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01RCg",
+        "011Su"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מָלֵא",
+            "id": "m.bz.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "be full",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מָלֵא",
+            "id": "H4390",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to fill or (intransitively) be full of, in a wide application (literally and figuratively)",
+              "source": "or מָלָא; (Esther 7:5), a primitive root;",
+              "usage": "accomplish, confirm, consecrate, be at an end, be expired, be fenced, fill, fulfil, (be, become, × draw, give in, go) full(-ly, -ly set, tale), (over-) flow, fulness, furnish, gather (selves, together), presume, replenish, satisfy, set, space, take a (hand-) full, have wholly."
+            },
+            "transliteration": "mâlêʼ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gyx"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4390",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "לְ/מֶמְשֶׁ֣לֶת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.16"
+      ],
+      "actual_word_token_ids": [
+        "01TW6",
+        "01Qbs"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מֶמְשָׁלָה",
+            "id": "m.dw.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "rule",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מֶמְשָׁלָה",
+            "id": "H4475",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "rule; also (concretely in plural) a realm or a ruler",
+              "source": "feminine of 4474;",
+              "usage": "dominion, government, power, to rule."
+            },
+            "transliteration": "memshâlâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "hcc"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4475",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וַ/יִּתֵּ֥ן",
+        "נָתַ֨תִּי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.17",
+        "Gen.1.29"
+      ],
+      "actual_word_token_ids": [
+        "01B6c",
+        "012gM"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "נָתַן",
+            "id": "n.gg.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "give",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "נָתַן",
+            "id": "H5414",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to give, used with greatest latitude of application (put, make, etc.)",
+              "source": "a primitive root;",
+              "usage": "add, apply, appoint, ascribe, assign, × avenge, × be (healed), bestow, bring (forth, hither), cast, cause, charge, come, commit, consider, count, cry, deliver (up), direct, distribute, do, × doubtless, × without fail, fasten, frame, × get, give (forth, over, up), grant, hang (up), × have, × indeed, lay (unto charge, up), (give) leave, lend, let (out), lie, lift up, make, O that, occupy, offer, ordain, pay, perform, place, pour, print, × pull, put (forth), recompense, render, requite, restore, send (out), set (forth), shew, shoot forth (up), sing, slander, strike, (sub-) mit, suffer, × surely, × take, thrust, trade, turn, utter, weep, willingly, withdraw, would (to) God, yield."
+            },
+            "transliteration": "nâthan"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "iow"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5414",
+      "source_morphological_wayyiqtol_count": 1,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "פְּר֣וּ",
+        "פְּר֥וּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.22",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01cK8",
+        "01V8b"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "פָּרָה",
+            "id": "q.cv.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "bear fruit",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "פָּרָה",
+            "id": "H6509",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to bear fruit (literally or figuratively)",
+              "source": "a primitive root;",
+              "usage": "bear, bring forth (fruit), (be, cause to be, make) fruitful, grow, increase."
+            },
+            "transliteration": "pârâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "kjs"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6509",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/יִרְדּוּ֩",
+        "וּ/רְד֞וּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.26",
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01fbB",
+        "01b5Q"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָדָה",
+            "id": "t.az.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "have dominion",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָדָה",
+            "id": "H7287",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to tread down, i.e. subjugate; specifically, to crumble off",
+              "source": "a primitive root;",
+              "usage": "(come to, make to) have dominion, prevail against, reign, (bear, make to) rule,(-r, over), take."
+            },
+            "transliteration": "râdâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lsn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7287 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "יִשְׁרְצ֣וּ",
+        "שָׁרְצ֨וּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20",
+        "Gen.1.21"
+      ],
+      "actual_word_token_ids": [
+        "01i4W",
+        "01v8V"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שָׁרַץ",
+            "id": "v.gc.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "swarm",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שָׁרַץ",
+            "id": "H8317",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to wriggle, i.e. (by implication) swarm or abound",
+              "source": "a primitive root;",
+              "usage": "breed (bring forth, increase) abundantly (in abundance), creep, move."
+            },
+            "transliteration": "shârats"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nkq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8317",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "מִ/תַּ֣חַת",
+        "מִ/תַּ֤חַת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.7",
+        "Gen.1.9"
+      ],
+      "actual_word_token_ids": [
+        "01L4k",
+        "01BYa"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "תַּחַת",
+            "id": "w.an.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "the under part",
+              "pos": "n.[m.]"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "תַּחַת",
+            "id": "H8478",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "the bottom (as depressed); only adverbially, below (often with prepositional prefix underneath), in lieu of, etc.",
+              "source": "from the same as 8430;",
+              "usage": "as, beneath, × flat, in(-stead), (same) place (where...is), room, for...sake, stead of, under, × unto, × when...was mine, whereas, (where-) fore, with."
+            },
+            "transliteration": "tachath"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 2,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nrc"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8478",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הָֽ/אֲדָמָ֖ה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.25"
+      ],
+      "actual_word_token_ids": [
+        "01zEm"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֲדָמָה",
+            "id": "a.bc.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "ground",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֲדָמָה",
+            "id": "H127",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "soil (from its general redness)",
+              "source": "from 119;",
+              "usage": "country, earth, ground, husband(-man) (-ry), land."
+            },
+            "transliteration": "ʼădâmâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "afj"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "127",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "כִּ/דְמוּתֵ֑/נוּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.26"
+      ],
+      "actual_word_token_ids": [
+        "01HSQ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "דְּמוּת",
+            "id": "d.bs.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "likeness",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "דְּמוּת",
+            "id": "H1823",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "resemblance; concretely, model, shape; adverbially, like",
+              "source": "from 1819;",
+              "usage": "fashion, like (-ness, as), manner, similitude."
+            },
+            "transliteration": "dᵉmûwth"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "cuz"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1823",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "תַּֽדְשֵׁ֤א"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.11"
+      ],
+      "actual_word_token_ids": [
+        "01Qsh"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "דָּשָׁא",
+            "id": "d.cn.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "sprout",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "דָּשָׁא",
+            "id": "H1876",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to sprout",
+              "source": "a primitive root;",
+              "usage": "bring forth, spring."
+            },
+            "transliteration": "dâshâʼ"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "cxh"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "1876",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "זָכָ֥ר"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.27"
+      ],
+      "actual_word_token_ids": [
+        "01gc8"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "זָכָר",
+            "id": "g.bh.ae",
+            "pos": "",
+            "source_fields": {
+              "def": "male",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "זָכָר",
+            "id": "H2145",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, remembered, i.e. a male (of man or animals, as being the most noteworthy sex)",
+              "source": "from 2142;",
+              "usage": "× him, male, man(child, -kind)."
+            },
+            "transliteration": "zâkâr"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dih"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2145",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "לְ/אֹתֹת֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.14"
+      ],
+      "actual_word_token_ids": [
+        "01rTK"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אוֹת",
+            "id": "a.bt.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "sign",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אוֹת",
+            "id": "H226",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "a signal (literally or figuratively), as a flag, beacon, monument, omen, prodigy, evidence, etc.",
+              "source": "probably from 225 (in the sense of appearing);",
+              "usage": "mark, miracle, (en-) sign, token."
+            },
+            "transliteration": "ʼôwth"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ajn"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "226",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "חֲמִישִֽׁי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.23"
+      ],
+      "actual_word_token_ids": [
+        "01jfz"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "חֲמִישִׁי",
+            "id": "h.dr.af",
+            "pos": "",
+            "source_fields": {
+              "def": "fifth",
+              "pos": "m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "חֲמִישִׁי",
+            "id": "H2549",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "fifth; also a fifth",
+              "source": "or חֲמִשִּׁי; ordinal from 2568;",
+              "usage": "fifth (part)."
+            },
+            "transliteration": "chămîyshîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "dzp"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "2549",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "יֶ֥רֶק"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.30"
+      ],
+      "actual_word_token_ids": [
+        "01QvZ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "יֶ֫רֶק",
+            "id": "j.do.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "green",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "יֶרֶק",
+            "id": "H3418",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, pallor, i.e. hence, the yellowish green of young and sickly vegetation; concretely, verdure, i.e. grass or vegetation",
+              "source": "from 3417 (in the sense of vacuity of color);",
+              "usage": "grass, green (thing)."
+            },
+            "transliteration": "yereq"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fjt"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3418",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/כִבְשֻׁ֑/הָ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.28"
+      ],
+      "actual_word_token_ids": [
+        "01yT5"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כָּבַשׁ",
+            "id": "k.am.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "subdue",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כָּבַשׁ",
+            "id": "H3533",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to tread down; hence, negatively, to disregard; positively, to conquer, subjugate, violate",
+              "source": "a primitive root;",
+              "usage": "bring into bondage, force, keep under, subdue, bring into subjection."
+            },
+            "transliteration": "kâbash"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fov"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3533",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/כּוֹכָבִֽים"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.16"
+      ],
+      "actual_word_token_ids": [
+        "013yJ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כּוֹכָב",
+            "id": "k.ae.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "star",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כּוֹכָב",
+            "id": "H3556",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a star (as round or as shining); figuratively, a prince",
+              "source": "probably from the same as 3522 (in the sense of rolling) or 3554 (in the sense of blazing);",
+              "usage": "star(-gazer)."
+            },
+            "transliteration": "kôwkâb"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fps"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3556",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "כָּנָף֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.21"
+      ],
+      "actual_word_token_ids": [
+        "01bYD"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "כָּנָף",
+            "id": "k.ce.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "wing",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "כָּנָף",
+            "id": "H3671",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "an edge or extremity; specifically (of a bird or army) a wing, (of a garment or bedclothing) a flap, (of the earth) a quarter, (of a building) a pinnacle",
+              "source": "from 3670;",
+              "usage": "bird, border, corner, end, feather(-ed), × flying, (one an-) other, overspreading, × quarters, skirt, × sort, uttermost part, wing(-ed)."
+            },
+            "transliteration": "kânâph"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "fva"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3671",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "מְאֹ֑ד"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01dPK"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מְאֹד",
+            "id": "m.ab.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "muchness",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מְאֹד",
+            "id": "H3966",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "properly, vehemence, i.e. (with or without preposition) vehemently; by implication, wholly, speedily, etc. (often with other words as an intensive or superlative; especially when repeated)",
+              "source": "from the same as 181;",
+              "usage": "diligently, especially, exceeding(-ly), far, fast, good, great(-ly), × louder and louder, might(-ily, -y), (so) much, quickly, (so) sore, utterly, very ( much, sore), well."
+            },
+            "transliteration": "mᵉʼôd"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ghx"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "3966",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "אֶל"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.9"
+      ],
+      "actual_word_token_ids": [
+        "01tRR"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "אֶל",
+            "id": "a.di.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "motion to",
+              "pos": "prep"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "אֵל",
+            "id": "H413",
+            "pos": "prep",
+            "source_fields": {
+              "meaning": "near, with or among; often in general, to",
+              "source": "(but only used in the shortened constructive form אֶל ); a primitive particle; properly, denoting motion towards, but occasionally used of a quiescent position, i.e.",
+              "usage": "about, according to, after, against, among, as for, at, because(-fore, -side), both...and, by, concerning, for, from, × hath, in(-to), near, (out) of, over, through, to(-ward), under, unto, upon, whether, with(-in)."
+            },
+            "transliteration": "ʼêl"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "aqs"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "413",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/לְ/מ֣וֹעֲדִ֔ים"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.14"
+      ],
+      "actual_word_token_ids": [
+        "01SHw"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מוֹעֵד",
+            "id": "j.cb.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "appointed time",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מוֹעֵד",
+            "id": "H4150",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, an appointment, i.e. a fixed time or season; specifically, a festival; conventionally a year; by implication, an assembly (as convened for a definite purpose); technically the congregation; by extension, the place of meeting; also a signal (as appointed beforehand)",
+              "source": "or מֹעֵד; or (feminine) מוֹעָדָה; (2 Chronicles 8:13), from 3259;",
+              "usage": "appointed (sign, time), (place of, solemn) assembly, congregation, (set, solemn) feast, (appointed, due) season, solemn(-ity), synogogue, (set) time (appointed)."
+            },
+            "transliteration": "môwʻêd"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "gpd"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4150",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/לְ/מִקְוֵ֥ה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.10"
+      ],
+      "actual_word_token_ids": [
+        "01jQ8"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מִקְוֶה",
+            "id": "s.ar.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "collection",
+              "pos": "n.[m.]"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מִקְוֶה",
+            "id": "H4723",
+            "pos": "n-pr-m n-m",
+            "source_fields": {
+              "meaning": "something waited for, i.e. confidence (objective or subjective); also a collection, i.e. (of water) a pond, or (of men and horses) a caravan or drove",
+              "source": "or מִקְוֵה; (1 Kings 10:28), or מִקְוֵאlemma מִּקְוֵא extra dagesh, corrected to מִקְוֵא; (2 Chronicles 1:16), from 6960;",
+              "usage": "abiding, gathering together, hope, linen yarn, plenty (of water), pool."
+            },
+            "transliteration": "miqveh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "hmg"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4723 c",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "מָק֣וֹם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.9"
+      ],
+      "actual_word_token_ids": [
+        "01Q7E"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מָקוֹם",
+            "id": "s.av.am",
+            "pos": "",
+            "source_fields": {
+              "def": "standing-place",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מָקוֹם",
+            "id": "H4725",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "properly, a standing, i.e. a spot; but used widely of a locality (general or specific); also (figuratively) of a condition (of body or mind)",
+              "source": "or מָקֹם; also (feminine) מְקוֹמָה; or מְקֹמָה; from 6965;",
+              "usage": "country, × home, × open, place, room, space, × whither(-soever)."
+            },
+            "transliteration": "mâqôwm"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "hmi"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4725",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/לִ/מְשֹׁל֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.18"
+      ],
+      "actual_word_token_ids": [
+        "01n9v"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "מָשַׁל",
+            "id": "m.dw.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "rule",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "מָשַׁל",
+            "id": "H4910",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to rule",
+              "source": "a primitive root;",
+              "usage": "(have, make to have) dominion, governor, × indeed, reign, (bear, cause to, have) rule(-ing, -r), have power."
+            },
+            "transliteration": "mâshal"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "htu"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "4910",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וּ/נְקֵבָ֖ה"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.27"
+      ],
+      "actual_word_token_ids": [
+        "01Lsp"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "נְקֵבָה",
+            "id": "n.fa.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "female",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "נְקֵבָה",
+            "id": "H5347",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "female (from the sexual form)",
+              "source": "from 5344;",
+              "usage": "female."
+            },
+            "transliteration": "nᵉqêbâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "imc"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5347",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "יְעוֹפֵ֣ף"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20"
+      ],
+      "actual_word_token_ids": [
+        "01Xzm"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "עוּף",
+            "id": "p.bk.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "fly",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "עוּף",
+            "id": "H5774",
+            "pos": "v n-f",
+            "source_fields": {
+              "meaning": "to fly; also (by implication of dimness) to faint (from the darkness of swooning)",
+              "source": "a primitive root; to cover (with wings or obscurity); hence (as denominative from 5775)",
+              "usage": "brandish, be (wax) faint, flee away, fly (away), × set, shine forth, weary."
+            },
+            "transliteration": "ʻûwph"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "jeo"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "5774 a",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "יִקָּו֨וּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.9"
+      ],
+      "actual_word_token_ids": [
+        "01NPq"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "קָוָה",
+            "id": "s.ar.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "collect",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "קָוָה",
+            "id": "H6960",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to bind together (perhaps by twisting), i.e. collect; (figuratively) to expect",
+              "source": "a primitive root;",
+              "usage": "gather (together), look, patiently, tarry, wait (for, on, upon)."
+            },
+            "transliteration": "qâvâh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lel"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6960 b",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/קָּטֹן֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.16"
+      ],
+      "actual_word_token_ids": [
+        "01dSQ"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "קָטֹן",
+            "id": "s.be.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "small",
+              "pos": "adj"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "קָטָן",
+            "id": "H6996",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "abbreviated, i.e. diminutive, literally (in quantity, size or number) or figuratively (in age or importance)",
+              "source": "or קָטֹן; from 6962;",
+              "usage": "least, less(-er), little (one), small(-est, one, quantity, thing), young(-er, -est)."
+            },
+            "transliteration": "qâṭân"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lfx"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "6996 b",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בְּ/רֵאשִׁ֖ית"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.1"
+      ],
+      "actual_word_token_ids": [
+        "01xeN"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רֵאשִׁית",
+            "id": "t.ad.ag",
+            "pos": "",
+            "source_fields": {
+              "def": "beginning",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רֵאשִׁית",
+            "id": "H7225",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "the first, in place, time, order or rank (specifically, a firstfruit)",
+              "source": "from the same as 7218;",
+              "usage": "beginning, chief(-est), first(-fruits, part, time), principal thing."
+            },
+            "transliteration": "rêʼshîyth"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lqb"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7225",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "רְבִיעִֽי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.19"
+      ],
+      "actual_word_token_ids": [
+        "01sYp"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רְבִיעִי",
+            "id": "t.al.ah",
+            "pos": "",
+            "source_fields": {
+              "def": "fourth",
+              "pos": "m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רְבִיעִי",
+            "id": "H7243",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "fourth; also (fractionally) a fourth",
+              "source": "or רְבִעִי; from 7251;",
+              "usage": "foursquare, fourth (part)."
+            },
+            "transliteration": "rᵉbîyʻîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lqt"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7243",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/ר֣וּחַ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2"
+      ],
+      "actual_word_token_ids": [
+        "0137c"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רוּחַ",
+            "id": "t.bk.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "breath",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רוּחַ",
+            "id": "H7307",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "wind; by resemblance breath, i.e. a sensible (or even violent) exhalation; figuratively, life, anger, unsubstantiality; by extension, a region of the sky; by resemblance spirit, but only of a rational being (including its expression and functions)",
+              "source": "from 7306;",
+              "usage": "air, anger, blast, breath, × cool, courage, mind, × quarter, × side, spirit(-ual), tempest, × vain, (whirl-) wind(-y)."
+            },
+            "transliteration": "rûwach"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ltm"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7307",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "מְרַחֶ֖פֶת"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2"
+      ],
+      "actual_word_token_ids": [
+        "01yNB"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "רָחַף",
+            "id": "t.cd.aa",
+            "pos": "",
+            "source_fields": {
+              "def": "hover",
+              "pos": "vb"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "רָחַף",
+            "id": "H7363",
+            "pos": "v",
+            "source_fields": {
+              "meaning": "to brood; by implication, to be relaxed",
+              "source": "a primitive root;",
+              "usage": "flutter, move, shake."
+            },
+            "transliteration": "râchaph"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "lvq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7363 b",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "שְׁלִישִֽׁי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.13"
+      ],
+      "actual_word_token_ids": [
+        "01oAj"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שְׁלִישִׁי",
+            "id": "v.du.ad",
+            "pos": "",
+            "source_fields": {
+              "def": "third",
+              "pos": "m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שְׁלִישִׁי",
+            "id": "H7992",
+            "pos": "a",
+            "source_fields": {
+              "meaning": "third; feminine a third (part); by extension, a third (day, year or time); specifically, a third-story cell)",
+              "source": "ordinal from 7969;",
+              "usage": "third (part, rank, time), three (years old)."
+            },
+            "transliteration": "shᵉlîyshîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "mwk"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "7992",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וְ/שָׁנִֽים"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.14"
+      ],
+      "actual_word_token_ids": [
+        "01Axb"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שָׁנָה",
+            "id": "v.ek.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "year",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שָׁנֶה",
+            "id": "H8141",
+            "pos": "n-f",
+            "source_fields": {
+              "meaning": "a year (as a revolution of time)",
+              "source": "(in plural or (feminine) שָׁנָה; from 8138;",
+              "usage": "whole age, × long, old, year(× -ly)."
+            },
+            "transliteration": "shâneh"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ncm"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8141",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "שֵׁנִֽי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.8"
+      ],
+      "actual_word_token_ids": [
+        "0187B"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שֵׁנִי",
+            "id": "v.em.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "second",
+              "pos": "m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שֵׁנִי",
+            "id": "H8145",
+            "pos": "n",
+            "source_fields": {
+              "meaning": "properly, double, i.e. second; also adverbially, again",
+              "source": "from 8138;",
+              "usage": "again, either (of them), (an-) other, second (time)."
+            },
+            "transliteration": "shênîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "ncq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8145",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "שְׁנֵ֥י"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.16"
+      ],
+      "actual_word_token_ids": [
+        "01YHH"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שְׁנַ֫יִם",
+            "id": "v.em.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "two",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שְׁנַיִם",
+            "id": "H8147",
+            "pos": "n",
+            "source_fields": {
+              "meaning": "two; also (as ordinal) twofold",
+              "source": "dual of 8145; feminine שְׁתַּיִם;",
+              "usage": "both, couple, double, second, twain, twelfth, twelve, twenty (sixscore) thousand, twice, two."
+            },
+            "transliteration": "shᵉnayim"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nct"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8147",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "שֶׁ֖רֶץ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.20"
+      ],
+      "actual_word_token_ids": [
+        "01Ddq"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שֶׁ֫רֶץ",
+            "id": "v.gc.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "swarmers",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שֶׁרֶץ",
+            "id": "H8318",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a swarm, i.e. active mass of minute animals",
+              "source": "from 8317;",
+              "usage": "creep(-ing thing), move(-ing creature)."
+            },
+            "transliteration": "sherets"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nkp"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8318",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/שִּׁשִּֽׁי"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.31"
+      ],
+      "actual_word_token_ids": [
+        "01KNo"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "שִׁשִּׁי",
+            "id": "v.bk.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "sixth",
+              "pos": "m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "שִׁשִּׁי",
+            "id": "H8345",
+            "pos": "n",
+            "source_fields": {
+              "meaning": "sixth, ordinal or (feminine) fractional",
+              "source": "from 8337;",
+              "usage": "sixth (part)."
+            },
+            "transliteration": "shishshîy"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nlu"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8345",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "תֹ֨הוּ֙"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2"
+      ],
+      "actual_word_token_ids": [
+        "01aPd"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "תֹּ֫הוּ",
+            "id": "w.ag.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "formlessness",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "תֹּהוּ",
+            "id": "H8414",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a desolation (of surface), i.e. desert; figuratively, a worthless thing; adverbially, in vain",
+              "source": "from an unused root meaning to lie waste;",
+              "usage": "confusion, empty place, without form, nothing, (thing of) nought, vain, vanity, waste, wilderness."
+            },
+            "transliteration": "tôhûw"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "noq"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8414",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "תְה֑וֹם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2"
+      ],
+      "actual_word_token_ids": [
+        "01PB6"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "תְּהוֹם",
+            "id": "w.ah.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "deep",
+              "pos": "n.f"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "תְּהוֹם",
+            "id": "H8415",
+            "pos": "n",
+            "source_fields": {
+              "meaning": "an abyss (as a surging mass of water), especially the deep (the main sea or the subterranean watersupply)",
+              "source": "or תְּהֹם; (usually feminine) from 1949;",
+              "usage": "deep (place), depth."
+            },
+            "transliteration": "tᵉhôwm"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nor"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8415",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "בְּ/ת֣וֹךְ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.6"
+      ],
+      "actual_word_token_ids": [
+        "018M6"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "תָּ֫וֶךְ",
+            "id": "w.aj.ae",
+            "pos": "",
+            "source_fields": {
+              "def": "midst",
+              "pos": "subst"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "תָּוֶךְ",
+            "id": "H8432",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a bisection, i.e. (by implication) the centre",
+              "source": "from an unused root meaning to sever;",
+              "usage": "among(-st), × between, half, × (there-, where-), in(-to), middle, mid(-night), midst (among), × out (of), × through, × with(-in)."
+            },
+            "transliteration": "tâvek"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "npi"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8432",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "הַ/תַּנִּינִ֖ם"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.21"
+      ],
+      "actual_word_token_ids": [
+        "01wjj"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "תַּנִּין",
+            "id": "w.be.ac",
+            "pos": "",
+            "source_fields": {
+              "def": "serpent",
+              "pos": "n.m"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "תַּנִּין",
+            "id": "H8577",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a marine or land monster, i.e. sea-serpent or jackal",
+              "source": "or תַּנִּים; (Ezekiel 29:3), intensive from the same as 8565;",
+              "usage": "dragon, sea-monster, serpent, whale."
+            },
+            "transliteration": "tannîyn"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "nux"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "8577 b",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    },
+    {
+      "actual_original_spellings": [
+        "וָ/בֹ֔הוּ"
+      ],
+      "actual_verse_refs": [
+        "Gen.1.2"
+      ],
+      "actual_word_token_ids": [
+        "01eYX"
+      ],
+      "candidate_english_from_dictionary": null,
+      "canonical_christological_review": "NOT_DONE",
+      "dictionary_refs": {
+        "bdb": [
+          {
+            "headword": "בֹ֫הוּ",
+            "id": "b.aj.ab",
+            "pos": "",
+            "source_fields": {
+              "def": "emptiness",
+              "pos": "n.[m.]"
+            }
+          }
+        ],
+        "strong": [
+          {
+            "headword": "בֹּהוּ",
+            "id": "H922",
+            "pos": "n-m",
+            "source_fields": {
+              "meaning": "a vacuity, i.e. (superficially) an undistinguishable ruin",
+              "source": "from an unused root (meaning to be empty);",
+              "usage": "emptiness, void."
+            },
+            "transliteration": "bôhûw"
+          }
+        ]
+      },
+      "editorial_status": "LEXICAL_RESEARCH_REQUIRED",
+      "genesis_occurrences": 1,
+      "independent_morphology_review": "NOT_DONE",
+      "lexical_index_entry_ids": [
+        "bkr"
+      ],
+      "modern_readability_review": "NOT_DONE",
+      "owner_english_family": null,
+      "owner_lock_id": null,
+      "source_dictionary_meaning_is_OLT_translation": false,
+      "source_exact_lemma_id": "922",
+      "source_morphological_wayyiqtol_count": 0,
+      "source_verse_english_alignment": "NOT_DONE",
+      "wordplay_homonym_review": "NOT_DONE"
+    }
+  ],
+  "genesis_chapter_publication": "BLOCKED",
+  "non_owner_english_decisions": "ALL_PENDING",
+  "owner_locks_only": [
+    "1254 a",
+    "6213 a",
+    "7549"
+  ],
+  "review_status_counts": {
+    "LEXICAL_RESEARCH_REQUIRED": 94,
+    "OWNER_LEXICAL_FAMILY_LOCKED_MORPH_REVIEW_PENDING": 3
+  },
+  "source": "OSHB exact lemma + source LexicalIndex xrefs to Strong/BDB",
+  "source_lemma_cards": 97,
+  "status": "DICTIONARY_RESEARCH_CARDS_NOT_OLT_ENGLISH_APPROVAL",
+  "verses": 31,
+  "word_tokens": 434
+}
