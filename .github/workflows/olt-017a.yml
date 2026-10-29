@@ -1,0 +1,23 @@
+name: OLT-017A first scholarly lexical research evidence
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/research/olt_017a_scholarly_wave.json"
+      - "docs/OLT-017A_SCHOLARLY_REVIEW.md"
+      - "scripts/verify_017a.py"
+      - ".github/workflows/olt-017a.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_claims:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Assert evidence is source-linked research only and publication stays blocked
+        run: python scripts/verify_017a.py

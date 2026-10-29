@@ -1,0 +1,146 @@
+{
+  "checkpoint": "OLT-017A",
+  "name": "Genesis 1 first scholarly dispute-and-context wave",
+  "scope": "FIVE_HIGH_IMPACT_LEXICAL_QUESTIONS_NOT_FULL_97_ENTRY_REVIEW",
+  "evidence_scope": "Publisher and journal abstracts, selected translator notes, displayed source morphology and published excerpt. Full primary articles not uniformly accessible.",
+  "independent_philological_signoff": false,
+  "owner_english_word_family_locks_preserved": true,
+  "new_english_family_approvals": 0,
+  "approved_homonym_links": 0,
+  "homonym_layout": "UNDER_ENGLISH_WORD",
+  "bible_wide_gender_explanation": "ONCE_ON_EVENTUAL_BIBLE_OPENING_PAGE",
+  "publication_status": "BLOCKED",
+  "cases": [
+    {
+      "id": "OLT-017A-RESHIT",
+      "verse": "Gen.1.1",
+      "source_lemma": "7225",
+      "topic": "Temporal syntax of bereshit",
+      "current_english_proposal": "In the Beginning",
+      "competing_analyses": [
+        "Independent adverbial in the beginning is linguistically defensible according to Kantor's analysis of historical reading traditions (based on the published abstract).",
+        "Holmstedt's 2022 abstract argues for two syntactically viable alternatives neither matching the traditional independent opening.",
+        "Neither view by itself proves the user-approved optional theological bracket [of His Power], which has no independent matching token in Gen 1:1."
+      ],
+      "sources": [
+        {
+          "url": "https://doi.org/10.15699/jbl.1444.2025.2",
+          "evidence": "PUBLISHER_ABSTRACT",
+          "year": 2025
+        },
+        {
+          "url": "https://journals.co.za/doi/10.25159/2663-6573/11647",
+          "evidence": "PUBLISHER_ABSTRACT",
+          "year": 2022
+        }
+      ],
+      "research_decision": "RETAIN_AS_OWNER_STYLE_RESEARCH_CANDIDATE_WITH_EXPLICIT_SYNTAX_DISPUTE",
+      "christological": "No Christological lexical gloss established by these syntax studies."
+    },
+    {
+      "id": "OLT-017A-RUACH",
+      "verse": "Gen.1.2",
+      "source_lemma": "7307",
+      "topic": "Ruach Elohim: Spirit or wind",
+      "current_english_proposal": "Spirit of God",
+      "competing_analyses": [
+        "The semantic range of ruach includes wind, breath and spirit; scholarship documents different contextual choices.",
+        "Lemański discusses Genesis and Exodus in light of wind, life and spirit functions; the abstract does not certify only one reading of Gen 1:2.",
+        "Hiebert's 2019 article argues emphatically for a physical/material wind or breath reading. That is an author's argument, not a settled philological consensus.",
+        "Christian canonical interpretation may compare divine Spirit and creation, but must not be labeled a mandatory Hebrew dictionary translation."
+      ],
+      "sources": [
+        {
+          "url": "https://czasopisma.kul.pl/vv/article/view/1947",
+          "evidence": "JOURNAL_ABSTRACT",
+          "year": 2020
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/1476993X241234908",
+          "evidence": "JOURNAL_ABSTRACT",
+          "year": 2024
+        },
+        {
+          "url": "https://translation.bible/wp-content/uploads/2024/12/hiebert-2019-retranslating-genesis-1-2-reconnecting-biblical-thought-and-contemporary-experience.pdf",
+          "evidence": "PUBLISHED_ARTICLE_EXCERPT",
+          "year": 2019
+        }
+      ],
+      "research_decision": "KEEP_SPIRIT_OF_GOD_AS_CONTEXTUAL_OLT_CANDIDATE_NOT_EXCLUSIVE_MEANING",
+      "christological": "Relevant canonical comparison can be researched, but it is interpretive, not source homonymy."
+    },
+    {
+      "id": "OLT-017A-TANNIN",
+      "verse": "Gen.1.21",
+      "source_lemma": "8577 b",
+      "topic": "Tanninim creature designation",
+      "current_english_proposal": "great sea-creatures",
+      "competing_analyses": [
+        "The biblical term is used for serpents, marine creatures and figurative sea monsters in different passages.",
+        "Jacob F. Love's Jewish Bible Quarterly 2024 article records the context-specific translation challenge, including sea monsters/dragons/serpents.",
+        "Gen 1:21's immediate aquatic context permits a general sea-creature proposal but does not identify a modern zoological species."
+      ],
+      "sources": [
+        {
+          "url": "https://www.jewishbible.org/articles/presence-of-dragons-in-the-hebrew-bible/",
+          "evidence": "JOURNAL_ABSTRACT",
+          "year": 2024
+        },
+        {
+          "url": "https://classic.net.bible.org/verse.php?book=Gen&chapter=1&tab=commentaries&theme=false&verse=21",
+          "evidence": "TRANSLATOR_NOTE",
+          "year": null
+        }
+      ],
+      "research_decision": "RETAIN_CONTEXTUAL_CANDIDATE_WITH_DRAGON_SEA_MONSTER_ALTERNATIVES_IN_NOTES_ONLY",
+      "christological": "Do not identify Gen 1:21 tanninim lexically with the Greek dragon of Revelation solely from imagery."
+    },
+    {
+      "id": "OLT-017A-IMAGE",
+      "verse": "Gen.1.26",
+      "source_lemma": "6754",
+      "topic": "Tselem (image) and demut (likeness)",
+      "current_english_proposal": "in Our image",
+      "competing_analyses": [
+        "The two source terms are separate lexemes; the paired expression has theological and socio-cultural interpretations beyond simple visual resemblance.",
+        "C. L. Crouch's 2010 article argues for a divine-parentage reading drawing on the Adam/Seth language in Gen 5:1–3; this is a scholarly interpretation, not an obligatory lexical gloss.",
+        "Christian readers may connect the image theme canonically with Christ in Col 1:15 and 2 Cor 4:4, but the Hebrew word tselem does not directly mean Christ."
+      ],
+      "sources": [
+        {
+          "url": "https://academic.oup.com/jts/article/61/1/1/1673983",
+          "evidence": "JOURNAL_ABSTRACT",
+          "year": 2010
+        }
+      ],
+      "research_decision": "KEEP_IMAGE_AND_LIKENESS_DISTINCT_ADD_INTERTEXTUAL_RESEARCH_NOT_LEXICAL_MERGE",
+      "christological": "Colossians 1:15 and 2 Corinthians 4:4 are canonical Christian parallels, not interchangeable Hebrew lexical meanings."
+    },
+    {
+      "id": "OLT-017A-KABASH",
+      "verse": "Gen.1.28",
+      "source_lemma": "3533",
+      "topic": "Subdue with feminine object suffix",
+      "current_english_proposal": "and subdue her",
+      "competing_analyses": [
+        "Original morphology HC/Vqv2mp/Sp3fs is Qal imperative second masculine plural with feminine singular direct object suffix.",
+        "The feminine object refers to the Earth in the clause; her is a user-directed, morphologically transparent English research choice.",
+        "The semantic force of kabash (subdue, bring under control) is context-dependent and ethically debated; no moral conclusion arises from its grammatical form alone."
+      ],
+      "sources": [
+        {
+          "url": "https://lemma.gebible.app/v/genesis/1/28",
+          "evidence": "MORPHOLOGY_DISPLAY",
+          "year": null
+        },
+        {
+          "url": "https://seethebible.org/bible/genesis/1/28",
+          "evidence": "MORPHOLOGY_DISPLAY",
+          "year": null
+        }
+      ],
+      "research_decision": "PRESERVE_3FS_SUFFIX_AS_HER_CONTEXTUAL_SUBDUE_REVIEW_CONTINUES",
+      "christological": "None asserted from the lexical root."
+    }
+  ]
+}
