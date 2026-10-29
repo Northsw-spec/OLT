@@ -31,8 +31,8 @@ GEN_1_1 = [
     ("01nPh", 7, "776", "d/776", "HTd/Ncbsa", "the Earth",
      "RESEARCH_PROPOSAL"),
 ]
-VERSE_PRIMARY = "In the Beginning God — He shaped the Heavens and the Earth."
-VERSE_OPTIONAL = "In the Beginning [of His Power] God — He shaped the Heavens and the Earth."
+VERSE_PRIMARY = "In the Beginning [of His Power] God — He shaped the Heavens and the Earth."
+VERSE_OPTIONAL = "In the Beginning God — He shaped the Heavens and the Earth."
 EXPECTED_GENESIS_LEMMAS = 97
 EXPECTED_GENESIS_TOKENS = 434
 
@@ -84,6 +84,10 @@ def candidate_verse_1(source, seed):
         raise ValueError("Neutral pronoun in main translation")
     if re.search(r"\b(?:it|its|itself)\b", VERSE_OPTIONAL, re.I):
         raise ValueError("Neutral pronoun in optional candidate")
+    if VERSE_PRIMARY != "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.":
+        raise ValueError("Owner required Genesis 1:1 bracketed main text missing")
+    if not all(x in "[of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît." for x in ("Genesis 49:3", "Deuteronomy 21:17", "ABSENT from Genesis 1:1", "separate Hebrew noun")):
+        raise ValueError("Required source-conscious footnote corrupted")
     if "God — He shaped" not in VERSE_PRIMARY:
         raise ValueError("Mandatory visible named-subject verbal-person form absent")
     aligned=[]
@@ -116,11 +120,13 @@ def candidate_verse_1(source, seed):
         "source_token_count":7,
         "source_alignment":aligned,
         "main_english_proposal":VERSE_PRIMARY,
-        "owner_intertextual_variant_UNAPPROVED":VERSE_OPTIONAL,
+        "unsupplemented_english_baseline_for_source_comparison":VERSE_OPTIONAL,
+        "owner_bracket_supplement_in_main":True,
+        "power_footnote_id":"gen-1-1-power",
         "supplied_english_items":[
             {"surface":"He","reason":"English exposure of third-person masculine singular inflection in bara","source_token_id":"01Nvk","is_separate_hebrew_word":False},
             {"surface":"the (in the Beginning)","reason":"Idiomatic English determination; Hebrew b/reshit has no independent definite article","source_token_id":"01xeN","is_separate_hebrew_word":False},
-            {"surface":"[of His Power]","reason":"INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT; no lexical counterpart in Gen 1:1; investigate Gen 49:3 and Deut 21:17","source_token_id":None,"only_in_optional_variant":True,"is_separate_hebrew_word":False}
+            {"surface":"[of His Power]","reason":"INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT; no lexical counterpart in Gen 1:1; investigate Gen 49:3 and Deut 21:17","source_token_id":None,"included_in_main_english":True,"footnote_id":"gen-1-1-power","is_separate_hebrew_word":False}
         ],
         "english_source_word_order_explanation":"Hebrew verb precedes God; OLT recasts as God — He shaped to expose subject-person while prioritizing the owner's approved typography.",
         "grammatical_issues":[
@@ -128,10 +134,12 @@ def candidate_verse_1(source, seed):
             "Reshit temporal-clause interpretation remains disputed; source annotation alone does not settle the literary syntax.",
             "Elohim noun is morphologically plural; the finite verb is singular.",
             "Et has no independent English lexical surface.",
-            "The additional [of His Power] belongs to an INTERPRETIVE NOTES variant, not to the Hebrew base text."
+            "The main-text [of His Power] is an editorial theological supplement, NOT a separate original Hebrew word or a literal gloss of reshit."
         ],
         "philological_sources":[
             {"url":"https://github.com/openscriptures/morphhb","kind":"PINNED_PRIMARY_WLC_OSHB"},
+            {"url":"https://www.chabad.org/library/bible_cdo/aid/8244","kind":"GEN49_3_HEBREW_RESHIT_ONI"},
+            {"url":"https://openbible.com/text/deuteronomy/21-17.htm","kind":"DEUT21_17_HEBREW_RESHIT_ONO"},
             {"url":"https://uhg.readthedocs.io/en/latest/particle_direct_object_marker.html","kind":"HEBREW_GRAMMAR"},
             {"url":"https://www.repository.cam.ac.uk/items/bce448c5-e43e-416d-89da-5876ead16bc3","kind":"PEER_REVIEWED_ABSTRACT_RESHIT_SYNTAX"},
             {"url":"https://translation.bible/wp-content/uploads/2024/06/hasel-1971-recent-translations-of-genesis-1-1-a-critical-look.pdf","kind":"PUBLISHED_SYNTAX_DISCUSSION"},
@@ -139,7 +147,7 @@ def candidate_verse_1(source, seed):
         "footnote_drafts":[
             {"category":"GRAMMAR","english":"The Hebrew bara is Qal qatal, third-person masculine singular, with its subject Elohim written after the verb. The separate English He makes the inflected subject visible and is not an independent Hebrew word.","editorial_status":"RESEARCH_DRAFT"},
             {"category":"GRAMMAR","english":"The two instances of et mark definite direct objects and do not require independent English lexical equivalents.","editorial_status":"RESEARCH_DRAFT"},
-            {"category":"INTERTEXTUAL_HYPOTHESIS","english":"The optional bracketed phrase [of His Power] is absent from Gen 1:1. Compare the separate use of reshit alongside strength/power in Gen 49:3 and Deut 21:17. The relationship is interpretive, not a literal gloss.","editorial_status":"RESEARCH_DRAFT"},
+            {"category":"INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT","id":"gen-1-1-power","anchor":"[of His Power]","reference":"Gen.1.1","evidence_references":["Gen.49.3","Deut.21.17"],"is_independent_hebrew_lexeme":False,"english":"[of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît.","editorial_status":"RESEARCH_DRAFT"},
         ],
         "independent_scholarly_review":"NOT_DONE",
         "publication_status":"BLOCKED",
