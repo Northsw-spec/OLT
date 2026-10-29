@@ -70,6 +70,7 @@ def build(plan,original,lexicon,seed):
                 raise ValueError(f"Exact source lemma changed for {src['source_token_id']}")
             wy=form=="w"
             if wy!=src["source_tagged_wayyiqtol"]:raise ValueError("Source morphological wayyiqtol tag inconsistency")
+            exact=src["exact_lexemes"]
             if "6213 a" in exact and not re.search(r"\b(?:mak(?:e|es|ing)|made)\b",gloss,re.I):
                 raise ValueError("Owner asah → make/made enforced even for participles")
             if "7549" in exact and not re.search(r"\bfirmament\b",gloss,re.I):
@@ -85,7 +86,6 @@ def build(plan,original,lexicon,seed):
                 raise ValueError(f"Expected source verb-form differs for {src['source_token_id']}")
             if src["source_lemma_raw"].startswith("c/") and not re.search(r"\band\b",gloss,re.I):
                 raise ValueError("Source conjunction was dropped: "+src["source_token_id"])
-            exact=src["exact_lexemes"]
             for lem in exact:
                 if lem not in by_lemma:raise ValueError("Unlinked original Hebrew lemma "+lem)
                 lemma_seen.add(lem)
