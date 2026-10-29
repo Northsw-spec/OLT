@@ -51,7 +51,26 @@ class FirstLexicalProposalTests(unittest.TestCase):
         obj=candidate_verse_1(source_verse_1(self.source),self.seed)
         supp=next(x for x in obj["supplied_english_items"] if x["surface"]=="[of His Power]")
         self.assertIsNone(supp["source_token_id"])
-        self.assertTrue(supp["only_in_optional_variant"])
+        self.assertTrue(supp["included_in_main_english"])
+        self.assertEqual(supp["footnote_id"],"gen-1-1-power")
+        self.assertIn("[of His Power]",obj["main_english_proposal"])
+        self.assertNotIn("[of His Power]",obj["unsupplemented_english_baseline_for_source_comparison"])
+    def test_power_note_explains_separate_hebrew_lexemes(self):
+        obj=candidate_verse_1(source_verse_1(self.source),self.seed)
+        note=next(x for x in obj["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+        self.assertEqual(note["anchor"],"[of His Power]")
+        self.assertEqual(note["reference"],"Gen.1.1")
+        self.assertFalse(note["is_independent_hebrew_lexeme"])
+        self.assertEqual(note["evidence_references"],["Gen.49.3","Deut.21.17"])
+        self.assertIn("ABSENT from Genesis 1:1",note["english"])
+        self.assertIn("separate Hebrew noun",note["english"])
+        self.assertEqual(obj["publication_status"],"BLOCKED")
+    def test_main_brackets_are_mandatory(self):
+        import genesis_literal_proposals as g
+        from unittest.mock import patch
+        with patch.object(g,"VERSE_PRIMARY",g.VERSE_OPTIONAL):
+            with self.assertRaisesRegex(ValueError,"bracketed main text"):
+                candidate_verse_1(source_verse_1(self.source),self.seed)
     def test_all_seven_grammar_only_items_are_accounted_for(self):
         q=priority_queue(self.cards,self.source)
         self.assertEqual(q["non_numeric_grammar_only_count"],7)
