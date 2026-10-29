@@ -36,6 +36,19 @@ VERSE_OPTIONAL = "In the Beginning [of His Power] God — He shaped the Heavens 
 EXPECTED_GENESIS_LEMMAS = 97
 EXPECTED_GENESIS_TOKENS = 434
 
+# Grammatical tokens without a numeric Strong/augmented lemma. The original
+# source annotates these as preposition + pronominal suffix, never omitted words.
+GRAMMAR_ONLY = {
+    "01SV6":("Gen.1.11","b","HR/Sp3ms","in him","3rd masculine singular"),
+    "01J9J":("Gen.1.12","b","HR/Sp3ms","in him","3rd masculine singular"),
+    "01ypu":("Gen.1.28","l","HR/Sp3mp","to them","3rd masculine plural"),
+    "01pAw":("Gen.1.29","l","HR/Sp2mp","to you","2nd masculine plural"),
+    "01884":("Gen.1.29","b","HR/Sp3ms","in him","3rd masculine singular"),
+    "01wEr":("Gen.1.29","l","HR/Sp2mp","to you","2nd masculine plural"),
+    "01teU":("Gen.1.30","b","HR/Sp3ms","in him","3rd masculine singular"),
+}
+
+
 def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -160,6 +173,26 @@ def priority_queue(study_cards,source_dossier):
     actual_components=sum(len(x["exact_lexemes"]) for x in all_source_tokens)
     if actual_components!=tok_total:
         raise ValueError("Genesis numeric source component coverage differs from study cards")
+    if {x["source_token_id"] for x in lemmas_missing}!=set(GRAMMAR_ONLY):
+        raise ValueError("Grammar-only source IDs changed or omitted")
+    grammar_only=[]
+    for row in lemmas_missing:
+        ref,preposition,morph,surface,suffix=GRAMMAR_ONLY[row["source_token_id"]]
+        if (row["verse"]!=ref or row["source_lemma_raw"]!=preposition
+            or row["source_morphology_raw"]!=morph):
+            raise ValueError("Grammar-only source morphology changed for "+row["source_token_id"])
+        grammar_only.append({
+            **row,
+            "grammatical_preposition":"in" if preposition=="b" else "to",
+            "pronominal_suffix_morphology":suffix,
+            "proposed_english_surface":surface,
+            "proposed_english_status":"GRAMMAR_PROPOSAL_NOT_INDEPENDENTLY_APPROVED",
+            "treated_as_numeric_dictionary_lemma":False,
+            "not_an_omitted_word":True,
+        })
+    if any(re.search(r"\\b(?:it|its|itself)\\b",r["proposed_english_surface"],re.I)
+           for r in grammar_only):
+        raise ValueError("Neutral English pronoun in grammar-only source token")
 
     result=[]
     for x in sorted(cards,key=lambda v:(v["owner_english_family"] is not None,
@@ -190,6 +223,8 @@ def priority_queue(study_cards,source_dossier):
         "all_actual_genesis_1_word_tokens":EXPECTED_GENESIS_TOKENS,
         "lexeme_component_occurrences":tok_total,
         "source_word_tokens_without_numeric_lemma":lemmas_missing,
+        "non_numeric_grammar_only_review_proposals":grammar_only,
+        "non_numeric_grammar_only_count":len(grammar_only),
         "source_word_tokens_without_numeric_lemma_count":len(lemmas_missing),
         "source_word_tokens_with_multiple_numeric_lemmas":multi_lexeme,
         "source_word_tokens_with_multiple_numeric_lemmas_count":len(multi_lexeme),

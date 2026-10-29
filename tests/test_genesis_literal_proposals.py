@@ -52,6 +52,20 @@ class FirstLexicalProposalTests(unittest.TestCase):
         supp=next(x for x in obj["supplied_english_items"] if x["surface"]=="[of His Power]")
         self.assertIsNone(supp["source_token_id"])
         self.assertTrue(supp["only_in_optional_variant"])
+    def test_all_seven_grammar_only_items_are_accounted_for(self):
+        q=priority_queue(self.cards,self.source)
+        self.assertEqual(q["non_numeric_grammar_only_count"],7)
+        proposals=q["non_numeric_grammar_only_review_proposals"]
+        self.assertTrue(all(not x["treated_as_numeric_dictionary_lemma"] for x in proposals))
+        self.assertEqual({x["proposed_english_surface"] for x in proposals},
+                         {"in him","to them","to you"})
+    def test_grammar_only_source_discrepancy_fails(self):
+        d=copy.deepcopy(self.source)
+        x=next(x for x in d["tokens"] if x["source_token_id"]=="01SV6")
+        x["source_morphology_raw"]="HR/Sp3mp"
+        with self.assertRaisesRegex(ValueError,"Grammar-only source morphology"):
+            priority_queue(self.cards,d)
+
     def test_ranked_queue_has_no_94_automatic_english_approvals(self):
         q=priority_queue(self.cards,self.source)
         self.assertEqual(q["all_genesis_1_unique_lemma_ids"],97)
