@@ -1,0 +1,31 @@
+{
+  "entries": 11845,
+  "full_source_xml_node_text_tail_and_attributes_preserved": true,
+  "genesis_1_distinct_bdb_entries_referenced": 97,
+  "genesis_1_english_translation": "NOT_DONE",
+  "genesis_1_lexical_cards": 97,
+  "genesis_1_release": "BLOCKED",
+  "hebrew_morphology_independent_check": "NOT_DONE",
+  "license": "Edited Open Scriptures HebrewLexicon source CC BY 4.0, BDB original source public domain; retain attribution",
+  "meaning_status": "DICTIONARY_SENSES_IMPORTED_UNREVIEWED",
+  "node_counts": {
+    "asp": 129,
+    "def": 21343,
+    "em": 312,
+    "entry": 11845,
+    "foreign": 835,
+    "page": 4,
+    "pos": 9195,
+    "ref": 3952,
+    "sense": 8989,
+    "status": 11845,
+    "stem": 3149,
+    "w": 17495
+  },
+  "original_nesting_preserved": true,
+  "record_format": "gzip-compressed UTF8 JSONL; each entry has recursive XML tree",
+  "reproducible_gzip_sha256": "66961da011194c673618a92d1dd8dcc058a6ee8fcf8e9dc0e1fe05ae1197b64b",
+  "source": "Open Scriptures HebrewLexicon/BrownDriverBriggs.xml",
+  "source_commit": "21c9add13bc727d3a951361778e97e3ff7afd1ce",
+  "source_sha256": "2b52658a4323d91674cda4090ab8b3ebddfff640f4f18143c28300e80b2c38f8"
+}
