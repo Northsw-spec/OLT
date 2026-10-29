@@ -1,0 +1,64 @@
+name: OLT-007 full BDB nested sense preservation
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import_bdb_nested.py"
+      - "tests/test_bdb_nested.py"
+      - ".github/workflows/bdb-nested.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-007-bdb
+  cancel-in-progress: false
+jobs:
+  import_bdb:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test hierarchy preservation and failure gates
+        run: python -m unittest discover -s tests -p 'test_bdb_nested.py' -v
+      - name: Fetch pinned Open Scriptures lexical XML
+        run: |
+          set -euo pipefail
+          git clone -q https://github.com/openscriptures/HebrewLexicon.git /tmp/olt-bdb-src
+          git -C /tmp/olt-bdb-src checkout -q 21c9add13bc727d3a951361778e97e3ff7afd1ce
+      - name: Preserve all BDB nested meanings and Genesis 1 source evidence
+        run: python scripts/import_bdb_nested.py --source /tmp/olt-bdb-src/BrownDriverBriggs.xml
+      - name: Check all 11845 entries, source checksum and translation block
+        run: |
+          python - <<'PY'
+          import gzip,json
+          from pathlib import Path
+          d=Path("data")
+          m=json.loads((d/"quality/bdb_nested_manifest.json").read_text())
+          g=json.loads((d/"quality/genesis_01_bdb_sense_evidence.json").read_text())
+          assert m["entries"]==11845,m["entries"]
+          assert m["original_nesting_preserved"]
+          assert m["genesis_1_release"]=="BLOCKED"
+          assert len(g["cards"])==97
+          with gzip.open(d/"imported/lexicon/bdb_nested.jsonl.gz","rt",encoding="utf-8") as f:
+            rows=[json.loads(x) for x in f if x.strip()]
+          assert len(rows)==11845
+          assert all(x["meaning_approval"]=="IMPORTED_DICTIONARY_EVIDENCE_NOT_OLT_APPROVAL" for x in rows)
+          print("PASS: all BDB hierarchical source records preserved; English translation NOT reviewed")
+          PY
+      - name: Commit compressed BDB dataset and Genesis evidence ledger
+        run: |
+          set -euo pipefail
+          git config user.name "olt-bdb-import[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/imported/lexicon/bdb_nested.jsonl.gz data/quality/bdb_nested_manifest.json data/quality/genesis_01_bdb_sense_evidence.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Preserve full BDB nested source hierarchy and 97 Genesis 1 evidence cards"
+            git push origin HEAD:main
+          fi
