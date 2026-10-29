@@ -1,0 +1,406 @@
+{
+  "checkpoint": "OLT-011",
+  "status": "RESEARCH_NOT_APPROVED",
+  "publishable": false,
+  "presentation": "UNDER_ENGLISH_WORD",
+  "start_verse": 11,
+  "end_verse": 15,
+  "expected_source_words": 69,
+  "expected_wayyiqtol": 8,
+  "expected_non_numeric_source_tokens": [
+    "01SV6",
+    "01J9J"
+  ],
+  "verses": [
+    {
+      "reference": "Gen.1.11",
+      "english_research_draft": "And God — He said: Let the Earth sprout sprouts, herb sowing seed, tree of fruit making fruit to his kind, whose seed [is] in him, upon the Earth; and so was.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01cpb",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01zio",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01Qsh",
+          "english_fragment": "Let sprout",
+          "expect_raw_morph": "HVhj3fs",
+          "expect_verb_form": "j"
+        },
+        {
+          "source_token_id": "01zTj",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01fPi",
+          "english_fragment": "sprouts"
+        },
+        {
+          "source_token_id": "01GYe",
+          "english_fragment": "herb"
+        },
+        {
+          "source_token_id": "01Bbz",
+          "english_fragment": "sowing",
+          "expect_raw_morph": "HVhrmsa",
+          "expect_verb_form": "r"
+        },
+        {
+          "source_token_id": "01VA9",
+          "english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01fV3",
+          "english_fragment": "tree of"
+        },
+        {
+          "source_token_id": "01Sov",
+          "english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "01V27",
+          "english_fragment": "making",
+          "expect_raw_morph": "HVqrmsa",
+          "expect_verb_form": "r",
+          "expect_lemma": "6213 a"
+        },
+        {
+          "source_token_id": "01ifp",
+          "english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "017ZG",
+          "english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01B2d",
+          "english_fragment": "whose"
+        },
+        {
+          "source_token_id": "01ewe",
+          "english_fragment": "his seed"
+        },
+        {
+          "source_token_id": "01SV6",
+          "english_fragment": "in him",
+          "expect_raw_morph": "HR/Sp3ms",
+          "expect_lemma": "b"
+        },
+        {
+          "source_token_id": "01G83",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01vzS",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01Gq9",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "013y8",
+          "english_fragment": "so"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.12",
+      "english_research_draft": "And the Earth — she brought forth sprouts, herb sowing seed to his kind, and tree making fruit, whose seed [is] in him, to his kind; and God — He saw that — good.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01TXw",
+          "english_fragment": "And she brought forth",
+          "expect_raw_morph": "HC/Vhw3fs",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "01Y4K",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01C32",
+          "english_fragment": "sprouts"
+        },
+        {
+          "source_token_id": "01aMT",
+          "english_fragment": "herb"
+        },
+        {
+          "source_token_id": "01Cof",
+          "english_fragment": "sowing"
+        },
+        {
+          "source_token_id": "01YWU",
+          "english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01rAQ",
+          "english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01fLi",
+          "english_fragment": "and tree"
+        },
+        {
+          "source_token_id": "01Ptj",
+          "english_fragment": "making"
+        },
+        {
+          "source_token_id": "01AJj",
+          "english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "019Hv",
+          "english_fragment": "whose"
+        },
+        {
+          "source_token_id": "01j1i",
+          "english_fragment": "his seed"
+        },
+        {
+          "source_token_id": "01J9J",
+          "english_fragment": "in him",
+          "expect_raw_morph": "HR/Sp3ms",
+          "expect_lemma": "b"
+        },
+        {
+          "source_token_id": "01U4n",
+          "english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "012Kt",
+          "english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01RmH",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01SWL",
+          "english_fragment": "that"
+        },
+        {
+          "source_token_id": "0175P",
+          "english_fragment": "good"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.13",
+      "english_research_draft": "And was evening, and was morning: day third.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "013Lj",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01Qa3",
+          "english_fragment": "evening"
+        },
+        {
+          "source_token_id": "01WTe",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "016VM",
+          "english_fragment": "morning"
+        },
+        {
+          "source_token_id": "01sKn",
+          "english_fragment": "day"
+        },
+        {
+          "source_token_id": "01oAj",
+          "english_fragment": "third"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.14",
+      "english_research_draft": "And God — He said: Let lights be in the firmament of the Heavens, to separate between the day and between the night; and [they shall] be for signs, and for appointed times, and for days, and years.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01AxB",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01Ap3",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01CEu",
+          "english_fragment": "Let be",
+          "expect_raw_morph": "HVqj3ms",
+          "expect_verb_form": "j"
+        },
+        {
+          "source_token_id": "01zpy",
+          "english_fragment": "lights"
+        },
+        {
+          "source_token_id": "01FiN",
+          "english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "01cLk",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "0192v",
+          "english_fragment": "to separate"
+        },
+        {
+          "source_token_id": "01j63",
+          "english_fragment": "between"
+        },
+        {
+          "source_token_id": "01LFW",
+          "english_fragment": "the day"
+        },
+        {
+          "source_token_id": "01FbT",
+          "english_fragment": "and between"
+        },
+        {
+          "source_token_id": "01Bx7",
+          "english_fragment": "the night"
+        },
+        {
+          "source_token_id": "01btu",
+          "english_fragment": "and [they shall] be",
+          "expect_raw_morph": "HC/Vqq3cp",
+          "expect_verb_form": "q"
+        },
+        {
+          "source_token_id": "01rTK",
+          "english_fragment": "for signs"
+        },
+        {
+          "source_token_id": "01SHw",
+          "english_fragment": "and for appointed times"
+        },
+        {
+          "source_token_id": "01VuH",
+          "english_fragment": "and for days"
+        },
+        {
+          "source_token_id": "01Axb",
+          "english_fragment": "and years"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.15",
+      "english_research_draft": "And [they shall] be for lights in the firmament of the Heavens to illuminate upon the Earth; and so was.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01xva",
+          "english_fragment": "and [they shall] be",
+          "expect_raw_morph": "HC/Vqq3cp",
+          "expect_verb_form": "q"
+        },
+        {
+          "source_token_id": "01NrT",
+          "english_fragment": "for lights"
+        },
+        {
+          "source_token_id": "01iAD",
+          "english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "01372",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01FMU",
+          "english_fragment": "to illuminate"
+        },
+        {
+          "source_token_id": "01SaV",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "014W9",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01MmM",
+          "english_fragment": "and was",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "01wJn",
+          "english_fragment": "so"
+        }
+      ]
+    }
+  ],
+  "research_notes": [
+    {
+      "reference": "Gen.1.11",
+      "lemma": "1876",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "type": "JUSSIVE",
+      "text": "Tadshe has Hiphil jussive 3fs morphology; the volitive Let the Earth sprout is not a narrative wayyiqtol."
+    },
+    {
+      "reference": "Gen.1.11",
+      "lemma": "1877",
+      "status": "RESEARCH_ONLY",
+      "type": "ROOT_WORDPLAY",
+      "text": "Tadshe (sprout) and deshe (sprouts) have a visible related consonantal pattern; whether to show a linked root or wordplay requires scholarly root verification, not automatic homonym certification."
+    },
+    {
+      "reference": "Gen.1.11",
+      "lemma": "6213 a",
+      "status": "OWNER_LOCK",
+      "type": "MORPHOLOGY",
+      "text": "Oseh is a Qal participle of asah; OLT uses making, never shaping or the false simple-past made for this participle."
+    },
+    {
+      "reference": "Gen.1.11",
+      "lemma": "4327",
+      "status": "RESEARCH_ONLY",
+      "type": "PRONOMINAL_SUFFIX",
+      "text": "Lemino carries suffix 3ms, represented as to his kind, not a neuter its kind; bo 3ms is in him, with no separate numeric lexeme."
+    },
+    {
+      "reference": "Gen.1.12",
+      "lemma": "3318",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "type": "WAYYIQTOL",
+      "text": "Vattotse is tagged Hiphil wayyiqtol 3fs. Earth is the feminine subject; she brought forth is proposed as simple past."
+    },
+    {
+      "reference": "Gen.1.14",
+      "lemma": "1961",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "type": "WEQATAL",
+      "text": "Vehayu is HC/Vqq3cp (conjunctive or sequential perfect), not HC/Vqw3ms; proposed and [they shall] be is contextual future/modal, not wayyiqtol."
+    },
+    {
+      "reference": "Gen.1.14",
+      "lemma": "4150",
+      "status": "RESEARCH_ONLY",
+      "type": "SEMANTICS",
+      "text": "Mo'adim may denote appointed times or seasons; the proposed appointed times does not claim a unique sense or a calendrical doctrine."
+    },
+    {
+      "reference": "Gen.1.15",
+      "lemma": "215",
+      "status": "RESEARCH_ONLY",
+      "type": "HIFIL_INFINITIVE",
+      "text": "Leha'ir is Hiphil infinitive construct with lamed, to illuminate; it is not the separate asah/make lexeme."
+    }
+  ]
+}

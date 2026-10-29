@@ -1,0 +1,56 @@
+name: OLT-011 Genesis 1:11–15 original-source research
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_verse_research.py"
+      - "data/plans/olt_011_genesis_11_15.json"
+      - "tests/test_olt_011.py"
+      - ".github/workflows/olt-011.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-011-source-review
+  cancel-in-progress: false
+jobs:
+  source_aligned_research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run OLT-011 negative and original-token tests
+        run: python -m unittest discover -s tests -p 'test_olt_011.py' -v
+      - name: Build 69-source-token research under owner locks
+        run: |
+          python scripts/build_verse_research.py --plan data/plans/olt_011_genesis_11_15.json --out data/research/olt_011_genesis_11_15.json
+      - name: Verify research scope and explicit non-certification
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("data/research/olt_011_genesis_11_15.json").read_text())
+          assert x["source_token_count"]==69
+          assert x["source_wayyiqtol_count"]==8
+          assert x["publication_status"]=="BLOCKED"
+          assert not x["full_english_lexicon_approved"]
+          assert not x["independent_hebrew_morphology_signed_off"]
+          assert len(x["verse_research"])==5
+          assert x["under_word_homonym_presentation"]=="UNDER_ENGLISH_WORD"
+          print("PASS: original-token alignment coverage; NOT a certified English Bible chapter")
+          PY
+      - name: Commit derived source-based research only
+        run: |
+          set -euo pipefail
+          git config user.name "olt-source-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/olt_011_genesis_11_15.json
+          if git diff --cached --quiet; then echo "No change"; else
+            git commit -m "Generate original-source research for Genesis 1:11-15"
+            git push origin HEAD:main
+          fi
