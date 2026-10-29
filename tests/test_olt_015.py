@@ -44,6 +44,34 @@ class OLT015(unittest.TestCase):
  def test_genesis_1_4_exact_language_locked(self):
   p=copy.deepcopy(self.parts);p[1]["verses"][2]["english_main_proposal"]=p[1]["verses"][2]["english_main_proposal"].replace("[he was]","was")
   with self.assertRaisesRegex(ValueError,"Owner-approved Genesis 1:4"):self.make(p)
+ def test_genesis_1_1_bracket_in_main_with_source_footnote(self):
+  a=self.make()
+  v=a["genesis_1_research_verses"][0]
+  self.assertEqual(v["proposed_english_research_text"],
+   "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.")
+  self.assertEqual(len(v["verse_footnote_proposals"]),1)
+  self.assertEqual(v["verse_footnote_proposals"][0]["evidence_references"],["Gen.49.3","Deut.21.17"])
+  md=preview(a)
+  self.assertIn("the Earth.[^gen-1-1-power]",md)
+  self.assertIn("[^gen-1-1-power]: [of His Power]",md)
+  self.assertIn("separate Hebrew noun",md)
+  self.assertEqual(a["authoritatively_approved_english_verses"],0)
+ def test_missing_genesis_1_1_bracket_fails(self):
+  p=copy.deepcopy(self.parts)
+  p[0]["main_english_proposal"]=p[0]["unsupplemented_english_baseline_for_source_comparison"]
+  with self.assertRaisesRegex(ValueError,"bracketed main text"):
+   self.make(p)
+ def test_missing_genesis_1_1_footnote_fails(self):
+  p=copy.deepcopy(self.parts)
+  p[0]["footnote_drafts"]=[x for x in p[0]["footnote_drafts"] if x.get("id")!="gen-1-1-power"]
+  with self.assertRaisesRegex(ValueError,"footnote anchor"):
+   self.make(p)
+ def test_footnote_cannot_imply_power_is_literal_hebrew(self):
+  p=copy.deepcopy(self.parts)
+  note=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  note["is_independent_hebrew_lexeme"]=True
+  with self.assertRaisesRegex(ValueError,"truthful intertextual"):
+   self.make(p)
  def test_render_is_clearly_unapproved(self):
   md=preview(self.make())
   self.assertEqual(md.count("### Gen.1."),31)

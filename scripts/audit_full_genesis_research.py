@@ -38,6 +38,7 @@ def normalized_rows(artifact,index):
             "reference":artifact["reference"],"status":artifact["publication_status"],
             "english":artifact["main_english_proposal"],
             "words":artifact["source_alignment"],"format":0,
+            "footnotes":[x for x in artifact["footnote_drafts"] if x.get("id")=="gen-1-1-power"],
         }]
     if index==1:
         return [{
@@ -139,6 +140,7 @@ def audit(source,artifacts):
             "proposed_english_research_text":english,
             "original_token_alignment":aligned,
             "editorial_status":"NOT_INDEPENDENTLY_APPROVED",
+            "verse_footnote_proposals":rv.get("footnotes",[]),
         })
     if seen!=set(originals):
         raise ValueError("At least one original source token is missing/duplicated")
@@ -148,6 +150,16 @@ def audit(source,artifacts):
         raise ValueError("Whole-chapter unique lexical source-key coverage mismatch")
     if len(grammar_only)!=7:
         raise ValueError("Whole-chapter nonnumeric grammatical word coverage mismatch")
+    if normalized[0]["proposed_english_research_text"]!="In the Beginning [of His Power] God — He shaped the Heavens and the Earth.":
+        raise ValueError("Owner Genesis 1:1 bracketed main text is missing")
+    power_notes=normalized[0]["verse_footnote_proposals"]
+    if len(power_notes)!=1 or power_notes[0].get("id")!="gen-1-1-power" or power_notes[0].get("anchor")!="[of His Power]":
+        raise ValueError("Owner Genesis 1:1 verse-footnote anchor missing")
+    note=power_notes[0]
+    if note.get("is_independent_hebrew_lexeme") is not False or note.get("evidence_references")!=["Gen.49.3","Deut.21.17"]:
+        raise ValueError("Footnote must preserve truthful intertextual source status")
+    if not all(x in note.get("english","") for x in ("Genesis 49:3","Deuteronomy 21:17","separate Hebrew noun","ABSENT from Genesis 1:1")):
+        raise ValueError("Footnote hides that the power lexeme is absent from Hebrew Gen 1:1")
     if not normalized[3]["proposed_english_research_text"].startswith(
        "And God — He saw the light, that [he was] — good."):
         raise ValueError("Owner-approved Genesis 1:4 clause was modified")
@@ -202,10 +214,12 @@ def preview(audit):
             "",
             "**Masoretic Hebrew:** "+hebrew,
             "",
-            "**OLT English research proposal:** "+v["proposed_english_research_text"],
+            "**OLT English research proposal:** "+v["proposed_english_research_text"]+("[^gen-1-1-power]" if v["reference"]=="Gen.1.1" else ""),
             "",
         ])
-    items.extend(["---","","**RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline."])
+    power=audit["genesis_1_research_verses"][0]["verse_footnote_proposals"][0]
+    items.extend(["---","","**RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.","",
+                  "[^gen-1-1-power]: "+power["english"],""])
     return "\n".join(items)+"\n"
 
 def main():
