@@ -70,6 +70,12 @@ def build(plan,original,lexicon,seed):
                 raise ValueError(f"Exact source lemma changed for {src['source_token_id']}")
             wy=form=="w"
             if wy!=src["source_tagged_wayyiqtol"]:raise ValueError("Source morphological wayyiqtol tag inconsistency")
+            if "6213 a" in exact and not re.search(r"\b(?:mak(?:e|es|ing)|made)\b",gloss,re.I):
+                raise ValueError("Owner asah → make/made enforced even for participles")
+            if "7549" in exact and not re.search(r"\bfirmament\b",gloss,re.I):
+                raise ValueError("Owner raqia → firmament enforced")
+            if "1254 a" in exact and not re.search(r"\b(?:shape|shaped|shaping)\b",gloss,re.I):
+                raise ValueError("Owner bara → shape enforced")
             if wy:
                 if not re.search(r"\b(?:said|was|brought|saw|made|called|separated|set|gave|shaped|blessed)\b",gloss,re.I):
                     raise ValueError("Source wayyiqtol requires English simple-past surface")
@@ -87,12 +93,6 @@ def build(plan,original,lexicon,seed):
                 if src["source_lemma_raw"] not in ("b","l") or "Sp" not in src["source_morphology_raw"]:
                     raise ValueError("Unexpected original word without numeric lemma")
                 non_numeric.append(src["source_token_id"])
-            if "6213 a" in exact and not re.search(r"\b(?:mak(?:e|es|ing)|made)\b",gloss,re.I):
-                raise ValueError("Owner asah → make/made enforced even for participles")
-            if "7549" in exact and not re.search(r"\bfirmament\b",gloss,re.I):
-                raise ValueError("Owner raqia → firmament enforced")
-            if "1254 a" in exact and not re.search(r"\b(?:shape|shaped|shaping)\b",gloss,re.I):
-                raise ValueError("Owner bara → shape enforced")
             if "853" in exact and src["source_morphology_raw"].endswith("To") and not src["source_morphology_raw"].endswith("Sp3mp") and gloss.strip() and "and" not in gloss.lower():
                 raise ValueError("Object-marker source token must have zero independent gloss")
             if src["source_token_id"] in ("01SV6","01J9J") and gloss!="in him":
