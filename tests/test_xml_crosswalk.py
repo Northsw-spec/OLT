@@ -23,7 +23,8 @@ class SourceXmlCrosswalkTests(unittest.TestCase):
         self.assertEqual(resolve_strong_reference("1254", {"H1254"})["found_id"],"H1254")
         self.assertEqual(resolve_strong_reference("H01254", {"H1254"})["found_id"],"H1254")
         self.assertIsNone(resolve_strong_reference("1254a", {"H1254"})["found_id"])
-        self.assertIsNone(resolve_strong_reference("1254", {"H1254","1254"})["found_id"])
+        self.assertEqual(resolve_strong_reference("1254", {"H1254","1254"})["found_id"],"1254")
+        self.assertIsNone(resolve_strong_reference("H01254", {"H1254","1254"})["found_id"])
     def test_lexical_aug_suffix_is_not_full_lemma_id(self):
         obs=[{"exact_lemma_key":"122 a","extension":"a","occurrences_of_component":1}]
         lex={"a":{"xref_attributes":[{"aug":"a","bdb":"b1","strong":"122"}]}}
