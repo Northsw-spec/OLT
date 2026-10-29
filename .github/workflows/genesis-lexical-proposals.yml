@@ -1,0 +1,57 @@
+name: OLT-008 first literal source alignment and 97-lemma research queue
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/genesis_literal_proposals.py"
+      - "tests/test_genesis_literal_proposals.py"
+      - ".github/workflows/genesis-lexical-proposals.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-008-first-literal-verse
+  cancel-in-progress: false
+jobs:
+  lexical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test locked lexical families, source identities and false-PASS cases
+        run: python -m unittest discover -s tests -p 'test_genesis_literal_proposals.py' -v
+      - name: Build first authentic source-aligned research verse and all remaining lemma review priorities
+        run: python scripts/genesis_literal_proposals.py
+      - name: Assert all 7 words checked and 94 English decisions remain pending
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path("data/research")
+          v=json.loads((d/"genesis_01_verse_01_alignment_proposal.json").read_text())
+          q=json.loads((d/"genesis_01_97_lemma_review_queue.json").read_text())
+          assert v["source_token_count"]==7
+          assert len(v["source_alignment"])==7
+          assert v["source_alignment"][1]["source_morphology"]=="HVqp3ms"
+          assert v["publication_status"]=="BLOCKED"
+          assert q["new_english_decisions_pending"]==94
+          assert len(q["queue"])==97
+          assert all(x["meaning_and_readability"]=="NOT_APPROVED" for x in q["queue"])
+          print("PASS: Genesis 1:1 source-alignment research proposal; no philological signoff")
+          PY
+      - name: Commit literal research proposal and ranking
+        run: |
+          git config user.name "olt-lexical-proposals[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research
+          if git diff --cached --quiet; then
+            echo "No change"
+          else
+            git commit -m "Add first source-aligned literal Genesis research verse and lexeme queue"
+            git push origin HEAD:main
+          fi
