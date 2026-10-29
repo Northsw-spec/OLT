@@ -1,0 +1,55 @@
+name: OLT-005 Genesis 1 first source-lexicon review dossier
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/genesis_review_dossier.py"
+      - "tests/test_genesis_dossier.py"
+      - ".github/workflows/genesis-review-dossier.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-genesis-dossier
+  cancel-in-progress: false
+jobs:
+  dossier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit and deliberate failure cases
+        run: python -m unittest discover -s tests -p 'test_genesis_dossier.py' -v
+      - name: Reconcile every Genesis 1 original source token to the verified ID crosswalk
+        run: python scripts/genesis_review_dossier.py
+      - name: Verify actual data and unapproved release status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          o=json.loads(Path("data/quality/genesis_01_source_review_dossier.json").read_text())
+          assert len(o["tokens"])==434
+          assert o["scope"]["verses"]==31
+          assert o["scope"]["source_tagged_wayyiqtol"]==50
+          assert o["scope"]["owner_locked_occurrences"]=={"bara":5,"asah":7,"raqia":9}
+          assert not o["publishable"]
+          assert all(t["approved_english_surface"] is None for t in o["tokens"])
+          assert all(t["word_alignment"]=="NOT_TRANSLATED" for t in o["tokens"])
+          print("PASS: Genesis source review dossier generated; no translated chapter certified")
+          PY
+      - name: Commit new Genesis source review dossier
+        run: |
+          git config user.name "olt-source-dossier[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quality/genesis_01_source_review_dossier.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Generate source-first Genesis 1 lexical review dossier"
+            git push origin HEAD:main
+          fi
