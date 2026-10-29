@@ -100,7 +100,7 @@ NOTES=[
  {"ref":"Gen.1.6","type":"GRAMMATICAL_SUPPLEMENT","lemma":"7549","status":"RESEARCH",
   "text":"[him] in the proposed English phrase let [him] be separating is an English editorial completion referring to masculine firmament; no independently written Hebrew him occurs here."},
  {"ref":"Gen.1.7","type":"OWNER_LOCK","lemma":"6213 a","status":"OWNER_LOCK",
-  "text":"Vayyaas is Hiphil? No: OSHB HC/Vqw3ms means Qal wayyiqtol 3ms; OLT must render the asah lexeme as made, never shaped."},
+  "text":"Vayyaas is Qal wayyiqtol third-person masculine singular (OSHB HC/Vqw3ms). The OLT lexical lock requires made, never shaped."},
  {"ref":"Gen.1.7","type":"OBJECT_MARKER","lemma":"853","status":"SOURCE_BASED",
   "text":"The et token marks a direct object. Its English standalone lexical gloss is empty but the original token remains in the source alignment."},
  {"ref":"Gen.1.7","type":"TENSE","lemma":"1961","status":"SOURCE_BASED",
