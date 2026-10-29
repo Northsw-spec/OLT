@@ -1,0 +1,56 @@
+name: OLT-010 Genesis 1:6-10 source-first lexical review
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/genesis_06_10_research.py"
+      - "tests/test_genesis_06_10_research.py"
+      - ".github/workflows/genesis-06-10.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-010-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real source IDs, morphological distinctions and falsification tests
+        run: python -m unittest discover -s tests -p 'test_genesis_06_10_research.py' -v
+      - name: Generate source-first bilingual research ledger for Genesis 1:6-10
+        run: python scripts/genesis_06_10_research.py
+      - name: Check exact source and editorial scope
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path("data/research/genesis_01_verses_06_to_10_research.json").read_text())
+          assert a["verse_count"]==5
+          assert a["token_count"]==63
+          assert a["wayyiqtol_count"]==11
+          assert a["english_approvals"]=="NO_NEW_APPROVAL"
+          assert a["independent_morphology_review"]=="NOT_DONE"
+          assert a["chapter_publication"]=="BLOCKED"
+          assert len({t["source_token_id"] for v in a["verses"] for t in v["source_tokens"]})==63
+          print("PASS: exact source token coverage, not chapter translation certification")
+          PY
+      - name: Commit actual source-aligned Genesis research data
+        run: |
+          set -euo pipefail
+          git config user.name "olt-genesis-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/genesis_01_verses_06_to_10_research.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Add Genesis 1:6-10 source-grounded literal English proposals"
+            git push origin HEAD:main
+          fi
