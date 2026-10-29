@@ -2,7 +2,7 @@
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006 and OLT-007.
+**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006, OLT-007 and OLT-008.
 
 ## VERIFIED BY ACTUAL FILES AND GITHUB ACTIONS (AUTOMATIC DATA VALIDATION)
 - 39 WLC/OSHB Old Testament book datasets, 23,213 verses, 306,785 source word tokens.
@@ -50,3 +50,14 @@ These verify implemented scope only, not the entire Bible translation.
 - Full structured dictionary archive: `data/imported/lexicon/bdb_nested.jsonl.gz`.
 - The archive is **imported dictionary research evidence**, not an OLT-approved gloss or translation. Morphology independent review, 94 new Genesis lemma choices, the full English/MT chapter and publication remain **BLOCKED**.
 - [OLT-007 GitHub Actions](https://github.com/Northsw-spec/OLT/actions/runs/40926253088) checks exact data scope, the nested XML structure and the explicit release blocker.
+
+## OLT-008 — First literal English research alignment: Genesis 1:1
+- [Genesis 1:1 original-source alignment proposal](../data/research/genesis_01_verse_01_alignment_proposal.json): all **7** original Hebrew word tokens mapped to provisional English surfaces; both direct object markers accounted for; BARA source tag **HVqp3ms (Qal qatal 3ms)**, not wayyiqtol.
+- First plain lexical candidate: **“In the Beginning God — He shaped the Heavens and the Earth.”**
+- `[of His Power]` appears only as a separate optional intertextual-theological research variant, explicitly not a word in Hebrew Genesis 1:1.
+- [Genesis 1 word-family research queue](../data/research/genesis_01_97_lemma_review_queue.json) includes **97** distinct lemma keys, **94** awaiting new English-family decisions and **3** with already owner-locked English families.
+- Seven additional original tokens in Gen 1:11, 12, 28–30 have only preposition + pronominal suffix and **no numeric lemma ID**. All seven are now accounted for individually as grammar-only research proposals (`in him`, `to them`, `to you`), not fabricated dictionary lemmas. They are separate from 427 numeric-lemma component occurrences among 434 source word tokens.
+- A negative test rejects neutral `it` even inside proposed grammatical-source English, as well as fabricated token ID, wrong Hebrew morphology and owner lock changes.
+- [OLT-008 GitHub Actions PASS](https://github.com/Northsw-spec/OLT/actions/runs/40929329346): source fixture/proposal checks only, not independent grammar or publication approval.
+
+**Still blocked:** The proposed Genesis 1:1 English is *not a published approved verse*. Genesis 1 remaining 94 new English word families, full 434 word alignments, independent Hebrew morphology, original Hebrew+English ODT/PDF, all real footnotes, optional typological links, and human final philological review remain unfinished.
