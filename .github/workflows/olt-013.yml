@@ -1,0 +1,53 @@
+name: OLT-013 Genesis 1:21–25 original-source review
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/plans/olt_013_genesis_21_25.json"
+      - "tests/test_olt_013.py"
+      - ".github/workflows/olt-013.yml"
+      - "scripts/build_verse_research.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-013-research
+  cancel-in-progress: false
+jobs:
+  source_review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test source-identity, verb-forms and unapproved typology
+        run: python -m unittest discover -s tests -p 'test_olt_013.py' -v
+      - name: Generate exact source-linked 74-token research
+        run: python scripts/build_verse_research.py --plan data/plans/olt_013_genesis_21_25.json --out data/research/olt_013_genesis_21_25.json
+      - name: Check the source and explicit unapproved status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("data/research/olt_013_genesis_21_25.json").read_text())
+          assert x["source_token_count"]==74
+          assert x["source_wayyiqtol_count"]==9
+          assert [len(v["original_word_alignments"]) for v in x["verse_research"]]==[23,13,6,14,18]
+          assert x["publication_status"]=="BLOCKED"
+          assert not x["full_english_lexicon_approved"]
+          assert not x["independent_hebrew_morphology_signed_off"]
+          print("PASS source words, not scholarly translation approval")
+          PY
+      - name: Commit generated source-data
+        run: |
+          git config user.name "olt-source-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/olt_013_genesis_21_25.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Generate Genesis 1:21–25 source-aligned research"
+            git push origin HEAD:main
+          fi

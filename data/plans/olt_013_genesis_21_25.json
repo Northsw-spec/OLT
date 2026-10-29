@@ -1,0 +1,446 @@
+{
+  "checkpoint": "OLT-013",
+  "status": "RESEARCH_NOT_APPROVED",
+  "publishable": false,
+  "presentation": "UNDER_ENGLISH_WORD",
+  "start_verse": 21,
+  "end_verse": 25,
+  "expected_source_words": 74,
+  "expected_wayyiqtol": 9,
+  "expected_non_numeric_source_tokens": [],
+  "verses": [
+    {
+      "reference": "Gen.1.21",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He shaped the great sea-creatures, and every living soul creeping, which the waters swarmed to their kinds, and every bird of wing to his kind; and God — He saw that — good.",
+      "proposals": [
+        {
+          "source_token_id": "016kU",
+          "english_fragment": "And He shaped",
+          "expect_lemma": "c/1254 a",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "01qry",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01bvP",
+          "english_fragment": "",
+          "expect_raw_morph": "HTo"
+        },
+        {
+          "source_token_id": "01wjj",
+          "english_fragment": "the great sea-creatures"
+        },
+        {
+          "source_token_id": "01Tn7",
+          "english_fragment": "the great"
+        },
+        {
+          "source_token_id": "01hEs",
+          "english_fragment": "and"
+        },
+        {
+          "source_token_id": "01xAF",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "01qg1",
+          "english_fragment": "soul"
+        },
+        {
+          "source_token_id": "016w9",
+          "english_fragment": "the living"
+        },
+        {
+          "source_token_id": "01wA4",
+          "english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "01ibe",
+          "english_fragment": "which"
+        },
+        {
+          "source_token_id": "01v8V",
+          "english_fragment": "swarmed",
+          "expect_raw_morph": "HVqp3cp",
+          "expect_verb_form": "p"
+        },
+        {
+          "source_token_id": "01T2S",
+          "english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01tkJ",
+          "english_fragment": "to their kinds"
+        },
+        {
+          "source_token_id": "01EXL",
+          "english_fragment": "and"
+        },
+        {
+          "source_token_id": "01ZPN",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "01q1G",
+          "english_fragment": "bird"
+        },
+        {
+          "source_token_id": "01bYD",
+          "english_fragment": "of wing"
+        },
+        {
+          "source_token_id": "01v2F",
+          "english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "017vt",
+          "english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01kDm",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01doW",
+          "english_fragment": "that"
+        },
+        {
+          "source_token_id": "01eRa",
+          "english_fragment": "good"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.22",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He blessed them, saying: Be fruitful, and multiply, and fill the waters in the Seas; and the bird — let [he] multiply in the Earth.",
+      "proposals": [
+        {
+          "source_token_id": "01kDf",
+          "english_fragment": "And He blessed",
+          "expect_raw_morph": "HC/Vpw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "0163G",
+          "english_fragment": "them",
+          "expect_raw_morph": "HTo/Sp3mp",
+          "expect_lemma": "853"
+        },
+        {
+          "source_token_id": "01WPn",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "011jv",
+          "english_fragment": "saying"
+        },
+        {
+          "source_token_id": "01cK8",
+          "english_fragment": "Be fruitful",
+          "expect_raw_morph": "HVqv2mp",
+          "expect_verb_form": "v"
+        },
+        {
+          "source_token_id": "01DDb",
+          "english_fragment": "and multiply",
+          "expect_raw_morph": "HC/Vqv2mp",
+          "expect_verb_form": "v"
+        },
+        {
+          "source_token_id": "01RCg",
+          "english_fragment": "and fill"
+        },
+        {
+          "source_token_id": "015KE",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01qVd",
+          "english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01koG",
+          "english_fragment": "in the Seas"
+        },
+        {
+          "source_token_id": "01e6B",
+          "english_fragment": "and the bird"
+        },
+        {
+          "source_token_id": "018GY",
+          "english_fragment": "let [he] multiply",
+          "expect_raw_morph": "HVqj3ms",
+          "expect_verb_form": "j"
+        },
+        {
+          "source_token_id": "01GpK",
+          "english_fragment": "in the Earth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.23",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And was evening, and was morning: day fifth.",
+      "proposals": [
+        {
+          "source_token_id": "0168C",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01CMz",
+          "english_fragment": "evening"
+        },
+        {
+          "source_token_id": "01D4c",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01ta1",
+          "english_fragment": "morning"
+        },
+        {
+          "source_token_id": "01JnD",
+          "english_fragment": "day"
+        },
+        {
+          "source_token_id": "01jfz",
+          "english_fragment": "fifth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.24",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He said: Let the Earth bring forth living soul to her kind, cattle, and creeping thing, and beast of Earth to her kind; and so was.",
+      "proposals": [
+        {
+          "source_token_id": "01ErQ",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "014fv",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01yDv",
+          "english_fragment": "Let bring forth",
+          "expect_raw_morph": "HVhj3fs",
+          "expect_verb_form": "j"
+        },
+        {
+          "source_token_id": "01jyT",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01Unh",
+          "english_fragment": "soul"
+        },
+        {
+          "source_token_id": "01QH2",
+          "english_fragment": "living"
+        },
+        {
+          "source_token_id": "01xxn",
+          "english_fragment": "to her kind",
+          "expect_raw_morph": "HR/Ncmsc/Sp3fs"
+        },
+        {
+          "source_token_id": "01ou4",
+          "english_fragment": "cattle"
+        },
+        {
+          "source_token_id": "013KZ",
+          "english_fragment": "and creeping thing"
+        },
+        {
+          "source_token_id": "01jNE",
+          "english_fragment": "and beast of"
+        },
+        {
+          "source_token_id": "01hj3",
+          "english_fragment": "Earth"
+        },
+        {
+          "source_token_id": "01iDs",
+          "english_fragment": "to her kind",
+          "expect_raw_morph": "HR/Ncmsc/Sp3fs"
+        },
+        {
+          "source_token_id": "016Lo",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01JZq",
+          "english_fragment": "so"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.25",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He made the beast of the Earth to her kind, and the cattle to her kind, and every creeping thing of the ground to his kind; and God — He saw that — good.",
+      "proposals": [
+        {
+          "source_token_id": "01ZpQ",
+          "english_fragment": "And He made",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_lemma": "c/6213 a",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "019gS",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01LAe",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01qK3",
+          "english_fragment": "the beast of"
+        },
+        {
+          "source_token_id": "011Cv",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01PBQ",
+          "english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "01mr5",
+          "english_fragment": "and"
+        },
+        {
+          "source_token_id": "01QDu",
+          "english_fragment": "the cattle"
+        },
+        {
+          "source_token_id": "01PbY",
+          "english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "01Ew6",
+          "english_fragment": "and"
+        },
+        {
+          "source_token_id": "0174R",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "016zt",
+          "english_fragment": "creeping thing of"
+        },
+        {
+          "source_token_id": "01zEm",
+          "english_fragment": "the ground"
+        },
+        {
+          "source_token_id": "012dm",
+          "english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01uYh",
+          "english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01YxK",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01aSJ",
+          "english_fragment": "that"
+        },
+        {
+          "source_token_id": "01Kz2",
+          "english_fragment": "good"
+        }
+      ]
+    }
+  ],
+  "research_notes": [
+    {
+      "reference": "Gen.1.21",
+      "lemma": "1254 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "Bara is a Qal wayyiqtol verb here. The OLT owner-lock is shaped, not created. English past follows the actual source form."
+    },
+    {
+      "reference": "Gen.1.21",
+      "lemma": "8577 b",
+      "type": "LEXICAL_ALTERNATIVES",
+      "status": "RESEARCH_ONLY",
+      "text": "Tanninim is plurally aquatic-context creatures; traditional versions include sea monsters, dragons and great sea creatures. 'Great sea-creatures' remains a nonapproved English semantic proposal."
+    },
+    {
+      "reference": "Gen.1.21",
+      "lemma": "5315",
+      "type": "LEXICAL_SEMANTICS",
+      "status": "RESEARCH_ONLY",
+      "text": "Nefesh has a wider source range than a modern immaterial 'soul'. 'Living soul' deliberately preserves the Hebrew noun/adjective distinction; its contextual sense remains under editorial review."
+    },
+    {
+      "reference": "Gen.1.21",
+      "lemma": "8317",
+      "type": "QATAL_NOT_WAYYIQTOL",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Shartzu is source-tagged Qal qatal 3cp; 'swarmed' does not derive from the wayyiqtol mandate here."
+    },
+    {
+      "reference": "Gen.1.22",
+      "lemma": "1288",
+      "type": "PIEL_WAYYIQTOL",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Vayvarekh is Piel wayyiqtol 3ms; English blessed is simple past."
+    },
+    {
+      "reference": "Gen.1.22",
+      "lemma": "853",
+      "type": "PRONOMINAL_OBJECT",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Otam = direct-object marker plus 3mp pronominal suffix and receives them; bare et in the same verse has a zero standalone English gloss."
+    },
+    {
+      "reference": "Gen.1.22",
+      "lemma": "6509",
+      "type": "IMPERATIVE",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Peru is Qal imperative 2mp; Be fruitful is a command, never a wayyiqtol narrative past."
+    },
+    {
+      "reference": "Gen.1.22",
+      "lemma": "7235 a",
+      "type": "IMPERATIVE_JUSSIVE_DISTINCTION",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Urvu is imperative 2mp, but following yirev is jussive 3ms; both may have command force while their morphology differs."
+    },
+    {
+      "reference": "Gen.1.24",
+      "lemma": "4327",
+      "type": "FEMININE_SUFFIX",
+      "status": "RESEARCH_ONLY",
+      "text": "Lemīnah here has a third feminine-singular suffix, expressed in OLT as her kind. This is a grammatical convention, not a repeated Bible-wide gender disclaimer."
+    },
+    {
+      "reference": "Gen.1.25",
+      "lemma": "6213 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "Asah, here a wayyiqtol, must render He made, never shaped; the different Hebrew verb bara used in Gen 1:21 remains shaped."
+    },
+    {
+      "reference": "Gen.1.21",
+      "lemma": "1254 a",
+      "type": "CANONICAL_TYPOLOGY_CANDIDATE",
+      "status": "RESEARCH_ONLY",
+      "text": "A Christian canonical reader can compare divine agency in Genesis 1 with John 1:3. This is interpretive theological cross-reference, not proof that Hebrew bara lexically denotes Christ or shares a Greek homonym."
+    }
+  ]
+}
