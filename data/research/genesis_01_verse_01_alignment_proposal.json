@@ -12,9 +12,17 @@
       "english": "The two instances of et mark definite direct objects and do not require independent English lexical equivalents."
     },
     {
-      "category": "INTERTEXTUAL_HYPOTHESIS",
+      "anchor": "[of His Power]",
+      "category": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT",
       "editorial_status": "RESEARCH_DRAFT",
-      "english": "The optional bracketed phrase [of His Power] is absent from Gen 1:1. Compare the separate use of reshit alongside strength/power in Gen 49:3 and Deut 21:17. The relationship is interpretive, not a literal gloss."
+      "english": "[of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît.",
+      "evidence_references": [
+        "Gen.49.3",
+        "Deut.21.17"
+      ],
+      "id": "gen-1-1-power",
+      "is_independent_hebrew_lexeme": false,
+      "reference": "Gen.1.1"
     }
   ],
   "grammatical_issues": [
@@ -22,10 +30,10 @@
     "Reshit temporal-clause interpretation remains disputed; source annotation alone does not settle the literary syntax.",
     "Elohim noun is morphologically plural; the finite verb is singular.",
     "Et has no independent English lexical surface.",
-    "The additional [of His Power] belongs to an INTERPRETIVE NOTES variant, not to the Hebrew base text."
+    "The main-text [of His Power] is an editorial theological supplement, NOT a separate original Hebrew word or a literal gloss of reshit."
   ],
   "independent_scholarly_review": "NOT_DONE",
-  "main_english_proposal": "In the Beginning God — He shaped the Heavens and the Earth.",
+  "main_english_proposal": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
   "original_hebrew_token_sequence": [
     "בְּ/רֵאשִׁ֖ית",
     "בָּרָ֣א",
@@ -35,11 +43,19 @@
     "וְ/אֵ֥ת",
     "הָ/אָֽרֶץ"
   ],
-  "owner_intertextual_variant_UNAPPROVED": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
+  "owner_bracket_supplement_in_main": true,
   "philological_sources": [
     {
       "kind": "PINNED_PRIMARY_WLC_OSHB",
       "url": "https://github.com/openscriptures/morphhb"
+    },
+    {
+      "kind": "GEN49_3_HEBREW_RESHIT_ONI",
+      "url": "https://www.chabad.org/library/bible_cdo/aid/8244"
+    },
+    {
+      "kind": "DEUT21_17_HEBREW_RESHIT_ONO",
+      "url": "https://openbible.com/text/deuteronomy/21-17.htm"
     },
     {
       "kind": "HEBREW_GRAMMAR",
@@ -54,6 +70,7 @@
       "url": "https://translation.bible/wp-content/uploads/2024/06/hasel-1971-recent-translations-of-genesis-1-1-a-critical-look.pdf"
     }
   ],
+  "power_footnote_id": "gen-1-1-power",
   "publication_status": "BLOCKED",
   "reference": "Gen.1.1",
   "source_alignment": [
@@ -164,11 +181,13 @@
       "surface": "the (in the Beginning)"
     },
     {
+      "footnote_id": "gen-1-1-power",
+      "included_in_main_english": true,
       "is_separate_hebrew_word": false,
-      "only_in_optional_variant": true,
       "reason": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT; no lexical counterpart in Gen 1:1; investigate Gen 49:3 and Deut 21:17",
       "source_token_id": null,
       "surface": "[of His Power]"
     }
-  ]
+  ],
+  "unsupplemented_english_baseline_for_source_comparison": "In the Beginning God — He shaped the Heavens and the Earth."
 }
