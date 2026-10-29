@@ -64,6 +64,10 @@ def build(plan,original,lexicon,seed):
             gloss=item["english_fragment"]
             check_text(gloss)
             form=source_verb_form(src["source_morphology_raw"])
+            if item.get("expect_raw_morph") is not None and item["expect_raw_morph"]!=src["source_morphology_raw"]:
+                raise ValueError(f"Exact source morphology changed for {src['source_token_id']}")
+            if item.get("expect_lemma") is not None and item["expect_lemma"]!=src["source_lemma_raw"]:
+                raise ValueError(f"Exact source lemma changed for {src['source_token_id']}")
             wy=form=="w"
             if wy!=src["source_tagged_wayyiqtol"]:raise ValueError("Source morphological wayyiqtol tag inconsistency")
             if wy:
@@ -73,10 +77,6 @@ def build(plan,original,lexicon,seed):
                     raise ValueError("Wayyiqtol wrongly perfect or future")
             if item.get("expect_verb_form") is not None and form!=item["expect_verb_form"]:
                 raise ValueError(f"Expected source verb-form differs for {src['source_token_id']}")
-            if item.get("expect_raw_morph") is not None and item["expect_raw_morph"]!=src["source_morphology_raw"]:
-                raise ValueError(f"Exact source morphology changed for {src['source_token_id']}")
-            if item.get("expect_lemma") is not None and item["expect_lemma"]!=src["source_lemma_raw"]:
-                raise ValueError(f"Exact source lemma changed for {src['source_token_id']}")
             if src["source_lemma_raw"].startswith("c/") and not re.search(r"\band\b",gloss,re.I):
                 raise ValueError("Source conjunction was dropped: "+src["source_token_id"])
             exact=src["exact_lexemes"]
