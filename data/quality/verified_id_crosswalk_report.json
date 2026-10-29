@@ -32,220 +32,496 @@
   },
   "strong_entry_ids": 8674,
   "strong_explicit_reference_results": {
-    "DANGLING": 9252
+    "FOUND": 9252,
+    "METHOD_NUMERIC_STRONG_ID_FORMAT": 9252
   },
-  "xref_aug_disagreements_examples": [
+  "unresolved_examples": [
     {
-      "aug_normalized": "122a",
-      "entry": "afc",
-      "key": "122 a",
-      "xref_aug": "a"
+      "key": "33+",
+      "normalized": "33+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "122b",
-      "entry": "aez",
-      "key": "122 b",
-      "xref_aug": "b"
+      "key": "45+",
+      "normalized": "45+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "176a",
-      "entry": "ahf",
-      "key": "176 a",
-      "xref_aug": "a"
+      "key": "62+",
+      "normalized": "62+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "176b",
-      "entry": "ahe",
-      "key": "176 b",
-      "xref_aug": "b"
+      "key": "63+",
+      "normalized": "63+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "193a",
-      "entry": "aia",
-      "key": "193 a",
-      "xref_aug": "a"
+      "key": "64+",
+      "normalized": "64+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "193b",
-      "entry": "aib",
-      "key": "193 b",
-      "xref_aug": "b"
+      "key": "65+",
+      "normalized": "65+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "217a",
-      "entry": "aje",
-      "key": "217 a",
-      "xref_aug": "a"
+      "key": "66+",
+      "normalized": "66+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "217b",
-      "entry": "bdo",
-      "key": "217 b",
-      "xref_aug": "b"
+      "key": "67+",
+      "normalized": "67+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "218a",
-      "entry": "ajd",
-      "key": "218 a",
-      "xref_aug": "a"
+      "key": "72+",
+      "normalized": "72+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "218b",
-      "entry": "ajc",
-      "key": "218 b",
-      "xref_aug": "b"
+      "key": "137+",
+      "normalized": "137+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "219a",
-      "entry": "ajh",
-      "key": "219 a",
-      "xref_aug": "a"
+      "key": "139+",
+      "normalized": "139+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "219b",
-      "entry": "ajg",
-      "key": "219 b",
-      "xref_aug": "b"
+      "key": "192+",
+      "normalized": "192+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "223a",
-      "entry": "ajk",
-      "key": "223 a",
-      "xref_aug": "a"
+      "key": "242+",
+      "normalized": "242+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "223b",
-      "entry": "ajl",
-      "key": "223 b",
-      "xref_aug": "b"
+      "key": "243+",
+      "normalized": "243+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "227a",
-      "entry": "ajp",
-      "key": "227 a",
-      "xref_aug": "a"
+      "key": "350+",
+      "normalized": "350+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "227b",
-      "entry": "gih",
-      "key": "227 b",
-      "xref_aug": "b"
+      "key": "358+",
+      "normalized": "358+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "244a",
-      "entry": "ake",
-      "key": "244 a",
-      "xref_aug": "a"
+      "key": "364+",
+      "normalized": "364+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "244b",
-      "entry": "akf",
-      "key": "244 b",
-      "xref_aug": "b"
+      "key": "378+",
+      "normalized": "378+",
+      "occurrences": 11,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "310a",
-      "entry": "amu",
-      "key": "310 a",
-      "xref_aug": "a"
+      "key": "439+",
+      "normalized": "439+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "310b",
-      "entry": "amz",
-      "key": "310 b",
-      "xref_aug": "b"
+      "key": "516+",
+      "normalized": "516+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "328a",
-      "entry": "anl",
-      "key": "328 a",
-      "xref_aug": "a"
+      "key": "634+",
+      "normalized": "634+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "328b",
-      "entry": "ang",
-      "key": "328 b",
-      "xref_aug": "b"
+      "key": "658+",
+      "normalized": "658+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "349a",
-      "entry": "aoe",
-      "key": "349 a",
-      "xref_aug": "a"
+      "key": "738",
+      "normalized": "738",
+      "occurrences": 1,
+      "reason": "AUG_ID_ABSENT"
     },
     {
-      "aug_normalized": "349b",
-      "entry": "aog",
-      "key": "349 b",
-      "xref_aug": "b"
+      "key": "760+",
+      "normalized": "760+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "349c",
-      "entry": "aoi",
-      "key": "349 c",
-      "xref_aug": "c"
+      "key": "763+",
+      "normalized": "763+",
+      "occurrences": 5,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "352a",
-      "entry": "aon",
-      "key": "352 a",
-      "xref_aug": "a"
+      "key": "879+",
+      "normalized": "879+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "352b",
-      "entry": "aom",
-      "key": "352 b",
-      "xref_aug": "b"
+      "key": "883+",
+      "normalized": "883+",
+      "occurrences": 6,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "352c",
-      "entry": "aok",
-      "key": "352 c",
-      "xref_aug": "c"
+      "key": "884+",
+      "normalized": "884+",
+      "occurrences": 34,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "352d",
-      "entry": "aol",
-      "key": "352 d",
-      "xref_aug": "d"
+      "key": "885+",
+      "normalized": "885+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "359a",
-      "entry": "aox",
-      "key": "359 a",
-      "xref_aug": "a"
+      "key": "1007+",
+      "normalized": "1007+",
+      "occurrences": 7,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "359b",
-      "entry": "aou",
-      "key": "359 b",
-      "xref_aug": "b"
+      "key": "1008+",
+      "normalized": "1008+",
+      "occurrences": 72,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "441a",
-      "entry": "arw",
-      "key": "441 a",
-      "xref_aug": "a"
+      "key": "1009+",
+      "normalized": "1009+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "441b",
-      "entry": "arx",
-      "key": "441 b",
-      "xref_aug": "b"
+      "key": "1010+",
+      "normalized": "1010+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "454a",
-      "entry": "ask",
-      "key": "454 a",
-      "xref_aug": "a"
+      "key": "1011+",
+      "normalized": "1011+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
     },
     {
-      "aug_normalized": "454b",
-      "entry": "asl",
-      "key": "454 b",
-      "xref_aug": "b"
+      "key": "1012+",
+      "normalized": "1012+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1013+",
+      "normalized": "1013+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1014+",
+      "normalized": "1014+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1015+",
+      "normalized": "1015+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1016+",
+      "normalized": "1016+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1017+",
+      "normalized": "1017+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1018+",
+      "normalized": "1018+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1020+",
+      "normalized": "1020+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1021+",
+      "normalized": "1021+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1022+",
+      "normalized": "1022+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1023+",
+      "normalized": "1023+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1024+",
+      "normalized": "1024+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1025+",
+      "normalized": "1025+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1026+",
+      "normalized": "1026+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1027+",
+      "normalized": "1027+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1028+",
+      "normalized": "1028+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1029+",
+      "normalized": "1029+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1030+",
+      "normalized": "1030+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1031+",
+      "normalized": "1031+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1032+",
+      "normalized": "1032+",
+      "occurrences": 14,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1033+",
+      "normalized": "1033+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1034+",
+      "normalized": "1034+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1035+",
+      "normalized": "1035+",
+      "occurrences": 41,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1036+",
+      "normalized": "1036+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1038+",
+      "normalized": "1038+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1039+",
+      "normalized": "1039+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1041+",
+      "normalized": "1041+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1042+",
+      "normalized": "1042+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1043+",
+      "normalized": "1043+",
+      "occurrences": 3,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1044+",
+      "normalized": "1044+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1046+",
+      "normalized": "1046+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1047+",
+      "normalized": "1047+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1048+",
+      "normalized": "1048+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1049+",
+      "normalized": "1049+",
+      "occurrences": 4,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1050+",
+      "normalized": "1050+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1051+",
+      "normalized": "1051+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1052+",
+      "normalized": "1052+",
+      "occurrences": 9,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1053+",
+      "normalized": "1053+",
+      "occurrences": 21,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1054+",
+      "normalized": "1054+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1099+",
+      "normalized": "1099+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1120+",
+      "normalized": "1120+",
+      "occurrences": 2,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1125+",
+      "normalized": "1125+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1126+",
+      "normalized": "1126+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1127+",
+      "normalized": "1127+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1128+",
+      "normalized": "1128+",
+      "occurrences": 1,
+      "reason": "PLUS_MARKER"
+    },
+    {
+      "key": "1130+",
+      "normalized": "1130+",
+      "occurrences": 25,
+      "reason": "PLUS_MARKER"
     }
   ],
+  "unresolved_reasons": {
+    "AUG_ID_ABSENT": 11,
+    "PLUS_MARKER": 256
+  },
+  "xref_aug_disagreements_examples": [],
   "xref_unparsed_examples": [
     {
       "entry": "oap",
