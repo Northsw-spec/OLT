@@ -1,6 +1,7 @@
 {
   "all_actual_genesis_1_word_tokens": 434,
   "all_genesis_1_unique_lemma_ids": 97,
+  "all_original_source_token_ids_covered_by_ledger": true,
   "lexeme_component_occurrences": 427,
   "new_english_decisions_pending": 94,
   "notes": "Ranked by observed source-lemma frequency. No dictionary sense automatically becomes an owner-approved English word.",
@@ -2513,5 +2514,66 @@
       ]
     }
   ],
+  "source_word_tokens_with_multiple_numeric_lemmas": [],
+  "source_word_tokens_with_multiple_numeric_lemmas_count": 0,
+  "source_word_tokens_without_numeric_lemma": [
+    {
+      "pointed_source_word": "ב֖/וֹ",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "b",
+      "source_morphology_raw": "HR/Sp3ms",
+      "source_token_id": "01SV6",
+      "verse": "Gen.1.11"
+    },
+    {
+      "pointed_source_word": "ב֖/וֹ",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "b",
+      "source_morphology_raw": "HR/Sp3ms",
+      "source_token_id": "01J9J",
+      "verse": "Gen.1.12"
+    },
+    {
+      "pointed_source_word": "לָ/הֶ֜ם",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "l",
+      "source_morphology_raw": "HR/Sp3mp",
+      "source_token_id": "01ypu",
+      "verse": "Gen.1.28"
+    },
+    {
+      "pointed_source_word": "לָ/כֶ֜ם",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "l",
+      "source_morphology_raw": "HR/Sp2mp",
+      "source_token_id": "01pAw",
+      "verse": "Gen.1.29"
+    },
+    {
+      "pointed_source_word": "בּ֥/וֹ",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "b",
+      "source_morphology_raw": "HR/Sp3ms",
+      "source_token_id": "01884",
+      "verse": "Gen.1.29"
+    },
+    {
+      "pointed_source_word": "לָ/כֶ֥ם",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "l",
+      "source_morphology_raw": "HR/Sp2mp",
+      "source_token_id": "01wEr",
+      "verse": "Gen.1.29"
+    },
+    {
+      "pointed_source_word": "בּ/וֹ֙",
+      "review_status": "WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW",
+      "source_lemma_raw": "b",
+      "source_morphology_raw": "HR/Sp3ms",
+      "source_token_id": "01teU",
+      "verse": "Gen.1.30"
+    }
+  ],
+  "source_word_tokens_without_numeric_lemma_count": 7,
   "status": "RESEARCH_QUEUE_NOT_LEXICAL_APPROVAL"
 }
