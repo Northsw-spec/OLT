@@ -1,0 +1,1202 @@
+{
+  "project": "Olund's Linked Translation",
+  "checkpoint": "OLT-009",
+  "verses": [
+    {
+      "reference": "Gen.1.2",
+      "english_main_proposal": "And the Earth — she was waste and emptiness; and darkness upon the face of the Deep; and the Spirit of God hovering upon the face of the Waters.",
+      "source_word_count": 14,
+      "source_wayyiqtol_count": 0,
+      "source_aligned_tokens": [
+        {
+          "source_token_id": "01LN3",
+          "source_ordinal": 1,
+          "pointed_hebrew_word": "וְ/הָ/אָ֗רֶץ",
+          "source_raw_lemma": "c/d/776",
+          "source_raw_morphology": "HC/Td/Ncbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "And the Earth",
+          "source_lexicon_ids": [
+            "776"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "776",
+              "bdb": [
+                "a.fx.aa"
+              ],
+              "strong": [
+                "H776"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01Qzf",
+          "source_ordinal": 2,
+          "pointed_hebrew_word": "הָיְתָ֥ה",
+          "source_raw_lemma": "1961",
+          "source_raw_morphology": "HVqp3fs",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "she was",
+          "source_lexicon_ids": [
+            "1961"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1961",
+              "bdb": [
+                "e.bf.aa"
+              ],
+              "strong": [
+                "H1961"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01aPd",
+          "source_ordinal": 3,
+          "pointed_hebrew_word": "תֹ֨הוּ֙",
+          "source_raw_lemma": "8414",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "waste",
+          "source_lexicon_ids": [
+            "8414"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "8414",
+              "bdb": [
+                "w.ag.ab"
+              ],
+              "strong": [
+                "H8414"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01eYX",
+          "source_ordinal": 4,
+          "pointed_hebrew_word": "וָ/בֹ֔הוּ",
+          "source_raw_lemma": "c/922",
+          "source_raw_morphology": "HC/Ncmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "and emptiness",
+          "source_lexicon_ids": [
+            "922"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "922",
+              "bdb": [
+                "b.aj.ab"
+              ],
+              "strong": [
+                "H922"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01C5U",
+          "source_ordinal": 5,
+          "pointed_hebrew_word": "וְ/חֹ֖שֶׁךְ",
+          "source_raw_lemma": "c/2822",
+          "source_raw_morphology": "HC/Ncmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "and darkness",
+          "source_lexicon_ids": [
+            "2822"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "2822",
+              "bdb": [
+                "h.gt.ab"
+              ],
+              "strong": [
+                "H2822"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01qNN",
+          "source_ordinal": 6,
+          "pointed_hebrew_word": "עַל",
+          "source_raw_lemma": "5921 a",
+          "source_raw_morphology": "HR",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "upon",
+          "source_lexicon_ids": [
+            "5921 a"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "5921 a",
+              "bdb": [
+                "p.cs.ar"
+              ],
+              "strong": [
+                "H5921"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01EVS",
+          "source_ordinal": 7,
+          "pointed_hebrew_word": "פְּנֵ֣י",
+          "source_raw_lemma": "6440",
+          "source_raw_morphology": "HNcbpc",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the face of",
+          "source_lexicon_ids": [
+            "6440"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "6440",
+              "bdb": [
+                "q.bu.ab"
+              ],
+              "strong": [
+                "H6440"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01PB6",
+          "source_ordinal": 8,
+          "pointed_hebrew_word": "תְה֑וֹם",
+          "source_raw_lemma": "8415",
+          "source_raw_morphology": "HNcbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the Deep",
+          "source_lexicon_ids": [
+            "8415"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "8415",
+              "bdb": [
+                "w.ah.ab"
+              ],
+              "strong": [
+                "H8415"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "0137c",
+          "source_ordinal": 9,
+          "pointed_hebrew_word": "וְ/ר֣וּחַ",
+          "source_raw_lemma": "c/7307",
+          "source_raw_morphology": "HC/Ncbsc",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "and the Spirit",
+          "source_lexicon_ids": [
+            "7307"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "7307",
+              "bdb": [
+                "t.bk.ab"
+              ],
+              "strong": [
+                "H7307"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01x9c",
+          "source_ordinal": 10,
+          "pointed_hebrew_word": "אֱלֹהִ֔ים",
+          "source_raw_lemma": "430",
+          "source_raw_morphology": "HNcmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "of God",
+          "source_lexicon_ids": [
+            "430"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "430",
+              "bdb": [
+                "a.dl.ad"
+              ],
+              "strong": [
+                "H430"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01yNB",
+          "source_ordinal": 11,
+          "pointed_hebrew_word": "מְרַחֶ֖פֶת",
+          "source_raw_lemma": "7363 b",
+          "source_raw_morphology": "HVprfsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "hovering",
+          "source_lexicon_ids": [
+            "7363 b"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "7363 b",
+              "bdb": [
+                "t.cd.aa"
+              ],
+              "strong": [
+                "H7363"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "0129t",
+          "source_ordinal": 12,
+          "pointed_hebrew_word": "עַל",
+          "source_raw_lemma": "5921 a",
+          "source_raw_morphology": "HR",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "upon",
+          "source_lexicon_ids": [
+            "5921 a"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "5921 a",
+              "bdb": [
+                "p.cs.ar"
+              ],
+              "strong": [
+                "H5921"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01KZG",
+          "source_ordinal": 13,
+          "pointed_hebrew_word": "פְּנֵ֥י",
+          "source_raw_lemma": "6440",
+          "source_raw_morphology": "HNcbpc",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the face of",
+          "source_lexicon_ids": [
+            "6440"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "6440",
+              "bdb": [
+                "q.bu.ab"
+              ],
+              "strong": [
+                "H6440"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01TZE",
+          "source_ordinal": 14,
+          "pointed_hebrew_word": "הַ/מָּֽיִם",
+          "source_raw_lemma": "d/4325",
+          "source_raw_morphology": "HTd/Ncmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the Waters",
+          "source_lexicon_ids": [
+            "4325"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "4325",
+              "bdb": [
+                "m.bt.aa"
+              ],
+              "strong": [
+                "H4325"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        }
+      ],
+      "review_status": "NOT_INDEPENDENTLY_APPROVED"
+    },
+    {
+      "reference": "Gen.1.3",
+      "english_main_proposal": "And God — He said: “Let light be.” And light was.",
+      "source_word_count": 6,
+      "source_wayyiqtol_count": 2,
+      "source_aligned_tokens": [
+        {
+          "source_token_id": "01thY",
+          "source_ordinal": 1,
+          "pointed_hebrew_word": "וַ/יֹּ֥אמֶר",
+          "source_raw_lemma": "c/559",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "And He said",
+          "source_lexicon_ids": [
+            "559"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "559",
+              "bdb": [
+                "a.ea.aa"
+              ],
+              "strong": [
+                "H559"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01JM7",
+          "source_ordinal": 2,
+          "pointed_hebrew_word": "אֱלֹהִ֖ים",
+          "source_raw_lemma": "430",
+          "source_raw_morphology": "HNcmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "God",
+          "source_lexicon_ids": [
+            "430"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "430",
+              "bdb": [
+                "a.dl.ad"
+              ],
+              "strong": [
+                "H430"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01fpo",
+          "source_ordinal": 3,
+          "pointed_hebrew_word": "יְהִ֣י",
+          "source_raw_lemma": "1961",
+          "source_raw_morphology": "HVqj3ms",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "Let be",
+          "source_lexicon_ids": [
+            "1961"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1961",
+              "bdb": [
+                "e.bf.aa"
+              ],
+              "strong": [
+                "H1961"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01W26",
+          "source_ordinal": 4,
+          "pointed_hebrew_word": "א֑וֹר",
+          "source_raw_lemma": "216",
+          "source_raw_morphology": "HNcbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "light",
+          "source_lexicon_ids": [
+            "216"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "216",
+              "bdb": [
+                "a.cd.ab"
+              ],
+              "strong": [
+                "H216"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01yw4",
+          "source_ordinal": 5,
+          "pointed_hebrew_word": "וַֽ/יְהִי",
+          "source_raw_lemma": "c/1961",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "And was",
+          "source_lexicon_ids": [
+            "1961"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1961",
+              "bdb": [
+                "e.bf.aa"
+              ],
+              "strong": [
+                "H1961"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01jbg",
+          "source_ordinal": 6,
+          "pointed_hebrew_word": "אֽוֹר",
+          "source_raw_lemma": "216",
+          "source_raw_morphology": "HNcbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "light",
+          "source_lexicon_ids": [
+            "216"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "216",
+              "bdb": [
+                "a.cd.ab"
+              ],
+              "strong": [
+                "H216"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        }
+      ],
+      "review_status": "NOT_INDEPENDENTLY_APPROVED"
+    },
+    {
+      "reference": "Gen.1.4",
+      "english_main_proposal": "And God — He saw the light, that [he was] — good. And God — He separated between the light and between the darkness.",
+      "source_word_count": 12,
+      "source_wayyiqtol_count": 2,
+      "source_aligned_tokens": [
+        {
+          "source_token_id": "01USR",
+          "source_ordinal": 1,
+          "pointed_hebrew_word": "וַ/יַּ֧רְא",
+          "source_raw_lemma": "c/7200",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "And He saw",
+          "source_lexicon_ids": [
+            "7200"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "7200",
+              "bdb": [
+                "t.ab.aa"
+              ],
+              "strong": [
+                "H7200"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01v6U",
+          "source_ordinal": 2,
+          "pointed_hebrew_word": "אֱלֹהִ֛ים",
+          "source_raw_lemma": "430",
+          "source_raw_morphology": "HNcmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "God",
+          "source_lexicon_ids": [
+            "430"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "430",
+              "bdb": [
+                "a.dl.ad"
+              ],
+              "strong": [
+                "H430"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "015SS",
+          "source_ordinal": 3,
+          "pointed_hebrew_word": "אֶת",
+          "source_raw_lemma": "853",
+          "source_raw_morphology": "HTo",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "",
+          "source_lexicon_ids": [
+            "853"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "853",
+              "bdb": [
+                "a.gm.aa"
+              ],
+              "strong": [
+                "H853"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01GzE",
+          "source_ordinal": 4,
+          "pointed_hebrew_word": "הָ/א֖וֹר",
+          "source_raw_lemma": "d/216",
+          "source_raw_morphology": "HTd/Ncbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the light",
+          "source_lexicon_ids": [
+            "216"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "216",
+              "bdb": [
+                "a.cd.ab"
+              ],
+              "strong": [
+                "H216"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01qCU",
+          "source_ordinal": 5,
+          "pointed_hebrew_word": "כִּי",
+          "source_raw_lemma": "3588 a",
+          "source_raw_morphology": "HC",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "that",
+          "source_lexicon_ids": [
+            "3588 a"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "3588 a",
+              "bdb": [
+                "k.bg.aa"
+              ],
+              "strong": [
+                "H3588"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01g2y",
+          "source_ordinal": 6,
+          "pointed_hebrew_word": "ט֑וֹב",
+          "source_raw_lemma": "2896 a",
+          "source_raw_morphology": "HAamsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "good",
+          "source_lexicon_ids": [
+            "2896 a"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "2896 a",
+              "bdb": [
+                "i.ai.ab"
+              ],
+              "strong": [
+                "H2896"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01jQb",
+          "source_ordinal": 7,
+          "pointed_hebrew_word": "וַ/יַּבְדֵּ֣ל",
+          "source_raw_lemma": "c/914",
+          "source_raw_morphology": "HC/Vhw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "And He separated",
+          "source_lexicon_ids": [
+            "914"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "914",
+              "bdb": [
+                "b.ah.aa"
+              ],
+              "strong": [
+                "H914"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01794",
+          "source_ordinal": 8,
+          "pointed_hebrew_word": "אֱלֹהִ֔ים",
+          "source_raw_lemma": "430",
+          "source_raw_morphology": "HNcmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "God",
+          "source_lexicon_ids": [
+            "430"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "430",
+              "bdb": [
+                "a.dl.ad"
+              ],
+              "strong": [
+                "H430"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01CsU",
+          "source_ordinal": 9,
+          "pointed_hebrew_word": "בֵּ֥ין",
+          "source_raw_lemma": "996",
+          "source_raw_morphology": "HR",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "between",
+          "source_lexicon_ids": [
+            "996"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "996",
+              "bdb": [
+                "b.bo.ac"
+              ],
+              "strong": [
+                "H996"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01XR4",
+          "source_ordinal": 10,
+          "pointed_hebrew_word": "הָ/א֖וֹר",
+          "source_raw_lemma": "d/216",
+          "source_raw_morphology": "HTd/Ncbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the light",
+          "source_lexicon_ids": [
+            "216"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "216",
+              "bdb": [
+                "a.cd.ab"
+              ],
+              "strong": [
+                "H216"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01KvS",
+          "source_ordinal": 11,
+          "pointed_hebrew_word": "וּ/בֵ֥ין",
+          "source_raw_lemma": "c/996",
+          "source_raw_morphology": "HC/R",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "and between",
+          "source_lexicon_ids": [
+            "996"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "996",
+              "bdb": [
+                "b.bo.ac"
+              ],
+              "strong": [
+                "H996"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01dBc",
+          "source_ordinal": 12,
+          "pointed_hebrew_word": "הַ/חֹֽשֶׁךְ",
+          "source_raw_lemma": "d/2822",
+          "source_raw_morphology": "HTd/Ncmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "the darkness",
+          "source_lexicon_ids": [
+            "2822"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "2822",
+              "bdb": [
+                "h.gt.ab"
+              ],
+              "strong": [
+                "H2822"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        }
+      ],
+      "review_status": "NOT_INDEPENDENTLY_APPROVED"
+    },
+    {
+      "reference": "Gen.1.5",
+      "english_main_proposal": "And God — He called to the light Day, and to the darkness He called Night; and was evening, and was morning: day one.",
+      "source_word_count": 13,
+      "source_wayyiqtol_count": 3,
+      "source_aligned_tokens": [
+        {
+          "source_token_id": "01nAB",
+          "source_ordinal": 1,
+          "pointed_hebrew_word": "וַ/יִּקְרָ֨א",
+          "source_raw_lemma": "c/7121",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "And He called",
+          "source_lexicon_ids": [
+            "7121"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "7121",
+              "bdb": [
+                "s.cy.aa"
+              ],
+              "strong": [
+                "H7121"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01kfX",
+          "source_ordinal": 2,
+          "pointed_hebrew_word": "אֱלֹהִ֤ים",
+          "source_raw_lemma": "430",
+          "source_raw_morphology": "HNcmpa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "God",
+          "source_lexicon_ids": [
+            "430"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "430",
+              "bdb": [
+                "a.dl.ad"
+              ],
+              "strong": [
+                "H430"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01Wkf",
+          "source_ordinal": 3,
+          "pointed_hebrew_word": "לָ/אוֹר֙",
+          "source_raw_lemma": "l/216",
+          "source_raw_morphology": "HRd/Ncbsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "to the light",
+          "source_lexicon_ids": [
+            "216"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "216",
+              "bdb": [
+                "a.cd.ab"
+              ],
+              "strong": [
+                "H216"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01wrL",
+          "source_ordinal": 4,
+          "pointed_hebrew_word": "י֔וֹם",
+          "source_raw_lemma": "3117",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "Day",
+          "source_lexicon_ids": [
+            "3117"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "3117",
+              "bdb": [
+                "j.ay.aa"
+              ],
+              "strong": [
+                "H3117"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "013TL",
+          "source_ordinal": 5,
+          "pointed_hebrew_word": "וְ/לַ/חֹ֖שֶׁךְ",
+          "source_raw_lemma": "c/l/2822",
+          "source_raw_morphology": "HC/Rd/Ncmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "and to the darkness",
+          "source_lexicon_ids": [
+            "2822"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "2822",
+              "bdb": [
+                "h.gt.ab"
+              ],
+              "strong": [
+                "H2822"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01LeN",
+          "source_ordinal": 6,
+          "pointed_hebrew_word": "קָ֣רָא",
+          "source_raw_lemma": "7121",
+          "source_raw_morphology": "HVqp3ms",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "He called",
+          "source_lexicon_ids": [
+            "7121"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "7121",
+              "bdb": [
+                "s.cy.aa"
+              ],
+              "strong": [
+                "H7121"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01sMn",
+          "source_ordinal": 7,
+          "pointed_hebrew_word": "לָ֑יְלָה",
+          "source_raw_lemma": "3915",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "Night",
+          "source_lexicon_ids": [
+            "3915"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "3915",
+              "bdb": [
+                "l.bm.ad"
+              ],
+              "strong": [
+                "H3915"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01Y3z",
+          "source_ordinal": 8,
+          "pointed_hebrew_word": "וַֽ/יְהִי",
+          "source_raw_lemma": "c/1961",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "and was",
+          "source_lexicon_ids": [
+            "1961"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1961",
+              "bdb": [
+                "e.bf.aa"
+              ],
+              "strong": [
+                "H1961"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01NQN",
+          "source_ordinal": 9,
+          "pointed_hebrew_word": "עֶ֥רֶב",
+          "source_raw_lemma": "6153",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "evening",
+          "source_lexicon_ids": [
+            "6153"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "6153",
+              "bdb": [
+                "p.ff.ab"
+              ],
+              "strong": [
+                "H6153"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01uLf",
+          "source_ordinal": 10,
+          "pointed_hebrew_word": "וַֽ/יְהִי",
+          "source_raw_lemma": "c/1961",
+          "source_raw_morphology": "HC/Vqw3ms",
+          "source_tagged_wayyiqtol": true,
+          "proposed_english_source_gloss": "and was",
+          "source_lexicon_ids": [
+            "1961"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1961",
+              "bdb": [
+                "e.bf.aa"
+              ],
+              "strong": [
+                "H1961"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01kA7",
+          "source_ordinal": 11,
+          "pointed_hebrew_word": "בֹ֖קֶר",
+          "source_raw_lemma": "1242",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "morning",
+          "source_lexicon_ids": [
+            "1242"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "1242",
+              "bdb": [
+                "b.cu.ad"
+              ],
+              "strong": [
+                "H1242"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "013TS",
+          "source_ordinal": 12,
+          "pointed_hebrew_word": "י֥וֹם",
+          "source_raw_lemma": "3117",
+          "source_raw_morphology": "HNcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "day",
+          "source_lexicon_ids": [
+            "3117"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "3117",
+              "bdb": [
+                "j.ay.aa"
+              ],
+              "strong": [
+                "H3117"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        },
+        {
+          "source_token_id": "01NFp",
+          "source_ordinal": 13,
+          "pointed_hebrew_word": "אֶחָֽד",
+          "source_raw_lemma": "259",
+          "source_raw_morphology": "HAcmsa",
+          "source_tagged_wayyiqtol": false,
+          "proposed_english_source_gloss": "one",
+          "source_lexicon_ids": [
+            "259"
+          ],
+          "dictionary_refs": [
+            {
+              "source_exact_lemma_id": "259",
+              "bdb": [
+                "a.cj.aa"
+              ],
+              "strong": [
+                "H259"
+              ]
+            }
+          ],
+          "editorial_english_status": "UNAPPROVED_RESEARCH_PROPOSAL"
+        }
+      ],
+      "review_status": "NOT_INDEPENDENTLY_APPROVED"
+    }
+  ],
+  "verses_count": 4,
+  "source_token_count": 45,
+  "source_tagged_wayyiqtol_count": 7,
+  "distinct_lemma_ids": 26,
+  "research_notes": [
+    {
+      "reference": "Gen.1.2",
+      "type": "LEXICAL_ALTERNATIVES",
+      "source_lemma": "7307",
+      "text": "Ruach may signify spirit, wind or breath. 'Spirit of God' is an OLT research proposal, not the only dictionary possibility.",
+      "status": "UNAPPROVED"
+    },
+    {
+      "reference": "Gen.1.2",
+      "type": "DIFFERENT_LEMMAS",
+      "source_lemma": "8414",
+      "text": "Tohu (waste/formlessness) and bohu (emptiness) are distinct source lemmas and keep two separate English words.",
+      "status": "UNAPPROVED"
+    },
+    {
+      "reference": "Gen.1.2",
+      "type": "MORPHOLOGY",
+      "source_lemma": "7363 b",
+      "text": "Merachephet is a Piel active feminine-singular participle agreeing with ruach, not a wayyiqtol.",
+      "status": "SOURCE_TAG_NOT_INDEPENDENTLY_REVIEWED"
+    },
+    {
+      "reference": "Gen.1.3",
+      "type": "MORPHOLOGY",
+      "source_lemma": "1961",
+      "text": "Yehi is jussive; the next vayehi is wayyiqtol and renders with English simple past was.",
+      "status": "SOURCE_TAG_NOT_INDEPENDENTLY_REVIEWED"
+    },
+    {
+      "reference": "Gen.1.4",
+      "type": "EDITORIAL_SUPPLEMENT",
+      "source_lemma": "216",
+      "text": "[he was] is the owner's bracketed English completion for light, not separately present Hebrew text. The source marks light as common gender; other lexical evidence treats light as masculine. The Bible-wide gender explanation is given only once at the opening.",
+      "status": "OWNER_WORDING_AND_RESEARCH_NOTE"
+    },
+    {
+      "reference": "Gen.1.4",
+      "type": "DIRECT_OBJECT",
+      "source_lemma": "853",
+      "text": "Et marks a direct object and has no independent English lexical surface. Its token is retained.",
+      "status": "SOURCE_TAG_NOT_INDEPENDENTLY_REVIEWED"
+    },
+    {
+      "reference": "Gen.1.4",
+      "type": "TYPOLOGY_RESEARCH_CANDIDATE",
+      "source_lemma": "216",
+      "text": "Compare Genesis light imagery with John 1:4–9 only as Christian intertextual interpretation, not as Hebrew-Greek homonymy.",
+      "status": "UNAPPROVED"
+    },
+    {
+      "reference": "Gen.1.5",
+      "type": "MORPHOLOGY",
+      "source_lemma": "7121",
+      "text": "First called (vayyiqra) is wayyiqtol, second called (qara) is qatal. Both use English past but the source forms remain distinct.",
+      "status": "SOURCE_TAG_NOT_INDEPENDENTLY_REVIEWED"
+    },
+    {
+      "reference": "Gen.1.5",
+      "type": "NUMERAL",
+      "source_lemma": "259",
+      "text": "Yom echad is literally day one; the ordinal first is an interpretive English alternative.",
+      "status": "UNAPPROVED"
+    }
+  ],
+  "sources": [
+    "https://github.com/openscriptures/morphhb",
+    "https://github.com/openscriptures/HebrewLexicon",
+    "https://fellowshipbook.org/en/genesis/1/2",
+    "https://lashon.online/learn/biblical-hebrew/guided-reading-genesis-1",
+    "https://openbible.com/text/genesis/1-5.htm"
+  ],
+  "english_lexical_approvals": "NONE_NEW",
+  "independent_philological_review": "NOT_DONE",
+  "release_status": "BLOCKED",
+  "scope": "SOURCE_ALIGNED_RESEARCH_ONLY"
+}
