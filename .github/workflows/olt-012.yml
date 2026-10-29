@@ -1,0 +1,55 @@
+name: OLT-012 Genesis 1:16–20 source-token research
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/plans/olt_012_genesis_16_20.json"
+      - "tests/test_olt_012.py"
+      - "scripts/build_verse_research.py"
+      - ".github/workflows/olt-012.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-012-source-review
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run OLT-012 source/negative tests
+        run: python -m unittest discover -s tests -p 'test_olt_012.py' -v
+      - name: Build first source-derived research of Genesis 1:16-20
+        run: python scripts/build_verse_research.py --plan data/plans/olt_012_genesis_16_20.json --out data/research/olt_012_genesis_16_20.json
+      - name: Verify all original tokens and no false translation certification
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/research/olt_012_genesis_16_20.json")
+          a=json.loads(p.read_text())
+          assert a["source_token_count"]==59
+          assert a["source_wayyiqtol_count"]==6
+          assert a["publication_status"]=="BLOCKED"
+          assert not a["independent_hebrew_morphology_signed_off"]
+          assert len(a["verse_research"])==5
+          assert all(not w["english_lexical_approval"] for v in a["verse_research"] for w in v["original_word_alignments"])
+          print("PASS: source-first research coverage, not philological validation")
+          PY
+      - name: Commit derived data
+        run: |
+          set -euo pipefail
+          git config user.name "olt-source-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/olt_012_genesis_16_20.json
+          if git diff --cached --quiet; then echo "No change"; else
+            git commit -m "Generate source-aligned Genesis 1:16–20 research proposals"
+            git push origin HEAD:main
+          fi

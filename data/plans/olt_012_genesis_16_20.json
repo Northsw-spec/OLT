@@ -1,0 +1,378 @@
+{
+  "checkpoint": "OLT-012",
+  "status": "RESEARCH_NOT_APPROVED",
+  "publishable": false,
+  "presentation": "UNDER_ENGLISH_WORD",
+  "start_verse": 16,
+  "end_verse": 20,
+  "expected_source_words": 59,
+  "expected_wayyiqtol": 6,
+  "expected_non_numeric_source_tokens": [],
+  "verses": [
+    {
+      "reference": "Gen.1.16",
+      "english_research_draft": "And God — He made the two great lights: the great light for rule of the day, and the small light for rule of the night, and the stars.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01CQo",
+          "english_fragment": "And He made",
+          "expect_lemma": "c/6213 a",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "01XyU",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01BG4",
+          "english_fragment": "",
+          "expect_raw_morph": "HTo",
+          "expect_lemma": "853"
+        },
+        {
+          "source_token_id": "01YHH",
+          "english_fragment": "two"
+        },
+        {
+          "source_token_id": "01sHf",
+          "english_fragment": "the lights"
+        },
+        {
+          "source_token_id": "01iee",
+          "english_fragment": "the great"
+        },
+        {
+          "source_token_id": "013eS",
+          "english_fragment": "",
+          "expect_raw_morph": "HTo",
+          "expect_lemma": "853"
+        },
+        {
+          "source_token_id": "01ddd",
+          "english_fragment": "the light"
+        },
+        {
+          "source_token_id": "01hxo",
+          "english_fragment": "the great"
+        },
+        {
+          "source_token_id": "01TW6",
+          "english_fragment": "for rule of"
+        },
+        {
+          "source_token_id": "01PVx",
+          "english_fragment": "the day"
+        },
+        {
+          "source_token_id": "01PGK",
+          "english_fragment": "and",
+          "expect_raw_morph": "HC/To",
+          "expect_lemma": "c/853"
+        },
+        {
+          "source_token_id": "01U4a",
+          "english_fragment": "the light"
+        },
+        {
+          "source_token_id": "01dSQ",
+          "english_fragment": "the small"
+        },
+        {
+          "source_token_id": "01Qbs",
+          "english_fragment": "for rule of"
+        },
+        {
+          "source_token_id": "01ndZ",
+          "english_fragment": "the night"
+        },
+        {
+          "source_token_id": "01Xa1",
+          "english_fragment": "and",
+          "expect_raw_morph": "HC/To",
+          "expect_lemma": "c/853"
+        },
+        {
+          "source_token_id": "013yJ",
+          "english_fragment": "the stars"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.17",
+      "english_research_draft": "And God — He set them in the firmament of the Heavens, to illuminate upon the Earth.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01B6c",
+          "english_fragment": "And He set"
+        },
+        {
+          "source_token_id": "01bju",
+          "english_fragment": "them",
+          "expect_raw_morph": "HTo/Sp3mp",
+          "expect_lemma": "853"
+        },
+        {
+          "source_token_id": "01cn3",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "017mS",
+          "english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "01dJe",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01WvG",
+          "english_fragment": "to illuminate"
+        },
+        {
+          "source_token_id": "01RXg",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01pqY",
+          "english_fragment": "the Earth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.18",
+      "english_research_draft": "And to rule in the day and in the night, and to separate between the light and between the darkness; and God — He saw that — good.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01n9v",
+          "english_fragment": "and to rule"
+        },
+        {
+          "source_token_id": "01gYe",
+          "english_fragment": "in the day"
+        },
+        {
+          "source_token_id": "01eXj",
+          "english_fragment": "and in the night"
+        },
+        {
+          "source_token_id": "018ro",
+          "english_fragment": "and to separate"
+        },
+        {
+          "source_token_id": "01v5z",
+          "english_fragment": "between"
+        },
+        {
+          "source_token_id": "01bCC",
+          "english_fragment": "the light"
+        },
+        {
+          "source_token_id": "016By",
+          "english_fragment": "and between"
+        },
+        {
+          "source_token_id": "01CZB",
+          "english_fragment": "the darkness"
+        },
+        {
+          "source_token_id": "01VTb",
+          "english_fragment": "And He saw",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "016qf",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01efz",
+          "english_fragment": "that"
+        },
+        {
+          "source_token_id": "01QG5",
+          "english_fragment": "good"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.19",
+      "english_research_draft": "And was evening, and was morning: day fourth.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "013k3",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "011rL",
+          "english_fragment": "evening"
+        },
+        {
+          "source_token_id": "01W2c",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01mL3",
+          "english_fragment": "morning"
+        },
+        {
+          "source_token_id": "01zfc",
+          "english_fragment": "day"
+        },
+        {
+          "source_token_id": "01sYp",
+          "english_fragment": "fourth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.20",
+      "english_research_draft": "And God — He said: Let the waters swarm a swarm of living soul; and bird — let [he] fly above the Earth, upon the face of the firmament of the Heavens.",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "proposals": [
+        {
+          "source_token_id": "01GvF",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01dAC",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01i4W",
+          "english_fragment": "Let swarm",
+          "expect_raw_morph": "HVqi3mp",
+          "expect_verb_form": "i"
+        },
+        {
+          "source_token_id": "01chR",
+          "english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01Ddq",
+          "english_fragment": "a swarm of"
+        },
+        {
+          "source_token_id": "01dSp",
+          "english_fragment": "soul"
+        },
+        {
+          "source_token_id": "01ecS",
+          "english_fragment": "living"
+        },
+        {
+          "source_token_id": "012tG",
+          "english_fragment": "and bird"
+        },
+        {
+          "source_token_id": "01Xzm",
+          "english_fragment": "let [he] fly",
+          "expect_raw_morph": "HVoi3ms",
+          "expect_verb_form": "i",
+          "expect_lemma": "5774 a"
+        },
+        {
+          "source_token_id": "01CCj",
+          "english_fragment": "above"
+        },
+        {
+          "source_token_id": "01gV8",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01Czz",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01uXX",
+          "english_fragment": "the face of"
+        },
+        {
+          "source_token_id": "01xCL",
+          "english_fragment": "the firmament of",
+          "expect_lemma": "7549",
+          "expect_raw_morph": "HNcmsc"
+        },
+        {
+          "source_token_id": "01Qnr",
+          "english_fragment": "the Heavens"
+        }
+      ]
+    }
+  ],
+  "research_notes": [
+    {
+      "reference": "Gen.1.16",
+      "lemma": "6213 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "The Qal wayyiqtol of asah must be made, never shaped, even when the objects are the heavenly lights."
+    },
+    {
+      "reference": "Gen.1.16",
+      "lemma": "3974",
+      "type": "LEXICAL_DISTINCTION",
+      "status": "RESEARCH_ONLY",
+      "text": "Ma'orot denotes luminaries/lights; a source connection to light (or) may be explored etymologically but is not a certified homonym or interlinear synonym."
+    },
+    {
+      "reference": "Gen.1.16",
+      "lemma": "4475",
+      "type": "GOVERNANCE_NOUN",
+      "status": "RESEARCH_ONLY",
+      "text": "Memshalah conveys rule or dominion. The preposition lamed and construct are retained; typological conclusions are not automatically derived."
+    },
+    {
+      "reference": "Gen.1.17",
+      "lemma": "853",
+      "type": "ACCUSATIVE_WITH_SUFFIX",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Otam (HTo/Sp3mp) is not merely a zero-surface object particle: the suffix 3mp contributes English them. Other standalone et markers in 1:16 remain zero-glossed."
+    },
+    {
+      "reference": "Gen.1.18",
+      "lemma": "914",
+      "type": "HIFIL_INFINITIVE",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Lehavdil is a Hiphil infinitive construct: and to separate, not the wayyiqtol separated."
+    },
+    {
+      "reference": "Gen.1.20",
+      "lemma": "8317",
+      "type": "IMPERFECT_VOLITIVE",
+      "status": "RESEARCH_ONLY",
+      "text": "Yishretsu is Qal yiqtol 3mp with volitive function in divine speech, proposed let swarm; not past tense."
+    },
+    {
+      "reference": "Gen.1.20",
+      "lemma": "8318",
+      "type": "WORDPLAY_CANDIDATE",
+      "status": "RESEARCH_ONLY",
+      "text": "Verb sh-r-ts and noun sherets preserve the adjacent sound/root pattern swarm a swarm; this is not independently verified homonymy."
+    },
+    {
+      "reference": "Gen.1.20",
+      "lemma": "5774 a",
+      "type": "POLEL_IMPERFECT",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Ye'ofef is source-tagged Polel imperfect 3ms (HVoi3ms). Contextual let fly is not wayyiqtol."
+    },
+    {
+      "reference": "Gen.1.20",
+      "lemma": "5775",
+      "type": "WORDPLAY_CANDIDATE",
+      "status": "RESEARCH_ONLY",
+      "text": "'Of (bird/flying creature) and ye'ofef (fly) share associated sound imagery; do not claim different Strong numbers automatically constitute homonyms."
+    },
+    {
+      "reference": "Gen.1.19",
+      "lemma": "7243",
+      "type": "ORDINAL",
+      "status": "RESEARCH_ONLY",
+      "text": "Yom revi'i is day fourth by source order, rather than a prose-adjusted fourth day."
+    }
+  ]
+}
