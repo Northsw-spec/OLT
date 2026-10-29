@@ -10,4 +10,4 @@ The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verif
 
 ## Current progress
 
-[Latest verified checkpoint and release blockers](docs/STATUS_CURRENT.md) — all OT source words imported; 9,252/9,519 exact dictionary-ID chains verified; Genesis 1 has all 434 original word tokens and 97 source-linked lemmas in its first review dossier. **No final OLT English lexicon or Genesis chapter is yet approved.**
+[Latest verified checkpoint and release blockers](docs/STATUS_CURRENT.md) — all OT source words imported; 9,252/9,519 exact dictionary-ID chains verified; Genesis 1 has all 434 original word tokens and 97 source-linked lemmas in its first review dossier. The entire imported BDB lexicon is now preserved with nested sense hierarchy; all 97 Genesis 1 lexical study cards have attached BDB source evidence. **No final OLT English lexicon or Genesis chapter is yet approved.**

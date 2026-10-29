@@ -2,7 +2,7 @@
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005 and OLT-006.
+**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006 and OLT-007.
 
 ## VERIFIED BY ACTUAL FILES AND GITHUB ACTIONS (AUTOMATIC DATA VALIDATION)
 - 39 WLC/OSHB Old Testament book datasets, 23,213 verses, 306,785 source word tokens.
@@ -42,3 +42,11 @@
 - [OLT-006 exception triage and study cards](https://github.com/Northsw-spec/OLT/actions/runs/40925657427)
 
 These verify implemented scope only, not the entire Bible translation.
+
+## OLT-007 — FULL STRUCTURED BDB IMPORT, SOURCE-LEVEL PASS
+- The pinned original `BrownDriverBriggs.xml` has been re-imported into a deterministic compressed JSONL preserving every original XML entry's tree of nodes, attributes, text and tails. **11,845** source BDB entries, with **8,989** nested sense nodes and **3,952** reference nodes across the corpus.
+- Original-source SHA-256 and reproducible archive SHA-256 recorded in `data/quality/bdb_nested_manifest.json`.
+- All **97 Genesis 1 research cards** have source-linked, structured BDB sense evidence and **97 distinct referenced BDB entries**, in `data/quality/genesis_01_bdb_sense_evidence.json`.
+- Full structured dictionary archive: `data/imported/lexicon/bdb_nested.jsonl.gz`.
+- The archive is **imported dictionary research evidence**, not an OLT-approved gloss or translation. Morphology independent review, 94 new Genesis lemma choices, the full English/MT chapter and publication remain **BLOCKED**.
+- [OLT-007 GitHub Actions](https://github.com/Northsw-spec/OLT/actions/runs/40926253088) checks exact data scope, the nested XML structure and the explicit release blocker.
