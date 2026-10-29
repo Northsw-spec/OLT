@@ -145,6 +145,7 @@ def build(dossier,cards,seed,plans=None,texts=None,notes=None):
  owners={x["id"]:x for x in seed["entries"] if x["status"]=="OWNER_LOCKED"}
  if owners["asah"]["english_base"]!="make" or owners["raqia"]["english_base"]!="firmament" or owners["waw.conj"]["english_base"]!="and":
   raise ValueError("One or more owner English-family locks changed")
+ if set(plans)!=set(VERSES):raise ValueError("Wrong verse coverage")
  outputs=[];totalway=0;linked_lemmas=set()
  for ref,expected in plans.items():
   original=sorted((x for x in dossier["tokens"] if x["verse"]==ref),key=lambda x:x["ordinal"])
@@ -157,6 +158,8 @@ def build(dossier,cards,seed,plans=None,texts=None,notes=None):
    way=(wf=="w")
    if way!=src["source_tagged_wayyiqtol"]:
     raise ValueError("Imported wayyiqtol tag contradicts source morphology")
+   if e["id"]=="01bmv" and ("made" not in e["gloss"].lower() or "shape" in e["gloss"].lower()):
+    raise ValueError("Owner-lock asah must render made, not shaped")
    if way and not re.search(r"\b(?:said|made|separated|was|called|saw)\b",e["gloss"],re.I):
     raise ValueError("Wayyiqtol lacks a simple-past English surface")
    if way and re.search(r"\b(?:hath|has|had|will|shall)\b",e["gloss"],re.I):
@@ -167,8 +170,6 @@ def build(dossier,cards,seed,plans=None,texts=None,notes=None):
     raise ValueError("Volitive-context imperfect incorrectly reclassified")
    if e["id"]=="015gQ" and (wf!="r" or "separating" not in e["gloss"]):
     raise ValueError("Participle misparsed or cast as finite past")
-   if e["id"]=="01bmv" and ("made" not in e["gloss"].lower() or "shape" in e["gloss"].lower()):
-    raise ValueError("Owner-lock asah must render made, not shaped")
    if "7549" in src["exact_lexemes"] and "firmament" not in e["gloss"].lower():
     raise ValueError("Owner-lock raqia must render firmament")
    if e["id"]=="01Xm1" and (e["gloss"]!="" or src["source_lemma_raw"]!="853"):
@@ -202,7 +203,6 @@ def build(dossier,cards,seed,plans=None,texts=None,notes=None):
         "wayyiqtol_count":sum(x["source_tagged_wayyiqtol"] for x in aligned),
         "english_main_research_candidate":final,"status":"DRAFT_NOT_PHILOLOGICALLY_APPROVED"})
  if totalway!=11:raise ValueError("Source tagged wayyiqtol total changed")
- if set(plans)!=set(VERSES):raise ValueError("Wrong verse coverage")
  for n in notes:
   if n["ref"] not in plans or n["lemma"] not in linked_lemmas or n["status"] not in {"OWNER_LOCK","RESEARCH","SOURCE_BASED"}:
    raise ValueError("Research note invalid or source-unanchored")
