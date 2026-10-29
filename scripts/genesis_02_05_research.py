@@ -100,16 +100,18 @@ def make(source,cards,plan=None,main=None,notes=None):
    if (a["ordinal"],a["source_token_id"],a["source_lemma_raw"],a["source_morphology_raw"])!=(s["ordinal"],s["id"],s["lemma"],s["morph"]):
     raise ValueError("Source token/lemma/morphology mismatch: "+verse)
    is_way=a["source_tagged_wayyiqtol"]
-   if is_way and not re.search(r"\b(?:said|was|saw|separated|called)\b",s["gloss"],re.I):
-    raise ValueError("Wayyiqtol not English simple past")
-   if is_way and re.search(r"\b(?:has|hath|had|will|shall)\b",s["gloss"],re.I):
-    raise ValueError("Wayyiqtol used English perfect/future")
+   # Categorize forms before checking their English past tense, so a
+   # mislabelled jussive/participle cannot masquerade as narrative wayyiqtol.
    if s["id"]=="01fpo" and (s["morph"]!="HVqj3ms" or is_way):
     raise ValueError("Jussive was wrongly identified as wayyiqtol")
    if s["id"]=="01yNB" and (s["morph"]!="HVprfsa" or is_way):
     raise ValueError("Piel participle wrongly identified")
    if s["id"]=="01LeN" and (s["morph"]!="HVqp3ms" or is_way):
     raise ValueError("Gen 1:5 second called is QATAL, not wayyiqtol")
+   if is_way and not re.search(r"\b(?:said|was|saw|separated|called)\b",s["gloss"],re.I):
+    raise ValueError("Wayyiqtol not English simple past")
+   if is_way and re.search(r"\b(?:has|hath|had|will|shall)\b",s["gloss"],re.I):
+    raise ValueError("Wayyiqtol used English perfect/future")
    if s["id"]=="015SS" and (s["gloss"]!="" or s["lemma"]!="853"):
     raise ValueError("Object marker not explicitly zero-glossed")
    for k in a["exact_lexemes"]:
