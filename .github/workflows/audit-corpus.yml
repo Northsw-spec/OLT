@@ -1,0 +1,62 @@
+name: Source-level corpus and Genesis 1 morphology audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_corpus.py"
+      - "tests/test_corpus_audit.py"
+      - ".github/workflows/audit-corpus.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: olt-corpus-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Morphology parser regression tests
+        run: python -m unittest discover -s tests -p 'test_corpus_audit.py' -v
+      - name: Audit ALL imported OT words and build Genesis 1 source tag ledger
+        run: python scripts/audit_corpus.py
+      - name: Verify source-derived report and no fake release status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/quality")
+          a=json.loads((p/"corpus_audit.json").read_text())
+          assert a["token_count"]==306785
+          assert a["verse_count"]==23213
+          assert a["distinct_exact_lemma_keys"]>=8640
+          assert a["genesis_1_verse_count"]==31
+          assert a["genesis_1_source_tokens"]>400
+          assert a["genesis_1_wayyiqtol_source_tag_count"]==50, a["genesis_1_wayyiqtol_source_tag_count"]
+          assert a["editorial_certification"]=="NOT_PERFORMED"
+          z=json.loads((p/"genesis_01_morphology.json").read_text())
+          assert z["status"]=="IMPORTED_SOURCE_MORPHOLOGY_NOT_INDEPENDENTLY_REVIEWED"
+          print("SOURCE TAG AUDIT PASS, NOT MANUAL PHILOLOGICAL SIGNOFF")
+          PY
+      - name: Commit audited derived source reports
+        run: |
+          set -euo pipefail
+          git config user.name "olt-audit[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quality
+          if git diff --cached --quiet; then
+            echo "Reports unchanged"
+          else
+            git commit -m "Add source-derived exact lemma and Genesis morphology audit reports"
+            git push origin HEAD:main
+          fi
