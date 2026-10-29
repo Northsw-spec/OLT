@@ -46,6 +46,25 @@ def parse_list(raw):
         elif x: invalid.append(x)
     return sorted(set(valid)),sorted(set(invalid))
 
+def resolve_strong_reference(raw, strong_ids):
+    """Resolve only exact Strong entry-ID formatting, not lexical homonymy.
+
+    LexicalIndex xref strong="1254" may refer to Strong XML id="H1254".
+    Preserve raw IDs and disclose any conversion as a formatting map.
+    """
+    if raw in strong_ids:
+        return {"raw":raw,"found_id":raw,"normalization":"EXACT"}
+    m=re.fullmatch(r"(?:H)?0*([0-9]{1,5})",raw,re.I)
+    if not m:
+        return {"raw":raw,"found_id":None,"normalization":"UNRECOGNIZED"}
+    n=str(int(m.group(1)))
+    hits=[x for x in ("H"+n,n) if x in strong_ids]
+    if len(hits)==1:
+        return {"raw":raw,"found_id":hits[0],"normalization":"NUMERIC_STRONG_ID_FORMAT"}
+    if len(hits)>1:
+        return {"raw":raw,"found_id":None,"normalization":"AMBIGUOUS_ID_FORMAT"}
+    return {"raw":raw,"found_id":None,"normalization":"NO_DICTIONARY_TARGET"}
+
 def parse_lex_index(path):
     root=ET.parse(path).getroot()
     results={}
@@ -98,7 +117,9 @@ def parse_entry_ids(path):
 
 def report(observed,aug,lex_index,bdb_ids,strong_ids):
     rows=[]
+    unresolved_examples=[]
     status_counts=Counter()
+    unresolved_kinds=Counter()
     bdb_reference_status=Counter()
     strong_reference_status=Counter()
     bad_xref_samples=[]
@@ -118,6 +139,11 @@ def report(observed,aug,lex_index,bdb_ids,strong_ids):
         else:
             status="EXACT_AUG_TO_LEXICAL_INDEX"
         status_counts[status]+=1
+        if status!="EXACT_AUG_TO_LEXICAL_INDEX":
+            reason="PLUS_MARKER" if raw.endswith("+") else ("AUG_ID_ABSENT" if not targets else status)
+            unresolved_kinds[reason]+=1
+            if len(unresolved_examples)<80:
+                unresolved_examples.append({"key":raw,"normalized":norm,"reason":reason,"occurrences":r["occurrences_of_component"]})
         refs=[]
         for target in good:
             v=lex_index[target]
@@ -133,14 +159,23 @@ def report(observed,aug,lex_index,bdb_ids,strong_ids):
                 parsed["bdb_status"]={
                     "found":[x for x in parsed["bdb"]["ids"] if x in bdb_ids],
                     "missing":[x for x in parsed["bdb"]["ids"] if x not in bdb_ids]}
+                strong_checked=[resolve_strong_reference(x,strong_ids) for x in parsed["strong"]["ids"]]
                 parsed["strong_status"]={
-                    "found":[x for x in parsed["strong"]["ids"] if x in strong_ids],
-                    "missing":[x for x in parsed["strong"]["ids"] if x not in strong_ids]}
+                    "found":[x["found_id"] for x in strong_checked if x["found_id"] is not None],
+                    "missing":[x["raw"] for x in strong_checked if x["found_id"] is None],
+                    "details":strong_checked}
                 for id_ in parsed["bdb_status"]["found"]:bdb_reference_status["FOUND"]+=1
                 for id_ in parsed["bdb_status"]["missing"]:bdb_reference_status["DANGLING"]+=1
-                for id_ in parsed["strong_status"]["found"]:strong_reference_status["FOUND"]+=1
-                for id_ in parsed["strong_status"]["missing"]:strong_reference_status["DANGLING"]+=1
-                if parsed["aug"]["ids"] and norm not in parsed["aug"]["ids"] and len(mismatched_direct_aug)<35:
+                for result in strong_checked:
+                    strong_reference_status["FOUND" if result["found_id"] else "DANGLING"]+=1
+                    strong_reference_status["METHOD_"+result["normalization"]]+=1
+                # LexicalIndex xref aug="a" refers to its augmented letter,
+                # not necessarily the fully qualified AugIndex key "122a".
+                claimed=parsed["aug"]["ids"]
+                permitted={norm}
+                if r.get("extension"):
+                    permitted.add(r["extension"])
+                if claimed and not set(claimed).issubset(permitted) and len(mismatched_direct_aug)<35:
                     mismatched_direct_aug.append({"key":raw,"aug_normalized":norm,"entry":target,"xref_aug":parsed["aug"]["raw"]})
                 refs.append(parsed)
         row={
@@ -166,9 +201,11 @@ def report(observed,aug,lex_index,bdb_ids,strong_ids):
         "bdb_entry_ids":len(bdb_ids),
         "strong_entry_ids":len(strong_ids),
         "exact_mapping_status":dict(status_counts),
+        "unresolved_reasons":dict(unresolved_kinds),
+        "unresolved_examples":unresolved_examples,
         "bdb_explicit_reference_results":dict(bdb_reference_status),
         "strong_explicit_reference_results":dict(strong_reference_status),
-        "duplicate_aug_key_counts":{k:v for k,v in sorted(aug.items()) if len(v)>1},
+        "duplicate_aug_key_counts":{k:sorted(v) for k,v in sorted(aug.items()) if len(v)>1},
         "xref_unparsed_examples":bad_xref_samples,
         "xref_aug_disagreements_examples":mismatched_direct_aug,
         "release_status":"BLOCKED_NOT_EDITORIALLY_REVIEWED",

@@ -29,3 +29,6 @@ The original schema `LiSchema.xsd` confirms that lexical index entries carry
 **Validation boundaries:** even a perfect XML identifier link does not certify
 that the linked dictionary meaning is correct in a passage, or an owner-approved
 English word. Every OLT English meaning remains a separate editorial decision.
+
+## Identifier-format correction (OLT-004B)
+LexicalIndex `xref strong="1254"` can refer to Strong dictionary `entry id="H1254"`. The validator now accepts only an unambiguous numeric-ID prefix transformation and records its method. The original raw attribute is preserved. A suffix `xref aug="a"` is an *augmentation letter*, not necessarily a full `122a` identifier; it is checked as such. Outstanding records are categorized by plus markers versus genuinely absent identifiers, with examples.

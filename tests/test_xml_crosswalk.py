@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from verify_xml_crosswalk import normalize_osbh, parse_aug, parse_entry_ids, report, parse_list
+from verify_xml_crosswalk import normalize_osbh, parse_aug, parse_entry_ids, report, parse_list, resolve_strong_reference
 
 class SourceXmlCrosswalkTests(unittest.TestCase):
     def test_augmentation_spaced_letter_is_lookup_only(self):
@@ -19,6 +19,17 @@ class SourceXmlCrosswalkTests(unittest.TestCase):
     def test_parse_safe_reference_ids(self):
         self.assertEqual(parse_list("aaa bbb,ccc;ddd"),(["aaa","bbb","ccc","ddd"],[]))
         self.assertEqual(parse_list("a/b"),([],["a/b"]))
+    def test_strong_xref_numeric_format_only(self):
+        self.assertEqual(resolve_strong_reference("1254", {"H1254"})["found_id"],"H1254")
+        self.assertEqual(resolve_strong_reference("H01254", {"H1254"})["found_id"],"H1254")
+        self.assertIsNone(resolve_strong_reference("1254a", {"H1254"})["found_id"])
+        self.assertIsNone(resolve_strong_reference("1254", {"H1254","1254"})["found_id"])
+    def test_lexical_aug_suffix_is_not_full_lemma_id(self):
+        obs=[{"exact_lemma_key":"122 a","extension":"a","occurrences_of_component":1}]
+        lex={"a":{"xref_attributes":[{"aug":"a","bdb":"b1","strong":"122"}]}}
+        _,summary=report(obs,{"122a":{"a"}},lex,{"b1"},{"H122"})
+        self.assertEqual(summary["xref_aug_disagreements_examples"],[])
+        self.assertEqual(summary["strong_explicit_reference_results"]["FOUND"],1)
     def test_real_source_crosslinks_not_inferred(self):
         observed=[{"exact_lemma_key":"122 a","occurrences_of_component":1},
                   {"exact_lemma_key":"122 b","occurrences_of_component":2},
