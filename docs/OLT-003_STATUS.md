@@ -1,3 +1,5 @@
+> **Historical checkpoint (superseded for counts):** For current numbers and latest source-linked Genesis dossier see [STATUS_CURRENT.md](STATUS_CURRENT.md). Earlier OLT-003 figures (e.g. 8,100 direct matches and 1,419 unresolved) reflect the *old matching algorithm*, not the revised OLT-004 exact XML crosswalk.
+
 # OLT-003 checkpoint — complete-source lexical candidates, not approved English lexicon
 
 **Date:** 2026-10-29  
