@@ -134,6 +134,8 @@ def make(source,cards,plan=None,main=None,notes=None):
   records.append({"reference":verse,"english_main_proposal":txt,"source_word_count":len(items),
     "source_wayyiqtol_count":sum(x["source_tagged_wayyiqtol"] for x in items),
     "source_aligned_tokens":items,"review_status":"NOT_INDEPENDENTLY_APPROVED"})
+ if "the Earth — she was" not in main["Gen.1.2"]:
+  raise ValueError("Feminine grammatical agreement for the Earth changed")
  if total_way!=7:raise ValueError("Incorrect actual number of wayyiqtol forms")
  if not main["Gen.1.4"].startswith(LOCK):raise ValueError("Changed owner-approved Gen 1:4 clause")
  for note in notes:

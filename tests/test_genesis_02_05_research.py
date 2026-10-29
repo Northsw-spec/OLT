@@ -40,6 +40,9 @@ class Tests(unittest.TestCase):
  def test_main_text_it_is_rejected(self):
   m=dict(MAIN);m["Gen.1.2"]="And it was."
   with self.assertRaisesRegex(ValueError,"Neutral it"):self.check(main=m)
+ def test_feminine_earth_agreement_is_preserved(self):
+  m=dict(MAIN);m["Gen.1.2"]=m["Gen.1.2"].replace("Earth — she was","Earth — he was")
+  with self.assertRaisesRegex(ValueError,"Feminine grammatical agreement"):self.check(main=m)
  def test_exact_gen_1_4_clause_is_locked(self):
   m=dict(MAIN);m["Gen.1.4"]=m["Gen.1.4"].replace("that [he was]","that was")
   with self.assertRaisesRegex(ValueError,"owner-approved"):self.check(main=m)
