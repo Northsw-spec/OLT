@@ -1,0 +1,2517 @@
+{
+  "all_actual_genesis_1_word_tokens": 434,
+  "all_genesis_1_unique_lemma_ids": 97,
+  "lexeme_component_occurrences": 427,
+  "new_english_decisions_pending": 94,
+  "notes": "Ranked by observed source-lemma frequency. No dictionary sense automatically becomes an owner-approved English word.",
+  "owner_locked_family_lemma_ids": 3,
+  "queue": [
+    {
+      "bdb_ref_ids": [
+        "a.dl.ad"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 32,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "430",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֱלֹהִ֑ים",
+        "אֱלֹהִ֔ים",
+        "אֱלֹהִ֖ים",
+        "אֱלֹהִ֗ים",
+        "אֱלֹהִ֛ים"
+      ],
+      "source_token_ids": [
+        "01TyA",
+        "01x9c",
+        "01JM7",
+        "01v6U",
+        "01794",
+        "01kfX",
+        "01hh7",
+        "01FV9",
+        "01fQr",
+        "01PzC",
+        "01iy2",
+        "01dns",
+        "01zio",
+        "01RmH",
+        "01Ap3",
+        "01XyU",
+        "01cn3",
+        "016qf",
+        "01dAC",
+        "01qry",
+        "01kDm",
+        "01WPn",
+        "014fv",
+        "019gS",
+        "01YxK",
+        "01azZ",
+        "0179E",
+        "01BnR",
+        "01BJv",
+        "01mP3",
+        "01bsu",
+        "01Mxy"
+      ],
+      "strong_ref_ids": [
+        "H430"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "e.bf.aa"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 27,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1961",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הָיְתָ֥ה",
+        "וְ/הָי֤וּ",
+        "וִ/יהִ֣י",
+        "וַֽ/יְהִי",
+        "וַֽ/יְהִי"
+      ],
+      "source_token_ids": [
+        "01Qzf",
+        "01fpo",
+        "01yw4",
+        "01Y3z",
+        "01uLf",
+        "01BsK",
+        "01qty",
+        "019qY",
+        "01dNE",
+        "01AYg",
+        "01KvD",
+        "01Gq9",
+        "013Lj",
+        "01WTe",
+        "01CEu",
+        "01btu",
+        "01xva",
+        "01MmM",
+        "013k3",
+        "01W2c",
+        "0168C",
+        "01D4c",
+        "016Lo",
+        "01Rvc",
+        "01HoD",
+        "01vLv",
+        "01Sxc"
+      ],
+      "strong_ref_ids": [
+        "H1961"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.gm.aa"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 26,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "853",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֵ֥ת",
+        "אֶת",
+        "אֹת֑/וֹ",
+        "אֹתָ/ם֮",
+        "אֹתָ֛/ם"
+      ],
+      "source_token_ids": [
+        "01vuQ",
+        "01k5P",
+        "015SS",
+        "01Xm1",
+        "01BG4",
+        "013eS",
+        "01PGK",
+        "01Xa1",
+        "01bju",
+        "01bvP",
+        "01hEs",
+        "01EXL",
+        "0163G",
+        "015KE",
+        "01LAe",
+        "01mr5",
+        "01Ew6",
+        "01Zuo",
+        "01pUN",
+        "013gY",
+        "01WFU",
+        "01MEz",
+        "01mVV",
+        "01tKf",
+        "01xp4",
+        "01w6u"
+      ],
+      "strong_ref_ids": [
+        "H853"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.fx.aa"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 20,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "776",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֶ֔רֶץ",
+        "אֶ֖רֶץ",
+        "בָּ/אָֽרֶץ",
+        "הָ/אָ֑רֶץ",
+        "הָ/אָ֔רֶץ"
+      ],
+      "source_token_ids": [
+        "01nPh",
+        "01LN3",
+        "01Wxx",
+        "01zTj",
+        "01vzS",
+        "01Y4K",
+        "014W9",
+        "01pqY",
+        "01gV8",
+        "01GpK",
+        "01jyT",
+        "01hj3",
+        "011Cv",
+        "01d3U",
+        "01JyD",
+        "01Q2u",
+        "014vX",
+        "01uUA",
+        "01rGa",
+        "01eyL"
+      ],
+      "strong_ref_ids": [
+        "H776"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.bn.ab"
+      ],
+      "first_occurrence": "Gen.1.21",
+      "genesis_occurrences": 14,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3605",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/בְ/כָל",
+        "וּ/לְ/כָל",
+        "וּ/לְ/כֹ֣ל",
+        "וּֽ/לְ/כָל",
+        "כָל"
+      ],
+      "source_token_ids": [
+        "01xAF",
+        "01ZPN",
+        "0174R",
+        "01HjU",
+        "01NtK",
+        "01hS1",
+        "01FMa",
+        "01jEX",
+        "01awE",
+        "018eM",
+        "01fp1",
+        "01gBW",
+        "01Hki",
+        "01e3z"
+      ],
+      "strong_ref_ids": [
+        "H3605"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.cs.ar"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 12,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5921 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "מֵ/עַ֣ל",
+        "עַל"
+      ],
+      "source_token_ids": [
+        "01qNN",
+        "0129t",
+        "01sRU",
+        "01G83",
+        "01SaV",
+        "01RXg",
+        "01CCj",
+        "01Czz",
+        "016JA",
+        "01G6E",
+        "01zkA",
+        "0193F"
+      ],
+      "strong_ref_ids": [
+        "H5921"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.ay.aa"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 11,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3117",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בַּ/יּ֣וֹם",
+        "הַ/יּ֔וֹם",
+        "הַ/יּ֖וֹם",
+        "וּ/לְ/יָמִ֖ים",
+        "י֔וֹם"
+      ],
+      "source_token_ids": [
+        "01wrL",
+        "013TS",
+        "01Snp",
+        "01sKn",
+        "01LFW",
+        "01VuH",
+        "01PVx",
+        "01gYe",
+        "01zfc",
+        "01JnD",
+        "01GjY"
+      ],
+      "strong_ref_ids": [
+        "H3117"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.bt.aa"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 11,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4325",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/מַּ֔יִם",
+        "הַ/מַּ֖יִם",
+        "הַ/מַּ֜יִם",
+        "הַ/מַּ֨יִם֙",
+        "הַ/מָּ֑יִם"
+      ],
+      "source_token_ids": [
+        "01TZE",
+        "01wM5",
+        "01eHJ",
+        "01H6L",
+        "01A4a",
+        "01tKT",
+        "01d5m",
+        "01Haa",
+        "01chR",
+        "01T2S",
+        "01qVd"
+      ],
+      "strong_ref_ids": [
+        "H4325"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.ea.aa"
+      ],
+      "first_occurrence": "Gen.1.3",
+      "genesis_occurrences": 11,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "559",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/יֹּ֣אמֶר",
+        "וַ/יֹּ֥אמֶר",
+        "וַ/יֹּ֨אמֶר",
+        "לֵ/אמֹ֑ר"
+      ],
+      "source_token_ids": [
+        "01thY",
+        "017am",
+        "01nLp",
+        "01cpb",
+        "01AxB",
+        "01GvF",
+        "011jv",
+        "01ErQ",
+        "01YhQ",
+        "01ExP",
+        "01X1R"
+      ],
+      "strong_ref_ids": [
+        "H559"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.bv.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 10,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4327",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "לְ/מִֽינֵ/הֶ֗ם",
+        "לְ/מִינ֔/וֹ",
+        "לְ/מִינֵ֑/הוּ",
+        "לְ/מִינֵ֔/הוּ",
+        "לְ/מִינָ֑/הּ"
+      ],
+      "source_token_ids": [
+        "017ZG",
+        "01rAQ",
+        "01U4n",
+        "01tkJ",
+        "01v2F",
+        "01xxn",
+        "01iDs",
+        "01PBQ",
+        "01PbY",
+        "012dm"
+      ],
+      "strong_ref_ids": [
+        "H4327"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.dy.ab"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 10,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8064",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/שָּׁמַ֔יִם",
+        "הַ/שָּׁמַ֖יִם",
+        "הַ/שָּׁמַ֗יִם",
+        "הַ/שָּׁמַ֜יִם",
+        "הַ/שָּׁמַ֨יִם֙"
+      ],
+      "source_token_ids": [
+        "01TSc",
+        "01A74",
+        "01LJh",
+        "01cLk",
+        "01372",
+        "01dJe",
+        "01Qnr",
+        "01ygU",
+        "01bPJ",
+        "01mGU"
+      ],
+      "strong_ref_ids": [
+        "H8064"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.gk.aa"
+      ],
+      "first_occurrence": "Gen.1.7",
+      "genesis_occurrences": 9,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "834 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֲשֶׁ֖ר",
+        "אֲשֶׁ֣ר",
+        "אֲשֶׁ֥ר",
+        "אֲשֶׁר",
+        "אֲשֶׁר֙"
+      ],
+      "source_token_ids": [
+        "015Pr",
+        "01NRT",
+        "01B2d",
+        "019Hv",
+        "01ibe",
+        "01HWo",
+        "01Azu",
+        "01pm7",
+        "012c6"
+      ],
+      "strong_ref_ids": [
+        "H834"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.bo.ac"
+      ],
+      "first_occurrence": "Gen.1.4",
+      "genesis_occurrences": 9,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "996",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בֵּ֤ין",
+        "בֵּ֥ין",
+        "וּ/בֵ֣ין",
+        "וּ/בֵ֥ין"
+      ],
+      "source_token_ids": [
+        "01CsU",
+        "01KvS",
+        "01Xw6",
+        "01CyH",
+        "01mwU",
+        "01j63",
+        "01FbT",
+        "01v5z",
+        "016By"
+      ],
+      "strong_ref_ids": [
+        "H996"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.ab.aa"
+      ],
+      "first_occurrence": "Gen.1.4",
+      "genesis_occurrences": 8,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7200",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/תֵרָאֶ֖ה",
+        "וַ/יַּ֤רְא",
+        "וַ/יַּ֥רְא",
+        "וַ/יַּ֧רְא"
+      ],
+      "source_token_ids": [
+        "01USR",
+        "01QwM",
+        "01F1s",
+        "012Kt",
+        "01VTb",
+        "017vt",
+        "01uYh",
+        "015QX"
+      ],
+      "strong_ref_ids": [
+        "H7200"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "i.ai.ab"
+      ],
+      "first_occurrence": "Gen.1.4",
+      "genesis_occurrences": 7,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2896 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "ט֑וֹב",
+        "ט֖וֹב",
+        "טֽוֹב"
+      ],
+      "source_token_ids": [
+        "01g2y",
+        "01nRZ",
+        "0175P",
+        "01QG5",
+        "01eRa",
+        "01Kz2",
+        "01ce9"
+      ],
+      "strong_ref_ids": [
+        "H2896"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.cu.ad"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1242",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בֹ֖קֶר"
+      ],
+      "source_token_ids": [
+        "01kA7",
+        "01Ls9",
+        "016VM",
+        "01mL3",
+        "01ta1",
+        "01xwN"
+      ],
+      "strong_ref_ids": [
+        "H1242"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.cd.ab"
+      ],
+      "first_occurrence": "Gen.1.3",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "216",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "א֑וֹר",
+        "אֽוֹר",
+        "הָ/א֖וֹר",
+        "לָ/אוֹר֙"
+      ],
+      "source_token_ids": [
+        "01W26",
+        "01jbg",
+        "01GzE",
+        "01XR4",
+        "01Wkf",
+        "01bCC"
+      ],
+      "strong_ref_ids": [
+        "H216"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "g.cl.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2233",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "זֶ֔רַע",
+        "זֶ֗רַע",
+        "זֶ֨רַע֙",
+        "זַרְע/וֹ",
+        "זָ֑רַע"
+      ],
+      "source_token_ids": [
+        "01VA9",
+        "01ewe",
+        "01YWU",
+        "01j1i",
+        "015pZ",
+        "01D3a"
+      ],
+      "strong_ref_ids": [
+        "H2233"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.bg.aa"
+      ],
+      "first_occurrence": "Gen.1.4",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3588 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "כִּי"
+      ],
+      "source_token_ids": [
+        "01qCU",
+        "01GK3",
+        "01SWL",
+        "01efz",
+        "01doW",
+        "01aSJ"
+      ],
+      "strong_ref_ids": [
+        "H3588"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.by.aa"
+      ],
+      "first_occurrence": "Gen.1.7",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3651 c",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "כֵֽן"
+      ],
+      "source_token_ids": [
+        "01n5f",
+        "01GLz",
+        "013y8",
+        "01wJn",
+        "01JZq",
+        "01P5s"
+      ],
+      "strong_ref_ids": [
+        "H3651"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.bk.ab"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5775",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/הָ/ע֖וֹף",
+        "וְ/עוֹף֙",
+        "וּ/בְ/ע֣וֹף",
+        "ע֤וֹף",
+        "ע֨וֹף"
+      ],
+      "source_token_ids": [
+        "012tG",
+        "01q1G",
+        "01e6B",
+        "01EVu",
+        "01Wjz",
+        "01Y9g"
+      ],
+      "strong_ref_ids": [
+        "H5775"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.ff.ab"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 6,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6153",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "עֶ֥רֶב"
+      ],
+      "source_token_ids": [
+        "01NQN",
+        "01xdF",
+        "01Qa3",
+        "011rL",
+        "01CMz",
+        "01UrG"
+      ],
+      "strong_ref_ids": [
+        "H6153"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "h.cd.ab"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 5,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2416 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַֽ/חַיָּ֣ה",
+        "חַיָּ֑ה",
+        "חַיָּ֔ה",
+        "חַיָּ֖ה",
+        "חַיָּה֙"
+      ],
+      "source_token_ids": [
+        "01ecS",
+        "016w9",
+        "01QH2",
+        "01h53",
+        "01MRA"
+      ],
+      "strong_ref_ids": [
+        "H2416"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.cd.ao"
+      ],
+      "first_occurrence": "Gen.1.14",
+      "genesis_occurrences": 5,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3974",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/מְּאֹרֹ֖ת",
+        "הַ/מָּא֤וֹר",
+        "לִ/מְאוֹרֹת֙",
+        "מְאֹרֹת֙"
+      ],
+      "source_token_ids": [
+        "01zpy",
+        "01NrT",
+        "01sHf",
+        "01ddd",
+        "01U4a"
+      ],
+      "strong_ref_ids": [
+        "H3974"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "s.cy.aa"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 5,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7121",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/יִּקְרָ֧א",
+        "וַ/יִּקְרָ֨א",
+        "קָ֣רָא",
+        "קָרָ֣א"
+      ],
+      "source_token_ids": [
+        "01nAB",
+        "01LeN",
+        "01YUq",
+        "01BU7",
+        "01fJN"
+      ],
+      "strong_ref_ids": [
+        "H7121"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.ah.aa"
+      ],
+      "first_occurrence": "Gen.1.4",
+      "genesis_occurrences": 5,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "914",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/יַּבְדֵּ֗ל",
+        "וַ/יַּבְדֵּ֣ל",
+        "וּֽ/לֲ/הַבְדִּ֔יל",
+        "לְ/הַבְדִּ֕יל",
+        "מַבְדִּ֔יל"
+      ],
+      "source_token_ids": [
+        "01jQb",
+        "015gQ",
+        "01goK",
+        "0192v",
+        "018ro"
+      ],
+      "strong_ref_ids": [
+        "H914"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "g.cl.aa"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2232",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "זֹרֵ֣עַ",
+        "מַזְרִ֣יעַ",
+        "מַזְרִ֤יעַ"
+      ],
+      "source_token_ids": [
+        "01Bbz",
+        "01Cof",
+        "01ki2",
+        "01Xh9"
+      ],
+      "strong_ref_ids": [
+        "H2232"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "h.gt.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2822",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/חֹ֑שֶׁךְ",
+        "הַ/חֹֽשֶׁךְ",
+        "וְ/חֹ֖שֶׁךְ",
+        "וְ/לַ/חֹ֖שֶׁךְ"
+      ],
+      "source_token_ids": [
+        "01C5U",
+        "01dBc",
+        "013TL",
+        "01CZB"
+      ],
+      "strong_ref_ids": [
+        "H2822"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.br.ab"
+      ],
+      "first_occurrence": "Gen.1.10",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3220",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בַּ/יַּמִּ֔ים",
+        "הַ/יָּ֜ם",
+        "הַ/יָּם֙",
+        "יַמִּ֑ים"
+      ],
+      "source_token_ids": [
+        "019KV",
+        "01koG",
+        "012tS",
+        "01AXb"
+      ],
+      "strong_ref_ids": [
+        "H3220"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "l.bm.ad"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3915",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/לַּ֔יְלָה",
+        "הַ/לָּ֑יְלָה",
+        "וּ/בַ/לַּ֔יְלָה",
+        "לָ֑יְלָה"
+      ],
+      "source_token_ids": [
+        "01sMn",
+        "01Bx7",
+        "01ndZ",
+        "01eXj"
+      ],
+      "strong_ref_ids": [
+        "H3915"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "n.en.ab"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5315",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "נֶ֣פֶשׁ",
+        "נֶ֤פֶשׁ"
+      ],
+      "source_token_ids": [
+        "01dSp",
+        "01qg1",
+        "01Unh",
+        "01c58"
+      ],
+      "strong_ref_ids": [
+        "H5315"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.em.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6086",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הָ/עֵ֛ץ",
+        "וְ/עֵ֧ץ",
+        "עֵ֖ץ",
+        "עֵ֣ץ"
+      ],
+      "source_token_ids": [
+        "01fV3",
+        "01fLi",
+        "01yNT",
+        "01mrn"
+      ],
+      "strong_ref_ids": [
+        "H6086"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.fx.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6212",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "עֵ֖שֶׂב",
+        "עֵ֚שֶׂב",
+        "עֵ֣שֶׂב"
+      ],
+      "source_token_ids": [
+        "01GYe",
+        "01aMT",
+        "01KPU",
+        "01S38"
+      ],
+      "strong_ref_ids": [
+        "H6212"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "q.bu.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6440",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "פְּנֵ֖י",
+        "פְּנֵ֣י",
+        "פְּנֵ֥י"
+      ],
+      "source_token_ids": [
+        "01EVS",
+        "01KZG",
+        "01uXX",
+        "01JMT"
+      ],
+      "strong_ref_ids": [
+        "H6440"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "q.cv.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6529",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "פְרִי",
+        "פְּרִ֛י",
+        "פְּרִ֞י",
+        "פְּרִי֙"
+      ],
+      "source_token_ids": [
+        "01Sov",
+        "01ifp",
+        "01AJj",
+        "01XMu"
+      ],
+      "strong_ref_ids": [
+        "H6529"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.dc.aa"
+      ],
+      "first_occurrence": "Gen.1.21",
+      "genesis_occurrences": 4,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7430",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הָֽ/רֹמֶ֡שֶׂת",
+        "הָֽ/רֹמֵ֥שׂ",
+        "הָֽ/רֹמֶ֥שֶׂת",
+        "רוֹמֵ֣שׂ"
+      ],
+      "source_token_ids": [
+        "01wA4",
+        "01zqr",
+        "01vpK",
+        "01eLD"
+      ],
+      "strong_ref_ids": [
+        "H7430"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "c.aq.ae"
+      ],
+      "first_occurrence": "Gen.1.16",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1419 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/גְּדֹלִ֑ים",
+        "הַ/גָּדֹל֙"
+      ],
+      "source_token_ids": [
+        "01iee",
+        "01hxo",
+        "01Tn7"
+      ],
+      "strong_ref_ids": [
+        "H1419"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "h.cd.ad"
+      ],
+      "first_occurrence": "Gen.1.24",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2416 c",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/חַֽיְתוֹ",
+        "חַיַּ֣ת",
+        "חַיַּ֨ת"
+      ],
+      "source_token_ids": [
+        "01jNE",
+        "01qK3",
+        "01xkK"
+      ],
+      "strong_ref_ids": [
+        "H2416"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "r.ce.ab"
+      ],
+      "first_occurrence": "Gen.1.26",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6754",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בְּ/צֶ֥לֶם",
+        "בְּ/צַלְמ֔/וֹ",
+        "בְּ/צַלְמֵ֖/נוּ"
+      ],
+      "source_token_ids": [
+        "01gtq",
+        "01mR4",
+        "01MC8"
+      ],
+      "strong_ref_ids": [
+        "H6754"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.ai.aa"
+      ],
+      "first_occurrence": "Gen.1.22",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7235 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/רְב֗וּ",
+        "וּ/רְב֛וּ",
+        "יִ֥רֶב"
+      ],
+      "source_token_ids": [
+        "01DDb",
+        "018GY",
+        "01suQ"
+      ],
+      "strong_ref_ids": [
+        "H7235"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.dc.ab"
+      ],
+      "first_occurrence": "Gen.1.24",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7431",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הָ/רֶ֖מֶשׂ",
+        "וָ/רֶ֛מֶשׂ",
+        "רֶ֥מֶשׂ"
+      ],
+      "source_token_ids": [
+        "013KZ",
+        "016zt",
+        "01U94"
+      ],
+      "strong_ref_ids": [
+        "H7431"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.al.ab"
+      ],
+      "first_occurrence": "Gen.1.24",
+      "genesis_occurrences": 3,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "929",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בְּהֵמָ֥ה",
+        "הַ/בְּהֵמָה֙",
+        "וּ/בַ/בְּהֵמָה֙"
+      ],
+      "source_token_ids": [
+        "01ou4",
+        "01QDu",
+        "01swV"
+      ],
+      "strong_ref_ids": [
+        "H929"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.bc.ab"
+      ],
+      "first_occurrence": "Gen.1.26",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "120",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אָדָ֛ם",
+        "הָֽ/אָדָם֙"
+      ],
+      "source_token_ids": [
+        "01gPX",
+        "01LXS"
+      ],
+      "strong_ref_ids": [
+        "H120"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.dd.aa"
+      ],
+      "first_occurrence": "Gen.1.22",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1288",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/יְבָ֣רֶךְ",
+        "וַ/יְבָ֧רֶךְ"
+      ],
+      "source_token_ids": [
+        "01kDf",
+        "01RuM"
+      ],
+      "strong_ref_ids": [
+        "H1288"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "d.ak.ac"
+      ],
+      "first_occurrence": "Gen.1.26",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1710",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בִ/דְגַ֨ת",
+        "בִּ/דְגַ֤ת"
+      ],
+      "source_token_ids": [
+        "01k1L",
+        "01F88"
+      ],
+      "strong_ref_ids": [
+        "H1710"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "d.cn.ab"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1877",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "דֶּ֔שֶׁא",
+        "דֶּ֠שֶׁא"
+      ],
+      "source_token_ids": [
+        "01fPi",
+        "01C32"
+      ],
+      "strong_ref_ids": [
+        "H1877"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "e.bz.ab"
+      ],
+      "first_occurrence": "Gen.1.29",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2009",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הִנֵּה֩",
+        "וְ/הִנֵּה"
+      ],
+      "source_token_ids": [
+        "01Ygn",
+        "01JUf"
+      ],
+      "strong_ref_ids": [
+        "H2009"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.cd.aa"
+      ],
+      "first_occurrence": "Gen.1.15",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "215",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "לְ/הָאִ֖יר"
+      ],
+      "source_token_ids": [
+        "01FMU",
+        "01WvG"
+      ],
+      "strong_ref_ids": [
+        "H215"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.cj.aa"
+      ],
+      "first_occurrence": "Gen.1.5",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "259",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֶחָ֔ד",
+        "אֶחָֽד"
+      ],
+      "source_token_ids": [
+        "01NFp",
+        "01dv1"
+      ],
+      "strong_ref_ids": [
+        "H259"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.aj.ad"
+      ],
+      "first_occurrence": "Gen.1.9",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3004",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/יַּבָּשָׁ֑ה",
+        "לַ/יַּבָּשָׁה֙"
+      ],
+      "source_token_ids": [
+        "01a62",
+        "01zQ2"
+      ],
+      "strong_ref_ids": [
+        "H3004"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.cq.aa"
+      ],
+      "first_occurrence": "Gen.1.12",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3318",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/תּוֹצֵ֨א",
+        "תּוֹצֵ֨א"
+      ],
+      "source_token_ids": [
+        "01TXw",
+        "01yDv"
+      ],
+      "strong_ref_ids": [
+        "H3318"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.dc.ac"
+      ],
+      "first_occurrence": "Gen.1.29",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "402",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "לְ/אָכְלָ֑ה",
+        "לְ/אָכְלָֽה"
+      ],
+      "source_token_ids": [
+        "01c6V",
+        "01eN1"
+      ],
+      "strong_ref_ids": [
+        "H402"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.bz.aa"
+      ],
+      "first_occurrence": "Gen.1.22",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4390",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/מִלְא֤וּ",
+        "וּ/מִלְא֥וּ"
+      ],
+      "source_token_ids": [
+        "01RCg",
+        "011Su"
+      ],
+      "strong_ref_ids": [
+        "H4390"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.dw.ad"
+      ],
+      "first_occurrence": "Gen.1.16",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4475",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "לְ/מֶמְשֶׁ֣לֶת"
+      ],
+      "source_token_ids": [
+        "01TW6",
+        "01Qbs"
+      ],
+      "strong_ref_ids": [
+        "H4475"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "n.gg.aa"
+      ],
+      "first_occurrence": "Gen.1.17",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5414",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וַ/יִּתֵּ֥ן",
+        "נָתַ֨תִּי"
+      ],
+      "source_token_ids": [
+        "01B6c",
+        "012gM"
+      ],
+      "strong_ref_ids": [
+        "H5414"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "q.cv.aa"
+      ],
+      "first_occurrence": "Gen.1.22",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6509",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "פְּר֣וּ",
+        "פְּר֥וּ"
+      ],
+      "source_token_ids": [
+        "01cK8",
+        "01V8b"
+      ],
+      "strong_ref_ids": [
+        "H6509"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.az.aa"
+      ],
+      "first_occurrence": "Gen.1.26",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7287 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/יִרְדּוּ֩",
+        "וּ/רְד֞וּ"
+      ],
+      "source_token_ids": [
+        "01fbB",
+        "01b5Q"
+      ],
+      "strong_ref_ids": [
+        "H7287"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.gc.aa"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8317",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "יִשְׁרְצ֣וּ",
+        "שָׁרְצ֨וּ"
+      ],
+      "source_token_ids": [
+        "01i4W",
+        "01v8V"
+      ],
+      "strong_ref_ids": [
+        "H8317"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "w.an.aa"
+      ],
+      "first_occurrence": "Gen.1.7",
+      "genesis_occurrences": 2,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8478",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "מִ/תַּ֣חַת",
+        "מִ/תַּ֤חַת"
+      ],
+      "source_token_ids": [
+        "01L4k",
+        "01BYa"
+      ],
+      "strong_ref_ids": [
+        "H8478"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.bc.ac"
+      ],
+      "first_occurrence": "Gen.1.25",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "127",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הָֽ/אֲדָמָ֖ה"
+      ],
+      "source_token_ids": [
+        "01zEm"
+      ],
+      "strong_ref_ids": [
+        "H127"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "d.bs.ab"
+      ],
+      "first_occurrence": "Gen.1.26",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1823",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "כִּ/דְמוּתֵ֑/נוּ"
+      ],
+      "source_token_ids": [
+        "01HSQ"
+      ],
+      "strong_ref_ids": [
+        "H1823"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "d.cn.aa"
+      ],
+      "first_occurrence": "Gen.1.11",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1876",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "תַּֽדְשֵׁ֤א"
+      ],
+      "source_token_ids": [
+        "01Qsh"
+      ],
+      "strong_ref_ids": [
+        "H1876"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "g.bh.ae"
+      ],
+      "first_occurrence": "Gen.1.27",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2145",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "זָכָ֥ר"
+      ],
+      "source_token_ids": [
+        "01gc8"
+      ],
+      "strong_ref_ids": [
+        "H2145"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.bt.ab"
+      ],
+      "first_occurrence": "Gen.1.14",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "226",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "לְ/אֹתֹת֙"
+      ],
+      "source_token_ids": [
+        "01rTK"
+      ],
+      "strong_ref_ids": [
+        "H226"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "h.dr.af"
+      ],
+      "first_occurrence": "Gen.1.23",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "2549",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "חֲמִישִֽׁי"
+      ],
+      "source_token_ids": [
+        "01jfz"
+      ],
+      "strong_ref_ids": [
+        "H2549"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.do.ab"
+      ],
+      "first_occurrence": "Gen.1.30",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3418",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "יֶ֥רֶק"
+      ],
+      "source_token_ids": [
+        "01QvZ"
+      ],
+      "strong_ref_ids": [
+        "H3418"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.am.aa"
+      ],
+      "first_occurrence": "Gen.1.28",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3533",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/כִבְשֻׁ֑/הָ"
+      ],
+      "source_token_ids": [
+        "01yT5"
+      ],
+      "strong_ref_ids": [
+        "H3533"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.ae.ab"
+      ],
+      "first_occurrence": "Gen.1.16",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3556",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/כּוֹכָבִֽים"
+      ],
+      "source_token_ids": [
+        "013yJ"
+      ],
+      "strong_ref_ids": [
+        "H3556"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "k.ce.ab"
+      ],
+      "first_occurrence": "Gen.1.21",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3671",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "כָּנָף֙"
+      ],
+      "source_token_ids": [
+        "01bYD"
+      ],
+      "strong_ref_ids": [
+        "H3671"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.ab.ab"
+      ],
+      "first_occurrence": "Gen.1.31",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "3966",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "מְאֹ֑ד"
+      ],
+      "source_token_ids": [
+        "01dPK"
+      ],
+      "strong_ref_ids": [
+        "H3966"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "a.di.aa"
+      ],
+      "first_occurrence": "Gen.1.9",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "413",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "אֶל"
+      ],
+      "source_token_ids": [
+        "01tRR"
+      ],
+      "strong_ref_ids": [
+        "H413"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "j.cb.ac"
+      ],
+      "first_occurrence": "Gen.1.14",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4150",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/לְ/מ֣וֹעֲדִ֔ים"
+      ],
+      "source_token_ids": [
+        "01SHw"
+      ],
+      "strong_ref_ids": [
+        "H4150"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "s.ar.ab"
+      ],
+      "first_occurrence": "Gen.1.10",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4723 c",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/לְ/מִקְוֵ֥ה"
+      ],
+      "source_token_ids": [
+        "01jQ8"
+      ],
+      "strong_ref_ids": [
+        "H4723"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "s.av.am"
+      ],
+      "first_occurrence": "Gen.1.9",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4725",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "מָק֣וֹם"
+      ],
+      "source_token_ids": [
+        "01Q7E"
+      ],
+      "strong_ref_ids": [
+        "H4725"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "m.dw.aa"
+      ],
+      "first_occurrence": "Gen.1.18",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "4910",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/לִ/מְשֹׁל֙"
+      ],
+      "source_token_ids": [
+        "01n9v"
+      ],
+      "strong_ref_ids": [
+        "H4910"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "n.fa.ad"
+      ],
+      "first_occurrence": "Gen.1.27",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5347",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וּ/נְקֵבָ֖ה"
+      ],
+      "source_token_ids": [
+        "01Lsp"
+      ],
+      "strong_ref_ids": [
+        "H5347"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.bk.aa"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "5774 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "יְעוֹפֵ֣ף"
+      ],
+      "source_token_ids": [
+        "01Xzm"
+      ],
+      "strong_ref_ids": [
+        "H5774"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "s.ar.aa"
+      ],
+      "first_occurrence": "Gen.1.9",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6960 b",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "יִקָּו֨וּ"
+      ],
+      "source_token_ids": [
+        "01NPq"
+      ],
+      "strong_ref_ids": [
+        "H6960"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "s.be.ad"
+      ],
+      "first_occurrence": "Gen.1.16",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6996 b",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/קָּטֹן֙"
+      ],
+      "source_token_ids": [
+        "01dSQ"
+      ],
+      "strong_ref_ids": [
+        "H6996"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.ad.ag"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7225",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בְּ/רֵאשִׁ֖ית"
+      ],
+      "source_token_ids": [
+        "01xeN"
+      ],
+      "strong_ref_ids": [
+        "H7225"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.al.ah"
+      ],
+      "first_occurrence": "Gen.1.19",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7243",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "רְבִיעִֽי"
+      ],
+      "source_token_ids": [
+        "01sYp"
+      ],
+      "strong_ref_ids": [
+        "H7243"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.bk.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7307",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/ר֣וּחַ"
+      ],
+      "source_token_ids": [
+        "0137c"
+      ],
+      "strong_ref_ids": [
+        "H7307"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.cd.aa"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7363 b",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "מְרַחֶ֖פֶת"
+      ],
+      "source_token_ids": [
+        "01yNB"
+      ],
+      "strong_ref_ids": [
+        "H7363"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.du.ad"
+      ],
+      "first_occurrence": "Gen.1.13",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7992",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "שְׁלִישִֽׁי"
+      ],
+      "source_token_ids": [
+        "01oAj"
+      ],
+      "strong_ref_ids": [
+        "H7992"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.ek.ab"
+      ],
+      "first_occurrence": "Gen.1.14",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8141",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וְ/שָׁנִֽים"
+      ],
+      "source_token_ids": [
+        "01Axb"
+      ],
+      "strong_ref_ids": [
+        "H8141"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.em.ac"
+      ],
+      "first_occurrence": "Gen.1.8",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8145",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "שֵׁנִֽי"
+      ],
+      "source_token_ids": [
+        "0187B"
+      ],
+      "strong_ref_ids": [
+        "H8145"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.em.ab"
+      ],
+      "first_occurrence": "Gen.1.16",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8147",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "שְׁנֵ֥י"
+      ],
+      "source_token_ids": [
+        "01YHH"
+      ],
+      "strong_ref_ids": [
+        "H8147"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.gc.ab"
+      ],
+      "first_occurrence": "Gen.1.20",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8318",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "שֶׁ֖רֶץ"
+      ],
+      "source_token_ids": [
+        "01Ddq"
+      ],
+      "strong_ref_ids": [
+        "H8318"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "v.bk.ac"
+      ],
+      "first_occurrence": "Gen.1.31",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8345",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/שִּׁשִּֽׁי"
+      ],
+      "source_token_ids": [
+        "01KNo"
+      ],
+      "strong_ref_ids": [
+        "H8345"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "w.ag.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8414",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "תֹ֨הוּ֙"
+      ],
+      "source_token_ids": [
+        "01aPd"
+      ],
+      "strong_ref_ids": [
+        "H8414"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "w.ah.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8415",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "תְה֑וֹם"
+      ],
+      "source_token_ids": [
+        "01PB6"
+      ],
+      "strong_ref_ids": [
+        "H8415"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "w.aj.ae"
+      ],
+      "first_occurrence": "Gen.1.6",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8432",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "בְּ/ת֣וֹךְ"
+      ],
+      "source_token_ids": [
+        "018M6"
+      ],
+      "strong_ref_ids": [
+        "H8432"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "w.be.ac"
+      ],
+      "first_occurrence": "Gen.1.21",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "8577 b",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "הַ/תַּנִּינִ֖ם"
+      ],
+      "source_token_ids": [
+        "01wjj"
+      ],
+      "strong_ref_ids": [
+        "H8577"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.aj.ab"
+      ],
+      "first_occurrence": "Gen.1.2",
+      "genesis_occurrences": 1,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "922",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": null,
+      "review_status": "ENGLISH_LEXICAL_DECISION_PENDING",
+      "source_spellings_sample": [
+        "וָ/בֹ֔הוּ"
+      ],
+      "source_token_ids": [
+        "01eYX"
+      ],
+      "strong_ref_ids": [
+        "H922"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "t.eo.ab"
+      ],
+      "first_occurrence": "Gen.1.6",
+      "genesis_occurrences": 9,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "7549",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": "firmament",
+      "review_status": "OWNER_LOCKED_FAMILY_MORPH_AND_CONTEXT_PENDING",
+      "source_spellings_sample": [
+        "בִּ/רְקִ֣יעַ",
+        "הָ/רָקִיעַ֒",
+        "לָ/רָקִ֑יעַ",
+        "לָ/רָקִ֔יעַ",
+        "לָֽ/רָקִ֖יעַ"
+      ],
+      "source_token_ids": [
+        "01fsu",
+        "01UE6",
+        "01Mnv",
+        "01Wxq",
+        "01L7t",
+        "01FiN",
+        "01iAD",
+        "017mS",
+        "01xCL"
+      ],
+      "strong_ref_ids": [
+        "H7549"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "p.fy.aa"
+      ],
+      "first_occurrence": "Gen.1.7",
+      "genesis_occurrences": 7,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "6213 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": "make",
+      "review_status": "OWNER_LOCKED_FAMILY_MORPH_AND_CONTEXT_PENDING",
+      "source_spellings_sample": [
+        "וַ/יַּ֣עַשׂ",
+        "נַֽעֲשֶׂ֥ה",
+        "עָשָׂ֔ה",
+        "עֹ֤שֶׂה",
+        "עֹֽשֶׂה"
+      ],
+      "source_token_ids": [
+        "01bmv",
+        "01V27",
+        "01Ptj",
+        "01CQo",
+        "01ZpQ",
+        "01oiy",
+        "013RL"
+      ],
+      "strong_ref_ids": [
+        "H6213"
+      ]
+    },
+    {
+      "bdb_ref_ids": [
+        "b.cw.aa"
+      ],
+      "first_occurrence": "Gen.1.1",
+      "genesis_occurrences": 5,
+      "homonym_and_christological_review": "NOT_APPROVED",
+      "lemma_id": "1254 a",
+      "meaning_and_readability": "NOT_APPROVED",
+      "owner_english_family": "shape",
+      "review_status": "OWNER_LOCKED_FAMILY_MORPH_AND_CONTEXT_PENDING",
+      "source_spellings_sample": [
+        "בָּרָ֣א",
+        "בָּרָ֥א",
+        "וַ/יִּבְרָ֣א",
+        "וַ/יִּבְרָ֨א"
+      ],
+      "source_token_ids": [
+        "01Nvk",
+        "016kU",
+        "01jjy",
+        "01PUg",
+        "01SAE"
+      ],
+      "strong_ref_ids": [
+        "H1254"
+      ]
+    }
+  ],
+  "status": "RESEARCH_QUEUE_NOT_LEXICAL_APPROVAL"
+}

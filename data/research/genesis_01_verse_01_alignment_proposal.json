@@ -1,0 +1,174 @@
+{
+  "english_source_word_order_explanation": "Hebrew verb precedes God; OLT recasts as God — He shaped to expose subject-person while prioritizing the owner's approved typography.",
+  "footnote_drafts": [
+    {
+      "category": "GRAMMAR",
+      "editorial_status": "RESEARCH_DRAFT",
+      "english": "The Hebrew bara is Qal qatal, third-person masculine singular, with its subject Elohim written after the verb. The separate English He makes the inflected subject visible and is not an independent Hebrew word."
+    },
+    {
+      "category": "GRAMMAR",
+      "editorial_status": "RESEARCH_DRAFT",
+      "english": "The two instances of et mark definite direct objects and do not require independent English lexical equivalents."
+    },
+    {
+      "category": "INTERTEXTUAL_HYPOTHESIS",
+      "editorial_status": "RESEARCH_DRAFT",
+      "english": "The optional bracketed phrase [of His Power] is absent from Gen 1:1. Compare the separate use of reshit alongside strength/power in Gen 49:3 and Deut 21:17. The relationship is interpretive, not a literal gloss."
+    }
+  ],
+  "grammatical_issues": [
+    "Qatal 3ms in bara, not wayyiqtol. OLT-TENSE-001 is not the grammatical reason for this verse's English past.",
+    "Reshit temporal-clause interpretation remains disputed; source annotation alone does not settle the literary syntax.",
+    "Elohim noun is morphologically plural; the finite verb is singular.",
+    "Et has no independent English lexical surface.",
+    "The additional [of His Power] belongs to an INTERPRETIVE NOTES variant, not to the Hebrew base text."
+  ],
+  "independent_scholarly_review": "NOT_DONE",
+  "main_english_proposal": "In the Beginning God — He shaped the Heavens and the Earth.",
+  "original_hebrew_token_sequence": [
+    "בְּ/רֵאשִׁ֖ית",
+    "בָּרָ֣א",
+    "אֱלֹהִ֑ים",
+    "אֵ֥ת",
+    "הַ/שָּׁמַ֖יִם",
+    "וְ/אֵ֥ת",
+    "הָ/אָֽרֶץ"
+  ],
+  "owner_intertextual_variant_UNAPPROVED": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
+  "philological_sources": [
+    {
+      "kind": "PINNED_PRIMARY_WLC_OSHB",
+      "url": "https://github.com/openscriptures/morphhb"
+    },
+    {
+      "kind": "HEBREW_GRAMMAR",
+      "url": "https://uhg.readthedocs.io/en/latest/particle_direct_object_marker.html"
+    },
+    {
+      "kind": "PEER_REVIEWED_ABSTRACT_RESHIT_SYNTAX",
+      "url": "https://www.repository.cam.ac.uk/items/bce448c5-e43e-416d-89da-5876ead16bc3"
+    },
+    {
+      "kind": "PUBLISHED_SYNTAX_DISCUSSION",
+      "url": "https://translation.bible/wp-content/uploads/2024/06/hasel-1971-recent-translations-of-genesis-1-1-a-critical-look.pdf"
+    }
+  ],
+  "publication_status": "BLOCKED",
+  "reference": "Gen.1.1",
+  "source_alignment": [
+    {
+      "commentary": "The prefix b is in; the English article the is idiomatic and not an independent Hebrew definite article in b/reshit. Whether Genesis 1:1 is a temporal dependent clause is debated.",
+      "english_choice_status": "RESEARCH_PROPOSAL",
+      "exact_lemma_id": "7225",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 1,
+      "pointed_hebrew": "בְּ/רֵאשִׁ֖ית",
+      "proposed_english_surface": "In the Beginning",
+      "source_morphology": "HR/Ncfsa",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "b/7225",
+      "source_token_id": "01xeN"
+    },
+    {
+      "commentary": "Qal qatal 3ms (HVqp3ms), not wayyiqtol. OLT owner-lock shaped; English He below is morphological-person visibility, not a second independent pronoun in Hebrew.",
+      "english_choice_status": "OWNER_LOCKED_ENGLISH_FAMILY",
+      "exact_lemma_id": "1254 a",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 2,
+      "pointed_hebrew": "בָּרָ֣א",
+      "proposed_english_surface": "shaped",
+      "source_morphology": "HVqp3ms",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "1254 a",
+      "source_token_id": "01Nvk"
+    },
+    {
+      "commentary": "Elohim is morphologically masculine plural; here the finite verb is 3ms, a singular governing construction. God is subject following the verb in Hebrew order.",
+      "english_choice_status": "RESEARCH_PROPOSAL",
+      "exact_lemma_id": "430",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 3,
+      "pointed_hebrew": "אֱלֹהִ֑ים",
+      "proposed_english_surface": "God",
+      "source_morphology": "HNcmpa",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "430",
+      "source_token_id": "01TyA"
+    },
+    {
+      "commentary": "The particle et marks a definite direct object; no standalone English word is added for this marker.",
+      "english_choice_status": "NO_ENGLISH_SURFACE_DIRECT_OBJECT_MARKER",
+      "exact_lemma_id": "853",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 4,
+      "pointed_hebrew": "אֵ֥ת",
+      "proposed_english_surface": "",
+      "source_morphology": "HTo",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "853",
+      "source_token_id": "01vuQ"
+    },
+    {
+      "english_choice_status": "RESEARCH_PROPOSAL",
+      "exact_lemma_id": "8064",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 5,
+      "pointed_hebrew": "הַ/שָּׁמַ֖יִם",
+      "proposed_english_surface": "the Heavens",
+      "source_morphology": "HTd/Ncmpa",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "d/8064",
+      "source_token_id": "01TSc"
+    },
+    {
+      "commentary": "The particle et marks a definite direct object; no standalone English word is added for this marker. The c prefix is conjunction and, as owner-locked.",
+      "english_choice_status": "PREFIX_AND_OBJECT_MARKER_WITH_ZERO_ENGLISH_OBJECT_MARKER",
+      "exact_lemma_id": "853",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 6,
+      "pointed_hebrew": "וְ/אֵ֥ת",
+      "proposed_english_surface": "and",
+      "source_morphology": "HC/To",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "c/853",
+      "source_token_id": "01k5P"
+    },
+    {
+      "english_choice_status": "RESEARCH_PROPOSAL",
+      "exact_lemma_id": "776",
+      "lexical_review": "RESEARCH_DRAFT",
+      "ordinal": 7,
+      "pointed_hebrew": "הָ/אָֽרֶץ",
+      "proposed_english_surface": "the Earth",
+      "source_morphology": "HTd/Ncbsa",
+      "source_morphology_verification": "OSHB_TAG_IMPORTED_NOT_INDEPENDENTLY_SIGNED_OFF",
+      "source_raw_lemma": "d/776",
+      "source_token_id": "01nPh"
+    }
+  ],
+  "source_edition": "OSHB_WLC_PINNED",
+  "source_token_count": 7,
+  "status": "SOURCE_ALIGNED_RESEARCH_CANDIDATE_NOT_INDEPENDENTLY_REVIEWED",
+  "supplied_english_items": [
+    {
+      "is_separate_hebrew_word": false,
+      "reason": "English exposure of third-person masculine singular inflection in bara",
+      "source_token_id": "01Nvk",
+      "surface": "He"
+    },
+    {
+      "is_separate_hebrew_word": false,
+      "reason": "Idiomatic English determination; Hebrew b/reshit has no independent definite article",
+      "source_token_id": "01xeN",
+      "surface": "the (in the Beginning)"
+    },
+    {
+      "is_separate_hebrew_word": false,
+      "only_in_optional_variant": true,
+      "reason": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT; no lexical counterpart in Gen 1:1; investigate Gen 49:3 and Deut 21:17",
+      "source_token_id": null,
+      "surface": "[of His Power]"
+    }
+  ]
+}
