@@ -136,7 +136,7 @@ def priority_queue(study_cards,source_dossier):
     cards=study_cards["cards"]
     if len(cards)!=EXPECTED_GENESIS_LEMMAS:
         raise ValueError("Unexpected Genesis unique-lemma scope")
-    tok_total=sum(len(x["source_word_token_ids"]) for x in cards)
+    tok_total=sum(len(x["actual_word_token_ids"]) for x in cards)
     # An original word can have multiple lemma components; do not call this a
     # per-word alignment count. The real word count is independently checked.
     if source_dossier["scope"]["source_word_tokens"]!=EXPECTED_GENESIS_TOKENS:
