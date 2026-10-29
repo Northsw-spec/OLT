@@ -67,7 +67,7 @@ def lex_entries(path, kind):
     return sorted(entries, key=lambda x:x["id"])
 
 def parse_morph(morph_dir, out):
-    books = sorted(morph_dir.glob("*.xml"))
+    books = sorted(p for p in morph_dir.glob("*.xml") if p.name != "VerseMap.xml")
     if len(books) != 39:
         raise RuntimeError(f"Expected 39 MT book files; got {len(books)}")
     word_ids=set()
