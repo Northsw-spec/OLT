@@ -1,0 +1,63 @@
+name: OLT-004 verify actual LexicalIndex to BDB crosswalk
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/verify_xml_crosswalk.py"
+      - "tests/test_xml_crosswalk.py"
+      - ".github/workflows/verify-xml-crosswalk.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-004-lexicon-crosswalk
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit-test normalization and negative cases
+        run: python -m unittest discover -s tests -p 'test_xml_crosswalk.py' -v
+      - name: Fetch exact upstream lexical source commit
+        run: |
+          set -euo pipefail
+          git clone -q https://github.com/openscriptures/HebrewLexicon.git /tmp/olt-lexicon
+          git -C /tmp/olt-lexicon checkout -q 21c9add13bc727d3a951361778e97e3ff7afd1ce
+          test "$(git -C /tmp/olt-lexicon rev-parse HEAD)" = "21c9add13bc727d3a951361778e97e3ff7afd1ce"
+      - name: Parse original AugIndex and LexicalIndex xrefs to BDB and Strong
+        run: |
+          python scripts/verify_xml_crosswalk.py --source /tmp/olt-lexicon
+      - name: Verify full exact-ID coverage and explicit-release blocker
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path("data/quality")
+          r=json.loads((base/"verified_id_crosswalk_report.json").read_text())
+          observed=json.loads((base/"observed_exact_lemmas.json").read_text())
+          assert r["observed"] == len(observed["entries"])
+          assert sum(r["exact_mapping_status"].values())==r["observed"]
+          assert r["release_status"]=="BLOCKED_NOT_EDITORIALLY_REVIEWED"
+          assert r["meaning_status"]=="NOT_APPROVED"
+          assert len(r["source_sha256"])==4
+          print("PASS: exact XML identifier and BDB reference audit; OLT lexical meanings not approved")
+          PY
+      - name: Commit original-source verified lexical IDs and audit report
+        run: |
+          set -euo pipefail
+          git config user.name "olt-lexical-crosswalk[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quality/verified_id_crosswalk*
+          if git diff --cached --quiet; then
+            echo "No changed crosswalk reports"
+          else
+            git commit -m "Derive exact AugIndex LexicalIndex BDB source-ID crosswalk"
+            git push origin HEAD:main
+          fi
