@@ -30,7 +30,7 @@ class TestOLT012(unittest.TestCase):
   next(x for x in d["tokens"] if x["source_token_id"]=="01Xzm")["source_morphology_raw"]="HC/Vqw3ms"
   with self.assertRaisesRegex(ValueError,"Exact source morphology"):self.runplan(s=d)
  def test_wayyiqtol_english_future_disallowed(self):
-  with self.assertRaisesRegex(ValueError,"simple-past"):self.runplan(self.change("01B6c","And He will set"))
+  with self.assertRaisesRegex(ValueError,"perfect or future"):self.runplan(self.change("01B6c","And He will set"))
  def test_object_suffix_is_not_zero_gloss(self):
   r=self.runplan()
   t=next(x for v in r["verse_research"] for x in v["original_word_alignments"] if x["source_token_id"]=="01bju")
@@ -51,9 +51,9 @@ class TestOLT012(unittest.TestCase):
   p=copy.deepcopy(self.plan);p["verses"][1]["proposals"][0]["source_token_id"]="FAKE"
   with self.assertRaisesRegex(ValueError,"Source token ID"):self.runplan(p)
  def test_unsupported_homonym_link_not_approved(self):
-  p=copy.deepcopy(self.plan);p["research_notes"][-2]["status"]="OWNER_LOCK"
-  self.assertRaisesRegex(ValueError,"",lambda:self.runplan(p)) if False else self.assertEqual(self.runplan(p)["publication_status"],"BLOCKED")
-  # independent homonym claims cannot appear as actual approved under-word links
+  p=copy.deepcopy(self.plan);p["research_notes"][-2]["status"]="VERIFIED_HOMONYM"
+  with self.assertRaisesRegex(ValueError,"Claimed certainty"):self.runplan(p)
+  # Independent homonym claims cannot appear as actual approved under-word links.
   r=self.runplan()
   self.assertTrue(all(x["below_word_homonym_links"]["approved_links"]==[] for v in r["verse_research"] for x in v["original_word_alignments"]))
 if __name__=="__main__":unittest.main()
