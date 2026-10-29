@@ -25,3 +25,5 @@ All **31 Genesis 1 verses / 434 original word tokens** now have **unapproved Heb
 - [Current status and release blockers](docs/STATUS_CURRENT.md)
 
 **Caution:** Machine source coverage is not a complete, philologically approved OLT translation. No final bilingual ODT/PDF or homonym links are released.
+
+**OLT-017A:** [Five contested-lexeme scholarly research questions](docs/OLT-017A_SCHOLARLY_REVIEW.md), including competing published perspectives and disclosed abstract-only evidence. The **94 unapproved Genesis 1 English word families** remain pending.

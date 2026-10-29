@@ -111,3 +111,16 @@ A clean sequence of independent source-corpus audits and research proposal tests
 6. **Genesis 1:1 and 1:4 exact owner decisions remain visible**, with theological additions such as `[of His Power]` transparently separate from base source Hebrew.
 
 **Correct present state:** Genesis 1 original token-to-research-English coverage **100%**; approved OLT translation, complete whole-OT English lexicon and publication **BLOCKED**.
+
+## OLT-017A — First contested-lexeme scholarly review wave
+
+Five source-linked, explicitly research-only scholarly dossiers have been added in [OLT-017A scholarly report](OLT-017A_SCHOLARLY_REVIEW.md) and [machine-readable evidence](../data/research/olt_017a_scholarly_wave.json):
+1. Gen 1:1 reshit: Kantor (2025) vs Holmstedt (2022) published abstracts disagree on traditional/adverbial readings. The optional [of His Power] is not an independently attested Hebrew word in Gen 1:1.
+2. Gen 1:2 ruach: the wind/breath/spirit semantic range and published scholarly debates remain open.
+3. Gen 1:21 tanninim: varying marine creature, serpent and dragon contexts, without false zoological precision.
+4. Gen 1:26 tselem and demut: different lexical source words, a scholarly parentage reading and Christian canonical interpretive comparisons, not automatically Hebrew lexical synonyms.
+5. Gen 1:28 vekhivshuha: an imperative with a 3fs object suffix; provisional and subdue her preserves an original feminine referent.
+
+Research source limitations are disclosed, including abstract-only conclusions when full journal articles were unavailable. [OLT-017A GitHub Actions](https://github.com/Northsw-spec/OLT/actions/runs/40943849658) validates research metadata, not the scholarly conclusions themselves.
+
+Approved new English word families: **0**. Approved homonym links: **0**. The 94 unapproved Genesis 1 English lexical families, all independently reviewed word-level semantics and the final bilingual edition remain **BLOCKED**.
