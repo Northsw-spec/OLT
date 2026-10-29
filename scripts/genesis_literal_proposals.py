@@ -137,10 +137,30 @@ def priority_queue(study_cards,source_dossier):
     if len(cards)!=EXPECTED_GENESIS_LEMMAS:
         raise ValueError("Unexpected Genesis unique-lemma scope")
     tok_total=sum(len(x["actual_word_token_ids"]) for x in cards)
-    # An original word can have multiple lemma components; do not call this a
-    # per-word alignment count. The real word count is independently checked.
+    # Numeric lemma COMPONENT count is NOT the number of source words:
+    # source-only particles can have empty numerical annotations, and some
+    # tokens can contain multiple independent numeric components.
     if source_dossier["scope"]["source_word_tokens"]!=EXPECTED_GENESIS_TOKENS:
         raise ValueError("Actual word tokens have changed")
+    all_source_tokens=source_dossier["tokens"]
+    if len(all_source_tokens)!=EXPECTED_GENESIS_TOKENS:
+        raise ValueError("Actual source word list incomplete")
+    lemmas_missing=[{
+        "verse":x["verse"],
+        "source_token_id":x["source_token_id"],
+        "pointed_source_word":x["pointed_source_word"],
+        "source_lemma_raw":x["source_lemma_raw"],
+        "source_morphology_raw":x["source_morphology_raw"],
+        "review_status":"WORD_WITHOUT_NUMERIC_LEMMA_REQUIRES_EXPLICIT_REVIEW"
+    } for x in all_source_tokens if not x["exact_lexemes"]]
+    multi_lexeme=[{
+        "verse":x["verse"],"source_token_id":x["source_token_id"],
+        "exact_lexemes":x["exact_lexemes"]
+    } for x in all_source_tokens if len(x["exact_lexemes"])>1]
+    actual_components=sum(len(x["exact_lexemes"]) for x in all_source_tokens)
+    if actual_components!=tok_total:
+        raise ValueError("Genesis numeric source component coverage differs from study cards")
+
     result=[]
     for x in sorted(cards,key=lambda v:(v["owner_english_family"] is not None,
                                          -v["genesis_occurrences"],
@@ -169,6 +189,11 @@ def priority_queue(study_cards,source_dossier):
         "owner_locked_family_lemma_ids":len(cards)-pending,
         "all_actual_genesis_1_word_tokens":EXPECTED_GENESIS_TOKENS,
         "lexeme_component_occurrences":tok_total,
+        "source_word_tokens_without_numeric_lemma":lemmas_missing,
+        "source_word_tokens_without_numeric_lemma_count":len(lemmas_missing),
+        "source_word_tokens_with_multiple_numeric_lemmas":multi_lexeme,
+        "source_word_tokens_with_multiple_numeric_lemmas_count":len(multi_lexeme),
+        "all_original_source_token_ids_covered_by_ledger":True,
         "queue":result,
         "notes":"Ranked by observed source-lemma frequency. No dictionary sense automatically becomes an owner-approved English word."
     }

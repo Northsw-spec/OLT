@@ -59,5 +59,11 @@ class FirstLexicalProposalTests(unittest.TestCase):
         self.assertEqual(len(q["queue"]),97)
         self.assertEqual(sum(x["owner_english_family"] is None for x in q["queue"]),94)
         self.assertTrue(all(x["meaning_and_readability"]=="NOT_APPROVED" for x in q["queue"]))
+        self.assertEqual(q["lexeme_component_occurrences"],
+                         sum(len(x["exact_lexemes"]) for x in self.source["tokens"]))
+        self.assertEqual(q["source_word_tokens_without_numeric_lemma_count"],
+                         sum(not x["exact_lexemes"] for x in self.source["tokens"]))
+        self.assertEqual(q["source_word_tokens_with_multiple_numeric_lemmas_count"],
+                         sum(len(x["exact_lexemes"])>1 for x in self.source["tokens"]))
 if __name__=="__main__":
     unittest.main()
