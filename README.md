@@ -15,3 +15,13 @@ The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verif
 **Latest source-first research:** [OLT-009 Genesis 1:2–5 – 45 original word-token alignments](data/research/genesis_01_verses_02_to_05_research.json). Together with Genesis 1:1, the new non-published study contains 52 source-token English proposals; the rest of the chapter remains blocked.
 
 **OLT-010 verified source-research checkpoint:** [Genesis 1:6–10](data/research/genesis_01_verses_06_to_10_research.json) — 63 original source tokens, 11 OSHB-wayyiqtol forms, 31 source lemma IDs. Together with OLT-008/009, Genesis 1:1–10 has **115/434 token-linked English research proposals**, none independently certified for release. Next: [OLT-011](https://github.com/Northsw-spec/OLT/issues/5).
+
+## Source-first research milestone OLT-015/016
+All **31 Genesis 1 verses / 434 original word tokens** now have **unapproved Hebrew-English research alignments**, machine-checked against the pinned OSHB source. The 50 original source-tagged wayyiqtol verbs, 97 source lemma IDs and seven grammar-only words are accounted for.
+
+- [Genesis 1 research preview (NOT approved Scripture)](genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md)
+- [434-token complete source ledger](data/research/genesis_01_complete_research_alignment.json)
+- [97-lemma editorial review queue: 94 English word families pending approval](data/research/genesis_01_lexeme_editorial_queue.json)
+- [Current status and release blockers](docs/STATUS_CURRENT.md)
+
+**Caution:** Machine source coverage is not a complete, philologically approved OLT translation. No final bilingual ODT/PDF or homonym links are released.

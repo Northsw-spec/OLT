@@ -2,7 +2,7 @@
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006, OLT-007, OLT-008, OLT-009 and OLT-010.
+**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006, OLT-007, OLT-008, OLT-009, OLT-010, OLT-011, OLT-012, OLT-013, OLT-014, OLT-015 and OLT-016.
 
 ## VERIFIED BY ACTUAL FILES AND GITHUB ACTIONS (AUTOMATIC DATA VALIDATION)
 - 39 WLC/OSHB Old Testament book datasets, 23,213 verses, 306,785 source word tokens.
@@ -91,3 +91,23 @@ These verify implemented scope only, not the entire Bible translation.
 - Next checkpoint: [OLT-011 – Genesis 1:11–15](https://github.com/Northsw-spec/OLT/issues/5).
 
 **Non-certification:** This verifies automated source matching and explicit research-proposal tests, not independent philology, approved word families, proofread scholarly notes, final visually inspected bilingual ODT/PDF or Genesis 1 publication. The full approved OLT English lexicon remains incomplete and chapter RELEASE remains BLOCKED.
+
+## OLT-011—016 — FULL Genesis 1 original-source research coverage (not an approved translation)
+
+A clean sequence of independent source-corpus audits and research proposal tests has now produced:
+- Gen 1:11–15 (OLT-011): **69** source word tokens, **8** source wayyiqtol, including two preposition/pronominal-suffix nonnumeric tokens. [Source research](../data/research/olt_011_genesis_11_15.json), [CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40941977638).
+- Gen 1:16–20 (OLT-012): **59** source word tokens, **6** source wayyiqtol. [Source research](../data/research/olt_012_genesis_16_20.json), [CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40941977646).
+- Gen 1:21–25 (OLT-013): **74** source word tokens, **9** source wayyiqtol. [Source research](../data/research/olt_013_genesis_21_25.json), [CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40941977648).
+- Gen 1:26–31 (OLT-014): **117** source word tokens, **9** source wayyiqtol, including five additional nonnumeric grammatical pronoun/preposition tokens. [Source research](../data/research/olt_014_genesis_26_31.json), [CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40942358751).
+- Combined OLT-008 through OLT-014: **434 / 434 original Hebrew word tokens**, **31 / 31 verses**, **50 actual OSHB-source-tagged wayyiqtol forms**, **97 distinct source lemma IDs**, **7 nonnumeric grammar-only tokens** and **13 zero-surface Hebrew object markers**. The cross-check verifies token uniqueness, original verse/ordinal, original Hebrew spelling, source lemma/morphology and the locked lexical families. [Whole-chapter alignment JSON](../data/research/genesis_01_complete_research_alignment.json), [Hebrew+English RESEARCH preview](../genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md), [OLT-015 CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40942756926).
+- OLT-016 creates a [97-lemma source-linked editorial decision queue](../data/research/genesis_01_lexeme_editorial_queue.json) with all actual original words, dictionary IDs, contextual English fragments and empty under-word homonym slots. **42** source lemmas appear with multiple English-fragment forms (often due to word inflection, conjunctions and context; NOT proof of semantic homonymy), **94** new English lexical families remain unapproved and **3** families remain owner-locked. [OLT-016 CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40943256086).
+
+### Hard noncertification limits
+1. **English lexical approval = NOT COMPLETE.** The 94 new English families are candidates, not certified meanings. An owner-approved `bara/asah/raqia` family does not turn an entire verse into a final approved translation.
+2. **Hebrew morphology = SOURCE-TAG AUDITED, NOT INDEPENDENTLY REVIEWED.** The 50 wayyiqtol forms are counted from real OSHB morphology annotations; this is not independent academic approval of every parse.
+3. **Homonyms = NO VERIFIED UNDER-WORD ALTERNATIVES YET.** Source IDs and spelling alone do not authorize theological or linguistic word links. Future evidence-backed homonym alternatives must display *below* the associated English word, never as inline slash text.
+4. **Christian cross-references = RESEARCH ONLY**, even where canonical comparisons to John 1:1–3 and Col 1:15–17 are recorded. A canonical Christological interpretation is not a new Hebrew dictionary meaning.
+5. **Print edition = NOT COMPLETE.** The entire Markdown chapter is labeled unapproved. Genuine edited footnotes, verified root correspondences, original-script book design and visual ODT/PDF quality assurance are unfinished. The basic Hebrew grammatical-gender notice is to appear only once on the eventual Bible opening page.
+6. **Genesis 1:1 and 1:4 exact owner decisions remain visible**, with theological additions such as `[of His Power]` transparently separate from base source Hebrew.
+
+**Correct present state:** Genesis 1 original token-to-research-English coverage **100%**; approved OLT translation, complete whole-OT English lexicon and publication **BLOCKED**.
