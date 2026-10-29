@@ -1,0 +1,685 @@
+{
+  "checkpoint": "OLT-014",
+  "status": "RESEARCH_NOT_APPROVED",
+  "publishable": false,
+  "presentation": "UNDER_ENGLISH_WORD",
+  "start_verse": 26,
+  "end_verse": 31,
+  "expected_source_words": 117,
+  "expected_wayyiqtol": 9,
+  "expected_non_numeric_source_tokens": [
+    "01ypu",
+    "01pAw",
+    "01884",
+    "01wEr",
+    "01teU"
+  ],
+  "verses": [
+    {
+      "reference": "Gen.1.26",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He said: Let Us make Man in Our image, as Our likeness; and let them rule in the fish of the Sea, and in the bird of the Heavens, and in the cattle, and in all the Earth, and in every creeping thing creeping upon the Earth.",
+      "proposals": [
+        {
+          "source_token_id": "01YhQ",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01azZ",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01oiy",
+          "english_fragment": "Let Us make",
+          "expect_lemma": "6213 a",
+          "expect_raw_morph": "HVqi1cp",
+          "expect_verb_form": "i"
+        },
+        {
+          "source_token_id": "01gPX",
+          "english_fragment": "Man"
+        },
+        {
+          "source_token_id": "01gtq",
+          "english_fragment": "in Our image"
+        },
+        {
+          "source_token_id": "01HSQ",
+          "english_fragment": "as Our likeness"
+        },
+        {
+          "source_token_id": "01fbB",
+          "english_fragment": "and let them rule",
+          "expect_raw_morph": "HC/Vqj3mp",
+          "expect_verb_form": "j"
+        },
+        {
+          "source_token_id": "01k1L",
+          "english_fragment": "in the fish of"
+        },
+        {
+          "source_token_id": "012tS",
+          "english_fragment": "the Sea"
+        },
+        {
+          "source_token_id": "01EVu",
+          "english_fragment": "and in the bird of"
+        },
+        {
+          "source_token_id": "01ygU",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01swV",
+          "english_fragment": "and in the cattle"
+        },
+        {
+          "source_token_id": "01HjU",
+          "english_fragment": "and in all"
+        },
+        {
+          "source_token_id": "01d3U",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01NtK",
+          "english_fragment": "and in every"
+        },
+        {
+          "source_token_id": "01U94",
+          "english_fragment": "the creeping thing"
+        },
+        {
+          "source_token_id": "01zqr",
+          "english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "016JA",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01JyD",
+          "english_fragment": "the Earth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.27",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He shaped the Man in His image; in image of God He shaped him; male and female He shaped them.",
+      "proposals": [
+        {
+          "source_token_id": "01jjy",
+          "english_fragment": "And He shaped",
+          "expect_lemma": "c/1254 a",
+          "expect_raw_morph": "HC/Vqw3ms",
+          "expect_verb_form": "w"
+        },
+        {
+          "source_token_id": "0179E",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01Zuo",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01LXS",
+          "english_fragment": "the Man"
+        },
+        {
+          "source_token_id": "01mR4",
+          "english_fragment": "in His image"
+        },
+        {
+          "source_token_id": "01MC8",
+          "english_fragment": "in image of"
+        },
+        {
+          "source_token_id": "01BnR",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01PUg",
+          "english_fragment": "He shaped",
+          "expect_lemma": "1254 a",
+          "expect_raw_morph": "HVqp3ms",
+          "expect_verb_form": "p"
+        },
+        {
+          "source_token_id": "01pUN",
+          "english_fragment": "him",
+          "expect_lemma": "853",
+          "expect_raw_morph": "HTo/Sp3ms"
+        },
+        {
+          "source_token_id": "01gc8",
+          "english_fragment": "male"
+        },
+        {
+          "source_token_id": "01Lsp",
+          "english_fragment": "and female"
+        },
+        {
+          "source_token_id": "01SAE",
+          "english_fragment": "He shaped",
+          "expect_lemma": "1254 a",
+          "expect_raw_morph": "HVqp3ms",
+          "expect_verb_form": "p"
+        },
+        {
+          "source_token_id": "013gY",
+          "english_fragment": "them",
+          "expect_lemma": "853",
+          "expect_raw_morph": "HTo/Sp3mp"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.28",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He blessed them, and God — He said to them: Be fruitful, and multiply, and fill the Earth, and subdue her; and rule in the fish of the Sea, and in the bird of the Heavens, and in every living one creeping upon the Earth.",
+      "proposals": [
+        {
+          "source_token_id": "01RuM",
+          "english_fragment": "And He blessed"
+        },
+        {
+          "source_token_id": "01WFU",
+          "english_fragment": "them"
+        },
+        {
+          "source_token_id": "01BJv",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01ExP",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01ypu",
+          "english_fragment": "to them",
+          "expect_lemma": "l",
+          "expect_raw_morph": "HR/Sp3mp"
+        },
+        {
+          "source_token_id": "01mP3",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01V8b",
+          "english_fragment": "Be fruitful"
+        },
+        {
+          "source_token_id": "01suQ",
+          "english_fragment": "and multiply"
+        },
+        {
+          "source_token_id": "011Su",
+          "english_fragment": "and fill"
+        },
+        {
+          "source_token_id": "01MEz",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01Q2u",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01yT5",
+          "english_fragment": "and subdue her",
+          "expect_lemma": "c/3533",
+          "expect_raw_morph": "HC/Vqv2mp/Sp3fs",
+          "expect_verb_form": "v"
+        },
+        {
+          "source_token_id": "01b5Q",
+          "english_fragment": "and rule"
+        },
+        {
+          "source_token_id": "01F88",
+          "english_fragment": "in the fish of"
+        },
+        {
+          "source_token_id": "01AXb",
+          "english_fragment": "the Sea"
+        },
+        {
+          "source_token_id": "01Wjz",
+          "english_fragment": "and in the bird of"
+        },
+        {
+          "source_token_id": "01bPJ",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01hS1",
+          "english_fragment": "and in every"
+        },
+        {
+          "source_token_id": "01h53",
+          "english_fragment": "living one"
+        },
+        {
+          "source_token_id": "01vpK",
+          "english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "01G6E",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "014vX",
+          "english_fragment": "the Earth"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.29",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He said: Behold, I gave to you every herb sowing seed, which upon the face of all the Earth, and every tree which in him [is] fruit of tree sowing seed; to you [he] shall be for food.",
+      "proposals": [
+        {
+          "source_token_id": "01X1R",
+          "english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01bsu",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01Ygn",
+          "english_fragment": "Behold"
+        },
+        {
+          "source_token_id": "012gM",
+          "english_fragment": "I gave",
+          "expect_lemma": "5414",
+          "expect_raw_morph": "HVqp1cs",
+          "expect_verb_form": "p"
+        },
+        {
+          "source_token_id": "01pAw",
+          "english_fragment": "to you",
+          "expect_lemma": "l",
+          "expect_raw_morph": "HR/Sp2mp"
+        },
+        {
+          "source_token_id": "01mVV",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01FMa",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "01KPU",
+          "english_fragment": "herb"
+        },
+        {
+          "source_token_id": "01ki2",
+          "english_fragment": "sowing"
+        },
+        {
+          "source_token_id": "015pZ",
+          "english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01HWo",
+          "english_fragment": "which"
+        },
+        {
+          "source_token_id": "01zkA",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01JMT",
+          "english_fragment": "the face of"
+        },
+        {
+          "source_token_id": "01jEX",
+          "english_fragment": "all"
+        },
+        {
+          "source_token_id": "01uUA",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01tKf",
+          "english_fragment": "and"
+        },
+        {
+          "source_token_id": "01awE",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "01yNT",
+          "english_fragment": "the tree"
+        },
+        {
+          "source_token_id": "01Azu",
+          "english_fragment": "which"
+        },
+        {
+          "source_token_id": "01884",
+          "english_fragment": "in him",
+          "expect_lemma": "b",
+          "expect_raw_morph": "HR/Sp3ms"
+        },
+        {
+          "source_token_id": "01XMu",
+          "english_fragment": "fruit of"
+        },
+        {
+          "source_token_id": "01mrn",
+          "english_fragment": "tree"
+        },
+        {
+          "source_token_id": "01Xh9",
+          "english_fragment": "sowing"
+        },
+        {
+          "source_token_id": "01D3a",
+          "english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01wEr",
+          "english_fragment": "to you",
+          "expect_lemma": "l",
+          "expect_raw_morph": "HR/Sp2mp"
+        },
+        {
+          "source_token_id": "01Rvc",
+          "english_fragment": "[he] shall be",
+          "expect_lemma": "1961",
+          "expect_raw_morph": "HVqi3ms",
+          "expect_verb_form": "i"
+        },
+        {
+          "source_token_id": "01c6V",
+          "english_fragment": "for food"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.30",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And to every beast of the Earth, and to every bird of the Heavens, and to every creeping one upon the Earth, which in him [is] living soul, every green of herb for food; and so was.",
+      "proposals": [
+        {
+          "source_token_id": "018eM",
+          "english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01xkK",
+          "english_fragment": "beast of"
+        },
+        {
+          "source_token_id": "01rGa",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01fp1",
+          "english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01Y9g",
+          "english_fragment": "bird of"
+        },
+        {
+          "source_token_id": "01mGU",
+          "english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01gBW",
+          "english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01eLD",
+          "english_fragment": "creeping one"
+        },
+        {
+          "source_token_id": "0193F",
+          "english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01eyL",
+          "english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01pm7",
+          "english_fragment": "which"
+        },
+        {
+          "source_token_id": "01teU",
+          "english_fragment": "in him",
+          "expect_lemma": "b",
+          "expect_raw_morph": "HR/Sp3ms"
+        },
+        {
+          "source_token_id": "01c58",
+          "english_fragment": "soul"
+        },
+        {
+          "source_token_id": "01MRA",
+          "english_fragment": "living"
+        },
+        {
+          "source_token_id": "01xp4",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01Hki",
+          "english_fragment": "every"
+        },
+        {
+          "source_token_id": "01QvZ",
+          "english_fragment": "green of"
+        },
+        {
+          "source_token_id": "01S38",
+          "english_fragment": "herb"
+        },
+        {
+          "source_token_id": "01eN1",
+          "english_fragment": "for food"
+        },
+        {
+          "source_token_id": "01HoD",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01P5s",
+          "english_fragment": "so"
+        }
+      ]
+    },
+    {
+      "reference": "Gen.1.31",
+      "review_status": "RESEARCH_NOT_APPROVED",
+      "english_research_draft": "And God — He saw all which He made, and behold, good exceedingly; and was evening, and was morning: day the sixth.",
+      "proposals": [
+        {
+          "source_token_id": "015QX",
+          "english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01Mxy",
+          "english_fragment": "God"
+        },
+        {
+          "source_token_id": "01w6u",
+          "english_fragment": ""
+        },
+        {
+          "source_token_id": "01e3z",
+          "english_fragment": "all"
+        },
+        {
+          "source_token_id": "012c6",
+          "english_fragment": "which"
+        },
+        {
+          "source_token_id": "013RL",
+          "english_fragment": "He made",
+          "expect_lemma": "6213 a",
+          "expect_raw_morph": "HVqp3ms",
+          "expect_verb_form": "p"
+        },
+        {
+          "source_token_id": "01JUf",
+          "english_fragment": "and behold"
+        },
+        {
+          "source_token_id": "01ce9",
+          "english_fragment": "good"
+        },
+        {
+          "source_token_id": "01dPK",
+          "english_fragment": "exceedingly"
+        },
+        {
+          "source_token_id": "01vLv",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01UrG",
+          "english_fragment": "evening"
+        },
+        {
+          "source_token_id": "01Sxc",
+          "english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01xwN",
+          "english_fragment": "morning"
+        },
+        {
+          "source_token_id": "01GjY",
+          "english_fragment": "day"
+        },
+        {
+          "source_token_id": "01KNo",
+          "english_fragment": "the sixth",
+          "expect_lemma": "d/8345",
+          "expect_raw_morph": "HTd/Aomsa"
+        }
+      ]
+    }
+  ],
+  "research_notes": [
+    {
+      "reference": "Gen.1.26",
+      "lemma": "6213 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "Na'aseh is Qal imperfect 1cp, expressing Let Us make in direct divine speech. It is NOT wayyiqtol and must never be rendered shape/shaped."
+    },
+    {
+      "reference": "Gen.1.26",
+      "lemma": "120",
+      "type": "HUMANITY_CONTEXT",
+      "status": "RESEARCH_ONLY",
+      "text": "Adam here can refer to the human/humankind. Capitalized Man is a researched literal rendering, not by itself a determination that a personal name is used."
+    },
+    {
+      "reference": "Gen.1.26",
+      "lemma": "6754",
+      "type": "IMAGE",
+      "status": "RESEARCH_ONLY",
+      "text": "Tselem is image, with a 1cp pronominal suffix in betsalmenu (Our image). The grammatical plural should be retained without claiming the plural alone proves a particular Trinity interpretation."
+    },
+    {
+      "reference": "Gen.1.26",
+      "lemma": "1823",
+      "type": "LIKENESS",
+      "status": "RESEARCH_ONLY",
+      "text": "Demut is a distinct lexeme meaning likeness, with 1cp suffix. Image and likeness are not automatically interchangeable Hebrew homonyms."
+    },
+    {
+      "reference": "Gen.1.26",
+      "lemma": "6213 a",
+      "type": "CHRISTOLOGICAL_CANONICAL_PARALLEL",
+      "status": "RESEARCH_ONLY",
+      "text": "John 1:1–3 and Colossians 1:15–17 are Christian canonical parallels for divine agency and image. This is exegetical Christology, not a source-based claim that asah's lexical meaning is Christ."
+    },
+    {
+      "reference": "Gen.1.27",
+      "lemma": "1254 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "The first bara is wayyiqtol while the two later bara forms are Qal qatal 3ms. All three follow the OLT family shape/shaped, but morphological classifications differ."
+    },
+    {
+      "reference": "Gen.1.27",
+      "lemma": "853",
+      "type": "OBJECT_PRONOUN",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Et as zero-surface accusative marker differs from oto = him (Sp3ms) and otam = them (Sp3mp). Their pronominal suffixes must be expressed."
+    },
+    {
+      "reference": "Gen.1.28",
+      "lemma": "3533",
+      "type": "IMPERATIVE_FEMININE_SUFFIX",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Vekivshuha is Qal imperative second masculine plural with a 3fs object suffix, referring to Earth; OLT proposal and subdue her is grammar-visible, never it."
+    },
+    {
+      "reference": "Gen.1.28",
+      "lemma": "7287 a",
+      "type": "GOVERNANCE_VERB",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "The imperative and rule in verse 28 differs from the preceding jussive and let them rule in 1:26."
+    },
+    {
+      "reference": "Gen.1.29",
+      "lemma": "5414",
+      "type": "QATAL_NOT_WAYYIQTOL",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Nattati is Qal perfect 1cs, proposed I gave, not a source-wayyiqtol and not mechanically translated via the narrative past policy."
+    },
+    {
+      "reference": "Gen.1.29",
+      "lemma": "1961",
+      "type": "IMPERFECT",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Yihyeh is Qal imperfect 3ms. The proposal [he] shall be makes a supplied referential English pronoun visible, rather than introducing the forbidden neutral it."
+    },
+    {
+      "reference": "Gen.1.29",
+      "lemma": "2232",
+      "type": "PARTICIPLE",
+      "status": "SOURCE_MORPHOLOGY_UNREVIEWED",
+      "text": "Zore'a is a Qal participle (sowing/bearing), not a source-wayyiqtol."
+    },
+    {
+      "reference": "Gen.1.30",
+      "lemma": "5315",
+      "type": "SENSE_RANGE",
+      "status": "RESEARCH_ONLY",
+      "text": "Nefesh chayyah may function as living soul/creature. Retain lexical distinction from physical body terminology, without inserting unrelated metaphysical claims."
+    },
+    {
+      "reference": "Gen.1.31",
+      "lemma": "6213 a",
+      "type": "OWNER_LOCK",
+      "status": "OWNER_LOCK",
+      "text": "Asah in asah (made) is Qal qatal 3ms. The OLT owner lock remains made (not shaped)."
+    },
+    {
+      "reference": "Gen.1.31",
+      "lemma": "3966",
+      "type": "ADVERB",
+      "status": "RESEARCH_ONLY",
+      "text": "Me'od intensifies the preceding adjective tov: good exceedingly, retaining radical source order."
+    },
+    {
+      "reference": "Gen.1.31",
+      "lemma": "8345",
+      "type": "DEFINITE_ORDINAL",
+      "status": "RESEARCH_ONLY",
+      "text": "Yom hashishi, day the sixth, has a definite article on the ordinal sixth; unlike Genesis 1:5's cardinal one."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+name: OLT-014 Genesis 1:26–31 source-first English research
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/plans/olt_014_genesis_26_31.json"
+      - "tests/test_olt_014.py"
+      - "scripts/build_verse_research.py"
+      - ".github/workflows/olt-014.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-014-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run 117-source-token and morphological negative tests
+        run: python -m unittest discover -s tests -p 'test_olt_014.py' -v
+      - name: Build source-aligned Genesis 1:26-31 research and editorial caveats
+        run: python scripts/build_verse_research.py --plan data/plans/olt_014_genesis_26_31.json --out data/research/olt_014_genesis_26_31.json
+      - name: Validate complete source scope and publication block
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/research/olt_014_genesis_26_31.json").read_text())
+          assert r["source_token_count"]==117
+          assert r["source_wayyiqtol_count"]==9
+          assert len(r["non_numeric_grammar_token_ids"])==5
+          assert r["publication_status"]=="BLOCKED"
+          assert not r["full_english_lexicon_approved"]
+          assert not r["independent_hebrew_morphology_signed_off"]
+          assert all(w["english_lexical_approval"] is False for v in r["verse_research"] for w in v["original_word_alignments"])
+          print("PASS: source-based chapter research, not independently approved translation")
+          PY
+      - name: Commit generated original-source research ledger
+        run: |
+          git config user.name "olt-source-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/olt_014_genesis_26_31.json
+          if git diff --cached --quiet; then echo "No change"; else
+            git commit -m "Generate Genesis 1:26–31 source-backed research and lexical notes"
+            git push origin HEAD:main
+          fi
