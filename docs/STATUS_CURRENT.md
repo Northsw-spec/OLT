@@ -2,7 +2,7 @@
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004 and OLT-005.
+**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005 and OLT-006.
 
 ## VERIFIED BY ACTUAL FILES AND GITHUB ACTIONS (AUTOMATIC DATA VALIDATION)
 - 39 WLC/OSHB Old Testament book datasets, 23,213 verses, 306,785 source word tokens.
@@ -20,6 +20,9 @@
 - `data/quality/verified_id_crosswalk.jsonl`: verified lookup ID chain for all 9,519 source lemma keys, including unresolved statuses.
 - `data/quality/verified_id_crosswalk_report.json`: 9,252/267 resolution.
 - `data/quality/genesis_01_source_review_dossier.json`: Genesis 1 first source-backed **434-word review dossier**; each token has dictionary references and blank English alignment.
+- `data/quality/unresolved_lexeme_triage.json`: all 267 source-ID exceptions with real occurrences and no unauthorized lemma merges.
+- `data/quality/genesis_01_dictionary_study_cards.json`: all 97 Genesis 1 lemma research cards; 94 new English decisions pending, three owner-locked families present.
+- `docs/OLT-006_STATUS.md`: scope, limitations and next review gates.
 - `lexicon/hebrew.json`: separate seed of owner-locked word families, NOT full approved lexicon.
 - `docs/MASTERPROMPT.md`: governing style and tense rules; under-word links are vertical.
 
@@ -36,5 +39,6 @@
 ## VERIFIED CI RUNS
 - [OLT-004 exact XML mapping](https://github.com/Northsw-spec/OLT/actions/runs/40922220919)
 - [OLT-005 Genesis review dossier](https://github.com/Northsw-spec/OLT/actions/runs/40922541903)
+- [OLT-006 exception triage and study cards](https://github.com/Northsw-spec/OLT/actions/runs/40925657427)
 
 These verify implemented scope only, not the entire Bible translation.
