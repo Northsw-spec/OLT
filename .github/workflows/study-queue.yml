@@ -1,0 +1,61 @@
+name: OLT-006 unresolved lemma triage and Genesis research cards
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_study_queue.py"
+      - "tests/test_study_queue.py"
+      - ".github/workflows/study-queue.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-006-study-queue
+  cancel-in-progress: false
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit-test source-limited IDs and editorial locks
+        run: python -m unittest discover -s tests -p 'test_study_queue.py' -v
+      - name: Build all-source exception triage and 97 Genesis cards
+        run: python scripts/build_study_queue.py
+      - name: Assert recorded evidence and no false English approval
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          q=Path("data/quality")
+          e=json.loads((q/"unresolved_lexeme_triage.json").read_text())
+          c=json.loads((q/"genesis_01_dictionary_study_cards.json").read_text())
+          assert e["exact_lemma_keys_total"]==9519
+          assert e["exact_identifier_links"]==9252
+          assert e["unresolved_count"]==267
+          assert e["plus_marker_count"]==256
+          assert e["missing_aug_count"]==11
+          assert e["special_lemma_merging_allowed"] is False
+          assert c["source_lemma_cards"]==97
+          assert c["word_tokens"]==434
+          assert c["genesis_chapter_publication"]=="BLOCKED"
+          assert all(x["candidate_english_from_dictionary"] is None for x in c["cards"])
+          print("PASS: source research coverage, NOT English translation certification")
+          PY
+      - name: Commit research registers
+        run: |
+          set -euo pipefail
+          git config user.name "olt-source-review[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quality/unresolved_lexeme_triage.json data/quality/genesis_01_dictionary_study_cards.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Add source-backed unresolved lexical cases and Genesis research cards"
+            git push origin HEAD:main
+          fi
