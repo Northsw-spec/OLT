@@ -2,7 +2,7 @@
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006, OLT-007 and OLT-008.
+**Latest completed data checkpoints:** OLT-002, OLT-003, OLT-004, OLT-005, OLT-006, OLT-007, OLT-008, OLT-009 and OLT-010.
 
 ## VERIFIED BY ACTUAL FILES AND GITHUB ACTIONS (AUTOMATIC DATA VALIDATION)
 - 39 WLC/OSHB Old Testament book datasets, 23,213 verses, 306,785 source word tokens.
@@ -76,3 +76,18 @@ These verify implemented scope only, not the entire Bible translation.
 - [OLT-009 source-scoped CI](https://github.com/Northsw-spec/OLT/actions/runs/40931923716) and [working original-token research dataset](../data/research/genesis_01_verses_02_to_05_research.json).
 
 **Release remains BLOCKED:** the other 382 original Gen 1 word-token English alignments, independent morphological review, remaining 94 owner-unapproved lexical families, detailed footnotes, printed English/Hebrew ODT/PDF, scholarly signoff and validated under-word links.
+
+## OLT-010 — Genesis 1:6–10 source-backed research, GitHub Actions PASS
+
+- Pinned OSHB/WLC source-alignment dataset: [data/research/genesis_01_verses_06_to_10_research.json](../data/research/genesis_01_verses_06_to_10_research.json).
+- **63 of 63 original word tokens** accounted for in five verses: 11 + 17 + 10 + 13 + 12. Their source entries contain the original pointed Hebrew word, original lemma annotation, morphology, stable token ID and dictionary source references.
+- **31 exact lemma identifiers** occur, and **11 OSHB-source-tagged wayyiqtol** verb forms are rendered through simple-past English.
+- Original Hebrew yiqqawu in 1:9 is Niphal jussive 3mp, and veteraeh is Niphal imperfect 3fs; neither is improperly treated as narrative wayyiqtol. In 1:6 yehi is jussive, vihi is imperfect in a volitive context, and mavdil is a Hiphil participle. Note the distinction between the two called forms in Genesis 1:10.
+- `asah (6213 a) → made` and `raqia (7549) → firmament` are enforced with source-aware negative tests. The zero English lexical surface of the Hebrew direct-object marker is explicit.
+- Research-only proposed English wording preserves deliberately unfamiliar syntax (for example, `between waters to waters` and `day second`); editorial choices and potential supplied words remain marked as such. No independent approval is inferred.
+- The Genesis 1:6–10 research ledger has **13** linked preliminary philological/semantic note records. Special concerns include the possible later ritual connotations of miqveh, which must not automatically become lexical homonym claims.
+- **Cumulative Genesis 1:1–10:** 7 + 45 + 63 = **115 / 434 original source word tokens** now have English research proposals (**26.5%**). **319 tokens remain** for later preliminary English alignment.
+- [OLT-010 GitHub Actions PASS](https://github.com/Northsw-spec/OLT/actions/runs/40937873061) and [foundation CI PASS](https://github.com/Northsw-spec/OLT/actions/runs/40937873432).
+- Next checkpoint: [OLT-011 – Genesis 1:11–15](https://github.com/Northsw-spec/OLT/issues/5).
+
+**Non-certification:** This verifies automated source matching and explicit research-proposal tests, not independent philology, approved word families, proofread scholarly notes, final visually inspected bilingual ODT/PDF or Genesis 1 publication. The full approved OLT English lexicon remains incomplete and chapter RELEASE remains BLOCKED.
