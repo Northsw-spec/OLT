@@ -18,9 +18,10 @@ MORPHOLOGY_FORMS = {
     "p":"QATAL", "q":"SEQUENTIAL_PERFECT", "i":"YIQTOL",
     "w":"WAYYIQTOL", "v":"IMPERATIVE",
     "r":"PARTICIPLE", "s":"PASSIVE_PARTICIPLE",
-    "c":"INFINITIVE_CONSTRUCT", "a":"INFINITIVE_ABSOLUTE"
+    "c":"INFINITIVE_CONSTRUCT", "a":"INFINITIVE_ABSOLUTE",
+    "h":"COHORTATIVE", "j":"JUSSIVE"
 }
-LEMMA_PART = re.compile(r"^(\d{1,5})(?:\s+([a-z]))?$")
+LEMMA_PART = re.compile(r"^(\d{1,5})(?:\s+([a-z])|(\+))?$")
 REFERENCE = re.compile(r"^Gen\.1\.(\d+)$")
 
 def lemma_parts(raw: str):
@@ -35,9 +36,12 @@ def lemma_parts(raw: str):
         if match:
             n=match.group(1)
             letter=match.group(2)
-            parsed.append({"position":i,"raw":segment,"kind":"LEXEME",
+            plus=bool(match.group(3))
+            parsed.append({"position":i,"raw":segment,
+                           "kind":"LEXEME_FLAGGED" if plus else "LEXEME",
                            "strong_number":n,"extension":letter,
-                           "exact_key":n+(" "+letter if letter else "")})
+                           "special_marker":"+" if plus else None,
+                           "exact_key":n+(" "+letter if letter else "")+("+" if plus else "")})
         else:
             parsed.append({"position":i,"raw":segment,"kind":"PREFIX_OR_OTHER"})
     return parsed
@@ -85,12 +89,14 @@ def scan(path:Path):
                 count+=1
                 L=lemma_parts(w.get("lemma_raw",""))
                 M=morphology_parts(w.get("morph_raw",""))
-                lexemes=[p for p in L if p["kind"]=="LEXEME"]
+                lexemes=[p for p in L if p["kind"] in ("LEXEME","LEXEME_FLAGGED")]
                 if not lexemes:
                     invalid_annotations[w.get("lemma_raw","")]+=1
                 for piece in L:
-                    if piece["kind"]=="LEXEME":
+                    if piece["kind"] in ("LEXEME","LEXEME_FLAGGED"):
                         all_lex[piece["exact_key"]]+=1
+                        if piece["kind"]=="LEXEME_FLAGGED":
+                            flagged_lemmas[piece["exact_key"]]+=1
                         same_strongs[piece["strong_number"]].add(piece["exact_key"])
                     else:
                         prefix[piece["raw"]]+=1
@@ -123,6 +129,8 @@ def scan(path:Path):
         "exact_lemma_key":key,
         "strong_number":key.split(" ")[0],
         "extension":key.split(" ",1)[1] if " " in key else None,
+        "special_marker":"+" if key.endswith("+") else None,
+        "requires_special_marker_review":key.endswith("+"),
         "occurrences_of_component":freq,
         "olt_english_family":None,
         "review_status":"NOT_YET_EDITORIALLY_APPROVED",
@@ -142,6 +150,9 @@ def scan(path:Path):
         "lemma_prefix_or_other_components":dict(prefix),
         "languages_as_tagged":dict(langs),
         "morphology_verb_form_counts":dict(forms),
+        "flagged_plus_lemma_components":sum(flagged_lemmas.values()),
+        "distinct_flagged_plus_lemma_keys":len(flagged_lemmas),
+        "flagged_plus_examples":dict(flagged_lemmas.most_common(30)),
         "genesis_1_verse_count":len(gen),
         "genesis_1_source_tokens":sum(len(v["tokens"]) for v in gen),
         "genesis_1_wayyiqtol_source_tag_count":len(genesis_verbs),
@@ -155,6 +166,7 @@ def scan(path:Path):
             "The numeric lemma index counts observed component occurrences, not unique complete words.",
             "Hebrew vs Aramaic is taken from OSHB morphology tags, not independently verified.",
             "A machine-detected wayyiqtol tag is a source annotation, not independent parse review.",
+            "Plus-marked OSHB lemmas are preserved exactly; their annotation meaning needs source-level investigation.",
             "No English translation or Christian typology is certified by this dataset."
         ]
     }

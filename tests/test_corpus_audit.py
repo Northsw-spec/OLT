@@ -25,6 +25,14 @@ class MorphologyTests(unittest.TestCase):
     def test_suffix_morph_retained(self):
         m=morphology_parts("HNcmsc/Sp3ms")
         self.assertEqual(m[1]["part_of_speech"],"S")
+    def test_jussive_and_cohortative_codes(self):
+        self.assertEqual(morphology_parts("HVqj3ms")[0]["verb_form"],"JUSSIVE")
+        self.assertEqual(morphology_parts("HVqh1cs")[0]["verb_form"],"COHORTATIVE")
+    def test_plus_markers_are_not_discarded(self):
+        x=lemma_parts("c/1008+")
+        self.assertEqual(x[1]["exact_key"],"1008+")
+        self.assertEqual(x[1]["kind"],"LEXEME_FLAGGED")
+        self.assertEqual(x[1]["special_marker"],"+")
     def test_combined_causative_wayyiqtol(self):
         self.assertEqual(morphology_parts("HC/Vhw3ms")[1]["verb_form"],"WAYYIQTOL")
 
