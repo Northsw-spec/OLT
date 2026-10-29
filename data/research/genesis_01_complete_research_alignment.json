@@ -111,10 +111,25 @@
         "וְ/אֵ֥ת",
         "הָ/אָֽרֶץ"
       ],
-      "proposed_english_research_text": "In the Beginning God — He shaped the Heavens and the Earth.",
+      "proposed_english_research_text": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
       "reference": "Gen.1.1",
       "source_token_count": 7,
-      "source_wayyiqtol_count": 0
+      "source_wayyiqtol_count": 0,
+      "verse_footnote_proposals": [
+        {
+          "anchor": "[of His Power]",
+          "category": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT",
+          "editorial_status": "RESEARCH_DRAFT",
+          "english": "[of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît.",
+          "evidence_references": [
+            "Gen.49.3",
+            "Deut.21.17"
+          ],
+          "id": "gen-1-1-power",
+          "is_independent_hebrew_lexeme": false,
+          "reference": "Gen.1.1"
+        }
+      ]
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -321,7 +336,8 @@
       "proposed_english_research_text": "And the Earth — she was waste and emptiness; and darkness upon the face of the Deep; and the Spirit of God hovering upon the face of the Waters.",
       "reference": "Gen.1.2",
       "source_token_count": 14,
-      "source_wayyiqtol_count": 0
+      "source_wayyiqtol_count": 0,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -416,7 +432,8 @@
       "proposed_english_research_text": "And God — He said: “Let light be.” And light was.",
       "reference": "Gen.1.3",
       "source_token_count": 6,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -595,7 +612,8 @@
       "proposed_english_research_text": "And God — He saw the light, that [he was] — good. And God — He separated between the light and between the darkness.",
       "reference": "Gen.1.4",
       "source_token_count": 12,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -788,7 +806,8 @@
       "proposed_english_research_text": "And God — He called to the light Day, and to the darkness He called Night; and was evening, and was morning: day one.",
       "reference": "Gen.1.5",
       "source_token_count": 13,
-      "source_wayyiqtol_count": 3
+      "source_wayyiqtol_count": 3,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -953,7 +972,8 @@
       "proposed_english_research_text": "And God — He said: Let a firmament be in the midst of the waters; and let [him] be separating between waters to waters.",
       "reference": "Gen.1.6",
       "source_token_count": 11,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -1202,7 +1222,8 @@
       "proposed_english_research_text": "And God — He made the firmament, and He separated between the waters which from beneath to the firmament, and between the waters which from above to the firmament; and so was.",
       "reference": "Gen.1.7",
       "source_token_count": 17,
-      "source_wayyiqtol_count": 3
+      "source_wayyiqtol_count": 3,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -1353,7 +1374,8 @@
       "proposed_english_research_text": "And God — He called to the firmament Heavens; and was evening, and was morning: day second.",
       "reference": "Gen.1.8",
       "source_token_count": 10,
-      "source_wayyiqtol_count": 3
+      "source_wayyiqtol_count": 3,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -1546,7 +1568,8 @@
       "proposed_english_research_text": "And God — He said: Let the waters from beneath the heavens be gathered unto place one, and let the dry ground be seen; and so was.",
       "reference": "Gen.1.9",
       "source_token_count": 13,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -1725,7 +1748,8 @@
       "proposed_english_research_text": "And God — He called to the dry ground Earth, and to the gathering of the waters He called Seas; and God — He saw that — good.",
       "reference": "Gen.1.10",
       "source_token_count": 12,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -2014,7 +2038,8 @@
       "proposed_english_research_text": "And God — He said: Let the Earth sprout sprouts, herb sowing seed, tree of fruit making fruit to his kind, whose seed [is] in him, upon the Earth; and so was.",
       "reference": "Gen.1.11",
       "source_token_count": 20,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -2275,7 +2300,8 @@
       "proposed_english_research_text": "And the Earth — she brought forth sprouts, herb sowing seed to his kind, and tree making fruit, whose seed [is] in him, to his kind; and God — He saw that — good.",
       "reference": "Gen.1.12",
       "source_token_count": 18,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -2370,7 +2396,8 @@
       "proposed_english_research_text": "And was evening, and was morning: day third.",
       "reference": "Gen.1.13",
       "source_token_count": 6,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -2605,7 +2632,8 @@
       "proposed_english_research_text": "And God — He said: Let lights be in the firmament of the Heavens, to separate between the day and between the night; and [they shall] be for signs, and for appointed times, and for days, and years.",
       "reference": "Gen.1.14",
       "source_token_count": 16,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -2742,7 +2770,8 @@
       "proposed_english_research_text": "And [they shall] be for lights in the firmament of the Heavens to illuminate upon the Earth; and so was.",
       "reference": "Gen.1.15",
       "source_token_count": 9,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3005,7 +3034,8 @@
       "proposed_english_research_text": "And God — He made the two great lights: the great light for rule of the day, and the small light for rule of the night, and the stars.",
       "reference": "Gen.1.16",
       "source_token_count": 18,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3128,7 +3158,8 @@
       "proposed_english_research_text": "And God — He set them in the firmament of the Heavens, to illuminate upon the Earth.",
       "reference": "Gen.1.17",
       "source_token_count": 8,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3307,7 +3338,8 @@
       "proposed_english_research_text": "And to rule in the day and in the night, and to separate between the light and between the darkness; and God — He saw that — good.",
       "reference": "Gen.1.18",
       "source_token_count": 12,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3402,7 +3434,8 @@
       "proposed_english_research_text": "And was evening, and was morning: day fourth.",
       "reference": "Gen.1.19",
       "source_token_count": 6,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3623,7 +3656,8 @@
       "proposed_english_research_text": "And God — He said: Let the waters swarm a swarm of living soul; and bird — let [he] fly above the Earth, upon the face of the firmament of the Heavens.",
       "reference": "Gen.1.20",
       "source_token_count": 15,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -3956,7 +3990,8 @@
       "proposed_english_research_text": "And God — He shaped the great sea-creatures, and every living soul creeping, which the waters swarmed to their kinds, and every bird of wing to his kind; and God — He saw that — good.",
       "reference": "Gen.1.21",
       "source_token_count": 23,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -4149,7 +4184,8 @@
       "proposed_english_research_text": "And God — He blessed them, saying: Be fruitful, and multiply, and fill the waters in the Seas; and the bird — let [he] multiply in the Earth.",
       "reference": "Gen.1.22",
       "source_token_count": 13,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -4244,7 +4280,8 @@
       "proposed_english_research_text": "And was evening, and was morning: day fifth.",
       "reference": "Gen.1.23",
       "source_token_count": 6,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -4451,7 +4488,8 @@
       "proposed_english_research_text": "And God — He said: Let the Earth bring forth living soul to her kind, cattle, and creeping thing, and beast of Earth to her kind; and so was.",
       "reference": "Gen.1.24",
       "source_token_count": 14,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -4714,7 +4752,8 @@
       "proposed_english_research_text": "And God — He made the beast of the Earth to her kind, and the cattle to her kind, and every creeping thing of the ground to his kind; and God — He saw that — good.",
       "reference": "Gen.1.25",
       "source_token_count": 18,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -4991,7 +5030,8 @@
       "proposed_english_research_text": "And God — He said: Let Us make Man in Our image, as Our likeness; and let them rule in the fish of the Sea, and in the bird of the Heavens, and in the cattle, and in all the Earth, and in every creeping thing creeping upon the Earth.",
       "reference": "Gen.1.26",
       "source_token_count": 19,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -5184,7 +5224,8 @@
       "proposed_english_research_text": "And God — He shaped the Man in His image; in image of God He shaped him; male and female He shaped them.",
       "reference": "Gen.1.27",
       "source_token_count": 13,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -5501,7 +5542,8 @@
       "proposed_english_research_text": "And God — He blessed them, and God — He said to them: Be fruitful, and multiply, and fill the Earth, and subdue her; and rule in the fish of the Sea, and in the bird of the Heavens, and in every living one creeping upon the Earth.",
       "reference": "Gen.1.28",
       "source_token_count": 22,
-      "source_wayyiqtol_count": 2
+      "source_wayyiqtol_count": 2,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -5884,7 +5926,8 @@
       "proposed_english_research_text": "And God — He said: Behold, I gave to you every herb sowing seed, which upon the face of all the Earth, and every tree which in him [is] fruit of tree sowing seed; to you [he] shall be for food.",
       "reference": "Gen.1.29",
       "source_token_count": 27,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -6187,7 +6230,8 @@
       "proposed_english_research_text": "And to every beast of the Earth, and to every bird of the Heavens, and to every creeping one upon the Earth, which in him [is] living soul, every green of herb for food; and so was.",
       "reference": "Gen.1.30",
       "source_token_count": 21,
-      "source_wayyiqtol_count": 1
+      "source_wayyiqtol_count": 1,
+      "verse_footnote_proposals": []
     },
     {
       "editorial_status": "NOT_INDEPENDENTLY_APPROVED",
@@ -6408,7 +6452,8 @@
       "proposed_english_research_text": "And God — He saw all which He made, and behold, good exceedingly; and was evening, and was morning: day the sixth.",
       "reference": "Gen.1.31",
       "source_token_count": 15,
-      "source_wayyiqtol_count": 3
+      "source_wayyiqtol_count": 3,
+      "verse_footnote_proposals": []
     }
   ],
   "homonym_presentation_rule": "UNDER_ENGLISH_WORD",

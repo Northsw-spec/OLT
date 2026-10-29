@@ -8,7 +8,7 @@ Hebrew word spelling is displayed with OSHB's analytic morpheme separators remov
 
 **Masoretic Hebrew:** בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ
 
-**OLT English research proposal:** In the Beginning God — He shaped the Heavens and the Earth.
+**OLT English research proposal:** In the Beginning [of His Power] God — He shaped the Heavens and the Earth.[^gen-1-1-power]
 
 ### Gen.1.2
 
@@ -193,3 +193,6 @@ Hebrew word spelling is displayed with OSHB's analytic morpheme separators remov
 ---
 
 **RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.
+
+[^gen-1-1-power]: [of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît.
+
