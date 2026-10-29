@@ -1,0 +1,54 @@
+name: OLT-015 whole Genesis 1 source-word aggregation and research preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_full_genesis_research.py"
+      - "tests/test_olt_015.py"
+      - ".github/workflows/olt-015.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: olt-015-genesis-source
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test full original-source token IDs and strict negative cases
+        run: python -m unittest discover -s tests -p 'test_olt_015.py' -v
+      - name: Merge seven independently source-anchored research checkpoints
+        run: python scripts/audit_full_genesis_research.py
+      - name: Check 434 source tokens, 50 wayyiqtol, 97 lemmas and release block
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("data/research/genesis_01_complete_research_alignment.json").read_text())
+          assert x["source_verses"]==31
+          assert x["original_source_word_tokens"]==434
+          assert x["source_tagged_wayyiqtol_count"]==50
+          assert x["distinct_exact_source_lemma_ids"]==97
+          assert x["actual_original_grammar_only_word_tokens"]==7
+          assert x["authoritatively_approved_english_verses"]==0
+          assert x["publication_status"]=="BLOCKED"
+          assert x["actual_homonym_identity_links_approved"]==0
+          print("PASS original-source coverage; NOT English or literary publication")
+          PY
+      - name: Commit source audit and clearly unapproved Hebrew-English preview
+        run: |
+          git config user.name "olt-research-audit[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/genesis_01_complete_research_alignment.json genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md
+          if git diff --cached --quiet; then echo "No differences"; else
+            git commit -m "Aggregate all 434 original Genesis 1 tokens as unapproved English research"
+            git push origin HEAD:main
+          fi
