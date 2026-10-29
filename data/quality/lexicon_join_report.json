@@ -1,0 +1,30 @@
+{
+  "status": "AUTOMATED_CANDIDATE_JOIN_NOT_LEXICALLY_APPROVED",
+  "observed_source_lemma_keys": 9519,
+  "dictionary_entries": {
+    "strongs": 8674,
+    "lexical_index": 10221,
+    "bdb": 11845,
+    "augmented": 9299
+  },
+  "candidate_id_matching": {
+    "strong_exact_id_found": 9519,
+    "augmented_lexical_found": 8100,
+    "augmented_lexical_unresolved": 1419
+  },
+  "bdb_direct_crosswalk_status": "NOT_IMPLEMENTED_NO_GUESSING",
+  "genesis_1_owner_lock_candidates": {
+    "bara": 5,
+    "raqia": 9,
+    "asah": 7
+  },
+  "genesis_1_asah_exact_source_key": "6213 a",
+  "genesis_1_candidate_token_count": 21,
+  "all_english_approval": "NOT_DONE",
+  "notes": [
+    "A Strong number may have several augmented OSHB lemmas.",
+    "The AugIndex and BDB joins must be checked against source XML structure and historical lexical distinctions.",
+    "An absent exact AugIndex entry is not silently matched by consonantal similarity.",
+    "Source-tagged wayyiqtol is not an independently reviewed tense decision."
+  ]
+}

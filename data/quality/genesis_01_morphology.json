@@ -20,6 +20,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7225",
+              "special_marker": null,
               "strong_number": "7225"
             }
           ],
@@ -54,6 +55,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1254 a",
+              "special_marker": null,
               "strong_number": "1254"
             }
           ],
@@ -86,6 +88,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -114,6 +117,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -147,6 +151,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -186,6 +191,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -225,6 +231,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -274,6 +281,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -314,6 +322,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -346,6 +355,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8414",
+              "special_marker": null,
               "strong_number": "8414"
             }
           ],
@@ -379,6 +389,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "922",
+              "special_marker": null,
               "strong_number": "922"
             }
           ],
@@ -418,6 +429,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2822",
+              "special_marker": null,
               "strong_number": "2822"
             }
           ],
@@ -452,6 +464,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -480,6 +493,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6440",
+              "special_marker": null,
               "strong_number": "6440"
             }
           ],
@@ -508,6 +522,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8415",
+              "special_marker": null,
               "strong_number": "8415"
             }
           ],
@@ -541,6 +556,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7307",
+              "special_marker": null,
               "strong_number": "7307"
             }
           ],
@@ -575,6 +591,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -603,6 +620,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7363 b",
+              "special_marker": null,
               "strong_number": "7363"
             }
           ],
@@ -635,6 +653,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -663,6 +682,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6440",
+              "special_marker": null,
               "strong_number": "6440"
             }
           ],
@@ -696,6 +716,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -740,6 +761,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -778,6 +800,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -806,6 +829,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -818,7 +842,7 @@
               "position": 0,
               "raw": "HVqj3ms",
               "remaining_morphology": "3ms",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -838,6 +862,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -871,6 +896,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -909,6 +935,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -947,6 +974,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -985,6 +1013,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -1013,6 +1042,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -1046,6 +1076,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -1080,6 +1111,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -1108,6 +1140,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -1141,6 +1174,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "914",
+              "special_marker": null,
               "strong_number": "914"
             }
           ],
@@ -1179,6 +1213,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -1207,6 +1242,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -1240,6 +1276,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -1279,6 +1316,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -1318,6 +1356,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2822",
+              "special_marker": null,
               "strong_number": "2822"
             }
           ],
@@ -1362,6 +1401,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7121",
+              "special_marker": null,
               "strong_number": "7121"
             }
           ],
@@ -1400,6 +1440,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -1433,6 +1474,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -1467,6 +1509,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -1505,6 +1548,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "2822",
+              "special_marker": null,
               "strong_number": "2822"
             }
           ],
@@ -1545,6 +1589,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7121",
+              "special_marker": null,
               "strong_number": "7121"
             }
           ],
@@ -1577,6 +1622,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3915",
+              "special_marker": null,
               "strong_number": "3915"
             }
           ],
@@ -1610,6 +1656,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -1648,6 +1695,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -1681,6 +1729,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -1719,6 +1768,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -1747,6 +1797,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -1775,6 +1826,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "259",
+              "special_marker": null,
               "strong_number": "259"
             }
           ],
@@ -1813,6 +1865,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -1851,6 +1904,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -1879,6 +1933,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -1891,7 +1946,7 @@
               "position": 0,
               "raw": "HVqj3ms",
               "remaining_morphology": "3ms",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -1911,6 +1966,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -1944,6 +2000,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8432",
+              "special_marker": null,
               "strong_number": "8432"
             }
           ],
@@ -1983,6 +2040,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -2022,6 +2080,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -2060,6 +2119,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "914",
+              "special_marker": null,
               "strong_number": "914"
             }
           ],
@@ -2092,6 +2152,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -2120,6 +2181,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -2153,6 +2215,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -2197,6 +2260,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -2235,6 +2299,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -2263,6 +2328,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -2296,6 +2362,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -2335,6 +2402,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "914",
+              "special_marker": null,
               "strong_number": "914"
             }
           ],
@@ -2373,6 +2441,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -2406,6 +2475,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -2440,6 +2510,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -2473,6 +2544,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8478",
+              "special_marker": null,
               "strong_number": "8478"
             }
           ],
@@ -2512,6 +2584,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -2551,6 +2624,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -2590,6 +2664,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -2624,6 +2699,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -2657,6 +2733,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -2696,6 +2773,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -2735,6 +2813,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -2773,6 +2852,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -2811,6 +2891,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7121",
+              "special_marker": null,
               "strong_number": "7121"
             }
           ],
@@ -2849,6 +2930,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -2882,6 +2964,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -2916,6 +2999,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -2949,6 +3033,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -2987,6 +3072,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -3020,6 +3106,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -3058,6 +3145,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -3086,6 +3174,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -3114,6 +3203,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8145",
+              "special_marker": null,
               "strong_number": "8145"
             }
           ],
@@ -3152,6 +3242,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -3190,6 +3281,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -3218,6 +3310,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6960 b",
+              "special_marker": null,
               "strong_number": "6960"
             }
           ],
@@ -3230,7 +3323,7 @@
               "position": 0,
               "raw": "HVNj3mp",
               "remaining_morphology": "3mp",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -3255,6 +3348,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -3294,6 +3388,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8478",
+              "special_marker": null,
               "strong_number": "8478"
             }
           ],
@@ -3333,6 +3428,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -3367,6 +3463,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "413",
+              "special_marker": null,
               "strong_number": "413"
             }
           ],
@@ -3395,6 +3492,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "4725",
+              "special_marker": null,
               "strong_number": "4725"
             }
           ],
@@ -3423,6 +3521,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "259",
+              "special_marker": null,
               "strong_number": "259"
             }
           ],
@@ -3456,6 +3555,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -3499,6 +3599,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3004",
+              "special_marker": null,
               "strong_number": "3004"
             }
           ],
@@ -3538,6 +3639,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -3576,6 +3678,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -3614,6 +3717,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7121",
+              "special_marker": null,
               "strong_number": "7121"
             }
           ],
@@ -3652,6 +3756,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -3685,6 +3790,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3004",
+              "special_marker": null,
               "strong_number": "3004"
             }
           ],
@@ -3719,6 +3825,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -3757,6 +3864,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "4723 c",
+              "special_marker": null,
               "strong_number": "4723"
             }
           ],
@@ -3802,6 +3910,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -3836,6 +3945,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7121",
+              "special_marker": null,
               "strong_number": "7121"
             }
           ],
@@ -3868,6 +3978,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3220",
+              "special_marker": null,
               "strong_number": "3220"
             }
           ],
@@ -3901,6 +4012,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -3939,6 +4051,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -3967,6 +4080,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -3995,6 +4109,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -4033,6 +4148,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -4071,6 +4187,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -4099,6 +4216,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1876",
+              "special_marker": null,
               "strong_number": "1876"
             }
           ],
@@ -4111,7 +4229,7 @@
               "position": 0,
               "raw": "HVhj3fs",
               "remaining_morphology": "3fs",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -4136,6 +4254,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -4170,6 +4289,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1877",
+              "special_marker": null,
               "strong_number": "1877"
             }
           ],
@@ -4198,6 +4318,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6212",
+              "special_marker": null,
               "strong_number": "6212"
             }
           ],
@@ -4226,6 +4347,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2232",
+              "special_marker": null,
               "strong_number": "2232"
             }
           ],
@@ -4258,6 +4380,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -4286,6 +4409,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6086",
+              "special_marker": null,
               "strong_number": "6086"
             }
           ],
@@ -4314,6 +4438,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6529",
+              "special_marker": null,
               "strong_number": "6529"
             }
           ],
@@ -4342,6 +4467,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -4374,6 +4500,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6529",
+              "special_marker": null,
               "strong_number": "6529"
             }
           ],
@@ -4407,6 +4534,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -4447,6 +4575,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -4475,6 +4604,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -4540,6 +4670,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -4573,6 +4704,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -4612,6 +4744,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -4650,6 +4783,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -4688,6 +4822,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3318",
+              "special_marker": null,
               "strong_number": "3318"
             }
           ],
@@ -4731,6 +4866,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -4765,6 +4901,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1877",
+              "special_marker": null,
               "strong_number": "1877"
             }
           ],
@@ -4793,6 +4930,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6212",
+              "special_marker": null,
               "strong_number": "6212"
             }
           ],
@@ -4821,6 +4959,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2232",
+              "special_marker": null,
               "strong_number": "2232"
             }
           ],
@@ -4853,6 +4992,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -4886,6 +5026,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -4931,6 +5072,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6086",
+              "special_marker": null,
               "strong_number": "6086"
             }
           ],
@@ -4965,6 +5107,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -4997,6 +5140,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6529",
+              "special_marker": null,
               "strong_number": "6529"
             }
           ],
@@ -5025,6 +5169,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -5053,6 +5198,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -5123,6 +5269,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -5168,6 +5315,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -5206,6 +5354,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -5234,6 +5383,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -5262,6 +5412,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -5300,6 +5451,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -5338,6 +5490,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -5371,6 +5524,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -5409,6 +5563,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -5437,6 +5592,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -5465,6 +5621,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7992",
+              "special_marker": null,
               "strong_number": "7992"
             }
           ],
@@ -5503,6 +5660,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -5541,6 +5699,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -5569,6 +5728,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -5581,7 +5741,7 @@
               "position": 0,
               "raw": "HVqj3ms",
               "remaining_morphology": "3ms",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -5601,6 +5761,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3974",
+              "special_marker": null,
               "strong_number": "3974"
             }
           ],
@@ -5634,6 +5795,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -5673,6 +5835,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -5712,6 +5875,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "914",
+              "special_marker": null,
               "strong_number": "914"
             }
           ],
@@ -5750,6 +5914,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -5783,6 +5948,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -5822,6 +5988,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -5861,6 +6028,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3915",
+              "special_marker": null,
               "strong_number": "3915"
             }
           ],
@@ -5900,6 +6068,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -5943,6 +6112,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "226",
+              "special_marker": null,
               "strong_number": "226"
             }
           ],
@@ -5987,6 +6157,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "4150",
+              "special_marker": null,
               "strong_number": "4150"
             }
           ],
@@ -6037,6 +6208,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -6082,6 +6254,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8141",
+              "special_marker": null,
               "strong_number": "8141"
             }
           ],
@@ -6126,6 +6299,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -6169,6 +6343,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3974",
+              "special_marker": null,
               "strong_number": "3974"
             }
           ],
@@ -6208,6 +6383,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -6247,6 +6423,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -6286,6 +6463,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "215",
+              "special_marker": null,
               "strong_number": "215"
             }
           ],
@@ -6324,6 +6502,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -6357,6 +6536,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -6396,6 +6576,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -6434,6 +6615,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -6472,6 +6654,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -6510,6 +6693,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -6538,6 +6722,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -6566,6 +6751,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8147",
+              "special_marker": null,
               "strong_number": "8147"
             }
           ],
@@ -6599,6 +6785,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3974",
+              "special_marker": null,
               "strong_number": "3974"
             }
           ],
@@ -6638,6 +6825,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1419 a",
+              "special_marker": null,
               "strong_number": "1419"
             }
           ],
@@ -6672,6 +6860,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -6705,6 +6894,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3974",
+              "special_marker": null,
               "strong_number": "3974"
             }
           ],
@@ -6744,6 +6934,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1419 a",
+              "special_marker": null,
               "strong_number": "1419"
             }
           ],
@@ -6783,6 +6974,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4475",
+              "special_marker": null,
               "strong_number": "4475"
             }
           ],
@@ -6822,6 +7014,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -6861,6 +7054,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -6900,6 +7094,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3974",
+              "special_marker": null,
               "strong_number": "3974"
             }
           ],
@@ -6939,6 +7134,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6996 b",
+              "special_marker": null,
               "strong_number": "6996"
             }
           ],
@@ -6978,6 +7174,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4475",
+              "special_marker": null,
               "strong_number": "4475"
             }
           ],
@@ -7017,6 +7214,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3915",
+              "special_marker": null,
               "strong_number": "3915"
             }
           ],
@@ -7056,6 +7254,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -7095,6 +7294,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3556",
+              "special_marker": null,
               "strong_number": "3556"
             }
           ],
@@ -7139,6 +7339,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "5414",
+              "special_marker": null,
               "strong_number": "5414"
             }
           ],
@@ -7177,6 +7378,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -7211,6 +7413,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -7244,6 +7447,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -7283,6 +7487,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -7322,6 +7527,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "215",
+              "special_marker": null,
               "strong_number": "215"
             }
           ],
@@ -7360,6 +7566,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -7393,6 +7600,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -7442,6 +7650,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "4910",
+              "special_marker": null,
               "strong_number": "4910"
             }
           ],
@@ -7491,6 +7700,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -7535,6 +7745,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3915",
+              "special_marker": null,
               "strong_number": "3915"
             }
           ],
@@ -7585,6 +7796,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "914",
+              "special_marker": null,
               "strong_number": "914"
             }
           ],
@@ -7629,6 +7841,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -7662,6 +7875,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "216",
+              "special_marker": null,
               "strong_number": "216"
             }
           ],
@@ -7701,6 +7915,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "996",
+              "special_marker": null,
               "strong_number": "996"
             }
           ],
@@ -7740,6 +7955,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2822",
+              "special_marker": null,
               "strong_number": "2822"
             }
           ],
@@ -7779,6 +7995,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -7817,6 +8034,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -7845,6 +8063,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -7873,6 +8092,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -7911,6 +8131,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -7949,6 +8170,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -7982,6 +8204,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -8020,6 +8243,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -8048,6 +8272,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -8076,6 +8301,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7243",
+              "special_marker": null,
               "strong_number": "7243"
             }
           ],
@@ -8114,6 +8340,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -8152,6 +8379,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -8180,6 +8408,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8317",
+              "special_marker": null,
               "strong_number": "8317"
             }
           ],
@@ -8217,6 +8446,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -8251,6 +8481,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8318",
+              "special_marker": null,
               "strong_number": "8318"
             }
           ],
@@ -8279,6 +8510,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5315",
+              "special_marker": null,
               "strong_number": "5315"
             }
           ],
@@ -8307,6 +8539,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 a",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -8340,6 +8573,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -8374,6 +8608,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5774 a",
+              "special_marker": null,
               "strong_number": "5774"
             }
           ],
@@ -8406,6 +8641,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -8439,6 +8675,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -8473,6 +8710,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -8501,6 +8739,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6440",
+              "special_marker": null,
               "strong_number": "6440"
             }
           ],
@@ -8529,6 +8768,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7549",
+              "special_marker": null,
               "strong_number": "7549"
             }
           ],
@@ -8562,6 +8802,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -8606,6 +8847,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1254 a",
+              "special_marker": null,
               "strong_number": "1254"
             }
           ],
@@ -8644,6 +8886,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -8672,6 +8915,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -8705,6 +8949,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8577 b",
+              "special_marker": null,
               "strong_number": "8577"
             }
           ],
@@ -8744,6 +8989,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1419 a",
+              "special_marker": null,
               "strong_number": "1419"
             }
           ],
@@ -8783,6 +9029,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -8817,6 +9064,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -8845,6 +9093,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5315",
+              "special_marker": null,
               "strong_number": "5315"
             }
           ],
@@ -8878,6 +9127,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2416 a",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -8917,6 +9167,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7430",
+              "special_marker": null,
               "strong_number": "7430"
             }
           ],
@@ -8955,6 +9206,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -8983,6 +9235,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "8317",
+              "special_marker": null,
               "strong_number": "8317"
             }
           ],
@@ -9020,6 +9273,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -9059,6 +9313,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -9104,6 +9359,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -9138,6 +9394,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -9166,6 +9423,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -9194,6 +9452,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3671",
+              "special_marker": null,
               "strong_number": "3671"
             }
           ],
@@ -9227,6 +9486,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -9272,6 +9532,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -9310,6 +9571,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -9338,6 +9600,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -9366,6 +9629,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -9404,6 +9668,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1288",
+              "special_marker": null,
               "strong_number": "1288"
             }
           ],
@@ -9442,6 +9707,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -9476,6 +9742,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -9509,6 +9776,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -9547,6 +9815,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6509",
+              "special_marker": null,
               "strong_number": "6509"
             }
           ],
@@ -9584,6 +9853,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7235 a",
+              "special_marker": null,
               "strong_number": "7235"
             }
           ],
@@ -9627,6 +9897,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4390",
+              "special_marker": null,
               "strong_number": "4390"
             }
           ],
@@ -9665,6 +9936,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -9698,6 +9970,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4325",
+              "special_marker": null,
               "strong_number": "4325"
             }
           ],
@@ -9737,6 +10010,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3220",
+              "special_marker": null,
               "strong_number": "3220"
             }
           ],
@@ -9781,6 +10055,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -9821,6 +10096,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7235 a",
+              "special_marker": null,
               "strong_number": "7235"
             }
           ],
@@ -9833,7 +10109,7 @@
               "position": 0,
               "raw": "HVqj3ms",
               "remaining_morphology": "3ms",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -9858,6 +10134,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -9902,6 +10179,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -9940,6 +10218,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -9973,6 +10252,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -10011,6 +10291,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -10039,6 +10320,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -10067,6 +10349,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2549",
+              "special_marker": null,
               "strong_number": "2549"
             }
           ],
@@ -10105,6 +10388,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -10143,6 +10427,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -10171,6 +10456,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3318",
+              "special_marker": null,
               "strong_number": "3318"
             }
           ],
@@ -10183,7 +10469,7 @@
               "position": 0,
               "raw": "HVhj3fs",
               "remaining_morphology": "3fs",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -10208,6 +10494,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -10242,6 +10529,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5315",
+              "special_marker": null,
               "strong_number": "5315"
             }
           ],
@@ -10270,6 +10558,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 a",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -10303,6 +10592,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -10343,6 +10633,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "929",
+              "special_marker": null,
               "strong_number": "929"
             }
           ],
@@ -10376,6 +10667,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7431",
+              "special_marker": null,
               "strong_number": "7431"
             }
           ],
@@ -10415,6 +10707,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2416 c",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -10449,6 +10742,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -10482,6 +10776,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -10527,6 +10822,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -10565,6 +10861,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -10603,6 +10900,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -10641,6 +10939,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -10669,6 +10968,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -10697,6 +10997,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 c",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -10730,6 +11031,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -10769,6 +11071,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -10814,6 +11117,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -10853,6 +11157,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "929",
+              "special_marker": null,
               "strong_number": "929"
             }
           ],
@@ -10892,6 +11197,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -10937,6 +11243,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -10971,6 +11278,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -10999,6 +11307,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7431",
+              "special_marker": null,
               "strong_number": "7431"
             }
           ],
@@ -11032,6 +11341,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "127",
+              "special_marker": null,
               "strong_number": "127"
             }
           ],
@@ -11071,6 +11381,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4327",
+              "special_marker": null,
               "strong_number": "4327"
             }
           ],
@@ -11116,6 +11427,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -11154,6 +11466,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -11182,6 +11495,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3588 a",
+              "special_marker": null,
               "strong_number": "3588"
             }
           ],
@@ -11210,6 +11524,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -11248,6 +11563,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -11286,6 +11602,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -11314,6 +11631,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -11346,6 +11664,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "120",
+              "special_marker": null,
               "strong_number": "120"
             }
           ],
@@ -11379,6 +11698,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6754",
+              "special_marker": null,
               "strong_number": "6754"
             }
           ],
@@ -11424,6 +11744,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1823",
+              "special_marker": null,
               "strong_number": "1823"
             }
           ],
@@ -11469,6 +11790,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7287 a",
+              "special_marker": null,
               "strong_number": "7287"
             }
           ],
@@ -11487,7 +11809,7 @@
               "position": 1,
               "raw": "Vqj3mp",
               "remaining_morphology": "3mp",
-              "verb_form": "UNKNOWN",
+              "verb_form": "JUSSIVE",
               "verb_form_code": "j"
             }
           ],
@@ -11512,6 +11834,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1710",
+              "special_marker": null,
               "strong_number": "1710"
             }
           ],
@@ -11551,6 +11874,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3220",
+              "special_marker": null,
               "strong_number": "3220"
             }
           ],
@@ -11595,6 +11919,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -11640,6 +11965,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -11684,6 +12010,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "929",
+              "special_marker": null,
               "strong_number": "929"
             }
           ],
@@ -11734,6 +12061,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -11779,6 +12107,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -11823,6 +12152,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -11868,6 +12198,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7431",
+              "special_marker": null,
               "strong_number": "7431"
             }
           ],
@@ -11907,6 +12238,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7430",
+              "special_marker": null,
               "strong_number": "7430"
             }
           ],
@@ -11945,6 +12277,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -11978,6 +12311,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -12022,6 +12356,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1254 a",
+              "special_marker": null,
               "strong_number": "1254"
             }
           ],
@@ -12060,6 +12395,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -12088,6 +12424,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -12121,6 +12458,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "120",
+              "special_marker": null,
               "strong_number": "120"
             }
           ],
@@ -12160,6 +12498,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6754",
+              "special_marker": null,
               "strong_number": "6754"
             }
           ],
@@ -12205,6 +12544,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6754",
+              "special_marker": null,
               "strong_number": "6754"
             }
           ],
@@ -12239,6 +12579,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -12267,6 +12608,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1254 a",
+              "special_marker": null,
               "strong_number": "1254"
             }
           ],
@@ -12299,6 +12641,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -12333,6 +12676,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2145",
+              "special_marker": null,
               "strong_number": "2145"
             }
           ],
@@ -12366,6 +12710,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "5347",
+              "special_marker": null,
               "strong_number": "5347"
             }
           ],
@@ -12400,6 +12745,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1254 a",
+              "special_marker": null,
               "strong_number": "1254"
             }
           ],
@@ -12432,6 +12778,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -12476,6 +12823,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1288",
+              "special_marker": null,
               "strong_number": "1288"
             }
           ],
@@ -12514,6 +12862,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -12548,6 +12897,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -12581,6 +12931,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -12650,6 +13001,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -12678,6 +13030,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6509",
+              "special_marker": null,
               "strong_number": "6509"
             }
           ],
@@ -12715,6 +13068,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7235 a",
+              "special_marker": null,
               "strong_number": "7235"
             }
           ],
@@ -12758,6 +13112,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "4390",
+              "special_marker": null,
               "strong_number": "4390"
             }
           ],
@@ -12796,6 +13151,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -12829,6 +13185,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -12868,6 +13225,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3533",
+              "special_marker": null,
               "strong_number": "3533"
             }
           ],
@@ -12917,6 +13275,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7287 a",
+              "special_marker": null,
               "strong_number": "7287"
             }
           ],
@@ -12960,6 +13319,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1710",
+              "special_marker": null,
               "strong_number": "1710"
             }
           ],
@@ -12999,6 +13359,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "3220",
+              "special_marker": null,
               "strong_number": "3220"
             }
           ],
@@ -13043,6 +13404,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -13088,6 +13450,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -13132,6 +13495,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -13172,6 +13536,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 a",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -13205,6 +13570,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7430",
+              "special_marker": null,
               "strong_number": "7430"
             }
           ],
@@ -13243,6 +13609,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -13276,6 +13643,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -13320,6 +13688,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "559",
+              "special_marker": null,
               "strong_number": "559"
             }
           ],
@@ -13358,6 +13727,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -13386,6 +13756,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2009",
+              "special_marker": null,
               "strong_number": "2009"
             }
           ],
@@ -13414,6 +13785,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5414",
+              "special_marker": null,
               "strong_number": "5414"
             }
           ],
@@ -13477,6 +13849,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -13505,6 +13878,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -13533,6 +13907,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6212",
+              "special_marker": null,
               "strong_number": "6212"
             }
           ],
@@ -13561,6 +13936,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2232",
+              "special_marker": null,
               "strong_number": "2232"
             }
           ],
@@ -13593,6 +13969,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -13621,6 +13998,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -13649,6 +14027,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -13677,6 +14056,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6440",
+              "special_marker": null,
               "strong_number": "6440"
             }
           ],
@@ -13705,6 +14085,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -13738,6 +14119,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -13777,6 +14159,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -13811,6 +14194,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -13844,6 +14228,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "6086",
+              "special_marker": null,
               "strong_number": "6086"
             }
           ],
@@ -13878,6 +14263,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -13937,6 +14323,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6529",
+              "special_marker": null,
               "strong_number": "6529"
             }
           ],
@@ -13965,6 +14352,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6086",
+              "special_marker": null,
               "strong_number": "6086"
             }
           ],
@@ -13993,6 +14381,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2232",
+              "special_marker": null,
               "strong_number": "2232"
             }
           ],
@@ -14025,6 +14414,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2233",
+              "special_marker": null,
               "strong_number": "2233"
             }
           ],
@@ -14084,6 +14474,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -14121,6 +14512,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "402",
+              "special_marker": null,
               "strong_number": "402"
             }
           ],
@@ -14170,6 +14562,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -14210,6 +14603,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 c",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -14243,6 +14637,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -14287,6 +14682,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -14327,6 +14723,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5775",
+              "special_marker": null,
               "strong_number": "5775"
             }
           ],
@@ -14360,6 +14757,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8064",
+              "special_marker": null,
               "strong_number": "8064"
             }
           ],
@@ -14404,6 +14802,7 @@
               "kind": "LEXEME",
               "position": 2,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -14444,6 +14843,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "7430",
+              "special_marker": null,
               "strong_number": "7430"
             }
           ],
@@ -14476,6 +14876,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5921 a",
+              "special_marker": null,
               "strong_number": "5921"
             }
           ],
@@ -14509,6 +14910,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "776",
+              "special_marker": null,
               "strong_number": "776"
             }
           ],
@@ -14543,6 +14945,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -14602,6 +15005,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "5315",
+              "special_marker": null,
               "strong_number": "5315"
             }
           ],
@@ -14630,6 +15034,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2416 a",
+              "special_marker": null,
               "strong_number": "2416"
             }
           ],
@@ -14658,6 +15063,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -14686,6 +15092,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -14714,6 +15121,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3418",
+              "special_marker": null,
               "strong_number": "3418"
             }
           ],
@@ -14742,6 +15150,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6212",
+              "special_marker": null,
               "strong_number": "6212"
             }
           ],
@@ -14775,6 +15184,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "402",
+              "special_marker": null,
               "strong_number": "402"
             }
           ],
@@ -14814,6 +15224,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -14852,6 +15263,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3651 c",
+              "special_marker": null,
               "strong_number": "3651"
             }
           ],
@@ -14890,6 +15302,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "7200",
+              "special_marker": null,
               "strong_number": "7200"
             }
           ],
@@ -14928,6 +15341,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "430",
+              "special_marker": null,
               "strong_number": "430"
             }
           ],
@@ -14956,6 +15370,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "853",
+              "special_marker": null,
               "strong_number": "853"
             }
           ],
@@ -14984,6 +15399,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3605",
+              "special_marker": null,
               "strong_number": "3605"
             }
           ],
@@ -15012,6 +15428,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "834 a",
+              "special_marker": null,
               "strong_number": "834"
             }
           ],
@@ -15040,6 +15457,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6213 a",
+              "special_marker": null,
               "strong_number": "6213"
             }
           ],
@@ -15077,6 +15495,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "2009",
+              "special_marker": null,
               "strong_number": "2009"
             }
           ],
@@ -15111,6 +15530,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "2896 a",
+              "special_marker": null,
               "strong_number": "2896"
             }
           ],
@@ -15139,6 +15559,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3966",
+              "special_marker": null,
               "strong_number": "3966"
             }
           ],
@@ -15172,6 +15593,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -15210,6 +15632,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "6153",
+              "special_marker": null,
               "strong_number": "6153"
             }
           ],
@@ -15243,6 +15666,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "1961",
+              "special_marker": null,
               "strong_number": "1961"
             }
           ],
@@ -15281,6 +15705,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "1242",
+              "special_marker": null,
               "strong_number": "1242"
             }
           ],
@@ -15309,6 +15734,7 @@
               "kind": "LEXEME",
               "position": 0,
               "raw": "3117",
+              "special_marker": null,
               "strong_number": "3117"
             }
           ],
@@ -15342,6 +15768,7 @@
               "kind": "LEXEME",
               "position": 1,
               "raw": "8345",
+              "special_marker": null,
               "strong_number": "8345"
             }
           ],

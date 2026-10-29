@@ -1,0 +1,236 @@
+{
+  "status": "PRELIMINARY_SOURCE_MATCH_NOT_VERIFIED_TRANSLATION",
+  "records": [
+    {
+      "verse": "Gen.1.1",
+      "source_token_id": "01Nvk",
+      "hebrew": "בָּרָ֣א",
+      "raw_lemma": "1254 a",
+      "raw_morph": "HVqp3ms",
+      "exact_lemma": "1254 a",
+      "locked_olt_english_base": "shape",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.6",
+      "source_token_id": "01fsu",
+      "hebrew": "רָקִ֖יעַ",
+      "raw_lemma": "7549",
+      "raw_morph": "HNcmsa",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.7",
+      "source_token_id": "01bmv",
+      "hebrew": "וַ/יַּ֣עַשׂ",
+      "raw_lemma": "c/6213 a",
+      "raw_morph": "HC/Vqw3ms",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.7",
+      "source_token_id": "01UE6",
+      "hebrew": "הָ/רָקִיעַ֒",
+      "raw_lemma": "d/7549",
+      "raw_morph": "HTd/Ncmsa",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.7",
+      "source_token_id": "01Mnv",
+      "hebrew": "לָ/רָקִ֔יעַ",
+      "raw_lemma": "l/7549",
+      "raw_morph": "HRd/Ncmsa",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.7",
+      "source_token_id": "01Wxq",
+      "hebrew": "לָ/רָקִ֑יעַ",
+      "raw_lemma": "l/7549",
+      "raw_morph": "HRd/Ncmsa",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.8",
+      "source_token_id": "01L7t",
+      "hebrew": "לָֽ/רָקִ֖יעַ",
+      "raw_lemma": "l/7549",
+      "raw_morph": "HRd/Ncmsa",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.11",
+      "source_token_id": "01V27",
+      "hebrew": "עֹ֤שֶׂה",
+      "raw_lemma": "6213 a",
+      "raw_morph": "HVqrmsa",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.12",
+      "source_token_id": "01Ptj",
+      "hebrew": "עֹֽשֶׂה",
+      "raw_lemma": "6213 a",
+      "raw_morph": "HVqrmsa",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.14",
+      "source_token_id": "01FiN",
+      "hebrew": "בִּ/רְקִ֣יעַ",
+      "raw_lemma": "b/7549",
+      "raw_morph": "HR/Ncmsc",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.15",
+      "source_token_id": "01iAD",
+      "hebrew": "בִּ/רְקִ֣יעַ",
+      "raw_lemma": "b/7549",
+      "raw_morph": "HR/Ncmsc",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.16",
+      "source_token_id": "01CQo",
+      "hebrew": "וַ/יַּ֣עַשׂ",
+      "raw_lemma": "c/6213 a",
+      "raw_morph": "HC/Vqw3ms",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.17",
+      "source_token_id": "017mS",
+      "hebrew": "בִּ/רְקִ֣יעַ",
+      "raw_lemma": "b/7549",
+      "raw_morph": "HR/Ncmsc",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.20",
+      "source_token_id": "01xCL",
+      "hebrew": "רְקִ֥יעַ",
+      "raw_lemma": "7549",
+      "raw_morph": "HNcmsc",
+      "exact_lemma": "7549",
+      "locked_olt_english_base": "firmament",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.21",
+      "source_token_id": "016kU",
+      "hebrew": "וַ/יִּבְרָ֣א",
+      "raw_lemma": "c/1254 a",
+      "raw_morph": "HC/Vqw3ms",
+      "exact_lemma": "1254 a",
+      "locked_olt_english_base": "shape",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.25",
+      "source_token_id": "01ZpQ",
+      "hebrew": "וַ/יַּ֣עַשׂ",
+      "raw_lemma": "c/6213 a",
+      "raw_morph": "HC/Vqw3ms",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.26",
+      "source_token_id": "01oiy",
+      "hebrew": "נַֽעֲשֶׂ֥ה",
+      "raw_lemma": "6213 a",
+      "raw_morph": "HVqi1cp",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.27",
+      "source_token_id": "01jjy",
+      "hebrew": "וַ/יִּבְרָ֨א",
+      "raw_lemma": "c/1254 a",
+      "raw_morph": "HC/Vqw3ms",
+      "exact_lemma": "1254 a",
+      "locked_olt_english_base": "shape",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.27",
+      "source_token_id": "01PUg",
+      "hebrew": "בָּרָ֣א",
+      "raw_lemma": "1254 a",
+      "raw_morph": "HVqp3ms",
+      "exact_lemma": "1254 a",
+      "locked_olt_english_base": "shape",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.27",
+      "source_token_id": "01SAE",
+      "hebrew": "בָּרָ֥א",
+      "raw_lemma": "1254 a",
+      "raw_morph": "HVqp3ms",
+      "exact_lemma": "1254 a",
+      "locked_olt_english_base": "shape",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    },
+    {
+      "verse": "Gen.1.31",
+      "source_token_id": "013RL",
+      "hebrew": "עָשָׂ֔ה",
+      "raw_lemma": "6213 a",
+      "raw_morph": "HVqp3ms",
+      "exact_lemma": "6213 a",
+      "locked_olt_english_base": "make",
+      "source_approval": "SOURCE_TAG_IMPORTED_UNREVIEWED",
+      "english_surface": "NOT_TRANSLATED_OR_ALIGNED"
+    }
+  ]
+}
