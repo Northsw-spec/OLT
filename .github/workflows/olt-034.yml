@@ -8,6 +8,9 @@ on:
       - "data/engine/**"
       - "lexicon/english_master_manifest.json"
       - "tests/test_olt_034_multilingual_core.py"
+      - "tests/test_olt_034_contract_metadata.py"
+      - "schemas/**"
+      - "pyproject.toml"
       - "docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md"
       - ".github/workflows/olt-034.yml"
   pull_request:
@@ -17,6 +20,9 @@ on:
       - "data/engine/**"
       - "lexicon/english_master_manifest.json"
       - "tests/test_olt_034_multilingual_core.py"
+      - "tests/test_olt_034_contract_metadata.py"
+      - "schemas/**"
+      - "pyproject.toml"
       - "docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md"
       - ".github/workflows/olt-034.yml"
   workflow_dispatch:
@@ -35,6 +41,8 @@ jobs:
           python-version: '3.12'
       - name: Run source-first locale contract and negative safety tests
         run: python -m unittest discover -s tests -p 'test_olt_034_multilingual_core.py' -v
+      - name: Validate independent-repo JSON schema and package metadata
+        run: python -m unittest discover -s tests -p 'test_olt_034_contract_metadata.py' -v
       - name: Verify separate researched output for Amharic
         run: python -m olt_core.cli --locale am > /dev/null
       - name: Verify Japanese and Chinese profiles remain untranslated
