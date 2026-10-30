@@ -88,6 +88,9 @@ malformed source identifier rows and duplicate dStrong IDs. The
 full-corpus audit walks the already validated OLT-036 Greek word
 positions, including RP2018 alternate analyses, without changing
 the original BP5/Unicode words or inventing new verse positions.
+Each alternative Strong/morphology pair retains **its own, separately
+unapproved numeric-reference candidate set**, without generating an extra
+Greek token or silently replacing the primary Strong annotation.
 
 Run in a GitHub Actions Ubuntu runner or other environment with access
 to GitHub raw source:
