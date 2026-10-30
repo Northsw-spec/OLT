@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Northsw-spec/OLT/blob/main/schemas/olt_034_locale_profile.schema.json",
+  "title": "OLT-034 target locale research-only profile",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "language_tag",
+    "display_name",
+    "script",
+    "direction",
+    "source_first",
+    "english_is_reference_only",
+    "token_choices",
+    "translation_status",
+    "publication_status"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "language_tag": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "script": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "enum": [
+        "ltr",
+        "rtl"
+      ]
+    },
+    "source_first": {
+      "const": true
+    },
+    "english_is_reference_only": {
+      "const": true
+    },
+    "english_reference_is_not_a_translation_input": {
+      "const": true
+    },
+    "token_choices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verse_id",
+          "token_id",
+          "source_language",
+          "lemma_id",
+          "original_script",
+          "language_tag",
+          "target_surface",
+          "status"
+        ],
+        "properties": {
+          "verse_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "token_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_language": {
+            "enum": [
+              "hbo",
+              "arc",
+              "grc"
+            ]
+          },
+          "lemma_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "original_script": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language_tag": {
+            "type": "string",
+            "minLength": 2
+          },
+          "target_surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "const": "UNREVIEWED_LOCALE_DRAFT"
+          }
+        }
+      }
+    },
+    "translation_status": {
+      "enum": [
+        "NO_TRANSLATIONS",
+        "RESEARCH_ONLY"
+      ]
+    },
+    "publication_status": {
+      "const": "BLOCKED"
+    }
+  }
+}
