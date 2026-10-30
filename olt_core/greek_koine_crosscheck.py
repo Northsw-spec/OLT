@@ -106,23 +106,32 @@ def index_abbott_source_entries(source:bytes)->dict[str,Any]:
                 form=_source_text(child)
                 if form and form not in orth:
                     orth.append(form)
-            elif tag=="def":
+            elif tag in {"def","gloss"}:
+                # The 1922-derived TEI edition can encode lexicographer
+                # definition evidence as either <def> or <gloss>. Retain
+                # the native source label; never treat it as an OLT choice.
                 gloss=_source_text(child)
-                if gloss and gloss not in definitions:
-                    definitions.append(gloss)
+                if gloss and not any(x["original_source_text"]==gloss and
+                                     x["original_source_tag"]==tag for x in definitions):
+                    definitions.append({"original_source_tag":tag,
+                                        "original_source_text":gloss})
         for t in TARGETS:
             if t not in refs:
                 continue
-            if any(len(x)>1000 for x in orth[:4]+definitions[:MAX_SOURCE_DEFINITIONS]):
+            if (any(len(x)>1000 for x in orth[:4]) or
+                any(len(x["original_source_text"])>1000
+                    for x in definitions[:MAX_SOURCE_DEFINITIONS])):
                 raise SourceContractError("Oversize native dictionary lexical evidence")
             found[t].append({
                 "native_abbott_entry_attribute_n_SOURCE_ONLY":n,
+                "all_native_abbott_strong_crossrefs_SOURCE_ONLY":refs,
+                "native_entry_references_multiple_strong_numbers":len(set(refs))>1,
                 "original_tei_entry_number_in_source":total,
                 "first_source_orth_forms_NOT_APPROVED":orth[:4],
                 "original_source_orth_form_count":len(orth),
-                "first_original_source_definitions_NOT_OLT_TRANSLATION":
+                "first_source_def_or_gloss_records_NOT_OLT_TRANSLATION":
                     definitions[:MAX_SOURCE_DEFINITIONS],
-                "original_source_definition_count":len(definitions),
+                "original_source_def_or_gloss_count":len(definitions),
                 "abbott_dictionary_gloss_used_as_translation":False,
                 "biblical_contextual_sense_selected":None,
                 "publication_status":"BLOCKED",
