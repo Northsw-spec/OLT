@@ -1,0 +1,46 @@
+{
+  "checkpoint": "OLT-037D",
+  "source_project": "PerseusDL/lexica",
+  "source_title": "Liddell–Scott–Jones, A Greek-English Lexicon, Perseus Digital Library TEI-XML",
+  "source_original_authors": [
+    "Henry George Liddell",
+    "Robert Scott",
+    "Henry Stuart Jones"
+  ],
+  "source_publisher": "Perseus Digital Library, Tufts University",
+  "upstream_repository": "https://github.com/PerseusDL/lexica",
+  "upstream_pinned_commit": "1c34cdf756c63cf37db61bd366d733431dbd7aa0",
+  "source_data_license": "CC BY-SA 4.0",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "original_license_file": "license.md",
+  "original_license_git_blob_sha1": "033217724f8631eeb12987b30d76e8a62f275ceb",
+  "attribution": "Liddell, Scott, and Jones, A Greek-English Lexicon (1940); digital TEI-XML by Perseus Digital Library, Tufts University, CC BY-SA 4.0. Original source: https://github.com/PerseusDL/lexica",
+  "file_specs": [
+    {
+      "research_editor_strong": "3004",
+      "expected_greek_lexicon_first_letter": "lambda",
+      "filename": "grc.lsj.perseus-eng12.xml",
+      "upstream_path": "CTS_XML_TEI/perseus/pdllex/grc/lsj/grc.lsj.perseus-eng12.xml",
+      "original_byte_length": 6753569,
+      "original_git_blob_sha1": "0cc4c1906a4f8a0e696002dc83728d55b9cd9806"
+    },
+    {
+      "research_editor_strong": "3754",
+      "expected_greek_lexicon_first_letter": "omicron",
+      "filename": "grc.lsj.perseus-eng16.xml",
+      "upstream_path": "CTS_XML_TEI/perseus/pdllex/grc/lsj/grc.lsj.perseus-eng16.xml",
+      "original_byte_length": 12280021,
+      "original_git_blob_sha1": "b8a1ba605424c2df3b67f04190bde804664441c8"
+    }
+  ],
+  "original_source_data_not_vendored": true,
+  "tep4_external_dtd_is_not_trusted_for_network_fetch": true,
+  "record_lexicon_entry_keys_as_source_evidence_only": true,
+  "no_lsj_entry_word_sense_auto_assignment": true,
+  "no_cross_lexicon_same_spelling_implies_same_contextual_sense": true,
+  "independent_classical_lexicon_does_not_replace_koine_specialist_review": true,
+  "independent_lexicon_human_review": "NOT_DONE",
+  "english_master_lexicon_approval": "NOT_DONE",
+  "greek_lemma_approval": "NOT_DONE",
+  "publication_status": "BLOCKED"
+}

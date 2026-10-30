@@ -1,0 +1,57 @@
+name: OLT-037D independent Perseus LSJ evidence (NOT lemma/sense approval)
+on:
+  pull_request:
+    paths:
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "olt_core/greek_independent_lsj.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "tests/test_olt_037d_independent_lsj.py"
+      - "tests/test_olt_037d_editorial_protocol.py"
+      - "olt_core/greek_editorial_review.py"
+      - "data/research/olt_037d_independent_greek_review_templates.json"
+      - "docs/OLT-037D_INDEPENDENT_LEXICON_RESEARCH.md"
+      - ".github/workflows/olt-037d.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "olt_core/greek_independent_lsj.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "tests/test_olt_037d_independent_lsj.py"
+      - "tests/test_olt_037d_editorial_protocol.py"
+      - "olt_core/greek_editorial_review.py"
+      - "data/research/olt_037d_independent_greek_review_templates.json"
+      - "docs/OLT-037D_INDEPENDENT_LEXICON_RESEARCH.md"
+      - ".github/workflows/olt-037d.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-original-lexicon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Download both exact pinned original Perseus LSJ source XML shards
+        run: python scripts/fetch_olt_037d_lsj.py --output-dir "$RUNNER_TEMP"
+      - name: Negative controls and independent Greek source lexical key inventory
+        env:
+          OLT037D_LSJ_DIR: ${{ runner.temp }}
+        run: python -m unittest discover -s tests -p 'test_olt_037d_independent_lsj.py' -v
+      - name: Independent LSJ original entry-key evidence (NOT Greek/English approval)
+        run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --audit
+      - name: Require exact locked independent LSJ source-key inventory regeneration
+        run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --verify-checkpoint
+      - name: Test independent human-review protocol against fake approvals
+        run: python -m unittest discover -s tests -p 'test_olt_037d_editorial_protocol.py' -v
+      - name: Require byte-for-byte regeneration of source-bound blank scholarly reviewer templates
+        run: python -m olt_core.greek_editorial_review --verify
