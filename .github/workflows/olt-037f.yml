@@ -49,5 +49,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_olt_037f_lexical_comparison.py' -v
       - name: Verify direct source evidence without selecting verse translations
         run: python -m olt_core.greek_lexical_comparison --lsj-dir "$RUNNER_TEMP" --audit
-      - name: Transfer original Greek contextual comparison for INITIAL pinning only
-        run: python -m olt_core.greek_lexical_comparison --lsj-dir "$RUNNER_TEMP" --emit-initial-checkpoint
+      - name: Require byte-for-byte regeneration of frozen original Greek lexical research dossier
+        run: python -m olt_core.greek_lexical_comparison --lsj-dir "$RUNNER_TEMP" --verify-checkpoint
