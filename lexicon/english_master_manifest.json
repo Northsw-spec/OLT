@@ -1,0 +1,33 @@
+{
+  "manifest_id": "OLT-034-ENGLISH-MASTER",
+  "checkpoint": "OLT-034",
+  "language_tag": "en",
+  "purpose": "CANONICAL_ENGLISH_EDITORIAL_REFERENCE_NOT_HEBREW_OR_GREEK_SOURCE_AUTHORITY",
+  "master_reference_level": "SOURCE_TOKEN_LINKED_WITH_OWNER_EDITORIAL_CHOICES",
+  "lexical_entry_source": "lexicon/hebrew.json",
+  "name_meaning_source": "lexicon/name_underwords.json",
+  "genesis_1_verse_01_original_aligned_reference": "data/research/genesis_01_verse_01_alignment_proposal.json",
+  "genesis_1_31_verse_research_reference": "data/research/genesis_01_complete_research_alignment.json",
+  "all_ot_source_lexeme_index": "data/research/olt_031_lemma_variation_triage.json",
+  "all_ot_english_master_lexicon_complete": false,
+  "nt_greek_master_lexicon_complete": false,
+  "independent_english_lexicon_approved": false,
+  "owner_locked_hebrew_english_families": {
+    "bara": "shape",
+    "asah": "make",
+    "raqia": "firmament",
+    "waw.conj": "and"
+  },
+  "owner_approved_exact_main_genesis_1_1": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
+  "owner_approved_exact_main_genesis_1_4": "And God — He saw the light, that [he was] — good.",
+  "owner_requested_name_meaning_examples": {
+    "God/Elohim": "Mighty Governance",
+    "Noah": "Rest"
+  },
+  "english_reference_is_optional_for_other_target_languages": true,
+  "english_reference_must_never_fill_non_english_translation_choices": true,
+  "lexeme_and_sense_evidence_from_original_required": true,
+  "interpretation_vs_original_language_lexical_sense_separated": true,
+  "status": "RESEARCH_ONLY",
+  "publication_status": "BLOCKED"
+}
