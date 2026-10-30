@@ -1,10 +1,16 @@
 # OLT — CURRENT STATUS (2026-10-30)
 
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest independently CI-verified engineering checkpoint in this snapshot:** OLT-031, merged as [PR #16](https://github.com/Northsw-spec/OLT/pull/16) at commit d0d005d89895ef66006c3fcc6237692d1ddceed1.  
+**Latest fully merged and CI-verified policy checkpoint before the OLT-034 branch:** OLT-033, merged as [PR #18](https://github.com/Northsw-spec/OLT/pull/18) at commit 473e4df9530a3b8ae2b7b7632b6496319724c8af (foundation 234/234 and OLT-033 13/13 PASS).  
 **Translation publication:** BLOCKED. **Independent lexical/morphological signoff:** NOT DONE.
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
+
+## Owner decisions — OLT-033 and multilingual OLT-034
+
+- **OLT-033 (MERGED, independently CI-executed):** every applicable named entity and distinctive source-language meaningful title across **both Testaments** requires a source-aware research decision and a vertical English underword only when justified. The ten example candidates include **God/Elohim — Mighty Governance** (owner interpretive association, NOT a proven literal Hebrew word gloss) and **Noah — Rest** (associated with Hebrew nuach, distinct from Gen 5:29 nacham/comfort wordplay). Initial cases do not mean a completed Bible-wide name inventory. [Binding name policy](../docs/OLT-033_BIBLEWIDE_NAMES_UNDERWORDS.md).
+- **OLT-034 (multilingual engineering implementation under CI review at this snapshot):** one **source-first OLT core** in the current repo with separately versioned future language repositories. Source authority is original Hebrew, Biblical Aramaic where appropriate, and original Greek once RP2018 is pinned/imported; **English master lexical research is a reference and NOT a translation pivot**. Versioned Python source-packet generator, schema contracts and six EMPTY locale profiles do not translate a single chapter. [Architecture and release boundaries](../docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md).
+- The multilingual work retains every prior Genesis English word lock, OLT-022 In/with interpretation and note, and all independent linguistic/publication blockers. **No translation has been independently approved or released.**
 
 ## GitHub engineering status — VERIFIED
 
