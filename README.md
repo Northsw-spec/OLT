@@ -9,6 +9,8 @@ The present repository is written anew; no previous draft or script is copied in
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
 ## New architectural direction — OLT-033/034 (30 October 2026)
+**OLT-034 VERIFIED GITHUB CHECKPOINT (2026-10-30):** [PR #19](https://github.com/Northsw-spec/OLT/pull/19) merged at 8179853cbfd241c0d836af576793563ecbef3145; required foundation **259/259 PASS**, multilingual engine checks **25/25 PASS**, name rules **13/13 PASS**, doctrinal checks **6/6 PASS** on post-merge main. **No target-language Bible has been translated or approved.** See docs/STATUS_CURRENT.md for the current canonical status.
+
 
 **OLT is the shared original-language-first foundation for future Bible translations into multiple languages.** Keep original Hebrew/Biblical Aramaic/Greek corpus evidence, morphology, lemma/verse/token IDs and research together in this canonical repository. English is a **source-linked master reference**, not an intermediary that Japanese, Amharic, Icelandic, Chinese or other target languages must translate from. Each future target language will get its **own GitHub repository** and independently reviewed locale grammar/lexicon, notes and release. No locale repos have been created as part of OLT-034.
 
