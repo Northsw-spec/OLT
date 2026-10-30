@@ -1,0 +1,43 @@
+name: OLT-035D official Greek Strong morphology source (NOT philological certification)
+on:
+  pull_request:
+    paths:
+      - "data/imported/nt/rp2018/strongs/**"
+      - "data/engine/olt_035d_greek_word_source_manifest.json"
+      - "olt_core/greek_words.py"
+      - "tests/test_olt_035d_official_greek_words.py"
+      - "docs/OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md"
+      - "docs/MASTERPROMPT.md"
+      - ".github/workflows/olt-035d.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/imported/nt/rp2018/strongs/**"
+      - "data/engine/olt_035d_greek_word_source_manifest.json"
+      - "olt_core/greek_words.py"
+      - "tests/test_olt_035d_official_greek_words.py"
+      - "docs/OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md"
+      - "docs/MASTERPROMPT.md"
+      - ".github/workflows/olt-035d.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-word-annotations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test original Greek source words, alternative parsings, and fail-closed semantics
+        run: python -m unittest discover -s tests -p 'test_olt_035d_official_greek_words.py' -v
+      - name: Reaudit all 27 official original BP5 Greek word files and Unicode verse witness differences
+        run: python -m olt_core.greek_words --audit
+      - name: Inspect ambiguous Matthew 26:45 without invented extra Greek words
+        run: python -m olt_core.greek_words --verse MAT Matt.26.45 > /dev/null
+      - name: Inspect 3 John 1:1 and unchanged source metadata
+        run: python -m olt_core.greek_words --verse 3JO 3John.1.1 > /dev/null

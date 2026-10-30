@@ -8,6 +8,22 @@ The present repository is written anew; no previous draft or script is copied in
 
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
+## OLT-035D — Original Greek editor word forms + morphology are now source-pinned
+
+The shared OLT core has imported **all 27 original RP2018 editorial Strong/Beta Code morphology source files**, exact Git blob matches. They contain **140,149 original word-form/Strong/morphology triples**, with **28 additional parsing possibilities** on existing Greek words (not additional original words). The official sources have **7,957 verse positions**, including **4 EMPTY placeholders**, leaving **7,953 Greek word-containing verse slots**, corresponding by reference to the Unicode Greek main texts.
+
+- [Exact original Greek source and parser report](docs/OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md)
+- [Pinned 27-book Greek editor morphology manifest](data/engine/olt_035d_greek_word_source_manifest.json)
+- [Read-only source-index and ambiguity parser](olt_core/greek_words.py)
+
+```sh
+python -m olt_core.greek_words --audit
+python -m olt_core.greek_words --verse MAT Matt.1.1
+python -m olt_core.greek_words --verse MAT Matt.26.45
+```
+
+The editor's Strong numbers and morphology are **source annotations**, not independent approval of Greek lemma forms or meaning. Per-word accented Unicode alignment, independent philology, English reference decisions and all target-language translations remain NOT DONE. Bible publication BLOCKED.
+
 ## OLT-035B — All 27 RP2018 Greek NT books now imported as source verse text
 **OLT-035B VERIFIED (2026-10-30):** [PR #22](https://github.com/Northsw-spec/OLT/pull/22) merged to `274279701a52aae5c82727cd71420f65531a5789`. Official RP2018 Greek verse source: **27 book files / 7,953 Greek verse rows**, plus **2** separately preserved Greek passages. Post-merge GitHub Actions: required foundation **290/290 PASS**, Greek source QA **15/15 PASS**, OT source QA **16/16 PASS**, multilingual core **25/25 PASS**. **No Greek word/lemma/morphology ledger, finished translation, or Bible release is claimed.**
 
