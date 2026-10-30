@@ -9,6 +9,8 @@ The present repository is written anew; no previous draft or script is copied in
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
 ## OLT-035B — All 27 RP2018 Greek NT books now imported as source verse text
+**OLT-035B VERIFIED (2026-10-30):** [PR #22](https://github.com/Northsw-spec/OLT/pull/22) merged to `274279701a52aae5c82727cd71420f65531a5789`. Official RP2018 Greek verse source: **27 book files / 7,953 Greek verse rows**, plus **2** separately preserved Greek passages. Post-merge GitHub Actions: required foundation **290/290 PASS**, Greek source QA **15/15 PASS**, OT source QA **16/16 PASS**, multilingual core **25/25 PASS**. **No Greek word/lemma/morphology ledger, finished translation, or Bible release is claimed.**
+
 
 The OLT core now contains the **27 original RP2018 Greek continuous-text NT book CSVs**, copied byte-identically from official ByzTxt `v3.3.2` (commit `27a45ff...`). In addition, the separate original Greek **PA.csv** (John 7:53–8:11) and **ACT24.csv** (Acts 24:6–8) files are preserved under a separate ancillary directory without altering continuous-text verses automatically.
 
