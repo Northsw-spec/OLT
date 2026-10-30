@@ -3,7 +3,36 @@
   "registry_type": "SOURCE_SNAPSHOTS_NOT_TRANSLATION",
   "created_date": "2026-10-30",
   "baseline_olt_main_commit": "bfbd7368b3b69dcf2b13e7dfa5f4dedf287c77c3",
-  "otc": {
+  "nt": {
+    "edition": "ROBINSON_PIERPONT_2018",
+    "original_source_repository": "https://github.com/byztxt/byzantine-majority-text",
+    "upstream_tag": "v3.3.2",
+    "upstream_commit": "27a45ff1b7be6c17ccbfeac414f3f55732ae8e28",
+    "official_original_files_are": "source/Strongs AND source/CCAT; convenience Unicode CSV derived from official source",
+    "sample_derived_unicode_csv_source": "csv-unicode/ccat/no-variants/3JO.csv",
+    "sample_derived_unicode_csv_upstream_git_blob_sha1": "296e85242768aab57007a69cf62b92aef0b5067b",
+    "sample_local_path": "data/imported/nt/rp2018/3JO.csv",
+    "sample_book_code": "3JO",
+    "sample_standard_book": "3John",
+    "expected_verses_in_sample": 14,
+    "expected_full_nt_books": 27,
+    "imported_sample_books": 1,
+    "full_nt_edition_pinned_as_revision": "YES_RP2018_v3.3.2",
+    "full_nt_text_import_complete": false,
+    "full_nt_token_identifiers_imported": false,
+    "independent_greek_morphology_imported": false,
+    "greek_lemma_alignment_complete": false,
+    "greek_source_word_ids_status": "NOT_AVAILABLE_IN_THIS_CSV; NO_TOKEN_ID_FABRICATION",
+    "source_version_compatibility": "RP2018_AT_V3_3_2_NOT_LATER_RP2026",
+    "license": "PUBLIC_DOMAIN_SOURCE_AND_CODE_AS_STATED_IN_UPSTREAM_LICENSE",
+    "sample_source_qa": "RAW_GIT_BLOB_VERIFICATION_VIA_SHA1_NOT_INDEPENDENT_TEXTUAL_REVIEW"
+  },
+  "status": "PROVENANCE_AND_SAMPLE_SOURCE_ONLY",
+  "english_master_authority": false,
+  "full_hebrew_greek_ot_nt_release": false,
+  "independent_source_review": "NOT_DONE",
+  "publication_status": "BLOCKED",
+  "ot": {
     "edition": "WLC_OSHB_IMPORTED",
     "upstream_repository": "https://github.com/openscriptures/morphhb",
     "upstream_commit": "3d15126fb1ef74867fc1434be1942e837932691f",
@@ -297,34 +326,5 @@
         "book_json_bytes": 157301
       }
     ]
-  },
-  "nt": {
-    "edition": "ROBINSON_PIERPONT_2018",
-    "original_source_repository": "https://github.com/byztxt/byzantine-majority-text",
-    "upstream_tag": "v3.3.2",
-    "upstream_commit": "27a45ff1b7be6c17ccbfeac414f3f55732ae8e28",
-    "official_original_files_are": "source/Strongs AND source/CCAT; convenience Unicode CSV derived from official source",
-    "sample_derived_unicode_csv_source": "csv-unicode/ccat/no-variants/3JO.csv",
-    "sample_derived_unicode_csv_upstream_git_blob_sha1": "296e85242768aab57007a69cf62b92aef0b5067b",
-    "sample_local_path": "data/imported/nt/rp2018/3JO.csv",
-    "sample_book_code": "3JO",
-    "sample_standard_book": "3John",
-    "expected_verses_in_sample": 14,
-    "expected_full_nt_books": 27,
-    "imported_sample_books": 1,
-    "full_nt_edition_pinned_as_revision": "YES_RP2018_v3.3.2",
-    "full_nt_text_import_complete": false,
-    "full_nt_token_identifiers_imported": false,
-    "independent_greek_morphology_imported": false,
-    "greek_lemma_alignment_complete": false,
-    "greek_source_word_ids_status": "NOT_AVAILABLE_IN_THIS_CSV; NO_TOKEN_ID_FABRICATION",
-    "source_version_compatibility": "RP2018_AT_V3_3_2_NOT_LATER_RP2026",
-    "license": "PUBLIC_DOMAIN_SOURCE_AND_CODE_AS_STATED_IN_UPSTREAM_LICENSE",
-    "sample_source_qa": "RAW_GIT_BLOB_VERIFICATION_VIA_SHA1_NOT_INDEPENDENT_TEXTUAL_REVIEW"
-  },
-  "status": "PROVENANCE_AND_SAMPLE_SOURCE_ONLY",
-  "english_master_authority": false,
-  "full_hebrew_greek_ot_nt_release": false,
-  "independent_source_review": "NOT_DONE",
-  "publication_status": "BLOCKED"
+  }
 }
