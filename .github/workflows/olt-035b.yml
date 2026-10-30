@@ -1,0 +1,43 @@
+name: OLT-035B complete Greek RP2018 verse corpus and separate variants (not translation)
+on:
+  pull_request:
+    paths:
+      - "data/imported/nt/rp2018/**"
+      - "data/engine/olt_035b_rp2018_verse_inventory.json"
+      - "olt_core/nt_corpus.py"
+      - "tests/test_olt_035b_full_nt_verses.py"
+      - "docs/OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md"
+      - ".github/workflows/olt-035b.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/imported/nt/rp2018/**"
+      - "data/engine/olt_035b_rp2018_verse_inventory.json"
+      - "olt_core/nt_corpus.py"
+      - "tests/test_olt_035b_full_nt_verses.py"
+      - "docs/OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md"
+      - ".github/workflows/olt-035b.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-greek-verse-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify all Greek 27 book source bytes, 2 ancillary texts and negative tests
+        run: python -m unittest discover -s tests -p 'test_olt_035b_full_nt_verses.py' -v
+      - name: Reaudit all RP2018 book files and source verse counts
+        run: python -m olt_core.nt_corpus --audit
+      - name: Read original Matthew 1:1 with no synthetic Greek token IDs
+        run: python -m olt_core.nt_corpus --verse MAT Matt.1.1
+      - name: Verify separate John 7 and Acts 24 variant texts remain in review
+        run: |
+          python -m olt_core.nt_corpus --ancillary PA > /dev/null
+          python -m olt_core.nt_corpus --ancillary ACT24 > /dev/null
