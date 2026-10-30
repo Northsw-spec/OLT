@@ -69,3 +69,7 @@ Merged through [OLT-035B PR #22](https://github.com/Northsw-spec/OLT/pull/22) at
 - **OLT-034 multilingual core:** run `41127319453`, **20/20 + 5/5 tests PASS**.
 
 These are executable source-record/byte-check claims, not final editorial or historical/text-critical approval and not a finished Greek lexicon or non-English translation.
+
+## Later OLT-035D Greek editor-original word layer
+
+The 27 official RP2018 editor source/Strongs BP5 files were imported in OLT-035D. They contain 140,149 primary Greek word-form/Strong/morphology records and 28 extra alternative parsing pairs, NOT 28 extra Bible words. They contain 7,957 verse reference slots, **four being EMPTY** (Luke 17:36; Acts 8:37, 15:34, 24:7), and therefore 7,953 nonempty word-annotated verse slots which correspond by reference to the Unicode source rows. Greek Unicode word-level accent/identity joins are NOT certified. Editor-native Greek word IDs are absent, OLT positional locators are derived, and scholarly lexical/morphological signoff remains NOT DONE; translation publication BLOCKED. See docs/OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md.
