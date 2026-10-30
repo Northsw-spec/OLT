@@ -154,6 +154,22 @@ def _word_evidence(word: dict[str, Any],
     status = ("NO_NUMERIC_SOURCE_CANDIDATE" if not candidates else
               "ONE_NUMERIC_SOURCE_CANDIDATE_NOT_REVIEWED" if len(candidates) == 1 else
               "MULTIPLE_NUMERIC_SOURCE_CANDIDATES_UNRESOLVED")
+    # Preserve every alternative EDITOR analysis as a distinct source claim,
+    # with its own candidate set. This does NOT create another Greek word.
+    alternate_candidate_sets = []
+    for alt in word["additional_editor_analyses"]:
+        alternate_number = alt["strong_number"]
+        if not isinstance(alternate_number, str) or not alternate_number.isdecimal():
+            raise SourceContractError("Unrecognized alternate RP2018 Strong-reference format")
+        alternate_candidates = groups.get(int(alternate_number), [])
+        alternate_candidate_sets.append({
+            "rp2018_editor_alternative_strong": alternate_number,
+            "rp2018_editor_alternative_morphology": alt["morphology_code"],
+            "numeric_reference_candidate_rows_NOT_CERTIFIED": alternate_candidates,
+            "selected_lemma": None,
+            "selected_sense": None,
+            "translation_approved": False,
+        })
     return {
         "olt_derived_word_locator": word["derived_source_locator"],
         "verse_reference": word["source_reference"],
@@ -162,6 +178,7 @@ def _word_evidence(word: dict[str, Any],
         "rp2018_editor_strong_number": editor_number,
         "rp2018_editor_morphology": word["official_editor_morphology_code"],
         "rp2018_editor_alternative_analyses": word["additional_editor_analyses"],
+        "rp2018_editor_alternative_numeric_candidate_sets": alternate_candidate_sets,
         "stepbible_source_blob_sha1": manifest["original_source_git_blob_sha1"],
         "numeric_only_source_reference_status": status,
         "candidate_count": len(candidates),
