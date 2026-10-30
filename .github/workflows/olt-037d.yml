@@ -8,6 +8,9 @@ on:
       - "olt_core/greek_independent_lsj.py"
       - "scripts/fetch_olt_037d_lsj.py"
       - "tests/test_olt_037d_independent_lsj.py"
+      - "tests/test_olt_037d_editorial_protocol.py"
+      - "olt_core/greek_editorial_review.py"
+      - "data/research/olt_037d_independent_greek_review_templates.json"
       - "docs/OLT-037D_INDEPENDENT_LEXICON_RESEARCH.md"
       - ".github/workflows/olt-037d.yml"
   push:
@@ -19,6 +22,9 @@ on:
       - "olt_core/greek_independent_lsj.py"
       - "scripts/fetch_olt_037d_lsj.py"
       - "tests/test_olt_037d_independent_lsj.py"
+      - "tests/test_olt_037d_editorial_protocol.py"
+      - "olt_core/greek_editorial_review.py"
+      - "data/research/olt_037d_independent_greek_review_templates.json"
       - "docs/OLT-037D_INDEPENDENT_LEXICON_RESEARCH.md"
       - ".github/workflows/olt-037d.yml"
   workflow_dispatch:
@@ -45,3 +51,7 @@ jobs:
         run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --audit
       - name: Require exact locked independent LSJ source-key inventory regeneration
         run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --verify-checkpoint
+      - name: Test independent human-review protocol against fake approvals
+        run: python -m unittest discover -s tests -p 'test_olt_037d_editorial_protocol.py' -v
+      - name: Generate strictly UNREVIEWED Greek scholarly study templates for checkpoint pinning
+        run: python -m olt_core.greek_editorial_review --emit
