@@ -20,6 +20,6 @@ Every name-meaning record must identify: exact English display name, original sc
 
 Do **not** identify OT and NT occurrences by English spelling alone. Moses and Greek Mōysēs, Hebrew El and the distinct preposition el, place Shiloh and interpretive-title Shiloh, and Siloam must be aligned **individually**. An unpinned original Greek RP2018 source is not a valid invented NT token anchor.
 
-Some owner-proposed meanings (especially Elohim/Mighty Powers and El Shaddai/My Mighty Strength) are NOT plain lexical glosses. Store them truthfully as owner-requested, interpretation-based or unsupported-as-literal research, never a certified original-language homonym or translation. A missing etymology means REVIEW_REQUIRED; do not fabricate English to fill an underword.
+Some owner-proposed meanings (especially Elohim/Mighty Governance and El Shaddai/My Mighty Strength) are NOT plain lexical glosses. Store them truthfully as owner-requested, interpretation-based or unsupported-as-literal research, never a certified original-language homonym or translation. A missing etymology means REVIEW_REQUIRED; do not fabricate English to fill an underword.
 
 Source coverage is **BIBLE-WIDE POLICY, INITIAL 9 CANDIDATE RECORDS**; independent source/lexical approvals and publication still BLOCKED.
