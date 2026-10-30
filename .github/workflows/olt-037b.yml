@@ -47,5 +47,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_olt_037b_greek_lemma_triage.py' -v
       - name: Full corpus numerical review-case summary (no invented lemma decisions)
         run: python -m olt_core.greek_lemma_triage --source "$RUNNER_TEMP/OLT037-TBESG.txt" --summary
-      - name: Transfer exact deterministic unapproved review-queue evidence to source-controlled checkpoint
-        run: python -m olt_core.greek_lemma_triage --source "$RUNNER_TEMP/OLT037-TBESG.txt" --emit-checkpoint-chunks
+      - name: Require byte-for-byte regeneration of the locked 107-case evidence checkpoint
+        run: python -m olt_core.greek_lemma_triage --source "$RUNNER_TEMP/OLT037-TBESG.txt" --verify-checkpoint
