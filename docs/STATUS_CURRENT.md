@@ -1,4 +1,48 @@
-# OLT — CURRENT STATUS (2026-10-29)
+# OLT — CURRENT STATUS (2026-10-30)
+
+**Canonical repository:** https://github.com/Northsw-spec/OLT  
+**Latest independently CI-verified engineering checkpoint in this snapshot:** OLT-031, merged as [PR #16](https://github.com/Northsw-spec/OLT/pull/16) at commit d0d005d89895ef66006c3fcc6237692d1ddceed1.  
+**Translation publication:** BLOCKED. **Independent lexical/morphological signoff:** NOT DONE.
+
+> **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
+
+## GitHub engineering status — VERIFIED
+
+- OLT repository is **PUBLIC**. GitHub branch API reports **main protected** with required status check **foundation** (app ID 15368, enforcement level **everyone**). The complete protection policy, including possible administrative bypasses or review settings, is **not accessible** through the connected integration; do not assume those sub-settings.
+- The required foundation workflow runs on **every Pull Request**, without path filters. OLT-030 set explicit contents: read, checkout persist-credentials: false, and Node 24 GitHub actions checkout@v6 and setup-python@v6. Its release gate fails if Genesis becomes falsely publishable.
+- The OLT-030 PR check passed **205/205** Python tests; the OLT-031 PR check passed **217/217** Python tests. The dedicated OLT-031 source review triage passed **12/12** tests, with exact committed-output regeneration.
+- On the OLT-031 merged main commit, the foundation, OLT-031 and lexicon candidate GitHub Actions completed successfully.
+- OLT-025 through OLT-029 converted all 16 previously directly writing workflows to **read-only research verifiers** and included output-only PR-trigger coverage. The all-workflows negative test no longer assumes exactly 22 workflows; it checks **every existing workflow** as new ones are added.
+- The old runner-admission problem is historically recorded in [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7), **closed after hosted jobs began executing**. Its original root cause was not conclusively determined.
+- **Remaining CI maintenance:** some specialized workflows still refer to older GitHub JavaScript action versions. The required foundation check has already been upgraded. A future CI modernization must be tested rather than presumed compatible.
+
+## Hebrew corpus, Genesis 1 and edition boundary — VERIFIED SOURCE COUNTS
+
+- **39** imported OT books; **23,213** verses; **306,785** original source word tokens. Full-source imports and original-ID crosswalk are linked to pinned upstream revisions; imported annotations and dictionary meanings do **not** constitute independent OLT philological approval.
+- **9,519** distinct exact observed lemma-component keys; **9,252** mapped through original-source identifier evidence and **267** unresolved (256 plus-marker keys and 11 other missing-key cases). Unresolved IDs are **not** silently merged with a similar root or Strong number.
+- Genesis 1: **31 verses**, **434** actual source word tokens, **97** exact source lemma IDs, **427** word tokens with numeric lemma and **7** nonnumeric grammar-only word tokens. **50** wayyiqtol-labelled forms are counted from original OSHB source morphology, not independently reanalyzed by a scholar.
+- **3 owner-locked English lexical families** remain bara = shape, asah = make, raqia = firmament; **94** non-owner English lexical families still require editorial decision. No additional English family was approved in OLT-031.
+- [OLT-031 multi-fragment triage](../data/research/olt_031_lemma_variation_triage.json) contains **42** exact-source lemma cases with more than one **unapproved** English research fragment, including **322** original-source word contexts. Another **55** lemmas have one research fragment in the current corpus. Fragment differences alone do not establish polysemy, semantic homonymy, lexical identity or alternative words suitable for linked underword display.
+- The 31-verse English chapter is a **complete source-aligned RESEARCH PREVIEW**, not an independently reviewed English Bible translation. Its research wording, editorial bracketed supplements and scholarly notes remain unapproved for publication.
+
+## Binding translation decisions, preserved
+
+- Genesis 1:1 main research sentence: **In the Beginning [of His Power] God — He shaped the Heavens and the Earth.** The bracketed supplement is a clearly disclosed theological/intertextual addition, absent from original Hebrew Genesis 1:1, with the separate research note.
+- In Genesis 1:1 **only**, purple **In** is displayed with a blue lower-case **with** directly beneath it. This is an explicitly owner-selected **binitarian canonical interpretation**, not a verified instrumental Hebrew gloss or a proven homonym. See [OLT-022](OLT-022_GENESIS_1_1_IN_WITH_UNDERWORD.md) and [OLT-023](OLT-023_GENESIS_1_1_HTML_RESEARCH_LAYOUT.md).
+- Genesis 1:4 first clause remains exactly **And God — He saw the light, that [he was] — good.**
+- OLT wayyiqtol policy: independently identify each actual Hebrew verb form; when it is **wayyiqtol**, use English **simple past**, not perfect/pluperfect. Do not misclassify jussive, participle, qatal or yiqtol forms.
+- The owner-defined binitarian framework includes **one God, the eternal uncreated Son, and the Father's and Son's common creation work**. The doctrinal framework does not authorize changing the Hebrew source or asserting that a theology is a compulsory lexical gloss. See [Masterprompt](MASTERPROMPT.md) and [OLT-021](OLT-021_BINITARIAN_CREED_CLARIFICATION.md).
+
+## Still open — substantive work
+
+The standing [OLT-017 independent lexical review issue](https://github.com/Northsw-spec/OLT/issues/6) requires independent Hebrew morphology verification, source-based lexical sense selection for the **94** pending families, assessment of the 42 contextual-fragment variation cases, genuine evidence-based linkage decisions, and owner editorial approval. The existing OLT-017A/017B research sources are **not** a completed independent signoff.
+
+A bilingual A4 ODT/PDF with physically verified footnotes and visual print QA, independent lexical/verse approvals, and a separate publication authorization remain **BLOCKED**. **Passing GitHub Actions is engineering evidence, never automatic approval of biblical scholarship.**
+
+---
+
+## Historical checkpoint chronology (recorded 29–30 October 2026; superseded status where noted)
+
 
 **Project:** Olund's Linked Translation  
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
