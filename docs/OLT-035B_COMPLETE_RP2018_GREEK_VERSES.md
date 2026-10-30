@@ -58,3 +58,14 @@ The required unfiltered GitHub Actions `foundation` and new read-only `olt-035b.
 5. Retain independent linguistic reviews, full locale QA, proper reference and notes, accessible printing and explicit publication authorization as separate barriers.
 
 **Owner doctrine and all existing Genesis 1:1/1:4 text/notes remain untouched. No Greek target translation or Hebrew/Greek word-family approval is inferred.**
+
+## GitHub merge and independently executed test evidence (engineering only)
+
+Merged through [OLT-035B PR #22](https://github.com/Northsw-spec/OLT/pull/22) at `274279701a52aae5c82727cd71420f65531a5789`. Post-merge GitHub Actions on this exact main SHA actually executed and passed:
+
+- **Required foundation:** run `41127319379`, **290/290 Python tests PASS**, expected Bible release BLOCKED.
+- **Greek full-source verifier:** run `41127319395`, **15/15 regression tests PASS**, verifying all **27** source-book UTF-8 CSV blobs, **7,953** original Greek verse records, and **2** separate supplemental Greek passage files.
+- **OLT-035 original source verifier:** run `41127319396`, **16/16 tests PASS**, preserving all 39 imported original OT books, H/A tag distinction and previous 3 John source anchor.
+- **OLT-034 multilingual core:** run `41127319453`, **20/20 + 5/5 tests PASS**.
+
+These are executable source-record/byte-check claims, not final editorial or historical/text-critical approval and not a finished Greek lexicon or non-English translation.
