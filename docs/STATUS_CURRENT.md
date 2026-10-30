@@ -1,17 +1,17 @@
 # OLT — CURRENT STATUS (2026-10-30)
 
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest fully merged and CI-verified engineering checkpoint:** **OLT-035B**, [PR #22](https://github.com/Northsw-spec/OLT/pull/22), main commit **274279701a52aae5c82727cd71420f65531a5789**. Post-merge GitHub-hosted Actions verified **foundation 290/290 PASS** (Genesis release still BLOCKED), **OLT-035B 15/15 PASS** (27 RP2018 Greek source books, 7,953 Greek verse rows and two ancillary texts), **OLT-035 16/16 PASS** (39 OT imported books, 301,837 Hebrew and 4,948 Aramaic tokens), and **OLT-034 20/20 + 5/5 PASS** (source-first multilingual core).  
+**Latest fully merged and CI-verified engineering checkpoint:** **OLT-035D**, [PR #24](https://github.com/Northsw-spec/OLT/pull/24), main commit **82792e7af11adbd0830b040d0f9c066e666db564**. Post-merge GitHub Actions verified required **foundation 308/308 PASS** (release still BLOCKED), original Greek word-source OLT-035D **18/18 PASS** (27 official RP2018 BP5 files, 140,149 editor word forms, 28 extra alternative parses, 7,957 slots including four EMPTY), OLT-035B **15/15 PASS** (27 Greek Unicode verse-source books, 7,953 rows), and multilingual core OLT-034 **20/20 + 5/5 PASS**.  
 **Translation publication:** BLOCKED. **Independent lexical/morphological signoff:** NOT DONE.
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
 
-## OLT-035D — Original editor Greek word/morphology sources (WIP, CI under review)
+## OLT-035D — Original editor Greek word/morphology sources (MERGED AND POST-MERGE CI VERIFIED)
 
-- **All 27 official ByzTxt RP2018 source/Strongs/*.BP5 files** are copied byte-identically to OLT on branch `olt-035d-official-rp2018-greek-morphology`; upstream v3.3.2, commit 27a45ff1b7be6c17ccbfeac414f3f55732ae8e28, public domain.
+- **All 27 official ByzTxt RP2018 source/Strongs/*.BP5 files** were merged byte-identically into main through [PR #24](https://github.com/Northsw-spec/OLT/pull/24); upstream v3.3.2, commit 27a45ff1b7be6c17ccbfeac414f3f55732ae8e28, public domain.
 - The editor's actual annotated original Greek data contains **140,149 primary Beta Code word forms** with a Strong reference and morphology tag and **28 alternative parsing pairs** on existing words. **Source verse slots: 7,957, including four EMPTY positions** (Luke 17:36; Acts 8:37, 15:34, 24:7), leaving **7,953 nonempty** word-containing verse slots that align at the **verse-reference level only** with the Unicode Greek source corpus. The empty positions contain NO original Greek words.
 - Source-traceable word-position IDs are **OLT-derived**, not original native publisher word IDs. Greek lexical lemma FORMS, actual accented Unicode word-level alignment, independent morphological reviews, English master lexicon and other-language translations remain NOT DONE.
-- New source registry `data/engine/olt_035d_greek_word_source_manifest.json`, parser `olt_core/greek_words.py`, detailed [research notes](OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md), dedicated GitHub Actions and negative tests are being reviewed. All original OLT owner translation/publishing restrictions remain intact.
+- New source registry `data/engine/olt_035d_greek_word_source_manifest.json`, parser `olt_core/greek_words.py`, detailed [research notes](OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md), dedicated GitHub Actions and negative tests have **passed on merged main** (OLT-035D run 41132815893: 18/18; mandatory foundation run 41132815871: 308/308). Earlier failing PR attempts and subsequent source-faithful corrections are recorded in CI history; no tests were bypassed. All original OLT owner translation/publishing restrictions remain intact.
 
 ## OLT-035B — Whole Greek NT source book-file import (MERGED AND POST-MERGE CI VERIFIED)
 

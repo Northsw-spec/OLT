@@ -77,3 +77,11 @@ The output is **research JSON**, retaining editor morphology alternatives and th
 All existing owner-locked English Genesis verses, unique In/with underword, binitarian interpretive profile and name-meaning requests (God/Elohim → Mighty Governance; Noah → Rest) remain unchanged.
 
 **There is NO claimed final Greek lemma dictionary, no independently signed-off morphology, and no Bible translation ready for release.**
+
+## Actual CI history and verified merge (engineering source tests)
+
+[OLT-035D PR #24](https://github.com/Northsw-spec/OLT/pull/24) was merged into canonical `main` at commit `82792e7af11adbd0830b040d0f9c066e666db564`.
+
+The **first CI attempts were red** due to real parser/manifest faults, not merely GitHub labels: four empty verse positions were initially rejected as missing source word triples; and two per-book counts for alternative parsings in Colossians and 1 Thessalonians were transposed. The importer was corrected to preserve the four source-empty structural slots, the two counts were independently recounted directly from original BP5 files, and **the original strict source verification gates were retained**. No source files, original Hebrew/Greek verses or editorial word locks were changed as a workaround.
+
+On the final PR head and again on the **merged main SHA**, GitHub Actions executed successfully: required `foundation` **308/308 PASS** (merged main run `41132815871`), and dedicated original Greek-source verification **18/18 PASS** (merged main run `41132815893`). The same audit reports 27 full source books, **140,149 primary word annotations**, **28 additional alternative parsing pairs**, **7,957 BP5 source reference slots** (four EMPTY), and **7,953 nonempty Greek verses**. The main release gate remains BLOCKED. These are engineering evidence checks, not independent philological endorsement.
