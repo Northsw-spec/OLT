@@ -75,3 +75,11 @@ Authority: only the current explicit agreements, reconstructed anew.
 - The old Genesis 1:1 In/with exception remains separate and unique. The new God/Mighty Governance proposal may coexist in its own name-meaning namespace once the source occurrence is verified and layout QA passes.
 - Machine policy: `data/policy/olt_name_underword_policy.json`; candidate lexicon: `lexicon/name_underwords.json`. OLT research/publication still BLOCKED.
 - **Additional binding name-underword decision:** Noah → **Rest**, from the Hebrew nuach/rest association. Genesis 5:29 uses the separate root nacham/comfort as name wordplay. Noah/Rest is not automatically the same lexical meaning as the separate verb comfort.
+
+## OLT-034 — binding common core and separate language repositories (2026-10-30)
+
+The owner has explicitly agreed that Northsw-spec/OLT is the shared source-first Hebrew/Greek/Aramaic Bible analysis and future translation engine. Every real target language has its own repository, rather than its own duplicated original-language motor. The English master lexicon is a **source-linked editorial reference**, NOT an English-pivot translation source. A future Japanese, Amharic, Chinese or Icelandic choice must always trace back to the actual original-language token, lemma, morphology and context and be independently verified for that target language.
+
+Source facts and evidence, OLT owner theological/English editorial decisions, and independently reviewed target-language decisions are three distinct authority layers. The existing OLT binitarian owner framework remains an explicit theological interpretation layer; source lexemes are not altered. Preserve all Gen 1:1 and Gen 1:4 wording, owner wayyiqtol English tense locks and name/underword candidates, including God/Elohim/Mighty Governance and Noah/Rest, as **English** editorial data rather than automatic foreign-language glosses.
+
+First reusable deliverable is the source-first research-packet library olt_core (version 0.1.0, contract 1.0) with six unpopulated locale profiles and negative CI tests; none are Bible translations. RP2018 NT Greek is unpinned and must not be fabricated. The release remains BLOCKED. Details: docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md.

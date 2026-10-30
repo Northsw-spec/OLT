@@ -14,3 +14,9 @@ Names of people, cities, settlements, places, divine titles and unusual biblical
 
 The underword system must coexist with the single OLT-022 Gen 1:1 In/with prefix link and preserved bracketed [of His Power] note. Before release: independently verify original-script occurrence IDs, the NT RP2018 source, the verse-by-verse coverage inventory, possible name senses and notes, actual A4 wrapping, accessible reading order, color/monochrome legibility, and true bottom-of-page footnotes. Until these gates pass, any HTML/ODT/PDF name-underword sample is **RESEARCH ONLY, PUBLICATION BLOCKED**.
 - **Noah/Rest** should be shown as an independent vertically stacked name meaning where the original occurrence confirms Noah; 'comfort' belongs in its explanatory note, not as a falsely identical Hebrew root.
+
+## OLT-034 — multilingual publication gates and typesetting
+
+A green core CI run does not authorize a Bible translation in ANY target language. Each language repository separately validates exact original source edition and immutable revision, completeness of source-token mapping, lemma/sense decisions, grammatical adequacy, gender/tense conventions appropriate to that language, spelling and typography (including Ethiopic for Amharic, Japanese scripts and segmentation, Simplified/Traditional Chinese and Icelandic diacritics), translated names/underwords and footnotes, printed A4/PDF/ODT/HTML reading order, and independent review approval. The initial six locale profiles contain ZERO translated Scripture words.
+
+The common OLT core gives traceable, original-language source evidence and English research reference only. Each locale renders from its own reviewed choices. Preserve existing OLT Gen 1:1 original-language fidelity, owner-defined Gen 1:1 In/with underword and [of His Power] note, and exact approved English wording without projecting English grammar onto Japanese, Chinese, Amharic or Icelandic. Independent per-locale releases remain BLOCKED.

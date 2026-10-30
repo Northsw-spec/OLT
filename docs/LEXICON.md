@@ -24,3 +24,9 @@ Some owner-proposed meanings (especially Elohim/Mighty Governance and El Shaddai
 
 Source coverage is **BIBLE-WIDE POLICY, INITIAL 10 CANDIDATE RECORDS**; independent source/lexical approvals and publication still BLOCKED.
 - **Noah → Rest:** source association with Hebrew נוח, not the Genesis 5:29 comfort-root נחם. Source occurrence IDs for Genesis 5:29 are pending crosswalk; do not invent them.
+
+## OLT-034 — English master reference versus source and locale lexica
+
+The **English master reference** is defined by lexicon/english_master_manifest.json, referencing existing lexical seeds, OT source research, literal verse proposals and name-underword records. It is NOT yet a complete English OT+NT master lexicon. Original Hebrew/Aramaic/Greek lexical analyses, edition IDs, actual token and lemma references, and optional competing senses are the authoritative INPUTS to every locale.
+
+Separate repos/locale contracts own per-lemma, per-sense and per-occurrence choices for English, Amharic, Japanese, Icelandic, Chinese and further languages. A locale MUST NOT copy the master English string as its translation merely because of English text identity. The source-first package olt_core and six empty locale profiles under locales/ carry this distinction in machine-checked form. OLT-033 name-underwords (e.g. Elohim/Mighty Governance, Noah/Rest) remain explicitly labeled research interpretations or associations; an independently translated target-script underword is needed for another locale. The entire OT+NT lexical approval and publication remain BLOCKED.

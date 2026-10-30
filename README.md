@@ -8,6 +8,26 @@ The present repository is written anew; no previous draft or script is copied in
 
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
+## New architectural direction — OLT-033/034 (30 October 2026)
+
+**OLT is the shared original-language-first foundation for future Bible translations into multiple languages.** Keep original Hebrew/Biblical Aramaic/Greek corpus evidence, morphology, lemma/verse/token IDs and research together in this canonical repository. English is a **source-linked master reference**, not an intermediary that Japanese, Amharic, Icelandic, Chinese or other target languages must translate from. Each future target language will get its **own GitHub repository** and independently reviewed locale grammar/lexicon, notes and release. No locale repos have been created as part of OLT-034.
+
+- [OLT-034 multilingual architecture, planned rollout and explicit blockers](docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md)
+- [Machine-readable binding core/locale design](data/engine/olt_034_architecture.json)
+- [English master **reference**, not a complete published lexicon](lexicon/english_master_manifest.json)
+- [Versioned reusable source-first Python core](olt_core/engine.py) and [read-only CLI](olt_core/cli.py); 6 empty language profiles in locales/
+- [OLT-033 Bible-wide proper-name and meaning-underword decisions](docs/OLT-033_BIBLEWIDE_NAMES_UNDERWORDS.md), including owner-corrected God (Elohim) / Mighty Governance and Noah / Rest
+
+Use Python 3.12 standard library, with no installation required for this research example:
+
+    python -m olt_core.cli --locale ja --pretty
+    python -m olt_core.cli --locale am --pretty
+    python -m unittest discover -s tests -p 'test_olt_034_multilingual_core.py' -v
+
+These commands generate **source-token research JSON**, not Japanese or Amharic Scripture translations. The NT Greek edition RP2018 is still unpinned and unimported. All English word-family approvals, independent philological signoff, complete OT/NT lexicon and multi-locale Bible publication remain BLOCKED.
+
+**Historical notice:** The older CI runner warnings further below describe an already resolved historical incident. Consult [the canonical current status](docs/STATUS_CURRENT.md) and actual GitHub Actions runs instead of interpreting those historical warnings as an active outage.
+
 ## Current progress
 
 [Latest verified checkpoint and release blockers](docs/STATUS_CURRENT.md) — all OT source words imported; 9,252/9,519 exact dictionary-ID chains verified; Genesis 1 has all 434 original word tokens and 97 source-linked lemmas in its first review dossier. The entire imported BDB lexicon is now preserved with nested sense hierarchy; all 97 Genesis 1 lexical study cards have attached BDB source evidence. OLT-008 now contains the first seven-token Genesis 1:1 literal research proposal and a ranked 97-lemma study queue. **No final OLT English lexicon or Genesis chapter is yet approved.**

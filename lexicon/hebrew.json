@@ -187,5 +187,9 @@
   ],
   "name_underword_policy": "data/policy/olt_name_underword_policy.json",
   "name_underword_registry": "lexicon/name_underwords.json",
-  "name_underword_coverage_status": "BIBLE_WIDE_RULE_INITIAL_EXAMPLES_NOT_COMPLETE_LEXICON"
+  "name_underword_coverage_status": "BIBLE_WIDE_RULE_INITIAL_EXAMPLES_NOT_COMPLETE_LEXICON",
+  "english_master_manifest": "lexicon/english_master_manifest.json",
+  "olt_shared_core": "olt_core",
+  "english_is_locale_reference_only": true,
+  "other_language_translation_input": "ORIGINAL_LANGUAGE_SOURCE_IDENTITIES_NOT_ENGLISH_SURFACES"
 }
