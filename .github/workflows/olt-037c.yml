@@ -1,0 +1,53 @@
+name: OLT-037C Greek contextual evidence dossiers (NO sense approval)
+on:
+  pull_request:
+    paths:
+      - "olt_core/greek_sense_dossier.py"
+      - "olt_core/greek_lemma_triage.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_alignment.py"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "tests/test_olt_037c_greek_sense_dossier.py"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "docs/OLT-037C_GREEK_CONTEXTUAL_SENSE_RESEARCH.md"
+      - ".github/workflows/olt-037c.yml"
+  push:
+    branches: [main]
+    paths:
+      - "olt_core/greek_sense_dossier.py"
+      - "olt_core/greek_lemma_triage.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_alignment.py"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "tests/test_olt_037c_greek_sense_dossier.py"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "docs/OLT-037C_GREEK_CONTEXTUAL_SENSE_RESEARCH.md"
+      - ".github/workflows/olt-037c.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-contexts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch exact pinned STEPBible lexicon original Git blob
+        run: python scripts/fetch_olt_037_tbesg.py --output "$RUNNER_TEMP/OLT037-TBESG.txt"
+      - name: Test real source positions, Greek contexts, review protocol, negative controls
+        env:
+          OLT037_TBESG_PATH: ${{ runner.temp }}/OLT037-TBESG.txt
+        run: python -m unittest discover -s tests -p 'test_olt_037c_greek_sense_dossier.py' -v
+      - name: Summarize all original Greek source contexts inspected
+        run: python -m olt_core.greek_sense_dossier --source "$RUNNER_TEMP/OLT037-TBESG.txt" --summary
+      - name: Require byte-for-byte exact regeneration of both frozen Greek contextual dossiers
+        run: python -m olt_core.greek_sense_dossier --source "$RUNNER_TEMP/OLT037-TBESG.txt" --verify-checkpoint
