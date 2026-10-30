@@ -25,6 +25,14 @@ See `docs/DOCTRINAL_FRAMEWORK.md`.
 
 This is an authoritative **owner doctrinal correction**, not an independent scholarly linguistic signoff. The full Genesis 1 publication gate remains BLOCKED. See `docs/DOCTRINAL_FRAMEWORK.md` and `docs/OLT-021_BINITARIAN_CREED_CLARIFICATION.md`.
 
+## OLT-022 — Owner-selected Genesis 1:1 exception: "with" directly UNDER "In"
+
+For **Genesis 1:1 ONLY**, the English main text retains **“In the Beginning [of His Power] God — He shaped the Heavens and the Earth.”** The owner's requested linked layout places a lower-case **with** visually **DIRECTLY BELOW** the initial capitalized **In** (in future fully styled publication, *In* purple `#5B277D`, *with* blue `#2463A6`). **This is an explicit, binding owner-selected interpretive exception**, not a universal substitution of *in* with *with*.
+
+The owner reads the second layer as **“With the Beginning (the eternal uncreated Son) God shaped the Heavens and the Earth,”** expressing the Father's and Son's common creative work. **Keep the interpretive claim separate from philology:** the ordinarily documented use of `בְּ` in Genesis 1:1 is temporal; its instrumental *with* function is attested elsewhere, and an alternative “With Wisdom/Beginning” has been proposed in scholarly exegesis (Strawn 2022), but **instrumental בְּ here and “Beginning = the Son” are NOT independently established as compulsory Hebrew lexical facts**. This under-word's category must be `BINITARIAN_CANONICAL_INTERPRETATION`, with source and scholarly evidence, not `SOURCE_LEXICAL`, not a verified homonym.
+
+The exact original Hebrew source anchor is first Gen 1:1 word `01xeN` (`בְּ/רֵאשִׁ֖ית`, `b/7225`, `HR/Ncfsa`); the under-word applies to the **בְּ prefix**, not a new independent Hebrew word. Keep the pre-existing `[of His Power]` footnote untouched and directly after those brackets. The `with` interpretive footnote explains the distinction. Never propagate this exception to other `בְּ` occurrences automatically. Full output and independent source-language approval remain BLOCKED. The binding data lives in `data/policy/olt_underword_overrides.json` and `docs/OLT-022_GENESIS_1_1_IN_WITH_UNDERWORD.md`.
+
 ## Corpus and language
 OT source: **Masoretic Hebrew**; primary candidate WLC / Open Scriptures Hebrew Bible with exact upstream commit and morphological provenance. NT source: **Robinson–Pierpont Byzantine Textform**; choose RP2018 as a source edition and pin actual files before translating. Published verse text, headings, notes and commentary are **English only**, with Hebrew source text attached to OT verses and Greek source text attached to NT verses. No Swedish anywhere in Bible publications.
 

@@ -8,6 +8,7 @@ Do not invent a token or grant editorial approval by merging data.
 from __future__ import annotations
 from collections import Counter
 from research_footnotes import attach_footnotes
+from research_underwords import attach_underwords,render_linked_verse,underword_note_definitions
 from pathlib import Path
 import argparse,json,re
 
@@ -23,6 +24,7 @@ INPUTS=[
 ]
 OUTPUT=DIR/"genesis_01_complete_research_alignment.json"
 PREVIEW=ROOT/"genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md"
+UNDERWORD_POLICY=ROOT/"data/policy/olt_underword_overrides.json"
 REFS=[f"Gen.1.{i}" for i in range(1,32)]
 
 def load(path):return json.loads(path.read_text(encoding="utf-8"))
@@ -73,7 +75,7 @@ def map_token(word,format_):
         "source_token_id":word["source_token_id"],
     }
 
-def audit(source,artifacts):
+def audit(source,artifacts,underword_config=None):
     if len(artifacts)!=7:raise ValueError("Expected exactly seven source research checkpoint files")
     orig=source["tokens"]
     if source["scope"]["source_word_tokens"]!=434 or len(orig)!=434:
@@ -165,6 +167,7 @@ def audit(source,artifacts):
        "And God — He saw the light, that [he was] — good."):
         raise ValueError("Owner-approved Genesis 1:4 clause was modified")
     preview_lines, definitions, footnote_manifest=attach_footnotes(normalized)
+    underword_manifest=attach_underwords(normalized,load(UNDERWORD_POLICY) if underword_config is None else underword_config)
     for verse in normalized:
         for word in verse["original_token_alignment"]:
             if "1254 a" in word["source_exact_lemma_ids"] and not re.search(
@@ -191,6 +194,9 @@ def audit(source,artifacts):
         "genesis_1_research_verses":normalized,
         "research_note_anchor_manifest":footnote_manifest,
         "research_footnotes_count":len(footnote_manifest),
+        "underword_policy":"OLT-022",
+        "underword_manifest":underword_manifest,
+        "underword_links_count":len(underword_manifest),
         "authoritatively_approved_english_verses":0,
         "non_owner_english_lexical_families_approved":0,
         "independently_audited_morphology":False,
@@ -212,6 +218,9 @@ def preview(audit):
         "",
     ]
     rendered,definitions,manifest=attach_footnotes(audit["genesis_1_research_verses"])
+    underwords=audit.get("underword_manifest",[])
+    if len(underwords)!=1 or underwords[0].get("reference")!="Gen.1.1":
+        raise ValueError("One Genesis 1:1 underword must be rendered")
     for v,rendered_english in zip(audit["genesis_1_research_verses"],rendered):
         hebrew=" ".join(x.replace("/","") for x in v["original_verse_source_hebrew_words"])
         items.extend([
@@ -219,11 +228,13 @@ def preview(audit):
             "",
             "**Masoretic Hebrew:** "+hebrew,
             "",
-            "**OLT English research proposal:** "+rendered_english,
-            "",
+        ])
+        items.extend(render_linked_verse(v,rendered_english))
+        items.extend(["",
         ])
     items.extend(["---","","**RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.",""])
     items.extend(definitions)
+    items.extend(underword_note_definitions(underwords))
     items.append("")
     return "\n".join(items)+"\n"
 

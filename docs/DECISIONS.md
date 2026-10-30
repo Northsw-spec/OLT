@@ -54,3 +54,12 @@ Authority: only the current explicit agreements, reconstructed anew.
 - Preserve OLT-018's exact **[of His Power]** main line and footnote, OLT-020's `בְּ` contextual engine policy, all prior lexical/tense locks, and the BLOCKED publication gate.
 
 **Authoritative detail:** [OLT-021 creed clarification](OLT-021_BINITARIAN_CREED_CLARIFICATION.md).
+
+## OLT-022 — only Gen 1:1 receives owner-selected In / with vertical link
+
+- **In Genesis 1:1**, visually place lowercase **with** DIRECTLY UNDER capitalized **In**; the primary text **In the Beginning [of His Power] God — He shaped the Heavens and the Earth.** is unchanged.
+- Owner's explicitly **binitarian reading:** temporal *In the Beginning* and canonical interpretive *With the Beginning* (Beginning interpreted as the **eternal uncreated Son**, joining the Father in creation). The latter is not treated as independent, undisputed Hebrew syntax.
+- Although Hebrew `בְּ` has demonstrable instrumental functions in other settings, its normal contextual reading in Gen 1:1 is temporal. Strawn (2022) offers an exegetical “With Wisdom” proposal; this is not a verdict that the Hebrew lexically requires *with the Son*.
+- The extra `with` is an owner-chosen theological **under-word link** (`BINITARIAN_CANONICAL_INTERPRETATION`), not a source-word addition, false homonym, or global `in → with` policy. Its source anchor is OSHB `01xeN`, prefix `בְּ`; retain source IDs and raw morphology.
+- Maintain the `[of His Power]` footnote and Gen 1:1's **exact** English primary sentence. Under-word colors in eventual typesetting are purple/blue; the GitHub Markdown edition shows the words stacked and notes uncertainties.
+- Code/policy: `data/policy/olt_underword_overrides.json`; documentation: `docs/OLT-022_GENESIS_1_1_IN_WITH_UNDERWORD.md`. No new English or Hebrew philological publication approval is inferred.

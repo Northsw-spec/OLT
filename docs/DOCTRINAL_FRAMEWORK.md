@@ -39,3 +39,9 @@ The theological connection of Genesis 1:1, Genesis 1:26 and New Testament Father
 Preserve `bara = shape`, `asah = make`, `raqia = firmament`, conjunctive `waw = and`, the exact accepted Gen 1:4 wording, the masculine/feminine grammar conventions, and the entire-OT **wayyiqtol → SIMPLE PAST** convention. Future evidence-backed homonym links go **BELOW** their English anchor, not inline.
 
 **Status:** owner-approved theological/editorial framework; not independent scholarly signoff. Genesis 1 publication remains **BLOCKED**.
+
+## OLT-022 — singular verse-specific In / with visual exception
+
+**Only Genesis 1:1:** the first capitalized English **In** has lowercase **with directly underneath it**. This is the owner's theological visualization of two readings: *In the Beginning* and **With the Beginning**, the latter identified canonically with the eternal uncreated Son and the Father's and Son's joint creative work. The original owner main verse stays unchanged, including the bracketed **[of His Power]** and its explanatory footnote.
+
+**Evidence boundary:** This is not a declaration that the Hebrew grammar in Genesis 1:1 indisputably requires instrumental `בְּ`; a conventional temporal interpretation remains source-supported. An independent scholarly abstract by Brent A. Strawn (2022) discusses “With Wisdom” as an exegetical reading. The owner's Son connection is a further **BINITARIAN_CANONICAL_INTERPRETATION** rather than a certified lexical homonym or source identity. No other *in* gets an automatic *with* beneath it. Full details and research sources: [OLT-022](OLT-022_GENESIS_1_1_IN_WITH_UNDERWORD.md).

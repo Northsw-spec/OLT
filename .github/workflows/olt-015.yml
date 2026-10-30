@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - "scripts/audit_full_genesis_research.py"
+      - "scripts/research_underwords.py"
+      - "data/policy/olt_underword_overrides.json"
+      - "tests/test_olt_022_underwords.py"
       - "scripts/research_footnotes.py"
       - "data/research/genesis_01_verse_01_alignment_proposal.json"
       - "tests/test_olt_015.py"
@@ -44,6 +47,9 @@ jobs:
           assert x["authoritatively_approved_english_verses"]==0
           assert x["publication_status"]=="BLOCKED"
           assert x["actual_homonym_identity_links_approved"]==0
+          assert x["underword_links_count"]==1
+          assert x["underword_manifest"][0]["source_token_id"]=="01xeN"
+          assert x["underword_manifest"][0]["instrumental_claim_confirmed"] is False
           print("PASS original-source coverage; NOT English or literary publication")
           PY
       - name: Commit source audit and clearly unapproved Hebrew-English preview

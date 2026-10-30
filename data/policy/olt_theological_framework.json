@@ -18,7 +18,18 @@
     ],
     "uncertain": "REVIEW_REQUIRED",
     "secondary_gloss": "DIRECTLY_BELOW_ENGLISH_ANCHOR",
-    "genesis_1_1_with_son": "BINITARIAN_CANONICAL_INTERPRETATION_NOT_HEBREW_LEXICAL_GLOSS"
+    "genesis_1_1_with_son": "BINITARIAN_CANONICAL_INTERPRETATION_NOT_HEBREW_LEXICAL_GLOSS",
+    "genesis_1_1_owner_override": {
+      "policy_ref": "OLT-022",
+      "data_path": "data/policy/olt_underword_overrides.json",
+      "reference": "Gen.1.1",
+      "source_token_id": "01xeN",
+      "primary": "In",
+      "secondary_below": "with",
+      "interpretation_type": "BINITARIAN_CANONICAL_INTERPRETATION",
+      "source_lexical_approval": false,
+      "automatic_generalization": false
+    }
   },
   "owner_locks": {
     "bara": "shape",

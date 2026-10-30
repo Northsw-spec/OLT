@@ -160,3 +160,10 @@ This decision is recorded on `main`, but a GitHub Actions PASS must not be claim
 - All these are owner-approved **theological/editorial interpretations**, not automatic Greek/Hebrew lexical translations. Greek `ἀρχή` and the exact meaning of each original passage still require separate source-grounded work.
 - Canonical documents: [Masterprompt](MASTERPROMPT.md), [binding creed clarification](OLT-021_BINITARIAN_CREED_CLARIFICATION.md), [doctrinal framework](DOCTRINAL_FRAMEWORK.md), [decisions](DECISIONS.md), machine policy `data/policy/olt_theological_framework.json` (v2), and dedicated regression tests.
 - Do not claim GitHub Actions PASS until a runner executes the test suite. Independent philological approval and Bible publication remain **BLOCKED**.
+
+## OLT-022 — owner-selects exactly one Gen 1:1 In / with under-word
+- First word **In** in Genesis 1:1 receives **with directly beneath** in the linked presentation. The unchanged primary main sentence is `In the Beginning [of His Power] God — He shaped the Heavens and the Earth.`; the `[of His Power]` research footnote remains anchored immediately after its brackets.
+- This is a distinct **owner-selected binitarian canonical interpretation**, where `Beginning` refers theologically to the eternal uncreated Son who created with the Father. It is **NOT** labeled an independently established instrumental parse of `בְּ` in this verse, a separate source word or a proved homonym.
+- The one allowed original-token link is `Gen.1.1:01xeN` (prefix `בְּ`, source raw `b/7225`, morphology `HR/Ncfsa`), with future print colors In purple / with blue. Nothing is automatically propagated to other English *in* words.
+- [Policy](../data/policy/olt_underword_overrides.json), [documentation](OLT-022_GENESIS_1_1_IN_WITH_UNDERWORD.md), and [underword QA](../tests/test_olt_022_underwords.py). Existing complete Genesis source alignment remains 434/434; all final publication approvals remain BLOCKED.
+- GitHub Actions PASS cannot be claimed unless the newest workflows actually execute and succeed; CI runner issue may still apply.
