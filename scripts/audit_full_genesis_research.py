@@ -156,6 +156,12 @@ def audit(source,artifacts,underword_config=None):
     if normalized[0]["proposed_english_research_text"]!="In the Beginning [of His Power] God — He shaped the Heavens and the Earth.":
         raise ValueError("Owner Genesis 1:1 bracketed main text is missing")
     power_notes=normalized[0]["verse_footnote_proposals"]
+    # Validate malformed notes before owner-specific assertions, so duplicate IDs,
+    # ambiguous anchors and missing evidence get their exact fail-closed errors.
+    # Keep the owner rule against falsely claiming Hebrew source status first.
+    if len(power_notes)==1 and power_notes[0].get("is_independent_hebrew_lexeme") is not False:
+        raise ValueError("Footnote must preserve truthful intertextual source status")
+    preview_lines, definitions, footnote_manifest = attach_footnotes(normalized)
     if len(power_notes)!=1 or power_notes[0].get("id")!="gen-1-1-power" or power_notes[0].get("anchor")!="[of His Power]":
         raise ValueError("Owner Genesis 1:1 verse-footnote anchor missing")
     note=power_notes[0]
@@ -166,7 +172,6 @@ def audit(source,artifacts,underword_config=None):
     if not normalized[3]["proposed_english_research_text"].startswith(
        "And God — He saw the light, that [he was] — good."):
         raise ValueError("Owner-approved Genesis 1:4 clause was modified")
-    preview_lines, definitions, footnote_manifest=attach_footnotes(normalized)
     underword_manifest=attach_underwords(normalized,load(UNDERWORD_POLICY) if underword_config is None else underword_config)
     for verse in normalized:
         for word in verse["original_token_alignment"]:
