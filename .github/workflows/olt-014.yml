@@ -7,9 +7,16 @@ on:
       - "tests/test_olt_014.py"
       - "scripts/build_verse_research.py"
       - ".github/workflows/olt-014.yml"
+  pull_request:
+    paths:
+      - "data/plans/olt_014_genesis_26_31.json"
+      - "tests/test_olt_014.py"
+      - "scripts/build_verse_research.py"
+      - ".github/workflows/olt-014.yml"
+      - "tests/test_olt_026_ci_wave2.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-014-research
   cancel-in-progress: false
@@ -20,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,12 +50,11 @@ jobs:
           assert all(w["english_lexical_approval"] is False for v in r["verse_research"] for w in v["original_word_alignments"])
           print("PASS: source-based chapter research, not independently approved translation")
           PY
-      - name: Commit generated original-source research ledger
+      - name: Verify committed research data (no direct main writes)
         run: |
-          git config user.name "olt-source-research[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/olt_014_genesis_26_31.json
-          if git diff --cached --quiet; then echo "No change"; else
-            git commit -m "Generate Genesis 1:26–31 source-backed research and lexical notes"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/olt_014_genesis_26_31.json >/dev/null
+          if ! git diff --exit-code -- data/research/olt_014_genesis_26_31.json; then
+            echo "::error::Generated data/research/olt_014_genesis_26_31.json differs from source. Commit derived files through a pull request."
+            exit 1
           fi
+          echo "PASS: data/research/olt_014_genesis_26_31.json reproducible; publication still BLOCKED"
