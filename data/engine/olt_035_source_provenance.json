@@ -1,0 +1,330 @@
+{
+  "checkpoint": "OLT-035",
+  "registry_type": "SOURCE_SNAPSHOTS_NOT_TRANSLATION",
+  "created_date": "2026-10-30",
+  "baseline_olt_main_commit": "bfbd7368b3b69dcf2b13e7dfa5f4dedf287c77c3",
+  "otc": {
+    "edition": "WLC_OSHB_IMPORTED",
+    "upstream_repository": "https://github.com/openscriptures/morphhb",
+    "upstream_commit": "3d15126fb1ef74867fc1434be1942e837932691f",
+    "upstream_xml_path_template": "wlc/{book}.xml",
+    "upstream_original_xml_sha256_verification": "RECORDED_AT_PREVIOUS_IMPORT_NOT_REDOWNLOADED_IN_THIS_CHECKPOINT",
+    "imported_json_git_blob_sha1_verified_in_ci": true,
+    "imported_book_count": 39,
+    "imported_verse_count": 23213,
+    "imported_word_token_count": 306785,
+    "imported_morphology_tagged_hebrew_tokens": 301837,
+    "imported_morphology_tagged_aramaic_tokens": 4948,
+    "source_word_ids_verification": "IMPORTED_UNIQUENESS_ONLY",
+    "morphology_verification": "OSHB_IMPORTED_NOT_INDEPENDENTLY_REVIEWED",
+    "license": {
+      "underlying_wlc": "PUBLIC_DOMAIN",
+      "oshb_morphology": "CC_BY_4_0",
+      "attribution": "Original work of the Open Scriptures Hebrew Bible available at https://github.com/openscriptures/morphhb"
+    },
+    "books": [
+      {
+        "book": "1Chr",
+        "book_json_path": "data/imported/books/1Chr.json",
+        "book_json_git_blob_sha1": "a7acb36a3456d8d592d0c94e09565e119a8788cf",
+        "upstream_osis_xml_sha256": "8b59992b6607c6ca0fc423813be8cc244f011c1da32bc8485c0c0f581a897ed4",
+        "book_json_bytes": 2225579
+      },
+      {
+        "book": "1Kgs",
+        "book_json_path": "data/imported/books/1Kgs.json",
+        "book_json_git_blob_sha1": "980b87917c1c0500be8c846ab65e4c7ef0af02bb",
+        "upstream_osis_xml_sha256": "832ba10f605dce34c4888ee0a795d91edc2b293391d6ae9c36c36c6350761a3e",
+        "book_json_bytes": 2701909
+      },
+      {
+        "book": "1Sam",
+        "book_json_path": "data/imported/books/1Sam.json",
+        "book_json_git_blob_sha1": "46e2ccb9e88fd1996ff41c88c9b87ff2b5a4c2a0",
+        "upstream_osis_xml_sha256": "960432732c22286b82d80b6b25af8d10dc5f2e82a4e5e48b2e3a1b1eea17f3cb",
+        "book_json_bytes": 2732169
+      },
+      {
+        "book": "2Chr",
+        "book_json_path": "data/imported/books/2Chr.json",
+        "book_json_git_blob_sha1": "dee228f1f692485fc607d8f6e8531ff83a191445",
+        "upstream_osis_xml_sha256": "507294e8ca0fcf31ec25fe62fa24a7f2581f53116519bf08cfe96ff85e9c99fb",
+        "book_json_bytes": 2752999
+      },
+      {
+        "book": "2Kgs",
+        "book_json_path": "data/imported/books/2Kgs.json",
+        "book_json_git_blob_sha1": "4afa744a2a5ca7e87e5073887176ac57e5443d23",
+        "upstream_osis_xml_sha256": "056db5393beaef0a1159d9bcaac7dfd865df9bab2eb240ea90e9fa3f0c0e7449",
+        "book_json_bytes": 2529560
+      },
+      {
+        "book": "2Sam",
+        "book_json_path": "data/imported/books/2Sam.json",
+        "book_json_git_blob_sha1": "486932d8cf8eed05769c7edf70eb31b6e8e89c90",
+        "upstream_osis_xml_sha256": "e7793e141ed94eadbd2dfb23936abbb4062e81a7dcd41114a6e36644f50b8333",
+        "book_json_bytes": 2277476
+      },
+      {
+        "book": "Amos",
+        "book_json_path": "data/imported/books/Amos.json",
+        "book_json_git_blob_sha1": "0722011e0206312e9589995f226d390b604d47bb",
+        "upstream_osis_xml_sha256": "6ad94c6a18076762f1a458720c62156d354e5111ee25719b7792b70792d0084d",
+        "book_json_bytes": 417537
+      },
+      {
+        "book": "Dan",
+        "book_json_path": "data/imported/books/Dan.json",
+        "book_json_git_blob_sha1": "f75db71135b9228a8b6828f936914a77f40a737f",
+        "upstream_osis_xml_sha256": "bc69d0fa9708dacb11ea6d587509250bf1bcc1b4343eac2d6e97f8b41518fc0d",
+        "book_json_bytes": 1234916
+      },
+      {
+        "book": "Deut",
+        "book_json_path": "data/imported/books/Deut.json",
+        "book_json_git_blob_sha1": "2cf61459176c3b133422c9f738b4179ed43a9369",
+        "upstream_osis_xml_sha256": "04f8087442a1e67a631cd70f2ac4e42fe0a780ae132edb165a3a29f3f290358f",
+        "book_json_bytes": 2940926
+      },
+      {
+        "book": "Eccl",
+        "book_json_path": "data/imported/books/Eccl.json",
+        "book_json_git_blob_sha1": "c787578b25ae518cb630343f4f93a6a2c0e6e3bf",
+        "upstream_osis_xml_sha256": "2dfc858d19048f6479eca33b9fe781c2d7e9059e9ae3ab0b37b802d3afec02bb",
+        "book_json_bytes": 611559
+      },
+      {
+        "book": "Esth",
+        "book_json_path": "data/imported/books/Esth.json",
+        "book_json_git_blob_sha1": "2fa071be457bac9785916d32c27ead05c9f8a7fa",
+        "upstream_osis_xml_sha256": "f9b5b8adaf504dcac409bb6a27c9328967f47eeb4e920070cd53ef5301299019",
+        "book_json_bytes": 626612
+      },
+      {
+        "book": "Exod",
+        "book_json_path": "data/imported/books/Exod.json",
+        "book_json_git_blob_sha1": "de48d98ff6c6cef06303fa748ddb1d110b0d97f2",
+        "upstream_osis_xml_sha256": "04868367cdacb6ccdc61488e923e20f918172042e6437842a0621f63ac5b847f",
+        "book_json_bytes": 3434854
+      },
+      {
+        "book": "Ezek",
+        "book_json_path": "data/imported/books/Ezek.json",
+        "book_json_git_blob_sha1": "7681065d57e8473b299d2676ffe61258f4e2e8fd",
+        "upstream_osis_xml_sha256": "90bf8adfa66b2f6695c702263fe668755c99c6afc386202c12de4f704f5d4e46",
+        "book_json_bytes": 3889470
+      },
+      {
+        "book": "Ezra",
+        "book_json_path": "data/imported/books/Ezra.json",
+        "book_json_git_blob_sha1": "d43738d5019c5e6cf3292317e7694f1d0ffeb33d",
+        "upstream_osis_xml_sha256": "fb28ff697d0ee17eba5b4db47fb7261ee1870cea0d5701bfc77c9e28d4138129",
+        "book_json_bytes": 781097
+      },
+      {
+        "book": "Gen",
+        "book_json_path": "data/imported/books/Gen.json",
+        "book_json_git_blob_sha1": "2777bd95803f3928c7c09644d9a29ed5605a3176",
+        "upstream_osis_xml_sha256": "0526e5c9a5fb4d907847645f954ed3d1268fa69decbd872056cedd2668d86449",
+        "book_json_bytes": 4208275
+      },
+      {
+        "book": "Hab",
+        "book_json_path": "data/imported/books/Hab.json",
+        "book_json_git_blob_sha1": "b5477fd72ec0d2408bfcf16798270edde91fda94",
+        "upstream_osis_xml_sha256": "2592b212d816775adc8dac46bd0c46263982c308a186dde64dfb8239c57bd2d1",
+        "book_json_bytes": 137090
+      },
+      {
+        "book": "Hag",
+        "book_json_path": "data/imported/books/Hag.json",
+        "book_json_git_blob_sha1": "6271a7c4ba34bc0881fe0d882d95e63be2c64b12",
+        "upstream_osis_xml_sha256": "26ebbae4fe491cf89ce70e1264cbcbf66a562b497cb214b677e67a9a43ad545c",
+        "book_json_bytes": 121973
+      },
+      {
+        "book": "Hos",
+        "book_json_path": "data/imported/books/Hos.json",
+        "book_json_git_blob_sha1": "a7fa7c6b732bc6f3da0e522150ff1dd4831a377c",
+        "upstream_osis_xml_sha256": "f38ae44a3a97d142768bd5f4d40e77b69265184f9a5aec9e6af1b9b226e8daae",
+        "book_json_bytes": 486895
+      },
+      {
+        "book": "Isa",
+        "book_json_path": "data/imported/books/Isa.json",
+        "book_json_git_blob_sha1": "b9f8983052c76b8614655dd44d7a97fe5f4cbf78",
+        "upstream_osis_xml_sha256": "0807678de609bdef284bed5400b94ddab570d101b593c7f59ae1939015572fa2",
+        "book_json_bytes": 3478729
+      },
+      {
+        "book": "Jer",
+        "book_json_path": "data/imported/books/Jer.json",
+        "book_json_git_blob_sha1": "8b43eb9047587d1e247043bd0088b3f13edf2ec7",
+        "upstream_osis_xml_sha256": "1a7ad7bc26a2cae1d3964230e8eb73043bc1f32505cb86cd69a25261dc39f493",
+        "book_json_bytes": 4476451
+      },
+      {
+        "book": "Job",
+        "book_json_path": "data/imported/books/Job.json",
+        "book_json_git_blob_sha1": "4afbcf277f0d4f8007071702130adff11b345a3c",
+        "upstream_osis_xml_sha256": "7db3311184122f37a8fd52f3c7c0c4a6d2da7b77ee82f4fdb26bcba9171d297f",
+        "book_json_bytes": 1731144
+      },
+      {
+        "book": "Joel",
+        "book_json_path": "data/imported/books/Joel.json",
+        "book_json_git_blob_sha1": "42028b8d953682e79e79fd9bfca5892c49564907",
+        "upstream_osis_xml_sha256": "c0fefc6881afe949b023968106cdccc05a690734b8bb6e9aa48914d77e5369af",
+        "book_json_bytes": 196805
+      },
+      {
+        "book": "Jonah",
+        "book_json_path": "data/imported/books/Jonah.json",
+        "book_json_git_blob_sha1": "f68c528c6ea9c23c3eaf37cd6333002380c57b17",
+        "upstream_osis_xml_sha256": "1e1afcc3aaba1399d5c884ee106894c6bfca87c8c81fa57783ab75a923eee17d",
+        "book_json_bytes": 141337
+      },
+      {
+        "book": "Josh",
+        "book_json_path": "data/imported/books/Josh.json",
+        "book_json_git_blob_sha1": "a0790ddae8fb41c90ee46805955f1768b55332ea",
+        "upstream_osis_xml_sha256": "a066200ab2269c0a86a2e9ba119a3d0fce8c5f7ecc44bb53ec134b83dffc6006",
+        "book_json_bytes": 2069161
+      },
+      {
+        "book": "Judg",
+        "book_json_path": "data/imported/books/Judg.json",
+        "book_json_git_blob_sha1": "04e8941b49f5ce4d46a42a30d3a96fda45282d2f",
+        "upstream_osis_xml_sha256": "3b3a909f04041dbd52dc6b7293a96ce75d94db8a90fdeda878943db7b8fac57f",
+        "book_json_bytes": 2030458
+      },
+      {
+        "book": "Lam",
+        "book_json_path": "data/imported/books/Lam.json",
+        "book_json_git_blob_sha1": "8c1ed7c5ba03b75ec7c34237fbda17b9d2073497",
+        "upstream_osis_xml_sha256": "be68fc6a913313367280c2596e28733ee8cf877c12a65227237733b40d0248c4",
+        "book_json_bytes": 320103
+      },
+      {
+        "book": "Lev",
+        "book_json_path": "data/imported/books/Lev.json",
+        "book_json_git_blob_sha1": "6db1e27cadf20fc747a33099d70e619d0712d32a",
+        "upstream_osis_xml_sha256": "e21e70265c9ef500182f8ccb4f4e1186e5a79e1169d24cef23cc479baf07b191",
+        "book_json_bytes": 2439369
+      },
+      {
+        "book": "Mal",
+        "book_json_path": "data/imported/books/Mal.json",
+        "book_json_git_blob_sha1": "bdc8b5ac609cac2ead583a8351ea5f09329be255",
+        "upstream_osis_xml_sha256": "1583e6a701406dce7b8c2bf85e3522ec31383756de130685fc7c2eb6df8964b2",
+        "book_json_bytes": 177820
+      },
+      {
+        "book": "Mic",
+        "book_json_path": "data/imported/books/Mic.json",
+        "book_json_git_blob_sha1": "53089410ec6de709101a47e5e9f570748c95e7ee",
+        "upstream_osis_xml_sha256": "267e111adc1b941e32444816af07aa136ecde02cb315cd42597f78b393e67a01",
+        "book_json_bytes": 285483
+      },
+      {
+        "book": "Nah",
+        "book_json_path": "data/imported/books/Nah.json",
+        "book_json_git_blob_sha1": "90f5932d5527a3a4cb8da1fd619d444eae70b340",
+        "upstream_osis_xml_sha256": "5993b28bdbee3c922e3e93002d343a655493e8bd45e3472f3b62d77beadcb62c",
+        "book_json_bytes": 115260
+      },
+      {
+        "book": "Neh",
+        "book_json_path": "data/imported/books/Neh.json",
+        "book_json_git_blob_sha1": "7289843cc59707a813e275777670427260213c5c",
+        "upstream_osis_xml_sha256": "be082e95c206469122455b9849d4dd08da50c817732d8198c1beece90402801a",
+        "book_json_bytes": 1097710
+      },
+      {
+        "book": "Num",
+        "book_json_path": "data/imported/books/Num.json",
+        "book_json_git_blob_sha1": "81ebe2fe4f97d3194c427bd9d4b043eaabf72621",
+        "upstream_osis_xml_sha256": "02e4febfcc027d10b3e35e4f091eae67a40d26f37b6254faac6b4af053fe4896",
+        "book_json_bytes": 3358410
+      },
+      {
+        "book": "Obad",
+        "book_json_path": "data/imported/books/Obad.json",
+        "book_json_git_blob_sha1": "71ecb6abd2b2c7bd4f52fafa5e7d7770b912dda5",
+        "upstream_osis_xml_sha256": "1e893e552a7ed7e2e6d4048637ff5da8a2853a9e4432f4095cede80b959d850c",
+        "book_json_bytes": 59687
+      },
+      {
+        "book": "Prov",
+        "book_json_path": "data/imported/books/Prov.json",
+        "book_json_git_blob_sha1": "859e7c52046a6f58130230b8d4266ac20059af48",
+        "upstream_osis_xml_sha256": "964f99c00239b53b854c4686c99490c8d1ac7664784a30afdfc23781a3abb161",
+        "book_json_bytes": 1446433
+      },
+      {
+        "book": "Ps",
+        "book_json_path": "data/imported/books/Ps.json",
+        "book_json_git_blob_sha1": "030286a38055d0ce46d6c98b2296bbc33614d46d",
+        "upstream_osis_xml_sha256": "fe55eef316a65fb0f46d833d526ca2fd722e86ff7339f1a39f0c5b7f9062ced2",
+        "book_json_bytes": 4062098
+      },
+      {
+        "book": "Ruth",
+        "book_json_path": "data/imported/books/Ruth.json",
+        "book_json_git_blob_sha1": "5a4e069c199a130726c397d625c571fddeb6ba72",
+        "upstream_osis_xml_sha256": "fb6a2660383c7176941cb87b2be182ef634b66d49d057635869f4d9cb1f0a11e",
+        "book_json_bytes": 266653
+      },
+      {
+        "book": "Song",
+        "book_json_path": "data/imported/books/Song.json",
+        "book_json_git_blob_sha1": "f9a2fa6a4b5ba65e6d5b8ee8bad44b9c0450efc5",
+        "upstream_osis_xml_sha256": "5cd6ae36d32c059aaf794af5a5eaed914ac643486db3e412eb0b969760db82ca",
+        "book_json_bytes": 259710
+      },
+      {
+        "book": "Zech",
+        "book_json_path": "data/imported/books/Zech.json",
+        "book_json_git_blob_sha1": "fbdc97ac68cbe678562e2a04e496ea2fdd93730e",
+        "upstream_osis_xml_sha256": "2e287c8d0e0abd3bf601eb8ef9b4ee6ca3ae12cf36c0ed1612a7dcca54a2e777",
+        "book_json_bytes": 641939
+      },
+      {
+        "book": "Zeph",
+        "book_json_path": "data/imported/books/Zeph.json",
+        "book_json_git_blob_sha1": "8ac473b8c42321119020e58d8bbe4afb4ded9085",
+        "upstream_osis_xml_sha256": "eb5bd2a745fba1ffeed31dfafd834ce7c290929c992390be1a2b9451d22dea2e",
+        "book_json_bytes": 157301
+      }
+    ]
+  },
+  "nt": {
+    "edition": "ROBINSON_PIERPONT_2018",
+    "original_source_repository": "https://github.com/byztxt/byzantine-majority-text",
+    "upstream_tag": "v3.3.2",
+    "upstream_commit": "27a45ff1b7be6c17ccbfeac414f3f55732ae8e28",
+    "official_original_files_are": "source/Strongs AND source/CCAT; convenience Unicode CSV derived from official source",
+    "sample_derived_unicode_csv_source": "csv-unicode/ccat/no-variants/3JO.csv",
+    "sample_derived_unicode_csv_upstream_git_blob_sha1": "296e85242768aab57007a69cf62b92aef0b5067b",
+    "sample_local_path": "data/imported/nt/rp2018/3JO.csv",
+    "sample_book_code": "3JO",
+    "sample_standard_book": "3John",
+    "expected_verses_in_sample": 14,
+    "expected_full_nt_books": 27,
+    "imported_sample_books": 1,
+    "full_nt_edition_pinned_as_revision": "YES_RP2018_v3.3.2",
+    "full_nt_text_import_complete": false,
+    "full_nt_token_identifiers_imported": false,
+    "independent_greek_morphology_imported": false,
+    "greek_lemma_alignment_complete": false,
+    "greek_source_word_ids_status": "NOT_AVAILABLE_IN_THIS_CSV; NO_TOKEN_ID_FABRICATION",
+    "source_version_compatibility": "RP2018_AT_V3_3_2_NOT_LATER_RP2026",
+    "license": "PUBLIC_DOMAIN_SOURCE_AND_CODE_AS_STATED_IN_UPSTREAM_LICENSE",
+    "sample_source_qa": "RAW_GIT_BLOB_VERIFICATION_VIA_SHA1_NOT_INDEPENDENT_TEXTUAL_REVIEW"
+  },
+  "status": "PROVENANCE_AND_SAMPLE_SOURCE_ONLY",
+  "english_master_authority": false,
+  "full_hebrew_greek_ot_nt_release": false,
+  "independent_source_review": "NOT_DONE",
+  "publication_status": "BLOCKED"
+}
