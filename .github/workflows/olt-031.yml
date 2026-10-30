@@ -5,6 +5,7 @@ on:
     paths:
       - "scripts/build_olt_031_variation_triage.py"
       - "tests/test_olt_031_variation_triage.py"
+      - "tests/test_olt_028_ci_security.py"
       - "data/research/genesis_01_lexeme_editorial_queue.json"
       - "data/research/olt_017a_scholarly_wave.json"
       - "data/research/olt_017b_scholarly_lexemes.json"
@@ -14,6 +15,7 @@ on:
     paths:
       - "scripts/build_olt_031_variation_triage.py"
       - "tests/test_olt_031_variation_triage.py"
+      - "tests/test_olt_028_ci_security.py"
       - "data/research/genesis_01_lexeme_editorial_queue.json"
       - "data/research/olt_017a_scholarly_wave.json"
       - "data/research/olt_017b_scholarly_lexemes.json"
