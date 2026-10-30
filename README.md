@@ -27,3 +27,11 @@ All **31 Genesis 1 verses / 434 original word tokens** now have **unapproved Heb
 **Caution:** Machine source coverage is not a complete, philologically approved OLT translation. No final bilingual ODT/PDF or homonym links are released.
 
 **OLT-017A:** [Five contested-lexeme scholarly research questions](docs/OLT-017A_SCHOLARLY_REVIEW.md), including competing published perspectives and disclosed abstract-only evidence. The **94 unapproved Genesis 1 English word families** remain pending.
+
+## OLT-019 and OLT-017B — Latest source research (October 30, 2026)
+
+- [OLT-019](docs/OLT-019_FOOTNOTE_ANCHORING.md): Genesis 1:1's `[of His Power]` carries a Markdown note marker **immediately after the bracketed expression**. Its note still distinguishes the *separate* `rēʾšît` and `ʾôn` lexemes in Gen 49:3 / Deut 21:17. The main English sentence and original seven source word IDs were not changed.
+- [OLT-017B](docs/OLT-017B_GENESIS_1_2_LEXICAL_RESEARCH.md): four separate source-anchored research dossiers for `tohu`, `bohu`, `tehom` and `merachephet` in Gen 1:2, with alternative English readings and explicitly disputed/limited scholarly evidence. No new lexical meaning or under-word homonym link is approved.
+- **CI ALERT:** [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7): new GitHub-hosted Actions runs have failed **before any steps executed** (`runner_id=0`, `steps=[]`). These new checkpoints have **NOT PASSED CI**. Prior OLT-018 green runs do not cover newly added tests. See [latest OLT-015 run](https://github.com/Northsw-spec/OLT/actions/runs/41091217157) and [OLT-017B run](https://github.com/Northsw-spec/OLT/actions/runs/41092053582).
+
+All publication gates remain **BLOCKED**. Do not claim independent scholarly approval, final English lexical choice, final footnotes at page bottom, or bilingual ODT/PDF merely from a source research document.

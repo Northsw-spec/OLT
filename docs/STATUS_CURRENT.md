@@ -138,3 +138,10 @@ Approved new English word families: **0**. Approved homonym links: **0**. The 94
 - The combined 434-token research JSON includes one note-anchor manifest entry; all original Hebrew source tokens remain unchanged.
 - The first GitHub Actions attempts for this checkpoint on October 30, 2026 failed **before any job steps started**, with no test logs available; retry also failed before steps. Do not report OLT-019 as CI PASS until the required workflows actually run successfully. Prior OLT-018 CI success does not verify this new code.
 - **Research preview only**: genuine page-bottom typography, scholarly review and publication remain BLOCKED.
+
+## OLT-019 and OLT-017B — continuing work, test-runner caveat
+- OLT-019 makes footnotes reusable and puts the Genesis 1:1 `[^gen-1-1-power]` marker directly after the exact main text anchor `[of His Power]`; the substantive verse wording is unchanged. A `research_note_anchor_manifest` in the 434-token research JSON records anchor ID, verse, evidence refs and status.
+- Source-aware negative tests for duplicate IDs, nonexistent/repeated anchor, different reference, missing source evidence, false publication status were committed. The preview itself is synced and shows `[of His Power][^gen-1-1-power] God`.
+- OLT-017B adds four documented original-source lexical dossiers (Gen 1:2 exact IDs: `8414`, `922`, `8415`, `7363 b`), with source wording, morphological annotation, BDB readings and scholarly caveats. New owner English lexical approvals: **0**; new homonym links: **0**.
+- **Verification LIMIT:** GitHub Actions [OLT-019](https://github.com/Northsw-spec/OLT/actions/runs/41091217157) and [OLT-017B](https://github.com/Northsw-spec/OLT/actions/runs/41092053582) FAILED TO START JOB STEPS. The API reported empty job steps and no assigned hosted runner, including a failed OLT-019 retry. No claim of a green GitHub test can be made. Follow [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7). Previous older green runs remain valid only for their original commits.
+- No new scholarly or owner final English approval was inferred. **Genesis 1 publication remains BLOCKED.**
