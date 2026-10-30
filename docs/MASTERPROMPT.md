@@ -11,6 +11,20 @@ The Hebrew `בְּ` may be locative, temporal, instrumental or have other docume
 
 See `docs/DOCTRINAL_FRAMEWORK.md`.
 
+## OLT-021 — Binding owner clarification: one God, the eternal uncreated Son
+
+**OVERRIDING CLARIFICATION FOR ALL FUTURE OLT WRITING AND RESEARCH:** The owner explicitly rejects any interpretation that Jesus, the Son, was the first being created by God. An earlier assistant description wrongly implied that and is hereby superseded.
+
+- **ONE GOD:** The Father and the Son are **ONE** — one God, not two gods. One faith; one Lord, **Jesus Christ**.
+- **BINITARIAN, NOT TRINITARIAN:** Maintain this owner-defined confession and the affirmation **THE LORD JESUS IS THE SPIRIT**; do not insert a Trinitarian interpretation as OLT's doctrinal authority.
+- **THE SON IS ETERNAL AND UNCREATED:** The Son existed with the Father **before the foundation of the world**. His existence did NOT begin with his human birth.
+- **CREATION WAS THE FATHER AND SON'S JOINT WORK:** The Father and Son acted together in bringing the world into being, prior to the Son's incarnation. This is the owner's **binitarian canonical interpretation** of biblical creation texts, not a separate Hebrew/Greek lexeme hidden in Genesis 1:1.
+- **INCARNATION, NOT CREATION OF THE SON:** The eternal Son **became human through Mary**. His birth through Mary began his human life, NOT his eternal existence.
+- **FIRSTBORN IS NOT FIRST CREATED:** The owner's explanation of **the Firstborn Son** and the description **“beginning of God's creation”** (Revelation 3:14) MUST NOT be paraphrased as **“Jesus was the first creature God created”**. The owner understands the Firstborn Son as eternal and uncreated, subsequently incarnate through Mary, and already active with the Father at the creation of the world. The meaning of Greek `ἀρχή` in Revelation 3:14 remains a distinct original-language question; do not claim this theological synthesis is a compulsory Greek lexical gloss.
+- **DOCTRINAL INTERPRETATION ≠ LITERAL SOURCE:** Keep true Hebrew/Greek source word meanings, syntax and uncertainties separate from binitarian Christian theological conclusions. Preserve all existing Genesis 1:1 `[of His Power]` and footnote, Genesis 1:4, `bara/asah/raqia`, `בְּ` context-sensitive linking, and other translation decisions.
+
+This is an authoritative **owner doctrinal correction**, not an independent scholarly linguistic signoff. The full Genesis 1 publication gate remains BLOCKED. See `docs/DOCTRINAL_FRAMEWORK.md` and `docs/OLT-021_BINITARIAN_CREED_CLARIFICATION.md`.
+
 ## Corpus and language
 OT source: **Masoretic Hebrew**; primary candidate WLC / Open Scriptures Hebrew Bible with exact upstream commit and morphological provenance. NT source: **Robinson–Pierpont Byzantine Textform**; choose RP2018 as a source edition and pin actual files before translating. Published verse text, headings, notes and commentary are **English only**, with Hebrew source text attached to OT verses and Greek source text attached to NT verses. No Swedish anywhere in Bible publications.
 

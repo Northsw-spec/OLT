@@ -151,3 +151,12 @@ Approved new English word families: **0**. Approved homonym links: **0**. The 94
 OLT is **binitarian, not Trinitarian**. Exact owner assertion: **“THE LORD JESUS IS THE SPIRIT.”** This governs interpretive commentary while leaving the actual original-language source evidence and disputed grammatical readings separate. Hebrew `בְּ` is to be analyzed contextually; instrumentality is not inferred for every occurrence. See [doctrinal framework](DOCTRINAL_FRAMEWORK.md) and [binding decisions](DECISIONS.md).
 
 This decision is recorded on `main`, but a GitHub Actions PASS must not be claimed until OLT-020 tests actually run. The existing Actions runner incident remains open, and chapter publication is BLOCKED.
+
+## OLT-021 — Owner clarification: eternal uncreated Son, Father–Son unity and incarnation
+- **Owner authority, 30 Oct 2026:** OLT is binitarian: **one God; the Father and Son are one; one faith; one Lord Jesus Christ; the Lord Jesus is the Spirit**.
+- The Son is **ETERNAL and UNCREATED**, existed with the Father **before the foundation of the world**, and creation was their **joint Father–Son work** before incarnation.
+- The eternal Son **became human through Mary**; human birth **did not initiate his eternal existence**.
+- The owner's use of **Firstborn Son** / Revelation 3:14 **does NOT mean that the Son is God's first created being**. Any older assistant formulation suggesting that is expressly superseded.
+- All these are owner-approved **theological/editorial interpretations**, not automatic Greek/Hebrew lexical translations. Greek `ἀρχή` and the exact meaning of each original passage still require separate source-grounded work.
+- Canonical documents: [Masterprompt](MASTERPROMPT.md), [binding creed clarification](OLT-021_BINITARIAN_CREED_CLARIFICATION.md), [doctrinal framework](DOCTRINAL_FRAMEWORK.md), [decisions](DECISIONS.md), machine policy `data/policy/olt_theological_framework.json` (v2), and dedicated regression tests.
+- Do not claim GitHub Actions PASS until a runner executes the test suite. Independent philological approval and Bible publication remain **BLOCKED**.

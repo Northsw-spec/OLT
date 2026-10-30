@@ -1,6 +1,6 @@
 {
   "policy_id": "OLT-020",
-  "version": 1,
+  "version": 2,
   "source": "EXPLICIT_OWNER_DECISION",
   "theology": "BINITARIAN",
   "not_theology": "TRINITARIAN",
@@ -29,5 +29,34 @@
     "genesis_1_4": "And God — He saw the light, that [he was] — good.",
     "wayyiqtol": "SIMPLE_PAST"
   },
-  "publication_status": "BLOCKED"
+  "publication_status": "BLOCKED",
+  "clarification_id": "OLT-021",
+  "clarification_supersedes_first_created_inference": true,
+  "dogmatic_confession": {
+    "unity": "ONE_GOD",
+    "father_and_son": "ONE_IN_GODHEAD",
+    "one_faith": true,
+    "one_lord": "JESUS_CHRIST",
+    "binitarian": true,
+    "trinitarian": false,
+    "jesus_is_the_spirit": true,
+    "son_eternal": true,
+    "son_uncreated": true,
+    "son_existed_with_father_before_world_foundation": true,
+    "creation": "JOINT_WORK_OF_FATHER_AND_SON_BEFORE_INCARNATION",
+    "son_preexisted_human_birth": true,
+    "son_became_human_through": "MARY",
+    "human_birth_started_eternal_sons_existence": false,
+    "firstborn_son_is_first_created_being": false,
+    "revelation_3_14_owner_reading": "ETERNAL_UNCREATED_FIRSTBORN_SON_INCARNATED_THROUGH_MARY_NOT_FIRST_CREATED",
+    "revelation_3_14_is_mandatory_greek_lexical_gloss": false
+  },
+  "evidence_policy": {
+    "interpretive_layer": "BINITARIAN_CANONICAL_INTERPRETATION",
+    "doctrine_does_not_override_original_hebrew_or_greek": true,
+    "do_not_mechanically_map_ruach_pneuma_to_jesus": true,
+    "beginning_genesis_1_1_not_automatically_instrumental_bet": true,
+    "disputed_greek_arche_requires_source_review": true,
+    "independent_philological_signoff": "NOT_DONE"
+  }
 }

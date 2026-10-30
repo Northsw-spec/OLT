@@ -40,3 +40,17 @@ Authority: only the current explicit agreements, reconstructed anew.
 - If the context is uncertain, emit `REVIEW_REQUIRED`; don't manufacture a grammatical or homonym PASS.
 - All earlier source and owner locks, including Genesis 1:1 `[of His Power]`, Genesis 1:4, *bara/asah/raqia*, and tense rules remain binding.
 - This is an **owner-approved editorial doctrine**, not an automatic independent scholarly signoff or permission to publish Genesis 1.
+
+## OLT-021 — superseding, permanent owner correction about the Father and Son
+
+**This clarification is authoritative and overrides every prior assistant inference that the Son was created.** The owner explicitly rejects the reading “Jesus was the first thing God created.”
+
+- **ONE GOD:** FATHER AND SON ARE ONE — one God, **one faith, one Lord Jesus Christ**. OLT is **BINITARIAN, NOT TRINITARIAN**, and continues to affirm **THE LORD JESUS IS THE SPIRIT**.
+- **THE SON IS ETERNAL AND UNCREATED.** He existed with the Father **before the world's foundation**; he was not a created being and his existence did not begin at Mary's childbirth.
+- **THE FATHER AND SON CREATED THE WORLD TOGETHER**, a joint Father–Son work preceding the Son's incarnation.
+- **INCARNATION:** The already eternally existing Son **became human through Mary**. Distinguish the beginning of human life from any supposed beginning of the eternal Son's existence.
+- **FIRSTBORN:** The owner's reference to Christ as the **Firstborn Son** and to the Revelation 3:14 “beginning of God's creation” language must never be paraphrased as **first created**. This expresses the owner's interpretive understanding of the eternal Son who later became human; it does not prescribe an automatic Greek dictionary meaning for `ἀρχή`.
+- **SOURCE/INTERPRETATION FIREWALL:** Father–Son creative agency and the confession “Jesus is the Spirit” inform explicitly marked `BINITARIAN_CANONICAL_INTERPRETATION` notes. Neither claim is a machine-inferred Hebrew/Greek word meaning or an automatic rule that `בְּ` in Genesis 1:1 is instrumental.
+- Preserve OLT-018's exact **[of His Power]** main line and footnote, OLT-020's `בְּ` contextual engine policy, all prior lexical/tense locks, and the BLOCKED publication gate.
+
+**Authoritative detail:** [OLT-021 creed clarification](OLT-021_BINITARIAN_CREED_CLARIFICATION.md).

@@ -35,3 +35,9 @@ All **31 Genesis 1 verses / 434 original word tokens** now have **unapproved Heb
 - **CI ALERT:** [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7): new GitHub-hosted Actions runs have failed **before any steps executed** (`runner_id=0`, `steps=[]`). These new checkpoints have **NOT PASSED CI**. Prior OLT-018 green runs do not cover newly added tests. See [latest OLT-015 run](https://github.com/Northsw-spec/OLT/actions/runs/41091217157) and [OLT-017B run](https://github.com/Northsw-spec/OLT/actions/runs/41092053582).
 
 All publication gates remain **BLOCKED**. Do not claim independent scholarly approval, final English lexical choice, final footnotes at page bottom, or bilingual ODT/PDF merely from a source research document.
+
+## OLT-021 — Binding binitarian clarification
+
+The owner has clarified that **God is one; the Father and Son are one; one faith; one Lord Jesus Christ; the Lord Jesus is the Spirit**. The **Son is eternal and uncreated**, existed with the Father before the world's foundation, and joined the Father in creation prior to incarnation. **The eternal Son became human through Mary**; this was not the start of his existence. The owner emphatically **rejects “Jesus was the first being God created”** as a misreading of the Firstborn Son / Revelation 3:14 interpretation.
+
+This confession governs OLT's interpretive notes while preserving original-language source evidence and uncertain grammar. See [Masterprompt](docs/MASTERPROMPT.md), [the precise owner correction](docs/OLT-021_BINITARIAN_CREED_CLARIFICATION.md), [doctrinal framework](docs/DOCTRINAL_FRAMEWORK.md), and [machine-readable policy](data/policy/olt_theological_framework.json). No new biblical publication approval is implied.

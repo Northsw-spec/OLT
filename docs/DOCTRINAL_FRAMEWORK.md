@@ -9,6 +9,20 @@
 
 This controls the project's theological framing, Christian canonical comparisons and explanatory notes. It is not a claim that the original Hebrew or Greek automatically says this in every relevant passage. Do not use Trinitarian theology as the default explanation of OLT.
 
+## OLT-021 — Binding clarification on the eternally existing Son
+
+**One God:** The Father and the Son are **ONE**, one God — **one faith, one Lord Jesus Christ**. The owner's binitarian theology is neither Trinitarian nor a confession of two separate gods.
+
+**The Son is eternal and uncreated.** He existed with the Father **before the foundation of the world**. **The Father and Son created the world together** as a joint work, before the Son became human.
+
+**The eternal Son became human through Mary.** The human birth was **not** the beginning of the Son's existence. The owner rejects any claim that the Son is the first created being.
+
+**The Firstborn Son is NOT the first created creature.** The owner's reading of “beginning of God's creation” (Rev 3:14), in connection with the Firstborn Son and incarnation, must never be reconstructed as “God created Jesus first.” Nor does this doctrinal commitment resolve `ἀρχή` or the grammar of the source verse without separate textual inquiry.
+
+**The Lord Jesus is the Spirit.** This remains an explicit statement of the owner's binitarian belief, while any individual original-language occurrence of “spirit” still requires contextual source analysis.
+
+For the exact owner clarification, its meaning and preserved constraints see [OLT-021_BINITARIAN_CREED_CLARIFICATION.md](OLT-021_BINITARIAN_CREED_CLARIFICATION.md). This supersedes any contrary wording in earlier interpretive notes; it does not supersede Hebrew/Greek source evidence.
+
 ## Evidence firewall
 1. First establish the source Hebrew/Greek word, morphology, syntax, historical semantic range and context.
 2. Then choose a source-supported near-interlinear English expression under all existing owner lexical and tense locks.
