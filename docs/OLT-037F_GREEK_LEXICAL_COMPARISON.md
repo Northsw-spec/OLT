@@ -95,6 +95,48 @@ Each Greek original verse/word substring is checked at its original
 Unicode character span. Neither the lexicon source's words nor an
 English translation is used to reconstruct the actual Greek verse.
 
+## Actual pinned-source observations and selected Greek contexts
+
+The first complete source run [OLT-037F GitHub Actions
+41145879286](https://github.com/Northsw-spec/OLT/actions/runs/41145879286)
+retrieved both original LSJ files, checked their exact Git object
+hashes and ran **9/9 tests** of the original-source dossiers. The
+exact 22,875-byte JSON report was then frozen from the CI-generated
+source transfer, SHA-256
+`0dca8643adb191e437c7801d7e363450ed07ffbe31138d3bf0090460ca0eba2c`.
+A later and final CI run must require **exact regeneration** of this
+file from the original source evidence.
+
+| Native Perseus LSJ entry | Original source `<sense>` markup count | Original `<tr>` markup count | First short original LSJ `<tr>` source excerpt |
+|---|---:|---:|---|
+| `n62204 / le/gw1` | **1** | **1** | “lay” |
+| `n62205 / le/gw2` | **23** | **76** | “pick up” |
+| `n75695 / o(/ti^` | **15** | **12** | “that” |
+
+The quoted micro-excerpts and source-count metadata belong solely
+to the independently licensed Perseus LSJ source, **CC BY-SA 4.0**.
+Their first-entry order does NOT indicate which sense or English
+rendering is correct for **any** RP2018 biblical word occurrence.
+Native LSJ senses and STEPBible source dStrong suffixes have NOT
+been matched automatically.
+
+The exact five source Greek verse/word examples per research case
+were selected without assigning any semantic category:
+
+| Original research number | Five original RP2018 verse contexts |
+|---|---|
+| G3004 | `Matt.1.16`, `Mark.1.7`, `Matt.1.20`, `Matt.1.22`, `Luke.1.13` |
+| G3754 | `Matt.2.16`, `Mark.1.15`, `Matt.6.13`, `Luke.1.22`, `Matt.28.13` |
+
+Among the G3004 examples are the original source forms
+`λεγόμενος`, `λέγων`, `λέγοντος` and `Εἶπεν`;
+the G3754 examples contain both `ὅτι` and `Ὅτι`.
+Every source word retains its original editor morphology code
+and exact original accented verse string. These are observed
+source forms, not independently endorsed lexical or morphological
+analyses. Ten illustrative examples do not constitute a reviewed
+word-sense assignment over all 3,602 source occurrences.
+
 ## What OLT-037F proves — and what it cannot prove
 
 Engineering can prove that the pinned source files exist, the relevant
