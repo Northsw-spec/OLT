@@ -6485,5 +6485,20 @@
     "olt_014_genesis_26_31.json"
   ],
   "statement": "Machine coverage PASS means every source token is represented in research; does NOT mean every English rendering is correct or editorially approved.",
-  "status": "FULL_ORIGINAL_TOKEN_RESEARCH_COVERAGE_ONLY"
+  "status": "FULL_ORIGINAL_TOKEN_RESEARCH_COVERAGE_ONLY",
+  "research_note_anchor_manifest": [
+    {
+      "reference": "Gen.1.1",
+      "footnote_id": "gen-1-1-power",
+      "anchor": "[of His Power]",
+      "category": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT",
+      "source_references": [
+        "Gen.49.3",
+        "Deut.21.17"
+      ],
+      "status": "RESEARCH_NOTE_NOT_PUBLISHED",
+      "marker_placement": "IMMEDIATELY_AFTER_ANCHOR"
+    }
+  ],
+  "research_footnotes_count": 1
 }

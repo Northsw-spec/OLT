@@ -130,3 +130,11 @@ Approved new English word families: **0**. Approved homonym links: **0**. The 94
 - Current main research reading: **In the Beginning [of His Power] God — He shaped the Heavens and the Earth.**
 - The exact phrase `[of His Power]` is an owner-selected editorial/theological supplement, not an original Hebrew expression, and must carry a note comparing Gen 49:3 (`וְרֵאשִׁית אֹונִי`) and Deut 21:17 (`רֵאשִׁית אֹנוֹ`). Those passages use the separate noun `אֹון` meaning strength/vigor. `His` is also supplied.
 - Original seven source word IDs and all lexical owner locks are unchanged. Stage: owner wording/placement accepted; independent philological proofread and publication remain BLOCKED.
+
+## OLT-019 — Inline-anchored Genesis 1:1 research footnote (CI status unresolved)
+- The owner-selected wording remains exactly `In the Beginning [of His Power] God — He shaped the Heavens and the Earth.`.
+- GitHub Markdown footnote marker now appears immediately after `[of His Power]`, not after the end of the verse.
+- New reusable `scripts/research_footnotes.py` and negative tests check a unique note ID, exact phrase anchor, verse reference, source evidence, and nonpublication status.
+- The combined 434-token research JSON includes one note-anchor manifest entry; all original Hebrew source tokens remain unchanged.
+- The first GitHub Actions attempts for this checkpoint on October 30, 2026 failed **before any job steps started**, with no test logs available; retry also failed before steps. Do not report OLT-019 as CI PASS until the required workflows actually run successfully. Prior OLT-018 CI success does not verify this new code.
+- **Research preview only**: genuine page-bottom typography, scholarly review and publication remain BLOCKED.

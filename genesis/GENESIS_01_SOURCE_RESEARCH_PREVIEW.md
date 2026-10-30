@@ -8,7 +8,7 @@ Hebrew word spelling is displayed with OSHB's analytic morpheme separators remov
 
 **Masoretic Hebrew:** בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ
 
-**OLT English research proposal:** In the Beginning [of His Power] God — He shaped the Heavens and the Earth.[^gen-1-1-power]
+**OLT English research proposal:** In the Beginning [of His Power][^gen-1-1-power] God — He shaped the Heavens and the Earth.
 
 ### Gen.1.2
 
