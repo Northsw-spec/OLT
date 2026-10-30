@@ -47,7 +47,7 @@ class TestOLT037E(unittest.TestCase):
 
     def test_wrong_xml_bytes_or_license_statement_never_pass(self):
         m=read_abbott_manifest()
-        for fake in [b"",b"<TEI><entry n='λέγω|G3004'/></TEI>",
+        for fake in [b"","<TEI><entry n='λέγω|G3004'/></TEI>".encode("utf-8"),
                      b"X"*SOURCE_LENGTH]:
             with self.subTest(size=len(fake)):
                 with self.assertRaises(SourceContractError):
