@@ -1,0 +1,154 @@
+{
+  "project": "Olund's Linked Translation",
+  "checkpoint": "OLT-017B",
+  "scope": "FOUR_GENESIS_1_2_LEXEMES_SCHOLARLY_RESEARCH_ONLY",
+  "source_basis": "pinned OSHB original token ledger and independently accessible BDB entries/research abstracts",
+  "english_main_text_changes": 0,
+  "source_lexeme_ids_count": 4,
+  "source_token_ids_count": 4,
+  "preserve_current_english_corpus": true,
+  "owner_locked_families_changed": false,
+  "new_approved_english_families": 0,
+  "approved_homonym_links": 0,
+  "english_morphological_independent_approval": false,
+  "evidence_limits": "BDB dictionary evidence, a few scholarly article abstracts and displayed morphology; no full independent multi-scholar signoff.",
+  "publication_status": "BLOCKED",
+  "cases": [
+    {
+      "question_id": "OLT-017B-TOHU",
+      "reference": "Gen.1.2",
+      "source_token_id": "01aPd",
+      "exact_lemma": "8414",
+      "pointed_hebrew": "תֹ֨הוּ֙",
+      "raw_morphology": "HNcmsa",
+      "candidate_surface": "waste",
+      "research_alternatives": [
+        "formlessness",
+        "desolation",
+        "chaos (interpretive framing)"
+      ],
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/8414.htm",
+          "type": "BDB_LEXICAL_ENTRY",
+          "claim": "Includes formlessness, confusion, waste, unreality, with context-specific meanings."
+        },
+        {
+          "url": "https://doaj.org/article/6fa0339d241c4cd8a5318b88b2ae22da",
+          "type": "JOURNAL_ABSTRACT",
+          "claim": "Routledge (2010) discusses ordering chaos and unresolved theological tensions."
+        },
+        {
+          "url": "https://studia.reviste.ubbcluj.ro/index.php/subbtheologiaorthodoxa/article/view/3891",
+          "type": "JOURNAL_ABSTRACT",
+          "claim": "Moș (2017) surveys Jewish, Christian patristic and modern treatments with differing senses."
+        }
+      ],
+      "commentary": "The source does not lexically require either modern physical emptiness or preexisting cosmological matter. 'Waste' remains provisional. Jeremiah 4:23 repeats tohu wabohu in a prophetic devastation context; that later use is intertextual evidence, not a simple one-to-one sense law.",
+      "related_passages": [
+        "Jer.4.23",
+        "Isa.34.11",
+        "Isa.45.18"
+      ],
+      "wordplay_relation": "POSSIBLE_FIXED_COLLOCATION_WITH_BOHU_NOT_SAME_ROOT",
+      "homonym_identity_approved": false
+    },
+    {
+      "question_id": "OLT-017B-BOHU",
+      "reference": "Gen.1.2",
+      "source_token_id": "01eYX",
+      "exact_lemma": "922",
+      "pointed_hebrew": "וָ/בֹ֔הוּ",
+      "raw_morphology": "HC/Ncmsa",
+      "candidate_surface": "and emptiness",
+      "research_alternatives": [
+        "and voidness",
+        "and desolation"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.studylight.org/lexicons/eng/hebrew/922.html",
+          "type": "BDB_LEXICAL_ENTRY",
+          "claim": "Defines bohu as emptiness; cites Gen 1:2, Jeremiah 4:23 and Isaiah 34:11 with tohu."
+        },
+        {
+          "url": "https://studia.reviste.ubbcluj.ro/index.php/subbtheologiaorthodoxa/article/view/3891",
+          "type": "JOURNAL_ABSTRACT",
+          "claim": "Documents different interpretations of the compound expression."
+        }
+      ],
+      "commentary": "Bohu is a DIFFERENT original Hebrew noun from tohu, even though they collocate and have phonetic resemblance. The prefixed waw is separately represented by 'and'; not an independent lexical synonym of tohu.",
+      "related_passages": [
+        "Jer.4.23",
+        "Isa.34.11"
+      ],
+      "wordplay_relation": "PHONETIC_PARALLELISM_NOT_VERIFIED_HOMONYM",
+      "homonym_identity_approved": false
+    },
+    {
+      "question_id": "OLT-017B-TEHOM",
+      "reference": "Gen.1.2",
+      "source_token_id": "01PB6",
+      "exact_lemma": "8415",
+      "pointed_hebrew": "תְה֑וֹם",
+      "raw_morphology": "HNcbsa",
+      "candidate_surface": "the Deep",
+      "research_alternatives": [
+        "the deep waters",
+        "the abyss"
+      ],
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/8415.htm",
+          "type": "BDB_LEXICAL_ENTRY",
+          "claim": "Deep, sea or abyss; sources include subterranean water contexts."
+        },
+        {
+          "url": "https://escholarship.org/uc/item/0rn492nd",
+          "type": "DISSERTATION_REPOSITORY_ABSTRACT",
+          "claim": "Scholarly review describes competing deity/place/monster readings and warns about overlinking tehom directly to Tiamat."
+        }
+      ],
+      "commentary": "The source Genesis 1:2 writes a common noun for the deep, not the personal name 'Tiamat'. A debated literary ANE parallel is not a verified loanword or synonym and cannot produce an approved beneath-word 'Tiamat' gloss without a further, independent argument.",
+      "related_passages": [
+        "Gen.7.11",
+        "Gen.49.25",
+        "Deut.33.13"
+      ],
+      "wordplay_relation": "CROSS_CULTURAL_COGNATE_OR_LITERARY_ECHO_DISPUTED",
+      "homonym_identity_approved": false
+    },
+    {
+      "question_id": "OLT-017B-RACHAPH",
+      "reference": "Gen.1.2",
+      "source_token_id": "01yNB",
+      "exact_lemma": "7363 b",
+      "pointed_hebrew": "מְרַחֶ֖פֶת",
+      "raw_morphology": "HVprfsa",
+      "candidate_surface": "hovering",
+      "research_alternatives": [
+        "brooding (interpretive)",
+        "fluttering (context-dependent)"
+      ],
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/7363.htm",
+          "type": "BDB_LEXICAL_ENTRY",
+          "claim": "Piel hover; Gen 1:2 feminine active participle and Deut 32:11 imperfect; Qal root grouping is distinguished and connection uncertain."
+        },
+        {
+          "url": "https://seethebible.org/bible/genesis/1/2",
+          "type": "MORPHOLOGY_DISPLAY",
+          "claim": "Reports Piel active participle feminine singular, not narrative wayyiqtol."
+        }
+      ],
+      "commentary": "The source form is Piel active participle feminine singular in agreement with ruach, and must not be incorrectly subjected to the all-wayyiqtol-simple-past policy. Deut 32:11's bird-hovering image makes a semantic comparison possible, without proving the subject of Genesis 1:2 is literally a bird.",
+      "related_passages": [
+        "Deut.32.11",
+        "Jer.23.9"
+      ],
+      "wordplay_relation": "DISTINGUISH_PIEL_HOVER_FROM_QAL_TREMBLE_UNCERTAIN_ROOT_GROUPING",
+      "homonym_identity_approved": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: OLT-017B source-anchored scholarship research
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/research/olt_017b_scholarly_lexemes.json"
+      - "docs/OLT-017B_GENESIS_1_2_LEXICAL_RESEARCH.md"
+      - "tests/test_olt_017b.py"
+      - ".github/workflows/olt-017b.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scholarly_review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify 4 actual Hebrew source tokens and no false lexical signoff
+        run: python -m unittest discover -s tests -p 'test_olt_017b.py' -v
