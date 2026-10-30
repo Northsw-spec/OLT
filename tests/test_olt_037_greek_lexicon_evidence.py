@@ -78,6 +78,16 @@ class TestOLT037(unittest.TestCase):
         self.assertIsNone(many["selected_sense"])
         self.assertIsNone(many["approved_english_translation"])
         self.assertEqual(many["publication_status"], "BLOCKED")
+        alt_word = dict(word, additional_editor_analyses=[{
+            "strong_number": "3056", "morphology_code": "N-NSM"
+        }])
+        with_alt = _word_evidence(alt_word, index, m)
+        self.assertEqual(len(with_alt["rp2018_editor_alternative_numeric_candidate_sets"]), 1)
+        alt_evidence = with_alt["rp2018_editor_alternative_numeric_candidate_sets"][0]
+        self.assertEqual(alt_evidence["rp2018_editor_alternative_strong"], "3056")
+        self.assertEqual(len(alt_evidence["numeric_reference_candidate_rows_NOT_CERTIFIED"]), 1)
+        self.assertIsNone(alt_evidence["selected_lemma"])
+        self.assertFalse(alt_evidence["translation_approved"])
         single = _word_evidence(dict(word, official_editor_strong_number="3056"), index, m)
         self.assertEqual(single["candidate_count"], 1)
         self.assertEqual(single["numeric_only_source_reference_status"],
