@@ -1,0 +1,58 @@
+name: OLT-037E independent NT Greek source and LSJ key diagnostics (NO approval)
+on:
+  pull_request:
+    paths:
+      - "scripts/fetch_olt_037e_abbott.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "olt_core/greek_koine_crosscheck.py"
+      - "olt_core/greek_independent_lsj.py"
+      - "data/engine/olt_037e_abbott_smith_source_manifest.json"
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "data/quality/olt_037e_abbott_koine_and_lsj_key_diagnostics.json"
+      - "data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "tests/test_olt_037e_koine_crosscheck.py"
+      - "docs/OLT-037E_KOINE_GREEK_LEXICON_CROSSCHECK.md"
+      - ".github/workflows/olt-037e.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fetch_olt_037e_abbott.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "olt_core/greek_koine_crosscheck.py"
+      - "olt_core/greek_independent_lsj.py"
+      - "data/engine/olt_037e_abbott_smith_source_manifest.json"
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "data/quality/olt_037e_abbott_koine_and_lsj_key_diagnostics.json"
+      - "data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "tests/test_olt_037e_koine_crosscheck.py"
+      - "docs/OLT-037E_KOINE_GREEK_LEXICON_CROSSCHECK.md"
+      - ".github/workflows/olt-037e.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-independent-nt-lexicon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify upstream public-domain README and byte-identical Abbott-Smith Greek NT TEI
+        run: python scripts/fetch_olt_037e_abbott.py --output "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml"
+      - name: Verify the same two pinned original Perseus LSJ CC BY-SA XML shards as OLT-037D
+        run: python scripts/fetch_olt_037d_lsj.py --output-dir "$RUNNER_TEMP"
+      - name: Negative controls and complete independently pinned source crosscheck
+        env:
+          OLT037E_ABBOTT_PATH: ${{ runner.temp }}/olt037e-abbott-smith.tei.xml
+          OLT037E_LSJ_DIR: ${{ runner.temp }}
+        run: python -m unittest discover -s tests -p 'test_olt_037e_koine_crosscheck.py' -v
+      - name: Report source-entry evidence and orthographic diagnostic only
+        run: python -m olt_core.greek_koine_crosscheck --abbott "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml" --lsj-dir "$RUNNER_TEMP" --audit
+      - name: Require exact byte-for-byte regeneration of frozen Koine Greek research evidence
+        run: python -m olt_core.greek_koine_crosscheck --abbott "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml" --lsj-dir "$RUNNER_TEMP" --verify-checkpoint
