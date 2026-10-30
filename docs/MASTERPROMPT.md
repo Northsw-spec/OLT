@@ -99,3 +99,4 @@ Adopt the user's original Genesis ODT only as a STRUCTURAL MODEL, never as unque
 5. **INDEPENDENT REVIEW:** manually re-check every original word and linked note, run visual A4/ODT/PDF inspection, document sign-off.
 
 A future chapter can be marked PUBLISHED only if all five stages verifiably pass. CI foundation green does not satisfy absent source-data gates. Use ONLY https://github.com/Northsw-spec/OLT for this fresh project. Preserve approvals in its own new decision log; do not import older project files or old misleading success claims.
+- **Noah** above **Rest** — Hebrew נֹחַ is associated with נוח (*nuach*, rest). Genesis 5:29 uses the DIFFERENT root נחם (*nacham*, comfort), making a phonetic naming wordplay, not a shared-root dictionary identity. Keep each occurrence source-linked and the owner's lower word exactly **Rest**.
