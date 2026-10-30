@@ -26,10 +26,17 @@ The --check mode fails if the committed HTML differs from freshly rendered canon
 
 ## Verification boundaries
 
-Eight focused regression cases cover exact underword positioning and colors, seven source IDs, retained English, research notes, denied global substitution, denied false homonym/lexical signoff, and denied publication status.
+Eight focused regression cases cover exact underword positioning and colors, an explicit accessible text-space after the stacked word, seven source IDs, retained English, research notes, denied global substitution, denied false homonym/lexical signoff, and denied publication status.
 
 A local run against a representative fixture exercised these tests; GitHub Actions against the repository remain **UNVERIFIED until a hosted runner executes**. See [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7) for the pre-step runner failures. A future CI PASS validates deterministic code/data behavior only, not independent Hebrew philology or visual print QA.
 
 ## Remaining gates
 
 Independent expert review of morphology and lexical interpretation; owner editorial approvals for outstanding Genesis English proposals; manuscript line-breaking and real page-bottom notes; visual inspection of actual A4 ODT/PDF; explicit final publication authorization. All remain **BLOCKED**.
+
+## October 30 CI follow-up
+
+- OLT-023's initial GitHub-hosted runner attempt on the now-public repository **passed eight focused tests** and the derived HTML check ([run 41103609566](https://github.com/Northsw-spec/OLT/actions/runs/41103609566)).
+- The foundation CI subsequently identified four real validation-precedence regressions. Those were fixed independently in [OLT-024 PR #9](https://github.com/Northsw-spec/OLT/pull/9), merged to main at commit 5c3ed351eac5a2c5ae5e9f6a936404a1ff1a5cf3.
+- The final layout revision restores a literal whitespace text boundary after the vertically stacked word. Both source-derived HTML and regression check assert the boundary.
+- **Do not infer a successful merge or final publication** from this statement; the current PR must be tested against the latest main and its check runs must succeed.
