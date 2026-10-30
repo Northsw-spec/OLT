@@ -125,16 +125,9 @@ def build_review_queue(groups: dict[int, list[dict[str, Any]]],
                     alt_candidates = groups.get(alt_num, [])
                     if not alt_candidates:
                         raise SourceContractError("Unresolved missing alternative lexicon source")
-                    if alt_num == number:
-                        relation = "SAME_NUMERIC_STRONG_DIFFERENT_EDITOR_ANALYSIS_POSSIBLE"
-                    else:
-                        relation = "DISTINCT_NUMERIC_STRONG_IN_EDITOR_ALTERNATIVE"
                     all_counts["source_additional_alternative_analyses"] += 1
-                    # Alternative is evidence on a single existing source word;
-                    # it is NOT another primary token or selected morphological parsing.
-                    # Collect all 28 in a stable, separate review inventory.
-                    if "alternative_instances" not in all_counts:
-                        pass
+                    # Source alternative is a separate editor analysis on the
+                    # existing word, never an additional Greek token.
 
     # A second pass builds the small alternative-review list without ever
     # multiplying primary source word counts or selecting a source interpretation.
