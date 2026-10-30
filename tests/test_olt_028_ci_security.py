@@ -16,7 +16,8 @@ WAVE_FOUR={
 class TestOLT028(unittest.TestCase):
  def test_every_workflow_has_no_default_branch_write(self):
   files=sorted(WORKFLOW_DIR.glob("*.yml"))
-  self.assertEqual(len(files),22)
+  # Twenty-two workflows existed at OLT-028; newly added checks must be scanned too.
+  self.assertGreaterEqual(len(files),22)
   for path in files:
    with self.subTest(workflow=path.name):
     s=path.read_text(encoding="utf-8")
