@@ -1,0 +1,456 @@
+{
+  "checkpoint": "OLT-037F",
+  "dossiers": [
+    {
+      "abbott_smith_original_entry_native_n_NOT_OLT_LEMMA": "λέγω|G2036|G2046|G3004|G4483",
+      "abbott_smith_original_source_def_or_gloss_NOT_OLT_TRANSLATION": [
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "to pick out"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "gather"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "reckon"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "recount"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "to say"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "speak"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "affirm"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "declare"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "to mean"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "to call"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "name"
+        }
+      ],
+      "abbott_smith_original_source_orth_NOT_APPROVED": [
+        "λέγω"
+      ],
+      "abbott_smith_original_strong_references_NOT_UNIQUE_LEXEME_KEYS": [
+        "2036",
+        "2046",
+        "3004",
+        "4483"
+      ],
+      "approved_english_word_or_phrase": null,
+      "case_id_OLT_DERIVED": "RP2018-v3.3.2-NumericStrong-3004",
+      "cross_lexicon_same_english_gloss_is_not_independent_agreement": true,
+      "different_original_rp2018_editor_morphologies_never_auto_assign_senses": true,
+      "expert_approved_contextual_word_senses": [],
+      "human_reviewer_date": null,
+      "human_reviewer_identity": null,
+      "independent_koine_lexicon_critical_analysis_by_human": null,
+      "independent_philological_signoff": false,
+      "independently_verified_contextual_greek_lemma": null,
+      "lsj_key_digit_suffix_is_NOT_stepbible_dstrong_suffix": true,
+      "original_rp2018_editor_strong_number": "3004",
+      "original_source_context_examples_NOT_INTERPRETED": [
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER",
+            "FIRST_OCCURRENCE_OF_EXACT_UNICODE_SURFACE",
+            "FIRST_OCCURRENCE_OF_ORIGINAL_EDITOR_MORPH_CODE"
+          ],
+          "exact_original_greek_word_UNALTERED": "λεγόμενος",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.1.16:w0014",
+          "original_greek_reference": "Matt.1.16",
+          "original_greek_verse_UNALTERED": "Ἰακὼβ δὲ ἐγέννησεν τὸν Ἰωσὴφ τὸν ἄνδρα Μαρίας, ἐξ ἧς ἐγεννήθη Ἰησοῦς, ὁ λεγόμενος χριστός.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "V-PPP-NSM",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 81,
+            "start": 72
+          },
+          "original_word_ordinal_in_verse": 14,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER"
+          ],
+          "exact_original_greek_word_UNALTERED": "λέγων",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Mark.1.7:w0003",
+          "original_greek_reference": "Mark.1.7",
+          "original_greek_verse_UNALTERED": "Καὶ ἐκήρυσσεν, λέγων, Ἔρχεται ὁ ἰσχυρότερός μου ὀπίσω μου, οὗ οὐκ εἰμὶ ἱκανὸς κύψας λῦσαι τὸν ἱμάντα τῶν ὑποδημάτων αὐτοῦ.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "V-PAP-NSM",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 20,
+            "start": 15
+          },
+          "original_word_ordinal_in_verse": 3,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_OF_EXACT_UNICODE_SURFACE",
+            "FIRST_OCCURRENCE_OF_ORIGINAL_EDITOR_MORPH_CODE"
+          ],
+          "exact_original_greek_word_UNALTERED": "λέγων",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.1.20:w0012",
+          "original_greek_reference": "Matt.1.20",
+          "original_greek_verse_UNALTERED": "Ταῦτα δὲ αὐτοῦ ἐνθυμηθέντος, ἰδού, ἄγγελος κυρίου κατ’ ὄναρ ἐφάνη αὐτῷ, λέγων, Ἰωσήφ, υἱὸς Δαυίδ, μὴ φοβηθῇς παραλαβεῖν Μαριὰμ τὴν γυναῖκά σου· τὸ γὰρ ἐν αὐτῇ γεννηθὲν ἐκ πνεύματός ἐστιν ἁγίου.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "V-PAP-NSM",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 77,
+            "start": 72
+          },
+          "original_word_ordinal_in_verse": 12,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_OF_EXACT_UNICODE_SURFACE",
+            "FIRST_OCCURRENCE_OF_ORIGINAL_EDITOR_MORPH_CODE"
+          ],
+          "exact_original_greek_word_UNALTERED": "λέγοντος",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.1.22:w0015",
+          "original_greek_reference": "Matt.1.22",
+          "original_greek_verse_UNALTERED": "Τοῦτο δὲ ὅλον γέγονεν, ἵνα πληρωθῇ τὸ ῥηθὲν ὑπὸ τοῦ κυρίου διὰ τοῦ προφήτου, λέγοντος,",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "V-PAP-GSM",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 85,
+            "start": 77
+          },
+          "original_word_ordinal_in_verse": 15,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER"
+          ],
+          "exact_original_greek_word_UNALTERED": "Εἶπεν",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Luke.1.13:w0001",
+          "original_greek_reference": "Luke.1.13",
+          "original_greek_verse_UNALTERED": "Εἶπεν δὲ πρὸς αὐτὸν ὁ ἄγγελος, Μὴ φοβοῦ, Ζαχαρία· διότι εἰσηκούσθη ἡ δέησίς σου, καὶ ἡ γυνή σου Ἐλισάβετ γεννήσει υἱόν σοι, καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰωάννην.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "V-2AAI-3S",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 5,
+            "start": 0
+          },
+          "original_word_ordinal_in_verse": 1,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        }
+      ],
+      "owner_english_master_approval": false,
+      "perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA": [
+        {
+          "first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT": [
+            "lay"
+          ],
+          "original_lsj_entry_body_sha256_NOT_ENG_LITERARY_CERTIFICATION": "d23ac9908f45a9c24cb20c421b31d5a9ca4f40e0bcca50ba21aa92d6441c8cd9",
+          "original_lsj_entry_body_unicode_char_length": 542,
+          "publication_status": "BLOCKED",
+          "selected_contextual_sense": null,
+          "source_entry_consultation_status": "UNREVIEWED_SOURCE_STRUCTURE_AND_SHORT_GLOSS",
+          "source_original_bibl_tag_count": 0,
+          "source_original_lsj_tei_entry_id": "n62204",
+          "source_original_lsj_tei_entry_key": "le/gw1",
+          "source_original_orth_tag_count": 1,
+          "source_original_ref_tag_count": 1,
+          "source_original_tr_tag_count": 1,
+          "source_sense_n_labels_FIRST_12_NOT_SEMANTIC_APPROVAL": [
+            "A"
+          ],
+          "source_sense_opening_tag_count": 1
+        },
+        {
+          "first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT": [
+            "pick up"
+          ],
+          "original_lsj_entry_body_sha256_NOT_ENG_LITERARY_CERTIFICATION": "427ad6d2b013399fcc9ed5ea4b879219125d9be604a8cc9e914a030cabcb3f0c",
+          "original_lsj_entry_body_unicode_char_length": 103188,
+          "publication_status": "BLOCKED",
+          "selected_contextual_sense": null,
+          "source_entry_consultation_status": "UNREVIEWED_SOURCE_STRUCTURE_AND_SHORT_GLOSS",
+          "source_original_bibl_tag_count": 235,
+          "source_original_lsj_tei_entry_id": "n62205",
+          "source_original_lsj_tei_entry_key": "le/gw2",
+          "source_original_orth_tag_count": 1,
+          "source_original_ref_tag_count": 1,
+          "source_original_tr_tag_count": 76,
+          "source_sense_n_labels_FIRST_12_NOT_SEMANTIC_APPROVAL": [
+            "A",
+            "2",
+            "II",
+            "b",
+            "2",
+            "III",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "source_sense_opening_tag_count": 23
+        }
+      ],
+      "publication_status": "BLOCKED",
+      "review_questions_NOT_YET_ANSWERED": [
+        "What is the exact textual and morphological reading at each cited original word locator?",
+        "Which source dictionary sense definitions, if any, are independently justified by this original Greek syntax and literary context?",
+        "Do the source lexica depend on each other for these meanings, and which independent Koine attestations support or challenge the hypothesis?",
+        "Which alternative lexical meanings or text-critical readings remain plausible, and what primary Greek evidence rules them out?",
+        "Has a qualified human reviewer signed an exact-source rationale, and has the owner separately approved any English translation?"
+      ],
+      "source_lsj_and_abbott_independent_votes_count": null,
+      "source_original_unicode_surface_count": 83,
+      "stepbible_dstrong_candidates_ORIGINAL_EDITOR_EVIDENCE": [
+        "G3004G",
+        "G3004H"
+      ],
+      "target_language_verse_approved": false,
+      "total_original_rp2018_word_occurrences": 2315
+    },
+    {
+      "abbott_smith_original_entry_native_n_NOT_OLT_LEMMA": "ὅτι|G3754",
+      "abbott_smith_original_source_def_or_gloss_NOT_OLT_TRANSLATION": [
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "that"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "for that"
+        },
+        {
+          "original_source_tag": "gloss",
+          "original_source_text": "because"
+        }
+      ],
+      "abbott_smith_original_source_orth_NOT_APPROVED": [
+        "ὅτι"
+      ],
+      "abbott_smith_original_strong_references_NOT_UNIQUE_LEXEME_KEYS": [
+        "3754"
+      ],
+      "approved_english_word_or_phrase": null,
+      "case_id_OLT_DERIVED": "RP2018-v3.3.2-NumericStrong-3754",
+      "cross_lexicon_same_english_gloss_is_not_independent_agreement": true,
+      "different_original_rp2018_editor_morphologies_never_auto_assign_senses": true,
+      "expert_approved_contextual_word_senses": [],
+      "human_reviewer_date": null,
+      "human_reviewer_identity": null,
+      "independent_koine_lexicon_critical_analysis_by_human": null,
+      "independent_philological_signoff": false,
+      "independently_verified_contextual_greek_lemma": null,
+      "lsj_key_digit_suffix_is_NOT_stepbible_dstrong_suffix": true,
+      "original_rp2018_editor_strong_number": "3754",
+      "original_source_context_examples_NOT_INTERPRETED": [
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER",
+            "FIRST_OCCURRENCE_OF_EXACT_UNICODE_SURFACE",
+            "FIRST_OCCURRENCE_OF_ORIGINAL_EDITOR_MORPH_CODE"
+          ],
+          "exact_original_greek_word_UNALTERED": "ὅτι",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.2.16:w0004",
+          "original_greek_reference": "Matt.2.16",
+          "original_greek_verse_UNALTERED": "Τότε Ἡρῴδης, ἰδὼν ὅτι ἐνεπαίχθη ὑπὸ τῶν μάγων, ἐθυμώθη λίαν, καὶ ἀποστείλας ἀνεῖλεν πάντας τοὺς παῖδας τοὺς ἐν Βηθλεὲμ καὶ ἐν πᾶσιν τοῖς ὁρίοις αὐτῆς, ἀπὸ διετοῦς καὶ κατωτέρω, κατὰ τὸν χρόνον ὃν ἠκρίβωσεν παρὰ τῶν μάγων.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "CONJ",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 21,
+            "start": 18
+          },
+          "original_word_ordinal_in_verse": 4,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER"
+          ],
+          "exact_original_greek_word_UNALTERED": "ὅτι",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Mark.1.15:w0003",
+          "original_greek_reference": "Mark.1.15",
+          "original_greek_verse_UNALTERED": "καὶ λέγων ὅτι Πεπλήρωται ὁ καιρός, καὶ ἤγγικεν ἡ βασιλεία τοῦ θεοῦ· μετανοεῖτε, καὶ πιστεύετε ἐν τῷ εὐαγγελίῳ.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "CONJ",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 13,
+            "start": 10
+          },
+          "original_word_ordinal_in_verse": 3,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_OF_EXACT_UNICODE_SURFACE"
+          ],
+          "exact_original_greek_word_UNALTERED": "Ὅτι",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.6.13:w0013",
+          "original_greek_reference": "Matt.6.13",
+          "original_greek_verse_UNALTERED": "Καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ. Ὅτι σοῦ ἐστιν ἡ βασιλεία καὶ ἡ δύναμις καὶ ἡ δόξα εἰς τοὺς αἰῶνας. Ἀμήν.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "CONJ",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 74,
+            "start": 71
+          },
+          "original_word_ordinal_in_verse": 13,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "FIRST_OCCURRENCE_IN_BOOK_SOURCE_ORDER"
+          ],
+          "exact_original_greek_word_UNALTERED": "ὅτι",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Luke.1.22:w0009",
+          "original_greek_reference": "Luke.1.22",
+          "original_greek_verse_UNALTERED": "Ἐξελθὼν δὲ οὐκ ἠδύνατο λαλῆσαι αὐτοῖς· καὶ ἐπέγνωσαν ὅτι ὀπτασίαν ἑώρακεν ἐν τῷ ναῷ· καὶ αὐτὸς ἦν διανεύων αὐτοῖς, καὶ διέμενεν κωφός.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "CONJ",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 56,
+            "start": 53
+          },
+          "original_word_ordinal_in_verse": 9,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        },
+        {
+          "earlier_source_sample_selection_reasons": [
+            "LAST_OCCURRENCE_IN_BOOK_SOURCE_ORDER"
+          ],
+          "exact_original_greek_word_UNALTERED": "ὅτι",
+          "olt_derived_greek_word_locator_NOT_NATIVE_ID": "rp2018-v3.3.2:Matt.28.13:w0003",
+          "original_greek_reference": "Matt.28.13",
+          "original_greek_verse_UNALTERED": "λέγοντες, Εἴπατε ὅτι Οἱ μαθηταὶ αὐτοῦ νυκτὸς ἐλθόντες ἔκλεψαν αὐτὸν ἡμῶν κοιμωμένων.",
+          "original_raw_rp2018_editor_morphology_CODE_NOT_INDEPENDENTLY_VERIFIED": "CONJ",
+          "original_source_unicode_word_character_span": {
+            "end_exclusive": 20,
+            "start": 17
+          },
+          "original_word_ordinal_in_verse": 3,
+          "owner_english_lexical_equivalent": null,
+          "publication_status": "BLOCKED",
+          "selected_independent_lexicon_entry": null,
+          "selected_original_source_lexical_sense": null,
+          "source_context_hypothesis_reviewed": false
+        }
+      ],
+      "owner_english_master_approval": false,
+      "perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA": [
+        {
+          "first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT": [
+            "that"
+          ],
+          "original_lsj_entry_body_sha256_NOT_ENG_LITERARY_CERTIFICATION": "c67542b7062c1f6ac9792b9c6aa65f873aec8c8bad599c468407c51075dd5ee3",
+          "original_lsj_entry_body_unicode_char_length": 31012,
+          "publication_status": "BLOCKED",
+          "selected_contextual_sense": null,
+          "source_entry_consultation_status": "UNREVIEWED_SOURCE_STRUCTURE_AND_SHORT_GLOSS",
+          "source_original_bibl_tag_count": 70,
+          "source_original_lsj_tei_entry_id": "n75695",
+          "source_original_lsj_tei_entry_key": "o(/ti^",
+          "source_original_orth_tag_count": 2,
+          "source_original_ref_tag_count": 1,
+          "source_original_tr_tag_count": 12,
+          "source_sense_n_labels_FIRST_12_NOT_SEMANTIC_APPROVAL": [
+            "A",
+            "I",
+            "a",
+            "b",
+            "2",
+            "II",
+            "2",
+            "III",
+            "2",
+            "IV",
+            "V",
+            "2"
+          ],
+          "source_sense_opening_tag_count": 15
+        }
+      ],
+      "publication_status": "BLOCKED",
+      "review_questions_NOT_YET_ANSWERED": [
+        "What is the exact textual and morphological reading at each cited original word locator?",
+        "Which source dictionary sense definitions, if any, are independently justified by this original Greek syntax and literary context?",
+        "Do the source lexica depend on each other for these meanings, and which independent Koine attestations support or challenge the hypothesis?",
+        "Which alternative lexical meanings or text-critical readings remain plausible, and what primary Greek evidence rules them out?",
+        "Has a qualified human reviewer signed an exact-source rationale, and has the owner separately approved any English translation?"
+      ],
+      "source_lsj_and_abbott_independent_votes_count": null,
+      "source_original_unicode_surface_count": 2,
+      "stepbible_dstrong_candidates_ORIGINAL_EDITOR_EVIDENCE": [
+        "G3754G",
+        "G3754H"
+      ],
+      "target_language_verse_approved": false,
+      "total_original_rp2018_word_occurrences": 1287
+    }
+  ],
+  "human_philological_approvals": 0,
+  "lsj_original_entry_structures_verified_against_pinned_git_blobs": 3,
+  "number_of_comparison_dossiers": 2,
+  "number_of_original_greek_verse_word_examples": 10,
+  "original_greek_word_sample_source_is_olt037c": true,
+  "owner_english_master_approvals": 0,
+  "publication_status": "BLOCKED",
+  "purpose": "ORIGINAL_GREEK_CONTEXT_VS_SOURCE_DICTIONARY_ENTRY_COMPARISON_NO_SEMANTIC_DECISIONS",
+  "source_abbott_olt037e_sha256": "f6e0c31f4a7c736df307e55c10d0860ea47edf7aa6dc2c28b61d6b81430ee435",
+  "source_abbott_public_domain_AS_ASSERTED_BY_UPSTREAM": true,
+  "source_lsj_attribution": "Liddell, Scott, and Jones, A Greek-English Lexicon (1940); digital TEI-XML by Perseus Digital Library, Tufts University, CC BY-SA 4.0. Original source: https://github.com/PerseusDL/lexica",
+  "source_lsj_license": "CC BY-SA 4.0",
+  "source_lsj_pinned_commit": "1c34cdf756c63cf37db61bd366d733431dbd7aa0",
+  "source_rp2018_olt037c_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+  "source_stepbible_license": "CC BY 4.0",
+  "translated_scripture_verses_published": 0
+}
