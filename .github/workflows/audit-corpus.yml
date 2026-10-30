@@ -8,10 +8,30 @@ on:
       - "tests/test_lexicon_candidates.py"
       - "tests/test_corpus_audit.py"
       - ".github/workflows/audit-corpus.yml"
+      - "data/quality/corpus_audit.json"
+      - "data/quality/observed_exact_lemmas.json"
+      - "data/quality/genesis_01_morphology.json"
+      - "data/quality/lexicon_candidates.jsonl"
+      - "data/quality/genesis_01_owner_lock_anchors.json"
+      - "data/quality/lexicon_join_report.json"
+  pull_request:
+    paths:
+      - "scripts/audit_corpus.py"
+      - "scripts/build_lexicon_candidates.py"
+      - "tests/test_lexicon_candidates.py"
+      - "tests/test_corpus_audit.py"
+      - ".github/workflows/audit-corpus.yml"
+      - "data/quality/corpus_audit.json"
+      - "data/quality/observed_exact_lemmas.json"
+      - "data/quality/genesis_01_morphology.json"
+      - "data/quality/lexicon_candidates.jsonl"
+      - "data/quality/genesis_01_owner_lock_anchors.json"
+      - "data/quality/lexicon_join_report.json"
+      - "tests/test_olt_028_ci_security.py"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: olt-corpus-audit
@@ -24,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -60,15 +80,13 @@ jobs:
           assert z["status"]=="IMPORTED_SOURCE_MORPHOLOGY_NOT_INDEPENDENTLY_REVIEWED"
           print("SOURCE TAG AUDIT PASS, NOT MANUAL PHILOLOGICAL SIGNOFF")
           PY
-      - name: Commit audited derived source reports
+      - name: Detect modified or untracked corpus research outputs (read-only)
         run: |
           set -euo pipefail
-          git config user.name "olt-audit[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/quality
-          if git diff --cached --quiet; then
-            echo "Reports unchanged"
-          else
-            git commit -m "Audit exact OT lemma identities and build all lexical candidate records"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/quality/corpus_audit.json data/quality/observed_exact_lemmas.json data/quality/genesis_01_morphology.json data/quality/lexicon_candidates.jsonl data/quality/genesis_01_owner_lock_anchors.json data/quality/lexicon_join_report.json >/dev/null
+          if [ -n "$(git status --porcelain --untracked-files=all -- data/quality)" ]; then
+            git status --short --untracked-files=all -- data/quality
+            echo "::error::Source-derived output differs from committed files. Submit a pull request; CI never pushes to main."
+            exit 1
           fi
+          echo "PASS: pinned source research reproducible; publication BLOCKED"
