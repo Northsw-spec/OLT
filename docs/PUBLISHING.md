@@ -26,3 +26,7 @@ The common OLT core gives traceable, original-language source evidence and Engli
 Every target-language release must be traceable to a pinned original Hebrew/Aramaic/Greek textual edition, exact source-token alignment, lexeme/morphology and evidence. Git byte-identity checks prevent accidental corpus drift but do NOT replace independent linguistic review, proper Greek word segmentation, cross-edition collation, authorized editorial decisions or print QA.
 
 The first RP2018 Greek 3 John import is **14 authentic Greek verse strings without word-level IDs or morphology**. It cannot legally or technically be promoted to a finished source-verified Greek lexicon, full NT or publishable Greek-target translation. Preserve all owner decisions and project-wide release blocker.
+
+## OLT-035B — Greek text source coverage does not satisfy Greek word or publication coverage
+
+The complete set of 27 Greek RP2018 continuous-text **verse** CSV book files has been imported with exact-byte Git source identity. Two textual extra passages (PA and ACT24) are preserved separately and **not** silently included/omitted by an automatic string-merge. No actual Greek word-token identifier, lemma or morphology is imported, so no NT chapter can be considered completely source-word aligned. No English or other-language translation, underword etymology, title rendering, printed ODT/PDF or independent scholarly publication status is inferred. The approved English OLT translation policies remain separate from the source.
