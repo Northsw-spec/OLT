@@ -1,0 +1,58 @@
+{
+  "policy_id": "OLT-022",
+  "authority": "EXPLICIT_OWNER_DISPLAY_DECISION",
+  "scope": "ONE_EXCEPTION_GENESIS_1_1_ONLY",
+  "publication_status": "BLOCKED",
+  "automatically_generalize_to_other_bet": false,
+  "underwords": [
+    {
+      "id": "gen-1-1-bet-with",
+      "reference": "Gen.1.1",
+      "source_token_id": "01xeN",
+      "source_ordinal": 1,
+      "source_lemma_raw": "b/7225",
+      "source_morphology_raw": "HR/Ncfsa",
+      "source_preposition": "בְּ",
+      "source_preposition_code": "b",
+      "primary_english": "In",
+      "secondary_english": "with",
+      "placement": "DIRECTLY_BELOW_ENGLISH_WORD",
+      "primary_word_color": "#5B277D",
+      "secondary_word_color": "#2463A6",
+      "primary_semantic_function": "TEMPORAL_CONTEXTUAL_RESEARCH_READING",
+      "secondary_semantic_function": "OWNER_BINITARIAN_INTERPRETIVE_ALTERNATIVE",
+      "interpretation_label": "BINITARIAN_CANONICAL_INTERPRETATION",
+      "owner_selected_display": true,
+      "this_verse_instrumental_bet_independently_established": false,
+      "underword_is_verified_homonym": false,
+      "source_lexeme_means_jesus": false,
+      "theological_sense": "With the Beginning, read as the eternal uncreated Son sharing the work of creation with the Father",
+      "english_main_verse_remains": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
+      "footnote": {
+        "id": "gen-1-1-bet-with",
+        "anchor": "with",
+        "status": "OWNER_INTERPRETIVE_LINK_NOT_PHILOLOGICALLY_APPROVED",
+        "english": "The word with is an owner-selected binitarian interpretive under-word for the Hebrew prefix בְּ (bə) in Genesis 1:1. Hebrew bə can express instrumental 'with/by' in other contexts, but the usual contextual reading of בְּרֵאשִׁית here is temporal, 'In the Beginning.' Brent A. Strawn (2022) argues for a possible 'With Wisdom/Beginning' exegetical reading; the owner's identification of the Beginning with the eternal uncreated Son who created with the Father is a further Christian canonical interpretation (John 1:1–3; 1 Corinthians 8:6; Colossians 1:15–17). This is NOT an independently established instrumental Hebrew translation of Genesis 1:1, NOT a proven lexical identification of Jesus with רֵאשִׁית, and NOT a claim that the Son was created.",
+        "evidence": [
+          {
+            "url": "https://uhg.readthedocs.io/en/stable/preposition.html",
+            "type": "HEBREW_GRAMMAR_TEMPORAL_AND_INSTRUMENTAL_CONTRAST"
+          },
+          {
+            "url": "https://journals.sagepub.com/doi/10.1177/03090892211032244",
+            "type": "SCHOLARLY_ABSTRACT_WITH_WISDOM_ARGUMENT"
+          },
+          {
+            "url": "https://doi.org/10.15699/jbl.1444.2025.2",
+            "type": "SCHOLARLY_ABSTRACT_IN_THE_BEGINNING_TEMPORAL"
+          }
+        ],
+        "canonical_intertexts": [
+          "John.1.1-3",
+          "1Cor.8.6",
+          "Col.1.15-17"
+        ]
+      }
+    }
+  ]
+}

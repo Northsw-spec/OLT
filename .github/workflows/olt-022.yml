@@ -1,0 +1,39 @@
+name: OLT-022 Genesis 1:1 In-with owner interpretive underword
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/research_underwords.py"
+      - "scripts/audit_full_genesis_research.py"
+      - "data/policy/olt_underword_overrides.json"
+      - "tests/test_olt_022_underwords.py"
+      - ".github/workflows/olt-022.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  underword:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test one original Hebrew bet prefix and theological evidence firewall
+        run: python -m unittest discover -s tests -p 'test_olt_022_underwords.py' -v
+      - name: Regenerate chapter research alignment and vertical underword preview
+        run: |
+          python scripts/audit_full_genesis_research.py
+          git diff --exit-code -- data/research/genesis_01_complete_research_alignment.json genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("data/research/genesis_01_complete_research_alignment.json").read_text())
+          assert x["underword_links_count"]==1
+          assert x["original_source_word_tokens"]==434
+          assert x["publication_status"]=="BLOCKED"
+          assert x["actual_homonym_identity_links_approved"]==0
+          assert x["underword_manifest"][0]["source_token_id"]=="01xeN"
+          print("PASS: one source-token anchored owner interpretive underword, not philological signoff")
+          PY
