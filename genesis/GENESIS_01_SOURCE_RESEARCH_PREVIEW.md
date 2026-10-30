@@ -8,7 +8,11 @@ Hebrew word spelling is displayed with OSHB's analytic morpheme separators remov
 
 **Masoretic Hebrew:** בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ
 
-**OLT English research proposal:** In the Beginning [of His Power][^gen-1-1-power] God — He shaped the Heavens and the Earth.
+**OLT English research proposal (vertical linked-word layout):**
+
+|  |  |
+| :--- | :--- |
+| **In**<br><sub>with</sub>[^gen-1-1-bet-with] | the Beginning [of His Power][^gen-1-1-power] God — He shaped the Heavens and the Earth. |
 
 ### Gen.1.2
 
@@ -195,4 +199,5 @@ Hebrew word spelling is displayed with OSHB's analytic morpheme separators remov
 **RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.
 
 [^gen-1-1-power]: [of His Power] is an editorial theological supplement, not a translation of any Hebrew words in Genesis 1:1. Hebrew בְּרֵאשִׁית (bə-rēʾšît) means 'in the beginning' (its syntax is debated). Genesis 49:3 reads וְרֵאשִׁית אֹונִי, 'and the beginning of my strength'; Deuteronomy 21:17 reads רֵאשִׁית אֹנוֹ, 'the beginning of his strength.' In both parallels, strength/vigor is the separate Hebrew noun אֹון, which is ABSENT from Genesis 1:1; the possessive 'His' is also supplied. The association is theological and intertextual, not a lexical meaning of rēʾšît.
+[^gen-1-1-bet-with]: The word with is an owner-selected binitarian interpretive under-word for the Hebrew prefix בְּ (bə) in Genesis 1:1. Hebrew bə can express instrumental 'with/by' in other contexts, but the usual contextual reading of בְּרֵאשִׁית here is temporal, 'In the Beginning.' Brent A. Strawn (2022) argues for a possible 'With Wisdom/Beginning' exegetical reading; the owner's identification of the Beginning with the eternal uncreated Son who created with the Father is a further Christian canonical interpretation (John 1:1–3; 1 Corinthians 8:6; Colossians 1:15–17). This is NOT an independently established instrumental Hebrew translation of Genesis 1:1, NOT a proven lexical identification of Jesus with רֵאשִׁית, and NOT a claim that the Son was created.
 

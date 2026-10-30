@@ -115,6 +115,52 @@
       "reference": "Gen.1.1",
       "source_token_count": 7,
       "source_wayyiqtol_count": 0,
+      "underword_proposals": [
+        {
+          "footnote": {
+            "anchor": "with",
+            "canonical_intertexts": [
+              "John.1.1-3",
+              "1Cor.8.6",
+              "Col.1.15-17"
+            ],
+            "english": "The word with is an owner-selected binitarian interpretive under-word for the Hebrew prefix בְּ (bə) in Genesis 1:1. Hebrew bə can express instrumental 'with/by' in other contexts, but the usual contextual reading of בְּרֵאשִׁית here is temporal, 'In the Beginning.' Brent A. Strawn (2022) argues for a possible 'With Wisdom/Beginning' exegetical reading; the owner's identification of the Beginning with the eternal uncreated Son who created with the Father is a further Christian canonical interpretation (John 1:1–3; 1 Corinthians 8:6; Colossians 1:15–17). This is NOT an independently established instrumental Hebrew translation of Genesis 1:1, NOT a proven lexical identification of Jesus with רֵאשִׁית, and NOT a claim that the Son was created.",
+            "evidence": [
+              {
+                "type": "HEBREW_GRAMMAR_TEMPORAL_AND_INSTRUMENTAL_CONTRAST",
+                "url": "https://uhg.readthedocs.io/en/stable/preposition.html"
+              },
+              {
+                "type": "SCHOLARLY_ABSTRACT_WITH_WISDOM_ARGUMENT",
+                "url": "https://journals.sagepub.com/doi/10.1177/03090892211032244"
+              },
+              {
+                "type": "SCHOLARLY_ABSTRACT_IN_THE_BEGINNING_TEMPORAL",
+                "url": "https://doi.org/10.15699/jbl.1444.2025.2"
+              }
+            ],
+            "id": "gen-1-1-bet-with",
+            "status": "OWNER_INTERPRETIVE_LINK_NOT_PHILOLOGICALLY_APPROVED"
+          },
+          "id": "gen-1-1-bet-with",
+          "independent_philological_signoff": false,
+          "instrumental_claim_confirmed": false,
+          "owner_display_approved": true,
+          "placement": "DIRECTLY_BELOW_ENGLISH_WORD",
+          "primary": "In",
+          "primary_grammatical_function": "TEMPORAL_CONTEXTUAL_RESEARCH_READING",
+          "primary_word_color": "#5B277D",
+          "reference": "Gen.1.1",
+          "secondary": "with",
+          "secondary_word_color": "#2463A6",
+          "semantic_type": "BINITARIAN_CANONICAL_INTERPRETATION",
+          "source_lemma_raw": "b/7225",
+          "source_lexical_jesus_claim": false,
+          "source_ordinal": 1,
+          "source_preposition": "בְּ",
+          "source_token_id": "01xeN"
+        }
+      ],
       "verse_footnote_proposals": [
         {
           "anchor": "[of His Power]",
@@ -6472,6 +6518,21 @@
   "original_zero_surface_object_markers": 13,
   "project": "Olund's Linked Translation",
   "publication_status": "BLOCKED",
+  "research_footnotes_count": 1,
+  "research_note_anchor_manifest": [
+    {
+      "anchor": "[of His Power]",
+      "category": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT",
+      "footnote_id": "gen-1-1-power",
+      "marker_placement": "IMMEDIATELY_AFTER_ANCHOR",
+      "reference": "Gen.1.1",
+      "source_references": [
+        "Gen.49.3",
+        "Deut.21.17"
+      ],
+      "status": "RESEARCH_NOTE_NOT_PUBLISHED"
+    }
+  ],
   "source": "Pinned OSHB/WLC Masoretic words and source-backed lexical IDs",
   "source_tagged_wayyiqtol_count": 50,
   "source_verses": 31,
@@ -6486,19 +6547,52 @@
   ],
   "statement": "Machine coverage PASS means every source token is represented in research; does NOT mean every English rendering is correct or editorially approved.",
   "status": "FULL_ORIGINAL_TOKEN_RESEARCH_COVERAGE_ONLY",
-  "research_note_anchor_manifest": [
+  "underword_links_count": 1,
+  "underword_manifest": [
     {
+      "footnote": {
+        "anchor": "with",
+        "canonical_intertexts": [
+          "John.1.1-3",
+          "1Cor.8.6",
+          "Col.1.15-17"
+        ],
+        "english": "The word with is an owner-selected binitarian interpretive under-word for the Hebrew prefix בְּ (bə) in Genesis 1:1. Hebrew bə can express instrumental 'with/by' in other contexts, but the usual contextual reading of בְּרֵאשִׁית here is temporal, 'In the Beginning.' Brent A. Strawn (2022) argues for a possible 'With Wisdom/Beginning' exegetical reading; the owner's identification of the Beginning with the eternal uncreated Son who created with the Father is a further Christian canonical interpretation (John 1:1–3; 1 Corinthians 8:6; Colossians 1:15–17). This is NOT an independently established instrumental Hebrew translation of Genesis 1:1, NOT a proven lexical identification of Jesus with רֵאשִׁית, and NOT a claim that the Son was created.",
+        "evidence": [
+          {
+            "type": "HEBREW_GRAMMAR_TEMPORAL_AND_INSTRUMENTAL_CONTRAST",
+            "url": "https://uhg.readthedocs.io/en/stable/preposition.html"
+          },
+          {
+            "type": "SCHOLARLY_ABSTRACT_WITH_WISDOM_ARGUMENT",
+            "url": "https://journals.sagepub.com/doi/10.1177/03090892211032244"
+          },
+          {
+            "type": "SCHOLARLY_ABSTRACT_IN_THE_BEGINNING_TEMPORAL",
+            "url": "https://doi.org/10.15699/jbl.1444.2025.2"
+          }
+        ],
+        "id": "gen-1-1-bet-with",
+        "status": "OWNER_INTERPRETIVE_LINK_NOT_PHILOLOGICALLY_APPROVED"
+      },
+      "id": "gen-1-1-bet-with",
+      "independent_philological_signoff": false,
+      "instrumental_claim_confirmed": false,
+      "owner_display_approved": true,
+      "placement": "DIRECTLY_BELOW_ENGLISH_WORD",
+      "primary": "In",
+      "primary_grammatical_function": "TEMPORAL_CONTEXTUAL_RESEARCH_READING",
+      "primary_word_color": "#5B277D",
       "reference": "Gen.1.1",
-      "footnote_id": "gen-1-1-power",
-      "anchor": "[of His Power]",
-      "category": "INTERTEXTUAL_THEOLOGICAL_SUPPLEMENT",
-      "source_references": [
-        "Gen.49.3",
-        "Deut.21.17"
-      ],
-      "status": "RESEARCH_NOTE_NOT_PUBLISHED",
-      "marker_placement": "IMMEDIATELY_AFTER_ANCHOR"
+      "secondary": "with",
+      "secondary_word_color": "#2463A6",
+      "semantic_type": "BINITARIAN_CANONICAL_INTERPRETATION",
+      "source_lemma_raw": "b/7225",
+      "source_lexical_jesus_claim": false,
+      "source_ordinal": 1,
+      "source_preposition": "בְּ",
+      "source_token_id": "01xeN"
     }
   ],
-  "research_footnotes_count": 1
+  "underword_policy": "OLT-022"
 }
