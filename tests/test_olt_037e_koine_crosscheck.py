@@ -145,6 +145,47 @@ class TestOLT037E(unittest.TestCase):
             with self.assertRaises(SourceContractError):
                 require_exact_checkpoint(item,Path(d))
 
+    def test_locked_complete_original_source_report_is_unapproved_and_exact(self):
+        raw=(ROOT/REPORT_PATH).read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "f6e0c31f4a7c736df307e55c10d0860ea47edf7aa6dc2c28b61d6b81430ee435")
+        evidence=json.loads(raw.decode("utf-8"))
+        self.assertEqual(evidence["checkpoint"],CHECKPOINT)
+        self.assertEqual(evidence["source_abbott_entries_in_full_original_teixml"],6153)
+        self.assertEqual(evidence["source_abbott_entries_with_native_n_attribute"],5896)
+        self.assertEqual(evidence["original_greek_word_positions_crosschecked"],[2315,1287])
+        self.assertEqual(evidence["machine_approved_lexical_senses"],0)
+        self.assertEqual(evidence["human_approved_lexical_senses"],0)
+        self.assertEqual(evidence["approved_english_master_entries"],0)
+        self.assertEqual(evidence["publication_status"],"BLOCKED")
+        greek,conjunction=evidence["source_cases"]
+        self.assertEqual(greek["rp2018_original_strong_number"],"3004")
+        self.assertEqual(conjunction["rp2018_original_strong_number"],"3754")
+        self.assertEqual(len(greek["abbott_smith_original_source_lexical_entries_UNREVIEWED"]),1)
+        self.assertEqual(len(conjunction["abbott_smith_original_source_lexical_entries_UNREVIEWED"]),1)
+        source=greek["abbott_smith_original_source_lexical_entries_UNREVIEWED"][0]
+        self.assertEqual(source["native_abbott_entry_attribute_n_SOURCE_ONLY"],
+                         "λέγω|G2036|G2046|G3004|G4483")
+        self.assertTrue(source["native_entry_references_multiple_strong_numbers"])
+        self.assertEqual(source["all_native_abbott_strong_crossrefs_SOURCE_ONLY"],
+                         ["2036","2046","3004","4483"])
+        self.assertEqual(source["original_source_def_or_gloss_count"],11)
+        self.assertEqual(conjunction["abbott_smith_original_source_lexical_entries_UNREVIEWED"][0]
+                         ["original_source_def_or_gloss_count"],3)
+        self.assertEqual([r["source_tei_entry_key_UNREVIEWED"] for r in
+            conjunction["lsj_original_source_key_diagnostic"]
+            ["lossy_signature_source_key_records_DIAGNOSTIC_ONLY"]],["o(/ti^"])
+        self.assertEqual(conjunction["lsj_original_source_key_diagnostic"]
+                         ["exact_original_source_key_matches_UNREVIEWED"],[])
+        self.assertTrue(all(r["selected_lsj_entry_id"] is None
+                            and r["selected_abbott_lexical_sense"] is None
+                            and r["contextual_greek_lemma_approved"] is None
+                            and r["owner_english_master_word"] is None
+                            and r["independent_philological_signoff"] is False
+                            and r["owner_editorial_approval"] is False
+                            and r["publication_status"]=="BLOCKED"
+                            for r in evidence["source_cases"]))
+
     def test_actual_original_koine_and_lsj_external_sources_in_ci(self):
         abbott_path=os.environ.get("OLT037E_ABBOTT_PATH")
         lsj_dir=os.environ.get("OLT037E_LSJ_DIR")
@@ -173,8 +214,9 @@ class TestOLT037E(unittest.TestCase):
             self.assertFalse(x["owner_editorial_approval"])
             self.assertEqual(x["publication_status"],"BLOCKED")
         target=ROOT/REPORT_PATH
-        if target.is_file():
-            require_exact_checkpoint(result)
+        self.assertTrue(target.is_file(),
+                        "The canonical original Koine lexical research artifact must be frozen")
+        require_exact_checkpoint(result)
 
 
 if __name__=="__main__":
