@@ -8,29 +8,29 @@ The earlier OLT-035B imported all **27 Greek NT canonical books** as genuine acc
 
 OLT-035D now additionally imports all **27 official EDITOR SOURCE files from `source/Strongs/*.BP5`**, not reconstructed from English, nor guessed by splitting accented Greek verses. These are the files the upstream explicitly identifies as its primary (unedited, Beta Code) source of Strong number references and Robinson morphological analysis. Every file is byte-identical to a pinned upstream Git blob (ByzTxt `v3.3.2` / commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`); source and code are published under public-domain licensing. Source editorial documentation: https://github.com/byztxt/byzantine-majority-text/blob/27a45ff1b7be6c17ccbfeac414f3f55732ae8e28/source/README.md .
 
-**Measured original editor-source corpus:**
+**Measured original editor-source corpus (empty-slot distinction corrected after a genuine failing GitHub Actions test):**
 
 | Scope | Original source count |
 |---|---:|
 | Official BP5 Greek NT books | **27** |
-| Original BP5 verse lines | **7,957** |
+| Original BP5 verse positions | **7,957** (7,953 with Greek words + 4 empty placeholders) |
 | Original Greek Beta Code word records with Strong numbers and morphology | **140,149** |
 | Additional alternative Strong/morph pairs attached to an existing word | **28** |
 | Previously imported canonical accented Greek Unicode verse rows | **7,953** |
-| Original BP5 verse references absent from continuous Unicode source | **4** |
+| Empty BP5 verse positions absent from continuous Unicode source | **4** (zero Greek words in each) |
 
 The **28 alternative parses are NOT 28 additional Bible words**. They are extra editor annotations attached to the relevant existing Greek word. Examples: Matthew 26:45 gives `kaqeudete` either `V-PAI-2P` or `V-PAM-2P`, and Revelation 3:17 supplies two case/gender readings for `oudenos`. Original annotations are preserved exactly, not arbitrarily collapsed into one 'verified' choice.
 
 ## Four source-text reference discrepancies — mandatory review
 
-The original official BP5 file includes four references that are **NOT** contained as ordinary rows in the derived Unicode `no-variants` continuous main text:
+The original official BP5 files contain four **EMPTY verse-position lines**, with **no Greek word/Strong/morphology triples**, whose references are **NOT** contained as ordinary rows in the derived Unicode `no-variants` continuous main text:
 
 - **Luke 17:36**
 - **Acts 8:37**
 - **Acts 15:34**
 - **Acts 24:7**
 
-The two source representations are not falsely assumed to contain the same 7,953 vs 7,957 references. OLT records each discrepancy as `TEXTUAL_REVIEW_REQUIRED`; never silently append, subtract, deduplicate, paraphrase, or reinterpret source verses. The separately preserved ancillary Acts 24:6–8 and John 7:53–8:11 source files from OLT-035B are another textual layer and are **not automatically overwritten or spliced** by the new source parsing.
+These are **structural versification placeholders, not four additional passages of Greek text**. The source has 7,957 reference slots but 7,953 nonempty BP5 Greek verse lines, the same number as Unicode Greek verse rows. OLT records the four empty positions explicitly, and still requires editorial/text-critical review before changing verse numbering or text. Never invent Greek words in those positions or silently alter the canonical text. The separately preserved ancillary Acts 24:6–8 and John 7:53–8:11 source files from OLT-035B are another textual layer and are **not automatically overwritten or spliced** by the new source parsing.
 
 ## Source identity and word-alignment honesty
 
