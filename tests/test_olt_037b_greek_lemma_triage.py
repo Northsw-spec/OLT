@@ -126,6 +126,30 @@ class TestOLT037B(unittest.TestCase):
         with self.assertRaises(SourceContractError):
             build_review_queue(groups)
 
+    def test_frozen_complete_review_queue_is_unapproved_and_source_scoped(self):
+        path = ROOT / "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
+        raw = path.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "a0291d66b506f7070263e8afc8c78ac160d2f9081720993b487e0cee3bc6db5b")
+        report = json.loads(raw.decode("utf-8"))
+        self.assertEqual(report["checkpoint"], CHECKPOINT)
+        self.assertEqual(report["distinct_numeric_reference_review_cases"], 107)
+        self.assertEqual(report["rp2018_primary_word_positions"], 140149)
+        self.assertEqual(report["primary_positions_with_multiple_numeric_candidates"], 12539)
+        self.assertEqual(report["original_editor_alternative_analyses"], 28)
+        self.assertEqual(report["reviewed_cases"], 0)
+        self.assertEqual(report["approved_english_lexical_entries"], 0)
+        self.assertEqual(report["publication_status"], "BLOCKED")
+        self.assertEqual(sum(c["source_word_occurrence_count"] for c in report["cases"]), 12539)
+        self.assertEqual(len(report["original_editor_alternative_analysis_review_queue"]), 28)
+        self.assertEqual(report["cases"][0]["original_rp2018_strong_number"], "3004")
+        self.assertTrue(all(c["selected_dstrong"] is None
+                            and c["selected_lexical_sense"] is None
+                            and c["owner_editorial_approval"] is False
+                            and c["independent_philological_signoff"] is False
+                            and c["publication_status"] == "BLOCKED"
+                            for c in report["cases"]))
+
     def test_complete_original_source_triage_requires_pinned_tbseg(self):
         source = os.environ.get("OLT037_TBESG_PATH")
         if not source:
@@ -159,8 +183,8 @@ class TestOLT037B(unittest.TestCase):
         self.assertEqual(result["approved_english_lexical_entries"], 0)
         self.assertEqual(result["publication_status"], "BLOCKED")
         saved = ROOT / "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
-        if saved.exists():
-            verify_committed_queue(result)
+        self.assertTrue(saved.exists(), "Canonical Greek triage checkpoint must exist")
+        verify_committed_queue(result)
 
 
 if __name__ == "__main__":
