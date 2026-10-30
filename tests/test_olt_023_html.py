@@ -24,6 +24,8 @@ class TestOLT023(unittest.TestCase):
         self.assertIn('--main-link: #5B277D; --under-link: #2463A6;', html)
         self.assertEqual(html.count('class="linked-word"'), 1)
         self.assertIn('class="supplement">[of His Power]<sup>', html)
+        self.assertIn('</span></span> the Beginning <span class="supplement">', html)
+        self.assertNotIn('</span></span>the Beginning', html)
         self.assertIn('lang="he" dir="rtl"', html)
         self.assertIn('Release BLOCKED', html)
         self.assertIn('NOT APPROVED BIBLE TEXT', html)
