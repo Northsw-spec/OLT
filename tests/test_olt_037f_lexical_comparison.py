@@ -161,6 +161,64 @@ class TestOLT037F(unittest.TestCase):
         self.assertEqual(payload,serialize_research(evidence).encode("utf-8"))
         self.assertEqual(hashlib.sha256(payload).hexdigest(),lines[-1].split()[-1])
 
+    def test_frozen_original_greek_and_lsj_source_report_is_exact_and_unapproved(self):
+        path=ROOT/REPORT_PATH
+        raw=path.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "0dca8643adb191e437c7801d7e363450ed07ffbe31138d3bf0090460ca0eba2c")
+        obj=json.loads(raw.decode("utf-8"))
+        self.assertEqual(obj["checkpoint"],CHECKPOINT)
+        self.assertEqual(obj["number_of_comparison_dossiers"],2)
+        self.assertEqual(obj["number_of_original_greek_verse_word_examples"],10)
+        self.assertEqual(obj["lsj_original_entry_structures_verified_against_pinned_git_blobs"],3)
+        self.assertEqual(obj["human_philological_approvals"],0)
+        self.assertEqual(obj["owner_english_master_approvals"],0)
+        self.assertEqual(obj["translated_scripture_verses_published"],0)
+        self.assertEqual(obj["publication_status"],"BLOCKED")
+        primary,secondary=obj["dossiers"]
+        self.assertEqual(primary["total_original_rp2018_word_occurrences"],2315)
+        self.assertEqual(secondary["total_original_rp2018_word_occurrences"],1287)
+        self.assertEqual([x["source_original_lsj_tei_entry_id"] for x in
+            primary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]],
+            ["n62204","n62205"])
+        self.assertEqual([x["source_sense_opening_tag_count"] for x in
+            primary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]],[1,23])
+        self.assertEqual([x["source_original_tr_tag_count"] for x in
+            primary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]],[1,76])
+        self.assertEqual(primary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"][0]
+                         ["first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT"],["lay"])
+        self.assertEqual(primary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"][1]
+                         ["first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT"],["pick up"])
+        self.assertEqual([x["source_original_lsj_tei_entry_id"] for x in
+            secondary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]],
+            ["n75695"])
+        self.assertEqual(secondary["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"][0]
+                         ["first_short_lsj_source_tr_excerpt_CC_BY_SA_NOT_OLT"],["that"])
+        self.assertEqual([x["original_greek_reference"] for x in
+            primary["original_source_context_examples_NOT_INTERPRETED"]],
+            ["Matt.1.16","Mark.1.7","Matt.1.20","Matt.1.22","Luke.1.13"])
+        self.assertEqual([x["original_greek_reference"] for x in
+            secondary["original_source_context_examples_NOT_INTERPRETED"]],
+            ["Matt.2.16","Mark.1.15","Matt.6.13","Luke.1.22","Matt.28.13"])
+        for dossier in obj["dossiers"]:
+            self.assertEqual(dossier["expert_approved_contextual_word_senses"],[])
+            self.assertIsNone(dossier["independently_verified_contextual_greek_lemma"])
+            self.assertFalse(dossier["independent_philological_signoff"])
+            self.assertFalse(dossier["owner_english_master_approval"])
+            self.assertIsNone(dossier["approved_english_word_or_phrase"])
+            self.assertEqual(dossier["publication_status"],"BLOCKED")
+            for entry in dossier["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]:
+                self.assertEqual(entry["publication_status"],"BLOCKED")
+                self.assertIsNone(entry["selected_contextual_sense"])
+            for word in dossier["original_source_context_examples_NOT_INTERPRETED"]:
+                self.assertEqual(word["publication_status"],"BLOCKED")
+                self.assertIsNone(word["selected_independent_lexicon_entry"])
+                self.assertIsNone(word["owner_english_lexical_equivalent"])
+                original=word["original_greek_verse_UNALTERED"]
+                span=word["original_source_unicode_word_character_span"]
+                self.assertEqual(original[span["start"]:span["end_exclusive"]],
+                                 word["exact_original_greek_word_UNALTERED"])
+
     def test_actual_pinned_external_lsj_lexical_comparison(self):
         original=os.environ.get("OLT037F_LSJ_DIR")
         if not original:
@@ -190,8 +248,8 @@ class TestOLT037F(unittest.TestCase):
             self.assertTrue(all(e["selected_contextual_sense"] is None for e in
                 dossier["perseus_lsj_exact_pinned_tei_entry_evidence_CC_BY_SA"]))
         p=ROOT/REPORT_PATH
-        if p.is_file():
-            verify_frozen_source_dossiers(data)
+        self.assertTrue(p.is_file(), "Canonical original-source comparison must be frozen")
+        verify_frozen_source_dossiers(data)
 
 
 if __name__=="__main__":
