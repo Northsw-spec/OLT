@@ -1,0 +1,53 @@
+name: OLT-031 Genesis 1 multi-fragment Hebrew lemma research triage
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_olt_031_variation_triage.py"
+      - "tests/test_olt_031_variation_triage.py"
+      - "data/research/genesis_01_lexeme_editorial_queue.json"
+      - "data/research/olt_017a_scholarly_wave.json"
+      - "data/research/olt_017b_scholarly_lexemes.json"
+      - "data/research/olt_031_lemma_variation_triage.json"
+      - ".github/workflows/olt-031.yml"
+  pull_request:
+    paths:
+      - "scripts/build_olt_031_variation_triage.py"
+      - "tests/test_olt_031_variation_triage.py"
+      - "data/research/genesis_01_lexeme_editorial_queue.json"
+      - "data/research/olt_017a_scholarly_wave.json"
+      - "data/research/olt_017b_scholarly_lexemes.json"
+      - "data/research/olt_031_lemma_variation_triage.json"
+      - ".github/workflows/olt-031.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-lemma-variation-triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test full original-ID and zero-approval triage with negative cases
+        run: python -m unittest discover -s tests -p 'test_olt_031_variation_triage.py' -v
+      - name: Verify the committed 42-lemma register is exactly source-derived
+        run: python scripts/build_olt_031_variation_triage.py --check
+      - name: Reject false independent Hebrew/English approvals
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=json.loads(Path("data/research/olt_031_lemma_variation_triage.json").read_text(encoding="utf-8"))
+          assert p["source_lemmas_with_multiple_unapproved_fragments"] == 42
+          assert p["source_tokens_with_numeric_lemma"] == 427
+          assert p["new_english_lexical_approvals"] == 0
+          assert p["approved_homonym_links"] == 0
+          assert p["new_independent_morphology_approvals"] == 0
+          assert p["publication_status"] == "BLOCKED"
+          print("PASS: evidence triage only; scholarly and editorial decisions remain unapproved")
+          PY
