@@ -1,0 +1,79 @@
+{
+  "attribution": "Liddell, Scott, and Jones, A Greek-English Lexicon (1940); digital TEI-XML by Perseus Digital Library, Tufts University, CC BY-SA 4.0. Original source: https://github.com/PerseusDL/lexica",
+  "checkpoint": "OLT-037D",
+  "english_master_entries_approved": 0,
+  "entry_keys_are_raw_source_strings_not_confirmed_koine_lemmas": true,
+  "frozen_greek_context_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+  "greek_lemma_sense_independent_review": "NOT_DONE",
+  "greek_to_target_language_verse_translations_approved": 0,
+  "license": "CC BY-SA 4.0",
+  "original_textual_source": "Robinson-Pierpont 2018 pinned OLT-037C Greek contexts",
+  "publication_status": "BLOCKED",
+  "research_scope": "INDEPENDENT_CLASSICAL_GREEK_LEXICON_SOURCE_KEYS_ONLY",
+  "reviewer_identity": null,
+  "scholarly_decisions_approved": 0,
+  "source_lexicon_candidate_key_research_cases": [
+    {
+      "case_id_from_frozen_rp2018_contexts": "RP2018-v3.3.2-NumericStrong-3004",
+      "dictionary_lemma_identity_approved": false,
+      "english_master_entry": null,
+      "exact_lsj_entry_key_matches_NO_OWNERSHIP_OR_MEANING_INFERRED": [
+        {
+          "source_tei_entry_id": "n62204",
+          "source_tei_entry_key_UNREVIEWED": "le/gw1"
+        },
+        {
+          "source_tei_entry_id": "n62205",
+          "source_tei_entry_key_UNREVIEWED": "le/gw2"
+        }
+      ],
+      "greek_orthography_equivalence_independently_proven": false,
+      "independent_philologist_corroboration": null,
+      "lsj_shard_original_div0_letter": "*l",
+      "nt_word_sense_assignment": null,
+      "number_of_original_lsj_entryFree_start_tags_indexed": 2958,
+      "original_rp2018_strong_number": "3004",
+      "owner_translation_approval": null,
+      "publication_status": "BLOCKED",
+      "source_lsj_entry_lookup_status": "EXACT_LITERAL_KEY_EXISTS_NOT_APPROVED",
+      "source_lsj_key_query_IS_HYPOTHESIS": "le/gw",
+      "source_lsj_original_git_blob_sha1": "0cc4c1906a4f8a0e696002dc83728d55b9cd9806",
+      "source_lsj_original_shard_path": "CTS_XML_TEI/perseus/pdllex/grc/lsj/grc.lsj.perseus-eng12.xml",
+      "source_lsj_original_size_bytes": 6753569,
+      "source_rp2018_occurrences": 2315,
+      "source_stepbible_greek_headword_UNREVIEWED": "λέγω",
+      "stepbible_dstrong_ids_UNREVIEWED": [
+        "G3004G",
+        "G3004H"
+      ]
+    },
+    {
+      "case_id_from_frozen_rp2018_contexts": "RP2018-v3.3.2-NumericStrong-3754",
+      "dictionary_lemma_identity_approved": false,
+      "english_master_entry": null,
+      "exact_lsj_entry_key_matches_NO_OWNERSHIP_OR_MEANING_INFERRED": [],
+      "greek_orthography_equivalence_independently_proven": false,
+      "independent_philologist_corroboration": null,
+      "lsj_shard_original_div0_letter": "*o",
+      "nt_word_sense_assignment": null,
+      "number_of_original_lsj_entryFree_start_tags_indexed": 4512,
+      "original_rp2018_strong_number": "3754",
+      "owner_translation_approval": null,
+      "publication_status": "BLOCKED",
+      "source_lsj_entry_lookup_status": "NO_EXACT_SOURCE_KEY_NOT_AUTOFILLED",
+      "source_lsj_key_query_IS_HYPOTHESIS": "o(/ti",
+      "source_lsj_original_git_blob_sha1": "b8a1ba605424c2df3b67f04190bde804664441c8",
+      "source_lsj_original_shard_path": "CTS_XML_TEI/perseus/pdllex/grc/lsj/grc.lsj.perseus-eng16.xml",
+      "source_lsj_original_size_bytes": 12280021,
+      "source_rp2018_occurrences": 1287,
+      "source_stepbible_greek_headword_UNREVIEWED": "ὅτι",
+      "stepbible_dstrong_ids_UNREVIEWED": [
+        "G3754G",
+        "G3754H"
+      ]
+    }
+  ],
+  "source_lsj_commit": "1c34cdf756c63cf37db61bd366d733431dbd7aa0",
+  "source_lsj_repo": "https://github.com/PerseusDL/lexica",
+  "source_shards_verified_with_original_git_blob_sha1": 2
+}
