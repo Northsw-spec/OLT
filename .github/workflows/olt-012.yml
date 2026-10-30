@@ -7,6 +7,7 @@ on:
       - "tests/test_olt_012.py"
       - "scripts/build_verse_research.py"
       - ".github/workflows/olt-012.yml"
+      - "data/research/olt_012_genesis_16_20.json"
   pull_request:
     paths:
       - "data/plans/olt_012_genesis_16_20.json"
@@ -14,6 +15,8 @@ on:
       - "scripts/build_verse_research.py"
       - ".github/workflows/olt-012.yml"
       - "tests/test_olt_026_ci_wave2.py"
+      - "data/research/olt_012_genesis_16_20.json"
+      - "tests/test_olt_029_derived_trigger_coverage.py"
   workflow_dispatch:
 permissions:
   contents: read
