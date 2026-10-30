@@ -1,0 +1,53 @@
+name: OLT-037F original Greek and LSJ contextual source comparison (NO approvals)
+on:
+  pull_request:
+    paths:
+      - "olt_core/greek_lexical_comparison.py"
+      - "olt_core/greek_koine_crosscheck.py"
+      - "olt_core/greek_sense_dossier.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "data/quality/olt_037f_source_cited_greek_lexical_comparison.json"
+      - "data/quality/olt_037e_abbott_koine_and_lsj_key_diagnostics.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "tests/test_olt_037f_lexical_comparison.py"
+      - "docs/OLT-037F_GREEK_LEXICAL_COMPARISON.md"
+      - ".github/workflows/olt-037f.yml"
+  push:
+    branches: [main]
+    paths:
+      - "olt_core/greek_lexical_comparison.py"
+      - "olt_core/greek_koine_crosscheck.py"
+      - "olt_core/greek_sense_dossier.py"
+      - "scripts/fetch_olt_037d_lsj.py"
+      - "data/quality/olt_037f_source_cited_greek_lexical_comparison.json"
+      - "data/quality/olt_037e_abbott_koine_and_lsj_key_diagnostics.json"
+      - "data/quality/olt_037c_greek_contextual_research_dossiers.json"
+      - "data/engine/olt_037d_perseus_lsj_source_manifest.json"
+      - "tests/test_olt_037f_lexical_comparison.py"
+      - "docs/OLT-037F_GREEK_LEXICAL_COMPARISON.md"
+      - ".github/workflows/olt-037f.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-lexical-comparison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch and Git-blob-verify BOTH original pinned Perseus LSJ source files
+        run: python scripts/fetch_olt_037d_lsj.py --output-dir "$RUNNER_TEMP"
+      - name: Run original Greek context + LSJ entry and approval negative-control tests
+        env:
+          OLT037F_LSJ_DIR: ${{ runner.temp }}
+        run: python -m unittest discover -s tests -p 'test_olt_037f_lexical_comparison.py' -v
+      - name: Verify direct source evidence without selecting verse translations
+        run: python -m olt_core.greek_lexical_comparison --lsj-dir "$RUNNER_TEMP" --audit
+      - name: Transfer original Greek contextual comparison for INITIAL pinning only
+        run: python -m olt_core.greek_lexical_comparison --lsj-dir "$RUNNER_TEMP" --emit-initial-checkpoint
