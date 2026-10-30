@@ -142,6 +142,39 @@ explicitly sets `philological_reviewer_identity=null`,
 `owner_editorial_approval=false` and
 `publication_status=BLOCKED`.
 
+## Measured pinned-source contextual evidence results
+
+The dedicated initial GitHub Actions
+[OLT-037C source run 41141970171](https://github.com/Northsw-spec/OLT/actions/runs/41141970171)
+finished successfully using the original hash-verified STEPBible TBESG
+file and original OLT RP2018 Greek corpus. The precise reproducible
+source-evidence report is committed as
+[OLT-037C research dossiers](../data/quality/olt_037c_greek_contextual_research_dossiers.json):
+
+| Original-source criterion | G3004 | G3754 |
+|---|---:|---:|
+| Original RP2018 Greek word positions | **2,315** | **1,287** |
+| Distinct exact source Unicode surfaces | **83** | **2** |
+| Source lexicon dStrong candidates | **2** | **2** |
+| Selected actual Greek context examples | **136** | **53** |
+| Approved contextual senses/English master translations | **0** | **0** |
+
+The report is **266,884 original UTF-8 bytes** and has SHA-256
+`08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69`.
+This hash is checked by committed tests. The dedicated
+OLT-037C CI must **regenerate the report byte for byte** from the pinned
+27-book RP2018 corpus, the STEPBible original lexicon source and the
+already-locked 107-case source review checkpoint. A small hand-curated
+list of examples is NOT substituted for the actual source scan.
+
+All 189 sampled Greek contexts preserve source text and neutral
+source annotations. **No examples were assigned to a particular
+dStrong meaning** by the program. The control G3754 tests that the
+method also works for source-editor conjunction morphology, rather
+than only G3004 verb forms. Nothing here establishes contextual
+syntactic correctness, scholarly lexical judgment or translated
+Scripture.
+
 ## How to inspect and verify
 
 ```sh
