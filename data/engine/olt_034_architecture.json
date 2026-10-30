@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "OLT-034",
+  "decision_date": "2026-10-30",
+  "owner_binding_architecture": true,
+  "repository_role": "CANONICAL_SHARED_SOURCE_FIRST_CORE",
+  "canonical_core_repo": "Northsw-spec/OLT",
+  "target_repository_strategy": "SEPARATE_REPOSITORY_PER_TARGET_LANGUAGE",
+  "proposed_target_repositories": [
+    "OLT-English",
+    "OLT-Amharic",
+    "OLT-Japanese",
+    "OLT-Icelandic",
+    "OLT-Chinese"
+  ],
+  "target_repositories_created_by_this_checkpoint": false,
+  "source_priority": [
+    "ORIGINAL_HEBREW_HE_BIBLICAL",
+    "ORIGINAL_ARAMAIC_ARC_WHERE_PRESENT_IN_OT",
+    "ORIGINAL_GREEK_GRC_NT"
+  ],
+  "ot_primary_corpus": "OSHB_WLC_CURRENT_IMPORT_ORIGINAL_DATA",
+  "nt_primary_corpus": "ROBINSON_PIERPONT_2018_NOT_YET_PINNED_OR_IMPORTED",
+  "english_master_lexicon_role": "SHARED_REFERENCE_LAYER_NOT_INTERMEDIATE_SOURCE_AUTHORITY",
+  "english_reference_may_fall_back_to_target_translation": false,
+  "source_original_may_be_replaced_by_english": false,
+  "locale_needs_own": [
+    "lexical_sense_selection",
+    "source_aligned_target_surfaces",
+    "grammar",
+    "inflection",
+    "word_order",
+    "orthography",
+    "punctuation",
+    "script_and_reading_direction",
+    "scriptural_name_underwords",
+    "typography",
+    "proofreading",
+    "publication_approval"
+  ],
+  "independent_human_linguistic_review_required": true,
+  "owner_interpretations_are_source_lexemes": false,
+  "preserve_all_existing_owner_translation_locks": true,
+  "preserve_genesis_1_1_main_text_and_notes": true,
+  "preserve_single_in_with_underword": true,
+  "name_underword_registry": "lexicon/name_underwords.json",
+  "reusable_package": "olt_core",
+  "first_supported_operation": "GENERATE_VERIFIABLE_ORIGINAL_LANGUAGE_RESEARCH_PACKETS_NOT_TRANSLATED_BIBLE",
+  "research_packet_schema": "1.0",
+  "module_publication_status": "RESEARCH_INFRASTRUCTURE_ONLY",
+  "bible_release_status": "BLOCKED",
+  "full_ot_nt_translation_status": "NOT_COMPLETE",
+  "greek_nt_import_status": "NOT_DONE",
+  "locale_lexicons_status": "EMPTY_SEEDS_ONLY",
+  "translation_quality_status": "NOT_INDEPENDENTLY_REVIEWED",
+  "milestones": [
+    {
+      "id": "OLT-034",
+      "work": "Versioned multilingual architecture, reusable neutral source packet generator and negative CI tests",
+      "state": "IMPLEMENTATION_CHECKPOINT"
+    },
+    {
+      "id": "OLT-035",
+      "work": "Original-corpus Hebrew/Aramaic/Greek source normalization and immutable edition/provenance adapters",
+      "state": "PLANNED"
+    },
+    {
+      "id": "OLT-036",
+      "work": "English master reference export derived from owner decisions with lexical provenance and uncertainty",
+      "state": "PLANNED"
+    },
+    {
+      "id": "OLT-037",
+      "work": "Target-language per-lemma/occurrence decision contracts and locale-specific validators/typography",
+      "state": "PLANNED"
+    },
+    {
+      "id": "OLT-038",
+      "work": "Create first external target-language repository based on a versioned OLT Core package only after locale is selected",
+      "state": "PLANNED"
+    },
+    {
+      "id": "OLT-039",
+      "work": "Complete OT+NT coverage audits and independent source and locale review/publication stages",
+      "state": "PLANNED"
+    }
+  ],
+  "release_gates": [
+    "EXACT_ORIGINAL_SOURCE_EDITION_AND_LICENSE",
+    "EXACT_SOURCE_LEMMA_TOKEN_AND_MORPHOLOGY",
+    "ENGLISH_REFERENCE_NEVER_SOURCE_AUTHORITY",
+    "LOCALE_SPECIFIC_GRAMMAR_AND_NAME_MEANING_CHOICE",
+    "TARGET_TOKEN_COVERAGE",
+    "EXPLICIT_SOURCE_REVIEW",
+    "EXPLICIT_LOCALE_REVIEW",
+    "PRINT_AND_ACCESSIBILITY_QA",
+    "PUBLICATION_AUTHORIZATION"
+  ]
+}
