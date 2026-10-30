@@ -1,0 +1,81 @@
+{
+  "automatic_lexical_sense_decisions": 0,
+  "checkpoint": "OLT-037D",
+  "expert_reviews_performed": 0,
+  "independent_lsj_license": "CC BY-SA 4.0",
+  "independent_lsj_source_evidence_sha256": "ea9f6e031897630cd5645ace24797e91e145f2018e5dba236b8951d5f1aa4973",
+  "original_rp2018_dossier_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+  "owner_approved_english_master_entries": 0,
+  "publication_status": "BLOCKED",
+  "research_requirements": [
+    "Verify original Greek RP2018 edition word positions, accentuation, context and text-critical alternatives independently.",
+    "Read Perseus LSJ source entries and corroborate dictionary lemma identity; matching LSJ key IDs alone is not semantic proof.",
+    "Consult a separate scholarly Koine/New Testament lexicon; classical LSJ is not sufficient by itself for contextual New Testament senses.",
+    "Distinguish lexicon headword spelling, morphological paradigm, lexical sense, contextual syntactic function and candidate English rendering as separate claims.",
+    "Record independently citable bibliography, specific entry/page or stable locators and direct primary Greek usage evidence, including counterexamples and unresolved disagreements.",
+    "Require explicit independent philological review with documented identity and date; repository CI can check only machine-readable presence and integrity, not scholarly correctness.",
+    "Require separate owner-editor approval for every chosen English lexical equivalent and target-language output. No automated promotion from proposed or candidate glosses."
+  ],
+  "review_case_templates": [
+    {
+      "additional_koine_lexicon_sources_checked": [],
+      "alternative_hypotheses_or_counterevidence": [],
+      "external_lexicon_lsj_source_evidence_status": "EXACT_LITERAL_KEY_EXISTS_NOT_APPROVED",
+      "independent_philological_signoff": false,
+      "independent_reviewer_date": null,
+      "independent_reviewer_identifier": null,
+      "independently_quoted_or_cited_lexicon_sources": [],
+      "morphology_cross_review": null,
+      "native_lsj_entry_ids_unreviewed": [
+        "n62204",
+        "n62205"
+      ],
+      "native_lsj_entry_keys_unreviewed": [
+        "le/gw1",
+        "le/gw2"
+      ],
+      "olt_derived_037b_case_id": "RP2018-v3.3.2-NumericStrong-3004",
+      "original_greek_source_context_dossier_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+      "original_occurrence_count": 2315,
+      "original_rp2018_editor_numeric_reference": "3004",
+      "original_verse_word_locator_selected_FOR_REVIEW": null,
+      "owner_editorial_approval": false,
+      "perseus_lsj_entry_keys_source_evidence_sha256": "ea9f6e031897630cd5645ace24797e91e145f2018e5dba236b8951d5f1aa4973",
+      "primary_greek_context_argument": null,
+      "proposed_dictionary_lemma": null,
+      "proposed_english_gloss_NOT_OLT_TRANSLATION": null,
+      "proposed_lexical_sense": null,
+      "publication_status": "BLOCKED",
+      "research_state": "UNSTARTED_UNREVIEWED",
+      "target_language_translation_generated": false
+    },
+    {
+      "additional_koine_lexicon_sources_checked": [],
+      "alternative_hypotheses_or_counterevidence": [],
+      "external_lexicon_lsj_source_evidence_status": "NO_EXACT_SOURCE_KEY_NOT_AUTOFILLED",
+      "independent_philological_signoff": false,
+      "independent_reviewer_date": null,
+      "independent_reviewer_identifier": null,
+      "independently_quoted_or_cited_lexicon_sources": [],
+      "morphology_cross_review": null,
+      "native_lsj_entry_ids_unreviewed": [],
+      "native_lsj_entry_keys_unreviewed": [],
+      "olt_derived_037b_case_id": "RP2018-v3.3.2-NumericStrong-3754",
+      "original_greek_source_context_dossier_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+      "original_occurrence_count": 1287,
+      "original_rp2018_editor_numeric_reference": "3754",
+      "original_verse_word_locator_selected_FOR_REVIEW": null,
+      "owner_editorial_approval": false,
+      "perseus_lsj_entry_keys_source_evidence_sha256": "ea9f6e031897630cd5645ace24797e91e145f2018e5dba236b8951d5f1aa4973",
+      "primary_greek_context_argument": null,
+      "proposed_dictionary_lemma": null,
+      "proposed_english_gloss_NOT_OLT_TRANSLATION": null,
+      "proposed_lexical_sense": null,
+      "publication_status": "BLOCKED",
+      "research_state": "UNSTARTED_UNREVIEWED",
+      "target_language_translation_generated": false
+    }
+  ],
+  "schema_purpose": "BLANK_HUMAN_REVIEW_TEMPLATES_NOT_PUBLISHED_LEXICAL_DECISIONS",
+  "stepbible_data_license": "CC BY 4.0"
+}
