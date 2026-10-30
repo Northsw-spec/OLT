@@ -6,9 +6,19 @@ on:
       - "scripts/build_study_queue.py"
       - "tests/test_study_queue.py"
       - ".github/workflows/study-queue.yml"
+      - "data/quality/unresolved_lexeme_triage.json"
+      - "data/quality/genesis_01_dictionary_study_cards.json"
+  pull_request:
+    paths:
+      - "scripts/build_study_queue.py"
+      - "tests/test_study_queue.py"
+      - ".github/workflows/study-queue.yml"
+      - "data/quality/unresolved_lexeme_triage.json"
+      - "data/quality/genesis_01_dictionary_study_cards.json"
+      - "tests/test_olt_027_ci_wave3.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-006-study-queue
   cancel-in-progress: false
@@ -19,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -47,15 +57,11 @@ jobs:
           assert all(x["candidate_english_from_dictionary"] is None for x in c["cards"])
           print("PASS: source research coverage, NOT English translation certification")
           PY
-      - name: Commit research registers
+      - name: Verify generated files match committed research (read-only)
         run: |
-          set -euo pipefail
-          git config user.name "olt-source-review[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/quality/unresolved_lexeme_triage.json data/quality/genesis_01_dictionary_study_cards.json
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Add source-backed unresolved lexical cases and Genesis research cards"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/quality/unresolved_lexeme_triage.json data/quality/genesis_01_dictionary_study_cards.json >/dev/null
+          if ! git diff --exit-code -- data/quality/unresolved_lexeme_triage.json data/quality/genesis_01_dictionary_study_cards.json; then
+            echo "::error::Generated research differs from committed output. Submit the generated files via Pull Request."
+            exit 1
           fi
+          echo "PASS: source research reproducible; publication BLOCKED"
