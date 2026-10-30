@@ -6,6 +6,13 @@
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
 
+## OLT-035B — Whole Greek NT source book-file import (engineering checkpoint under CI review)
+
+- The source repository contains **all 27 continuous-text RP2018 Greek NT book UTF-8 CSV files**, exact Git blob matches to ByzTxt `v3.3.2` at pinned upstream commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. Total main source text files ~1.74 MB, all authentic Greek verse text, not fabricated from English or an alternate Greek edition.
+- **PA** (John 7:53–8:11) and **ACT24** (Acts 24:6–8) are separately retained exact-source ancillary readings. Do NOT silently merge their contents into continuous-text verses; textual apparatus and owner editorial decisions must be reviewed.
+- `data/engine/olt_035b_rp2018_verse_inventory.json` pins upstream paths, hashes and lengths for all 29 source CSVs (27 main + 2 ancillary). `olt_core/nt_corpus.py` parses/validates Greek source verse references and creates no Greek word tokens, lemma IDs, morphology or translated Scripture. [Source and release detail](OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md).
+- **Full NT Greek VERSE TEXT files are imported, but original Greek WORD-LEVEL identities, morphology, lexical sense review, English master translation, locale translations and publication are NOT DONE.** The OLT-035 first 3 John-only scope below is an earlier historical checkpoint and is now superseded for verse-file import coverage.
+
 ## OLT-035 — Provenance implementation under CI review (snapshot 2026-10-30)
 
 - All **39 existing imported OT book JSON snapshots** are now pinned by Git blob SHA-1, plus the 39 original upstream XML SHA-256 values **recorded in the earlier importer manifest**. The original XML is **not redownloaded or rehashed in this checkpoint**. Imported audit totals: 23,213 verses / 306,785 source words, including **301,837 H-tagged Hebrew** and **4,948 A-tagged Aramaic** words. Source morphology is NOT independently reviewed.

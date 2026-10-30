@@ -3,6 +3,18 @@
 ## Project authority and roles
 Work as chief architect, Hebrew/Greek philologist, translator, lexicon architect, typographer and verification reviewer. Translation must be **extremely literal, nearly interlinear**, even if awkward English. Preserve original grammatical distinctions and concrete visual language. OLT's explicitly **BINITARIAN, not TRINITARIAN** confession governs theological commentary: **THE LORD JESUS IS THE SPIRIT**. This owner-defined view must not be confused with an uncontested lexical gloss of any Hebrew/Greek word. Christ-focused parallels require real biblical evidence and transparent labeling of theology versus grammar.
 
+## OLT-035B — COMPLETE RP2018 NEW TESTAMENT VERSE TEXT, NOT A GREEK WORD LEXICON (BINDING)
+
+The source-first OLT core now holds **all 27 ordinary Greek NT book continuous-text Unicode CSVs** from the ORIGINAL CHOSEN RP2018 textual edition, pinned to ByzTxt tag **v3.3.2**, upstream commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. Every copied CSV Git blob must be byte-identical to the official upstream version. These are **VERSE TEXT SOURCE FILES**, not a finished Greek word/token/lemma/morphological source ledger, not an English master translation and not a reviewed/approved Greek Bible publication.
+
+The upstream derived Unicode verse files contain `chapter,verse,text`; they do NOT provide stable authenticated original-word token IDs, lemma IDs or morphological tags. These exact fields must remain null/NOT_IMPORTED until an independently source-provenanced Greek word layer is built. Do NOT invent Greek token identifiers, infer original-word morpheme identity from whitespace or copy the English reference lexicon as source evidence. Keep the official ByzTxt `source/CCAT` originals as the ultimate text authority; full original-vs-Unicode converter collation is still pending.
+
+The upstream folder also supplies two distinct ancillary original-text passages: **PA.csv (John 7:53–8:11)** and **ACT24.csv (Acts 24:6–8)**. Preserve their byte-identical copies separately, outside the 27 book files. **Do not automatically concatenate, overwrite, publish or assign an unreviewed canonical location** to their verses. Their relation to continuous book text must be resolved from the actual original apparatus and editorial policy, not by English fallback or automated verse overwrite.
+
+Canonical active complete Greek verse-source registry: `data/engine/olt_035b_rp2018_verse_inventory.json`, text files: `data/imported/nt/rp2018/`, separate ancillary sources under `data/imported/nt/rp2018/ancillary/`, read-only engine: `olt_core/nt_corpus.py`, research report: `docs/OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md`.
+
+The earlier OLT-035 3 John sample register remains valid as a **historical first checkpoint** but no longer describes the latest imported Greek verse-level scope. Full Greek WORD-LEVEL identity, etymology, morphological signoff, the source-derived English master ledger and all Amharic/Japanese/Icelandic/Chinese translations remain **NOT DONE**. Bible publication BLOCKED.
+
 ## OLT-035 — SOURCE PROVENANCE AND EXACT ORIGINAL-LANGUAGE ADAPTERS (BINDING)
 
 The source-first OLT core is forbidden to silently replace an original-language word with a guessed English paraphrase, unverified lemma identity, fabricated Greek original token ID, or fabricated morphology. Original words, source word IDs and morphology must be associated with exact edition/version provenance. A source file passing cryptographic checks remains `IMPORTED_UNREVIEWED`; do NOT call this independent textual/linguistic verification or final Bible translation.

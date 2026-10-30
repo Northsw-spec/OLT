@@ -20,7 +20,7 @@
     "ORIGINAL_GREEK_GRC_NT"
   ],
   "ot_primary_corpus": "OSHB_WLC_CURRENT_IMPORT_ORIGINAL_DATA",
-  "nt_primary_corpus": "RP2018_V3_3_2_SOURCE_REVISION_PINNED_THIRD_JOHN_VERSE_SAMPLE_NOT_FULL_NT",
+  "nt_primary_corpus": "RP2018_v3.3.2_27_GREEK_SOURCE_BOOKS_VERSE_ONLY_WITH_2_SEPARATE_ANCILLARY_FILES",
   "english_master_lexicon_role": "SHARED_REFERENCE_LAYER_NOT_INTERMEDIATE_SOURCE_AUTHORITY",
   "english_reference_may_fall_back_to_target_translation": false,
   "source_original_may_be_replaced_by_english": false,
@@ -50,7 +50,7 @@
   "module_publication_status": "RESEARCH_INFRASTRUCTURE_ONLY",
   "bible_release_status": "BLOCKED",
   "full_ot_nt_translation_status": "NOT_COMPLETE",
-  "greek_nt_import_status": "SOURCE_REVISION_PINNED_THIRD_JOHN_VERSE_ONLY_NO_GREEK_WORD_LEMMAS_OR_MORPHOLOGY",
+  "greek_nt_import_status": "ALL_27_NT_GREEK_CONTINUOUS_TEXT_VERSE_CSVS_PINNED_NO_WORD_IDS_LEMMA_OR_MORPHOLOGY",
   "locale_lexicons_status": "EMPTY_SEEDS_ONLY",
   "translation_quality_status": "NOT_INDEPENDENTLY_REVIEWED",
   "milestones": [
@@ -83,6 +83,11 @@
       "id": "OLT-039",
       "work": "Complete OT+NT coverage audits and independent source and locale review/publication stages",
       "state": "PLANNED"
+    },
+    {
+      "id": "OLT-035B",
+      "work": "Complete immutable Greek RP2018 27-book verse-text source archive, preserving two separate variant passages",
+      "state": "BYTE_IDENTICAL_GREEK_VERSE_FILES_IMPORT_FULL_LEXICAL_WORD_LAYER_NOT_DONE"
     }
   ],
   "release_gates": [
@@ -98,5 +103,8 @@
   ],
   "source_provenance_contract": "data/engine/olt_035_source_provenance.json",
   "source_adapters": "olt_core/sources.py",
-  "source_edition_review_status": "PINNED_SNAPSHOTS_NOT_INDEPENDENTLY_PHILOLOGICALLY_REVIEWED"
+  "source_edition_review_status": "PINNED_SNAPSHOTS_NOT_INDEPENDENTLY_PHILOLOGICALLY_REVIEWED",
+  "nt_full_verse_source_inventory": "data/engine/olt_035b_rp2018_verse_inventory.json",
+  "nt_auxiliary_passages_always_separate": true,
+  "nt_original_language_word_morphology_import_complete": false
 }

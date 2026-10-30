@@ -8,6 +8,23 @@ The present repository is written anew; no previous draft or script is copied in
 
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
+## OLT-035B — All 27 RP2018 Greek NT books now imported as source verse text
+
+The OLT core now contains the **27 original RP2018 Greek continuous-text NT book CSVs**, copied byte-identically from official ByzTxt `v3.3.2` (commit `27a45ff...`). In addition, the separate original Greek **PA.csv** (John 7:53–8:11) and **ACT24.csv** (Acts 24:6–8) files are preserved under a separate ancillary directory without altering continuous-text verses automatically.
+
+- [OLT-035B source inventory and critical restrictions](docs/OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md)
+- [27-book Greek source hash/edition contract](data/engine/olt_035b_rp2018_verse_inventory.json)
+- [Byte-verifying Greek verse reader and complete corpus audit](olt_core/nt_corpus.py)
+
+```sh
+python -m olt_core.nt_corpus --audit
+python -m olt_core.nt_corpus --verse MAT Matt.1.1
+python -m olt_core.nt_corpus --verse 3JO 3John.1.1
+python -m olt_core.nt_corpus --ancillary PA
+```
+
+The complete original Greek **verse text collection** is NOT a complete Greek word-level lexicon or morphological analysis. Exact authenticated Greek word IDs, lemma alignment, optional textual variants review, English master translation and target-language translations remain separate uncompleted gates. **Publication BLOCKED.**
+
 ## OLT-035 — Source provenance and Greek source import stage (October 30, 2026)
 
 The shared OLT core now has source-verifying adapters for all **39 imported OT books**, retaining exact original OSHB word IDs, historical upstream XML checksums, 39 frozen imported file Git hashes, and 301,837 Hebrew vs 4,948 Aramaic source-tagged token identities. The **Robinson–Pierpont 2018** Greek source revision is pinned to upstream ByzTxt **v3.3.2** / `27a45ff...`. Its authentic **Third John** text is imported verbatim with a matching upstream blob digest (**14 Greek verses, no Greek word IDs or lemma/morphology import yet**).
