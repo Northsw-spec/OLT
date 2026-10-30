@@ -49,5 +49,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_olt_037c_greek_sense_dossier.py' -v
       - name: Summarize all original Greek source contexts inspected
         run: python -m olt_core.greek_sense_dossier --source "$RUNNER_TEMP/OLT037-TBESG.txt" --summary
-      - name: Transfer original-source contextual dossier for initial pinning ONLY
-        run: python -m olt_core.greek_sense_dossier --source "$RUNNER_TEMP/OLT037-TBESG.txt" --emit-checkpoint-chunks
+      - name: Require byte-for-byte exact regeneration of both frozen Greek contextual dossiers
+        run: python -m olt_core.greek_sense_dossier --source "$RUNNER_TEMP/OLT037-TBESG.txt" --verify-checkpoint
