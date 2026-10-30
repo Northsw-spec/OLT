@@ -184,5 +184,8 @@
       "readability": "PENDING",
       "lexical_review": "NOT_INDEPENDENTLY_VERIFIED"
     }
-  ]
+  ],
+  "name_underword_policy": "data/policy/olt_name_underword_policy.json",
+  "name_underword_registry": "lexicon/name_underwords.json",
+  "name_underword_coverage_status": "BIBLE_WIDE_RULE_INITIAL_EXAMPLES_NOT_COMPLETE_LEXICON"
 }
