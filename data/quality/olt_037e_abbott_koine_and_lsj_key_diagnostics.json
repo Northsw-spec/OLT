@@ -1,0 +1,247 @@
+{
+  "approved_english_master_entries": 0,
+  "checkpoint": "OLT-037E",
+  "frozen_lsj_original_key_snapshot_sha256": "ea9f6e031897630cd5645ace24797e91e145f2018e5dba236b8951d5f1aa4973",
+  "frozen_rp2018_greek_context_snapshot_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+  "human_approved_lexical_senses": 0,
+  "independently_signed_greek_lemma_assignments": 0,
+  "machine_approved_lexical_senses": 0,
+  "original_greek_word_positions_crosschecked": [
+    2315,
+    1287
+  ],
+  "publication_status": "BLOCKED",
+  "published_scripture_verses": 0,
+  "source_abbott_citation": "George Abbott-Smith, A Manual Greek Lexicon of the New Testament (New York: Scribner's, 1922); digitized TEI/XML by translatable-exegetical-tools/Abbott-Smith.",
+  "source_abbott_entries_in_full_original_teixml": 6153,
+  "source_abbott_entries_with_native_n_attribute": 5896,
+  "source_abbott_lexicon_pinned_commit": "8c00cb244761aa23659421a8cbbbf7a3b27b7d59",
+  "source_abbott_license_status": "PUBLIC_DOMAIN_AS_STATED_BY_UPSTREAM_PROJECT",
+  "source_abbott_original_git_blob_sha1": "e10dcfa534dbc71168ca6ac273e991348bab2bb2",
+  "source_cases": [
+    {
+      "abbott_original_source_dictionary_entry_count_for_target": 1,
+      "abbott_original_source_lemma_equals_rp2018_verified": false,
+      "abbott_smith_original_source_lexical_entries_UNREVIEWED": [
+        {
+          "abbott_dictionary_gloss_used_as_translation": false,
+          "all_native_abbott_strong_crossrefs_SOURCE_ONLY": [
+            "2036",
+            "2046",
+            "3004",
+            "4483"
+          ],
+          "biblical_contextual_sense_selected": null,
+          "first_source_def_or_gloss_records_NOT_OLT_TRANSLATION": [
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "to pick out"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "gather"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "reckon"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "recount"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "to say"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "speak"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "affirm"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "declare"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "to mean"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "to call"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "name"
+            }
+          ],
+          "first_source_orth_forms_NOT_APPROVED": [
+            "λέγω"
+          ],
+          "native_abbott_entry_attribute_n_SOURCE_ONLY": "λέγω|G2036|G2046|G3004|G4483",
+          "native_entry_references_multiple_strong_numbers": true,
+          "original_source_def_or_gloss_count": 11,
+          "original_source_orth_form_count": 1,
+          "original_tei_entry_number_in_source": 3219,
+          "publication_status": "BLOCKED"
+        }
+      ],
+      "both_lexica_have_interdependencies_NOT_INDEPENDENT_VOTES": true,
+      "contextual_greek_lemma_approved": null,
+      "english_source_gloss_equal_to_olt_translation": false,
+      "independent_philological_signoff": false,
+      "lsj_original_source_key_diagnostic": {
+        "any_dictionary_lemma_or_sense_approved": false,
+        "exact_original_source_key_matches_UNREVIEWED": [
+          {
+            "source_tei_entry_id": "n62204",
+            "source_tei_entry_key_UNREVIEWED": "le/gw1"
+          },
+          {
+            "source_tei_entry_id": "n62205",
+            "source_tei_entry_key_UNREVIEWED": "le/gw2"
+          }
+        ],
+        "lossy_ascii_prefix_count_DIAGNOSTIC_ONLY": 3,
+        "lossy_ascii_prefix_source_key_samples_DIAGNOSTIC_ONLY": [
+          {
+            "source_tei_entry_id": "n62204",
+            "source_tei_entry_key_UNREVIEWED": "le/gw1"
+          },
+          {
+            "source_tei_entry_id": "n62205",
+            "source_tei_entry_key_UNREVIEWED": "le/gw2"
+          },
+          {
+            "source_tei_entry_id": "n62206",
+            "source_tei_entry_key_UNREVIEWED": "legwnh=sai"
+          }
+        ],
+        "lossy_ascii_signature_NOT_FOR_CROSSWALK": "legw",
+        "lossy_evidence_automatically_resolves_original_exact_miss": false,
+        "lossy_signature_count_DIAGNOSTIC_ONLY": 2,
+        "lossy_signature_source_key_records_DIAGNOSTIC_ONLY": [
+          {
+            "source_tei_entry_id": "n62204",
+            "source_tei_entry_key_UNREVIEWED": "le/gw1"
+          },
+          {
+            "source_tei_entry_id": "n62205",
+            "source_tei_entry_key_UNREVIEWED": "le/gw2"
+          }
+        ],
+        "original_query_exact_source_key": "le/gw"
+      },
+      "lsj_source_shard_verified_git_blob_sha1": "0cc4c1906a4f8a0e696002dc83728d55b9cd9806",
+      "original_greek_source_word_context_corpus_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+      "original_rp2018_source_word_occurrences": 2315,
+      "owner_editorial_approval": false,
+      "owner_english_master_word": null,
+      "publication_status": "BLOCKED",
+      "rp2018_original_strong_number": "3004",
+      "selected_abbott_lexical_sense": null,
+      "selected_lsj_entry_id": null,
+      "stepbible_native_source_candidate_ids_UNREVIEWED": [
+        "G3004G",
+        "G3004H"
+      ]
+    },
+    {
+      "abbott_original_source_dictionary_entry_count_for_target": 1,
+      "abbott_original_source_lemma_equals_rp2018_verified": false,
+      "abbott_smith_original_source_lexical_entries_UNREVIEWED": [
+        {
+          "abbott_dictionary_gloss_used_as_translation": false,
+          "all_native_abbott_strong_crossrefs_SOURCE_ONLY": [
+            "3754"
+          ],
+          "biblical_contextual_sense_selected": null,
+          "first_source_def_or_gloss_records_NOT_OLT_TRANSLATION": [
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "that"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "for that"
+            },
+            {
+              "original_source_tag": "gloss",
+              "original_source_text": "because"
+            }
+          ],
+          "first_source_orth_forms_NOT_APPROVED": [
+            "ὅτι"
+          ],
+          "native_abbott_entry_attribute_n_SOURCE_ONLY": "ὅτι|G3754",
+          "native_entry_references_multiple_strong_numbers": false,
+          "original_source_def_or_gloss_count": 3,
+          "original_source_orth_form_count": 1,
+          "original_tei_entry_number_in_source": 3923,
+          "publication_status": "BLOCKED"
+        }
+      ],
+      "both_lexica_have_interdependencies_NOT_INDEPENDENT_VOTES": true,
+      "contextual_greek_lemma_approved": null,
+      "english_source_gloss_equal_to_olt_translation": false,
+      "independent_philological_signoff": false,
+      "lsj_original_source_key_diagnostic": {
+        "any_dictionary_lemma_or_sense_approved": false,
+        "exact_original_source_key_matches_UNREVIEWED": [],
+        "lossy_ascii_prefix_count_DIAGNOSTIC_ONLY": 5,
+        "lossy_ascii_prefix_source_key_samples_DIAGNOSTIC_ONLY": [
+          {
+            "source_tei_entry_id": "n75695",
+            "source_tei_entry_key_UNREVIEWED": "o(/ti^"
+          },
+          {
+            "source_tei_entry_id": "n75696",
+            "source_tei_entry_key_UNREVIEWED": "o)tiafo/roi"
+          },
+          {
+            "source_tei_entry_id": "n75697",
+            "source_tei_entry_key_UNREVIEWED": "o)ti\\s"
+          },
+          {
+            "source_tei_entry_id": "n75698",
+            "source_tei_entry_key_UNREVIEWED": "o(tih/"
+          },
+          {
+            "source_tei_entry_id": "n75699",
+            "source_tei_entry_key_UNREVIEWED": "o(tiou=n"
+          }
+        ],
+        "lossy_ascii_signature_NOT_FOR_CROSSWALK": "oti",
+        "lossy_evidence_automatically_resolves_original_exact_miss": false,
+        "lossy_signature_count_DIAGNOSTIC_ONLY": 1,
+        "lossy_signature_source_key_records_DIAGNOSTIC_ONLY": [
+          {
+            "source_tei_entry_id": "n75695",
+            "source_tei_entry_key_UNREVIEWED": "o(/ti^"
+          }
+        ],
+        "original_query_exact_source_key": "o(/ti"
+      },
+      "lsj_source_shard_verified_git_blob_sha1": "b8a1ba605424c2df3b67f04190bde804664441c8",
+      "original_greek_source_word_context_corpus_sha256": "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69",
+      "original_rp2018_source_word_occurrences": 1287,
+      "owner_editorial_approval": false,
+      "owner_english_master_word": null,
+      "publication_status": "BLOCKED",
+      "rp2018_original_strong_number": "3754",
+      "selected_abbott_lexical_sense": null,
+      "selected_lsj_entry_id": null,
+      "stepbible_native_source_candidate_ids_UNREVIEWED": [
+        "G3754G",
+        "G3754H"
+      ]
+    }
+  ],
+  "source_evidence_status": "INDEPENDENT_KOINE_SOURCE_AND_LSJ_ORTHOGRAPHY_DIAGNOSTIC_NOT_APPROVED",
+  "source_lsj_attribution": "Liddell, Scott, and Jones, A Greek-English Lexicon (1940); digital TEI-XML by Perseus Digital Library, Tufts University, CC BY-SA 4.0. Original source: https://github.com/PerseusDL/lexica",
+  "source_lsj_license": "CC BY-SA 4.0",
+  "source_lsj_pinned_commit": "1c34cdf756c63cf37db61bd366d733431dbd7aa0"
+}
