@@ -67,5 +67,25 @@
   },
   "publication_status": "BLOCKED",
   "phase": "REGISTER_AND_POLICY_NOT_BIBLE_WIDE_RENDERING_COMPLETE",
-  "applied_to_real_corpus": "NOT_YET; required policy and initial examples defined"
+  "applied_to_real_corpus": "NOT_YET; required policy and initial examples defined",
+  "initial_owner_requested_name_underwords": {
+    "Moses": "Draw",
+    "God (Hebrew Elohim)": "Mighty Governance",
+    "El": "Mighty",
+    "El Shaddai": "My Mighty Strength",
+    "Jerusalem": "City of Peace",
+    "David": "The Beloved",
+    "Noah": "Rest"
+  },
+  "proposal_certification": "OWNER_RESEARCH_DISPLAY_SELECTION_NOT_INDEPENDENT_HEBREW_MEANING",
+  "approved_binding_for_scope": true,
+  "current_lexicon_register_size": 10,
+  "staged_rollout": [
+    "EXACT_SOURCE_LEMMA_NAME_IDENTITY",
+    "EVIDENCE_AND_DISPUTE_REVIEW",
+    "LANGUAGE_SPECIFIC_UNDERWORD_AND_FOOTNOTE",
+    "PER_OCCURRENCE_PROVENANCE_AND_LAYOUT",
+    "INDEPENDENT_LEXICAL_AND_VISUAL_QA",
+    "SEPARATE_PUBLICATION_GATE"
+  ]
 }
