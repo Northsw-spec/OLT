@@ -1,0 +1,51 @@
+name: OLT-035 original-language source provenance (NOT translation certification)
+on:
+  pull_request:
+    paths:
+      - "olt_core/sources.py"
+      - "olt_core/__init__.py"
+      - "data/engine/olt_035_source_provenance.json"
+      - "data/imported/manifest.json"
+      - "data/imported/books/**"
+      - "data/imported/nt/rp2018/**"
+      - "schemas/olt_035_greek_verse.schema.json"
+      - "tests/test_olt_035_source_adapters.py"
+      - "docs/OLT-035_SOURCE_PROVENANCE.md"
+      - "sources/REGISTRY.md"
+      - ".github/workflows/olt-035.yml"
+  push:
+    branches: [main]
+    paths:
+      - "olt_core/sources.py"
+      - "olt_core/__init__.py"
+      - "data/engine/olt_035_source_provenance.json"
+      - "data/imported/manifest.json"
+      - "data/imported/books/**"
+      - "data/imported/nt/rp2018/**"
+      - "schemas/olt_035_greek_verse.schema.json"
+      - "tests/test_olt_035_source_adapters.py"
+      - "docs/OLT-035_SOURCE_PROVENANCE.md"
+      - "sources/REGISTRY.md"
+      - ".github/workflows/olt-035.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate pinned actual corpus, original-language tags and Greek sample
+        run: python -m unittest discover -s tests -p 'test_olt_035_source_adapters.py' -v
+      - name: Reaudit all 39 imported OT book snapshots
+        run: python -m olt_core.sources --audit-ot
+      - name: Generate real Aramaic-containing Daniel verse with untouched original IDs
+        run: python -m olt_core.sources --ot-verse Dan Dan.2.5 > /dev/null
+      - name: Verify byte-identical RP2018 Greek 3 John original verse stage
+        run: python -m olt_core.sources --greek-3john > /dev/null
