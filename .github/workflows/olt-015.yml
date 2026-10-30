@@ -4,7 +4,10 @@ on:
     branches: [main]
     paths:
       - "scripts/audit_full_genesis_research.py"
+      - "scripts/research_footnotes.py"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
       - "tests/test_olt_015.py"
+      - "scripts/genesis_literal_proposals.py"
       - ".github/workflows/olt-015.yml"
   workflow_dispatch:
 permissions:

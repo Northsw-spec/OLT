@@ -7,6 +7,7 @@ Do not invent a token or grant editorial approval by merging data.
 """
 from __future__ import annotations
 from collections import Counter
+from research_footnotes import attach_footnotes
 from pathlib import Path
 import argparse,json,re
 
@@ -163,6 +164,7 @@ def audit(source,artifacts):
     if not normalized[3]["proposed_english_research_text"].startswith(
        "And God — He saw the light, that [he was] — good."):
         raise ValueError("Owner-approved Genesis 1:4 clause was modified")
+    preview_lines, definitions, footnote_manifest=attach_footnotes(normalized)
     for verse in normalized:
         for word in verse["original_token_alignment"]:
             if "1254 a" in word["source_exact_lemma_ids"] and not re.search(
@@ -187,6 +189,8 @@ def audit(source,artifacts):
         "source_tagged_wayyiqtol_count":wy_count,
         "sources_merged":INPUTS,
         "genesis_1_research_verses":normalized,
+        "research_note_anchor_manifest":footnote_manifest,
+        "research_footnotes_count":len(footnote_manifest),
         "authoritatively_approved_english_verses":0,
         "non_owner_english_lexical_families_approved":0,
         "independently_audited_morphology":False,
@@ -207,19 +211,20 @@ def preview(audit):
         "Hebrew word spelling is displayed with OSHB's analytic morpheme separators removed solely for readability; the source data and original separators are preserved unchanged in the JSON alignment.",
         "",
     ]
-    for v in audit["genesis_1_research_verses"]:
+    rendered,definitions,manifest=attach_footnotes(audit["genesis_1_research_verses"])
+    for v,rendered_english in zip(audit["genesis_1_research_verses"],rendered):
         hebrew=" ".join(x.replace("/","") for x in v["original_verse_source_hebrew_words"])
         items.extend([
             "### "+v["reference"],
             "",
             "**Masoretic Hebrew:** "+hebrew,
             "",
-            "**OLT English research proposal:** "+v["proposed_english_research_text"]+("[^gen-1-1-power]" if v["reference"]=="Gen.1.1" else ""),
+            "**OLT English research proposal:** "+rendered_english,
             "",
         ])
-    power=audit["genesis_1_research_verses"][0]["verse_footnote_proposals"][0]
-    items.extend(["---","","**RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.","",
-                  "[^gen-1-1-power]: "+power["english"],""])
+    items.extend(["---","","**RELEASE BLOCKED.** These paragraphs have no independent philological/owner approval. Homonyms and theological cross-references are not inferred from spelling; no unverified alternatives are displayed inline.",""])
+    items.extend(definitions)
+    items.append("")
     return "\n".join(items)+"\n"
 
 def main():

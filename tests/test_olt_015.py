@@ -52,7 +52,10 @@ class OLT015(unittest.TestCase):
   self.assertEqual(len(v["verse_footnote_proposals"]),1)
   self.assertEqual(v["verse_footnote_proposals"][0]["evidence_references"],["Gen.49.3","Deut.21.17"])
   md=preview(a)
-  self.assertIn("the Earth.[^gen-1-1-power]",md)
+  self.assertIn("[of His Power][^gen-1-1-power] God",md)
+  self.assertNotIn("the Earth.[^gen-1-1-power]",md)
+  self.assertEqual(a["research_footnotes_count"],1)
+  self.assertEqual(a["research_note_anchor_manifest"][0]["marker_placement"],"IMMEDIATELY_AFTER_ANCHOR")
   self.assertIn("[^gen-1-1-power]: [of His Power]",md)
   self.assertIn("separate Hebrew noun",md)
   self.assertEqual(a["authoritatively_approved_english_verses"],0)
@@ -71,6 +74,42 @@ class OLT015(unittest.TestCase):
   note=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
   note["is_independent_hebrew_lexeme"]=True
   with self.assertRaisesRegex(ValueError,"truthful intertextual"):
+   self.make(p)
+ def test_double_footnote_identifier_fails(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  p[0]["footnote_drafts"].append(copy.deepcopy(n))
+  with self.assertRaisesRegex(ValueError,"Duplicate footnote identifier"):
+   self.make(p)
+ def test_footnote_anchor_must_exist_only_once(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  n["anchor"]="[fictitious power]"
+  with self.assertRaisesRegex(ValueError,"Footnote anchor missing or ambiguous"):
+   self.make(p)
+ def test_footnote_reference_must_match_verse(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  n["reference"]="Gen.1.2"
+  with self.assertRaisesRegex(ValueError,"Footnote verse/source-reference mismatch"):
+   self.make(p)
+ def test_footnote_evidence_must_not_be_empty(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  n["evidence_references"]=[]
+  with self.assertRaisesRegex(ValueError,"Footnote lacks specific evidence"):
+   self.make(p)
+ def test_footnote_does_not_self_approve(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  n["editorial_status"]="PUBLISHED"
+  with self.assertRaisesRegex(ValueError,"Footnote cannot claim"):
+   self.make(p)
+ def test_note_cannot_explain_an_ambiguous_repeated_span(self):
+  p=copy.deepcopy(self.parts)
+  n=next(x for x in p[0]["footnote_drafts"] if x.get("id")=="gen-1-1-power")
+  n["anchor"]="the"
+  with self.assertRaisesRegex(ValueError,"Footnote anchor missing or ambiguous"):
    self.make(p)
  def test_render_is_clearly_unapproved(self):
   md=preview(self.make())
