@@ -1,0 +1,43 @@
+name: OLT-034 multilingual core source-first contracts (NOT translation certification)
+on:
+  push:
+    branches: [main]
+    paths:
+      - "olt_core/**"
+      - "locales/**"
+      - "data/engine/**"
+      - "lexicon/english_master_manifest.json"
+      - "tests/test_olt_034_multilingual_core.py"
+      - "docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md"
+      - ".github/workflows/olt-034.yml"
+  pull_request:
+    paths:
+      - "olt_core/**"
+      - "locales/**"
+      - "data/engine/**"
+      - "lexicon/english_master_manifest.json"
+      - "tests/test_olt_034_multilingual_core.py"
+      - "docs/OLT-034_MULTILINGUAL_ARCHITECTURE.md"
+      - ".github/workflows/olt-034.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-first-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run source-first locale contract and negative safety tests
+        run: python -m unittest discover -s tests -p 'test_olt_034_multilingual_core.py' -v
+      - name: Verify separate researched output for Amharic
+        run: python -m olt_core.cli --locale am > /dev/null
+      - name: Verify Japanese and Chinese profiles remain untranslated
+        run: |
+          python -m olt_core.cli --locale ja > /dev/null
+          python -m olt_core.cli --locale zh-Hans > /dev/null
