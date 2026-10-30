@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Northsw-spec/OLT/blob/main/schemas/olt_035_greek_verse.schema.json",
+  "title": "OLT-035 original RP2018 Greek verse source with no fabricated word-level morphology",
+  "description": "Verse-level source staging only; unlike the OLT-034 word-token schema there are NO lexical token IDs yet.",
+  "type": "object",
+  "required": [
+    "verse_id",
+    "source_language",
+    "original_script_verse_text",
+    "source_edition",
+    "source_raw_file",
+    "source_original_git_blob_sha1",
+    "source_kind",
+    "word_token_ids",
+    "lemma_ids",
+    "raw_morphology",
+    "translation",
+    "editorial_review",
+    "publication_status"
+  ],
+  "properties": {
+    "verse_id": {
+      "type": "string",
+      "pattern": "^3John\\.1\\.(?:[1-9]|1[0-4])$"
+    },
+    "source_language": {
+      "const": "grc"
+    },
+    "original_script_verse_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_edition": {
+      "const": "ROBINSON_PIERPONT_2018_v3.3.2"
+    },
+    "source_raw_file": {
+      "const": "data/imported/nt/rp2018/3JO.csv"
+    },
+    "source_original_git_blob_sha1": {
+      "const": "296e85242768aab57007a69cf62b92aef0b5067b"
+    },
+    "source_kind": {
+      "const": "UPSTREAM_DERIVED_UNICODE_CSV_NOT_OFFICIAL_CC_AT_VERIFIED_WORD_LEVEL"
+    },
+    "word_token_ids": {
+      "type": "null"
+    },
+    "lemma_ids": {
+      "type": "null"
+    },
+    "raw_morphology": {
+      "type": "null"
+    },
+    "translation": {
+      "type": "null"
+    },
+    "editorial_review": {
+      "const": "NOT_DONE"
+    },
+    "publication_status": {
+      "const": "BLOCKED"
+    }
+  },
+  "additionalProperties": false
+}
