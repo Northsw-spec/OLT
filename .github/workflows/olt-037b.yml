@@ -1,0 +1,51 @@
+name: OLT-037B Greek lexical ambiguity review queue (NOT review approval)
+on:
+  pull_request:
+    paths:
+      - "olt_core/greek_lemma_triage.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_alignment.py"
+      - "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "tests/test_olt_037b_greek_lemma_triage.py"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "docs/OLT-037B_GREEK_LEMMA_REVIEW_QUEUE.md"
+      - ".github/workflows/olt-037b.yml"
+  push:
+    branches: [main]
+    paths:
+      - "olt_core/greek_lemma_triage.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_alignment.py"
+      - "data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "tests/test_olt_037b_greek_lemma_triage.py"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "docs/OLT-037B_GREEK_LEMMA_REVIEW_QUEUE.md"
+      - ".github/workflows/olt-037b.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch immutable external source and validate official Git object
+        run: python scripts/fetch_olt_037_tbesg.py --output "$RUNNER_TEMP/OLT037-TBESG.txt"
+      - name: Negative tests and source-faithful full-corpus review-queue integration
+        env:
+          OLT037_TBESG_PATH: ${{ runner.temp }}/OLT037-TBESG.txt
+        run: python -m unittest discover -s tests -p 'test_olt_037b_greek_lemma_triage.py' -v
+      - name: Full corpus numerical review-case summary (no invented lemma decisions)
+        run: python -m olt_core.greek_lemma_triage --source "$RUNNER_TEMP/OLT037-TBESG.txt" --summary
+      - name: Require byte-for-byte regeneration of the locked 107-case evidence checkpoint
+        run: python -m olt_core.greek_lemma_triage --source "$RUNNER_TEMP/OLT037-TBESG.txt" --verify-checkpoint
