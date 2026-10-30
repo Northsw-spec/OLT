@@ -141,6 +141,35 @@ class TestOLT037C(unittest.TestCase):
         self.assertEqual(data, serialize_dossiers(payload).encode("utf-8"))
         self.assertEqual(hashlib.sha256(data).hexdigest(), lines[-1].split()[-1])
 
+    def test_frozen_contexts_sha_and_scientific_approval_gate(self):
+        raw = (ROOT / REPORT_PATH).read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "08d58d6ce13b9803ed1936dfde1ed249f3c32e44af7bdc50b8665adb593bab69")
+        data = json.loads(raw.decode("utf-8"))
+        self.assertEqual(data["checkpoint"], CHECKPOINT)
+        self.assertEqual(data["all_nt_original_greek_word_positions_inspected"], 140149)
+        self.assertEqual(data["number_of_case_studies"], 2)
+        self.assertEqual(data["number_of_verified_greek_lemma_decisions"], 0)
+        self.assertEqual(data["number_of_approved_english_master_entries"], 0)
+        self.assertEqual(data["number_of_generated_target_translations"], 0)
+        self.assertEqual(data["publication_status"], "BLOCKED")
+        self.assertEqual([x["evidence_sample_count"] for x in data["cases"]], [136, 53])
+        self.assertTrue(all(x["independent_philological_signoff"] is False
+                            and x["owner_editorial_approval"] is False
+                            and x["selected_stepbible_dstrong"] is None
+                            and x["approved_greek_lemma"] is None
+                            and x["approved_english_translation"] is None
+                            and x["contextual_sense_assignments"] == []
+                            and x["publication_status"] == "BLOCKED"
+                            for x in data["cases"]))
+        for case in data["cases"]:
+            self.assertEqual(sum(case["original_unicode_surface_frequencies"].values()),
+                             case["primary_source_word_positions"])
+            self.assertEqual(sum(case["original_raw_editor_morphology_code_frequencies"].values()),
+                             case["primary_source_word_positions"])
+            self.assertEqual(sum(case["original_source_occurrences_by_book"].values()),
+                             case["primary_source_word_positions"])
+
     def test_pinned_original_3004_and_3754_source_dossiers(self):
         path = os.environ.get("OLT037_TBESG_PATH")
         if not path:
@@ -188,8 +217,8 @@ class TestOLT037C(unittest.TestCase):
             self.assertFalse(case["owner_editorial_approval"])
             self.assertFalse(any(x["contextual_sense_assignments"] for x in [case]))
         committed = ROOT / REPORT_PATH
-        if committed.is_file():
-            verify_frozen_dossiers(report)
+        self.assertTrue(committed.is_file(), "Original contextual source dossier must be frozen")
+        verify_frozen_dossiers(report)
 
 
 if __name__ == "__main__":
