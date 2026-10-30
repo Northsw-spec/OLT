@@ -1,0 +1,47 @@
+name: OLT-036 original Greek word alignment (NOT lexical or publication approval)
+on:
+  pull_request:
+    paths:
+      - "data/imported/nt/rp2018/**"
+      - "data/engine/olt_035b_rp2018_verse_inventory.json"
+      - "data/engine/olt_035d_greek_word_source_manifest.json"
+      - "olt_core/greek_words.py"
+      - "olt_core/nt_corpus.py"
+      - "olt_core/greek_alignment.py"
+      - "tests/test_olt_036_greek_word_alignment.py"
+      - "docs/OLT-036_GREEK_WORD_ALIGNMENT.md"
+      - ".github/workflows/olt-036.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/imported/nt/rp2018/**"
+      - "data/engine/olt_035b_rp2018_verse_inventory.json"
+      - "data/engine/olt_035d_greek_word_source_manifest.json"
+      - "olt_core/greek_words.py"
+      - "olt_core/nt_corpus.py"
+      - "olt_core/greek_alignment.py"
+      - "tests/test_olt_036_greek_word_alignment.py"
+      - "docs/OLT-036_GREEK_WORD_ALIGNMENT.md"
+      - ".github/workflows/olt-036.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-greek-word-crosswalk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test exact source position joins, lossy normalization and negative gates
+        run: python -m unittest discover -s tests -p 'test_olt_036_greek_word_alignment.py' -v
+      - name: Verify all 27 source-bound original Greek books and 140149 word positions
+        run: python -m olt_core.greek_alignment --audit
+      - name: Inspect 3 John 1:1 iota-subscript preservation and Unicode offsets
+        run: python -m olt_core.greek_alignment --verse 3JO 3John.1.1 > /dev/null
+      - name: Inspect Matthew 26:45 with alternative morphological analyses
+        run: python -m olt_core.greek_alignment --verse MAT Matt.26.45 > /dev/null
