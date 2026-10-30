@@ -110,7 +110,7 @@ def build_html(verse: dict, policy: dict) -> str:
   .warning {{ border-left: 4px solid #555; padding: .6rem .9rem; background: #f2f2f2; font: 14px/1.5 system-ui, sans-serif; }}
   .hebrew {{ direction: rtl; text-align: right; font-size: 26px; line-height: 1.9; margin: 1.5rem 0; }}
   .english {{ font-size: 24px; line-height: 2.2; margin: 1.4rem 0; }}
-  .linked-word {{ display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.08; margin-right: .2em; }}
+  .linked-word {{ display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.08; }}
   .linked-word .primary {{ color: var(--main-link); font-weight: 700; }}
   .linked-word .secondary {{ color: var(--under-link); font-size: .66em; font-weight: 700; margin-top: .12em; }}
   .supplement {{ white-space: nowrap; }}
@@ -128,7 +128,7 @@ def build_html(verse: dict, policy: dict) -> str:
 <p class="status">OLT-023 · Research only · Release blocked</p>
 <p class="warning"><strong>NOT APPROVED BIBLE TEXT.</strong> The source-linked English is a research proposal. Its grammar, interpretation, typography and notes have not received independent publication review. The blue <em>with</em> is an owner-selected canonical interpretation, not a certified Hebrew gloss.</p>
 <p class="hebrew" lang="he" dir="rtl">{escape(hebrew)}</p>
-<p class="english" lang="en" data-primary-source-token="01xeN" data-publication-status="BLOCKED"><span class="linked-word" aria-label="In; interpretive under-word: with"><span class="primary">In</span><span class="secondary">with<sup><a href="#note-with" aria-label="Under-word research note 1">1</a></sup></span></span>{escape(before)}<span class="supplement">[of His Power]<sup><a href="#note-power" aria-label="Editorial supplement research note 2">2</a></sup></span>{escape(after)}</p>
+<p class="english" lang="en" data-primary-source-token="01xeN" data-publication-status="BLOCKED"><span class="linked-word" aria-label="In; interpretive under-word: with"><span class="primary">In</span><span class="secondary">with<sup><a href="#note-with" aria-label="Under-word research note 1">1</a></sup></span></span> {escape(before)}<span class="supplement">[of His Power]<sup><a href="#note-power" aria-label="Editorial supplement research note 2">2</a></sup></span>{escape(after)}</p>
 <section class="notes" aria-label="Research notes (not page-bottom printed footnotes)">
 <h2>Research notes — not independently approved</h2>
 <ol>
