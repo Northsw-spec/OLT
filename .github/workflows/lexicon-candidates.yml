@@ -1,8 +1,27 @@
 name: Build full OT source-lexicon candidate join
 on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_lexicon_candidates.py"
+      - "tests/test_lexicon_candidates.py"
+      - ".github/workflows/lexicon-candidates.yml"
+      - "data/quality/lexicon_candidates.jsonl"
+      - "data/quality/genesis_01_owner_lock_anchors.json"
+      - "data/quality/lexicon_join_report.json"
+      - "tests/test_olt_028_ci_security.py"
+  pull_request:
+    paths:
+      - "scripts/build_lexicon_candidates.py"
+      - "tests/test_lexicon_candidates.py"
+      - ".github/workflows/lexicon-candidates.yml"
+      - "data/quality/lexicon_candidates.jsonl"
+      - "data/quality/genesis_01_owner_lock_anchors.json"
+      - "data/quality/lexicon_join_report.json"
+      - "tests/test_olt_028_ci_security.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-lexicon-candidates
   cancel-in-progress: false
@@ -13,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -36,14 +55,13 @@ jobs:
           assert r["genesis_1_owner_lock_candidates"]["asah"]==7
           print("PASS: candidate identity coverage; NO philological signoff")
           PY
-      - name: Commit candidate join products
+      - name: Validate committed candidate lexicon outputs without branch writes
         run: |
-          git config user.name "olt-lexicon[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/quality
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Add full source-lexicon candidate join and Genesis 1 owner-lock matches"
-            git push origin HEAD:main
+          set -euo pipefail
+          git ls-files --error-unmatch data/quality/lexicon_candidates.jsonl data/quality/genesis_01_owner_lock_anchors.json data/quality/lexicon_join_report.json >/dev/null
+          if [ -n "$(git status --porcelain --untracked-files=all -- data/quality/lexicon_candidates.jsonl data/quality/genesis_01_owner_lock_anchors.json data/quality/lexicon_join_report.json)" ]; then
+            git status --short --untracked-files=all -- data/quality/lexicon_candidates.jsonl data/quality/genesis_01_owner_lock_anchors.json data/quality/lexicon_join_report.json
+            echo "::error::Derived lexicon candidate products differ from committed evidence; submit a pull request."
+            exit 1
           fi
+          echo "PASS: source candidate lexical join reproducible; all English meanings NOT APPROVED"
