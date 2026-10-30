@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
       - "scripts/fetch_olt_037_tbesg.py"
       - "olt_core/greek_lexicon.py"
       - "olt_core/greek_words.py"
@@ -14,6 +15,7 @@ on:
     branches: [main]
     paths:
       - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
       - "scripts/fetch_olt_037_tbesg.py"
       - "olt_core/greek_lexicon.py"
       - "olt_core/greek_words.py"
