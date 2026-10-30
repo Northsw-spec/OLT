@@ -66,8 +66,12 @@ jobs:
           PY
       - name: Verify committed Genesis 1 research artifacts match generated output
         run: |
-          git ls-files --error-unmatch             data/research/genesis_01_complete_research_alignment.json             genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md >/dev/null
-          if ! git diff --exit-code --             data/research/genesis_01_complete_research_alignment.json             genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md; then
+          git ls-files --error-unmatch \
+            data/research/genesis_01_complete_research_alignment.json \
+            genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md >/dev/null
+          if ! git diff --exit-code -- \
+            data/research/genesis_01_complete_research_alignment.json \
+            genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md; then
             echo "::error::Generated Genesis 1 research artifacts differ. Regenerate locally and submit a pull request; CI cannot push to main."
             exit 1
           fi
