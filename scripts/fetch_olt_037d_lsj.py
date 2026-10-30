@@ -10,11 +10,13 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import sys
 import urllib.error
 import urllib.request
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 from olt_core.engine import SourceContractError
-from olt_core.sources import ROOT
 
 MANIFEST_PATH = "data/engine/olt_037d_perseus_lsj_source_manifest.json"
 _COMMIT = "1c34cdf756c63cf37db61bd366d733431dbd7aa0"
