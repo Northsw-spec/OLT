@@ -1,0 +1,29 @@
+{
+  "checkpoint": "OLT-037E",
+  "independent_lexicon_name": "George Abbott-Smith, A Manual Greek Lexicon of the New Testament (1922)",
+  "upstream_repository": "https://github.com/translatable-exegetical-tools/Abbott-Smith",
+  "upstream_pinned_commit": "8c00cb244761aa23659421a8cbbbf7a3b27b7d59",
+  "upstream_source_path": "abbott-smith.tei.xml",
+  "upstream_source_git_blob_sha1": "e10dcfa534dbc71168ca6ac273e991348bab2bb2",
+  "upstream_source_byte_length": 5698817,
+  "upstream_readme_git_blob_sha1": "64eda828221708e54d3b23d2d8a1c17b1e76a1ef",
+  "source_license_statement": "The lexicon (abbott-smith.tei.xml), including the marked up version in this repository, is in the public domain.",
+  "source_license_status": "PUBLIC_DOMAIN_AS_STATED_BY_UPSTREAM_PROJECT",
+  "upstream_source_license_url": "https://github.com/translatable-exegetical-tools/Abbott-Smith/blob/8c00cb244761aa23659421a8cbbbf7a3b27b7d59/README.md",
+  "original_author": "G. Abbott-Smith",
+  "original_edition_publication_year": 1922,
+  "digital_markup_contributor_project": "translatable-exegetical-tools/Abbott-Smith",
+  "digital_marked_up_corpus_is_a_separate_edition_from_rp2018": true,
+  "bibliography": "George Abbott-Smith, A Manual Greek Lexicon of the New Testament (New York: Scribner's, 1922); digitized TEI/XML by translatable-exegetical-tools/Abbott-Smith.",
+  "research_case_numbers": [
+    "3004",
+    "3754"
+  ],
+  "original_source_never_vendored": true,
+  "source_tei_and_glosses_are_research_evidence_only": true,
+  "approved_greek_lemma_identity": false,
+  "approved_lexical_sense": false,
+  "approved_english_master_entry": false,
+  "approved_nt_publication": false,
+  "publication_status": "BLOCKED"
+}
