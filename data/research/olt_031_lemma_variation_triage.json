@@ -1,0 +1,3406 @@
+{
+  "checkpoint": "OLT-031",
+  "scope": "GENESIS_1_MULTIPLE_ENGLISH_RESEARCH_FRAGMENT_TRIAGE",
+  "canonical_source": "data/research/genesis_01_lexeme_editorial_queue.json",
+  "original_hebrew_verse_count": 31,
+  "original_hebrew_word_tokens": 434,
+  "source_tokens_with_numeric_lemma": 427,
+  "source_tokens_without_numeric_lemma": 7,
+  "exact_source_lemma_ids": 97,
+  "source_lemmas_with_multiple_unapproved_fragments": 42,
+  "source_lemmas_with_one_unapproved_fragment": 55,
+  "owner_locked_lemma_families": 3,
+  "new_english_lexical_approvals": 0,
+  "new_independent_morphology_approvals": 0,
+  "approved_homonym_links": 0,
+  "fragments_are_not_proof_of_lexical_homonymy": true,
+  "prior_scholarly_source_limits": "OLT-017A/017B dossiers are research evidence, not independent lexical signoff",
+  "publication_status": "BLOCKED",
+  "cases": [
+    {
+      "source_lemma_id": "1961",
+      "source_token_count": 27,
+      "research_fragments_exact": [
+        "And was",
+        "Let be",
+        "[he] shall be",
+        "and [they shall] be",
+        "and let [him] be",
+        "and was",
+        "she was"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqi3ms",
+        "HC/Vqq3cp",
+        "HC/Vqw3ms",
+        "HVqi3ms",
+        "HVqj3ms",
+        "HVqp3fs"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "e.bf.aa"
+      ],
+      "source_strongs_ids": [
+        "H1961"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01Qzf",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "הָיְתָ֥ה",
+          "imported_morphology": "HVqp3fs",
+          "unapproved_english_fragment": "she was"
+        },
+        {
+          "source_token_id": "01fpo",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "יְהִ֣י",
+          "imported_morphology": "HVqj3ms",
+          "unapproved_english_fragment": "Let be"
+        },
+        {
+          "source_token_id": "01yw4",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And was"
+        },
+        {
+          "source_token_id": "01Y3z",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01uLf",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01BsK",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "יְהִ֥י",
+          "imported_morphology": "HVqj3ms",
+          "unapproved_english_fragment": "Let be"
+        },
+        {
+          "source_token_id": "01qty",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "וִ/יהִ֣י",
+          "imported_morphology": "HC/Vqi3ms",
+          "unapproved_english_fragment": "and let [him] be"
+        },
+        {
+          "source_token_id": "019qY",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01dNE",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01AYg",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01KvD",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01Gq9",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "013Lj",
+          "verse": "Gen.1.13",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01WTe",
+          "verse": "Gen.1.13",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01CEu",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "יְהִ֤י",
+          "imported_morphology": "HVqj3ms",
+          "unapproved_english_fragment": "Let be"
+        },
+        {
+          "source_token_id": "01btu",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "וְ/הָי֤וּ",
+          "imported_morphology": "HC/Vqq3cp",
+          "unapproved_english_fragment": "and [they shall] be"
+        },
+        {
+          "source_token_id": "01xva",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "וְ/הָי֤וּ",
+          "imported_morphology": "HC/Vqq3cp",
+          "unapproved_english_fragment": "and [they shall] be"
+        },
+        {
+          "source_token_id": "01MmM",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "013k3",
+          "verse": "Gen.1.19",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01W2c",
+          "verse": "Gen.1.19",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "0168C",
+          "verse": "Gen.1.23",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01D4c",
+          "verse": "Gen.1.23",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "016Lo",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01Rvc",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "יִֽהְיֶ֖ה",
+          "imported_morphology": "HVqi3ms",
+          "unapproved_english_fragment": "[he] shall be"
+        },
+        {
+          "source_token_id": "01HoD",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01vLv",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        },
+        {
+          "source_token_id": "01Sxc",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "וַֽ/יְהִי",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "and was"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3605",
+      "source_token_count": 14,
+      "research_fragments_exact": [
+        "all",
+        "and in all",
+        "and in every",
+        "and to every",
+        "every"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/R/Ncmsc",
+        "HNcmsc"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "k.bn.ab"
+      ],
+      "source_strongs_ids": [
+        "H3605"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01xAF",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "01ZPN",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "0174R",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "01HjU",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וּ/בְ/כָל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and in all"
+        },
+        {
+          "source_token_id": "01NtK",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וּ/בְ/כָל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and in every"
+        },
+        {
+          "source_token_id": "01hS1",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "וּ/בְ/כָל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and in every"
+        },
+        {
+          "source_token_id": "01FMa",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "01jEX",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "כָל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "all"
+        },
+        {
+          "source_token_id": "01awE",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "018eM",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "וּֽ/לְ/כָל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01fp1",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "וּ/לְ/כָל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01gBW",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "וּ/לְ/כֹ֣ל",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and to every"
+        },
+        {
+          "source_token_id": "01Hki",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "every"
+        },
+        {
+          "source_token_id": "01e3z",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "כָּל",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "all"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3117",
+      "source_token_count": 11,
+      "research_fragments_exact": [
+        "Day",
+        "and for days",
+        "day",
+        "in the day",
+        "the day"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/R/Ncmpa",
+        "HNcmsa",
+        "HNcmsc",
+        "HRd/Ncmsa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "j.ay.aa"
+      ],
+      "source_strongs_ids": [
+        "H3117"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01wrL",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "י֔וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "Day"
+        },
+        {
+          "source_token_id": "013TS",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "day"
+        },
+        {
+          "source_token_id": "01Snp",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "day"
+        },
+        {
+          "source_token_id": "01sKn",
+          "verse": "Gen.1.13",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "day"
+        },
+        {
+          "source_token_id": "01LFW",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "הַ/יּ֖וֹם",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the day"
+        },
+        {
+          "source_token_id": "01VuH",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "וּ/לְ/יָמִ֖ים",
+          "imported_morphology": "HC/R/Ncmpa",
+          "unapproved_english_fragment": "and for days"
+        },
+        {
+          "source_token_id": "01PVx",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "הַ/יּ֔וֹם",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the day"
+        },
+        {
+          "source_token_id": "01gYe",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "בַּ/יּ֣וֹם",
+          "imported_morphology": "HRd/Ncmsa",
+          "unapproved_english_fragment": "in the day"
+        },
+        {
+          "source_token_id": "01zfc",
+          "verse": "Gen.1.19",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "day"
+        },
+        {
+          "source_token_id": "01JnD",
+          "verse": "Gen.1.23",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "day"
+        },
+        {
+          "source_token_id": "01GjY",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "י֥וֹם",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "day"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7549",
+      "source_token_count": 9,
+      "research_fragments_exact": [
+        "a firmament",
+        "in the firmament of",
+        "the firmament",
+        "the firmament of",
+        "to the firmament"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmsa",
+        "HNcmsc",
+        "HR/Ncmsc",
+        "HRd/Ncmsa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": "firmament",
+      "source_bdb_ids": [
+        "t.eo.ab"
+      ],
+      "source_strongs_ids": [
+        "H7549"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01fsu",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "רָקִ֖יעַ",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "a firmament"
+        },
+        {
+          "source_token_id": "01UE6",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "הָ/רָקִיעַ֒",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the firmament"
+        },
+        {
+          "source_token_id": "01Mnv",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "לָ/רָקִ֔יעַ",
+          "imported_morphology": "HRd/Ncmsa",
+          "unapproved_english_fragment": "to the firmament"
+        },
+        {
+          "source_token_id": "01Wxq",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "לָ/רָקִ֑יעַ",
+          "imported_morphology": "HRd/Ncmsa",
+          "unapproved_english_fragment": "to the firmament"
+        },
+        {
+          "source_token_id": "01L7t",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "לָֽ/רָקִ֖יעַ",
+          "imported_morphology": "HRd/Ncmsa",
+          "unapproved_english_fragment": "to the firmament"
+        },
+        {
+          "source_token_id": "01FiN",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "בִּ/רְקִ֣יעַ",
+          "imported_morphology": "HR/Ncmsc",
+          "unapproved_english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "01iAD",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "בִּ/רְקִ֣יעַ",
+          "imported_morphology": "HR/Ncmsc",
+          "unapproved_english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "017mS",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "בִּ/רְקִ֣יעַ",
+          "imported_morphology": "HR/Ncmsc",
+          "unapproved_english_fragment": "in the firmament of"
+        },
+        {
+          "source_token_id": "01xCL",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "רְקִ֥יעַ",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "the firmament of"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "5775",
+      "source_token_count": 6,
+      "research_fragments_exact": [
+        "and bird",
+        "and in the bird of",
+        "and the bird",
+        "bird",
+        "bird of"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Ncmsa",
+        "HC/R/Ncmsc",
+        "HC/Td/Ncmsa",
+        "HNcmsa",
+        "HNcmsc"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "p.bk.ab"
+      ],
+      "source_strongs_ids": [
+        "H5775"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "012tG",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "וְ/עוֹף֙",
+          "imported_morphology": "HC/Ncmsa",
+          "unapproved_english_fragment": "and bird"
+        },
+        {
+          "source_token_id": "01q1G",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "ע֤וֹף",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "bird"
+        },
+        {
+          "source_token_id": "01e6B",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "וְ/הָ/ע֖וֹף",
+          "imported_morphology": "HC/Td/Ncmsa",
+          "unapproved_english_fragment": "and the bird"
+        },
+        {
+          "source_token_id": "01EVu",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וּ/בְ/ע֣וֹף",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and in the bird of"
+        },
+        {
+          "source_token_id": "01Wjz",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "וּ/בְ/ע֣וֹף",
+          "imported_morphology": "HC/R/Ncmsc",
+          "unapproved_english_fragment": "and in the bird of"
+        },
+        {
+          "source_token_id": "01Y9g",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "ע֨וֹף",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "bird of"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "914",
+      "source_token_count": 5,
+      "research_fragments_exact": [
+        "And He separated",
+        "and He separated",
+        "and to separate",
+        "separating",
+        "to separate"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/R/Vhc",
+        "HC/Vhw3ms",
+        "HR/Vhc",
+        "HVhrmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "b.ah.aa"
+      ],
+      "source_strongs_ids": [
+        "H914"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01jQb",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "וַ/יַּבְדֵּ֣ל",
+          "imported_morphology": "HC/Vhw3ms",
+          "unapproved_english_fragment": "And He separated"
+        },
+        {
+          "source_token_id": "015gQ",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "מַבְדִּ֔יל",
+          "imported_morphology": "HVhrmsa",
+          "unapproved_english_fragment": "separating"
+        },
+        {
+          "source_token_id": "01goK",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "וַ/יַּבְדֵּ֗ל",
+          "imported_morphology": "HC/Vhw3ms",
+          "unapproved_english_fragment": "and He separated"
+        },
+        {
+          "source_token_id": "0192v",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "לְ/הַבְדִּ֕יל",
+          "imported_morphology": "HR/Vhc",
+          "unapproved_english_fragment": "to separate"
+        },
+        {
+          "source_token_id": "018ro",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "וּֽ/לֲ/הַבְדִּ֔יל",
+          "imported_morphology": "HC/R/Vhc",
+          "unapproved_english_fragment": "and to separate"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "853",
+      "source_token_count": 26,
+      "research_fragments_exact": [
+        "",
+        "and",
+        "him",
+        "them"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/To",
+        "HTo",
+        "HTo/Sp3mp",
+        "HTo/Sp3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.gm.aa"
+      ],
+      "source_strongs_ids": [
+        "H853"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01vuQ",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "אֵ֥ת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01k5P",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "וְ/אֵ֥ת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "015SS",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01Xm1",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01BG4",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "013eS",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01PGK",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "וְ/אֶת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01Xa1",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "וְ/אֵ֖ת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01bju",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "אֹתָ֛/ם",
+          "imported_morphology": "HTo/Sp3mp",
+          "unapproved_english_fragment": "them"
+        },
+        {
+          "source_token_id": "01bvP",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01hEs",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "וְ/אֵ֣ת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01EXL",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "וְ/אֵ֨ת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "0163G",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "אֹתָ֛/ם",
+          "imported_morphology": "HTo/Sp3mp",
+          "unapproved_english_fragment": "them"
+        },
+        {
+          "source_token_id": "015KE",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01LAe",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01mr5",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "וְ/אֶת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01Ew6",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "וְ/אֵ֛ת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01Zuo",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01pUN",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "אֹת֑/וֹ",
+          "imported_morphology": "HTo/Sp3ms",
+          "unapproved_english_fragment": "him"
+        },
+        {
+          "source_token_id": "013gY",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "אֹתָֽ/ם",
+          "imported_morphology": "HTo/Sp3mp",
+          "unapproved_english_fragment": "them"
+        },
+        {
+          "source_token_id": "01WFU",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "אֹתָ/ם֮",
+          "imported_morphology": "HTo/Sp3mp",
+          "unapproved_english_fragment": "them"
+        },
+        {
+          "source_token_id": "01MEz",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01mVV",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01tKf",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "וְ/אֶת",
+          "imported_morphology": "HC/To",
+          "unapproved_english_fragment": "and"
+        },
+        {
+          "source_token_id": "01xp4",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        },
+        {
+          "source_token_id": "01w6u",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "אֶת",
+          "imported_morphology": "HTo",
+          "unapproved_english_fragment": ""
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "776",
+      "source_token_count": 20,
+      "research_fragments_exact": [
+        "And the Earth",
+        "Earth",
+        "in the Earth",
+        "the Earth"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Td/Ncbsa",
+        "HNcbsa",
+        "HRd/Ncbsa",
+        "HTd/Ncbsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.fx.aa"
+      ],
+      "source_strongs_ids": [
+        "H776"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01nPh",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "הָ/אָֽרֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01LN3",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "וְ/הָ/אָ֗רֶץ",
+          "imported_morphology": "HC/Td/Ncbsa",
+          "unapproved_english_fragment": "And the Earth"
+        },
+        {
+          "source_token_id": "01Wxx",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "אֶ֔רֶץ",
+          "imported_morphology": "HNcbsa",
+          "unapproved_english_fragment": "Earth"
+        },
+        {
+          "source_token_id": "01zTj",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "הָ/אָ֨רֶץ֙",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01vzS",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "הָ/אָ֑רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01Y4K",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "הָ/אָ֜רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "014W9",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "הָ/אָ֑רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01pqY",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "הָ/אָֽרֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01gV8",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "הָ/אָ֔רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01GpK",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "בָּ/אָֽרֶץ",
+          "imported_morphology": "HRd/Ncbsa",
+          "unapproved_english_fragment": "in the Earth"
+        },
+        {
+          "source_token_id": "01jyT",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "הָ/אָ֜רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01hj3",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "אֶ֖רֶץ",
+          "imported_morphology": "HNcbsa",
+          "unapproved_english_fragment": "Earth"
+        },
+        {
+          "source_token_id": "011Cv",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "הָ/אָ֜רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01d3U",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הָ/אָ֔רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01JyD",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הָ/אָֽרֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01Q2u",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "הָ/אָ֖רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "014vX",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "הָ/אָֽרֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01uUA",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "הָ/אָ֔רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01rGa",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "הָ֠/אָרֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        },
+        {
+          "source_token_id": "01eyL",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "הָ/אָ֗רֶץ",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the Earth"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "4325",
+      "source_token_count": 11,
+      "research_fragments_exact": [
+        "the Waters",
+        "the waters",
+        "to waters",
+        "waters"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmpa",
+        "HR/Ncmpa",
+        "HTd/Ncmpa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "m.bt.aa"
+      ],
+      "source_strongs_ids": [
+        "H4325"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01TZE",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "הַ/מָּֽיִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Waters"
+        },
+        {
+          "source_token_id": "01wM5",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "הַ/מָּ֑יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01eHJ",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "מַ֖יִם",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "waters"
+        },
+        {
+          "source_token_id": "01H6L",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "לָ/מָֽיִם",
+          "imported_morphology": "HR/Ncmpa",
+          "unapproved_english_fragment": "to waters"
+        },
+        {
+          "source_token_id": "01A4a",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "הַ/מַּ֨יִם֙",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01tKT",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "הַ/מַּ֔יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01d5m",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "הַ/מַּ֜יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01Haa",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "הַ/מַּ֖יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01chR",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "הַ/מַּ֔יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01T2S",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "הַ/מַּ֜יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        },
+        {
+          "source_token_id": "01qVd",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "הַ/מַּ֨יִם֙",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the waters"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "6213 a",
+      "source_token_count": 7,
+      "research_fragments_exact": [
+        "And He made",
+        "He made",
+        "Let Us make",
+        "making"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqw3ms",
+        "HVqi1cp",
+        "HVqp3ms",
+        "HVqrmsa"
+      ],
+      "owner_locked_english_family": "make",
+      "source_bdb_ids": [
+        "p.fy.aa"
+      ],
+      "source_strongs_ids": [
+        "H6213"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01bmv",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "וַ/יַּ֣עַשׂ",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He made"
+        },
+        {
+          "source_token_id": "01V27",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "עֹ֤שֶׂה",
+          "imported_morphology": "HVqrmsa",
+          "unapproved_english_fragment": "making"
+        },
+        {
+          "source_token_id": "01Ptj",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "עֹֽשֶׂה",
+          "imported_morphology": "HVqrmsa",
+          "unapproved_english_fragment": "making"
+        },
+        {
+          "source_token_id": "01CQo",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "וַ/יַּ֣עַשׂ",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He made"
+        },
+        {
+          "source_token_id": "01ZpQ",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "וַ/יַּ֣עַשׂ",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He made"
+        },
+        {
+          "source_token_id": "01oiy",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "נַֽעֲשֶׂ֥ה",
+          "imported_morphology": "HVqi1cp",
+          "unapproved_english_fragment": "Let Us make"
+        },
+        {
+          "source_token_id": "013RL",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "עָשָׂ֔ה",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "He made"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3974",
+      "source_token_count": 5,
+      "research_fragments_exact": [
+        "for lights",
+        "lights",
+        "the light",
+        "the lights"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmpa",
+        "HR/Ncmpa",
+        "HTd/Ncmpa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.cd.ao"
+      ],
+      "source_strongs_ids": [
+        "H3974"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01zpy",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "מְאֹרֹת֙",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "lights"
+        },
+        {
+          "source_token_id": "01NrT",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "לִ/מְאוֹרֹת֙",
+          "imported_morphology": "HR/Ncmpa",
+          "unapproved_english_fragment": "for lights"
+        },
+        {
+          "source_token_id": "01sHf",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "הַ/מְּאֹרֹ֖ת",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the lights"
+        },
+        {
+          "source_token_id": "01ddd",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "הַ/מָּא֤וֹר",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the light"
+        },
+        {
+          "source_token_id": "01U4a",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "הַ/מָּא֤וֹר",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the light"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "6086",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "and tree",
+        "the tree",
+        "tree",
+        "tree of"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Ncmsa",
+        "HNcmsa",
+        "HNcmsc",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "p.em.ab"
+      ],
+      "source_strongs_ids": [
+        "H6086"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01fV3",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "עֵ֣ץ",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "tree of"
+        },
+        {
+          "source_token_id": "01fLi",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "וְ/עֵ֧ץ",
+          "imported_morphology": "HC/Ncmsa",
+          "unapproved_english_fragment": "and tree"
+        },
+        {
+          "source_token_id": "01yNT",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "הָ/עֵ֛ץ",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the tree"
+        },
+        {
+          "source_token_id": "01mrn",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "עֵ֖ץ",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "tree"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "5921 a",
+      "source_token_count": 12,
+      "research_fragments_exact": [
+        "above",
+        "from above",
+        "upon"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HR",
+        "HR/R"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "p.cs.ar"
+      ],
+      "source_strongs_ids": [
+        "H5921"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01qNN",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "0129t",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01sRU",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "מֵ/עַ֣ל",
+          "imported_morphology": "HR/R",
+          "unapproved_english_fragment": "from above"
+        },
+        {
+          "source_token_id": "01G83",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01SaV",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01RXg",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01CCj",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "above"
+        },
+        {
+          "source_token_id": "01Czz",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "016JA",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01G6E",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "01zkA",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        },
+        {
+          "source_token_id": "0193F",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "עַל",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "upon"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "4327",
+      "source_token_count": 10,
+      "research_fragments_exact": [
+        "to her kind",
+        "to his kind",
+        "to their kinds"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HR/Ncmsc/Sp3fs",
+        "HR/Ncmsc/Sp3mp",
+        "HR/Ncmsc/Sp3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "m.bv.ab"
+      ],
+      "source_strongs_ids": [
+        "H4327"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "017ZG",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "לְ/מִינ֔/וֹ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01rAQ",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "לְ/מִינֵ֔/הוּ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01U4n",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "לְ/מִינֵ֑/הוּ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01tkJ",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "לְ/מִֽינֵ/הֶ֗ם",
+          "imported_morphology": "HR/Ncmsc/Sp3mp",
+          "unapproved_english_fragment": "to their kinds"
+        },
+        {
+          "source_token_id": "01v2F",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "לְ/מִינֵ֔/הוּ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "to his kind"
+        },
+        {
+          "source_token_id": "01xxn",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "לְ/מִינָ֔/הּ",
+          "imported_morphology": "HR/Ncmsc/Sp3fs",
+          "unapproved_english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "01iDs",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "לְ/מִינָ֑/הּ",
+          "imported_morphology": "HR/Ncmsc/Sp3fs",
+          "unapproved_english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "01PBQ",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "לְ/מִינָ֗/הּ",
+          "imported_morphology": "HR/Ncmsc/Sp3fs",
+          "unapproved_english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "01PbY",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "לְ/מִינָ֔/הּ",
+          "imported_morphology": "HR/Ncmsc/Sp3fs",
+          "unapproved_english_fragment": "to her kind"
+        },
+        {
+          "source_token_id": "012dm",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "לְ/מִינֵ֑/הוּ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "to his kind"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "8064",
+      "source_token_count": 10,
+      "research_fragments_exact": [
+        "Heavens",
+        "the Heavens",
+        "the heavens"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmpa",
+        "HTd/Ncmpa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "v.dy.ab"
+      ],
+      "source_strongs_ids": [
+        "H8064"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01TSc",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "הַ/שָּׁמַ֖יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01A74",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "שָׁמָ֑יִם",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "Heavens"
+        },
+        {
+          "source_token_id": "01LJh",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "הַ/שָּׁמַ֨יִם֙",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the heavens"
+        },
+        {
+          "source_token_id": "01cLk",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "הַ/שָּׁמַ֔יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01372",
+          "verse": "Gen.1.15",
+          "pointed_hebrew": "הַ/שָּׁמַ֔יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01dJe",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "הַ/שָּׁמָ֑יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01Qnr",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "הַ/שָּׁמָֽיִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01ygU",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הַ/שָּׁמַ֗יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01bPJ",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "הַ/שָּׁמַ֔יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        },
+        {
+          "source_token_id": "01mGU",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "הַ/שָּׁמַ֜יִם",
+          "imported_morphology": "HTd/Ncmpa",
+          "unapproved_english_fragment": "the Heavens"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "216",
+      "source_token_count": 6,
+      "research_fragments_exact": [
+        "light",
+        "the light",
+        "to the light"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcbsa",
+        "HRd/Ncbsa",
+        "HTd/Ncbsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.cd.ab"
+      ],
+      "source_strongs_ids": [
+        "H216"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01W26",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "א֑וֹר",
+          "imported_morphology": "HNcbsa",
+          "unapproved_english_fragment": "light"
+        },
+        {
+          "source_token_id": "01jbg",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "אֽוֹר",
+          "imported_morphology": "HNcbsa",
+          "unapproved_english_fragment": "light"
+        },
+        {
+          "source_token_id": "01GzE",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "הָ/א֖וֹר",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the light"
+        },
+        {
+          "source_token_id": "01XR4",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "הָ/א֖וֹר",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the light"
+        },
+        {
+          "source_token_id": "01Wkf",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "לָ/אוֹר֙",
+          "imported_morphology": "HRd/Ncbsa",
+          "unapproved_english_fragment": "to the light"
+        },
+        {
+          "source_token_id": "01bCC",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "הָ/א֖וֹר",
+          "imported_morphology": "HTd/Ncbsa",
+          "unapproved_english_fragment": "the light"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "1254 a",
+      "source_token_count": 5,
+      "research_fragments_exact": [
+        "And He shaped",
+        "He shaped",
+        "shaped"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqw3ms",
+        "HVqp3ms"
+      ],
+      "owner_locked_english_family": "shape",
+      "source_bdb_ids": [
+        "b.cw.aa"
+      ],
+      "source_strongs_ids": [
+        "H1254"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01Nvk",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "בָּרָ֣א",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "shaped"
+        },
+        {
+          "source_token_id": "016kU",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "וַ/יִּבְרָ֣א",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He shaped"
+        },
+        {
+          "source_token_id": "01jjy",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "וַ/יִּבְרָ֨א",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He shaped"
+        },
+        {
+          "source_token_id": "01PUg",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "בָּרָ֣א",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "He shaped"
+        },
+        {
+          "source_token_id": "01SAE",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "בָּרָ֥א",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "He shaped"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "2416 a",
+      "source_token_count": 5,
+      "research_fragments_exact": [
+        "living",
+        "living one",
+        "the living"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HAafsa",
+        "HNcbsa",
+        "HTd/Aafsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "h.cd.ab"
+      ],
+      "source_strongs_ids": [
+        "H2416"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01ecS",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "חַיָּ֑ה",
+          "imported_morphology": "HAafsa",
+          "unapproved_english_fragment": "living"
+        },
+        {
+          "source_token_id": "016w9",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "הַֽ/חַיָּ֣ה",
+          "imported_morphology": "HTd/Aafsa",
+          "unapproved_english_fragment": "the living"
+        },
+        {
+          "source_token_id": "01QH2",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "חַיָּה֙",
+          "imported_morphology": "HAafsa",
+          "unapproved_english_fragment": "living"
+        },
+        {
+          "source_token_id": "01h53",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "חַיָּ֖ה",
+          "imported_morphology": "HNcbsa",
+          "unapproved_english_fragment": "living one"
+        },
+        {
+          "source_token_id": "01MRA",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "חַיָּ֔ה",
+          "imported_morphology": "HAafsa",
+          "unapproved_english_fragment": "living"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "2822",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "and darkness",
+        "and to the darkness",
+        "the darkness"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Ncmsa",
+        "HC/Rd/Ncmsa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "h.gt.ab"
+      ],
+      "source_strongs_ids": [
+        "H2822"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01C5U",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "וְ/חֹ֖שֶׁךְ",
+          "imported_morphology": "HC/Ncmsa",
+          "unapproved_english_fragment": "and darkness"
+        },
+        {
+          "source_token_id": "01dBc",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "הַ/חֹֽשֶׁךְ",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the darkness"
+        },
+        {
+          "source_token_id": "013TL",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "וְ/לַ/חֹ֖שֶׁךְ",
+          "imported_morphology": "HC/Rd/Ncmsa",
+          "unapproved_english_fragment": "and to the darkness"
+        },
+        {
+          "source_token_id": "01CZB",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "הַ/חֹ֑שֶׁךְ",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the darkness"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3220",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "Seas",
+        "in the Seas",
+        "the Sea"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmpa",
+        "HRd/Ncmpa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "j.br.ab"
+      ],
+      "source_strongs_ids": [
+        "H3220"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "019KV",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "יַמִּ֑ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "Seas"
+        },
+        {
+          "source_token_id": "01koG",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "בַּ/יַּמִּ֔ים",
+          "imported_morphology": "HRd/Ncmpa",
+          "unapproved_english_fragment": "in the Seas"
+        },
+        {
+          "source_token_id": "012tS",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הַ/יָּ֜ם",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the Sea"
+        },
+        {
+          "source_token_id": "01AXb",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "הַ/יָּם֙",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the Sea"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3915",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "Night",
+        "and in the night",
+        "the night"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Rd/Ncmsa",
+        "HNcmsa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "l.bm.ad"
+      ],
+      "source_strongs_ids": [
+        "H3915"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01sMn",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "לָ֑יְלָה",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "Night"
+        },
+        {
+          "source_token_id": "01Bx7",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "הַ/לָּ֑יְלָה",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the night"
+        },
+        {
+          "source_token_id": "01ndZ",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "הַ/לַּ֔יְלָה",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the night"
+        },
+        {
+          "source_token_id": "01eXj",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "וּ/בַ/לַּ֔יְלָה",
+          "imported_morphology": "HC/Rd/Ncmsa",
+          "unapproved_english_fragment": "and in the night"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "2416 c",
+      "source_token_count": 3,
+      "research_fragments_exact": [
+        "and beast of",
+        "beast of",
+        "the beast of"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Ncfsc",
+        "HNcfsc"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "h.cd.ad"
+      ],
+      "source_strongs_ids": [
+        "H2416"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01jNE",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "וְ/חַֽיְתוֹ",
+          "imported_morphology": "HC/Ncfsc",
+          "unapproved_english_fragment": "and beast of"
+        },
+        {
+          "source_token_id": "01qK3",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "חַיַּ֨ת",
+          "imported_morphology": "HNcfsc",
+          "unapproved_english_fragment": "the beast of"
+        },
+        {
+          "source_token_id": "01xkK",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "חַיַּ֣ת",
+          "imported_morphology": "HNcfsc",
+          "unapproved_english_fragment": "beast of"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "6754",
+      "source_token_count": 3,
+      "research_fragments_exact": [
+        "in His image",
+        "in Our image",
+        "in image of"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HR/Ncmsc",
+        "HR/Ncmsc/Sp1cp",
+        "HR/Ncmsc/Sp3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "r.ce.ab"
+      ],
+      "source_strongs_ids": [
+        "H6754"
+      ],
+      "earlier_research_case_ids": [
+        "OLT-017A-IMAGE"
+      ],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01gtq",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "בְּ/צַלְמֵ֖/נוּ",
+          "imported_morphology": "HR/Ncmsc/Sp1cp",
+          "unapproved_english_fragment": "in Our image"
+        },
+        {
+          "source_token_id": "01mR4",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "בְּ/צַלְמ֔/וֹ",
+          "imported_morphology": "HR/Ncmsc/Sp3ms",
+          "unapproved_english_fragment": "in His image"
+        },
+        {
+          "source_token_id": "01MC8",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "בְּ/צֶ֥לֶם",
+          "imported_morphology": "HR/Ncmsc",
+          "unapproved_english_fragment": "in image of"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7431",
+      "source_token_count": 3,
+      "research_fragments_exact": [
+        "and creeping thing",
+        "creeping thing of",
+        "the creeping thing"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Ncmsa",
+        "HNcmsc",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "t.dc.ab"
+      ],
+      "source_strongs_ids": [
+        "H7431"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "013KZ",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "וָ/רֶ֛מֶשׂ",
+          "imported_morphology": "HC/Ncmsa",
+          "unapproved_english_fragment": "and creeping thing"
+        },
+        {
+          "source_token_id": "016zt",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "רֶ֥מֶשׂ",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "creeping thing of"
+        },
+        {
+          "source_token_id": "01U94",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הָ/רֶ֖מֶשׂ",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the creeping thing"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "929",
+      "source_token_count": 3,
+      "research_fragments_exact": [
+        "and in the cattle",
+        "cattle",
+        "the cattle"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Rd/Ncfsa",
+        "HNcfsa",
+        "HTd/Ncfsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "b.al.ab"
+      ],
+      "source_strongs_ids": [
+        "H929"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01ou4",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "בְּהֵמָ֥ה",
+          "imported_morphology": "HNcfsa",
+          "unapproved_english_fragment": "cattle"
+        },
+        {
+          "source_token_id": "01QDu",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "הַ/בְּהֵמָה֙",
+          "imported_morphology": "HTd/Ncfsa",
+          "unapproved_english_fragment": "the cattle"
+        },
+        {
+          "source_token_id": "01swV",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וּ/בַ/בְּהֵמָה֙",
+          "imported_morphology": "HC/Rd/Ncfsa",
+          "unapproved_english_fragment": "and in the cattle"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "430",
+      "source_token_count": 32,
+      "research_fragments_exact": [
+        "God",
+        "of God"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmpa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.dl.ad"
+      ],
+      "source_strongs_ids": [
+        "H430"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01TyA",
+          "verse": "Gen.1.1",
+          "pointed_hebrew": "אֱלֹהִ֑ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01x9c",
+          "verse": "Gen.1.2",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "of God"
+        },
+        {
+          "source_token_id": "01JM7",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01v6U",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "אֱלֹהִ֛ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01794",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01kfX",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "אֱלֹהִ֤ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01hh7",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01FV9",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "אֱלֹהִים֮",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01fQr",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "אֱלֹהִ֛ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01PzC",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01iy2",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "אֱלֹהִ֤ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01dns",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01zio",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01RmH",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01Ap3",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01XyU",
+          "verse": "Gen.1.16",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01cn3",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "016qf",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01dAC",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01qry",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01kDm",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01WPn",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "014fv",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "019gS",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "אֱלֹהִים֩",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01YxK",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01azZ",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "אֱלֹהִ֔ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "0179E",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "אֱלֹהִ֤ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01BnR",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "אֱלֹהִ֖ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01BJv",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "אֱלֹהִים֒",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01mP3",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01bsu",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "אֱלֹהִ֗ים",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        },
+        {
+          "source_token_id": "01Mxy",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "אֱלֹהִים֙",
+          "imported_morphology": "HNcmpa",
+          "unapproved_english_fragment": "God"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "559",
+      "source_token_count": 11,
+      "research_fragments_exact": [
+        "And He said",
+        "saying"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqw3ms",
+        "HR/Vqc"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.ea.aa"
+      ],
+      "source_strongs_ids": [
+        "H559"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01thY",
+          "verse": "Gen.1.3",
+          "pointed_hebrew": "וַ/יֹּ֥אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "017am",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01nLp",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01cpb",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01AxB",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01GvF",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "011jv",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "לֵ/אמֹ֑ר",
+          "imported_morphology": "HR/Vqc",
+          "unapproved_english_fragment": "saying"
+        },
+        {
+          "source_token_id": "01ErQ",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01YhQ",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01ExP",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "וַ/יֹּ֨אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        },
+        {
+          "source_token_id": "01X1R",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "וַ/יֹּ֣אמֶר",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He said"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "834 a",
+      "source_token_count": 9,
+      "research_fragments_exact": [
+        "which",
+        "whose"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HTr"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.gk.aa"
+      ],
+      "source_strongs_ids": [
+        "H834"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "015Pr",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "אֲשֶׁר֙",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "01NRT",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "אֲשֶׁ֖ר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "01B2d",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "אֲשֶׁ֥ר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "whose"
+        },
+        {
+          "source_token_id": "019Hv",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "אֲשֶׁ֥ר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "whose"
+        },
+        {
+          "source_token_id": "01ibe",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "אֲשֶׁר֩",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "01HWo",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "אֲשֶׁר֙",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "01Azu",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "אֲשֶׁר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "01pm7",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "אֲשֶׁר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        },
+        {
+          "source_token_id": "012c6",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "אֲשֶׁ֣ר",
+          "imported_morphology": "HTr",
+          "unapproved_english_fragment": "which"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "996",
+      "source_token_count": 9,
+      "research_fragments_exact": [
+        "and between",
+        "between"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/R",
+        "HR"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "b.bo.ac"
+      ],
+      "source_strongs_ids": [
+        "H996"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01CsU",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "בֵּ֥ין",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "between"
+        },
+        {
+          "source_token_id": "01KvS",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "וּ/בֵ֥ין",
+          "imported_morphology": "HC/R",
+          "unapproved_english_fragment": "and between"
+        },
+        {
+          "source_token_id": "01Xw6",
+          "verse": "Gen.1.6",
+          "pointed_hebrew": "בֵּ֥ין",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "between"
+        },
+        {
+          "source_token_id": "01CyH",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "בֵּ֤ין",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "between"
+        },
+        {
+          "source_token_id": "01mwU",
+          "verse": "Gen.1.7",
+          "pointed_hebrew": "וּ/בֵ֣ין",
+          "imported_morphology": "HC/R",
+          "unapproved_english_fragment": "and between"
+        },
+        {
+          "source_token_id": "01j63",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "בֵּ֥ין",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "between"
+        },
+        {
+          "source_token_id": "01FbT",
+          "verse": "Gen.1.14",
+          "pointed_hebrew": "וּ/בֵ֣ין",
+          "imported_morphology": "HC/R",
+          "unapproved_english_fragment": "and between"
+        },
+        {
+          "source_token_id": "01v5z",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "בֵּ֥ין",
+          "imported_morphology": "HR",
+          "unapproved_english_fragment": "between"
+        },
+        {
+          "source_token_id": "016By",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "וּ/בֵ֣ין",
+          "imported_morphology": "HC/R",
+          "unapproved_english_fragment": "and between"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7200",
+      "source_token_count": 8,
+      "research_fragments_exact": [
+        "And He saw",
+        "and let be seen"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/VNi3fs",
+        "HC/Vqw3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "t.ab.aa"
+      ],
+      "source_strongs_ids": [
+        "H7200"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01USR",
+          "verse": "Gen.1.4",
+          "pointed_hebrew": "וַ/יַּ֧רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01QwM",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "וְ/תֵרָאֶ֖ה",
+          "imported_morphology": "HC/VNi3fs",
+          "unapproved_english_fragment": "and let be seen"
+        },
+        {
+          "source_token_id": "01F1s",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "012Kt",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01VTb",
+          "verse": "Gen.1.18",
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "017vt",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "01uYh",
+          "verse": "Gen.1.25",
+          "pointed_hebrew": "וַ/יַּ֥רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        },
+        {
+          "source_token_id": "015QX",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "וַ/יַּ֤רְא",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He saw"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "2233",
+      "source_token_count": 6,
+      "research_fragments_exact": [
+        "his seed",
+        "seed"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmsa",
+        "HNcmsc/Sp3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "g.cl.ab"
+      ],
+      "source_strongs_ids": [
+        "H2233"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01VA9",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "זֶ֔רַע",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01ewe",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "זַרְע/וֹ",
+          "imported_morphology": "HNcmsc/Sp3ms",
+          "unapproved_english_fragment": "his seed"
+        },
+        {
+          "source_token_id": "01YWU",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "זֶ֨רַע֙",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01j1i",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "זַרְע/וֹ",
+          "imported_morphology": "HNcmsc/Sp3ms",
+          "unapproved_english_fragment": "his seed"
+        },
+        {
+          "source_token_id": "015pZ",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "זֶ֗רַע",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "seed"
+        },
+        {
+          "source_token_id": "01D3a",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "זָ֑רַע",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "seed"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7121",
+      "source_token_count": 5,
+      "research_fragments_exact": [
+        "And He called",
+        "He called"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqw3ms",
+        "HVqp3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "s.cy.aa"
+      ],
+      "source_strongs_ids": [
+        "H7121"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01nAB",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "וַ/יִּקְרָ֨א",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He called"
+        },
+        {
+          "source_token_id": "01LeN",
+          "verse": "Gen.1.5",
+          "pointed_hebrew": "קָ֣רָא",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "He called"
+        },
+        {
+          "source_token_id": "01YUq",
+          "verse": "Gen.1.8",
+          "pointed_hebrew": "וַ/יִּקְרָ֧א",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He called"
+        },
+        {
+          "source_token_id": "01BU7",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "וַ/יִּקְרָ֨א",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He called"
+        },
+        {
+          "source_token_id": "01fJN",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "קָרָ֣א",
+          "imported_morphology": "HVqp3ms",
+          "unapproved_english_fragment": "He called"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "6529",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "fruit",
+        "fruit of"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmsa",
+        "HNcmsc"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "q.cv.ab"
+      ],
+      "source_strongs_ids": [
+        "H6529"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01Sov",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "פְּרִ֞י",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "01ifp",
+          "verse": "Gen.1.11",
+          "pointed_hebrew": "פְּרִי֙",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "01AJj",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "פְּרִ֛י",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "fruit"
+        },
+        {
+          "source_token_id": "01XMu",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "פְרִי",
+          "imported_morphology": "HNcmsc",
+          "unapproved_english_fragment": "fruit of"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7430",
+      "source_token_count": 4,
+      "research_fragments_exact": [
+        "creeping one",
+        "the creeping"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HTd/Vqrfsa",
+        "HTd/Vqrmsa",
+        "HVqrmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "t.dc.aa"
+      ],
+      "source_strongs_ids": [
+        "H7430"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01wA4",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "הָֽ/רֹמֶ֡שֶׂת",
+          "imported_morphology": "HTd/Vqrfsa",
+          "unapproved_english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "01zqr",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "הָֽ/רֹמֵ֥שׂ",
+          "imported_morphology": "HTd/Vqrmsa",
+          "unapproved_english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "01vpK",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "הָֽ/רֹמֶ֥שֶׂת",
+          "imported_morphology": "HTd/Vqrfsa",
+          "unapproved_english_fragment": "the creeping"
+        },
+        {
+          "source_token_id": "01eLD",
+          "verse": "Gen.1.30",
+          "pointed_hebrew": "רוֹמֵ֣שׂ",
+          "imported_morphology": "HVqrmsa",
+          "unapproved_english_fragment": "creeping one"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7235 a",
+      "source_token_count": 3,
+      "research_fragments_exact": [
+        "and multiply",
+        "let [he] multiply"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqv2mp",
+        "HVqj3ms"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "t.ai.aa"
+      ],
+      "source_strongs_ids": [
+        "H7235"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01DDb",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "וּ/רְב֗וּ",
+          "imported_morphology": "HC/Vqv2mp",
+          "unapproved_english_fragment": "and multiply"
+        },
+        {
+          "source_token_id": "018GY",
+          "verse": "Gen.1.22",
+          "pointed_hebrew": "יִ֥רֶב",
+          "imported_morphology": "HVqj3ms",
+          "unapproved_english_fragment": "let [he] multiply"
+        },
+        {
+          "source_token_id": "01suQ",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "וּ/רְב֛וּ",
+          "imported_morphology": "HC/Vqv2mp",
+          "unapproved_english_fragment": "and multiply"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "120",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "Man",
+        "the Man"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HNcmsa",
+        "HTd/Ncmsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "a.bc.ab"
+      ],
+      "source_strongs_ids": [
+        "H120"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01gPX",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "אָדָ֛ם",
+          "imported_morphology": "HNcmsa",
+          "unapproved_english_fragment": "Man"
+        },
+        {
+          "source_token_id": "01LXS",
+          "verse": "Gen.1.27",
+          "pointed_hebrew": "הָֽ/אָדָם֙",
+          "imported_morphology": "HTd/Ncmsa",
+          "unapproved_english_fragment": "the Man"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "2009",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "Behold",
+        "and behold"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Tm",
+        "HTm"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "e.bz.ab"
+      ],
+      "source_strongs_ids": [
+        "H2009"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01Ygn",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "הִנֵּה֩",
+          "imported_morphology": "HTm",
+          "unapproved_english_fragment": "Behold"
+        },
+        {
+          "source_token_id": "01JUf",
+          "verse": "Gen.1.31",
+          "pointed_hebrew": "וְ/הִנֵּה",
+          "imported_morphology": "HC/Tm",
+          "unapproved_english_fragment": "and behold"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3004",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "the dry ground",
+        "to the dry ground"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HRd/Ncfsa",
+        "HTd/Ncfsa"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "j.aj.ad"
+      ],
+      "source_strongs_ids": [
+        "H3004"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01a62",
+          "verse": "Gen.1.9",
+          "pointed_hebrew": "הַ/יַּבָּשָׁ֑ה",
+          "imported_morphology": "HTd/Ncfsa",
+          "unapproved_english_fragment": "the dry ground"
+        },
+        {
+          "source_token_id": "01zQ2",
+          "verse": "Gen.1.10",
+          "pointed_hebrew": "לַ/יַּבָּשָׁה֙",
+          "imported_morphology": "HRd/Ncfsa",
+          "unapproved_english_fragment": "to the dry ground"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "3318",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "And she brought forth",
+        "Let bring forth"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vhw3fs",
+        "HVhj3fs"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "j.cq.aa"
+      ],
+      "source_strongs_ids": [
+        "H3318"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01TXw",
+          "verse": "Gen.1.12",
+          "pointed_hebrew": "וַ/תּוֹצֵ֨א",
+          "imported_morphology": "HC/Vhw3fs",
+          "unapproved_english_fragment": "And she brought forth"
+        },
+        {
+          "source_token_id": "01yDv",
+          "verse": "Gen.1.24",
+          "pointed_hebrew": "תּוֹצֵ֨א",
+          "imported_morphology": "HVhj3fs",
+          "unapproved_english_fragment": "Let bring forth"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "5414",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "And He set",
+        "I gave"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqw3ms",
+        "HVqp1cs"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "n.gg.aa"
+      ],
+      "source_strongs_ids": [
+        "H5414"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01B6c",
+          "verse": "Gen.1.17",
+          "pointed_hebrew": "וַ/יִּתֵּ֥ן",
+          "imported_morphology": "HC/Vqw3ms",
+          "unapproved_english_fragment": "And He set"
+        },
+        {
+          "source_token_id": "012gM",
+          "verse": "Gen.1.29",
+          "pointed_hebrew": "נָתַ֨תִּי",
+          "imported_morphology": "HVqp1cs",
+          "unapproved_english_fragment": "I gave"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "7287 a",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "and let them rule",
+        "and rule"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HC/Vqj3mp",
+        "HC/Vqv2mp"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "t.az.aa"
+      ],
+      "source_strongs_ids": [
+        "H7287"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01fbB",
+          "verse": "Gen.1.26",
+          "pointed_hebrew": "וְ/יִרְדּוּ֩",
+          "imported_morphology": "HC/Vqj3mp",
+          "unapproved_english_fragment": "and let them rule"
+        },
+        {
+          "source_token_id": "01b5Q",
+          "verse": "Gen.1.28",
+          "pointed_hebrew": "וּ/רְד֞וּ",
+          "imported_morphology": "HC/Vqv2mp",
+          "unapproved_english_fragment": "and rule"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    },
+    {
+      "source_lemma_id": "8317",
+      "source_token_count": 2,
+      "research_fragments_exact": [
+        "Let swarm",
+        "swarmed"
+      ],
+      "distinct_imported_morphology_tags": [
+        "HVqi3mp",
+        "HVqp3cp"
+      ],
+      "owner_locked_english_family": null,
+      "source_bdb_ids": [
+        "v.gc.aa"
+      ],
+      "source_strongs_ids": [
+        "H8317"
+      ],
+      "earlier_research_case_ids": [],
+      "original_source_contexts": [
+        {
+          "source_token_id": "01i4W",
+          "verse": "Gen.1.20",
+          "pointed_hebrew": "יִשְׁרְצ֣וּ",
+          "imported_morphology": "HVqi3mp",
+          "unapproved_english_fragment": "Let swarm"
+        },
+        {
+          "source_token_id": "01v8V",
+          "verse": "Gen.1.21",
+          "pointed_hebrew": "שָׁרְצ֨וּ",
+          "imported_morphology": "HVqp3cp",
+          "unapproved_english_fragment": "swarmed"
+        }
+      ],
+      "english_variation_cause": "NOT_INDEPENDENTLY_DETERMINED",
+      "hebrew_homonym_identity": "NOT_VERIFIED",
+      "editorial_status": "REVIEW_REQUIRED"
+    }
+  ]
+}
