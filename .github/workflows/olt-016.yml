@@ -6,12 +6,15 @@ on:
       - "scripts/build_genesis_review_queue.py"
       - "tests/test_olt_016.py"
       - ".github/workflows/olt-016.yml"
+      - "data/research/genesis_01_lexeme_editorial_queue.json"
   pull_request:
     paths:
       - "scripts/build_genesis_review_queue.py"
       - "tests/test_olt_016.py"
       - ".github/workflows/olt-016.yml"
       - "tests/test_olt_026_ci_wave2.py"
+      - "data/research/genesis_01_lexeme_editorial_queue.json"
+      - "tests/test_olt_029_derived_trigger_coverage.py"
   workflow_dispatch:
 permissions:
   contents: read
