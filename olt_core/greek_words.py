@@ -219,6 +219,7 @@ def verify_greek_words(root: Path = ROOT) -> dict[str, Any]:
         raise SourceContractError("Original morphology book ordering does not match pinned Greek verse source")
     counters: Counter[str] = Counter()
     original_extras: set[str] = set()
+    empty_slots: set[str] = set()
     all_derived = set()
     per_book = []
     for spec in reg["files"]:
@@ -235,6 +236,8 @@ def verify_greek_words(root: Path = ROOT) -> dict[str, Any]:
         counters["primary_word_forms"] += source["primary_word_forms"]
         counters["alternative_parse_pairs"] += source["additional_alternative_parse_pairs"]
         for verse in source["verse_records"]:
+            if verse["source_word_count"] == 0:
+                empty_slots.add(verse["reference"])
             for word in verse["words"]:
                 identifier = word["derived_source_locator"]
                 if identifier in all_derived:
@@ -251,12 +254,8 @@ def verify_greek_words(root: Path = ROOT) -> dict[str, Any]:
         })
     if original_extras != set(reg["known_bp5_verses_absent_from_main_unicode_csv"]):
         raise SourceContractError("Known empty BP5 slots do not match continuous Unicode verse references")
-    if not all(
-        (v["source_word_count"] == 0) == (v["reference"] in original_extras)
-        for spec in reg["files"]
-        for v in read_parsed_greek_book(spec["upstream_book_code"], root, reg)["verse_records"]
-    ):
-        raise SourceContractError("Empty editor placeholder cannot be turned into Greek source text")
+    if empty_slots != original_extras:
+        raise SourceContractError("Empty editor placeholders must be the only BP5-only references")
     if (counters["bp5_verses"], counters["unicode_verses"],
         counters["primary_word_forms"], counters["alternative_parse_pairs"]) != (
         reg["expected_official_bp5_verse_lines"],
