@@ -6,9 +6,19 @@ on:
       - "scripts/genesis_literal_proposals.py"
       - "tests/test_genesis_literal_proposals.py"
       - ".github/workflows/genesis-lexical-proposals.yml"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
+      - "data/research/genesis_01_97_lemma_review_queue.json"
+  pull_request:
+    paths:
+      - "scripts/genesis_literal_proposals.py"
+      - "tests/test_genesis_literal_proposals.py"
+      - ".github/workflows/genesis-lexical-proposals.yml"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
+      - "data/research/genesis_01_97_lemma_review_queue.json"
+      - "tests/test_olt_027_ci_wave3.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-008-first-literal-verse
   cancel-in-progress: false
@@ -19,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -44,14 +54,11 @@ jobs:
           assert all(x["meaning_and_readability"]=="NOT_APPROVED" for x in q["queue"])
           print("PASS: Genesis 1:1 source-alignment research proposal; no philological signoff")
           PY
-      - name: Commit literal research proposal and ranking
+      - name: Verify generated files match committed research (read-only)
         run: |
-          git config user.name "olt-lexical-proposals[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research
-          if git diff --cached --quiet; then
-            echo "No change"
-          else
-            git commit -m "Add first source-aligned literal Genesis research verse and lexeme queue"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/genesis_01_verse_01_alignment_proposal.json data/research/genesis_01_97_lemma_review_queue.json >/dev/null
+          if ! git diff --exit-code -- data/research/genesis_01_verse_01_alignment_proposal.json data/research/genesis_01_97_lemma_review_queue.json; then
+            echo "::error::Generated research differs from committed output. Submit the generated files via Pull Request."
+            exit 1
           fi
+          echo "PASS: source research reproducible; publication BLOCKED"

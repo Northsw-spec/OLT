@@ -6,9 +6,17 @@ on:
       - "scripts/genesis_06_10_research.py"
       - "tests/test_genesis_06_10_research.py"
       - ".github/workflows/genesis-06-10.yml"
+      - "data/research/genesis_01_verses_06_to_10_research.json"
+  pull_request:
+    paths:
+      - "scripts/genesis_06_10_research.py"
+      - "tests/test_genesis_06_10_research.py"
+      - ".github/workflows/genesis-06-10.yml"
+      - "data/research/genesis_01_verses_06_to_10_research.json"
+      - "tests/test_olt_027_ci_wave3.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-010-research
   cancel-in-progress: false
@@ -19,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -42,15 +50,11 @@ jobs:
           assert len({t["source_token_id"] for v in a["verses"] for t in v["source_tokens"]})==63
           print("PASS: exact source token coverage, not chapter translation certification")
           PY
-      - name: Commit actual source-aligned Genesis research data
+      - name: Verify generated files match committed research (read-only)
         run: |
-          set -euo pipefail
-          git config user.name "olt-genesis-research[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/genesis_01_verses_06_to_10_research.json
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Add Genesis 1:6-10 source-grounded literal English proposals"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/genesis_01_verses_06_to_10_research.json >/dev/null
+          if ! git diff --exit-code -- data/research/genesis_01_verses_06_to_10_research.json; then
+            echo "::error::Generated research differs from committed output. Submit the generated files via Pull Request."
+            exit 1
           fi
+          echo "PASS: source research reproducible; publication BLOCKED"

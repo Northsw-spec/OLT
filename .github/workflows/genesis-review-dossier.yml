@@ -6,9 +6,17 @@ on:
       - "scripts/genesis_review_dossier.py"
       - "tests/test_genesis_dossier.py"
       - ".github/workflows/genesis-review-dossier.yml"
+      - "data/quality/genesis_01_source_review_dossier.json"
+  pull_request:
+    paths:
+      - "scripts/genesis_review_dossier.py"
+      - "tests/test_genesis_dossier.py"
+      - ".github/workflows/genesis-review-dossier.yml"
+      - "data/quality/genesis_01_source_review_dossier.json"
+      - "tests/test_olt_027_ci_wave3.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-genesis-dossier
   cancel-in-progress: false
@@ -19,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -42,14 +50,11 @@ jobs:
           assert all(t["word_alignment"]=="NOT_TRANSLATED" for t in o["tokens"])
           print("PASS: Genesis source review dossier generated; no translated chapter certified")
           PY
-      - name: Commit new Genesis source review dossier
+      - name: Verify generated files match committed research (read-only)
         run: |
-          git config user.name "olt-source-dossier[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/quality/genesis_01_source_review_dossier.json
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Generate source-first Genesis 1 lexical review dossier"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/quality/genesis_01_source_review_dossier.json >/dev/null
+          if ! git diff --exit-code -- data/quality/genesis_01_source_review_dossier.json; then
+            echo "::error::Generated research differs from committed output. Submit the generated files via Pull Request."
+            exit 1
           fi
+          echo "PASS: source research reproducible; publication BLOCKED"

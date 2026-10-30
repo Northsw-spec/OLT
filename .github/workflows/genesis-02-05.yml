@@ -6,9 +6,17 @@ on:
       - "scripts/genesis_02_05_research.py"
       - "tests/test_genesis_02_05_research.py"
       - ".github/workflows/genesis-02-05.yml"
+      - "data/research/genesis_01_verses_02_to_05_research.json"
+  pull_request:
+    paths:
+      - "scripts/genesis_02_05_research.py"
+      - "tests/test_genesis_02_05_research.py"
+      - ".github/workflows/genesis-02-05.yml"
+      - "data/research/genesis_01_verses_02_to_05_research.json"
+      - "tests/test_olt_027_ci_wave3.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-009-lexical-review
   cancel-in-progress: false
@@ -19,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -41,12 +49,11 @@ jobs:
           assert all(len(v['source_aligned_tokens'])==v['source_word_count'] for v in j['verses'])
           print('PASS: source research proposal only; not approved Bible text')
           PY
-      - name: Commit derived research data
+      - name: Verify generated files match committed research (read-only)
         run: |
-          git config user.name "olt-source-research[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/genesis_01_verses_02_to_05_research.json
-          if git diff --cached --quiet; then echo "No changes"; else
-            git commit -m "Add Genesis 1:2-5 Hebrew source-aligned literal research"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/genesis_01_verses_02_to_05_research.json >/dev/null
+          if ! git diff --exit-code -- data/research/genesis_01_verses_02_to_05_research.json; then
+            echo "::error::Generated research differs from committed output. Submit the generated files via Pull Request."
+            exit 1
           fi
+          echo "PASS: source research reproducible; publication BLOCKED"
