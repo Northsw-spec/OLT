@@ -1,6 +1,7 @@
 """OLT-032: maintain one current, accurate repository status entrypoint."""
 import json
 import unittest
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,7 +25,12 @@ class TestOLT032(unittest.TestCase):
         cls.underwords = load("data/policy/olt_underword_overrides.json")
 
     def test_current_status_precedes_archived_chronology(self):
-        self.assertTrue(self.text.startswith("# OLT — CURRENT STATUS (2026-10-30)"))
+        # Status is a living canonical document. Do not require the date of
+        # OLT-032's first publication after later verified checkpoints.
+        heading = self.text.splitlines()[0]
+        self.assertRegex(heading, r"^# OLT — CURRENT STATUS \\(\\d{4}-\\d{2}-\\d{2}\\)$")
+        status_date = date.fromisoformat(heading.rsplit("(", 1)[1][:-1])
+        self.assertGreaterEqual(status_date, date(2026, 10, 30))
         self.assertIn("OLT-031", self.current)
         self.assertIn("The old runner-admission problem", self.current)
         self.assertIn("historically recorded", self.current)
