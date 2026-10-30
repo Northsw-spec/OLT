@@ -7,7 +7,7 @@
     "OT",
     "NT"
   ],
-  "record_count": 9,
+  "record_count": 10,
   "owner_requested_expressions": [
     "Moses: Draw",
     "God (Elohim): Mighty Governance",
@@ -15,7 +15,8 @@
     "El Shaddai: My Mighty Strength",
     "Jerusalem: City of Peace",
     "David: The Beloved",
-    "Shiloh: meaning subject to source/context"
+    "Shiloh: meaning subject to source/context",
+    "Noah: Rest"
   ],
   "nt_source_edition_pinned": false,
   "source_language_identity_checked_for_all_verses": false,
@@ -282,6 +283,34 @@
         {
           "url": "https://www.biblegateway.com/verse/en/John%209%3A7",
           "kind": "ENGLISH_GOSPEL_COMPARISON"
+        }
+      ]
+    },
+    {
+      "id": "noah-rest",
+      "primary": "Noah",
+      "entity_kind": "PERSON_NAME",
+      "original_language": "HEBREW",
+      "original_script": "נֹחַ",
+      "lexical_reference_ids": [
+        "H5146"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.5.29",
+      "owner_requested_underword": "Rest",
+      "status": "OWNER_SELECTED_HEBREW_NAME_ASSOCIATION_RESEARCH",
+      "evidence_category": "LEXICAL_NAME_ETYMLOGY_WITH_EVIDENCE",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "Noah (נֹחַ) is associated with the Hebrew root נוח (nuach), rest. Genesis 5:29 instead uses יְנַחֲמֵנוּ from the separate root נחם (nacham), comfort, making a phonetic naming wordplay rather than proving that comfort is the same Hebrew root or literal name gloss. The owner-selected direct underword is Rest. Keep original Genesis 5:29 token identity pending a source occurrence check and never automatically apply the same Hebrew token ID to a Greek NT occurrence.",
+      "evidence": [
+        {
+          "url": "https://classic.net.bible.org/verse.php?book=Gen&chapter=5&tab=commentaries&verse=29",
+          "kind": "BIBLICAL_NAME_WORDPLAY_AND_DISTINCT_ROOT_EXPLANATION"
+        },
+        {
+          "url": "https://mechonhadar.s3.amazonaws.com/mh_torah_source_sheets/KasherParashatNoah5784.pdf",
+          "kind": "JEWISH_TEXTUAL_NAME_ETYMLOGY"
         }
       ]
     }
