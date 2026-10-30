@@ -6,6 +6,13 @@
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
 
+## OLT-035D — Original editor Greek word/morphology sources (WIP, CI under review)
+
+- **All 27 official ByzTxt RP2018 source/Strongs/*.BP5 files** are copied byte-identically to OLT on branch `olt-035d-official-rp2018-greek-morphology`; upstream v3.3.2, commit 27a45ff1b7be6c17ccbfeac414f3f55732ae8e28, public domain.
+- The editor's actual annotated original Greek data contains **140,149 primary Beta Code word forms** with a Strong reference and morphology tag and **28 alternative parsing pairs** on existing words. **Source verse slots: 7,957, including four EMPTY positions** (Luke 17:36; Acts 8:37, 15:34, 24:7), leaving **7,953 nonempty** word-containing verse slots that align at the **verse-reference level only** with the Unicode Greek source corpus. The empty positions contain NO original Greek words.
+- Source-traceable word-position IDs are **OLT-derived**, not original native publisher word IDs. Greek lexical lemma FORMS, actual accented Unicode word-level alignment, independent morphological reviews, English master lexicon and other-language translations remain NOT DONE.
+- New source registry `data/engine/olt_035d_greek_word_source_manifest.json`, parser `olt_core/greek_words.py`, detailed [research notes](OLT-035D_RP2018_OFFICIAL_GREEK_WORDS.md), dedicated GitHub Actions and negative tests are being reviewed. All original OLT owner translation/publishing restrictions remain intact.
+
 ## OLT-035B — Whole Greek NT source book-file import (MERGED AND POST-MERGE CI VERIFIED)
 
 - The source repository contains **all 27 continuous-text RP2018 Greek NT book UTF-8 CSV files**, exact Git blob matches to ByzTxt `v3.3.2` at pinned upstream commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. Total main source text files ~1.74 MB, all authentic Greek verse text, not fabricated from English or an alternate Greek edition.
