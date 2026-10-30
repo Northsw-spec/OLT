@@ -50,3 +50,7 @@ Use `python -m unittest discover -s tests -p 'test_olt_035_source_adapters.py' -
 - Next: full 27-book RP2018 text import tied to the original authoritative files, explicit edition/variant validation, exact Greek word/lemma/morphology provenance, and separate independent lexical review.
 
 **Publication remains BLOCKED; no Hebrew, Greek or target-language chapter is philologically certified.**
+
+## Superseding OLT-035B extension (later checkpoint, 2026-10-30)
+
+OLT-035B has now imported the **other 26 canonical Greek book continuous-text CSVs**, resulting in all 27 RP2018 books stored as exact upstream byte-matching Greek verse text. The two additional passage files PA.csv and ACT24.csv were preserved **separately**, not silently overwritten into the ordinary books. The historical first 3 John-only source manifest in OLT-035 remains correct for that earlier milestone but is NOT the active completeness inventory; see `data/engine/olt_035b_rp2018_verse_inventory.json`. **Word-level original Greek token IDs, lemma/morphology, edition collation and translation remain NOT DONE; release BLOCKED.**
