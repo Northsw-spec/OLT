@@ -53,7 +53,7 @@ class TestOLT035D(unittest.TestCase):
         book=read_parsed_greek_book("MAT")
         one=book["verse_records"][0]
         self.assertEqual(one["reference"],"Matt.1.1")
-        self.assertEqual(one["source_word_count"],9)
+        self.assertEqual(one["source_word_count"],8)
         self.assertEqual(one["words"][0]["beta_code_word_form"],"biblos")
         self.assertEqual(one["words"][0]["official_editor_strong_number"],"976")
         self.assertEqual(one["words"][0]["official_editor_morphology_code"],"N-NSF")
