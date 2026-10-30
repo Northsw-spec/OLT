@@ -43,5 +43,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_olt_037d_independent_lsj.py' -v
       - name: Independent LSJ original entry-key evidence (NOT Greek/English approval)
         run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --audit
-      - name: Emit initial reproducible source key inventory for later exact checkpoint pin
-        run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --emit-checkpoint
+      - name: Require exact locked independent LSJ source-key inventory regeneration
+        run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --verify-checkpoint
