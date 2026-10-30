@@ -22,5 +22,5 @@ Do **not** identify OT and NT occurrences by English spelling alone. Moses and G
 
 Some owner-proposed meanings (especially Elohim/Mighty Governance and El Shaddai/My Mighty Strength) are NOT plain lexical glosses. Store them truthfully as owner-requested, interpretation-based or unsupported-as-literal research, never a certified original-language homonym or translation. A missing etymology means REVIEW_REQUIRED; do not fabricate English to fill an underword.
 
-Source coverage is **BIBLE-WIDE POLICY, INITIAL 9 CANDIDATE RECORDS**; independent source/lexical approvals and publication still BLOCKED.
+Source coverage is **BIBLE-WIDE POLICY, INITIAL 10 CANDIDATE RECORDS**; independent source/lexical approvals and publication still BLOCKED.
 - **Noah → Rest:** source association with Hebrew נוח, not the Genesis 5:29 comfort-root נחם. Source occurrence IDs for Genesis 5:29 are pending crosswalk; do not invent them.
