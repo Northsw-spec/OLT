@@ -180,7 +180,7 @@
       "byte_length": 31391,
       "expected_source_verse_lines": 95,
       "expected_primary_form_strongs_parsing_pairs": 1614,
-      "expected_additional_alternative_strongs_parsing_pairs": 0
+      "expected_additional_alternative_strongs_parsing_pairs": 1
     },
     {
       "canonical_nt_order": 13,
@@ -192,7 +192,7 @@
       "byte_length": 29060,
       "expected_source_verse_lines": 89,
       "expected_primary_form_strongs_parsing_pairs": 1497,
-      "expected_additional_alternative_strongs_parsing_pairs": 1
+      "expected_additional_alternative_strongs_parsing_pairs": 0
     },
     {
       "canonical_nt_order": 14,
