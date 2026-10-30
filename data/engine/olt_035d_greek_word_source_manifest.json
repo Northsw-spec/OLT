@@ -362,5 +362,9 @@
       "expected_primary_form_strongs_parsing_pairs": 9897,
       "expected_additional_alternative_strongs_parsing_pairs": 1
     }
-  ]
+  ],
+  "known_extra_bp5_slot_meaning": "FOUR_EMPTY_VERSE_PLACEHOLDERS_NOT_FOUR_VERSES_OF_GREEK_WORD_TEXT",
+  "expected_nonempty_bp5_greek_verse_rows": 7953,
+  "expected_empty_bp5_source_slots": 4,
+  "known_bp5_source_only_reference_status": "EMPTY_STRUCTURAL_VERSE_SLOTS_NO_ORIGINAL_GREEK_WORD_TRIPLES"
 }
