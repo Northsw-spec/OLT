@@ -1,0 +1,318 @@
+{
+  "registry_id": "OLT-033-NAME-UNDERWORDS",
+  "authority": "OWNER_REQUESTED_WITH_SCHOLARLY_EVIDENCE_FIREWALL",
+  "coverage_policy": "ALL_BIBLICAL_PROPER_NAMES_AND_MEANINGFUL_EXPRESSIONS_WHERE_SOURCE_SUPPORTED",
+  "stage": "INITIAL_EXAMPLES_ONLY_NOT_FULL_BIBLE",
+  "scope": [
+    "OT",
+    "NT"
+  ],
+  "record_count": 10,
+  "owner_requested_expressions": [
+    "Moses: Draw",
+    "God (Elohim): Mighty Governance",
+    "El: Mighty",
+    "El Shaddai: My Mighty Strength",
+    "Jerusalem: City of Peace",
+    "David: The Beloved",
+    "Shiloh: meaning subject to source/context",
+    "Noah: Rest"
+  ],
+  "nt_source_edition_pinned": false,
+  "source_language_identity_checked_for_all_verses": false,
+  "independent_philological_approval": false,
+  "globally_rendered_occurrences": 0,
+  "unresolved_does_not_force_gloss": true,
+  "primary_translation_unmodified": true,
+  "publication_status": "BLOCKED",
+  "entries": [
+    {
+      "id": "moses-draw",
+      "primary": "Moses",
+      "entity_kind": "PERSON_NAME",
+      "original_language": "HEBREW",
+      "original_script": "מֹשֶׁה",
+      "lexical_reference_ids": [
+        "H4872"
+      ],
+      "nt_equivalent_reference_ids": [
+        "G3475"
+      ],
+      "primary_context": "Exod.2.10",
+      "owner_requested_underword": "Draw",
+      "status": "OWNER_SELECTED_BIBLICAL_WORDPLAY_RESEARCH_NOT_FINAL_ETYMOLOGY",
+      "evidence_category": "BIBLICAL_NAMING_WORDPLAY",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "Exodus 2:10 associates Moses with mashah, to draw out. The Hebrew name is formally active ('one drawing'), not a direct passive form 'drawn out'. Egyptian versus Semitic historical etymology is disputed; 'Draw' is a deliberately compressed owner-requested wordplay gloss, not a settled literal derivation.",
+      "evidence": [
+        {
+          "url": "https://classic.net.bible.org/verse.php?book=Exo&chapter=2&tab=commentaries&verse=10",
+          "kind": "BIBLICAL_TRANSLATOR_NOTE"
+        },
+        {
+          "url": "https://dspace.mit.edu/entities/publication/528f3b57-e59a-4a6c-b3d1-1f442c9ddc5d",
+          "kind": "INDEPENDENT_ACADEMIC_ALTERNATIVE"
+        },
+        {
+          "url": "https://www.thetorah.com/article/moses-name-is-semitic-not-egyptian",
+          "kind": "INDEPENDENT_CONTRARY_SCHOLARLY_VIEW"
+        }
+      ]
+    },
+    {
+      "id": "elohim-mighty-governance",
+      "primary": "God",
+      "entity_kind": "DIVINE_TITLE",
+      "original_language": "HEBREW",
+      "original_script": "אֱלֹהִים",
+      "lexical_reference_ids": [
+        "H430"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.1.1",
+      "verified_olt_source_token_ids": [
+        "01TyA"
+      ],
+      "owner_requested_underword": "Mighty Governance",
+      "status": "OWNER_SELECTED_THEOLOGICAL_ASSOCIATION_NOT_LITERAL_LEXICAL_GLOSS",
+      "evidence_category": "OWNER_CANONICAL_THEOLOGICAL_INTERPRETATION",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "In Genesis 1:1 the original source אֱלֹהִים (Elohim) is plural in form but governs a singular finite verb referring to one God. 'Mighty Governance' is the owner's selected theological/semantic under-name association about divine rule and authority, NOT an established literal Hebrew gloss or derivation from Elohim. Governance is not an independently verified lexical component of this name; the historical etymology is disputed. Do not infer multiple gods or separate divine beings from the morphological plural and do not substitute this proposal for every English 'God' or Greek theos without an exact original-language occurrence check.",
+      "evidence": [
+        {
+          "url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Elohim",
+          "kind": "LEXICAL_BACKGROUND"
+        },
+        {
+          "url": "https://jewishvirtuallibrary.org/jsource/judaica/ejud_0002_0007_0_07449.html",
+          "kind": "ENCYCLOPEDIA_LEXICAL_CONTEXT"
+        }
+      ]
+    },
+    {
+      "id": "el-mighty",
+      "primary": "El",
+      "entity_kind": "DIVINE_NAME_OR_TITLE",
+      "original_language": "HEBREW",
+      "original_script": "אֵל",
+      "lexical_reference_ids": [
+        "H410"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.17.1",
+      "owner_requested_underword": "Mighty",
+      "status": "OWNER_SELECTED_ROOT_ASSOCIATION_RESEARCH",
+      "evidence_category": "SEMANTIC_ASSOCIATION_DEBATED",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "El signifies God/deity as a noun, while a connection to strength or might is possible but etymologically disputed. 'Mighty' is an associated descriptor, not universally the lexical meaning of every form. Do not confuse אֵל (divine name) with אֶל (preposition, toward/to; a different source lemma).",
+      "evidence": [
+        {
+          "url": "https://rsc.byu.edu/vol-11-no-1-2010/name-titles-god-old-testament",
+          "kind": "LINGUISTIC_SURVEY"
+        },
+        {
+          "url": "https://jewishencyclopedia.com/articles/13483-shaddai",
+          "kind": "LEXICAL_HISTORICAL_SURVEY"
+        }
+      ]
+    },
+    {
+      "id": "el-shaddai-my-mighty-strength",
+      "primary": "El Shaddai",
+      "entity_kind": "DIVINE_COMPOUND_TITLE",
+      "original_language": "HEBREW",
+      "original_script": "אֵל שַׁדַּי",
+      "lexical_reference_ids": [
+        "H410",
+        "H7706"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.17.1",
+      "owner_requested_underword": "My Mighty Strength",
+      "status": "DISPUTED_UNSUPPORTED_AS_LITERAL_READING",
+      "evidence_category": "DISPUTED_NAME_OR_TITLE_READING",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "The phrase contains El and Shaddai but NO first-person possessive marker meaning My. The etymology of Shaddai is disputed (often rendered Almighty; possible mountain-related reading). The requested 'My Mighty Strength' is not justified as a literal Hebrew translation and must remain a proposal for further owner theological review, never a certified under-name lexical gloss.",
+      "evidence": [
+        {
+          "url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/El-Shaddai-El-Shadday",
+          "kind": "ETYMOLOGY_VARIANTS"
+        },
+        {
+          "url": "https://www.studylight.org/lexicons/eng/hebrew/7706.html",
+          "kind": "DICTIONARY_ENTRY"
+        }
+      ]
+    },
+    {
+      "id": "jerusalem-city-of-peace",
+      "primary": "Jerusalem",
+      "entity_kind": "PLACE_NAME",
+      "original_language": "HEBREW",
+      "original_script": "יְרוּשָׁלַיִם",
+      "lexical_reference_ids": [
+        "H3389"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Josh.10.1",
+      "owner_requested_underword": "City of Peace",
+      "status": "OWNER_SELECTED_HISTORICAL_NAME_INTERPRETATION_RESEARCH",
+      "evidence_category": "HISTORICAL_TOPONYM_INTERPRETATION",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "City of Peace is one traditional historical interpretation of Uru-Salim; alternatives include foundation of peace/foundation of Salem, and source scholarship does not establish one uncontested Hebrew derivation. Name must be linked according to original verse identity across both Testaments, not via any English substring replacement.",
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/3389.htm",
+          "kind": "BDB_DEBATED_ETYMOLOGY"
+        },
+        {
+          "url": "https://www.newadvent.org/cathen/08344a.htm",
+          "kind": "ANCIENT_NAME_INTERPRETATION"
+        }
+      ]
+    },
+    {
+      "id": "david-the-beloved",
+      "primary": "David",
+      "entity_kind": "PERSON_NAME",
+      "original_language": "HEBREW",
+      "original_script": "דָּוִד",
+      "lexical_reference_ids": [
+        "H1732"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "1Sam.16.13",
+      "owner_requested_underword": "The Beloved",
+      "status": "OWNER_SELECTED_NAME_ASSOCIATION_RESEARCH",
+      "evidence_category": "LEXICAL_NAME_ETYMLOGY_WITH_EVIDENCE",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "Hebrew d-w-d lexical family is associated with loved/beloved but also uncle; BDB marks the name derivation 'beloved one?' rather than fully certain. 'The Beloved' is a well-supported name association, not an independent verified root gloss approved for every appearance.",
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/1732.htm",
+          "kind": "BDB_ETYMOLOGY_WITH_QUESTION_MARK"
+        },
+        {
+          "url": "https://www.chabad.org/library/article_cdo/aid/4803862/jewish/What-Does-the-Name-David-Mean.htm",
+          "kind": "JEWISH_NAME_TRADITION"
+        }
+      ]
+    },
+    {
+      "id": "shiloh-genesis-title",
+      "primary": "Shiloh",
+      "entity_kind": "DISPUTED_INTERPRETIVE_TITLE",
+      "original_language": "HEBREW",
+      "original_script": "שִׁילֹה",
+      "lexical_reference_ids": [
+        "H7886"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.49.10",
+      "owner_requested_underword": "To Whom It Belongs",
+      "status": "DISPUTED_READING_REQUIRES_VERSE_REVIEW",
+      "evidence_category": "DISPUTED_NAME_OR_TITLE_READING",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "Genesis 49:10 has several incompatible textual/syntactic readings, and may not contain a personal proper name at all. 'To Whom It Belongs' is one translation of the difficult clause rather than the sure lexical etymology of the name Shiloh. Keep separate from the town and from Siloam.",
+      "evidence": [
+        {
+          "url": "https://classic.net.bible.org/passage.php?passage=Gen+49%3A10&theme=wiki",
+          "kind": "COMPETING_VERSE_READINGS"
+        },
+        {
+          "url": "https://rbl.ptt.net.pl/index.php/RBL/article/view/3756",
+          "kind": "SCHOLARLY_REVIEW"
+        }
+      ]
+    },
+    {
+      "id": "shiloh-place-rest",
+      "primary": "Shiloh",
+      "entity_kind": "PLACE_NAME",
+      "original_language": "HEBREW",
+      "original_script": "שִׁלֹה",
+      "lexical_reference_ids": [
+        "H7887"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Josh.18.1",
+      "owner_requested_underword": "Place of Rest",
+      "status": "TRADITIONAL_TOPONYM_ASSOCIATION_RESEARCH",
+      "evidence_category": "HISTORICAL_TOPONYM_INTERPRETATION",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "The place Shiloh is an independently distinguishable place-name (H7887). A lexicon traditionally gives 'place of rest'; do not transfer the disputed Genesis 49:10 reading to Joshua 18:1 on surface spelling alone.",
+      "evidence": [
+        {
+          "url": "https://biblehub.com/bdb/7887.htm",
+          "kind": "BDB_PLACE_IDENTITY"
+        },
+        {
+          "url": "https://www.studylight.org/lexicons/eng/hebrew/7887.html",
+          "kind": "TOPONYM_NAME_GLOSS"
+        }
+      ]
+    },
+    {
+      "id": "siloam-sent",
+      "primary": "Siloam",
+      "entity_kind": "PLACE_NAME",
+      "original_language": "GREEK_NT_TRANSLITERATED_FROM_SEMITIC",
+      "original_script": "Σιλωάμ",
+      "lexical_reference_ids": [],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "John.9.7",
+      "owner_requested_underword": "Sent",
+      "status": "SCRIPTURE_EXPLICIT_GLOSS_NT_SOURCE_ALIGNMENT_PENDING",
+      "evidence_category": "EXPLICIT_SCRIPTURAL_GLOSS",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "John 9:7 explicitly translates Siloam as Sent; this is stronger contextual evidence than a conjectured derivation. Pin the exact RP2018 Greek word/lemma and check textform before asserting original NT token coverage. Do not equate Siloam with disputed Shiloh in Genesis 49:10.",
+      "evidence": [
+        {
+          "url": "https://classic.net.bible.org/passage.php/xml/xml/passage.php?passage=Joh+9%3A6%2C7",
+          "kind": "EXPLICIT_NEW_TESTAMENT_TRANSLATION"
+        },
+        {
+          "url": "https://www.biblegateway.com/verse/en/John%209%3A7",
+          "kind": "ENGLISH_GOSPEL_COMPARISON"
+        }
+      ]
+    },
+    {
+      "id": "noah-rest",
+      "primary": "Noah",
+      "entity_kind": "PERSON_NAME",
+      "original_language": "HEBREW",
+      "original_script": "נֹחַ",
+      "lexical_reference_ids": [
+        "H5146"
+      ],
+      "nt_equivalent_reference_ids": [],
+      "primary_context": "Gen.5.29",
+      "owner_requested_underword": "Rest",
+      "status": "OWNER_SELECTED_HEBREW_NAME_ASSOCIATION_RESEARCH",
+      "evidence_category": "LEXICAL_NAME_ETYMLOGY_WITH_EVIDENCE",
+      "meaning_certified": false,
+      "lexical_automatic_render": false,
+      "note": "Noah (נֹחַ) is associated with the Hebrew root נוח (nuach), rest. Genesis 5:29 instead uses יְנַחֲמֵנוּ from the separate root נחם (nacham), comfort, making a phonetic naming wordplay rather than proving that comfort is the same Hebrew root or literal name gloss. The owner-selected direct underword is Rest. Keep original Genesis 5:29 token identity pending a source occurrence check and never automatically apply the same Hebrew token ID to a Greek NT occurrence.",
+      "evidence": [
+        {
+          "url": "https://classic.net.bible.org/verse.php?book=Gen&chapter=5&tab=commentaries&verse=29",
+          "kind": "BIBLICAL_NAME_WORDPLAY_AND_DISTINCT_ROOT_EXPLANATION"
+        },
+        {
+          "url": "https://mechonhadar.s3.amazonaws.com/mh_torah_source_sheets/KasherParashatNoah5784.pdf",
+          "kind": "JEWISH_TEXTUAL_NAME_ETYMLOGY"
+        }
+      ]
+    }
+  ]
+}

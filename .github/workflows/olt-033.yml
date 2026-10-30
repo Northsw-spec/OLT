@@ -1,0 +1,45 @@
+name: OLT-033 Bible-wide name meaning underword research policy
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/policy/olt_name_underword_policy.json"
+      - "lexicon/name_underwords.json"
+      - "lexicon/hebrew.json"
+      - "docs/MASTERPROMPT.md"
+      - "docs/DECISIONS.md"
+      - "docs/LEXICON.md"
+      - "docs/LINKS.md"
+      - "scripts/validate_olt_033_names.py"
+      - "tests/test_olt_033_names.py"
+      - ".github/workflows/olt-033.yml"
+  pull_request:
+    paths:
+      - "data/policy/olt_name_underword_policy.json"
+      - "lexicon/name_underwords.json"
+      - "lexicon/hebrew.json"
+      - "docs/MASTERPROMPT.md"
+      - "docs/DECISIONS.md"
+      - "docs/LEXICON.md"
+      - "docs/LINKS.md"
+      - "scripts/validate_olt_033_names.py"
+      - "tests/test_olt_033_names.py"
+      - ".github/workflows/olt-033.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  names-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate every candidate and original Hebrew/Elohim source anchor
+        run: python scripts/validate_olt_033_names.py
+      - name: Execute negative tests on name identity, Noah roots and blocked approval
+        run: python -m unittest discover -s tests -p 'test_olt_033_names.py' -v
