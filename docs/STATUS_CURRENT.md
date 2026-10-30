@@ -1,19 +1,20 @@
 # OLT — CURRENT STATUS (2026-10-30)
 
 **Canonical repository:** https://github.com/Northsw-spec/OLT  
-**Latest fully merged and CI-verified engineering checkpoint:** OLT-034, [PR #19](https://github.com/Northsw-spec/OLT/pull/19), main commit 8179853cbfd241c0d836af576793563ecbef3145. Post-merge GitHub Actions: foundation **259/259 PASS** (with release BLOCKED), OLT-034 **20/20 + 5/5 PASS**, OLT-033 **13/13 PASS**, and OLT-020 doctrinal policy **6/6 PASS**.  
+**Latest fully merged and CI-verified engineering checkpoint:** **OLT-035B**, [PR #22](https://github.com/Northsw-spec/OLT/pull/22), main commit **274279701a52aae5c82727cd71420f65531a5789**. Post-merge GitHub-hosted Actions verified **foundation 290/290 PASS** (Genesis release still BLOCKED), **OLT-035B 15/15 PASS** (27 RP2018 Greek source books, 7,953 Greek verse rows and two ancillary texts), **OLT-035 16/16 PASS** (39 OT imported books, 301,837 Hebrew and 4,948 Aramaic tokens), and **OLT-034 20/20 + 5/5 PASS** (source-first multilingual core).  
 **Translation publication:** BLOCKED. **Independent lexical/morphological signoff:** NOT DONE.
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
 
-## OLT-035B — Whole Greek NT source book-file import (engineering checkpoint under CI review)
+## OLT-035B — Whole Greek NT source book-file import (MERGED AND POST-MERGE CI VERIFIED)
 
 - The source repository contains **all 27 continuous-text RP2018 Greek NT book UTF-8 CSV files**, exact Git blob matches to ByzTxt `v3.3.2` at pinned upstream commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. Total main source text files ~1.74 MB, all authentic Greek verse text, not fabricated from English or an alternate Greek edition.
 - **PA** (John 7:53–8:11) and **ACT24** (Acts 24:6–8) are separately retained exact-source ancillary readings. Do NOT silently merge their contents into continuous-text verses; textual apparatus and owner editorial decisions must be reviewed.
 - `data/engine/olt_035b_rp2018_verse_inventory.json` pins upstream paths, hashes and lengths for all 29 source CSVs (27 main + 2 ancillary). `olt_core/nt_corpus.py` parses/validates Greek source verse references and creates no Greek word tokens, lemma IDs, morphology or translated Scripture. [Source and release detail](OLT-035B_COMPLETE_RP2018_GREEK_VERSES.md).
-- **Full NT Greek VERSE TEXT files are imported, but original Greek WORD-LEVEL identities, morphology, lexical sense review, English master translation, locale translations and publication are NOT DONE.** The OLT-035 first 3 John-only scope below is an earlier historical checkpoint and is now superseded for verse-file import coverage.
+- **Full NT Greek VERSE TEXT files are imported, but original Greek WORD-LEVEL identities, morphology, lexical sense review, English master translation, locale translations and publication are NOT DONE.**
+- OLT-035B **post-merge main verification:** GitHub Actions run 41127319395 verified 27 original Greek source books, 7,953 parsed Greek verse rows and two ancillary files (15/15 tests PASS); required foundation run 41127319379 checked 290/290 tests and confirmed the release gate still BLOCKED. The OLT-035 first 3 John-only scope below is an earlier historical checkpoint and is now superseded for verse-file import coverage.
 
-## OLT-035 — Provenance implementation under CI review (snapshot 2026-10-30)
+## OLT-035 — OT provenance and first Greek source stage (MERGED AND POST-MERGE CI VERIFIED)
 
 - All **39 existing imported OT book JSON snapshots** are now pinned by Git blob SHA-1, plus the 39 original upstream XML SHA-256 values **recorded in the earlier importer manifest**. The original XML is **not redownloaded or rehashed in this checkpoint**. Imported audit totals: 23,213 verses / 306,785 source words, including **301,837 H-tagged Hebrew** and **4,948 A-tagged Aramaic** words. Source morphology is NOT independently reviewed.
 - **RP2018 Greek original source revision is now pinned to ByzTxt v3.3.2**, commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. An identical Git blob `296e85242768aab57007a69cf62b92aef0b5067b` of **3 John, 14 Greek verse strings** has been added from its Unicode CSV source. This means one source book is imported at **verse level**, NOT that 27 NT books have imported Greek word IDs, lemmas, morphology or full source alignment.
