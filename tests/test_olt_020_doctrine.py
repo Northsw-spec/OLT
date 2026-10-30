@@ -55,7 +55,7 @@ class OLT020(unittest.TestCase):
 
  def test_021_binding_documents_repeat_corrected_creed(self):
   checks={
-   "docs/MASTERPROMPT.md": ["THE SON IS ETERNAL AND UNCREATED","FATHER AND SON'S JOINT WORK","NOT a first created","BECAME HUMAN"],
+   "docs/MASTERPROMPT.md": ["THE SON IS ETERNAL AND UNCREATED","FATHER AND SON'S JOINT WORK","FIRSTBORN IS NOT FIRST CREATED","BECAME HUMAN"],
    "docs/DOCTRINAL_FRAMEWORK.md":["The Son is eternal and uncreated","created the world together","through Mary","first created"],
    "docs/DECISIONS.md":["THE SON IS ETERNAL AND UNCREATED","CREATED THE WORLD TOGETHER","became human through Mary","first created"],
    "docs/OLT-021_BINITARIAN_CREED_CLARIFICATION.md":["THE SON IS ETERNAL AND UNCREATED","joint Father–Son work","through Mary","first created"],
