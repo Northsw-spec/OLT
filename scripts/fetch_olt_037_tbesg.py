@@ -12,8 +12,9 @@ import sys
 from urllib.parse import quote
 from urllib.request import urlopen
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 from olt_core.greek_lexicon import read_tbesg_manifest, verify_tbesg_bytes
-from olt_core.sources import ROOT
 
 
 def main() -> int:
