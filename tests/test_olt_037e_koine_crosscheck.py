@@ -98,8 +98,8 @@ class TestOLT037E(unittest.TestCase):
           '<?xml version="1.0" encoding="UTF-8"?>'
           '<TEI xmlns="http://www.crosswire.org/2008/TEIOSIS/namespace">'
           '<teiHeader></teiHeader><text><body>'+entries+
-          '<entry n="λέγω|G3004"><form><orth>λέγω</orth></form>'
-          '<sense><def>original say</def><def>original speak</def></sense></entry>'
+          '<entry n="λέγω|G2036|G3004"><form><orth>λέγω</orth></form>'
+          '<sense><def>original say</def><gloss>original speak</gloss></sense></entry>'
           '<entry n="ὅτι|G3754"><form><orth>ὅτι</orth></form>'
           '<sense><def>original conjunction</def></sense></entry>'
           '</body></text></TEI>'
@@ -109,10 +109,16 @@ class TestOLT037E(unittest.TestCase):
         self.assertEqual(len(results["case_entries"]["3004"]),1)
         self.assertEqual(len(results["case_entries"]["3754"]),1)
         first=results["case_entries"]["3004"][0]
-        self.assertEqual(first["native_abbott_entry_attribute_n_SOURCE_ONLY"],"λέγω|G3004")
+        self.assertEqual(first["native_abbott_entry_attribute_n_SOURCE_ONLY"],
+                         "λέγω|G2036|G3004")
+        self.assertEqual(first["all_native_abbott_strong_crossrefs_SOURCE_ONLY"],
+                         ["2036","3004"])
+        self.assertTrue(first["native_entry_references_multiple_strong_numbers"])
         self.assertEqual(first["first_source_orth_forms_NOT_APPROVED"],["λέγω"])
-        self.assertEqual(first["first_original_source_definitions_NOT_OLT_TRANSLATION"],
-                         ["original say","original speak"])
+        self.assertEqual(first["first_source_def_or_gloss_records_NOT_OLT_TRANSLATION"],
+                         [{"original_source_tag":"def","original_source_text":"original say"},
+                          {"original_source_tag":"gloss","original_source_text":"original speak"}])
+        self.assertEqual(first["original_source_def_or_gloss_count"],2)
         self.assertFalse(first["abbott_dictionary_gloss_used_as_translation"])
         self.assertIsNone(first["biblical_contextual_sense_selected"])
         self.assertEqual(first["publication_status"],"BLOCKED")
