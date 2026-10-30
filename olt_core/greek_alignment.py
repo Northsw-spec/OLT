@@ -29,11 +29,6 @@ ALIGNMENT_STATUS = "MATCHED_POSITION_AND_LOSSY_NORMALIZED_ORTHOGRAPHY"
 NORMALIZATION_ID = "OLT-036-RP2018-BP5-UNICODE-V1"
 # Beta Code here is the unaccented 24-letter transcription actually observed in
 # the pinned source/Strongs/*.BP5 files. Do not silently accept other codes.
-_BETA_TO_GREEK = dict(zip(
-    "abgdezhqiklmncopyrstufxw",
-    "αβγδεζηθικλμνξοπρστυφχψω",
-))
-# Confirm mapping explicitly: c=ξ, y=ψ, x=χ, q=θ, h=η, w=ω.
 _BETA_TO_GREEK = {
     "a": "α", "b": "β", "g": "γ", "d": "δ", "e": "ε", "z": "ζ",
     "h": "η", "q": "θ", "i": "ι", "k": "κ", "l": "λ", "m": "μ",
