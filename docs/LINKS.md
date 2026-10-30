@@ -21,3 +21,7 @@ The owner now requires source-grounded name-meaning underwords for **each applic
 
 New entity meaning IDs must be disambiguated from lexical HOMONYM relation IDs. A blue theological label is NOT proof of semantic equivalence. Case-by-case verse/lemma/source alignment and evidence notes are mandatory. Keep Genesis 1:1's one In/with prefix exception unchanged; it is NOT a proper-name meaning.
 - **Noah** over **Rest** is an owner-selected name-meaning pair. Gen 5:29's 'comfort' is a distinct Hebrew root, not an alternate automatic name gloss.
+
+## OLT-034 — meaning underwords across different target languages
+
+The shared source-first OLT core exports original-script lemma/verse/token evidence, meaning associations, their type and uncertainty. English owner display forms (God/Elohim -> Mighty Governance; Noah -> Rest) are English master-reference annotations, NOT automatically Japanese, Chinese, Amharic, Icelandic or Greek name meanings. A target language needs its **own source-evidenced, context-sensitive underword**, script-appropriate spacing/placement and independently checked note while preserving the original semantic/theological evidence category. Never match on identical English surface strings across OT/NT.
