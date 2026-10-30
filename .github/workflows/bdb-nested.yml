@@ -6,9 +6,21 @@ on:
       - "scripts/import_bdb_nested.py"
       - "tests/test_bdb_nested.py"
       - ".github/workflows/bdb-nested.yml"
+      - "data/imported/lexicon/bdb_nested.jsonl.gz"
+      - "data/quality/bdb_nested_manifest.json"
+      - "data/quality/genesis_01_bdb_sense_evidence.json"
+  pull_request:
+    paths:
+      - "scripts/import_bdb_nested.py"
+      - "tests/test_bdb_nested.py"
+      - ".github/workflows/bdb-nested.yml"
+      - "data/imported/lexicon/bdb_nested.jsonl.gz"
+      - "data/quality/bdb_nested_manifest.json"
+      - "data/quality/genesis_01_bdb_sense_evidence.json"
+      - "tests/test_olt_028_ci_security.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-007-bdb
   cancel-in-progress: false
@@ -19,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -50,15 +62,13 @@ jobs:
           assert all(x["meaning_approval"]=="IMPORTED_DICTIONARY_EVIDENCE_NOT_OLT_APPROVAL" for x in rows)
           print("PASS: all BDB hierarchical source records preserved; English translation NOT reviewed")
           PY
-      - name: Commit compressed BDB dataset and Genesis evidence ledger
+      - name: Detect modified or untracked corpus research outputs (read-only)
         run: |
           set -euo pipefail
-          git config user.name "olt-bdb-import[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/imported/lexicon/bdb_nested.jsonl.gz data/quality/bdb_nested_manifest.json data/quality/genesis_01_bdb_sense_evidence.json
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Preserve full BDB nested source hierarchy and 97 Genesis 1 evidence cards"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/imported/lexicon/bdb_nested.jsonl.gz data/quality/bdb_nested_manifest.json data/quality/genesis_01_bdb_sense_evidence.json >/dev/null
+          if [ -n "$(git status --porcelain --untracked-files=all -- data/imported/lexicon/bdb_nested.jsonl.gz data/quality)" ]; then
+            git status --short --untracked-files=all -- data/imported/lexicon/bdb_nested.jsonl.gz data/quality
+            echo "::error::Source-derived output differs from committed files. Submit a pull request; CI never pushes to main."
+            exit 1
           fi
+          echo "PASS: pinned source research reproducible; publication BLOCKED"
