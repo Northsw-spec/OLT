@@ -53,5 +53,5 @@ jobs:
         run: python -m olt_core.greek_independent_lsj --source-dir "$RUNNER_TEMP" --verify-checkpoint
       - name: Test independent human-review protocol against fake approvals
         run: python -m unittest discover -s tests -p 'test_olt_037d_editorial_protocol.py' -v
-      - name: Generate strictly UNREVIEWED Greek scholarly study templates for checkpoint pinning
-        run: python -m olt_core.greek_editorial_review --emit
+      - name: Require byte-for-byte regeneration of source-bound blank scholarly reviewer templates
+        run: python -m olt_core.greek_editorial_review --verify
