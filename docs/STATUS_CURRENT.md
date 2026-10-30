@@ -6,6 +6,13 @@
 
 > **Status priority:** This opening section supersedes outdated present-tense claims in the historical chronological log below. Earlier reports of CI jobs failing before test startup describe an **old incident**, not the current CI state. Preserve the older reports as historical evidence, not as a live failure.
 
+## OLT-035 — Provenance implementation under CI review (snapshot 2026-10-30)
+
+- All **39 existing imported OT book JSON snapshots** are now pinned by Git blob SHA-1, plus the 39 original upstream XML SHA-256 values **recorded in the earlier importer manifest**. The original XML is **not redownloaded or rehashed in this checkpoint**. Imported audit totals: 23,213 verses / 306,785 source words, including **301,837 H-tagged Hebrew** and **4,948 A-tagged Aramaic** words. Source morphology is NOT independently reviewed.
+- **RP2018 Greek original source revision is now pinned to ByzTxt v3.3.2**, commit `27a45ff1b7be6c17ccbfeac414f3f55732ae8e28`. An identical Git blob `296e85242768aab57007a69cf62b92aef0b5067b` of **3 John, 14 Greek verse strings** has been added from its Unicode CSV source. This means one source book is imported at **verse level**, NOT that 27 NT books have imported Greek word IDs, lemmas, morphology or full source alignment.
+- New `olt_core/sources.py`, 16 focused unit tests, read-only `olt-035.yml` and [full source provenance report](OLT-035_SOURCE_PROVENANCE.md) await checks in this development snapshot. NO translation approvals and NO Bible publication.
+- This section **supersedes the older OLT-034 snapshot wording** stating that the Greek text *release itself* was unpinned. Source pinning is now done only for the selected RP2018 revision and first sample; **complete Greek NT word-level sourcing remains NOT DONE**.
+
 ## Owner decisions — OLT-033 and multilingual OLT-034
 
 - **OLT-033 (MERGED, independently CI-executed):** every applicable named entity and distinctive source-language meaningful title across **both Testaments** requires a source-aware research decision and a vertical English underword only when justified. The ten example candidates include **God/Elohim — Mighty Governance** (owner interpretive association, NOT a proven literal Hebrew word gloss) and **Noah — Rest** (associated with Hebrew nuach, distinct from Gen 5:29 nacham/comfort wordplay). Initial cases do not mean a completed Bible-wide name inventory. [Binding name policy](../docs/OLT-033_BIBLEWIDE_NAMES_UNDERWORDS.md).

@@ -20,3 +20,9 @@ The underword system must coexist with the single OLT-022 Gen 1:1 In/with prefix
 A green core CI run does not authorize a Bible translation in ANY target language. Each language repository separately validates exact original source edition and immutable revision, completeness of source-token mapping, lemma/sense decisions, grammatical adequacy, gender/tense conventions appropriate to that language, spelling and typography (including Ethiopic for Amharic, Japanese scripts and segmentation, Simplified/Traditional Chinese and Icelandic diacritics), translated names/underwords and footnotes, printed A4/PDF/ODT/HTML reading order, and independent review approval. The initial six locale profiles contain ZERO translated Scripture words.
 
 The common OLT core gives traceable, original-language source evidence and English research reference only. Each locale renders from its own reviewed choices. Preserve existing OLT Gen 1:1 original-language fidelity, owner-defined Gen 1:1 In/with underword and [of His Power] note, and exact approved English wording without projecting English grammar onto Japanese, Chinese, Amharic or Icelandic. Independent per-locale releases remain BLOCKED.
+
+## OLT-035 — publication blocked on original-source attestations
+
+Every target-language release must be traceable to a pinned original Hebrew/Aramaic/Greek textual edition, exact source-token alignment, lexeme/morphology and evidence. Git byte-identity checks prevent accidental corpus drift but do NOT replace independent linguistic review, proper Greek word segmentation, cross-edition collation, authorized editorial decisions or print QA.
+
+The first RP2018 Greek 3 John import is **14 authentic Greek verse strings without word-level IDs or morphology**. It cannot legally or technically be promoted to a finished source-verified Greek lexicon, full NT or publishable Greek-target translation. Preserve all owner decisions and project-wide release blocker.

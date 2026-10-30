@@ -8,6 +8,26 @@ The present repository is written anew; no previous draft or script is copied in
 
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
+## OLT-035 — Source provenance and Greek source import stage (October 30, 2026)
+
+The shared OLT core now has source-verifying adapters for all **39 imported OT books**, retaining exact original OSHB word IDs, historical upstream XML checksums, 39 frozen imported file Git hashes, and 301,837 Hebrew vs 4,948 Aramaic source-tagged token identities. The **Robinson–Pierpont 2018** Greek source revision is pinned to upstream ByzTxt **v3.3.2** / `27a45ff...`. Its authentic **Third John** text is imported verbatim with a matching upstream blob digest (**14 Greek verses, no Greek word IDs or lemma/morphology import yet**).
+
+- [OLT-035 source provenance, boundaries and commands](docs/OLT-035_SOURCE_PROVENANCE.md)
+- [Machine-readable 39-OT-books + RP2018 pin registry](data/engine/olt_035_source_provenance.json)
+- [Read-only original language source adapters](olt_core/sources.py)
+- [Original RP2018 Greek 3 John source CSV](data/imported/nt/rp2018/3JO.csv)
+
+Research-only commands, Python standard library:
+
+```sh
+python -m olt_core.sources --audit-ot
+python -m olt_core.sources --ot-verse Gen Gen.1.1
+python -m olt_core.sources --ot-verse Dan Dan.2.5
+python -m olt_core.sources --greek-3john
+```
+
+No independent morphological signoff, full NT import, translation or publishing is claimed. **Publication remains BLOCKED**.
+
 ## New architectural direction — OLT-033/034 (30 October 2026)
 **OLT-034 VERIFIED GITHUB CHECKPOINT (2026-10-30):** [PR #19](https://github.com/Northsw-spec/OLT/pull/19) merged at 8179853cbfd241c0d836af576793563ecbef3145; required foundation **259/259 PASS**, multilingual engine checks **25/25 PASS**, name rules **13/13 PASS**, doctrinal checks **6/6 PASS** on post-merge main. **No target-language Bible has been translated or approved.** See docs/STATUS_CURRENT.md for the current canonical status.
 
