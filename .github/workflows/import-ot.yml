@@ -5,10 +5,17 @@ on:
     paths:
       - "scripts/import_ot.py"
       - ".github/workflows/import-ot.yml"
+      - "data/imported/**"
+  pull_request:
+    paths:
+      - "scripts/import_ot.py"
+      - ".github/workflows/import-ot.yml"
+      - "data/imported/**"
+      - "tests/test_olt_028_ci_security.py"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: olt-source-import
@@ -21,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -50,15 +57,13 @@ jobs:
           assert len(list(Path("data/imported/books").glob("*.json")))==39
           print("PASS: import coverage, not semantic verification")
           PY
-      - name: Commit derived source dataset
+      - name: Detect modified or untracked corpus research outputs (read-only)
         run: |
           set -euo pipefail
-          git config user.name "olt-data-import[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/imported
-          if git diff --cached --quiet; then
-            echo "No derived changes to commit"
-          else
-            git commit -m "Import pinned OSHB OT corpus and Hebrew dictionaries (unreviewed)"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/imported/manifest.json >/dev/null
+          if [ -n "$(git status --porcelain --untracked-files=all -- data/imported)" ]; then
+            git status --short --untracked-files=all -- data/imported
+            echo "::error::Source-derived output differs from committed files. Submit a pull request; CI never pushes to main."
+            exit 1
           fi
+          echo "PASS: pinned source research reproducible; publication BLOCKED"

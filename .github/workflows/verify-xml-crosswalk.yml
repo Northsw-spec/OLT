@@ -6,9 +6,19 @@ on:
       - "scripts/verify_xml_crosswalk.py"
       - "tests/test_xml_crosswalk.py"
       - ".github/workflows/verify-xml-crosswalk.yml"
+      - "data/quality/verified_id_crosswalk.jsonl"
+      - "data/quality/verified_id_crosswalk_report.json"
+  pull_request:
+    paths:
+      - "scripts/verify_xml_crosswalk.py"
+      - "tests/test_xml_crosswalk.py"
+      - ".github/workflows/verify-xml-crosswalk.yml"
+      - "data/quality/verified_id_crosswalk.jsonl"
+      - "data/quality/verified_id_crosswalk_report.json"
+      - "tests/test_olt_028_ci_security.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-004-lexicon-crosswalk
   cancel-in-progress: false
@@ -19,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -49,15 +59,13 @@ jobs:
           assert len(r["source_sha256"])==4
           print("PASS: exact XML identifier and BDB reference audit; OLT lexical meanings not approved")
           PY
-      - name: Commit original-source verified lexical IDs and audit report
+      - name: Detect modified or untracked corpus research outputs (read-only)
         run: |
           set -euo pipefail
-          git config user.name "olt-lexical-crosswalk[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/quality/verified_id_crosswalk*
-          if git diff --cached --quiet; then
-            echo "No changed crosswalk reports"
-          else
-            git commit -m "Derive exact AugIndex LexicalIndex BDB source-ID crosswalk"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/quality/verified_id_crosswalk.jsonl data/quality/verified_id_crosswalk_report.json >/dev/null
+          if [ -n "$(git status --porcelain --untracked-files=all -- data/quality/verified_id_crosswalk.jsonl data/quality/verified_id_crosswalk_report.json)" ]; then
+            git status --short --untracked-files=all -- data/quality/verified_id_crosswalk.jsonl data/quality/verified_id_crosswalk_report.json
+            echo "::error::Source-derived output differs from committed files. Submit a pull request; CI never pushes to main."
+            exit 1
           fi
+          echo "PASS: pinned source research reproducible; publication BLOCKED"
