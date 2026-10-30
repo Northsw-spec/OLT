@@ -27,6 +27,8 @@ class TestOLT035D(unittest.TestCase):
         self.assertEqual(audit["official_source_books"],27)
         self.assertEqual(audit["official_beta_strongs_verses"],7957)
         self.assertEqual(audit["matching_unicode_verse_rows"],7953)
+        self.assertEqual(audit["original_bp5_empty_verse_slots"],4)
+        self.assertTrue(audit["source_only_positions_are_empty_placeholders_not_additional_greek_text"])
         self.assertEqual(audit["editor_source_word_form_records"],140149)
         self.assertEqual(audit["unique_position_locators"],140149)
         self.assertEqual(audit["extra_alternative_parse_pairs_attached_to_words"],28)
@@ -106,6 +108,11 @@ class TestOLT035D(unittest.TestCase):
             u=read_nt_book(code)
             self.assertIn(ref,{v["reference"] for v in src["verse_records"]})
             self.assertNotIn(ref,{v["reference"] for v in u["verses"]})
+            source_empty=next(v for v in src["verse_records"] if v["reference"]==ref)
+            self.assertEqual(source_empty["words"],[])
+            self.assertEqual(source_empty["source_word_count"],0)
+            self.assertEqual(source_empty["source_slot_kind"],"EMPTY_EDITOR_VERSE_PLACEHOLDER")
+            self.assertFalse(source_empty["contains_greek_word_forms"])
 
     def test_verse_reference_join_not_automatic_unicode_word_surface_alignment(self):
         word=read_parsed_greek_book("MAT")["verse_records"][0]["words"][0]
@@ -127,6 +134,15 @@ class TestOLT035D(unittest.TestCase):
         self.assertEqual(v["source_word_count"],2)
         self.assertEqual(v["additional_alternative_parse_pairs"],1)
         self.assertEqual(v["words"][0]["additional_editor_analyses"][0]["morphology_code"],"N-VSM")
+
+
+    def test_known_empty_slot_is_not_allowed_to_acquire_fake_greek_words(self):
+        blank=_parse_one_verse("17.36 ","Luke","source/Strongs/03_LUK.BP5","f"*40)
+        self.assertEqual(blank["words"],[])
+        self.assertFalse(blank["contains_greek_word_forms"])
+        with self.assertRaisesRegex(SourceContractError,"unexpectedly contains"):
+            _parse_one_verse("17.36 logos 3056 {N-NSM}",
+                             "Luke","source/Strongs/03_LUK.BP5","f"*40)
 
     def test_reject_unattached_alternate_morphology(self):
         with self.assertRaisesRegex(SourceContractError,"Unattached"):
