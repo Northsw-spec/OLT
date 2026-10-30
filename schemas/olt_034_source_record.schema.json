@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Northsw-spec/OLT/blob/main/schemas/olt_034_source_record.schema.json",
+  "title": "OLT-034 original source token research record",
+  "type": "object",
+  "required": [
+    "verse_id",
+    "token_id",
+    "original_script",
+    "lemma_id",
+    "raw_morphology",
+    "source_language",
+    "corpus",
+    "edition_id",
+    "edition_status",
+    "scholarly_review",
+    "publication_status"
+  ],
+  "properties": {
+    "verse_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ordinal": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "token_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_script": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lemma_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_lemma": {
+      "type": "string"
+    },
+    "raw_morphology": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_language": {
+      "enum": [
+        "hbo",
+        "arc",
+        "grc"
+      ]
+    },
+    "corpus": {
+      "enum": [
+        "OT",
+        "NT"
+      ]
+    },
+    "edition_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "edition_status": {
+      "enum": [
+        "IMPORTED_NOT_INDEPENDENTLY_REVIEWED",
+        "PINNED_UNDER_REVIEW"
+      ]
+    },
+    "scholarly_review": {
+      "const": "NOT_DONE"
+    },
+    "publication_status": {
+      "const": "BLOCKED"
+    }
+  }
+}
