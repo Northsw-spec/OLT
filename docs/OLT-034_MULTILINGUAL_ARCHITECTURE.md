@@ -69,3 +69,13 @@ Amharic (am/Ethi), Japanese (ja/Jpan), Icelandic (is/Latn) and Chinese (zh-Hans 
 - **OLT-039 and beyond:** Full biblical inventory, independent linguistics and publication reviews for every locale.
 
 **Explicitly NOT delivered by OLT-034:** a full Hebrew/Greek-to-English Bible lexicon, any automatically translated complete book/NT, independent Hebrew/Greek or locale philological certification, a published multilingual Bible, new target-language GitHub repos, or final A4 PDF/ODT. All release gates remain BLOCKED.
+
+## GitHub implementation and verified merge — 30 October 2026
+
+Completed as [OLT-034 PR #19](https://github.com/Northsw-spec/OLT/pull/19), squash-merged to canonical main commit 8179853cbfd241c0d836af576793563ecbef3145. On that merged commit, GitHub-hosted Ubuntu Actions executed and passed:
+- Required foundation: **259/259 Python tests**, with the intentionally non-publishable Genesis release gate still BLOCKED (run 41124235758).
+- Dedicated multilingual core: **20/20 source-first packet tests + 5/5 schema/manifest tests**, plus read-only Amharic/Japanese/Chinese research packet CLI invocations (run 41124235668).
+- Name-underword policy: **13/13 tests** (run 41124235582).
+- Binitarian doctrinal policy: **6/6 tests** (run 41124235548).
+
+These counts verify actual engineered invariants; they do **NOT** verify the correctness of any proposed Hebrew etymology, independent morphology review, completed English master lexicon, NT RP2018 source or any finished language translation. All Bible release decisions stay BLOCKED.
