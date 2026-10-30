@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+import json
 import os
 from pathlib import Path
 import sys
@@ -133,6 +134,25 @@ class TestOLT037(unittest.TestCase):
         with self.assertRaises(SourceContractError):
             verify_tbesg_bytes(data, bad)
 
+    def test_committed_exact_source_candidate_audit_is_not_approval(self):
+        data = json.loads((ROOT / "data/quality/olt_037_lexicon_candidate_audit.json")
+                          .read_text(encoding="utf-8"))
+        self.assertEqual(data["checkpoint"], "OLT-037")
+        self.assertEqual(data["upstream_lexicon_rows"], 11035)
+        self.assertEqual(data["upstream_distinct_numeric_references"], 10847)
+        self.assertEqual(data["distinct_rp2018_primary_strong_numbers"], 5380)
+        self.assertEqual(data["rp2018_original_word_positions"], 140149)
+        self.assertEqual(data["word_positions_with_one_numeric_candidate"], 127610)
+        self.assertEqual(data["word_positions_with_multiple_numeric_candidates_NOT_RESOLVED"], 12539)
+        self.assertEqual(data["word_positions_without_numeric_candidate"], 0)
+        self.assertEqual(data["alternative_editor_analyses_preserved"], 28)
+        self.assertEqual(data["alternative_editor_analyses_without_numeric_candidate"], 0)
+        self.assertEqual(sum(book["source_word_positions"] for book in data["per_book"]), 140149)
+        self.assertFalse(data["ambiguity_auto_resolved"])
+        self.assertFalse(data["english_master_lexicon_approved"])
+        self.assertFalse(data["translation_generated"])
+        self.assertEqual(data["publication_status"], "BLOCKED")
+
     def test_real_pinned_tbesg_and_all_rp2018_word_positions_in_ci(self):
         source = os.environ.get("OLT037_TBESG_PATH")
         if not source:
@@ -143,6 +163,9 @@ class TestOLT037(unittest.TestCase):
         self.assertGreater(len(groups), 1000)
         self.assertTrue(all(len(rows) >= 1 for rows in groups.values()))
         audit = audit_lemma_evidence(groups)
+        committed = json.loads((ROOT / "data/quality/olt_037_lexicon_candidate_audit.json")
+                               .read_text(encoding="utf-8"))
+        self.assertEqual(audit, committed, "Frozen source-candidate report has drifted")
         self.assertEqual(audit["source_git_blob_sha1"],
                          "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae")
         self.assertEqual(audit["rp2018_original_word_positions"], 140149)
