@@ -118,6 +118,38 @@ class TestOLT037D(unittest.TestCase):
             with self.assertRaises(SourceContractError):
                 verify_checkpoint(result,d)
 
+    def test_full_frozen_lsj_source_key_evidence_is_byte_verified_and_not_translated(self):
+        path=ROOT/"data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
+        raw=path.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "ea9f6e031897630cd5645ace24797e91e145f2018e5dba236b8951d5f1aa4973")
+        d=json.loads(raw.decode("utf-8"))
+        self.assertEqual(d["checkpoint"],CHECKPOINT)
+        self.assertEqual(d["source_shards_verified_with_original_git_blob_sha1"],2)
+        self.assertEqual(d["source_lsj_commit"],
+                         "1c34cdf756c63cf37db61bd366d733431dbd7aa0")
+        self.assertEqual(d["scholarly_decisions_approved"],0)
+        self.assertEqual(d["english_master_entries_approved"],0)
+        self.assertEqual(d["publication_status"],"BLOCKED")
+        one,other=d["source_lexicon_candidate_key_research_cases"]
+        self.assertEqual([x["source_tei_entry_id"] for x in
+            one["exact_lsj_entry_key_matches_NO_OWNERSHIP_OR_MEANING_INFERRED"]],
+            ["n62204","n62205"])
+        self.assertEqual([x["source_tei_entry_key_UNREVIEWED"] for x in
+            one["exact_lsj_entry_key_matches_NO_OWNERSHIP_OR_MEANING_INFERRED"]],
+            ["le/gw1","le/gw2"])
+        self.assertEqual(one["source_lsj_entry_lookup_status"],
+                         "EXACT_LITERAL_KEY_EXISTS_NOT_APPROVED")
+        self.assertEqual(other["source_lsj_entry_lookup_status"],
+                         "NO_EXACT_SOURCE_KEY_NOT_AUTOFILLED")
+        self.assertEqual(other["exact_lsj_entry_key_matches_NO_OWNERSHIP_OR_MEANING_INFERRED"],[])
+        self.assertTrue(all(c["dictionary_lemma_identity_approved"] is False
+                            and c["nt_word_sense_assignment"] is None
+                            and c["owner_translation_approval"] is None
+                            and c["english_master_entry"] is None
+                            and c["publication_status"]=="BLOCKED"
+                            for c in d["source_lexicon_candidate_key_research_cases"]))
+
     def test_original_lsj_integration_exact_source_and_no_lexical_approvals(self):
         folder=os.environ.get("OLT037D_LSJ_DIR")
         if not folder:
@@ -146,8 +178,8 @@ class TestOLT037D(unittest.TestCase):
             self.assertIsNone(case["english_master_entry"])
             self.assertEqual(case["publication_status"],"BLOCKED")
         p=ROOT/"data/quality/olt_037d_perseus_lsj_lexical_entry_keys.json"
-        if p.is_file():
-            verify_checkpoint(report)
+        self.assertTrue(p.is_file(),"Canonical independent LSJ source checkpoint must exist")
+        verify_checkpoint(report)
 
 
 if __name__ == "__main__":
