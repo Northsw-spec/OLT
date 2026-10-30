@@ -36,7 +36,12 @@ class TestOLT028(unittest.TestCase):
     self.assertIn("git status --porcelain --untracked-files=all",s)
     self.assertIn("exit 1",s)
     for product in products:
-     self.assertGreaterEqual(s.count('      - "'+product+'"'),1)
+     if name=="import-ot.yml":
+      # The OT importer intentionally triggers on its entire generated tree.
+      self.assertIn('      - "data/imported/**"',s)
+      self.assertIn("git status --porcelain --untracked-files=all -- data/imported",s)
+     else:
+      self.assertGreaterEqual(s.count('      - "'+product+'"'),1)
      self.assertTrue((ROOT/product).is_file())
 
  def test_pinned_source_independence_and_publication_block(self):
