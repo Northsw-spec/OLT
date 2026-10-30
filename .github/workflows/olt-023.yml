@@ -1,0 +1,47 @@
+name: OLT-023 Genesis 1:1 derived Hebrew-English layout (NOT publication)
+on:
+  push:
+    branches: [main, olt-023-genesis-1-1-html-proof]
+    paths:
+      - "scripts/render_genesis_1_1_html.py"
+      - "tests/test_olt_023_html.py"
+      - "genesis/GENESIS_01_01_RESEARCH_LAYOUT.html"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
+      - "data/policy/olt_underword_overrides.json"
+      - ".github/workflows/olt-023.yml"
+  pull_request:
+    paths:
+      - "scripts/render_genesis_1_1_html.py"
+      - "tests/test_olt_023_html.py"
+      - "genesis/GENESIS_01_01_RESEARCH_LAYOUT.html"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
+      - "data/policy/olt_underword_overrides.json"
+      - ".github/workflows/olt-023.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  layout-research-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate Hebrew source identity, theological evidence firewall and exact HTML
+        run: python -m unittest discover -s tests -p 'test_olt_023_html.py' -v
+      - name: Rebuild derived HTML and fail on any divergence
+        run: python scripts/render_genesis_1_1_html.py --check
+      - name: Confirm verse is still blocked from publication
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          v=json.loads(Path("data/research/genesis_01_verse_01_alignment_proposal.json").read_text(encoding="utf-8"))
+          p=json.loads(Path("data/policy/olt_underword_overrides.json").read_text(encoding="utf-8"))
+          assert v["publication_status"]=="BLOCKED"
+          assert p["publication_status"]=="BLOCKED"
+          assert v["independent_scholarly_review"]=="NOT_DONE"
+          print("PASS: deterministic research-layout checks only; NEVER a philological or publication signoff")
+          PY
