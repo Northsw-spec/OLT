@@ -126,6 +126,15 @@ A valid blank form contains:
   signature, owner editorial approval or target-language release;
 - `publication_status=BLOCKED`.
 
+The [two frozen empty research templates](../data/research/olt_037d_independent_greek_review_templates.json)
+are generated deterministically from the exact original OLT-037C
+Greek-context dossier and the independent source-verified OLT-037D
+Perseus key inventory. Every generated human-review, source-citation
+and owner-decision field is empty or explicitly false.
+`python -m olt_core.greek_editorial_review --verify` must reproduce
+the committed file **exactly** from both hash-pinned source-evidence
+artifacts before merge and on `main`.
+
 The validator **rejects false PASS and counterfeit approvals**
 even when someone hand-edits the source JSON. This is **not** a secure
 human-identity or cryptographic-signature scheme; repository Actions
