@@ -81,7 +81,7 @@ class TestOLT037F(unittest.TestCase):
         with self.assertRaises(SourceContractError):
             extract_pinned_lsj_entries(original, (("n62206","missing"),))
         with self.assertRaises(SourceContractError):
-            extract_pinned_lsj_entries(original.replace(b"</entryFree>","",1),
+            extract_pinned_lsj_entries(original.replace(b"</entryFree>",b"",1),
                                       NATIVE_LSJ_ENTRIES["3004"])
 
     def test_duplicate_lsj_source_ids_cannot_be_silently_accepted(self):
