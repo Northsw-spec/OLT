@@ -7,9 +7,16 @@ on:
       - "data/plans/olt_011_genesis_11_15.json"
       - "tests/test_olt_011.py"
       - ".github/workflows/olt-011.yml"
+  pull_request:
+    paths:
+      - "scripts/build_verse_research.py"
+      - "data/plans/olt_011_genesis_11_15.json"
+      - "tests/test_olt_011.py"
+      - ".github/workflows/olt-011.yml"
+      - "tests/test_olt_026_ci_wave2.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-011-source-review
   cancel-in-progress: false
@@ -20,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,13 +51,11 @@ jobs:
           assert x["under_word_homonym_presentation"]=="UNDER_ENGLISH_WORD"
           print("PASS: original-token alignment coverage; NOT a certified English Bible chapter")
           PY
-      - name: Commit derived source-based research only
+      - name: Verify committed research data (no direct main writes)
         run: |
-          set -euo pipefail
-          git config user.name "olt-source-research[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/olt_011_genesis_11_15.json
-          if git diff --cached --quiet; then echo "No change"; else
-            git commit -m "Generate original-source research for Genesis 1:11-15"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/olt_011_genesis_11_15.json >/dev/null
+          if ! git diff --exit-code -- data/research/olt_011_genesis_11_15.json; then
+            echo "::error::Generated data/research/olt_011_genesis_11_15.json differs from source. Commit derived files through a pull request."
+            exit 1
           fi
+          echo "PASS: data/research/olt_011_genesis_11_15.json reproducible; publication still BLOCKED"
