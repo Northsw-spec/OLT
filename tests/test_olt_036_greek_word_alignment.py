@@ -89,7 +89,7 @@ class TestOLT036(unittest.TestCase):
         self.assertEqual(_normalized_greek_unicode("τῇ"), ("τη", True))
         self.assertEqual(_normalized_greek_unicode("Ὁ"), ("ο", False))
         self.assertEqual(_normalized_greek_unicode("λόγος"), ("λογοσ", False))
-        self.assertEqual(_beta_to_unaccented_greek("log os".replace(" ", "")), "λογοσ")
+        self.assertEqual(_beta_to_unaccented_greek("logos"), "λογοσ")
         with self.assertRaises(SourceContractError):
             _normalized_greek_unicode("τ\u0305ῇ")  # unapproved mark must not be stripped
         with self.assertRaises(SourceContractError):
