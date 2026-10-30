@@ -5,3 +5,11 @@ English main text ~16 pt; pointed Hebrew / NT Greek ~13.5 pt; English scholarly 
 Use a single note on Bible page one: “Hebrew nouns are grammatically masculine or feminine. This translation may preserve these forms through English gendered pronouns or bracketed additions. Grammatical gender does not necessarily denote bodily sex or personhood.” Never repeat the general note in each chapter.
 
 No older ODT, PDF or draft is a source of verified lexical facts. No chapter may be published without full actual-source alignment, review sign-off and visually inspected ODT/PDF.
+
+## OLT-033 — Bible-wide names-underwords typesetting and approval gate
+
+At every occurrence with verified meaningful source support, display the name in the purple primary tier and the English name meaning/association in a smaller blue tier **vertically below**. Multiword explanations are permitted but must wrap/fit legibly without changing the reading order, inventing printed source terms or moving a footnote away from its name anchor. Every such underword has a status-qualified scholarly note; repeated occurrences can share a note definition while keeping individual source-token anchors.
+
+Names of people, cities, settlements, places, divine titles and unusual biblical designations are all in scope in **both Testaments**. The rendering pipeline MUST distinguish direct name meaning, naming wordplay, traditional/hypothetical place etymology, and owner canonical theological interpretation; the last may appear as **clearly marked interpretation only**, not as disguised Hebrew/Greek etymology. A disputed or opaque name cannot be published with an invented meaning merely to fulfill a visual quota.
+
+The underword system must coexist with the single OLT-022 Gen 1:1 In/with prefix link and preserved bracketed [of His Power] note. Before release: independently verify original-script occurrence IDs, the NT RP2018 source, the verse-by-verse coverage inventory, possible name senses and notes, actual A4 wrapping, accessible reading order, color/monochrome legibility, and true bottom-of-page footnotes. Until these gates pass, any HTML/ODT/PDF name-underword sample is **RESEARCH ONLY, PUBLICATION BLOCKED**.
