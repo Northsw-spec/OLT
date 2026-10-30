@@ -19,6 +19,37 @@ A *numeric-reference group* is NOT necessarily a Greek lexeme, homonym,
 a dictionary root, a semantic sense, a named entity, a translation unit,
 or a single philological review decision.
 
+## Measured corpus-wide review inventory
+
+The first dedicated GitHub Actions run ([source-triage run 41140872058](https://github.com/Northsw-spec/OLT/actions/runs/41140872058))
+read the exact pinned STEPBible Git blob, passed the negative tests,
+and produced the complete JSON. It yielded the following unapproved
+research-workload totals:
+
+| Source-level measurement | Total |
+|---|---:|
+| Separate RP2018 numeric Strong-reference review groups | **107** |
+| RP2018 word occurrences belonging to those groups | **12,539** |
+| Distinct original word-position records in the full NT | **140,149** |
+| Word occurrences with one candidate (not auto-approved) | **127,610** |
+| Separate original editor alternative morphological analyses | **28** |
+| Greek dictionary lemma/sense/English master approvals | **0** |
+
+This reduces the *organization of research* to 107 numerically keyed
+groups, but **does not establish 107 homonyms or 107 Greek lexemes**.
+For example, RP2018 editor number `3004` occurs in **2,315**
+original word positions, with **two** source dStrong candidates.
+That case is an evidence dossier, not a vote for either candidate.
+
+The full source-grounded report was frozen under
+`data/quality/olt_037b_greek_numeric_ambiguity_review_queue.json`
+(**451,923 UTF-8 bytes**; SHA-256
+`a0291d66b506f7070263e8afc8c78ac160d2f9081720993b487e0cee3bc6db5b`).
+The dedicated CI and negative tests require byte-for-byte
+regeneration from the original pinned sources. No source variant,
+source text, editor morphology, lemma approval or translation is
+modified by this report.
+
 ## Verified sources and licenses (unchanged)
 
 - Source Greek text and editor morphology: official 27-book
@@ -96,7 +127,7 @@ English dictionary glosses as an automatic translation pivot.
 ```sh
 python scripts/fetch_olt_037_tbesg.py --output /tmp/OLT037-TBESG.txt
 python -m olt_core.greek_lemma_triage --source /tmp/OLT037-TBESG.txt --summary
-python -m olt_core.greek_lemma_triage --source /tmp/OLT037-TBESG.txt --case 26
+python -m olt_core.greek_lemma_triage --source /tmp/OLT037-TBESG.txt --case 3004
 python -m olt_core.greek_lemma_triage --source /tmp/OLT037-TBESG.txt --verify-checkpoint
 OLT037_TBESG_PATH=/tmp/OLT037-TBESG.txt python -m unittest discover -s tests -p 'test_olt_037b_greek_lemma_triage.py' -v
 ```
