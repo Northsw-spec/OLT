@@ -1,0 +1,71 @@
+{
+  "policy_id": "OLT-033",
+  "name": "Bible-wide source-grounded name and meaningful-term underword policy",
+  "authority": "OWNER_DIRECTIVE_2026_10_30",
+  "scope": [
+    "OLD_TESTAMENT_HEBREW",
+    "NEW_TESTAMENT_GREEK",
+    "SOURCE_LANGUAGE_NAMES_AND_SEMANTICALLY_SIGNIFICANT_TERMS"
+  ],
+  "mandatory_for_every_occurrence_when_supported": true,
+  "source_name_sense_must_be_verse_aware": true,
+  "distinguish_proper_names_from_similar_common_words": true,
+  "languages": {
+    "OT": "MASORETIC_HEBREW_PINNED_OSHB_WLC",
+    "NT": "ROBINSON_PIERPONT_2018_SOURCE_NOT_YET_PINNED"
+  },
+  "source_anchor_requirements": [
+    "book_and_verse",
+    "actual_source_language",
+    "original_script_form",
+    "pinned_source_edition",
+    "exact_original_token_or_morpheme_ID",
+    "verified_lemma_identity",
+    "intended_referent",
+    "contextual_disambiguation"
+  ],
+  "main_translation_preserved": true,
+  "name_meaning_registry": "lexicon/name_underwords.json",
+  "lexical_seed_reference": "lexicon/hebrew.json",
+  "render_policy": {
+    "main_anchor_color": "#5B277D",
+    "underword_color": "#2463A6",
+    "direction": "DIRECTLY_BELOW_MAIN_ENGLISH_NAME",
+    "support_multi_word_meaning": true,
+    "typography": "VERTICAL_STACK_NO_INLINE_SLASH",
+    "meaning_footnote_required": true,
+    "printed_underword_requires": "CONTEXTUAL_EVIDENCE_AND_REVIEW",
+    "allow_provisional_research_overlay": true,
+    "visibly_disclose_interpretive_vs_lexical_status": true,
+    "may_omit_underword_when_meaning_unresolved": true,
+    "unresolved_record": "REVIEW_REQUIRED",
+    "deduplicate_name_footnotes": "GROUPED_BY_NAME_AND_SENSE_WHILE_EACH_OCCURRENCE_REMAINS_LINKED",
+    "note_variants_for_same_spelling": "CONTEXTUAL_REFERENT_DISAMBIGUATION"
+  },
+  "evidence_categories": [
+    "EXPLICIT_SCRIPTURAL_GLOSS",
+    "LEXICAL_NAME_ETYMLOGY_WITH_EVIDENCE",
+    "BIBLICAL_NAMING_WORDPLAY",
+    "HISTORICAL_TOPONYM_INTERPRETATION",
+    "SEMANTIC_ASSOCIATION_DEBATED",
+    "OWNER_CANONICAL_THEOLOGICAL_INTERPRETATION",
+    "DISPUTED_NAME_OR_TITLE_READING"
+  ],
+  "restrictions": {
+    "theological_link_not_linguistic_equivalence": true,
+    "no_global_string_replacement": true,
+    "no_automatic_translation_of_same_spelling": true,
+    "no_automatically_assumed_original_lemma_for_nt_transliterations": true,
+    "no_assertion_plural_english_means_multiple_gods": true,
+    "no_silent_first_person_possessive": "e.g. My is absent from the Hebrew phrase El Shaddai",
+    "respect_distinct_shiloh_and_siloam": true,
+    "existing_genesis_1_1_in_with_override_remains_unique": true,
+    "original_hebrew_and_greek_not_changed": true,
+    "no_new_english_lexical_approvals": true,
+    "no_name_meaning_certifications": true,
+    "no_independent_scholarly_signoff": true
+  },
+  "publication_status": "BLOCKED",
+  "phase": "REGISTER_AND_POLICY_NOT_BIBLE_WIDE_RENDERING_COMPLETE",
+  "applied_to_real_corpus": "NOT_YET; required policy and initial examples defined"
+}
