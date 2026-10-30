@@ -110,6 +110,35 @@ regression suite. **GitHub Actions passing proves only the source
 identity and the assertions actually tested**, never any publication
 or language-science approval.
 
+## Measured candidate inventory (from executed pinned-source CI)
+
+On GitHub Actions run `41137789445`, the exact pinned original
+TBESG file was downloaded and Git-blob-verified before a full
+27-book source-position audit. The generated result is committed as
+`data/quality/olt_037_lexicon_candidate_audit.json`.
+Both the dedicated integration test and source parser must regenerate
+that JSON **exactly** from the pinned lexicon and the pinned RP2018
+word files; accidental changes are an error, not a silent refresh.
+
+| Original-source evidence | Measured total |
+|---|---:|
+| TBESG original disambiguated source rows | **11,035** |
+| Distinct numeric dStrong references in TBESG | **10,847** |
+| Distinct primary editor Strong references in RP2018 | **5,380** |
+| RP2018 original Greek word positions | **140,149** |
+| Word positions with exactly one numeric candidate | **127,610** |
+| Word positions with multiple candidates **unresolved** | **12,539** |
+| Word positions without any numeric candidate | **0** |
+| Additional original editor alternative analyses retained | **28** |
+
+**Interpretation:** `0` unmatched means numeric evidence was located
+for every word; it does NOT mean each of those words has a certified
+lemma, validated gloss, or lexically correct contextual sense.
+The multiple-candidate count is **word occurrences**, not the number
+of distinct ambiguous Greek lexemes. Even the one-candidate positions
+remain explicitly unapproved. The original `eStrong`, `dStrong`,
+`uStrong` distinctions are retained in the evidence packets.
+
 ## Not done / next decisions
 
 1. The initial `numeric reference -> candidate set` is a research
