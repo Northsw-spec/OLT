@@ -12,11 +12,23 @@ on:
       - "tests/test_olt_015.py"
       - "scripts/genesis_literal_proposals.py"
       - ".github/workflows/olt-015.yml"
+  pull_request:
+    paths:
+      - "scripts/audit_full_genesis_research.py"
+      - "scripts/research_underwords.py"
+      - "data/policy/olt_underword_overrides.json"
+      - "tests/test_olt_022_underwords.py"
+      - "scripts/research_footnotes.py"
+      - "data/research/genesis_01_verse_01_alignment_proposal.json"
+      - "tests/test_olt_015.py"
+      - "scripts/genesis_literal_proposals.py"
+      - ".github/workflows/olt-015.yml"
+      - "tests/test_olt_025_workflow_security.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
-  group: olt-015-genesis-source
+  group: olt-015-genesis-source-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   audit:
@@ -25,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -52,12 +64,11 @@ jobs:
           assert x["underword_manifest"][0]["instrumental_claim_confirmed"] is False
           print("PASS original-source coverage; NOT English or literary publication")
           PY
-      - name: Commit source audit and clearly unapproved Hebrew-English preview
+      - name: Verify committed Genesis 1 research artifacts match generated output
         run: |
-          git config user.name "olt-research-audit[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/genesis_01_complete_research_alignment.json genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md
-          if git diff --cached --quiet; then echo "No differences"; else
-            git commit -m "Aggregate all 434 original Genesis 1 tokens as unapproved English research"
-            git push origin HEAD:main
+          git ls-files --error-unmatch             data/research/genesis_01_complete_research_alignment.json             genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md >/dev/null
+          if ! git diff --exit-code --             data/research/genesis_01_complete_research_alignment.json             genesis/GENESIS_01_SOURCE_RESEARCH_PREVIEW.md; then
+            echo "::error::Generated Genesis 1 research artifacts differ. Regenerate locally and submit a pull request; CI cannot push to main."
+            exit 1
           fi
+          echo "PASS: Genesis research files are reproducible, source-derived and unapproved for publication"
