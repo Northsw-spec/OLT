@@ -18,3 +18,9 @@ Etymology is not the same as a biblical pun; morphologically plural Elohim does 
 
 Compare BDB and other independent lexicographical/historical sources, as well as contrasting positions. Each proposed secondary English word must have a clearly marked evidence category, uncertainty flags, original/English context and explanatory note. An unknown meaning remains REVIEW_REQUIRED without forced underword. Full-OT/NT coverage verification and print QA are new release dependencies.
 - **Noah (Gen 5:29):** examine נֹחַ / נוח (rest) and the separate נחם (comfort) wordplay; never equate their Hebrew root identities even when both participate in the naming narrative.
+
+## OLT-034 — independent source-first multilingual research
+
+Always research the Hebrew or Biblical Aramaic original for OT, and the pinned Robinson–Pierpont 2018 Greek original for NT once legitimately imported. Original verse/source-token ID, morphology, exact lexeme/homonym identity, edition provenance and semantic candidates take precedence over any English gloss. The English master lexicon is a reference/contrast, never a required pivot language.
+
+For each target locale, independently investigate source semantics, equivalent target-language concepts, inflection, syntax, tense/aspect, writing system, name transliteration, contextual person/place identity, and readability. Create source-aligned locale decision records, distinguish source-evidenced etymology from OLT owner theological interpretation, and record dissenting/uncertain readings. No fake Greek tokens and no presumed target translations from English alone. Maintain separate locale linguistic signoff and publishing QA.
