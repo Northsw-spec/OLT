@@ -72,7 +72,8 @@ After validating the independent exact Git objects, the script
 TEI/XML `entry` elements and preserves their source `n` attributes.
 Only original G3004 and G3754 numerical labels are extracted,
 preserving any multiple dictionary entries and their exact original
-first written `orth` forms and original short `def` data as evidence.
+first written `orth` forms, all native Strong-number references and
+up to 12 original short `def`/`gloss` source records as evidence.
 All such definitions are marked **NOT OLT translations** and no
 meaning, sense or grammatical label is selected. A source editor's
 word form is not assumed to match RP2018's accentuation or parsing
@@ -97,6 +98,55 @@ Original downstream Greek text, word positions, editor alternative
 morphologies, the 107 numeric research groups, and the OLT-037C
 original Greek evidence remain immutable. All current linguistic
 claims and owner-edited translations remain **unapproved**.
+
+## Measured original-source results and recovered LSJ key notation
+
+The first dedicated GitHub Actions source run
+([OLT-037E #41144904136](https://github.com/Northsw-spec/OLT/actions/runs/41144904136))
+verified the original public-domain statement in Abbott-Smith's exact
+upstream README and the byte-identical original TEI corpus, as well
+as both unchanged Perseus LSJ XML Git objects. Subsequent source run
+([OLT-037E #41144904136](https://github.com/Northsw-spec/OLT/actions/runs/41144904136))
+confirmed 7/7 tests for the original source and spelling-key research
+method. The complete pinned corpus contains **6,153** native
+`entry` XML elements, of which **5,896** have original `n`
+source entry metadata. This is original dictionary entry metadata,
+**not** the 140,149 source Greek Bible word positions.
+
+| Source investigation | RP2018 G3004 | RP2018 G3754 |
+|---|---|---|
+| Original Abbott-Smith TEI entry `n` | `λέγω\|G2036\|G2046\|G3004\|G4483` | `ὅτι\|G3754` |
+| Original indexed Abbott-Smith entries bearing the numeric label | **1** | **1** |
+| Original Abbott-Smith `def` or `gloss` source records | **11** | **3** |
+| Original LSJ exact-source key query | `le/gw` | `o(/ti` |
+| Exact LSJ source-key matches (OLT-037D unchanged) | `le/gw1`, `le/gw2` | **None** |
+| Strictly lossy, DIAGNOSTIC-ONLY matching source-key notation | `le/gw1`, `le/gw2` | `n75695 / o(/ti^` |
+
+**Specific resolution of the earlier G3754 discovery problem:** in the
+original pinned LSJ omicron XML shard, the actual original native entry
+key is **`o(/ti^`**, not the originally hypothesized exact
+`o(/ti`. The extra original source notation character `^`
+explains why a literal exact-key lookup yielded zero results.
+The original native LSJ entry ID **`n75695`** is preserved.
+Its discovery through a **lossy diagnostic spelling signature**
+is **NOT** independent certification that LSJ's entry and a specific
+RP2018 biblical occurrence have the same correct sense, and it
+does not retroactively modify the frozen OLT-037D exact-key results.
+
+**Another source-join risk identified:** Abbott-Smith's original
+`λέγω` entry's native `n` field carries **four different Strong
+numbers** (`2036`, `2046`, `3004`, `4483`). Therefore this
+dictionary entry **cannot** be used as evidence of a unique,
+one-to-one Strong-number-to-headword or contextual-sense relationship.
+
+The pinned generated
+[original source crosscheck](../data/quality/olt_037e_abbott_koine_and_lsj_key_diagnostics.json)
+is **9,916 UTF-8 bytes**, SHA-256
+`f6e0c31f4a7c736df307e55c10d0860ea47edf7aa6dc2c28b61d6b81430ee435`.
+The committed source parser stores original Greek source headwords,
+all original source entry Strong labels and up to 12 source `def`/`gloss`
+records with their original TEI tag names. These source definitions
+are **not** promoted to OLT English or verse-by-verse meanings.
 
 ## Acceptance test requirements
 
