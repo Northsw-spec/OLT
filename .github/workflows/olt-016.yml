@@ -6,9 +6,15 @@ on:
       - "scripts/build_genesis_review_queue.py"
       - "tests/test_olt_016.py"
       - ".github/workflows/olt-016.yml"
+  pull_request:
+    paths:
+      - "scripts/build_genesis_review_queue.py"
+      - "tests/test_olt_016.py"
+      - ".github/workflows/olt-016.yml"
+      - "tests/test_olt_026_ci_wave2.py"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: olt-016-lexical-review
   cancel-in-progress: false
@@ -19,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,12 +46,11 @@ jobs:
           assert a["approved_homonym_links"]==0
           print("PASS lexical source queue, not editorial approval")
           PY
-      - name: Commit generated lexical research queue
+      - name: Verify committed research data (no direct main writes)
         run: |
-          git config user.name "olt-lexical-qa[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research/genesis_01_lexeme_editorial_queue.json
-          if git diff --cached --quiet; then echo "No changes"; else
-            git commit -m "Compile Genesis 1 lexical editorial queue with under-word slots"
-            git push origin HEAD:main
+          git ls-files --error-unmatch data/research/genesis_01_lexeme_editorial_queue.json >/dev/null
+          if ! git diff --exit-code -- data/research/genesis_01_lexeme_editorial_queue.json; then
+            echo "::error::Generated data/research/genesis_01_lexeme_editorial_queue.json differs from source. Commit derived files through a pull request."
+            exit 1
           fi
+          echo "PASS: data/research/genesis_01_lexeme_editorial_queue.json reproducible; publication still BLOCKED"
