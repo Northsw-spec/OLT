@@ -10,7 +10,7 @@
   "record_count": 9,
   "owner_requested_expressions": [
     "Moses: Draw",
-    "God (Elohim): Mighty Powers",
+    "God (Elohim): Mighty Governance",
     "El: Mighty",
     "El Shaddai: My Mighty Strength",
     "Jerusalem: City of Peace",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": "elohim-mighty-powers",
+      "id": "elohim-mighty-governance",
       "primary": "God",
       "entity_kind": "DIVINE_TITLE",
       "original_language": "HEBREW",
@@ -73,12 +73,12 @@
       "verified_olt_source_token_ids": [
         "01TyA"
       ],
-      "owner_requested_underword": "Mighty Powers",
+      "owner_requested_underword": "Mighty Governance",
       "status": "OWNER_SELECTED_THEOLOGICAL_ASSOCIATION_NOT_LITERAL_LEXICAL_GLOSS",
       "evidence_category": "OWNER_CANONICAL_THEOLOGICAL_INTERPRETATION",
       "meaning_certified": false,
       "lexical_automatic_render": false,
-      "note": "Elohim is morphologically plural and can refer to plural gods or one God; Genesis 1:1 has a singular finite verb. Its root etymology is disputed. 'Mighty Powers' is the owner's interpretive association, not an established word-for-word translation, and must NEVER imply that the singular God is multiple gods or independent powers. Do not apply to all Greek theos or homographic Hebrew expressions by spelling.",
+      "note": "In Genesis 1:1 the original source אֱלֹהִים (Elohim) is plural in form but governs a singular finite verb referring to one God. 'Mighty Governance' is the owner's selected theological/semantic under-name association about divine rule and authority, NOT an established literal Hebrew gloss or derivation from Elohim. Governance is not an independently verified lexical component of this name; the historical etymology is disputed. Do not infer multiple gods or separate divine beings from the morphological plural and do not substitute this proposal for every English 'God' or Greek theos without an exact original-language occurrence check.",
       "evidence": [
         {
           "url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Elohim",
