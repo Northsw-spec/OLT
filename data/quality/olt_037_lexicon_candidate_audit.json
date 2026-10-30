@@ -1,0 +1,244 @@
+{
+  "alternative_editor_analyses_preserved": 28,
+  "alternative_editor_analyses_without_numeric_candidate": 0,
+  "ambiguity_auto_resolved": false,
+  "attribution": "Greek lexicon data: STEP Bible (www.STEPBible.org), originally based on work at Tyndale House Cambridge; CC BY 4.0.",
+  "checkpoint": "OLT-037",
+  "distinct_rp2018_primary_strong_numbers": 5380,
+  "english_master_lexicon_approved": false,
+  "independent_lemma_form_review": "NOT_DONE",
+  "independent_lexical_sense_review": "NOT_DONE",
+  "per_book": [
+    {
+      "book": "Matt",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 1866,
+        "one_candidate": 16876
+      },
+      "source_word_positions": 18742
+    },
+    {
+      "book": "Mark",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 1102,
+        "one_candidate": 10516
+      },
+      "source_word_positions": 11618
+    },
+    {
+      "book": "Luke",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 1943,
+        "one_candidate": 17935
+      },
+      "source_word_positions": 19878
+    },
+    {
+      "book": "John",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 1769,
+        "one_candidate": 14123
+      },
+      "source_word_positions": 15892
+    },
+    {
+      "book": "Acts",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 1762,
+        "one_candidate": 16909
+      },
+      "source_word_positions": 18671
+    },
+    {
+      "book": "Rom",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 470,
+        "one_candidate": 6740
+      },
+      "source_word_positions": 7210
+    },
+    {
+      "book": "1Cor",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 562,
+        "one_candidate": 6364
+      },
+      "source_word_positions": 6926
+    },
+    {
+      "book": "2Cor",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 273,
+        "one_candidate": 4234
+      },
+      "source_word_positions": 4507
+    },
+    {
+      "book": "Gal",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 192,
+        "one_candidate": 2060
+      },
+      "source_word_positions": 2252
+    },
+    {
+      "book": "Eph",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 168,
+        "one_candidate": 2291
+      },
+      "source_word_positions": 2459
+    },
+    {
+      "book": "Phil",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 118,
+        "one_candidate": 1523
+      },
+      "source_word_positions": 1641
+    },
+    {
+      "book": "Col",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 81,
+        "one_candidate": 1533
+      },
+      "source_word_positions": 1614
+    },
+    {
+      "book": "1Thess",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 119,
+        "one_candidate": 1378
+      },
+      "source_word_positions": 1497
+    },
+    {
+      "book": "2Thess",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 68,
+        "one_candidate": 765
+      },
+      "source_word_positions": 833
+    },
+    {
+      "book": "1Tim",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 149,
+        "one_candidate": 1472
+      },
+      "source_word_positions": 1621
+    },
+    {
+      "book": "2Tim",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 89,
+        "one_candidate": 1162
+      },
+      "source_word_positions": 1251
+    },
+    {
+      "book": "Titus",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 34,
+        "one_candidate": 630
+      },
+      "source_word_positions": 664
+    },
+    {
+      "book": "Phlm",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 36,
+        "one_candidate": 304
+      },
+      "source_word_positions": 340
+    },
+    {
+      "book": "Heb",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 353,
+        "one_candidate": 4634
+      },
+      "source_word_positions": 4987
+    },
+    {
+      "book": "Jas",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 133,
+        "one_candidate": 1627
+      },
+      "source_word_positions": 1760
+    },
+    {
+      "book": "1Pet",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 130,
+        "one_candidate": 1589
+      },
+      "source_word_positions": 1719
+    },
+    {
+      "book": "2Pet",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 79,
+        "one_candidate": 1024
+      },
+      "source_word_positions": 1103
+    },
+    {
+      "book": "1John",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 173,
+        "one_candidate": 1978
+      },
+      "source_word_positions": 2151
+    },
+    {
+      "book": "2John",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 11,
+        "one_candidate": 238
+      },
+      "source_word_positions": 249
+    },
+    {
+      "book": "3John",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 13,
+        "one_candidate": 204
+      },
+      "source_word_positions": 217
+    },
+    {
+      "book": "Jude",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 47,
+        "one_candidate": 403
+      },
+      "source_word_positions": 450
+    },
+    {
+      "book": "Rev",
+      "numeric_reference_candidates": {
+        "multiple_candidates_unresolved": 799,
+        "one_candidate": 9098
+      },
+      "source_word_positions": 9897
+    }
+  ],
+  "publication_status": "BLOCKED",
+  "rp2018_morphology_independently_verified": false,
+  "rp2018_original_word_positions": 140149,
+  "source_edition": "STEPBible_TBESG",
+  "source_git_blob_sha1": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+  "source_license": "CC BY 4.0",
+  "source_match_is_only_numeric_reference": true,
+  "stepbible_source_commit": "be4191f0082aeedddb0eff0c02c966292b2bd641",
+  "translation_generated": false,
+  "unmatched_original_strong_numbers": {},
+  "upstream_distinct_numeric_references": 10847,
+  "upstream_lexicon_rows": 11035,
+  "word_positions_with_multiple_numeric_candidates_NOT_RESOLVED": 12539,
+  "word_positions_with_one_numeric_candidate": 127610,
+  "word_positions_without_numeric_candidate": 0
+}
