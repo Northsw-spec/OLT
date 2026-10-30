@@ -29,3 +29,14 @@ Authority: only the current explicit agreements, reconstructed anew.
 - Footnote on the exact bracketed phrase must compare Gen 49:3 and Deut 21:17, identifying separate source terms for “beginning” (רֵאשִׁית) and “strength” (אֹון) in those passages.
 - Both “of His Power” and its possessive are interpretive English additions, absent from the original seven Hebrew words of Gen 1:1; never pretend they mean the Hebrew root directly.
 - Owner approval is of layout/wording for the interpretive supplement, **not independent final publication approval of the verse**.
+
+## OLT-020 — permanent owner theological and grammatical decision
+
+- The framework of **Olund's Linked Translation is BINITARIAN, NOT TRINITARIAN**.
+- Exact owner affirmation: **THE LORD JESUS IS THE SPIRIT**.
+- Record this as the owner's confessional interpretation, not an undisputed Hebrew/Greek lexical meaning. Never force all `רוּחַ` or `πνεῦμα` occurrences to refer to Jesus regardless of their context.
+- Father–Son creation parallels, e.g. John 1:1–3 and 1 Corinthians 8:6, can be interpreted binitarianly, **not** silently inserted into Hebrew source words.
+- The Hebrew preposition `בְּ` is translated contextually; do not always display *with* under *in*. Show a contextually justified alternative directly beneath the English anchor, not inline.
+- If the context is uncertain, emit `REVIEW_REQUIRED`; don't manufacture a grammatical or homonym PASS.
+- All earlier source and owner locks, including Genesis 1:1 `[of His Power]`, Genesis 1:4, *bara/asah/raqia*, and tense rules remain binding.
+- This is an **owner-approved editorial doctrine**, not an automatic independent scholarly signoff or permission to publish Genesis 1.

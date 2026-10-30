@@ -1,0 +1,33 @@
+{
+  "policy_id": "OLT-020",
+  "version": 1,
+  "source": "EXPLICIT_OWNER_DECISION",
+  "theology": "BINITARIAN",
+  "not_theology": "TRINITARIAN",
+  "owner_affirmation": "THE LORD JESUS IS THE SPIRIT",
+  "source_lexicon_distinct_from_doctrine": true,
+  "spirit_referent_requires_context": true,
+  "b_prefix": {
+    "render_by_context": true,
+    "automatic_with_under_every_in": false,
+    "possible_functions": [
+      "locative",
+      "temporal",
+      "instrumental",
+      "other_documented"
+    ],
+    "uncertain": "REVIEW_REQUIRED",
+    "secondary_gloss": "DIRECTLY_BELOW_ENGLISH_ANCHOR",
+    "genesis_1_1_with_son": "BINITARIAN_CANONICAL_INTERPRETATION_NOT_HEBREW_LEXICAL_GLOSS"
+  },
+  "owner_locks": {
+    "bara": "shape",
+    "asah": "make",
+    "raqia": "firmament",
+    "waw": "and",
+    "genesis_1_1": "In the Beginning [of His Power] God — He shaped the Heavens and the Earth.",
+    "genesis_1_4": "And God — He saw the light, that [he was] — good.",
+    "wayyiqtol": "SIMPLE_PAST"
+  },
+  "publication_status": "BLOCKED"
+}

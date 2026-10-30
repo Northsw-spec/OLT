@@ -1,0 +1,25 @@
+name: OLT-020 permanent binitarian doctrinal policy
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/MASTERPROMPT.md"
+      - "docs/DECISIONS.md"
+      - "docs/DOCTRINAL_FRAMEWORK.md"
+      - "data/policy/olt_theological_framework.json"
+      - "tests/test_olt_020_doctrine.py"
+      - ".github/workflows/olt-020.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  doctrinal_policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify owner theology and source-evidence separation
+        run: python -m unittest discover -s tests -p 'test_olt_020_doctrine.py' -v

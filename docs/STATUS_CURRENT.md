@@ -145,3 +145,9 @@ Approved new English word families: **0**. Approved homonym links: **0**. The 94
 - OLT-017B adds four documented original-source lexical dossiers (Gen 1:2 exact IDs: `8414`, `922`, `8415`, `7363 b`), with source wording, morphological annotation, BDB readings and scholarly caveats. New owner English lexical approvals: **0**; new homonym links: **0**.
 - **Verification LIMIT:** GitHub Actions [OLT-019](https://github.com/Northsw-spec/OLT/actions/runs/41091217157) and [OLT-017B](https://github.com/Northsw-spec/OLT/actions/runs/41092053582) FAILED TO START JOB STEPS. The API reported empty job steps and no assigned hosted runner, including a failed OLT-019 retry. No claim of a green GitHub test can be made. Follow [OLT-CI-001](https://github.com/Northsw-spec/OLT/issues/7). Previous older green runs remain valid only for their original commits.
 - No new scholarly or owner final English approval was inferred. **Genesis 1 publication remains BLOCKED.**
+
+## OLT-020 — owner-approved permanent binitarian framework
+
+OLT is **binitarian, not Trinitarian**. Exact owner assertion: **“THE LORD JESUS IS THE SPIRIT.”** This governs interpretive commentary while leaving the actual original-language source evidence and disputed grammatical readings separate. Hebrew `בְּ` is to be analyzed contextually; instrumentality is not inferred for every occurrence. See [doctrinal framework](DOCTRINAL_FRAMEWORK.md) and [binding decisions](DECISIONS.md).
+
+This decision is recorded on `main`, but a GitHub Actions PASS must not be claimed until OLT-020 tests actually run. The existing Actions runner incident remains open, and chapter publication is BLOCKED.
