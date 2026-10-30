@@ -20,3 +20,4 @@ The owner now requires source-grounded name-meaning underwords for **each applic
 **Research-only candidates:** Moses/Draw (Ex 2:10 naming wordplay), El/Mighty (possible strength association), El Shaddai/My Mighty Strength (unsupported as literal; no first-person possessive), and Shiloh (person/title vs place distinction). They must be labeled by evidence and remain blocked until independently analyzed. Siloam/Sent is explicit in John 9:7 but still needs a pinned NT Greek original-token alignment.
 
 New entity meaning IDs must be disambiguated from lexical HOMONYM relation IDs. A blue theological label is NOT proof of semantic equivalence. Case-by-case verse/lemma/source alignment and evidence notes are mandatory. Keep Genesis 1:1's one In/with prefix exception unchanged; it is NOT a proper-name meaning.
+- **Noah** over **Rest** is an owner-selected name-meaning pair. Gen 5:29's 'comfort' is a distinct Hebrew root, not an alternate automatic name gloss.
