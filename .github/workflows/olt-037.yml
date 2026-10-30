@@ -1,0 +1,49 @@
+name: OLT-037 Greek lexicon evidence (NO automatic lemma or translation approval)
+on:
+  pull_request:
+    paths:
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_words.py"
+      - "olt_core/greek_alignment.py"
+      - "tests/test_olt_037_greek_lexicon_evidence.py"
+      - "docs/OLT-037_GREEK_LEMMA_EVIDENCE.md"
+      - ".github/workflows/olt-037.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/engine/olt_037_tbesg_source_manifest.json"
+      - "data/quality/olt_037_lexicon_candidate_audit.json"
+      - "scripts/fetch_olt_037_tbesg.py"
+      - "olt_core/greek_lexicon.py"
+      - "olt_core/greek_words.py"
+      - "olt_core/greek_alignment.py"
+      - "tests/test_olt_037_greek_lexicon_evidence.py"
+      - "docs/OLT-037_GREEK_LEMMA_EVIDENCE.md"
+      - ".github/workflows/olt-037.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provenance-and-ambiguities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch exact pinned upstream CC BY 4.0 Greek source and verify original Git blob
+        run: python scripts/fetch_olt_037_tbesg.py --output "$RUNNER_TEMP/OLT037-TBESG.txt"
+      - name: Test ambiguity, source tampering and corpus coverage without selecting lemma
+        env:
+          OLT037_TBESG_PATH: ${{ runner.temp }}/OLT037-TBESG.txt
+        run: python -m unittest discover -s tests -p 'test_olt_037_greek_lexicon_evidence.py' -v
+      - name: Audit EVERY original Greek source word against ALL TBESG numeric-reference candidates
+        run: python -m olt_core.greek_lexicon --source "$RUNNER_TEMP/OLT037-TBESG.txt" --audit
+      - name: Verify small source-anchored verse research without asserting translations
+        run: python -m olt_core.greek_lexicon --source "$RUNNER_TEMP/OLT037-TBESG.txt" --verse 3JO 3John.1.1 > /dev/null
