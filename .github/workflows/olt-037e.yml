@@ -54,5 +54,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_olt_037e_koine_crosscheck.py' -v
       - name: Report source-entry evidence and orthographic diagnostic only
         run: python -m olt_core.greek_koine_crosscheck --abbott "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml" --lsj-dir "$RUNNER_TEMP" --audit
-      - name: Initial CI source-evidence checkpoint transfer (later replaced by exact verification)
-        run: python -m olt_core.greek_koine_crosscheck --abbott "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml" --lsj-dir "$RUNNER_TEMP" --emit-initial-checkpoint
+      - name: Require exact byte-for-byte regeneration of frozen Koine Greek research evidence
+        run: python -m olt_core.greek_koine_crosscheck --abbott "$RUNNER_TEMP/olt037e-abbott-smith.tei.xml" --lsj-dir "$RUNNER_TEMP" --verify-checkpoint
