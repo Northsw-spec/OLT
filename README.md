@@ -9,6 +9,9 @@ The present repository is written anew; no previous draft or script is copied in
 The completed foundation is **not** the entire Hebrew Bible lexicon, nor a verified Genesis 1 translation. Such claims require independently parsed source tokens and separate human reviews. Prior GitHub history is not imported; another old repo was inaccessible, so this statement is not a claim of purging its remote history.
 
 ## OLT-035D — Original Greek editor word forms + morphology are now source-pinned
+**OLT-035D VERIFIED ON MERGED MAIN (2026-10-30):** [PR #24](https://github.com/Northsw-spec/OLT/pull/24) merged at `82792e7af11adbd0830b040d0f9c066e666db564`. Required GitHub-hosted Ubuntu `foundation` **308/308 PASS**; original Greek editor word-source tests **18/18 PASS**, source corpus: **140,149 original word-form records and 28 alternative parsings**, 7,957 BP5 reference slots including four empty slots. **No final Greek lemma meanings, accented-word crosswalk or independent translation approval.**
+
+
 
 The shared OLT core has imported **all 27 original RP2018 editorial Strong/Beta Code morphology source files**, exact Git blob matches. They contain **140,149 original word-form/Strong/morphology triples**, with **28 additional parsing possibilities** on existing Greek words (not additional original words). The official sources have **7,957 verse positions**, including **4 EMPTY placeholders**, leaving **7,953 Greek word-containing verse slots**, corresponding by reference to the Unicode Greek main texts.
 
