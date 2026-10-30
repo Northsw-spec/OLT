@@ -79,3 +79,7 @@ Completed as [OLT-034 PR #19](https://github.com/Northsw-spec/OLT/pull/19), squa
 - Binitarian doctrinal policy: **6/6 tests** (run 41124235548).
 
 These counts verify actual engineered invariants; they do **NOT** verify the correctness of any proposed Hebrew etymology, independent morphology review, completed English master lexicon, NT RP2018 source or any finished language translation. All Bible release decisions stay BLOCKED.
+
+## OLT-035 follow-up — provenance pinning and first Greek source stage
+
+The OLT-034 version 0.1.0 source-first packet infrastructure is extended with `olt_core/sources.py`: all 39 OT imported book byte snapshots and source XML historical digests are recorded in `data/engine/olt_035_source_provenance.json`. The original OT words now distinguish 301,837 source-tagged Hebrew tokens (`hbo`) and 4,948 source-tagged Aramaic tokens (`arc`). Robinson–Pierpont 2018 now has an immutable SOURCE VERSION PIN (ByzTxt v3.3.2 / `27a45ff...`) plus one byte-identical **Third John 14-verse Greek CSV sample**. Greek word token IDs and morphology, the other 26 books, source-text independent review and all target-language translation remain NOT DONE. This revises the earlier OLT-034 snapshot phrase "NT edition is not yet pinned" only as to the upstream release and sample file; it does not mean the Greek NT corpus is imported. See `docs/OLT-035_SOURCE_PROVENANCE.md`.
