@@ -45,6 +45,11 @@ def read_word_manifest(root: Path = ROOT) -> dict[str, Any]:
         manifest.get("word_lemma_forms_and_senses_certified") is not False or
         manifest.get("no_unreviewed_word_level_strong_to_unicode_alignment") is not True):
         raise SourceContractError("Original Greek word-position or philological safety contract disabled")
+    if (manifest.get("known_extra_bp5_slot_meaning") !=
+        "FOUR_EMPTY_VERSE_PLACEHOLDERS_NOT_FOUR_VERSES_OF_GREEK_WORD_TEXT" or
+        manifest.get("expected_nonempty_bp5_greek_verse_rows") != 7953 or
+        manifest.get("expected_empty_bp5_source_slots") != 4):
+        raise SourceContractError("Four source-only verse positions are empty editor placeholders")
     if sorted(manifest.get("known_bp5_verses_absent_from_main_unicode_csv", [])) != sorted([
         "Luke.17.36", "Acts.8.37", "Acts.15.34", "Acts.24.7"
     ]):
@@ -131,10 +136,16 @@ def _parse_one_verse(
             "publication_status": "BLOCKED",
         })
         index += 3
-    if not tokens:
-        raise SourceContractError("No original word triples in Greek source verse")
+    known_empty_slots = {"Luke.17.36", "Acts.8.37", "Acts.15.34", "Acts.24.7"}
+    is_empty = not tokens
+    if is_empty and reference not in known_empty_slots:
+        raise SourceContractError("Unrecognized or fabricated empty Greek source verse")
+    if not is_empty and reference in known_empty_slots:
+        raise SourceContractError("Known empty Greek BP5 slot unexpectedly contains editor word forms")
     return {
         "reference": reference,
+        "source_slot_kind": "EMPTY_EDITOR_VERSE_PLACEHOLDER" if is_empty else "ANNOTATED_ORIGINAL_GREEK_VERSE",
+        "contains_greek_word_forms": not is_empty,
         "source_language": "grc",
         "source_file": source_filename,
         "source_git_blob_sha1": upstream_hash,
@@ -239,7 +250,13 @@ def verify_greek_words(root: Path = ROOT) -> dict[str, Any]:
             "alternative_analyses": source["additional_alternative_parse_pairs"],
         })
     if original_extras != set(reg["known_bp5_verses_absent_from_main_unicode_csv"]):
-        raise SourceContractError("Known BP5/CCAT Unicode source verse differences changed")
+        raise SourceContractError("Known empty BP5 slots do not match continuous Unicode verse references")
+    if not all(
+        (v["source_word_count"] == 0) == (v["reference"] in original_extras)
+        for spec in reg["files"]
+        for v in read_parsed_greek_book(spec["upstream_book_code"], root, reg)["verse_records"]
+    ):
+        raise SourceContractError("Empty editor placeholder cannot be turned into Greek source text")
     if (counters["bp5_verses"], counters["unicode_verses"],
         counters["primary_word_forms"], counters["alternative_parse_pairs"]) != (
         reg["expected_official_bp5_verse_lines"],
@@ -254,6 +271,8 @@ def verify_greek_words(root: Path = ROOT) -> dict[str, Any]:
         "official_source_books": 27,
         "official_beta_strongs_verses": counters["bp5_verses"],
         "matching_unicode_verse_rows": counters["unicode_verses"],
+        "original_bp5_empty_verse_slots": len(original_extras),
+        "source_only_positions_are_empty_placeholders_not_additional_greek_text": True,
         "editor_source_word_form_records": counters["primary_word_forms"],
         "extra_alternative_parse_pairs_attached_to_words": counters["alternative_parse_pairs"],
         "official_bp5_only_verse_refs_require_textual_review": sorted(original_extras),
