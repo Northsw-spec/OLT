@@ -28,7 +28,7 @@ class TestOLT032(unittest.TestCase):
         # Status is a living canonical document. Do not require the date of
         # OLT-032's first publication after later verified checkpoints.
         heading = self.text.splitlines()[0]
-        self.assertRegex(heading, r"^# OLT — CURRENT STATUS \\(\\d{4}-\\d{2}-\\d{2}\\)$")
+        self.assertRegex(heading, r"^# OLT — CURRENT STATUS \(\d{4}-\d{2}-\d{2}\)$")
         status_date = date.fromisoformat(heading.rsplit("(", 1)[1][:-1])
         self.assertGreaterEqual(status_date, date(2026, 10, 30))
         self.assertIn("OLT-031", self.current)
