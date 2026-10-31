@@ -36,7 +36,7 @@ class TestDivinePronouns(unittest.TestCase):
             rendered,
             "and Elohim ·He-is-making »the·prototype",
         )
-        self.assertEqual(source, "and Elohim ·he-is-making »the·atmosphere")
+        self.assertEqual(source, "and Elohim ·he-is-making »the·prototype")
 
     def test_human_pronoun_remains_lowercase_even_near_lord(self):
         verse = "And the LORD He spoke to the servant, and he answered him."
