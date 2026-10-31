@@ -38,7 +38,10 @@ class CHES010Error(ValueError):
 
 
 def _source_urls_from_index(index_html: bytes) -> tuple[dict[tuple[str, int], str], dict[str, Any]]:
-    index = parse_index(index_html)
+    try:
+        index = parse_index(index_html)
+    except ValueError as exc:
+        raise CHES010Error("Original OT chapter index rejected by strict parser") from exc
     if (index.get("discovered_chapter_pdf_count") != 929 or
         index.get("discovered_original_source_filename_prefix_count") != 39 or
         index.get("rights_for_public_CHES_data_export_confirmed") is not False or
