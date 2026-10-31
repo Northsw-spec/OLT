@@ -33,9 +33,10 @@ No original CHES private JSON is altered. No text or private local paths
 are printed by the CLI, placed in the public repository, or sent to GitHub
 Actions. The offline reader generates a **new immutable, versioned private
 snapshot**, rather than editing or overwriting the **owner visually verified,
-LOCKED DANMEK-013** baseline. The latter remains certified **as presented
-at the time of the owner's approval**; the new cleanup is not retroactively
-declared owner-verified until the owner actually inspects it.
+LOCKED DANMEK-013** baseline. The earlier version remains certified **as
+presented at the time of that approval**. The owner has also separately
+inspected and verified the resulting DANMEK-014 English reading; see the
+verification section below.
 
 The original-faithful reader, YLT-only view, `sur faces` processing,
 existing sentence order and divine-pronoun capitalization policy are
