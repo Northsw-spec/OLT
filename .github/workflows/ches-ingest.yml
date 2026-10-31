@@ -72,7 +72,7 @@ jobs:
         run: python -m scripts.ches_oshb_verse_qa --pdf "$RUNNER_TEMP/ches-gen1.pdf"
       - name: Check deterministic 31-verse English research draft against original source tokens
         run: python -m unittest discover -s tests -p 'test_ches_002_source_first.py' -v
-- name: Check synthetic private manual word-review queue safety and source identities
+      - name: Check synthetic private manual word-review queue safety and source identities
         run: python -m unittest discover -s tests -p 'test_ches_003_private_review.py' -v
       - name: Audit real Genesis PDF privately without writing or logging CHES text
         run: |
