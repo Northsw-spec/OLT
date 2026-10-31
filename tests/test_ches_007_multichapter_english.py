@@ -193,7 +193,9 @@ class TestCHES007MultichapterEnglishDraft(unittest.TestCase):
         bad_text = copy.deepcopy(source)
         bad_text["verses"][0]["source_ches_spans_NOT_OLT_TRANSLATION"][0][
             "original_ches_line_text"] = ""
-        with self.assertRaises(CHES007Error):
+        # The shared CHES-006 layout verifier rejects an empty original
+        # green span before the new draft builder's own text check.
+        with self.assertRaises(ValueError):
             build_private_pinned_english_chapter(bad_text)
         wrong_scope = copy.deepcopy(source)
         wrong_scope["chapter"] = 1
