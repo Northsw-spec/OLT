@@ -21,6 +21,8 @@ on:
       - "tests/test_ches_006_layout_metrics.py"
       - "scripts/ches_006_pilot_summary.py"
       - "tests/test_ches_006_pilot_summary.py"
+      - "scripts/ches_007_multichapter_english.py"
+      - "tests/test_ches_007_multichapter_english.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -47,6 +49,8 @@ on:
       - "tests/test_ches_006_layout_metrics.py"
       - "scripts/ches_006_pilot_summary.py"
       - "tests/test_ches_006_pilot_summary.py"
+      - "scripts/ches_007_multichapter_english.py"
+      - "tests/test_ches_007_multichapter_english.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -176,3 +180,20 @@ jobs:
           python -m scripts.ches_006_pilot_summary \
             --pdf-directory "$RUNNER_TEMP" \
             --confirm-machine-readable-use-permission
+      - name: CHES-007 check genuine OSHB words and private English drafts using invented glosses
+        run: python -m unittest discover -s tests -p 'test_ches_007_multichapter_english.py' -v
+      - name: CHES-007 build real Genesis 2 private English gloss stream in memory
+        run: |
+          python -m scripts.ches_007_multichapter_english \
+            --book Gen --chapter 2 --pdf "$RUNNER_TEMP/ches-gen2.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: CHES-007 build real Genesis 3 private English gloss stream in memory
+        run: |
+          python -m scripts.ches_007_multichapter_english \
+            --book Gen --chapter 3 --pdf "$RUNNER_TEMP/ches-gen3.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: CHES-007 build real Exodus 1 private English gloss stream in memory
+        run: |
+          python -m scripts.ches_007_multichapter_english \
+            --book Exod --chapter 1 --pdf "$RUNNER_TEMP/ches-ex1.pdf" \
+            --confirm-machine-readable-use-permission --audit
