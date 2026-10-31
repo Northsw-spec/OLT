@@ -42,6 +42,14 @@ not silently mutate the accepted source-faithful or current private OLT
 reading. Do **not** reopen the alleged missing-space issue based solely on
 the pasted chat text. Keep original CHES JSON bytes unchanged.
 
+## Later independently verified presentation (DANMEK-014)
+
+The owner subsequently personally verified the separate DANMEK-014 view,
+which only expands removal of standalone lowercase c markers. This does
+**not** change or supersede the validity of this earlier DANMEK-013
+checkpoint. Both accepted source-code baselines remain separately locked.
+See [DANMEK-014 owner-verification lock](OLT_PRIVATE_READER_OWNER_VERIFIED_DANMEK014_20261101.md).
+
 ## Scope of acceptance — do not overstate
 
 - **YES:** The owner visually inspected and explicitly approved the current
