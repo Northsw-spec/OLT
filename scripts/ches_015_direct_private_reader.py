@@ -191,6 +191,7 @@ def build_private_reader(
         digest.update((YLT_OVERLAY_REVISION + ":" + ylt_sha).encode("ascii"))
     edits_by_chapter = {}
     count_noun_edits = count_tense_edits = count_unmapped = count_ambiguous = 0
+    unmapped_by_source_prefix: dict[str, int] = {}
     index_hashes: set[str] = set()
     seen_pdf_hashes: set[str] = set()
     chapters_by_prefix: dict[str, set[int]] = {}
@@ -227,6 +228,11 @@ def build_private_reader(
             count_noun_edits += stats["noun_changes"]
             count_tense_edits += stats["tense_changes"]
             count_unmapped += stats["unmapped_verses_left_unchanged"]
+            if stats["unmapped_verses_left_unchanged"]:
+                unmapped_by_source_prefix[prefix] = (
+                    unmapped_by_source_prefix.get(prefix, 0) +
+                    stats["unmapped_verses_left_unchanged"]
+                )
             count_ambiguous += stats["ambiguous_verses_left_unchanged"]
         if len(records) > CHAPTERS_EXPECTED or len(chapters_by_prefix) > PREFIXES_EXPECTED:
             raise CHES015ReaderError("IMPOSSIBLE_SOURCE_ARCHIVE_SIZE")
@@ -282,6 +288,8 @@ def build_private_reader(
         "ylt_noun_edit_count": count_noun_edits,
         "ylt_tense_edit_count": count_tense_edits,
         "ylt_verses_unmapped_left_unchanged": count_unmapped,
+        "ylt_unmapped_verses_by_source_prefix":
+            dict(sorted(unmapped_by_source_prefix.items())),
         "ylt_ambiguous_verses_left_unchanged": count_ambiguous,
         "ylt_verse_context_not_word_alignment_certified": use_ylt_authority,
         "snapshot_id": snapshot,
