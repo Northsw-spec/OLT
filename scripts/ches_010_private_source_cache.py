@@ -86,6 +86,7 @@ def cache_indexed_originals(
     fetch_pdf: Callable[[str], bytes] = _download_original_pdf,
     root: Path = ROOT,
 ) -> dict[str, Any]:
+    directory = private_file(private_directory / "source-cache-sentinel").parent
     urls, index = _source_urls_from_index(index_html)
     pins = read_indexed_source_pins(root)
     keys = {(row["original_book"],row["original_chapter"]) for row in pins}
@@ -105,7 +106,6 @@ def cache_indexed_originals(
             raise CHES010CacheError("Authentic original PDF verse inspection failed") from exc
         _assert_source_evidence(pin, source, pdf, url)
         validated.append((pin,pdf))
-    directory = private_file(private_directory / "source-cache-sentinel").parent
     directory.mkdir(mode=0o700,parents=True,exist_ok=True)
     results: list[dict[str, Any]] = []
     for pin,data in validated:
