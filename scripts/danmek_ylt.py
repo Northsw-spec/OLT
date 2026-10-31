@@ -58,9 +58,9 @@ YLT_BOOK_ID_BY_SOURCE_PREFIX = {
     # These are verse-lookup aliases only, never Hebrew-token alignment.
     "qoh": "ecc", "can": "sng",
     "ecc": "ecc", "sol": "sng", "isa": "isa", "jer": "jer",
-    "lam": "lam", "eze": "eze", "dan": "dan", "hos": "hos",
-    "joe": "joe", "amo": "amo", "oba": "oba", "jon": "jon",
-    "mic": "mic", "nah": "nah", "hab": "hab", "zep": "zep",
+    "lam": "lam", "eze": "ezk", "dan": "dan", "hos": "hos",
+    "joe": "jol", "amo": "amo", "oba": "oba", "jon": "jon",
+    "mic": "mic", "nah": "nam", "hab": "hab", "zep": "zep",
     "hag": "hag", "zec": "zec", "mal": "mal",
 }
 
