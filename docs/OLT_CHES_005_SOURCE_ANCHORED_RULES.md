@@ -81,6 +81,8 @@ The independent **scripts/ches_005_chapter_layout_qa.py** checks the actual orig
 
 The GitHub Actions job fetches the second chapter from the pre-existing approved host over **TLS-verified HTTPS**, with no insecure bypass, and deletes the temporary files with the runner.
 
+**Measured and pinned genuine source file:** 40,742 original PDF bytes; **3 pages, 25 printed source verse markers, 377 green CHES PDF spans**, corresponding at the verse-reference level to **328 authentic OSHB Hebrew word tokens**. Original PDF SHA-256: `c16f580825965d59554309a699c016595cc91bfd25576642ce8ba8a9fab9d9b1`. These values are stored in the [technical source manifest](../data/engine/olt_ches_source_manifest.json) and are mandatory fail-closed checks. This does not establish word-level correspondence.
+
 ## Tests and status
 
 ~~~bash
@@ -90,4 +92,4 @@ python -m unittest discover -s tests -p 'test_ches_005_chapter_layout.py' -v
 
 The ordinary GitHub Actions foundation job and the dedicated CHES source-PDF integration must pass before merge. Copyright permissions beyond reported private machine-readable use, independent lexical/grammatical verification, original-word correspondence, owner approval and Bible publication all remain **unestablished or BLOCKED**.
 
-**Next:** After a successful original Genesis 2 layout audit, pin the actual second-source PDF metadata and use representative error/exception measurements before extending any bulk import. Keep English as sole active target; preserve README.md exactly zero bytes, the accurate technical source manifest and Git history.
+**Next:** The second original Genesis PDF is now pinned. Measure uncertain PDF span/word-link rates and compare more representative source chapter layouts before extending bulk import. Do not require full manual re-alignment of every source word. Keep English as sole active target; preserve README.md exactly zero bytes, the accurate technical source manifest and Git history.
