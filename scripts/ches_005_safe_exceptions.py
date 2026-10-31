@@ -65,7 +65,8 @@ def _validated_rules(
         if (proposal["approved"] is not False or
             proposal["operator_checked_original_pdf_hebrew"] is not True):
             raise CHESExceptionError("Explicit source inspection and unapproved status required")
-        if (proposal["kind"] not in KINDS or
+        if (not isinstance(proposal["kind"], str) or
+            proposal["kind"] not in KINDS or
             type(proposal["green_span_ordinal"]) is not int or
             proposal["green_span_ordinal"] < 1):
             raise CHESExceptionError("Unsupported rule kind or PDF span ordinal")
