@@ -164,6 +164,27 @@ class TestCHES013PrivateDeferredStructuralErrors(unittest.TestCase):
             self.execute(continue_on_structural_error=True, fetch=modified_pdf)
         self.assertEqual(original, (self.exceptions / "gen.2.json").read_bytes())
 
+    def test_different_original_pdf_cannot_create_recovered_chapter_file(self):
+        self.execute(continue_on_structural_error=True)
+        def changed_source(url, limit):
+            data = fake_pdf(url, limit)
+            return data + b"X" if url.endswith("/gen2.pdf") else data
+        def fixed_after_upstream_change(pdf, prefix, chapter):
+            if chapter == 2:
+                item = fake_source(pdf, prefix, 1)
+                item["chapter"] = 2
+                item["verses"][0]["reference"] = "gen.2.1"
+                return item
+            return fake_source(pdf, prefix, chapter)
+        with self.assertRaises(CHES013ExceptionError):
+            self.execute(continue_on_structural_error=True,
+                         fetch=changed_source, generator=fixed_after_upstream_change)
+        self.assertFalse((self.private / "gen.2.json").exists())
+        self.assertEqual(
+            json.loads((self.exceptions / "gen.2.json").read_text(encoding="utf-8"))["state"],
+            "UNRESOLVED"
+        )
+
     def test_structural_classifier_has_explicit_allowlist_not_generic_valueerror(self):
         self.assertEqual(structural_code(ValueError(BAD_MARKERS)),
                          "ORIGINAL_VERSE_MARKERS_NONCONTIGUOUS_OR_UNREADABLE")
