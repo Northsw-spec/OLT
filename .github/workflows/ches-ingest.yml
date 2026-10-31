@@ -13,6 +13,10 @@ on:
       - "tests/test_ches_003_private_review.py"
       - "scripts/ches_lite_english.py"
       - "tests/test_ches_004_lite_pipeline.py"
+      - "scripts/ches_005_safe_exceptions.py"
+      - "tests/test_ches_005_safe_exceptions.py"
+      - "scripts/ches_005_chapter_layout_qa.py"
+      - "tests/test_ches_005_chapter_layout.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -31,6 +35,10 @@ on:
       - "tests/test_ches_003_private_review.py"
       - "scripts/ches_lite_english.py"
       - "tests/test_ches_004_lite_pipeline.py"
+      - "scripts/ches_005_safe_exceptions.py"
+      - "tests/test_ches_005_safe_exceptions.py"
+      - "scripts/ches_005_chapter_layout_qa.py"
+      - "tests/test_ches_005_chapter_layout.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -90,3 +98,23 @@ jobs:
           python -m scripts.ches_lite_english \
             --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
             --confirm-machine-readable-use-permission --audit
+      - name: Verify CHES-005 private exact source-token and PDF-span English exception rules
+        run: python -m unittest discover -s tests -p 'test_ches_005_safe_exceptions.py' -v
+      - name: Verify CHES-005 synthetic second-chapter verse-layout contracts
+        run: python -m unittest discover -s tests -p 'test_ches_005_chapter_layout.py' -v
+      - name: Audit CHES-005 true Genesis PDF against pinned original Hebrew (metadata only)
+        run: |
+          python -m scripts.ches_005_safe_exceptions \
+            --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: Fetch second authentic source chapter into ephemeral runner storage
+        run: |
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen2.pdf \
+            --output "$RUNNER_TEMP/ches-gen2.pdf"
+          test "$(wc -c < "$RUNNER_TEMP/ches-gen2.pdf")" -gt 5000
+      - name: Audit actual second chapter PDF layout against 25 authentic original Hebrew verses
+        run: |
+          python -m scripts.ches_005_chapter_layout_qa \
+            --pdf "$RUNNER_TEMP/ches-gen2.pdf" \
+            --confirm-machine-readable-use-permission

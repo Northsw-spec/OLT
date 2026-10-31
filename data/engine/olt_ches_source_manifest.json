@@ -35,5 +35,20 @@
     "chapter_index_only_does_not_certify_source_verse_alignment": true
   },
   "private_batch_importer_implemented": true,
-  "private_bulk_929_chapter_import_executed": false
+  "private_bulk_929_chapter_import_executed": false,
+  "additional_chapter_layout_source_reference": {
+    "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen2.pdf",
+    "original_book": "Gen",
+    "original_chapter": 2,
+    "source_pdf_sha256": "c16f580825965d59554309a699c016595cc91bfd25576642ce8ba8a9fab9d9b1",
+    "source_pdf_bytes": 40742,
+    "source_pdf_pages": 3,
+    "printed_pdf_verses_confirmed_by_engineering": 25,
+    "green_ches_pdf_spans_extracted": 377,
+    "oshb_original_word_tokens_observed": 328,
+    "independent_pdf_filename_to_oshb_book_mapping_verified": false,
+    "word_and_morpheme_alignment_verified": false,
+    "full_source_text_in_public_git_permitted": false,
+    "source_pdf_stored_in_public_repo": false
+  }
 }
