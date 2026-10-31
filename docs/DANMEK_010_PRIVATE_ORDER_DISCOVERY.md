@@ -100,6 +100,17 @@ To build the separate private OLT HTML after real approvals:
 YLT 1898 must already be installed in its verified private location for
 the optional `--use-ylt-authority` argument. Otherwise omit that flag.
 
+## Owner editorial approval for all unique suggestions (DANMEK-011)
+
+The owner subsequently approved **every detected candidate connection** for OLT
+English presentation, not the underlying Hebrew syntax. Rather than generating
+thousands of individual `approved.json` attestations, the separate
+`--olt-owner-approved-candidates` flag in CHES-015 now applies unique
+DANMEK-010 proposals as an explicitly labeled private OLT English view.
+Ambiguities and YLT overlaps remain unchanged; original JSON remains intact.
+This is a distinct, deliberately lower-evidence mode from DANMEK-009's
+source-syntax-reviewed entries. [Run instructions](DANMEK_011_OWNER_APPROVED_ENGLISH_ORDER.md).
+
 ## Verification and next task
 
 GitHub Actions uses only **fabricated synthetic English phrases**. It tests
