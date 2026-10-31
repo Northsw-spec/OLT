@@ -10,6 +10,10 @@
 
 The owner requires the awkward original CHES English `sur faces` to appear simply as `faces` **in the derived OLT reading display only**. CHES original private JSON and faithful reader stay intact. The optional `--olt-display-faces` creates a different immutable HTML snapshot and handles an exact phrase in one fragment or exact adjacent whole fragments in the same verse. Do not touch distinct `c` markings, `the` articles, `surfaces` as a single token, or infer a certified Hebrew `pnei` word-link from PDF typography. [Implemented DANMEK-008](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md). **DANMEK-007 still permanently prohibits divine-referent capitalization.**
 
+## DANMEK-011 — Owner-approved English candidate order applied directly
+
+**Owner approval 2026-10-31:** Every uniquely identified DANMEK-010 English subject–verb proposal is authorized as a **private OLT display-only editorial change**. The distinct opt-in `--olt-owner-approved-candidates` mode applies these proposals across *all locally present source chapters* without an individual reviewed rule file, while skipping ambiguity and YLT collisions. This approval does not transform the English heuristic into verified Hebrew syntax, and does not certify complete OT reorder or publishing rights. The individually syntax-reviewed DANMEK-009 mode stays distinct. [DANMEK-011](DANMEK_011_OWNER_APPROVED_ENGLISH_ORDER.md).
+
 ## DANMEK-010 — Offline private source word-order candidate triage
 
 DANMEK-009's reviewed order engine now has a separate source-private discovery and review tool. DANMEK-010 scans existing CHES fragment streams and proposes narrowly matched, **unreviewed** English subject–verb cases with ambiguous-verse exclusion, in private immutable HTML/JSON snapshots. Nothing is auto-approved; a recorded original-language syntax attestation and exact chapter JSON SHA check are required before a rule reaches the OLT English reading. No public CHES text, Hebrew grammar inference from PDF geometry, whole-OT reordering claim or publication permission is introduced. [Implementation/operation](DANMEK_010_PRIVATE_ORDER_DISCOVERY.md).

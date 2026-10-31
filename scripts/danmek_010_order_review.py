@@ -25,25 +25,13 @@ from scripts.danmek_009_english_order import (
     SCHEMA as APPROVED_SCHEMA, DanMek009Error, apply_reviewed_order,
     load_private_order_rules,
 )
+from scripts.danmek_011_owner_order import discover_candidates
 
 REVISION = "DANMEK-010-PRIVATE-ORDER-REVIEW-v1"
 CANDIDATE_SCHEMA = "DANMEK-010-private-candidates-v1"
 MAX_SAVED = 2_000
 ID = re.compile(r"review-[0-9a-f]{20}\Z")
 REF = re.compile(r"[A-Za-z0-9_-]{1,20}\.[1-9][0-9]*\.[1-9][0-9]*\Z")
-# Search English gloss typography conservatively. These patterns are
-# deliberately NOT a grammatical or Hebrew morphology analyzer.
-VERB = (r"(?:[Aa]nd[· ])?"
-        r"(?:[Hh]e|[Ss]he|[Tt]hey|[Ww]e|[Tt]hou|[Yy]ou|[Yy]e)-"
-        r"(?:(?:is|are|was|were|shall|will|have|had)-)?"
-        r"[a-z]+(?:-[a-z]+){0,5}")
-SUBJECT = r"[A-Z][A-Za-z'’-]{1,49}"
-WHOLE_VERB = re.compile(VERB + r"\Z")
-WHOLE_SUBJECT = re.compile(SUBJECT + r"\Z")
-INLINE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>" + VERB + r")[ \t]*"
-    r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
-)
 
 
 class DanMek010Error(ValueError):
@@ -90,35 +78,6 @@ def _write_once(path: Path, content: bytes) -> None:
 def _json_bytes(doc: dict) -> bytes:
     return (json.dumps(doc, ensure_ascii=False, sort_keys=True, indent=2) +
             "\n").encode("utf-8")
-
-
-def discover_candidates(
-    reference: str, chapter_sha256: str, texts: list[str],
-) -> tuple[list[dict], bool]:
-    """Zero or ONE candidate per verse. Multiple possibilities are ambiguous."""
-    found = []
-    for index, text in enumerate(texts):
-        if (index + 1 < len(texts) and WHOLE_VERB.fullmatch(text)
-                and WHOLE_SUBJECT.fullmatch(texts[index + 1])):
-            found.append({
-                "reference": reference, "chapter_json_sha256": chapter_sha256,
-                "mode": "adjacent", "source_syntax_reviewed": False,
-                "review_note": "NOT_REVIEWED",
-                "verb_fragment_index": index + 1,
-                "subject_fragment_index": index + 2,
-                "original_verb": text, "original_subject": texts[index + 1],
-            })
-        for match in INLINE.finditer(text):
-            found.append({
-                "reference": reference, "chapter_json_sha256": chapter_sha256,
-                "mode": "inline", "source_syntax_reviewed": False,
-                "review_note": "NOT_REVIEWED",
-                "verb_fragment_index": index + 1,
-                "original_fragment": text,
-                "original_verb": match["verb"],
-                "original_subject": match["subject"],
-            })
-    return (found if len(found) == 1 else []), len(found) > 1
 
 
 def _html_review(rows: list[tuple[dict, list[str]]], summary: dict) -> bytes:
