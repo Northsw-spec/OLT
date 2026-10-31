@@ -23,6 +23,11 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-013 — And-led subjects beyond Yahweh (2026-11-01)
+
+- **Implemented as a bounded extension:** In `--olt-owner-approved-candidates`, additional clause-initial `And` patterns with selected non-direct-object pronoun–verb glosses followed by a joined proper name or `the·<role>` and an explicit prepositional gloss marker are reordered into English subject-first form. The dedicated `Yahweh` exception is preserved. [DANMEK-013](DANMEK_013_AND_LED_GENERAL_SUBJECTS.md).
+- **No indiscriminate global change:** A verb's following name may be its object; merely finding `And` does not license moving every noun. Candidate ambiguity and YLT overlap stay unchanged, without claiming Hebrew subject certification. All changes remain private display-only, CHES source untouched, original reader and previous snapshots unchanged; publication BLOCKED.
+
 ## DANMEK-012 — Joined Yahweh word order and isolated c in private OLT (2026-10-31)
 
 - **Owner-reported defect addressed in a bounded source shape:** English source `and·he-shall-cut-offYahwehfrom·...` now yields `And Yahweh — he shall cut off from·...` in the distinct owner-approved private English reader. A generic `And` plus `Yahweh` search is intentionally *not* used: a name may be the object. Conflicting/ambiguous cases remain unchanged.
