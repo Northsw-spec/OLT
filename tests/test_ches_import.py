@@ -15,13 +15,16 @@ def item(text, page, x, y, color):
 
 
 BLACK = 0x000000
+GRAY = 0x888888
 GREEN = 0x008000
 SOURCE_TEST = [
-    item("1:1", 1, 45, 50, BLACK),
+    item("1", 1, 45, 50, GRAY),
+    item(":1", 1, 49, 50, GRAY),
     item("in·beginning", 1, 90, 69, GREEN),
     item("he-created", 1, 110, 69, GREEN),
     item("In the beginning God created", 1, 700, 50, BLACK),
-    item("1:2", 1, 45, 140, BLACK),
+    item("1", 1, 45, 140, GRAY),
+    item(":2", 1, 49, 140, GRAY),
     item("she-became", 1, 90, 159, GREEN),
     item("chaos", 1, 120, 159, GREEN),
     item("And the earth was without form", 1, 700, 140, BLACK),
@@ -58,9 +61,9 @@ class TestCHESPrivateImport(unittest.TestCase):
         with self.assertRaises(ValueError):
             assign_ches_to_explicit_verses(SOURCE_TEST, 1, 31)
         with self.assertRaises(ValueError):
-            assign_ches_to_explicit_verses(SOURCE_TEST+[item("1:2",1,60,180,BLACK)],1)
+            assign_ches_to_explicit_verses(SOURCE_TEST+[item("1:2",1,60,180,GRAY)],1)
         with self.assertRaises(ValueError):
-            assign_ches_to_explicit_verses([s for s in SOURCE_TEST if s["text"]!="1:1"],1)
+            assign_ches_to_explicit_verses([s for s in SOURCE_TEST if s["text"]!=":1"],1)
         with self.assertRaises(ValueError):
             assign_ches_to_explicit_verses([s for s in SOURCE_TEST if s["text"]!="she-became"
                                            and s["text"]!="chaos"],1)
