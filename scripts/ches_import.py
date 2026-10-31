@@ -97,6 +97,28 @@ def explicit_verse_markers(
                           "verse": int(matched.group(2)),
                           "alternate_verse": alternate_verse})
     marks.sort(key=lambda x: (x["page"], x["y"], x["x"]))
+    if neh7:
+        # Verified real original-PDF geometry: gray primary labels are followed
+        # by BLACK parenthetical alternative labels at x +18px, y +1.5px.
+        # Keep the distinct original PDF ink layers, never read the black AV
+        # column as a CHES gloss. Only exact numeric labels may be inspected.
+        for mark in marks:
+            if mark["verse"] not in range(69, 74):
+                continue
+            exact_alt = f"(7:{mark['verse'] - 1})"
+            adjacent_black = [
+                row for row in spans
+                if (row["page"] == mark["page"]
+                    and row["color"] == 0x000000
+                    and row["text"].strip() == exact_alt
+                    and 10 <= row["x"] - mark["x"] <= 60
+                    and abs(row["y"] - mark["y"]) <= 4)
+            ]
+            # The real Nehemiah 7 original has exactly one black numeric
+            # parenthesis per source label. Reject missing or duplicate labels.
+            if len(adjacent_black) != 1 or mark["alternate_verse"] is not None:
+                raise ValueError("Nehemiah 7 original black alternative locator mismatch")
+            mark["alternate_verse"] = mark["verse"] - 1
     return marks
 
 
