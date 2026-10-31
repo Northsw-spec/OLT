@@ -29,7 +29,7 @@ class TestOLTSimpleEngineOwnerPriority(unittest.TestCase):
         self.assertIn("Exception-based review", text)
         self.assertIn("not** a requirement", text)
         self.assertIn("Do not resume the former full standalone engine", text)
-        self.assertIn("CHES green", text)
+        self.assertIn("PDF green *text span*", text)
         self.assertIn("public GitHub may retain importer code", text)
 
     def test_no_false_import_or_linguistic_approval_and_english_still_only(self):
