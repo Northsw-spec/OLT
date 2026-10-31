@@ -77,8 +77,13 @@ def invented_ylt() -> dict:
             ["A door is found here"]
         ]},
         {"id": "neh", "testament": "OT", "chapters": [
-            ["A door is found here"] for _ in range(7)
-        ]},
+            ["A door is found here"] for _ in range(6)
+        ] + [[
+            "The horses and mules" if i == 68 else
+            "The camels and asses" if i == 69 else
+            "A door is found here"
+            for i in range(1, 74)
+        ]]},
         {"id": "ecc", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(12)
         ]},
@@ -94,10 +99,16 @@ def invented_ylt() -> dict:
         {"id": "nam", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(3)
         ]},
+        {"id": "1ki", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(22)
+        ]},
+        {"id": "2ki", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(25)
+        ]},
     ]
     books += [
         {"id": f"ot{i:02}", "testament": "OT",
-         "chapters": [["Synthetic neutral sentence"]]} for i in range(31)
+         "chapters": [["Synthetic neutral sentence"]]} for i in range(29)
     ]
     books += [
         {"id": f"nt{i:02}", "testament": "NT",
@@ -232,19 +243,78 @@ class TestYLTAuthority(unittest.TestCase):
                                      chapter=chapter + 1, verse=1)
             )
 
-    def test_ylt_verse_missing_and_neh7_numerical_dispute_never_guess(self):
+    def test_verified_neh7_mapping_never_creates_missing_verse_68(self):
         source = invented_chapter("neh", 7, alternate_neh7=True)
+        before = copy.deepcopy(source)
         choices, totals = propose_ylt_verse_overrides(
             source, prefix="neh", chapter=7, ylt=self.ylt
         )
         self.assertEqual(choices, {})
-        self.assertEqual(totals["unmapped_verses_left_unchanged"], len(NEH7_PRIMARY_VERSES))
+        self.assertEqual(totals["unmapped_verses_left_unchanged"], 0)
+        self.assertEqual(source, before)
+        self.assertEqual(len(source["verses"]), len(NEH7_PRIMARY_VERSES))
+        self.assertNotIn(68, [
+            int(v["reference"].rsplit(".", 1)[1]) for v in source["verses"]
+        ])
+        self.assertIsNone(ylt_verse_for_source(
+            self.ylt, prefix="neh", chapter=7, verse=68
+        ))
+        self.assertEqual(ylt_verse_for_source(
+            self.ylt, prefix="neh", chapter=7, verse=67
+        ), "A door is found here")
         self.assertIsNone(ylt_verse_for_source(
             self.ylt, prefix="neh", chapter=7, verse=69
-        ))
+        ))  # An unverified alternative locator is insufficient.
+        self.assertEqual(ylt_verse_for_source(
+            self.ylt, prefix="neh", chapter=7, verse=69,
+            original_pdf_alternate_verse=68
+        ), "The camels and asses")
+        self.assertEqual(ylt_verse_for_source(
+            self.ylt, prefix="neh", chapter=7, verse=73,
+            original_pdf_alternate_verse=72
+        ), "A door is found here")
         self.assertIsNone(ylt_verse_for_source(
             self.ylt, prefix="gen", chapter=999, verse=1
         ))
+
+    def test_verified_neh7_fails_closed_when_ylt_edition_or_alternate_changes(self):
+        source = invented_chapter("neh", 7, alternate_neh7=True)
+        for broken in ("delete_horses", "alter_camels", "missing_verse"):
+            self.ylt = invented_ylt()
+            chapter = next(b for b in self.ylt["books"] if b["id"] == "neh")[
+                "chapters"][6]
+            if broken == "delete_horses":
+                chapter[67] = "An unrelated inventory"
+            elif broken == "alter_camels":
+                chapter[68] = "An unrelated inventory"
+            else:
+                chapter.pop(67)
+            _, totals = propose_ylt_verse_overrides(
+                source, prefix="neh", chapter=7, ylt=self.ylt
+            )
+            self.assertEqual(
+                totals["unmapped_verses_left_unchanged"], 72,
+                msg=broken
+            )
+        self.ylt = invented_ylt()
+        wrong = copy.deepcopy(source)
+        wrong["verses"][-1][
+            "original_pdf_alternate_verse_number_not_oshb_crosswalk"] = 71
+        _, totals = propose_ylt_verse_overrides(
+            wrong, prefix="neh", chapter=7, ylt=self.ylt
+        )
+        self.assertEqual(totals["unmapped_verses_left_unchanged"], 1)
+
+    def test_kings_chapter_aliases_and_missing_verses(self):
+        for book, ylt_id, chapters in (
+            ("1kg", "1ki", 22), ("2kg", "2ki", 25)
+        ):
+            self.assertEqual(ylt_verse_for_source(
+                self.ylt, prefix=book, chapter=chapters, verse=1
+            ), "A door is found here")
+            self.assertIsNone(ylt_verse_for_source(
+                self.ylt, prefix=book, chapter=chapters+1, verse=1
+            ))
 
     def test_reader_can_apply_ylt_without_source_file_changes_or_network(self):
         raw = tiny_source(["A portal is here", "And he said"])

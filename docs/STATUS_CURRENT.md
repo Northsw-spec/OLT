@@ -31,6 +31,14 @@
 - The YLT verse heuristic **does not verify a Hebrew token↔English fragment crosswalk**. Specifically the Nehemiah 7 alternate-number scheme remains unresolved for automatic YLT mapping. Tense edits may differ from older OLT-wide wayyiqtol simple-past style; this is transparently a scoped YLT-authoritative edition decision, **not** completed morphology QA.
 - [Operator and source provenance guide](DANMEK_002_YLT_NOUN_TENSE_AUTHORITY.md). Engineering status and CI will be recorded after required checks. CHES source corpus local completion and legal redistribution rights are not inferred from this code; English-only publication remains BLOCKED.
 
+## DANMEK-004 — All 1,607 outstanding YLT lookup misses classified and code-fixed (2026-10-31, awaiting owner re-run)
+
+- **Owner's latest actual full-OT YLT run:** 929 chapters, 23,144 source verse markers, 401,460 source typography spans, 930 private HTML pages; 4 noun changes + 37 tense changes; `ylt_unmapped_verses_by_source_prefix={"1kg":816,"2kg":719,"neh":72}` (1,607 total).
+- **Kings:** original CHES `1kg` and `2kg` source aliases now map to verified pinned YLT `1ki`/ `2ki` (22/25 chapters); previously these source chapters were not mapped at all.
+- **Nehemiah 7:** historic MT omits the extra YLT English verse 7:68, but original source PDF **retains primary 69..73 and explicit alternate labels 68..72**. For **YLT 1898 lookup only**, match strictly the printed **primary** numbers 1..67 and 69..73 if the exact YLT edition has 73 verses with 7:68 horses/mules and 7:69 camels. Validate each original source primary/alternate locator. Do NOT fabricate missing source 7:68, shift any English text, or alter saved JSON. Real pinned YLT tests + synthetic negative numbering tests enforce the limited mapping. No Hebrew-word alignment claimed.
+- **Next**: require green PR and postmerge GitHub Actions, then owner regenerates a new private offline DanMek snapshot and supplies count-only `ylt_unmapped_verses_by_source_prefix`. **Zero** is a *target*, not a completed result verified by GitHub; offline private CHES is never in CI. [Design and factual verse numbering](DANMEK_004_KINGS_NEH7_VERSIFICATION.md).
+- Preserve owner-confirmed CHES use permission, private source data, Greek NT separate, and publication gate BLOCKED.
+
 ## DANMEK-003 — Owner's real 929-chapter YLT snapshot + mapping audit (2026-10-31)
 
 - The owner ran the merged direct offline CHES JSON + pinned YLT 1898 reader on the **full local 929-chapter OT archive**. Terminal result: **930 private HTML pages**, **23,144 source-marked verses**, **401,460 original CHES fragments**, **4 YLT-gated noun edits** and **33 YLT-gated tense edits**. Output generation succeeded; this is still an **UNREVIEWED** private reading, not final Hebrew interlinear or permission to redistribute CHES English.

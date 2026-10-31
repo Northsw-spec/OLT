@@ -64,6 +64,8 @@ jobs:
               ("eze", "ezk", 48),
               ("joe", "jol", 3),
               ("nah", "nam", 3),
+              ("1kg", "1ki", 22),
+              ("2kg", "2ki", 25),
           ):
               assert YLT_BOOK_ID_BY_SOURCE_PREFIX[original] == ylt_id
               target = next((b for b in ot if b["id"] == ylt_id), None)
@@ -79,6 +81,31 @@ jobs:
               (b["id"], b.get("name", "")) for b in ot
           ])
           assert not unknown_targets, "UNRECOGNIZED_YLT_BOOK_IDS_" + repr(unknown_targets)
+          # An actual YLT-1898 edition check: this English version includes
+          # Neh 7:68 (horses/mules) and 7:69 (camels). The CHES original
+          # PDF has 72 primary markers 1..67, 69..73; never forge 7:68.
+          from scripts.danmek_ylt import ylt_verse_for_source
+          nehemiah = next(b for b in ot if b["id"] == "neh")
+          assert len(nehemiah["chapters"][6]) == 73
+          assert ylt_verse_for_source(
+              doc, prefix="neh", chapter=7, verse=67
+          ) is not None
+          assert ylt_verse_for_source(
+              doc, prefix="neh", chapter=7, verse=68
+          ) is None
+          assert ylt_verse_for_source(
+              doc, prefix="neh", chapter=7, verse=69,
+              original_pdf_alternate_verse=68
+          ) is not None
+          assert ylt_verse_for_source(
+              doc, prefix="neh", chapter=7, verse=69,
+              original_pdf_alternate_verse=69
+          ) is None
+          assert ylt_verse_for_source(
+              doc, prefix="neh", chapter=7, verse=73,
+              original_pdf_alternate_verse=72
+          ) is not None
+          print("Pinned YLT Nehemiah 7 has 73 verses with expected 68/69 control words; no text emitted")
           print("Verified pinned YLT 1898: 39 OT, 27 NT; all configured book IDs valid; no verse text emitted")
           PY
       - name: Run synthetic-only YLT noun/tense regression suite
