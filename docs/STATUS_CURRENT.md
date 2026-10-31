@@ -11,6 +11,14 @@
 
 ## OLT-SIMPLE-ENGINE-001 — Binding simplified CHES-first engine (ACTIVE ENGINEERING DIRECTION)
 
+## DANMEK-005 — Owner-confirmed stylistic English order, not a CHES defect (2026-10-31)
+
+- **Owner clarification:** CHES private chapter JSONs are correct as source data; Hebrew word order is not `wrong`. The owner wants **an intentional OLT English reading style** placing the known subject before the English verb phrase while retaining the stylistically preferred explicit pronoun, in applicable verified verses. Keep the unchanged CHES interlinear as a **separate source view**, and derive OLT English into a separate, auditable private version.
+- The current CHES-015 reader has **not** been demonstrated to achieve the owner-preferred subject-first word order throughout the corpus. Do not claim 929-chapter syntax fixed or rewrite/import all source files for this preference. Subject/verb roles need real source anchors; HTML text chunks alone are not a certified syntactic map.
+- A displayed standalone `c` or repeated `the` is **not necessarily spurious**. Some letters can come from original grammatical notation and multiple articles can be source-authentic. Do not strip them globally. Distinguish true PDF-extraction/rendering artifacts before cleaning English output. The YLT noun/tense layer does not solve these segmentation issues.
+- [Binding English-order vs source-valid rule](DANMEK_005_SOURCE_VALID_OLT_ENGLISH_ORDER.md). Next implementation is a separate verified English-order view with synthetic negative tests; preserve private source, source citation metadata and publication BLOCKED.
+
+
 ## DANMEK-JSON-001 — Direct CHES JSON input confirmed by owner (2026-10-31)
 
 - **Owner confirms permission to use CHES and authorizes the simplest path: use existing private chapter `.json` files directly.** No new CHES imitation, complex dictionary, token-level word correspondence or fresh PDF re-download is a prerequisite for a working *private* English reading application.
