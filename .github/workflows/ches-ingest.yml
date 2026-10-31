@@ -28,6 +28,8 @@ on:
       - "scripts/ches_009_source_discovery.py"
       - "tests/test_ches_009_source_discovery.py"
       - "tests/test_ches_009_six_source_batch.py"
+      - "scripts/ches_010_indexed_discovery.py"
+      - "tests/test_ches_010_indexed_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -61,6 +63,8 @@ on:
       - "scripts/ches_009_source_discovery.py"
       - "tests/test_ches_009_source_discovery.py"
       - "tests/test_ches_009_six_source_batch.py"
+      - "scripts/ches_010_indexed_discovery.py"
+      - "tests/test_ches_010_indexed_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -296,3 +300,10 @@ jobs:
             --pdf-directory "$RUNNER_TEMP" \
             --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
             --confirm-machine-readable-use-permission --extended --limit 6
+      - name: CHES-010 verify bounded 929-link index source selection and fail-closed tests
+        run: python -m unittest discover -s tests -p 'test_ches_010_indexed_discovery.py' -v
+      - name: CHES-010 fetch four more REAL source chapters by verified original index, count-only
+        run: |
+          python -m scripts.ches_010_indexed_discovery \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --confirm-machine-readable-use-permission
