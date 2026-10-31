@@ -38,6 +38,8 @@ on:
       - "tests/test_ches_011_source_discovery.py"
       - "tests/test_ches_011_fourteen_batch.py"
       - "tests/test_ches_011_private_source_cache.py"
+      - "scripts/ches_012_exception_metrics.py"
+      - "tests/test_ches_012_exception_metrics.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -81,6 +83,8 @@ on:
       - "tests/test_ches_011_source_discovery.py"
       - "tests/test_ches_011_fourteen_batch.py"
       - "tests/test_ches_011_private_source_cache.py"
+      - "scripts/ches_012_exception_metrics.py"
+      - "tests/test_ches_012_exception_metrics.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -394,3 +398,10 @@ jobs:
             --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
             --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
             --confirm-machine-readable-use-permission --all-indexed
+      - name: CHES-012 negative tests for 14 source-pinned layout metrics, rates and privacy
+        run: python -m unittest discover -s tests -p 'test_ches_012_exception_metrics.py' -v
+      - name: CHES-012 independently audit actual 14 original PDFs and compare every geometry warning with SHA-pinned source manifest
+        run: |
+          python -m scripts.ches_012_exception_metrics \
+            --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --confirm-machine-readable-use-permission
