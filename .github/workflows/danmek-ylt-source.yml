@@ -53,6 +53,10 @@ jobs:
           gen = next(b for b in ot if b["id"] == "gen")
           assert len(gen["chapters"]) == 50
           assert len(gen["chapters"][0]) == 31
+          print("YLT public-domain 1898 OT book metadata with 8 chapters:", [
+              (b["id"], b.get("name", ""))
+              for b in ot if len(b["chapters"]) == 8
+          ])
           from scripts.danmek_ylt import YLT_BOOK_ID_BY_SOURCE_PREFIX
           for original, ylt_id, chapter_count in (
               ("qoh", "ecc", 12),
