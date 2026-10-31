@@ -42,6 +42,16 @@ analysis, or a general spell-check/spacing algorithm. The source's
 the global OLT-TENSE-001 gate must be enforced separately based on actual
 Hebrew morphology. All publication remains BLOCKED.
 
+## Subsequent expansion: DANMEK-013
+
+The owner subsequently requested the same subject-before-verb English
+presentation for other subjects where a clause starts with `And`.
+The private OLT owner-approved mode has been expanded for *bounded* joined
+name/role expressions behind selected non-direct-object verbs and an
+explicit prepositional boundary. This does not mean every And-clause is
+syntactically proved; object-taking verbs remain excluded from the new
+generic matcher. See [DANMEK-013](DANMEK_013_AND_LED_GENERAL_SUBJECTS.md).
+
 ## Use
 
 After merging the tested PR to main on GitHub, update the local checkout and

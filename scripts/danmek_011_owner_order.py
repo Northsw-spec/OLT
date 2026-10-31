@@ -12,7 +12,7 @@ from scripts.danmek_009_english_order import (
     DanMek009Error, apply_reviewed_order,
 )
 
-REVISION = "DANMEK-012-OWNER-APPROVED-GLUED-YAHWEH-v2"
+REVISION = "DANMEK-013-AND-LED-OTHER-SUBJECTS-v3"
 
 # Conservative typography patterns; NOT a linguistic parser.
 VERB = (r"(?:[Aa]nd[· ])?"
@@ -33,6 +33,36 @@ INLINE = re.compile(
 JOINED_YAHWEH = re.compile(
     r"\A(?P<verb>[Aa]nd[· ]he-shall-cut-off)[ \t]*"
     r"(?P<subject>Yahweh)(?=from[· ])"
+)
+
+# DANMEK-013: generalize beyond the named Yahweh example for bounded
+# sentence/verse-initial And + explicitly agreeing pronoun-verb glosses.
+# English typography alone does NOT identify grammatical subject reliably.
+# Only predicate forms normally not taking a DIRECT OBJECT and a clear
+# intervening name-to-preposition boundary are allowed in this tier.
+# Object-taking predicates such as saw, met, cut-off remain excluded;
+# those require independent source syntax evidence (except DANMEK-012's
+# explicitly owner-supplied Yahweh example).
+AND_NONOBJECT_PREDICATE = (
+    r"(?:came|come|comes|went|go|goes|going|"
+    r"returned|return|returns|returning|"
+    r"arose|rose|rise|rises|rising|"
+    r"stood|stand|stands|standing|"
+    r"rested|rest|rests|resting|"
+    r"lived|live|lives|living|"
+    r"died|die|dies|dying|"
+    r"spoke|speak|speaks|speaking|said|say|says|saying)"
+)
+AND_SUBJECT = r"(?:[A-Z][A-Za-z'’-]{1,49}|the·(?:king|queen|priest|prophet|man|woman|servant|messenger))"
+AND_FOLLOWING_PREPOSITION = (
+    r"(?:from·|to·|in·|at·|upon·|before·|after·|among·|into·)"
+)
+JOINED_AND_SUBJECT = re.compile(
+    r"\A(?P<verb>[Aa]nd[· ](?:he|she)-"
+    r"(?:(?:is|was|shall|will|has|had)-)?"
+    + AND_NONOBJECT_PREDICATE +
+    r")[ \t]*(?P<subject>" + AND_SUBJECT + r")"
+    r"(?=" + AND_FOLLOWING_PREPOSITION + r")"
 )
 
 
@@ -57,6 +87,17 @@ def discover_candidates(
                 "original_verb": joined["verb"],
                 "original_subject": joined["subject"],
             })
+        other = JOINED_AND_SUBJECT.match(text)
+        if other:
+            found.append({
+                "reference": reference, "chapter_json_sha256": chapter_sha256,
+                "mode": "inline", "source_syntax_reviewed": False,
+                "review_note": "NOT_REVIEWED",
+                "verb_fragment_index": index + 1,
+                "original_fragment": text,
+                "original_verb": other["verb"],
+                "original_subject": other["subject"],
+            })
         if (index + 1 < len(texts) and WHOLE_VERB.fullmatch(text)
                 and WHOLE_SUBJECT.fullmatch(texts[index + 1])):
             found.append({
@@ -73,7 +114,7 @@ def discover_candidates(
             # a false candidate: only JOINED_YAHWEH can authorize the safe,
             # bounded Yahweh + from· clause shape above.
             if (text[match.end():].startswith("·")
-                    and match["subject"].endswith(("from", "and"))):
+                    and match["subject"].endswith(("from", "and", "into", "upon", "before", "after", "among", "to", "in", "at", "of"))):
                 # Greedy capitalized matching could otherwise absorb
                 # a following glued preposition/conjunction into the name.
                 continue
@@ -145,4 +186,22 @@ def apply_owner_approved_candidates(
             if rendered[i] != expected:
                 raise DanMek011Error("JOINED_YAHWEH_PRESENTATION_MISMATCH")
             rendered[i] = "And Yahweh — he shall cut off " + tail
+        else:
+            other = JOINED_AND_SUBJECT.match(rule["original_fragment"])
+            if other and (rule["original_verb"] == other["verb"]
+                          and rule["original_subject"] == other["subject"]):
+                tail = rule["original_fragment"][other.end():]
+                expected = (
+                    other["verb"][:3] + " " + other["subject"] + " — " +
+                    other["verb"][4:] + tail
+                )
+                if rendered[i] != expected:
+                    raise DanMek011Error("JOINED_AND_SUBJECT_PRESENTATION_MISMATCH")
+                # Preserve the entire unanalysed continuation unchanged:
+                # only the verified-format prefix is English-formatted.
+                english_subject = other["subject"].replace("·", " ")
+                english_verb = other["verb"][4:].replace("-", " ")
+                rendered[i] = (
+                    "And " + english_subject + " — " + english_verb + " " + tail
+                )
     return rendered, "APPLIED"
