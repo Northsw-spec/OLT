@@ -10,7 +10,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 from olt_core.sources import ROOT, load_ot_book, read_provenance
 from scripts.ches_import import (
@@ -25,10 +25,11 @@ class CHES009SourceError(ValueError):
 
 
 def discover_source(pdf: bytes, book: str, chapter: int,
-                    root: Path = ROOT) -> dict[str, Any]:
-    if type(book) is not str or type(chapter) is not int or (book, chapter) not in DISCOVERY:
+                    root: Path = ROOT, *,
+                    approved_targets: Mapping[tuple[str, int], int] = DISCOVERY) -> dict[str, Any]:
+    if type(book) is not str or type(chapter) is not int or (book, chapter) not in approved_targets:
         raise CHES009SourceError("Unsupported unpinned original chapter")
-    expected = DISCOVERY[(book, chapter)]
+    expected = approved_targets[(book, chapter)]
     original = load_ot_book(book, root, read_provenance(root))
     verses = [
         v for v in original["verses"]
