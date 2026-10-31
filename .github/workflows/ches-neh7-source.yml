@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - scripts/ches_import.py
+      - scripts/ches_neh7_source_probe.py
       - tests/test_ches_neh7_verse_scheme.py
       - .github/workflows/ches-neh7-source.yml
   push:
@@ -42,6 +43,8 @@ jobs:
           assert pdf.stat().st_size >= 1000 and pdf.read_bytes().startswith(b"%PDF-")
           print("Original PDF present in ephemeral private runner storage: true")
           PY
+      - name: Inspect original Nehemiah 7 numeric verse-label glyph geometry only
+        run: python -m scripts.ches_neh7_source_probe --pdf "$RUNNER_TEMP/olt-neh7-original.pdf"
       - name: Verify actual printed Nehemiah 7 primary and alternate verse numbering without exposing source text
         env:
           CHES_TEST_NEH7_PDF: ${{ runner.temp }}/olt-neh7-original.pdf
