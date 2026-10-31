@@ -85,10 +85,19 @@ def invented_ylt() -> dict:
         {"id": "sng", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(8)
         ]},
+        {"id": "ezk", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(48)
+        ]},
+        {"id": "jol", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(3)
+        ]},
+        {"id": "nam", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(3)
+        ]},
     ]
     books += [
         {"id": f"ot{i:02}", "testament": "OT",
-         "chapters": [["Synthetic neutral sentence"]]} for i in range(34)
+         "chapters": [["Synthetic neutral sentence"]]} for i in range(31)
     ]
     books += [
         {"id": f"nt{i:02}", "testament": "NT",
@@ -210,6 +219,18 @@ class TestYLTAuthority(unittest.TestCase):
             self.assertIsNone(ylt_verse_for_source(
                 self.ylt, prefix=prefix, chapter=chapter, verse=1,
             ))
+
+    def test_verse_lookups_for_verified_ezekiel_joel_nahum_1898_ids(self):
+        for original, chapter in (("eze", 48), ("joe", 3), ("nah", 3)):
+            self.assertEqual(
+                ylt_verse_for_source(self.ylt, prefix=original, chapter=chapter,
+                                     verse=1),
+                "A door is found here",
+            )
+            self.assertIsNone(
+                ylt_verse_for_source(self.ylt, prefix=original,
+                                     chapter=chapter + 1, verse=1)
+            )
 
     def test_ylt_verse_missing_and_neh7_numerical_dispute_never_guess(self):
         source = invented_chapter("neh", 7, alternate_neh7=True)
