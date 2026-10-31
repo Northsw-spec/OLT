@@ -119,6 +119,7 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
 
 def _render_index(
     records: list[tuple[str, int]], missing: int, *, ylt_mode: bool = False,
+    olt_display_faces: bool = False,
 ) -> bytes:
     links = "".join(
         '<a href="' + html.escape(f"{prefix}.{number}") + '.html">' +
@@ -126,9 +127,14 @@ def _render_index(
         for prefix, number in records
     )
     source_statement = (
-        'YLT 1898 guided noun/tense corrections where one-to-one verse-word '
-        'evidence is unambiguous; other CHES text preserved.' if ylt_mode else
-        'Original English source fragment text is presented unchanged.'
+        'Owner-selected English display-only simplification: exact '
+        '"sur faces" appears as "faces". Original CHES remains unchanged. '
+        'Hebrew lemma correspondence is not verified.'
+        if olt_display_faces else (
+            'YLT 1898 guided noun/tense corrections where one-to-one verse-word '
+            'evidence is unambiguous; other CHES text preserved.' if ylt_mode else
+            'Original English source fragment text is presented unchanged.'
+        )
     )
     body = (
         '<h1>Private source reader</h1><p class="muted">Offline only. ' +
