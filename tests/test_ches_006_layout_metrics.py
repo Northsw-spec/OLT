@@ -105,23 +105,21 @@ class TestCHES006GeometryAndSourceMetrics(unittest.TestCase):
                 self.assertEqual(report["publication_status"], "BLOCKED")
                 self.assertNotIn("INVENTED-", json.dumps(report))
 
-    def test_unassigned_original_source_ink_is_visible_risk_not_silently_deleted(self):
+    def test_unassigned_source_ink_cannot_bypass_exact_pinned_zero_loss_baseline(self):
+        # The genuine hash-pinned source has exactly ZERO unassigned green
+        # spans. A synthetic green span injected before the first verse must
+        # fail rather than weaken the published engineering evidence.
         source, raw = dummy("Gen", 1)
         raw.append({"page": 1, "x": 5.0, "y": 0.0, "color": 0x008000,
                     "text": "SYNTHETIC-UNASSIGNED-INK"})
-        report = measure_private_chapter_layout(source, full_pdf_spans=raw)
-        self.assertEqual(report["raw_original_pdf_green_span_count"], 527)
-        self.assertEqual(report["unassigned_original_green_spans"], 1)
-        self.assertEqual(report["raw_original_green_spans_before_first_printed_verse"], 1)
-        self.assertTrue(report["layout_requires_exception_review"])
-        self.assertNotIn("SYNTHETIC-UNASSIGNED-INK", json.dumps(report))
-        # A stray after-first-verse unassigned span is not explainable by
-        # the importer's initial boundary and must fail closed.
-        bad_source, bad_raw = dummy("Gen", 2)
-        bad_raw.append({"page": 2, "x": 100.0, "y": 200.0,
-                        "color": 0x008000, "text": "SYNTHETIC-LOST"})
         with self.assertRaises(CHESLayoutMetricsError):
-            measure_private_chapter_layout(bad_source, full_pdf_spans=bad_raw)
+            measure_private_chapter_layout(source, full_pdf_spans=raw)
+        # An extra fragment elsewhere is also unexplained data and fails.
+        other_source, other_raw = dummy("Gen", 2)
+        other_raw.append({"page": 2, "x": 100.0, "y": 200.0,
+                          "color": 0x008000, "text": "SYNTHETIC-LOST"})
+        with self.assertRaises(CHESLayoutMetricsError):
+            measure_private_chapter_layout(other_source, full_pdf_spans=other_raw)
 
     def test_new_chapters_are_pinned_and_do_not_accept_changed_original_files(self):
         for book, chapter, expected_spans, expected_words in (
