@@ -68,7 +68,7 @@ class DanMekYLTError(ValueError):
 
 def git_blob_sha1(value: bytes) -> str:
     return hashlib.sha1(
-        b"blob " + str(len(value)).encode("ascii") + b"\\0" + value
+        b"blob " + str(len(value)).encode("ascii") + b"\0" + value
     ).hexdigest()
 
 
@@ -291,7 +291,7 @@ def main() -> int:
     try:
         result = prepare_public_domain_ylt(args.private_root)
     except Exception:
-        parser.exit(2, "DANMEK_002_YLT_SOURCE_PREPARATION_FAILED\\n")
+        parser.exit(2, "DANMEK_002_YLT_SOURCE_PREPARATION_FAILED\n")
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0
 
