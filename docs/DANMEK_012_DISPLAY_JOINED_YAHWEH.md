@@ -42,6 +42,15 @@ analysis, or a general spell-check/spacing algorithm. The source's
 the global OLT-TENSE-001 gate must be enforced separately based on actual
 Hebrew morphology. All publication remains BLOCKED.
 
+## Superseding lowercase-c display cleanup: DANMEK-014
+
+The initial DANMEK-012 rule suppressed only whole source fragments consisting
+of lowercase `c`. The owner subsequently requested a broader removal of
+standalone lowercase c markers, including repeated `c c` or `cc`
+inside mixed English source fragments. The bounded DANMEK-014 derived HTML
+view implements this without touching the locked, already owner-verified
+DANMEK-013 snapshot or original CHES JSON. [DANMEK-014](DANMEK_014_HIDE_STANDALONE_C.md).
+
 ## Subsequent expansion: DANMEK-013
 
 The owner subsequently requested the same subject-before-verb English
