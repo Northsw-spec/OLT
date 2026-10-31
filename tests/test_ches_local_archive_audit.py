@@ -9,8 +9,9 @@ import tempfile
 import unittest
 
 from scripts.ches_local_archive_audit import (
-    CHESArchiveError, audit_private_archive,
+    CHESArchiveError, audit_private_archive, _validate_chapter,
 )
+from scripts.ches_import import NEH7_PRIMARY_VERSES
 
 
 def fake_chapter(chapter: int = 1, *, prefix: str = "gen", sha_number: int = 1) -> dict:
@@ -93,6 +94,37 @@ class CHESLocalPrivateArchiveAuditTest(unittest.TestCase):
         report = audit_private_archive(self.root)
         self.assertEqual(report["private_source_chapter_json_files_observed"], 10)
         self.assertEqual(report["distinct_original_filename_prefixes_observed"], 1)
+
+    def test_nehemiah_seven_original_primary_and_alternate_verse_scheme(self):
+        synthetic = fake_chapter(chapter=7, prefix="neh")
+        synthetic["verses"] = []
+        for number in NEH7_PRIMARY_VERSES:
+            row = copy.deepcopy(fake_chapter()["verses"][0])
+            row["reference"] = f"neh.7.{number}"
+            if number >= 69:
+                row["original_pdf_alternate_verse_number_not_oshb_crosswalk"] = number - 1
+            synthetic["verses"].append(row)
+        synthetic["verses_extracted"] = len(NEH7_PRIMARY_VERSES)
+        synthetic["ches_pdf_green_spans"] = len(NEH7_PRIMARY_VERSES)
+        self.assertEqual(
+            _validate_chapter(synthetic, prefix="neh", chapter=7)[:2], (72, 72)
+        )
+        for index, wrong in (
+            (67, {"reference": "neh.7.68"}),
+            (68, {"original_pdf_alternate_verse_number_not_oshb_crosswalk": 69}),
+            (71, {"original_pdf_alternate_verse_number_not_oshb_crosswalk": None}),
+        ):
+            with self.subTest(index=index):
+                mutated = copy.deepcopy(synthetic)
+                mutated["verses"][index].update(wrong)
+                with self.assertRaises(CHESArchiveError):
+                    _validate_chapter(mutated, prefix="neh", chapter=7)
+        missing = copy.deepcopy(synthetic)
+        missing["verses"].pop()
+        missing["verses_extracted"] -= 1
+        missing["ches_pdf_green_spans"] -= 1
+        with self.assertRaises(CHESArchiveError):
+            _validate_chapter(missing, prefix="neh", chapter=7)
 
     def test_gap_in_source_chapter_numbers_must_not_be_accepted(self):
         self.write(fake_chapter(1))
