@@ -370,6 +370,11 @@ def main() -> int:
         help="Compare local CHES verse fragments to pinned public-domain YLT "
              "and apply only unique noun/tense decisions offline",
     )
+    parser.add_argument(
+        "--olt-display-faces", action="store_true",
+        help="Create a separate private English OLT display simplifying only "
+             "exact 'sur faces' to 'faces'; never rewrite CHES original data",
+    )
     args = parser.parse_args()
     if not args.confirm_machine_readable_use_permission:
         parser.error("Owner-reported private machine-readable use permission required")
@@ -378,6 +383,7 @@ def main() -> int:
             args.private_root,
             render=args.build_private_reader,
             use_ylt_authority=args.use_ylt_authority,
+            olt_display_faces=args.olt_display_faces,
         )
     except Exception:
         parser.exit(2, "CHES-015_PRIVATE_SOURCE_READER_VALIDATION_FAILED\n")
