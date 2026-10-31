@@ -19,7 +19,7 @@ from typing import Any
 PDF_MIN = 1000
 PDF_MAX = 30_000_000
 MARKER = re.compile(r"^\s*(\d{1,3})\s*:\s*(\d{1,3})\s*$")
-BOOK = re.compile(r"^[A-Z][A-Za-z0-9]{1,12}$")
+BOOK = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{1,19}$")
 
 
 def is_ches_green(rgb: int) -> bool:
@@ -123,6 +123,7 @@ def import_private_pdf(original: bytes, book: str, chapter: int,
             "source_pdf_byte_length": len(original),
             "source_pdf_page_count": len(pdf),
             "book": book, "chapter": chapter,
+            "source_book_identifier_is_not_verified_oshb_book_mapping": True,
             "verses_extracted": len(verses),
             "ches_pdf_green_spans": sum(len(v["ches_spans"]) for v in verses),
             "copyright_basis": "USER_REPORTED_PERMISSION_FOR_MACHINE_READABLE_CHES_DATA",
