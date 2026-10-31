@@ -2,6 +2,12 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-001 — CHES decides every ambiguous contextual English choice by default
+
+**Owner decision 2026-10-31:** Do not create a second Hebrew lemma-sense-selection engine. **For every Hebrew/Aramaic lemma occurrence with multiple possible English senses, use the reading already chosen by CHES in that actual verse as the English default.** Preserve that original verse reading without speculative word-to-PDF-span links. Where token mapping cannot be demonstrated, leave the private CHES stream unchanged rather than run a broad substitute. Only the owner's explicit, bounded original-source-backed overrides (e.g. a specific occurrence of shaped or verified wayyiqtol simple past) may change a local fragment. No universal word-for-word gloss alignment, dictionary-building or chapter-by-chapter owner authorization is required to finish the minimal private reader. See [DanMek contextual default](DANMEK_001_CHES_CONTEXTUAL_DEFAULT.md).
+
+The minimal **offline private CHES reader** is now the immediate runnable deliverable. It is *not* proof of an original-language token-level interlinear or independently authored English edition; separately granted redistribution rights and actual corpus coverage remain required for public publication. Do not substitute CHES for the Greek NT.
+
 ## Purpose and scope
 
 Create a **small, working, deterministic Hebrew/Aramaic → English OLT draft system** that reuses CHES v2.0's existing interlinear English glosses as **privately authorized reference/source data** instead of translating every Hebrew word and contextual sense independently from scratch.
