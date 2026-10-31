@@ -1,5 +1,7 @@
 # OLT-034 — Source-first multilingual translation-engine architecture
 
+> **Binding 2026-10-31 owner scope supersedes the active multilingual rollout sections below:** [OLT-ENGLISH-FIRST-001](OLT_ENGLISH_FIRST_OWNER_GATE.md). **English is the only current translation target** until the owner personally verifies and approves the **complete 66-book original Hebrew/Aramaic/Greek → English Bible**. Japanese and all other non-English translations, engines and repositories are deferred. The architecture below is a *historical, future-facing design*, not the current implementation plan. A working source→English draft engine now takes priority. No publication or personal owner approval has occurred.
+
 **Decision date:** 2026-10-30. **Status:** reusable research-packet foundation implemented; OT/NT target-language translations and publication remain BLOCKED.
 
 ## Binding owner decision
