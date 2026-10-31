@@ -70,7 +70,7 @@ def build_genesis_one_drafts(root: Path = ROOT) -> dict[str, Any]:
     registry = read_provenance(root)
     original_book = load_ot_book("Gen", root, registry)
     source = {v["reference"]: v for v in original_book["verses"]
-              if re.fullmatch(r"Gen\\.1\\.[1-9][0-9]*", v["reference"])}
+              if re.fullmatch(r"Gen\.1\.[1-9][0-9]*", v["reference"])}
     research = json.loads((root / RESEARCH_PATH).read_text(encoding="utf-8"))
     proposals = research.get("genesis_1_research_verses")
     if not isinstance(proposals, list) or len(proposals) != 31 or len(source) != 31:
