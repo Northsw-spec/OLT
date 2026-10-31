@@ -36,6 +36,8 @@ on:
       - "tests/test_ches_010_indexed_batch.py"
       - "scripts/ches_011_source_discovery.py"
       - "tests/test_ches_011_source_discovery.py"
+      - "tests/test_ches_011_fourteen_batch.py"
+      - "tests/test_ches_011_private_source_cache.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -77,6 +79,8 @@ on:
       - "tests/test_ches_010_indexed_batch.py"
       - "scripts/ches_011_source_discovery.py"
       - "tests/test_ches_011_source_discovery.py"
+      - "tests/test_ches_011_fourteen_batch.py"
+      - "tests/test_ches_011_private_source_cache.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -362,3 +366,31 @@ jobs:
           python -m scripts.ches_011_source_discovery \
             --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
             --confirm-machine-readable-use-permission
+      - name: CHES-011 test original source rights, fourteen-source resume and failures
+        run: python -m unittest discover -s tests -p 'test_ches_011_fourteen_batch.py' -v
+      - name: CHES-011 test private cache next group and reject changed original source
+        run: python -m unittest discover -s tests -p 'test_ches_011_private_source_cache.py' -v
+      - name: CHES-011 cache next four EXACT source-pinned real PDFs in private runner storage
+        run: |
+          python -m scripts.ches_010_private_source_cache \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --confirm-machine-readable-use-permission --next-group
+      - name: CHES-011 recheck all next four immutable source PDF SHA pins and skip private cache
+        run: |
+          python -m scripts.ches_010_private_source_cache \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --confirm-machine-readable-use-permission --next-group
+      - name: CHES-011 extend actual ten source-backed English private drafts to fourteen
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --all-indexed
+      - name: CHES-011 verify unchanged fourteen genuine original PDF English drafts are skipped
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --all-indexed
