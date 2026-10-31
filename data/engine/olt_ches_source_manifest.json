@@ -23,7 +23,13 @@
     "source_text_in_public_repo": false,
     "original_pdf_in_public_repo": false,
     "source_text_excerpt_in_logs": false,
-    "source_full_english_bible_translation_approved": false
+    "source_full_english_bible_translation_approved": false,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 24,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 1,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "min_green_spans_in_one_verse": 6,
+    "max_green_spans_in_one_verse": 35,
+    "oshb_original_word_tokens_observed": 434
   },
   "original_index_engineering_verification": {
     "original_index_html_sha256_observed": "7c1a28074254b04638a3784ec272681badc66908053617154f4e9fa242de46e1",
@@ -49,6 +55,51 @@
     "independent_pdf_filename_to_oshb_book_mapping_verified": false,
     "word_and_morpheme_alignment_verified": false,
     "full_source_text_in_public_git_permitted": false,
-    "source_pdf_stored_in_public_repo": false
+    "source_pdf_stored_in_public_repo": false,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 18,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 1,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "min_green_spans_in_one_verse": 7,
+    "max_green_spans_in_one_verse": 30
+  },
+  "third_chapter_layout_source_reference": {
+    "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen3.pdf",
+    "original_book": "Gen",
+    "original_chapter": 3,
+    "source_pdf_sha256": "71d6773374681b6855f801f9fb5254f5891c2d7c0705c984cfede112dde6450b",
+    "source_pdf_bytes": 42678,
+    "source_pdf_pages": 3,
+    "printed_pdf_verses_confirmed_by_engineering": 24,
+    "green_ches_pdf_spans_extracted": 415,
+    "oshb_original_word_tokens_observed": 347,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 19,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 2,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "independent_pdf_filename_to_oshb_book_mapping_verified": false,
+    "word_and_morpheme_alignment_verified": false,
+    "full_source_text_in_public_git_permitted": false,
+    "source_pdf_stored_in_public_repo": false,
+    "min_green_spans_in_one_verse": 8,
+    "max_green_spans_in_one_verse": 26
+  },
+  "cross_book_layout_source_reference": {
+    "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo1.pdf",
+    "original_book": "Exod",
+    "original_chapter": 1,
+    "source_pdf_sha256": "fab98329167dfcd2041dc99470abe366fb6583325679de888a33f880c3860d28",
+    "source_pdf_bytes": 36499,
+    "source_pdf_pages": 3,
+    "printed_pdf_verses_confirmed_by_engineering": 22,
+    "green_ches_pdf_spans_extracted": 350,
+    "oshb_original_word_tokens_observed": 240,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 16,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 0,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "independent_pdf_filename_to_oshb_book_mapping_verified": false,
+    "word_and_morpheme_alignment_verified": false,
+    "full_source_text_in_public_git_permitted": false,
+    "source_pdf_stored_in_public_repo": false,
+    "min_green_spans_in_one_verse": 3,
+    "max_green_spans_in_one_verse": 30
   }
 }

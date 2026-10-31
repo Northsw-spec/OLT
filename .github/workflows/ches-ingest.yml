@@ -17,6 +17,10 @@ on:
       - "tests/test_ches_005_safe_exceptions.py"
       - "scripts/ches_005_chapter_layout_qa.py"
       - "tests/test_ches_005_chapter_layout.py"
+      - "scripts/ches_006_layout_metrics.py"
+      - "tests/test_ches_006_layout_metrics.py"
+      - "scripts/ches_006_pilot_summary.py"
+      - "tests/test_ches_006_pilot_summary.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -39,6 +43,10 @@ on:
       - "tests/test_ches_005_safe_exceptions.py"
       - "scripts/ches_005_chapter_layout_qa.py"
       - "tests/test_ches_005_chapter_layout.py"
+      - "scripts/ches_006_layout_metrics.py"
+      - "tests/test_ches_006_layout_metrics.py"
+      - "scripts/ches_006_pilot_summary.py"
+      - "tests/test_ches_006_pilot_summary.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -117,4 +125,54 @@ jobs:
         run: |
           python -m scripts.ches_005_chapter_layout_qa \
             --pdf "$RUNNER_TEMP/ches-gen2.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 synthetic geometry/source contracts and negative boundary tests
+        run: python -m unittest discover -s tests -p 'test_ches_006_layout_metrics.py' -v
+      - name: CHES-006 source-pinned Genesis 1 metadata-only layout diagnostics
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Gen --chapter 1 --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 source-pinned Genesis 2 metadata-only layout diagnostics
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Gen --chapter 2 --pdf "$RUNNER_TEMP/ches-gen2.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: Fetch extra authentic original source PDFs only to ephemeral runner storage
+        run: |
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen3.pdf \
+            --output "$RUNNER_TEMP/ches-gen3.pdf"
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo1.pdf \
+            --output "$RUNNER_TEMP/ches-ex1.pdf"
+          wc -c "$RUNNER_TEMP/ches-gen3.pdf" "$RUNNER_TEMP/ches-ex1.pdf"
+          file --mime-type "$RUNNER_TEMP/ches-gen3.pdf" "$RUNNER_TEMP/ches-ex1.pdf"
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          for filename in ("ches-gen3.pdf", "ches-ex1.pdf"):
+              path = Path(os.environ["RUNNER_TEMP"]) / filename
+              if not path.is_file() or not 1000 <= path.stat().st_size <= 30000000:
+                  raise ValueError("Original source file missing or invalid size")
+              with path.open("rb") as file:
+                  if file.read(5) != b"%PDF-":
+                      raise ValueError("Original source is not a PDF")
+          PY
+      - name: CHES-006 exact source-pinned Genesis 3 PDF layout audit (metadata only)
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Gen --chapter 3 --pdf "$RUNNER_TEMP/ches-gen3.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 exact source-pinned Exodus 1 PDF layout audit (metadata only)
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Exod --chapter 1 --pdf "$RUNNER_TEMP/ches-ex1.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 synthetic aggregate safety contract and negative tests
+        run: python -m unittest discover -s tests -p 'test_ches_006_pilot_summary.py' -v
+      - name: CHES-006 compare four SHA-pinned real original PDFs and OSHB without copyrighted text
+        run: |
+          python -m scripts.ches_006_pilot_summary \
+            --pdf-directory "$RUNNER_TEMP" \
             --confirm-machine-readable-use-permission
