@@ -142,20 +142,26 @@ jobs:
           curl --fail --location --retry 3 --max-time 65 --silent --show-error \
             https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo1.pdf \
             --output "$RUNNER_TEMP/ches-ex1.pdf"
-          printf 'Gen3 original source bytes: %s MIME: %s\\n' \
-            "$(wc -c < "$RUNNER_TEMP/ches-gen3.pdf")" \
-            "$(file --brief --mime-type "$RUNNER_TEMP/ches-gen3.pdf")"
-          printf 'Ex1 original source bytes: %s MIME: %s\\n' \
-            "$(wc -c < "$RUNNER_TEMP/ches-ex1.pdf")" \
-            "$(file --brief --mime-type "$RUNNER_TEMP/ches-ex1.pdf")"
-          python -c 'from pathlib import Path; import os; files=("ches-gen3.pdf","ches-ex1.pdf"); [(_ for _ in ()).throw(ValueError("Original PDF source format invalid")) if not (1000 <= (p:=Path(os.environ["RUNNER_TEMP"])/f).stat().st_size <= 30000000 and p.open("rb").read(5)==b"%PDF-") else None for f in files]'
-      - name: CHES-006 controlled discovery of Genesis 3 actual PDF (metadata only)
+          wc -c "$RUNNER_TEMP/ches-gen3.pdf" "$RUNNER_TEMP/ches-ex1.pdf"
+          file --mime-type "$RUNNER_TEMP/ches-gen3.pdf" "$RUNNER_TEMP/ches-ex1.pdf"
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          for filename in ("ches-gen3.pdf", "ches-ex1.pdf"):
+              path = Path(os.environ["RUNNER_TEMP"]) / filename
+              if not path.is_file() or not 1000 <= path.stat().st_size <= 30000000:
+                  raise ValueError("Original source file missing or invalid size")
+              with path.open("rb") as file:
+                  if file.read(5) != b"%PDF-":
+                      raise ValueError("Original source is not a PDF")
+          PY
+      - name: CHES-006 exact source-pinned Genesis 3 PDF layout audit (metadata only)
         run: |
           python -m scripts.ches_006_layout_metrics \
             --book Gen --chapter 3 --pdf "$RUNNER_TEMP/ches-gen3.pdf" \
-            --confirm-machine-readable-use-permission --discovery-only-unpinned
-      - name: CHES-006 controlled discovery of Exodus 1 actual PDF (metadata only)
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 exact source-pinned Exodus 1 PDF layout audit (metadata only)
         run: |
           python -m scripts.ches_006_layout_metrics \
             --book Exod --chapter 1 --pdf "$RUNNER_TEMP/ches-ex1.pdf" \
-            --confirm-machine-readable-use-permission --discovery-only-unpinned
+            --confirm-machine-readable-use-permission
