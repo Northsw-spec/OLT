@@ -23,7 +23,13 @@
     "source_text_in_public_repo": false,
     "original_pdf_in_public_repo": false,
     "source_text_excerpt_in_logs": false,
-    "source_full_english_bible_translation_approved": false
+    "source_full_english_bible_translation_approved": false,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 24,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 1,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "min_green_spans_in_one_verse": 6,
+    "max_green_spans_in_one_verse": 35,
+    "oshb_original_word_tokens_observed": 434
   },
   "original_index_engineering_verification": {
     "original_index_html_sha256_observed": "7c1a28074254b04638a3784ec272681badc66908053617154f4e9fa242de46e1",
@@ -49,7 +55,12 @@
     "independent_pdf_filename_to_oshb_book_mapping_verified": false,
     "word_and_morpheme_alignment_verified": false,
     "full_source_text_in_public_git_permitted": false,
-    "source_pdf_stored_in_public_repo": false
+    "source_pdf_stored_in_public_repo": false,
+    "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": 18,
+    "verses_with_green_fragments_on_multiple_pdf_pages": 1,
+    "raw_original_pdf_unassigned_green_spans": 0,
+    "min_green_spans_in_one_verse": 7,
+    "max_green_spans_in_one_verse": 30
   },
   "third_chapter_layout_source_reference": {
     "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen3.pdf",
@@ -67,7 +78,9 @@
     "independent_pdf_filename_to_oshb_book_mapping_verified": false,
     "word_and_morpheme_alignment_verified": false,
     "full_source_text_in_public_git_permitted": false,
-    "source_pdf_stored_in_public_repo": false
+    "source_pdf_stored_in_public_repo": false,
+    "min_green_spans_in_one_verse": 8,
+    "max_green_spans_in_one_verse": 26
   },
   "cross_book_layout_source_reference": {
     "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo1.pdf",
@@ -85,6 +98,8 @@
     "independent_pdf_filename_to_oshb_book_mapping_verified": false,
     "word_and_morpheme_alignment_verified": false,
     "full_source_text_in_public_git_permitted": false,
-    "source_pdf_stored_in_public_repo": false
+    "source_pdf_stored_in_public_repo": false,
+    "min_green_spans_in_one_verse": 3,
+    "max_green_spans_in_one_verse": 30
   }
 }
