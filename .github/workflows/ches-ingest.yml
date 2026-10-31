@@ -4,6 +4,8 @@ on:
     paths:
       - "scripts/ches_pdf_probe.py"
       - "scripts/ches_import.py"
+      - "scripts/ches_index.py"
+      - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
       - "docs/OLT_CHES_PRIVATE_INGEST.md"
@@ -12,6 +14,8 @@ on:
     paths:
       - "scripts/ches_pdf_probe.py"
       - "scripts/ches_import.py"
+      - "scripts/ches_index.py"
+      - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
       - "docs/OLT_CHES_PRIVATE_INGEST.md"
@@ -31,6 +35,13 @@ jobs:
           python-version: '3.12'
       - name: Install pinned PDF text positioning dependency
         run: python -m pip install PyMuPDF==1.26.5
+      - name: Verify all 39 source book-index prefixes and exact chapter-link count without text copying
+        run: |
+          curl --fail --location --retry 3 --max-time 45 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm \
+            --output "$RUNNER_TEMP/ches-hebrew-index.html"
+          python scripts/ches_index.py --index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --require-ot-chapters 929 --require-books 39
       - name: Obtain single original Genesis 1 PDF only to ephemeral runner storage
         run: |
           curl --fail --location --retry 3 --max-time 65 --silent --show-error \
