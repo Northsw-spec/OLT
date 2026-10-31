@@ -1,0 +1,27 @@
+{
+  "checkpoint": "OLT-CHES-001",
+  "source": "Scripture4All Online Hebrew Interlinear Bible",
+  "source_index_url": "https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm",
+  "selected_source_line": "CHES 2.0 green English sublinear",
+  "authorized_use_reported_by_owner": "machine-readable CHES source data",
+  "public_redistribution_rights_confirmed": false,
+  "downstream_amharic_derivative_rights_confirmed": false,
+  "current_active_translation_target": "en",
+  "original_source_to_ches_morphological_alignment_human_verified": false,
+  "publication_status": "BLOCKED",
+  "current_scope": "FIRST_ACTUAL_SOURCE_PDF_ENGINEERING_INTEGRATION_NOT_WHOLE_OT",
+  "source_reference": {
+    "original_pdf_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen1.pdf",
+    "original_book": "Gen",
+    "original_chapter": 1,
+    "source_pdf_sha256": "4cbb67bac8676cd3fd25f12c1f0e7c6f1dae6a8331858dbfedeff18ba22329b3",
+    "source_pdf_bytes": 48194,
+    "source_pdf_pages": 4,
+    "printed_pdf_verses_confirmed_by_engineering": 31,
+    "green_ches_pdf_spans_extracted": 526,
+    "source_text_in_public_repo": false,
+    "original_pdf_in_public_repo": false,
+    "source_text_excerpt_in_logs": false,
+    "source_full_english_bible_translation_approved": false
+  }
+}
