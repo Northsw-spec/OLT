@@ -2,6 +2,10 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-005 — Hebrew interlinear correctness vs preferred OLT English order
+
+**Owner's clarification (2026-10-31):** The imported CHES JSON files and their Hebrew-order English interlinear are **not wrong**. The owner requests a **different editorial English OLT reading order**, specifically placing an explicit matched subject before the English verb phrase while preserving explicit referential pronouns (subject `·he-is-...` in suitable contexts). Do not rework source JSON, call source Hebrew word order defective, or simply reorder neighboring green text spans without verified source syntax. Keep two views: unchanged CHES reference and a separately versioned, reviewable OLT English reading. An isolated `c` can be a source morphology marker, and repeated `the` can reflect repeated Hebrew articles: distinguish source-faithful content from genuine extraction/display duplication before hiding anything. This is a **future implementation requirement**, not a completed full-929-chapter transformation. [Detailed owner rule](DANMEK_005_SOURCE_VALID_OLT_ENGLISH_ORDER.md).
+
 ## DANMEK-002 — YLT 1898 is authoritative for bounded noun and tense edits
 
 **Latest binding owner rule (2026-10-31):** CHES remains the direct `.json` English source. **Every change to English tense or to an excessively modern CHES noun is adjudicated by the matching verse in Young's Literal Translation (YLT, 1898)**. Example: `portal → door` only where that specific YLT verse actually uses `door`; if YLT says `gate` or the relevant occurrence cannot be established, keep the CHES verse unchanged. Do not perform global find-and-replace, guess Hebrew→English word alignment, or create a new independent lexicon.
