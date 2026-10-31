@@ -1,5 +1,12 @@
 # OLT — CURRENT STATUS (2026-10-31)
 
+## DANMEK-010 — Offline private candidate discovery and review
+
+- **Implementation:** `scripts.danmek_010_order_review` scans local source-validated private CHES JSON, proposes conservative adjacent/inline English subject-first candidates, counts ambiguous cases and optionally writes **private** versioned review HTML + unapproved candidate JSON. No automatically inferred subject is treated as a proven Hebrew syntax role.
+- **Activation requires source-based review:** Candidates cannot be loaded directly into the OLT reading. An operator must inspect Hebrew/Aramaic grammar and original source layout, then explicitly attest one rule; the tool checks original chapter JSON SHA and exact fragment text again and appends it to `approved.json` with immutable prior-rule backup. DANMEK-009 then applies exactly such reviewed rules using `--olt-subject-first`. No code or test claims an automatic full-929-chapter conversion.
+- **Source and quality boundary:** Private CHES remains unchanged and offline. GitHub Actions validates synthetic functional/security scenarios only, not actual private corpus, grammatical correctness or translation approval. [DANMEK-010](DANMEK_010_PRIVATE_ORDER_DISCOVERY.md). Publication BLOCKED.
+
+
 ## DANMEK-009 — Subjekt före verb i separat OLT English view (limited private review rules)
 
 - **Root cause of unchanged word order:** DANMEK-008 only simplified `sur faces`; the original CHES-015 reader still keeps unreviewed PDF English fragments in their original Hebrew-interlinear order.
