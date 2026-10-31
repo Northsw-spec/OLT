@@ -56,10 +56,9 @@ python -m scripts.ches_006_layout_metrics --book Gen --chapter 2 \
 
 # Exact source-pinned extra-chapter geometry audits
 python -m scripts.ches_006_layout_metrics --book Gen --chapter 3 \
-  --pdf /path/to/gen3.pdf --confirm-machine-readable-use-permission \
+  --pdf /path/to/gen3.pdf --confirm-machine-readable-use-permission
 python -m scripts.ches_006_layout_metrics --book Exod --chapter 1 \
-  --pdf /path/to/ex1.pdf --confirm-machine-readable-use-permission \
-  --discovery-only-unpinned
+  --pdf /path/to/exo1.pdf --confirm-machine-readable-use-permission
 ~~~
 
 Synthetic negative tests use fake English source fragments and the authentic pinned OSHB corpus:
