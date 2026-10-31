@@ -2,6 +2,16 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-JSON-001 — Direct authorized CHES JSON is the canonical English input
+
+**Owner confirmation (2026-10-31):** The owner has permission to **use CHES** and directs OLT/DanMek to consume the **existing, locally extracted CHES JSON files directly**. No additional PDF retrieval, CHES reconstruction, lemma sense resolver, dictionary engineering, or intermediate translation engine is required to produce the baseline **private English reading**. Our existing `scripts.ches_015_direct_private_reader` already implements this direct JSON-to-private-HTML path for all present source chapters.
+
+**Minimal operational pipeline:** `~/.olt-private/ches/<source-prefix>.<chapter>.json` → strict existing JSON/source/verse validation → original CHES English fragments in source order → private English chapter reader. Optional localized corrections (including `shaped` and independently source-anchored simple-past changes) belong to a **separate, bounded overlay**, never to the immutable original JSON. Keep CHES's contextual sense choices unless a specific explicit override can be justified.
+
+**No artificial prerequisites:** Completion of the full Hebrew token-by-token mapping, hundreds of thousands of lexical judgments, the old large engine, or fourteen-chapter source pins is **not a prerequisite** to read existing CHES JSON chapters privately. The 14 pinned paths remain optional higher-assurance research, not the default input bottleneck.
+
+**Permissions boundary:** The owner confirms permission to use CHES; record that factual assertion without inventing the exact grant wording or claiming that machine-readable use alone grants a public redistribution/derivative license. Private corpus and rendered pages stay outside public Git. The program can be operationally complete before the entire 929-chapter source download is complete, but it must report incomplete coverage accurately.
+
 ## DANMEK-001 — CHES decides every ambiguous contextual English choice by default
 
 **Owner decision 2026-10-31:** Do not create a second Hebrew lemma-sense-selection engine. **For every Hebrew/Aramaic lemma occurrence with multiple possible English senses, use the reading already chosen by CHES in that actual verse as the English default.** Preserve that original verse reading without speculative word-to-PDF-span links. Where token mapping cannot be demonstrated, leave the private CHES stream unchanged rather than run a broad substitute. Only the owner's explicit, bounded original-source-backed overrides (e.g. a specific occurrence of shaped or verified wayyiqtol simple past) may change a local fragment. No universal word-for-word gloss alignment, dictionary-building or chapter-by-chapter owner authorization is required to finish the minimal private reader. See [DanMek contextual default](DANMEK_001_CHES_CONTEXTUAL_DEFAULT.md).
