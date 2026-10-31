@@ -17,6 +17,7 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from scripts.ches_index import INDEX
+from scripts.ches_import import NEH7_PRIMARY_VERSES
 
 CHAPTERS_EXPECTED = 929
 PREFIXES_EXPECTED = 39
@@ -93,11 +94,22 @@ def _validate_chapter(doc: Any, *, prefix: str, chapter: int) -> tuple[int, int,
     if not isinstance(verses, list) or len(verses) != doc["verses_extracted"]:
         raise CHESArchiveError("MISSING_OR_DUPLICATE_VERSE_COUNT")
 
+    neh7 = prefix == "neh" and chapter == 7
+    expected_numbers = (
+        NEH7_PRIMARY_VERSES if neh7 else tuple(range(1, len(verses) + 1))
+    )
+    if neh7 and len(verses) != len(NEH7_PRIMARY_VERSES):
+        raise CHESArchiveError("NEHEMIAH_7_VERSE_COUNT_MISMATCH")
     spans_seen = 0
-    for number, row in enumerate(verses, 1):
+    for number, row in zip(expected_numbers, verses):
+        expected_alternate = number - 1 if neh7 and number >= 69 else None
         if (
             not isinstance(row, dict)
             or row.get("reference") != f"{prefix}.{chapter}.{number}"
+            or row.get("original_pdf_alternate_verse_number_not_oshb_crosswalk")
+                != expected_alternate
+            or (expected_alternate is None and
+                "original_pdf_alternate_verse_number_not_oshb_crosswalk" in row)
             or row.get("publication_status") != "BLOCKED"
             or row.get("english_draft_status") != "CHES_SOURCE_ONLY_UNALIGNED"
             or not _positive_int(
