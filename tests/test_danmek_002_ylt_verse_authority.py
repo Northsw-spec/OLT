@@ -99,7 +99,7 @@ def tiny_source(verse_texts: list[str]) -> dict:
     doc = invented_chapter("gen", 1)
     doc["verses"] = [
         {
-            **copy.deepcopy(doc["verses"][i]),
+            **copy.deepcopy(doc["verses"][0]),
             "reference": f"gen.1.{i+1}",
             "source_ches_spans_NOT_OLT_TRANSLATION": [
                 {"page": 1, "pdf_x": 11.0, "pdf_y": 20.0 + i*10,
