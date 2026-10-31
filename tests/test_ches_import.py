@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from scripts.ches_index import parse_index, INDEX
 from scripts.ches_import import (
     is_ches_green, explicit_verse_markers, assign_ches_to_explicit_verses,
     write_private_json, import_private_pdf
@@ -86,6 +87,39 @@ class TestCHESPrivateImport(unittest.TestCase):
             write_private_json(dummy, allowed)
             self.assertTrue(allowed.is_file())
             self.assertEqual(json.loads(allowed.read_text(encoding="utf8")),dummy)
+
+    def test_original_pdf_index_discovery_is_safe_and_in_order(self):
+        index=(
+            '<html><body>'
+            '<a href="OTpdf/gen1.pdf">Chapter 1</a>'
+            '<a href="OTpdf/gen2.pdf">Chapter 2</a>'
+            '<a href="OTpdf/ex1.pdf">Chapter 1</a>'
+            '</body></html>'
+        ).encode("utf8")
+        result=parse_index(index)
+        self.assertEqual(result["source_index_url"],INDEX)
+        self.assertEqual(result["discovered_chapter_pdf_count"],3)
+        self.assertEqual(result["discovered_original_source_filename_prefix_count"],2)
+        self.assertEqual([c["source_book_filename_prefix_NOT_OLT_BOOK_ID"] for c in
+                         result["chapter_links"]],["gen","gen","ex"])
+        self.assertEqual([c["source_chapter_filename_number"] for c in
+                         result["chapter_links"]],[1,2,1])
+        self.assertEqual(result["downloaded_chapter_pdf_count"],0)
+        self.assertFalse(result["ches_text_extracted_from_this_index"])
+        self.assertFalse(result["rights_for_public_CHES_data_export_confirmed"])
+        self.assertEqual(result["publication_status"],"BLOCKED")
+
+    def test_external_unordered_duplicate_and_untrusted_pdf_index_urls_rejected(self):
+        for html in (
+            b'<a href="OTpdf/gen1.pdf">1</a><a href="OTpdf/gen1.pdf">again</a>',
+            b'<a href="OTpdf/gen2.pdf">2</a>',
+            b'<a href="https://evil.test/OnlineInterlinear/OTpdf/gen1.pdf">evil</a>',
+            b'<a href="../OTpdf/gen1.pdf">path traversal</a>',
+            b'<a href="OTpdf/gen1.pdf?token=bad">query</a>',
+        ):
+            with self.subTest(html=html):
+                with self.assertRaises(ValueError):
+                    parse_index(html)
 
     def test_actual_chapter_original_pdf_integration_only_when_explicit(self):
         import os
