@@ -11,11 +11,11 @@
 
 ## OLT-SIMPLE-ENGINE-001 — Binding simplified CHES-first engine (ACTIVE ENGINEERING DIRECTION)
 
-## DANMEK-006 — Verified divine pronoun casing, separate OLT English layer (2026-10-31)
+## DANMEK-007 — Divine pronoun capitalization permanently cancelled by owner (2026-10-31)
 
-- **New owner style:** English `He/Him/His/Himself` must use an uppercase initial where the pronoun **actually refers to God/the LORD**, e.g. `·He-is-making` for a verified divine subject. Human `he/him/his` remains lowercase, except normal English sentence capitalization; the antecedent must be reviewed, not inferred from the word `God` in the same verse.
-- **Implemented scope:** `scripts/danmek_006_divine_pronouns.py` is a **small, pure, separately tested formatting helper** taking an explicit verified divine-pronoun occurrence + verse and source-evidence reference. It does **not** guess antecedents and has NOT been connected to the still-future owner-preferred reordered English reading throughout 929 chapters. The CHES source JSON and source-faithful reader remain unchanged.
-- **Not done:** full OT referent identification, word order transformation, CHES `c` and article analysis, final English OLT verification, public-redistribution authorization. [Bounded owner rule](DANMEK_006_DIVINE_REFERENT_PRONOUN_CASING.md).
+- **Binding current decision:** No special `He/Him/His/Himself` uppercase styling because of a divine referent. The owner **permanently revokes DANMEK-006**; only ordinary English capitalization applies, independent of whether a pronoun means God/the LORD. `·he-is-making` remains lowercase even when the divine subject is known.
+- **Code cleanup:** remove unused DANMEK-006 helper and tests; no present or future automatic pronoun-antecedent capitalization task. Keep original CHES JSON and the separate owner-preferred explicit subject-before-verb order rule unchanged.
+- [Permanent cancellation directive](DANMEK_007_NO_DIVINE_PRONOUN_CAPITALIZATION.md). Existing Git history records DANMEK-006 only as a superseded proposal.
 
 ## DANMEK-005 — Owner-confirmed stylistic English order, not a CHES defect (2026-10-31)
 
