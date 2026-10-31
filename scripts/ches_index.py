@@ -36,9 +36,12 @@ def parse_index(source: bytes) -> dict:
     parser.feed(raw)
     results: list[dict] = []
     seen: set[str] = set()
+    duplicate_pdf_link_occurrences = 0
     for href in parser.hrefs:
         if ".pdf" not in href.lower():
             continue
+        if ".." in href or "%" in href:
+            raise ValueError("Original PDF index path may not contain traversal/encoding")
         candidate = urljoin(INDEX, href)
         url = urlsplit(candidate)
         if (url.scheme != "https" or url.netloc != "www.scripture4all.org" or
@@ -53,7 +56,10 @@ def parse_index(source: bytes) -> dict:
             raise ValueError("Unrecognized source OT chapter filename convention")
         group, number = n.group(1), int(n.group(2))
         if candidate in seen:
-            raise ValueError("Duplicate original CHES chapter URL in source index")
+            # Public index can repeat a navigation link. Preserve the
+            # occurrence count but do not download/copy it twice.
+            duplicate_pdf_link_occurrences += 1
+            continue
         seen.add(candidate)
         results.append({"source_book_filename_prefix_NOT_OLT_BOOK_ID": group,
                         "source_chapter_filename_number": number,
@@ -71,6 +77,7 @@ def parse_index(source: bytes) -> dict:
         "source_index_url": INDEX,
         "source_index_html_sha256": hashlib.sha256(source).hexdigest(),
         "discovered_chapter_pdf_count": len(results),
+        "duplicate_index_pdf_link_occurrences_deduplicated": duplicate_pdf_link_occurrences,
         "discovered_original_source_filename_prefix_count": len(groups),
         "chapter_links": results,
         "book_prefixes_are_not_approved_oshb_book_mappings": True,
