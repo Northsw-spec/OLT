@@ -23,5 +23,16 @@
     "original_pdf_in_public_repo": false,
     "source_text_excerpt_in_logs": false,
     "source_full_english_bible_translation_approved": false
-  }
+  },
+  "original_index_engineering_verification": {
+    "original_index_html_sha256_observed": "7c1a28074254b04638a3784ec272681badc66908053617154f4e9fa242de46e1",
+    "source_ot_unique_chapter_links_found": 929,
+    "source_ot_pdf_filename_prefix_groups_found": 39,
+    "duplicate_navigation_link_occurrences": 1,
+    "whole_929_chapters_ch_es_data_downloaded": false,
+    "source_copyrighted_text_in_public_git": false,
+    "chapter_index_only_does_not_certify_source_verse_alignment": true
+  },
+  "private_batch_importer_implemented": true,
+  "private_bulk_929_chapter_import_executed": false
 }
