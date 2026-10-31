@@ -27,14 +27,14 @@ def pin(text: str, surface: str, index: int = 0, *,
 
 class TestDivinePronouns(unittest.TestCase):
     def test_owner_example_god_subject_he_is_making(self):
-        source = "and Elohim ·he-is-making »the·atmosphere"
+        source = "and Elohim ·he-is-making »the·prototype"
         annotated = (pin(source, "he", referent="GOD"),)
         rendered = capitalize_verified_divine_pronouns(
             source, verse_reference="gen.1.7", mentions=annotated,
         )
         self.assertEqual(
             rendered,
-            "and Elohim ·He-is-making »the·atmosphere",
+            "and Elohim ·He-is-making »the·prototype",
         )
         self.assertEqual(source, "and Elohim ·he-is-making »the·atmosphere")
 
