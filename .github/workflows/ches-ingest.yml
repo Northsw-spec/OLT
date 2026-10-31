@@ -1,0 +1,60 @@
+name: CHES private-local import geometry audit (no copyrighted text artifacts)
+on:
+  pull_request:
+    paths:
+      - "scripts/ches_pdf_probe.py"
+      - "scripts/ches_import.py"
+      - "scripts/ches_index.py"
+      - "scripts/ches_private_batch.py"
+      - "data/engine/olt_ches_source_manifest.json"
+      - "tests/test_ches_import.py"
+      - ".github/workflows/ches-ingest.yml"
+      - "docs/OLT_CHES_PRIVATE_INGEST.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/ches_pdf_probe.py"
+      - "scripts/ches_import.py"
+      - "scripts/ches_index.py"
+      - "scripts/ches_private_batch.py"
+      - "data/engine/olt_ches_source_manifest.json"
+      - "tests/test_ches_import.py"
+      - ".github/workflows/ches-ingest.yml"
+      - "docs/OLT_CHES_PRIVATE_INGEST.md"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  private-ches-import-structure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned PDF text positioning dependency
+        run: python -m pip install PyMuPDF==1.26.5
+      - name: Verify all 39 source book-index prefixes and exact chapter-link count without text copying
+        run: |
+          curl --fail --location --retry 3 --max-time 45 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm \
+            --output "$RUNNER_TEMP/ches-hebrew-index.html"
+          python scripts/ches_index.py --index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --require-ot-chapters 929 --require-books 39
+      - name: Obtain single original Genesis 1 PDF only to ephemeral runner storage
+        run: |
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen1.pdf \
+            --output "$RUNNER_TEMP/ches-gen1.pdf"
+          test "$(wc -c < "$RUNNER_TEMP/ches-gen1.pdf")" -gt 5000
+      - name: Inspect source PDF colors geometry and verse references without emitting source text
+        run: python scripts/ches_pdf_probe.py --pdf "$RUNNER_TEMP/ches-gen1.pdf"
+      - name: Test private-safe importer contracts and actual hash-pinned Genesis PDF
+        env:
+          CHES_TEST_PDF: ${{ runner.temp }}/ches-gen1.pdf
+        run: python -m unittest discover -s tests -p 'test_ches_import.py' -v
+      - name: Verify 1-chapter extraction in memory; no copyrighted payload or stored artifacts
+        run: python scripts/ches_import.py --pdf "$RUNNER_TEMP/ches-gen1.pdf" --book Gen --chapter 1 --audit
