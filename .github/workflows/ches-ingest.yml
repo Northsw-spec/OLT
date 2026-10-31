@@ -229,8 +229,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_ches_009_source_discovery.py' -v
       - name: CHES-009 check two new PDF links exist in authoritative original chapter index
         run: |
-          grep -Fq 'OTpdf/gen4.pdf' "$RUNNER_TEMP/ches-index.html"
-          grep -Fq 'OTpdf/exo2.pdf' "$RUNNER_TEMP/ches-index.html"
+          grep -Fq 'OTpdf/gen4.pdf' "$RUNNER_TEMP/ches-hebrew-index.html"
+          grep -Fq 'OTpdf/exo2.pdf' "$RUNNER_TEMP/ches-hebrew-index.html"
       - name: CHES-009 fetch two authentic original chapter PDF candidates (ephemeral only)
         run: |
           curl --fail --location --retry 3 --max-time 65 --silent --show-error \
