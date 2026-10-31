@@ -15,6 +15,9 @@ from urllib.parse import urlsplit
 
 from scripts.ches_import import import_private_pdf, write_private_json
 from scripts.ches_index import INDEX, parse_index
+from scripts.ches_013_structural_exceptions import (
+    structural_code, record_structural_exception, resolve_structural_exception,
+)
 
 INDEX_BYTES_MAX=3_000_000
 PDF_BYTES_MAX=30_000_000
@@ -53,17 +56,20 @@ def validate_inventory(source: bytes) -> dict:
 def private_batch(index: dict, private_root: Path, *,
                   limit: int,
                   delay_seconds: float = 1.5,
+                  continue_on_structural_error: bool = False,
                   fetch=fetch_exact_source) -> dict:
     """Sequential, resumable only, fails closed on the first unsafe chapter."""
     if not 1<=limit<=EXPECTED_OT_CHAPTERS:
         raise ValueError("Unsafe private batch chapter limit")
     if delay_seconds < 1.0:
         raise ValueError("Bulk importer requires a slow per-chapter request delay")
+    if type(continue_on_structural_error) is not bool:
+        raise ValueError("Unsafe structural exception mode")
     root=private_root.expanduser().resolve()
     if ".olt-private" not in root.parts:
         raise ValueError("Private CHES corpus must reside in .olt-private")
     chapters=index["chapter_links"][:limit]
-    imported=resumed=0
+    imported=resumed=deferred=fetch_attempts=0
     for position, row in enumerate(chapters,1):
         prefix=row["source_book_filename_prefix_NOT_OLT_BOOK_ID"]
         chapter=row["source_chapter_filename_number"]
@@ -83,15 +89,32 @@ def private_batch(index: dict, private_root: Path, *,
                 raise ValueError("Existing private CHES extract cannot safely resume: "+target.name)
             resumed += 1
             continue
-        if imported>0:
+        if fetch_attempts > 0:
             time.sleep(delay_seconds)
+        fetch_attempts += 1
         pdf=fetch(url,PDF_BYTES_MAX)
-        result=import_private_pdf(pdf,prefix,chapter)
+        try:
+            result=import_private_pdf(pdf,prefix,chapter)
+        except ValueError as exc:
+            diagnostic=structural_code(exc)
+            if not continue_on_structural_error or diagnostic is None:
+                raise
+            record_structural_exception(
+                root, prefix=prefix, chapter=chapter, pdf_data=pdf,
+                index_sha256=index["source_index_html_sha256"],
+                diagnostic_code=diagnostic,
+            )
+            deferred += 1
+            print(f"CHES013_SOURCE_EXCEPTION source={prefix}.{chapter} code={diagnostic} "
+                  "status=UNRESOLVED release=BLOCKED")
+            continue
         result["source_origin_url"]=url
         result["source_original_index_sha256"]=index["source_index_html_sha256"]
         result["owner_attested_machine_readable_permission_no_public_distribution"]=True
         result["source_chapter_verse_count_independent_oshb_qa"]="NOT_DONE"
         write_private_json(result,target)
+        # Never silently resolve an exception for *different* source bytes.
+        resolve_structural_exception(root,prefix=prefix,chapter=chapter,pdf_data=pdf)
         imported += 1
         print(f"PRIVATE_SOURCE_IMPORT {position}/{len(chapters)} source={prefix}.{chapter} verses={result['verses_extracted']} ches_spans={result['ches_pdf_green_spans']} release=BLOCKED")
     return {
@@ -100,6 +123,13 @@ def private_batch(index: dict, private_root: Path, *,
         "selected_chapter_count": len(chapters),
         "newly_imported_to_private_storage": imported,
         "existing_private_chapters_validated_for_resume_only": resumed,
+        "deferred_structurally_unreadable_source_chapters": deferred,
+        "source_pdf_fetch_attempts": fetch_attempts,
+        "selected_chapter_files_present_after_run": imported + resumed,
+        "all_selected_chapter_files_present_by_count_only":
+            (imported + resumed == len(chapters) and deferred == 0),
+        "import_run_status": ("INCOMPLETE_UNRESOLVED_STRUCTURAL_EXCEPTIONS"
+                              if deferred else "SELECTED_SOURCE_CHAPTERS_STORED_NOT_CERTIFIED"),
         "original_source_to_oshb_alignment_certified": False,
         "whole_old_testament_chapter_coverage_qa_complete": False,
         "owner_english_scripture_translation_approved": False,
@@ -117,7 +147,12 @@ def main() -> int:
     parser.add_argument("--private-root",type=Path,default=Path(".olt-private/ches"))
     parser.add_argument("--confirm-machine-readable-use-permission",action="store_true")
     parser.add_argument("--delay-seconds",type=float,default=1.5)
+    parser.add_argument("--continue-on-structural-error",action="store_true",
+                        help="Opt-in: record only known PDF verse-layout problems privately, "
+                             "keep importing other chapters, exit nonzero if gaps remain")
     opts=parser.parse_args()
+    if opts.inventory_only and opts.continue_on_structural_error:
+        parser.error("Exception handling applies only to private chapter imports")
     if not opts.inventory_only and not opts.confirm_machine_readable_use_permission:
         parser.error("Private CHES import requires authorization for machine-readable use")
     index=validate_inventory(fetch_exact_source(INDEX,INDEX_BYTES_MAX))
@@ -127,9 +162,10 @@ def main() -> int:
         return 0
     limit=EXPECTED_OT_CHAPTERS if opts.import_all else opts.import_first
     report=private_batch(index,opts.private_root,limit=limit,
-                         delay_seconds=opts.delay_seconds)
+                         delay_seconds=opts.delay_seconds,
+                         continue_on_structural_error=opts.continue_on_structural_error)
     print(json.dumps(report,indent=2,sort_keys=True))
-    return 0
+    return 2 if report["deferred_structurally_unreadable_source_chapters"] else 0
 
 
 if __name__=="__main__":
