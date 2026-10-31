@@ -9,6 +9,8 @@ on:
       - "scripts/ches_oshb_verse_qa.py"
       - "olt_core/english_drafts.py"
       - "tests/test_ches_002_source_first.py"
+      - "scripts/ches_private_alignment_review.py"
+      - "tests/test_ches_003_private_review.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -23,6 +25,8 @@ on:
       - "scripts/ches_oshb_verse_qa.py"
       - "olt_core/english_drafts.py"
       - "tests/test_ches_002_source_first.py"
+      - "scripts/ches_private_alignment_review.py"
+      - "tests/test_ches_003_private_review.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -68,3 +72,10 @@ jobs:
         run: python -m scripts.ches_oshb_verse_qa --pdf "$RUNNER_TEMP/ches-gen1.pdf"
       - name: Check deterministic 31-verse English research draft against original source tokens
         run: python -m unittest discover -s tests -p 'test_ches_002_source_first.py' -v
+- name: Check synthetic private manual word-review queue safety and source identities
+        run: python -m unittest discover -s tests -p 'test_ches_003_private_review.py' -v
+      - name: Audit real Genesis PDF privately without writing or logging CHES text
+        run: |
+          python -m scripts.ches_private_alignment_review \
+            --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
+            --confirm-machine-readable-use-permission --audit
