@@ -1,7 +1,7 @@
 """CHES-006: source-checked, text-free multi-chapter interlinear layout telemetry.
 
-The source provider is explicitly licensed for private machine-readable use as
-reported by the owner. Do NOT emit copyrighted green PDF text, accept inferred
+The owner reports permission for private machine-readable CHES use; no
+rights for public redistribution or final translations are presumed. Do NOT emit copyrighted green PDF text, accept inferred
 word alignment, or count a typography-span mismatch as a translation error.
 
 The only present scope is four authentic OT chapter layouts. Other 925 chapter
@@ -10,8 +10,6 @@ PDFs and the Greek NT remain OUT OF SCOPE. All real PDF access is ephemeral.
 from __future__ import annotations
 
 import argparse
-from collections import Counter
-import hashlib
 import json
 from pathlib import Path
 import re
@@ -34,7 +32,7 @@ class CHESLayoutMetricsError(ValueError):
     """Unverified chapter source, rights, PDF identity or geometry."""
 
 
-def _source_bytes_and_geometry(pdf_bytes: bytes) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+def _source_geometry(pdf_bytes: bytes) -> list[dict[str, Any]]:
     """Extract actual PDF layout without letting green copyrighted text escape."""
     import fitz
     with fitz.open(stream=pdf_bytes, filetype="pdf") as pdf:
@@ -42,7 +40,7 @@ def _source_bytes_and_geometry(pdf_bytes: bytes) -> tuple[dict[str, Any], list[d
             span for page_number, page in enumerate(pdf, 1)
             for span in page_spans(page, page_number)
         ]
-    return {"original_pdf_sha256": hashlib.sha256(pdf_bytes).hexdigest()}, original_spans
+    return original_spans
 
 
 def measure_private_chapter_layout(
@@ -53,8 +51,8 @@ def measure_private_chapter_layout(
     """Check authentic OSHB IDs and page/verse layout; never verify word links.
 
     full_pdf_spans is only used for counts and coordinates. No source text is
-    retained in this returned report. Unpinned discovery is explicitly unsafe
-    for downstream English drafting and must NOT be used to publish.
+    retained in this returned report. Every chapter requires an exact source
+    pin; these metrics do NOT certify English translation or word alignment.
     """
     if not isinstance(source, dict):
         raise CHESLayoutMetricsError("Missing private imported chapter")
@@ -111,10 +109,8 @@ def measure_private_chapter_layout(
     total_words = total_spans = 0
     source_pages: set[int] = set()
     spans_per_verse: list[int] = []
-    word_per_verse: list[int] = []
     same_verse_span_word_count_differs = 0
     green_over_page_breaks = 0
-    outside_original_verse_y = 0
     for i, row in enumerate(rows, 1):
         ref = f"{book}.{chapter}.{i}"
         if not isinstance(row, dict) or row.get("reference") != ref or (
@@ -157,7 +153,6 @@ def measure_private_chapter_layout(
         if len(green) != len(verse_words):
             same_verse_span_word_count_differs += 1
         spans_per_verse.append(len(green))
-        word_per_verse.append(len(verse_words))
         total_words += len(verse_words)
         total_spans += len(green)
     if (type(source.get("ches_pdf_green_spans")) is not int or
@@ -234,7 +229,7 @@ def audit_real_pdf(
     if expected is None:
         raise CHESLayoutMetricsError("Unsupported source chapter")
     chapter_source = import_private_pdf(original_bytes, book, chapter, expected_verses=expected)
-    _, full_spans = _source_bytes_and_geometry(original_bytes)
+    full_spans = _source_geometry(original_bytes)
     return measure_private_chapter_layout(
         chapter_source, root=root, full_pdf_spans=full_spans,
     )
