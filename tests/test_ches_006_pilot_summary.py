@@ -81,6 +81,7 @@ class TestCHES006PilotSummary(unittest.TestCase):
             ("oshb_to_pdf_word_alignment_verified", True),
             ("english_grammar_rules_automatically_applied", True),
             ("full_old_testament_processed", True),
+            ("layout_requires_exception_review", False),
             ("raw_original_pdf_green_span_count", -1),
             ("unassigned_original_green_spans", 5),
             ("authentic_oshb_verse_references_checked", True),
