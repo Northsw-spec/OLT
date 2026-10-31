@@ -320,7 +320,8 @@ def build_private_reader(
         )
     return {
         "checkpoint": "CHES-015-DIRECT",
-        "mode": "PRIVATE_OFFLINE_ORIGINAL_SOURCE_READER",
+        "mode": ("PRIVATE_OLT_ENGLISH_DISPLAY" if olt_display_faces
+                 else "PRIVATE_OFFLINE_ORIGINAL_SOURCE_READER"),
         "observed_chapter_count": len(records),
         "expected_ot_chapter_count": CHAPTERS_EXPECTED,
         "observed_source_prefix_groups": len(chapters_by_prefix),
@@ -328,6 +329,9 @@ def build_private_reader(
         "observed_verse_count": total_verses,
         "observed_source_fragment_count": total_fragments,
         "ylt_1898_public_domain_verse_comparison_used": use_ylt_authority,
+        "olt_display_faces_enabled": olt_display_faces,
+        "olt_display_sur_faces_to_faces_count": count_display_faces,
+        "olt_display_hebrew_lemma_alignment_verified": False,
         "ylt_noun_edit_count": count_noun_edits,
         "ylt_tense_edit_count": count_tense_edits,
         "ylt_verses_unmapped_left_unchanged": count_unmapped,
@@ -341,7 +345,7 @@ def build_private_reader(
             len(records) == CHAPTERS_EXPECTED and len(chapters_by_prefix) == PREFIXES_EXPECTED
             and missing == 0,
         "source_fragment_text_linguistically_modified":
-            bool(count_noun_edits + count_tense_edits),
+            bool(count_noun_edits + count_tense_edits + count_display_faces),
         "original_pdf_bytes_independently_rehashed": False,
         "upstream_source_index_independently_checked": False,
         "independent_english_olt_translation_produced": False,
