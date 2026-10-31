@@ -22,6 +22,7 @@ from scripts.ches_014_offline_english_bridge import (
     CHES014BridgeError, _private_archive_root, _load_private_source,
 )
 from scripts.ches_local_archive_audit import CHAPTERS_EXPECTED, PREFIXES_EXPECTED
+from scripts.danmek_008_english_display import REVISION as OLT_DISPLAY_REVISION, simplify_sur_faces_for_olt_view
 from scripts.danmek_ylt import (
     REVISION as YLT_OVERLAY_REVISION, DanMekYLTError,
     load_private_ylt, propose_ylt_verse_overrides,
@@ -167,6 +168,7 @@ def _write_once(path: Path, content: bytes) -> None:
 
 def build_private_reader(
     source_root: Path, *, render: bool = False, use_ylt_authority: bool = False,
+    olt_display_faces: bool = False,
 ) -> dict:
     """Inspect all present private chapters, optionally write static HTML.
 
