@@ -22,8 +22,8 @@ def dummy(book="Gen", chapter=1):
     known = {
         ("Gen", 1): (31, "source_reference", 4),
         ("Gen", 2): (25, "additional_chapter_layout_source_reference", 3),
-        ("Gen", 3): (24, None, 3),
-        ("Exod", 1): (22, None, 3),
+        ("Gen", 3): (24, "third_chapter_layout_source_reference", 3),
+        ("Exod", 1): (22, "cross_book_layout_source_reference", 3),
     }
     count, manifest_key, pages = known[(book, chapter)]
     pin = MANIFEST[manifest_key] if manifest_key else {}
@@ -35,8 +35,10 @@ def dummy(book="Gen", chapter=1):
             green_count = 16 if i == 1 else 17
         elif count == 25:
             green_count = 16 if i <= 2 else 15
+        elif count == 24:
+            green_count = 18 if i <= 7 else 17
         else:
-            green_count = 4
+            green_count = 16 if i <= 20 else 15
         gray_marker = {"page": page, "x": 5.0, "y": float(i*20 - 1),
                        "color": 0x888888, "text": f"{chapter}:{i}"}
         raw.append(gray_marker)
@@ -121,20 +123,25 @@ class TestCHES006GeometryAndSourceMetrics(unittest.TestCase):
         with self.assertRaises(CHESLayoutMetricsError):
             measure_private_chapter_layout(bad_source, full_pdf_spans=bad_raw)
 
-    def test_unpinned_chapter_is_discovery_only_not_automatically_engine_ready(self):
-        for book, chapter in (("Gen", 3), ("Exod", 1)):
+    def test_new_chapters_are_pinned_and_do_not_accept_changed_original_files(self):
+        for book, chapter, expected_spans, expected_words in (
+            ("Gen", 3, 415, 347), ("Exod", 1, 350, 240)
+        ):
             with self.subTest(book=book, chapter=chapter):
                 source, raw = dummy(book, chapter)
-                with self.assertRaises(CHESLayoutMetricsError):
-                    measure_private_chapter_layout(source, full_pdf_spans=raw)
-                result = measure_private_chapter_layout(
-                    source, full_pdf_spans=raw, discovery_only_unpinned=True
-                )
-                self.assertEqual(result["source_pin_status"],
-                                 "DISCOVERY_UNPINNED_NOT_APPROVED_FOR_ENGINE")
-                self.assertEqual(result["printed_verse_markers_checked"],
-                                 len(source["verses"]))
+                result = measure_private_chapter_layout(source, full_pdf_spans=raw)
+                self.assertEqual(result["source_pin_status"], "ORIGINAL_PDF_PINNED_EXACT")
+                self.assertEqual(result["private_pdf_green_spans_observed_not_oshb_word_aligned"],
+                                 expected_spans)
+                self.assertEqual(result["authentic_oshb_word_tokens_observed_not_ches_aligned"],
+                                 expected_words)
+                self.assertEqual(result["printed_verse_markers_checked"], len(source["verses"]))
+                self.assertEqual(result["unassigned_original_green_spans"], 0)
                 self.assertFalse(result["oshb_to_pdf_word_alignment_verified"])
+                wrong = copy.deepcopy(source)
+                wrong["original_source_pdf_sha256"] = "0" * 64
+                with self.assertRaises(CHESLayoutMetricsError):
+                    measure_private_chapter_layout(wrong, full_pdf_spans=raw)
 
     def test_pinned_original_source_identity_and_rights_never_relaxed(self):
         source, raw = dummy("Gen", 1)
