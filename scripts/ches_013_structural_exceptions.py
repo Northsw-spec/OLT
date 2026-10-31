@@ -114,21 +114,30 @@ def record_structural_exception(
     write_private_json(report, path)
 
 
-def resolve_structural_exception(
+def verify_reimport_does_not_conflict_with_private_exception(
     private_root: Path, *, prefix: str, chapter: int, pdf_data: bytes,
 ) -> None:
-    """Resolve only an exception for the same original PDF after it parsed."""
+    """Preflight before any chapter output is written, fail on changed source."""
     path = _ledger_file(private_root, prefix, chapter)
     if not path.exists() and not path.is_symlink():
         return
-    source_sha = hashlib.sha256(pdf_data).hexdigest()
-    old = _existing(path, original_source_sha=source_sha)
-    if old is None:
-        return
-    if (old.get("original_source_prefix") != prefix or
+    old = _existing(path, original_source_sha=hashlib.sha256(pdf_data).hexdigest())
+    if (not isinstance(old, dict) or
+        old.get("original_source_prefix") != prefix or
         old.get("original_source_chapter") != chapter or
         old.get("diagnostic_code") not in _STRUCTURAL_CODES.values() or
         old.get("word_alignment_verified") is not False):
         raise CHES013ExceptionError("EXCEPTION_SOURCE_IDENTITY_CHANGED")
-    updated = dict(old, state="RESOLVED_BY_REIMPORT")
-    write_private_json(updated, path)
+
+
+def resolve_structural_exception(
+    private_root: Path, *, prefix: str, chapter: int, pdf_data: bytes,
+) -> None:
+    """Resolve only an exception for the same original PDF after it parsed."""
+    verify_reimport_does_not_conflict_with_private_exception(
+        private_root, prefix=prefix, chapter=chapter, pdf_data=pdf_data
+    )
+    path = _ledger_file(private_root, prefix, chapter)
+    if path.exists():
+        old = _existing(path, original_source_sha=hashlib.sha256(pdf_data).hexdigest())
+        write_private_json(dict(old, state="RESOLVED_BY_REIMPORT"), path)
