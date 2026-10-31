@@ -2,6 +2,12 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-002 — YLT 1898 is authoritative for bounded noun and tense edits
+
+**Latest binding owner rule (2026-10-31):** CHES remains the direct `.json` English source. **Every change to English tense or to an excessively modern CHES noun is adjudicated by the matching verse in Young's Literal Translation (YLT, 1898)**. Example: `portal → door` only where that specific YLT verse actually uses `door`; if YLT says `gate` or the relevant occurrence cannot be established, keep the CHES verse unchanged. Do not perform global find-and-replace, guess Hebrew→English word alignment, or create a new independent lexicon.
+
+The [minimal implemented YLT overlay](DANMEK_002_YLT_NOUN_TENSE_AUTHORITY.md) uses a pinned historic public-domain YLT JSON and a **small candidate table** for nouns/tense only. A candidate requires one CHES original-form occurrence and one YLT target-form occurrence in the same original source chapter/verse; ambiguous/missing crosswalks remain unchanged. The editable DanMek layer is separate from original CHES private JSON. The YLT-only comparison is not Hebrew morphological certification or final English translation quality proof. Historic owner wayyiqtol simple-past policy may conflict with YLT historic presents; record and do not silently claim the two policies have already been harmonized.
+
 ## DANMEK-JSON-001 — Direct authorized CHES JSON is the canonical English input
 
 **Owner confirmation (2026-10-31):** The owner has permission to **use CHES** and directs OLT/DanMek to consume the **existing, locally extracted CHES JSON files directly**. No additional PDF retrieval, CHES reconstruction, lemma sense resolver, dictionary engineering, or intermediate translation engine is required to produce the baseline **private English reading**. Our existing `scripts.ches_015_direct_private_reader` already implements this direct JSON-to-private-HTML path for all present source chapters.
