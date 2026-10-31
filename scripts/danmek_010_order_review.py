@@ -189,6 +189,7 @@ def scan_private_order_candidates(
     except CHES014BridgeError as exc:
         raise DanMek010Error("PRIVATE_SOURCE_ROOT_UNSAFE") from exc
     digest = hashlib.sha256(REVISION.encode("ascii"))
+    digest.update(f"max={max_saved};filter={prefix_filter};chapter={chapter_filter}".encode("ascii"))
     records = []
     chapters = verses = ambiguous = eligible = 0
     rows: list[tuple[dict, list[str]]] = []
