@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-011 — Owner-approved English candidate reordering (2026-10-31)
+
+- **Owner explicitly approved every proposed DANMEK-010 English subject/verb connection as an editorial choice.** The opt-in reader `--olt-owner-approved-candidates` automatically reorders all uniquely detected candidate phrases in all locally present private OT CHES chapters, and reports applied/ambiguous/YLT-conflict/untouched counts. Original CHES source JSON remains unchanged.
+- **Scope remains honest:** owner approval of English presentation is NOT philological verification of Hebrew/Aramaic grammatical subject, original-text alignment, or complete Hebrew→English transformation. Unmatched, ambiguous or conflicting cases remain unchanged. Separate DANMEK-009 individually syntax-reviewed rules are mutually exclusive, but remain available. Special divine pronoun capitalization remains permanently revoked.
+- **Operational next step:** render the owner-approved snapshot locally (GitHub cannot access the private CHES source archive). [DANMEK-011](DANMEK_011_OWNER_APPROVED_ENGLISH_ORDER.md). English-only priority and publication BLOCKED unchanged.
+
 ## DANMEK-010 — Offline private candidate discovery and review
 
 - **Implementation:** `scripts.danmek_010_order_review` scans local source-validated private CHES JSON, proposes conservative adjacent/inline English subject-first candidates, counts ambiguous cases and optionally writes **private** versioned review HTML + unapproved candidate JSON. No automatically inferred subject is treated as a proven Hebrew syntax role.
