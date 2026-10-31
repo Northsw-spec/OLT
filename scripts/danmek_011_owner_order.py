@@ -114,7 +114,7 @@ def discover_candidates(
             # a false candidate: only JOINED_YAHWEH can authorize the safe,
             # bounded Yahweh + from· clause shape above.
             if (text[match.end():].startswith("·")
-                    and match["subject"].endswith(("from", "and", "into", "upon", "before", "after", "among", "to", "in", "at"))):
+                    and match["subject"].endswith(("from", "and", "into", "upon", "before", "after", "among", "to", "in", "at", "of"))):
                 # Greedy capitalized matching could otherwise absorb
                 # a following glued preposition/conjunction into the name.
                 continue
