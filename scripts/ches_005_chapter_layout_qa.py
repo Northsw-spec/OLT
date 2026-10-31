@@ -36,6 +36,24 @@ def verify_genesis_two_layout(private_source: dict[str, Any],
     sha = private_source.get("original_source_pdf_sha256")
     if not isinstance(sha, str) or not re.fullmatch("[0-9a-f]{64}", sha):
         raise CHESChapterLayoutError("No SHA256 original PDF identity")
+    manifest = json.loads((root / "data/engine/olt_ches_source_manifest.json").read_text(
+        encoding="utf-8"))
+    pinned = manifest["additional_chapter_layout_source_reference"]
+    if (pinned["original_book"] != "Gen" or pinned["original_chapter"] != 2 or
+        pinned["independent_pdf_filename_to_oshb_book_mapping_verified"] is not False or
+        pinned["word_and_morpheme_alignment_verified"] is not False or
+        pinned["full_source_text_in_public_git_permitted"] is not False or
+        pinned["source_pdf_stored_in_public_repo"] is not False):
+        raise CHESChapterLayoutError("Source manifest violates original text or permission policy")
+    for actual, expected in (
+        (sha, pinned["source_pdf_sha256"]),
+        (private_source.get("source_pdf_byte_length"), pinned["source_pdf_bytes"]),
+        (private_source.get("source_pdf_page_count"), pinned["source_pdf_pages"]),
+        (private_source.get("verses_extracted"), pinned["printed_pdf_verses_confirmed_by_engineering"]),
+        (private_source.get("ches_pdf_green_spans"), pinned["green_ches_pdf_spans_extracted"]),
+    ):
+        if type(actual) is not type(expected) or actual != expected:
+            raise CHESChapterLayoutError("Pinned authentic Genesis 2 PDF identity or structure changed")
     page_count = private_source.get("source_pdf_page_count")
     byte_count = private_source.get("source_pdf_byte_length")
     if (type(page_count) is not int or not 1 <= page_count <= 100 or
@@ -73,8 +91,9 @@ def verify_genesis_two_layout(private_source: dict[str, Any],
         total_words += len(word_rows)
         total_spans += len(row["source_ches_spans_NOT_OLT_TRANSLATION"])
     if (private_source.get("ches_pdf_green_spans") != total_spans or
-        total_spans < 25 or total_words < 25):
-        raise CHESChapterLayoutError("Green span or original word count mismatch")
+        total_spans != pinned["green_ches_pdf_spans_extracted"] or
+        total_words != pinned["oshb_original_word_tokens_observed"]):
+        raise CHESChapterLayoutError("Pinned Genesis 2 CHES span / authentic Hebrew word counts disagree")
     return {
         "checkpoint": "CHES-005-GENESIS-2-LAYOUT-QA",
         "original_pdf_sha256_observed": sha,
