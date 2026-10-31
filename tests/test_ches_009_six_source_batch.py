@@ -18,7 +18,7 @@ from scripts.ches_006_layout_metrics import PILOT
 from scripts.ches_010_pin_registry import pinned_record
 from scripts.ches_007_multichapter_english import NEW_ENGLISH_CHAPTERS
 from scripts.ches_008_private_batch import (
-    BATCH, EXTENDED_BATCH, INDEXED_BATCH, CHESBatchError, STATE_FILE,
+    BATCH, EXTENDED_BATCH, INDEXED_BATCH, ALL_INDEXED_BATCH, CHESBatchError, STATE_FILE,
     _report_contract, run_private_chapter_batch,
 )
 
@@ -29,7 +29,7 @@ MANIFEST = json.loads(
 
 def synthetic_private_report(book: str, chapter: int) -> dict:
     _, _, _, source_key = next(
-        item for item in INDEXED_BATCH if item[:2] == (book, chapter)
+        item for item in ALL_INDEXED_BATCH if item[:2] == (book, chapter)
     )
     pin = (pinned_record(book,chapter) if source_key in ("indexed_original_source_pins", "additional_indexed_original_source_pins")
            else MANIFEST[source_key])
