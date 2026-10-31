@@ -68,6 +68,13 @@ def discover_candidates(
                 "original_verb": text, "original_subject": texts[index + 1],
             })
         for match in INLINE.finditer(text):
+            # The generic capitalized-word pattern otherwise greedily calls
+            # the glued text "Yahwehfrom" a proper noun. Do not count such
+            # a false candidate: only JOINED_YAHWEH can authorize the safe,
+            # bounded Yahweh + from· clause shape above.
+            if (match["subject"] == "Yahwehfrom"
+                    and text[match.end():].startswith("·")):
+                continue
             found.append({
                 "reference": reference, "chapter_json_sha256": chapter_sha256,
                 "mode": "inline", "source_syntax_reviewed": False,
