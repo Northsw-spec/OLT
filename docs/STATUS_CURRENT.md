@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-014 — Owner-requested standalone lowercase c cleanup (2026-11-01)
+
+- **Target:** In the private owner-approved OLT reading, suppress lowercase `c` as a **separate whitespace-delimited marker**, including when embedded within one PDF-text fragment at the start/middle/end of a line, and repeated `c c` or `cc`. Do not remove c inside real words or uppercase `C`, `c.`, `c·`, punctuation-attached annotations.
+- **Implementation:** Updated `hide_isolated_c` is still display-only, enabled by the existing `--olt-owner-approved-candidates` flag, and now reports `olt_standalone_lowercase_c_letters_hidden` in addition to the preexisting whole-fragment counter. The revision changes the HTML snapshot identity, avoiding any overwrite of the locked owner-verified DANMEK-013 baseline. No source file or grammar rule changed.
+- **Verification boundary:** GitHub Actions validates synthetic cases only; the owner has not yet visually verified this new DANMEK-014 snapshot. **Earlier accepted DANMEK-013 presentation stays locked**, and publication remains BLOCKED. [DANMEK-014](DANMEK_014_HIDE_STANDALONE_C.md).
+
 ## OWNER-VISUAL-VERIFIED LOCK — Private OLT English reading (2026-11-01)
 
 - **Status:** The owner personally inspected the current private Parrot English HTML reading and explicitly accepted it as **correct, visually verified, and LOCKED**. Protected `main` baseline commit `8e10a1b97f8dd98ed9a59deba31e9683b236ac5c` (DANMEK-013), with GitHub Actions foundation success [run 41251067681](https://github.com/Northsw-spec/OLT/actions/runs/41251067681). This records owner verification, not an assistant inference.
