@@ -57,6 +57,13 @@ class TestDanMek010PrivateCandidateReview(unittest.TestCase):
         self.assertEqual(len(inline), 1)
         self.assertEqual(inline[0]["mode"], "inline")
         self.assertEqual(inline[0]["original_subject"], "Worker")
+        glued, ambiguous = discover_candidates(
+            "gen.1.4", sha, ["and·he-is-buildingLeader»the·house"],
+        )
+        self.assertFalse(ambiguous)
+        self.assertEqual(len(glued), 1)
+        self.assertEqual(glued[0]["original_verb"], "and·he-is-building")
+        self.assertEqual(glued[0]["original_subject"], "Leader")
         self.assertEqual(
             discover_candidates("gen.1.3", sha, ["door", "wall"]),
             ([], False),
