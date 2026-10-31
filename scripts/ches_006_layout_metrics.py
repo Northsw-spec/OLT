@@ -4,7 +4,7 @@ The owner reports permission for private machine-readable CHES use; no
 rights for public redistribution or final translations are presumed. Do NOT emit copyrighted green PDF text, accept inferred
 word alignment, or count a typography-span mismatch as a translation error.
 
-The only present scope is four authentic OT chapter layouts. Other 925 chapter
+The active scope is six exact SHA-pinned authentic OT chapter layouts. Other 925 chapter
 PDFs and the Greek NT remain OUT OF SCOPE. All real PDF access is ephemeral.
 """
 from __future__ import annotations
@@ -25,6 +25,8 @@ PILOT = {
     ("Gen", 2): (25, "additional_chapter_layout_source_reference"),
     ("Gen", 3): (24, "third_chapter_layout_source_reference"),
     ("Exod", 1): (22, "cross_book_layout_source_reference"),
+    ("Gen", 4): (26, "fifth_chapter_layout_source_reference"),
+    ("Exod", 2): (25, "sixth_chapter_layout_source_reference"),
 }
 
 
@@ -59,7 +61,7 @@ def measure_private_chapter_layout(
     book, chapter = source.get("book"), source.get("chapter")
     if (type(book) is not str or type(chapter) is not int or
         (book, chapter) not in PILOT):
-        raise CHESLayoutMetricsError("This QA only covers four explicitly chosen original OT chapters")
+        raise CHESLayoutMetricsError("This QA only covers six explicitly source-pinned OT chapters")
     expected_verses, source_key = PILOT[(book, chapter)]
     if (source.get("source_book_identifier_is_not_verified_oshb_book_mapping") is not True or
         source.get("full_source_text_in_public_git_permitted") is not False or

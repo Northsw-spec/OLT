@@ -27,6 +27,7 @@ on:
       - "tests/test_ches_008_private_batch.py"
       - "scripts/ches_009_source_discovery.py"
       - "tests/test_ches_009_source_discovery.py"
+      - "tests/test_ches_009_six_source_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -59,6 +60,7 @@ on:
       - "tests/test_ches_008_private_batch.py"
       - "scripts/ches_009_source_discovery.py"
       - "tests/test_ches_009_source_discovery.py"
+      - "tests/test_ches_009_six_source_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -260,3 +262,37 @@ jobs:
           python -m scripts.ches_009_source_discovery \
             --book Exod --chapter 2 --pdf "$RUNNER_TEMP/ches-ex2.pdf" \
             --confirm-machine-readable-use-permission
+      - name: CHES-009 synthetically verify backward-compatible private four-to-six chapter restart
+        run: python -m unittest discover -s tests -p 'test_ches_009_six_source_batch.py' -v
+      - name: CHES-009 audit pinned real Genesis 4 layout and genuine OSHB original words
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Gen --chapter 4 --pdf "$RUNNER_TEMP/ches-gen4.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-009 audit pinned real Exodus 2 layout and genuine OSHB original words
+        run: |
+          python -m scripts.ches_006_layout_metrics \
+            --book Exod --chapter 2 --pdf "$RUNNER_TEMP/ches-ex2.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-009 build real private Genesis 4 English working verse glosses in memory
+        run: |
+          python -m scripts.ches_007_multichapter_english \
+            --book Gen --chapter 4 --pdf "$RUNNER_TEMP/ches-gen4.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: CHES-009 build real private Exodus 2 English working verse glosses in memory
+        run: |
+          python -m scripts.ches_007_multichapter_english \
+            --book Exod --chapter 2 --pdf "$RUNNER_TEMP/ches-ex2.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: CHES-009 resume existing four-source state and add two pinned private chapters
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --extended --limit 6
+      - name: CHES-009 verify all six unchanged original-source draft chapters are skipped
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --extended --limit 6
