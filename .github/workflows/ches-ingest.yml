@@ -23,6 +23,8 @@ on:
       - "tests/test_ches_006_pilot_summary.py"
       - "scripts/ches_007_multichapter_english.py"
       - "tests/test_ches_007_multichapter_english.py"
+      - "scripts/ches_008_private_batch.py"
+      - "tests/test_ches_008_private_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -51,6 +53,8 @@ on:
       - "tests/test_ches_006_pilot_summary.py"
       - "scripts/ches_007_multichapter_english.py"
       - "tests/test_ches_007_multichapter_english.py"
+      - "scripts/ches_008_private_batch.py"
+      - "tests/test_ches_008_private_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -197,3 +201,23 @@ jobs:
           python -m scripts.ches_007_multichapter_english \
             --book Exod --chapter 1 --pdf "$RUNNER_TEMP/ches-ex1.pdf" \
             --confirm-machine-readable-use-permission --audit
+      - name: CHES-008 synthetic batch resume, retry, orphan and source-integrity regression tests
+        run: python -m unittest discover -s tests -p 'test_ches_008_private_batch.py' -v
+      - name: CHES-008 actual original PDF English batch, intentionally stop after two chapters
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --limit 2
+      - name: CHES-008 resume real four-chapter English draft batch from private checkpoint
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-008 verify no source text is printed and finished chapters are skipped
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission
