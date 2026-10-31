@@ -1,0 +1,62 @@
+name: DanMek YLT public-domain source pin and verse metadata (no Bible text logs)
+
+on:
+  pull_request:
+    paths:
+      - scripts/danmek_ylt.py
+      - scripts/ches_015_direct_private_reader.py
+      - tests/test_danmek_002_ylt_verse_authority.py
+      - .github/workflows/danmek-ylt-source.yml
+  push:
+    branches: [main]
+    paths:
+      - scripts/danmek_ylt.py
+      - scripts/ches_015_direct_private_reader.py
+      - tests/test_danmek_002_ylt_verse_authority.py
+      - .github/workflows/danmek-ylt-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  real-public-domain-ylt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Prepare 0700 ephemeral private path
+        run: |
+          umask 077
+          mkdir -p "$RUNNER_TEMP/.olt-private/ches"
+          chmod 0700 "$RUNNER_TEMP/.olt-private" "$RUNNER_TEMP/.olt-private/ches"
+      - name: Download and validate pinned public-domain YLT 1898 (no verse text logged)
+        env:
+          SOURCE_CHES_ROOT: ${{ runner.temp }}/.olt-private/ches
+        run: |
+          python -m scripts.danmek_ylt \
+            --private-root "$SOURCE_CHES_ROOT" \
+            --prepare-private-ylt
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from scripts.danmek_ylt import load_private_ylt, YLT_GIT_BLOB_SHA1
+          doc, digest = load_private_ylt(Path(os.environ["SOURCE_CHES_ROOT"]))
+          assert digest == YLT_GIT_BLOB_SHA1
+          assert len(doc["books"]) == 66
+          ot = [b for b in doc["books"] if b["testament"] == "OT"]
+          assert len(ot) == 39
+          gen = next(b for b in ot if b["id"] == "gen")
+          assert len(gen["chapters"]) == 50
+          assert len(gen["chapters"][0]) == 31
+          print("Exact YLT 1898 public-domain JSON verified with 39 OT + 27 NT books, no text emitted")
+          PY
+      - name: Run synthetic-only YLT noun/tense regression suite
+        run: python -m unittest discover -s tests -p 'test_danmek_002_ylt_verse_authority.py' -v
+      - name: Destroy public-domain reference after CI verification
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/.olt-private"
