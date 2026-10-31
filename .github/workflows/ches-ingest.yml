@@ -6,6 +6,9 @@ on:
       - "scripts/ches_import.py"
       - "scripts/ches_index.py"
       - "scripts/ches_private_batch.py"
+      - "scripts/ches_oshb_verse_qa.py"
+      - "olt_core/english_drafts.py"
+      - "tests/test_ches_002_source_first.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -17,6 +20,9 @@ on:
       - "scripts/ches_import.py"
       - "scripts/ches_index.py"
       - "scripts/ches_private_batch.py"
+      - "scripts/ches_oshb_verse_qa.py"
+      - "olt_core/english_drafts.py"
+      - "tests/test_ches_002_source_first.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -58,3 +64,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_ches_import.py' -v
       - name: Verify 1-chapter extraction in memory; no copyrighted payload or stored artifacts
         run: python scripts/ches_import.py --pdf "$RUNNER_TEMP/ches-gen1.pdf" --book Gen --chapter 1 --audit
+      - name: Verify real private PDF Genesis verse markers versus hash-pinned Hebrew source
+        run: python -m scripts.ches_oshb_verse_qa --pdf "$RUNNER_TEMP/ches-gen1.pdf"
+      - name: Check deterministic 31-verse English research draft against original source tokens
+        run: python -m unittest discover -s tests -p 'test_ches_002_source_first.py' -v
