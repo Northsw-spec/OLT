@@ -27,6 +27,10 @@ from scripts.danmek_009_english_order import (
     REVISION as OLT_ORDER_REVISION, DanMek009Error,
     load_private_order_rules, apply_reviewed_order,
 )
+from scripts.danmek_011_owner_order import (
+    REVISION as OWNER_CANDIDATE_ORDER_REVISION,
+    DanMek011Error, apply_owner_approved_candidates,
+)
 from scripts.danmek_ylt import (
     REVISION as YLT_OVERLAY_REVISION, DanMekYLTError,
     load_private_ylt, propose_ylt_verse_overrides,
@@ -67,9 +71,19 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
                     ylt_mode: bool = False,
                     olt_display_faces: bool = False,
                     order_rules: dict[str, dict] | None = None,
-                    chapter_json_sha256: str | None = None) -> bytes:
+                    chapter_json_sha256: str | None = None,
+                    olt_owner_approved_candidates: bool = False) -> bytes:
     ref = f"{prefix}.{chapter}"
-    if order_rules:
+    if olt_owner_approved_candidates:
+        description = (
+            'Separate private owner-approved English order: uniquely detected '
+            'English typography proposals are reordered automatically. '
+            'This editorial authorization does NOT verify Biblical Hebrew '
+            'subject/verb syntax. Ambiguous, unsupported or YLT-conflicting '
+            'cases are unchanged. CHES originals stay unchanged. '
+            'Not authorized for publication.'
+        )
+    elif order_rules:
         description = (
             'Separate private OLT English reading: only exactly source-pinned, '
             'privately reviewed subject/verb pairs are reordered; all other '
@@ -120,6 +134,14 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
                 verse["source_ches_spans_NOT_OLT_TRANSLATION"], 1
             )
         ]
+        if olt_owner_approved_candidates:
+            texts, _ = apply_owner_approved_candidates(
+                reference=verse["reference"],
+                chapter_sha256=chapter_json_sha256,
+                original=[span["original_ches_line_text"] for span in
+                          verse["source_ches_spans_NOT_OLT_TRANSLATION"]],
+                visible=texts,
+            )
         if order_rules:
             texts, _ = apply_reviewed_order(
                 reference=verse["reference"],
@@ -144,6 +166,7 @@ def _render_index(
     records: list[tuple[str, int]], missing: int, *, ylt_mode: bool = False,
     olt_display_faces: bool = False,
     olt_subject_first: bool = False,
+    olt_owner_approved_candidates: bool = False,
 ) -> bytes:
     links = "".join(
         '<a href="' + html.escape(f"{prefix}.{number}") + '.html">' +
@@ -151,6 +174,10 @@ def _render_index(
         for prefix, number in records
     )
     source_statement = (
+        'Owner-approved English typography candidates are automatically '
+        'reordered only when unique and nonconflicting; Hebrew syntax is '
+        'NOT independently verified. CHES originals stay unchanged.'
+        if olt_owner_approved_candidates else
         'English subject-first order applied only to reviewed, pinned pairs; '
         'all other source order unchanged. Original private CHES untouched.'
         if olt_subject_first else
@@ -214,6 +241,7 @@ def build_private_reader(
     source_root: Path, *, render: bool = False, use_ylt_authority: bool = False,
     olt_display_faces: bool = False,
     olt_subject_first: bool = False,
+    olt_owner_approved_candidates: bool = False,
 ) -> dict:
     """Inspect all present private chapters, optionally write static HTML.
 
@@ -222,7 +250,11 @@ def build_private_reader(
     """
     if (type(render) is not bool or type(use_ylt_authority) is not bool
             or type(olt_display_faces) is not bool
-            or type(olt_subject_first) is not bool):
+            or type(olt_subject_first) is not bool
+            or type(olt_owner_approved_candidates) is not bool
+            or (olt_subject_first and olt_owner_approved_candidates)):
+        # The two modes have distinct provenance: individually reviewed Hebrew
+        # syntax must not be mixed with owner-accepted English heuristics.
         raise CHES015ReaderError("INVALID_RENDER_MODE")
     try:
         folder = _private_archive_root(source_root)
@@ -251,10 +283,13 @@ def build_private_reader(
         digest.update(OLT_DISPLAY_REVISION.encode("ascii"))
     if olt_subject_first:
         digest.update((OLT_ORDER_REVISION + ":" + order_manifest_sha).encode("ascii"))
+    if olt_owner_approved_candidates:
+        digest.update(OWNER_CANDIDATE_ORDER_REVISION.encode("ascii"))
     edits_by_chapter = {}
     count_noun_edits = count_tense_edits = count_unmapped = count_ambiguous = 0
     count_display_faces = 0
     count_reviewed_orders = 0
+    count_owner_candidates = count_owner_ambiguous = count_owner_ylt_conflicts = 0
     seen_order_references: set[str] = set()
     sha_by_chapter: dict[tuple[str, int], str] = {}
     unmapped_by_source_prefix: dict[str, int] = {}
@@ -301,7 +336,7 @@ def build_private_reader(
                     stats["unmapped_verses_left_unchanged"]
                 )
             count_ambiguous += stats["ambiguous_verses_left_unchanged"]
-        if olt_display_faces or olt_subject_first:
+        if olt_display_faces or olt_subject_first or olt_owner_approved_candidates:
             active_ylt_edits = edits_by_chapter.get((prefix, chapter), {})
             for verse in item["verses"]:
                 texts = [
@@ -327,6 +362,26 @@ def build_private_reader(
                         raise CHES015ReaderError("PRIVATE_REVIEWED_ORDER_MISMATCH") from exc
                     count_reviewed_orders += applied
                     seen_order_references.add(verse["reference"])
+                if olt_owner_approved_candidates:
+                    original_texts = [
+                        span["original_ches_line_text"] for span in
+                        verse["source_ches_spans_NOT_OLT_TRANSLATION"]
+                    ]
+                    try:
+                        texts, reason = apply_owner_approved_candidates(
+                            reference=verse["reference"], chapter_sha256=json_sha,
+                            original=original_texts, visible=texts,
+                        )
+                    except DanMek011Error as exc:
+                        raise CHES015ReaderError(
+                            "PRIVATE_OWNER_CANDIDATE_ORDER_INVALID"
+                        ) from exc
+                    if reason == "APPLIED":
+                        count_owner_candidates += 1
+                    elif reason == "AMBIGUOUS":
+                        count_owner_ambiguous += 1
+                    elif reason == "YLT_OVERLAP":
+                        count_owner_ylt_conflicts += 1
                 if olt_display_faces:
                     _, changed = simplify_sur_faces_for_olt_view(texts)
                     count_display_faces += changed
@@ -370,6 +425,7 @@ def build_private_reader(
                     olt_display_faces=olt_display_faces,
                     order_rules=order_rules if olt_subject_first else None,
                     chapter_json_sha256=sha_by_chapter[(prefix, chapter)],
+                    olt_owner_approved_candidates=olt_owner_approved_candidates,
                 ),
             )
         _write_once(
@@ -378,11 +434,13 @@ def build_private_reader(
                 records, missing, ylt_mode=use_ylt_authority,
                 olt_display_faces=olt_display_faces,
                 olt_subject_first=olt_subject_first,
+                olt_owner_approved_candidates=olt_owner_approved_candidates,
             ),
         )
     return {
         "checkpoint": "CHES-015-DIRECT",
-        "mode": ("PRIVATE_OLT_ENGLISH_DISPLAY" if (olt_display_faces or olt_subject_first)
+        "mode": ("PRIVATE_OLT_ENGLISH_DISPLAY" if (olt_display_faces or olt_subject_first
+              or olt_owner_approved_candidates)
                  else "PRIVATE_OFFLINE_ORIGINAL_SOURCE_READER"),
         "observed_chapter_count": len(records),
         "expected_ot_chapter_count": CHAPTERS_EXPECTED,
@@ -393,6 +451,14 @@ def build_private_reader(
         "ylt_1898_public_domain_verse_comparison_used": use_ylt_authority,
         "olt_display_faces_enabled": olt_display_faces,
         "olt_subject_first_enabled": olt_subject_first,
+        "olt_owner_approved_candidates_enabled": olt_owner_approved_candidates,
+        "olt_owner_approved_candidate_reorders_applied": count_owner_candidates,
+        "olt_owner_candidate_ambiguous_verses_unchanged": count_owner_ambiguous,
+        "olt_owner_candidate_ylt_conflicts_unchanged": count_owner_ylt_conflicts,
+        "olt_owner_candidate_other_verses_unchanged":
+            total_verses - count_owner_candidates if olt_owner_approved_candidates else 0,
+        "olt_owner_candidate_english_editorial_approval": olt_owner_approved_candidates,
+        "olt_owner_candidate_original_language_subject_verified": False,
         "olt_subject_first_reviewed_rules_applied": count_reviewed_orders,
         "olt_subject_first_other_verses_left_unchanged":
             total_verses - count_reviewed_orders if olt_subject_first else 0,
@@ -413,7 +479,7 @@ def build_private_reader(
             and missing == 0,
         "source_fragment_text_linguistically_modified":
             bool(count_noun_edits + count_tense_edits + count_display_faces +
-                 count_reviewed_orders),
+                 count_reviewed_orders + count_owner_candidates),
         "original_pdf_bytes_independently_rehashed": False,
         "upstream_source_index_independently_checked": False,
         "independent_english_olt_translation_produced": False,
@@ -449,6 +515,13 @@ def main() -> int:
              "rules from ~/.olt-private/olt-english-order/approved.json; "
              "all other verses remain in source order",
     )
+    parser.add_argument(
+        "--olt-owner-approved-candidates", action="store_true",
+        help="Apply every uniquely detected DANMEK-010 candidate as an owner-"
+             "approved English editorial order (not verified Hebrew grammar); "
+             "leave ambiguous and YLT-overlapping verses unchanged. "
+             "Creates a distinct private immutable snapshot.",
+    )
     args = parser.parse_args()
     if not args.confirm_machine_readable_use_permission:
         parser.error("Owner-reported private machine-readable use permission required")
@@ -459,6 +532,7 @@ def main() -> int:
             use_ylt_authority=args.use_ylt_authority,
             olt_display_faces=args.olt_display_faces,
             olt_subject_first=args.olt_subject_first,
+            olt_owner_approved_candidates=args.olt_owner_approved_candidates,
         )
     except Exception:
         parser.exit(2, "CHES-015_PRIVATE_SOURCE_READER_VALIDATION_FAILED\n")
