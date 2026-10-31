@@ -259,6 +259,20 @@ def build_private_reader(
                     stats["unmapped_verses_left_unchanged"]
                 )
             count_ambiguous += stats["ambiguous_verses_left_unchanged"]
+        if olt_display_faces:
+            active_ylt_edits = edits_by_chapter.get((prefix, chapter), {})
+            for verse in item["verses"]:
+                texts = [
+                    active_ylt_edits.get(
+                        (verse["reference"], i),
+                        span["original_ches_line_text"],
+                    )
+                    for i, span in enumerate(
+                        verse["source_ches_spans_NOT_OLT_TRANSLATION"], 1
+                    )
+                ]
+                _, changed = simplify_sur_faces_for_olt_view(texts)
+                count_display_faces += changed
         if len(records) > CHAPTERS_EXPECTED or len(chapters_by_prefix) > PREFIXES_EXPECTED:
             raise CHES015ReaderError("IMPOSSIBLE_SOURCE_ARCHIVE_SIZE")
     if not records:
@@ -294,11 +308,15 @@ def build_private_reader(
                     previous=before, following=after,
                     ylt_edits=edits_by_chapter.get((prefix, chapter)),
                     ylt_mode=use_ylt_authority,
+                    olt_display_faces=olt_display_faces,
                 ),
             )
         _write_once(
             final_dir / "index.html",
-            _render_index(records, missing, ylt_mode=use_ylt_authority),
+            _render_index(
+                records, missing, ylt_mode=use_ylt_authority,
+                olt_display_faces=olt_display_faces,
+            ),
         )
     return {
         "checkpoint": "CHES-015-DIRECT",
