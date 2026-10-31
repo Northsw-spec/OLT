@@ -24,7 +24,47 @@ from scripts.danmek_ylt import (
 )
 from scripts.ches_015_direct_private_reader import build_private_reader
 from scripts.ches_import import NEH7_PRIMARY_VERSES, write_private_json
-from tests.test_ches_015_direct_private_reader import invented_chapter
+def invented_chapter(prefix: str, chapter: int, *, alternate_neh7: bool = False) -> dict:
+    numbers = NEH7_PRIMARY_VERSES if alternate_neh7 else (1, 2)
+    rows = []
+    for number in numbers:
+        row = {
+            "reference": f"{prefix}.{chapter}.{number}",
+            "publication_status": "BLOCKED",
+            "english_draft_status": "CHES_SOURCE_ONLY_UNALIGNED",
+            "explicit_original_pdf_verse_anchor_page": 1,
+            "explicit_original_pdf_verse_anchor_y": float(number * 5),
+            "source_ches_spans_NOT_OLT_TRANSLATION": [
+                {"page": 1, "pdf_x": 14.0, "pdf_y": float(number * 5+1),
+                 "original_ches_line_text": f"SYNTHETIC-ONLY-{number}"}
+            ],
+        }
+        if alternate_neh7 and number >= 69:
+            row["original_pdf_alternate_verse_number_not_oshb_crosswalk"] = number-1
+        rows.append(row)
+    return {
+        "source_origin_url": "https://www.scripture4all.org/OnlineInterlinear/OTpdf/"
+                             + f"{prefix}{chapter}.pdf",
+        "book": prefix, "chapter": chapter,
+        "source_book_identifier_is_not_verified_oshb_book_mapping": True,
+        "original_source_pdf_sha256": f"{chapter:064x}",
+        "source_original_index_sha256": "b"*64,
+        "source_pdf_byte_length": 3000,
+        "source_pdf_page_count": 1,
+        "verses_extracted": len(rows),
+        "ches_pdf_green_spans": len(rows),
+        "owner_attested_machine_readable_permission_no_public_distribution": True,
+        "source_chapter_verse_count_independent_oshb_qa": "NOT_DONE",
+        "full_source_text_in_public_git_permitted": False,
+        "alignment_with_oshb_words_verified": False,
+        "independent_grammar_or_sense_approved": False,
+        "olt_english_translation_approved": False,
+        "publication_status": "BLOCKED",
+        "verses": rows,
+    }
+
+
+
 
 
 def invented_ylt() -> dict:
