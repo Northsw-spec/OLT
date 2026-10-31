@@ -182,6 +182,7 @@ class TestCHES005EnglishExceptionPreview(unittest.TestCase):
             {**good, "replacement_english_private": "and he said "},
             {**good, "evidence_note_private": "trust me"},
             {**good, "kind": "GUESSED_AUTOMATIC_TRANSLATION"},
+            {**good, "kind": ["untrusted-list"]},
         ]
         # Distinct curated Genesis 1 verbs cannot be substituted for this
         # particular authentic original word even if both are simple past.
