@@ -82,7 +82,7 @@ def invented_ylt() -> dict:
         {"id": "ecc", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(12)
         ]},
-        {"id": "sol", "testament": "OT", "chapters": [
+        {"id": "sng", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(8)
         ]},
     ]
