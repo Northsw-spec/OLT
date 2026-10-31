@@ -17,6 +17,7 @@ from scripts.ches_import import import_private_pdf, write_private_json
 from scripts.ches_index import INDEX, parse_index
 from scripts.ches_013_structural_exceptions import (
     structural_code, record_structural_exception, resolve_structural_exception,
+    verify_reimport_does_not_conflict_with_private_exception,
 )
 
 INDEX_BYTES_MAX=3_000_000
@@ -112,6 +113,11 @@ def private_batch(index: dict, private_root: Path, *,
         result["source_original_index_sha256"]=index["source_index_html_sha256"]
         result["owner_attested_machine_readable_permission_no_public_distribution"]=True
         result["source_chapter_verse_count_independent_oshb_qa"]="NOT_DONE"
+        # The prior failure's PDF identity must be verified BEFORE a new chapter
+        # is written; a changed PDF must never turn into a resumable output.
+        verify_reimport_does_not_conflict_with_private_exception(
+            root, prefix=prefix, chapter=chapter, pdf_data=pdf
+        )
         write_private_json(result,target)
         # Never silently resolve an exception for *different* source bytes.
         resolve_structural_exception(root,prefix=prefix,chapter=chapter,pdf_data=pdf)
