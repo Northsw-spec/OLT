@@ -1,19 +1,19 @@
 # OLT-CHES-001 — Private machine-readable CHES source importer (English only)
 
-**Scope:** import **CHES v2.0**, the green sublinear English text in Scripture4All's **Old Testament** PDF interlinears, with PDF source hash and original printed verse locator. CHES is **a third-party lexicographic rendering**, not an approved OLT Hebrew/Aramaic → English verse translation.
+**Scope:** import **CHES v2.0**, the green sublinear English text in the source provider's **Old Testament** PDF interlinears, with PDF source hash and original printed verse locator. CHES is **a third-party lexicographic rendering**, not an approved OLT Hebrew/Aramaic → English verse translation.
 
 ## Rights boundary
 
 On 2026-10-31 the OLT owner stated that they have obtained permission to **use CHES text as machine-readable source data**. We record that as the owner's **reported private machine-readable use permission**, not as documentary proof that copyright holders granted public redistribution, changed PDFs, AI model training, commercial distribution, sublicense, or derivative publishing in **Amharic**.
 
-The site's [general public terms](https://scripture4all.org/about/termsofuse/index.html) otherwise prohibit distributing modified / merged PDFs and restrict use. Specific separate permission can grant an exception; only its actual wording and rightsholders define that exception. CHES text copyright and PDF layout/textual layers may have separate rightsholders; do not treat machine-readable *internal use* permission as automatically covering every layer. Preserve attribution and source edition information.
+The original provider's general public terms (source identity and exact terms URL preserved in the [pinned technical source manifest](../data/engine/olt_ches_source_manifest.json)) otherwise prohibit distributing modified / merged PDFs and restrict use. Specific separate permission can grant an exception; only its actual wording and rightsholders define that exception. CHES text copyright and PDF layout/textual layers may have separate rightsholders; do not treat machine-readable *internal use* permission as automatically covering every layer. Preserve attribution and source edition information.
 
 **No source CHES word corpus, copied PDF or complete copyrighted interlinear is checked into the public OLT GitHub repository.** The importer requires a local chapter PDF already obtained by the operator, writes an export only to a path containing `.olt-private/`, and never prints CHES text to CI logs.
 
 ## Original source identity
 
-- Original chapter index: <https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm>.
-- Representative original **Genesis 1**: <https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen1.pdf>.
+- Original chapter index: recorded as `source_index_url` in the [pinned source manifest](../data/engine/olt_ches_source_manifest.json).
+- Representative original **Genesis 1**: recorded as `source_reference.original_pdf_url` in the [pinned source manifest](../data/engine/olt_ches_source_manifest.json).
 - Green original line: **CHES v2.0** (not the neighboring Hebrew original, Hebrew transliteration, nor Authorized Version/KJV black column).
 - CHES original word-level notations, articles and bound morpheme markers must be preserved exactly. Different source versions may vary in segmentation and copyright status.
 - The OLT primary OT corpus remains the separately pinned **Open Scriptures Hebrew Bible/WLC** imported corpus. CHES is not permitted to silently replace original Hebrew or its source/morphology record.

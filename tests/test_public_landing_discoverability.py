@@ -21,8 +21,11 @@ class TestPublicDiscoverability(unittest.TestCase):
     def test_technical_source_provenance_and_rights_remain_traceable(self):
         doc = (ROOT / "docs/OLT_CHES_PRIVATE_INGEST.md").read_text(encoding="utf-8").lower()
         manifest = (ROOT / "data/engine/olt_ches_source_manifest.json").read_text(encoding="utf-8").lower()
-        self.assertIn(SOURCE_HOST, doc)
+        self.assertNotIn(SOURCE_BRAND, doc.replace(" ", ""))
+        self.assertNotIn(SOURCE_HOST, doc)
+        self.assertIn("pinned technical source manifest", doc)
         self.assertIn(SOURCE_HOST, manifest)
+        self.assertIn("source_terms_url", manifest)
         self.assertIn("public_redistribution_rights_confirmed", manifest)
         self.assertIn("false", manifest)
 
