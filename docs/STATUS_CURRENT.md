@@ -17,6 +17,12 @@
 - **Code cleanup:** remove unused DANMEK-006 helper and tests; no present or future automatic pronoun-antecedent capitalization task. Keep original CHES JSON and the separate owner-preferred explicit subject-before-verb order rule unchanged.
 - [Permanent cancellation directive](DANMEK_007_NO_DIVINE_PRONOUN_CAPITALIZATION.md). Existing Git history records DANMEK-006 only as a superseded proposal.
 
+## DANMEK-008 — Exact `sur faces`→`faces` in separate private OLT display (2026-10-31)
+
+- **Latest owner request:** Present CHES's English `sur faces` as `faces` in the OLT reading, without altering source JSON. Implemented an **opt-in** `--olt-display-faces` mode in the private CHES-015 reader. Source-faithful and previous YLT-only snapshots stay untouched; the new display gets an independent versioned snapshot ID.
+- The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
+- **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
+
 ## DANMEK-005 — Owner-confirmed stylistic English order, not a CHES defect (2026-10-31)
 
 - **Owner clarification:** CHES private chapter JSONs are correct as source data; Hebrew word order is not `wrong`. The owner wants **an intentional OLT English reading style** placing the known subject before the English verb phrase while retaining the stylistically preferred explicit pronoun, in applicable verified verses. Keep the unchanged CHES interlinear as a **separate source view**, and derive OLT English into a separate, auditable private version.

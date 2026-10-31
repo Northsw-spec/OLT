@@ -22,6 +22,7 @@ from scripts.ches_014_offline_english_bridge import (
     CHES014BridgeError, _private_archive_root, _load_private_source,
 )
 from scripts.ches_local_archive_audit import CHAPTERS_EXPECTED, PREFIXES_EXPECTED
+from scripts.danmek_008_english_display import REVISION as OLT_DISPLAY_REVISION, simplify_sur_faces_for_olt_view
 from scripts.danmek_ylt import (
     REVISION as YLT_OVERLAY_REVISION, DanMekYLTError,
     load_private_ylt, propose_ylt_verse_overrides,
@@ -59,9 +60,17 @@ def _frame(title: str, body: str) -> str:
 def _render_chapter(source: dict, *, prefix: str, chapter: int,
                     previous: str | None, following: str | None,
                     ylt_edits: dict[tuple[str, int], str] | None = None,
-                    ylt_mode: bool = False) -> bytes:
+                    ylt_mode: bool = False,
+                    olt_display_faces: bool = False) -> bytes:
     ref = f"{prefix}.{chapter}"
-    if ylt_mode:
+    if olt_display_faces:
+        description = (
+            'Separate private OLT English display: exact "sur faces" is '
+            'simplified to "faces" for reading. The original CHES files '
+            'and source Hebrew word order are unchanged. Source-to-Hebrew '
+            'lemma correspondence is not verified. No public distribution.'
+        )
+    elif ylt_mode:
         description = (
             'YLT 1898 guided editorial overlay (nouns and tense only). '
             'Unchanged CHES fragments where no unique verse-level YLT match '
@@ -88,17 +97,20 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
         alt = verse.get("original_pdf_alternate_verse_number_not_oshb_crosswalk")
         if alt is not None:
             label += f" (source alternate {alt})"
-        # Each fragment is kept exactly as extracted, with no normalization;
-        # HTML escaping is presentation encoding, NOT a translation edit.
-        fragments = "".join(
-            '<span class="gloss">' +
-            html.escape(
-                (ylt_edits or {}).get((verse["reference"], i),
-                                      span["original_ches_line_text"]), quote=True
-            ) + '</span>'
+        # The optional OLT display changes only a literal English phrase,
+        # after any YLT noun/tense edits. Original CHES JSON is untouched.
+        texts = [
+            (ylt_edits or {}).get((verse["reference"], i),
+                span["original_ches_line_text"])
             for i, span in enumerate(
                 verse["source_ches_spans_NOT_OLT_TRANSLATION"], 1
             )
+        ]
+        visible = (simplify_sur_faces_for_olt_view(texts)[0]
+                   if olt_display_faces else texts)
+        fragments = "".join(
+            '<span class="gloss">' + html.escape(text, quote=True) + '</span>'
+            for text in visible if text is not None
         )
         rows.append('<section class="verse"><span class="ref">' +
                     html.escape(label) + '</span>' + fragments + '</section>')
@@ -107,6 +119,7 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
 
 def _render_index(
     records: list[tuple[str, int]], missing: int, *, ylt_mode: bool = False,
+    olt_display_faces: bool = False,
 ) -> bytes:
     links = "".join(
         '<a href="' + html.escape(f"{prefix}.{number}") + '.html">' +
@@ -114,9 +127,14 @@ def _render_index(
         for prefix, number in records
     )
     source_statement = (
-        'YLT 1898 guided noun/tense corrections where one-to-one verse-word '
-        'evidence is unambiguous; other CHES text preserved.' if ylt_mode else
-        'Original English source fragment text is presented unchanged.'
+        'Owner-selected English display-only simplification: exact '
+        '"sur faces" appears as "faces". Original CHES remains unchanged. '
+        'Hebrew lemma correspondence is not verified.'
+        if olt_display_faces else (
+            'YLT 1898 guided noun/tense corrections where one-to-one verse-word '
+            'evidence is unambiguous; other CHES text preserved.' if ylt_mode else
+            'Original English source fragment text is presented unchanged.'
+        )
     )
     body = (
         '<h1>Private source reader</h1><p class="muted">Offline only. ' +
@@ -167,13 +185,15 @@ def _write_once(path: Path, content: bytes) -> None:
 
 def build_private_reader(
     source_root: Path, *, render: bool = False, use_ylt_authority: bool = False,
+    olt_display_faces: bool = False,
 ) -> dict:
     """Inspect all present private chapters, optionally write static HTML.
 
     Only counts and status flags are returned. Partial archives are allowed
     but never called complete; any malformed chapter is a hard error.
     """
-    if type(render) is not bool or type(use_ylt_authority) is not bool:
+    if (type(render) is not bool or type(use_ylt_authority) is not bool
+            or type(olt_display_faces) is not bool):
         raise CHES015ReaderError("INVALID_RENDER_MODE")
     try:
         folder = _private_archive_root(source_root)
@@ -189,8 +209,13 @@ def build_private_reader(
         except DanMekYLTError as exc:
             raise CHES015ReaderError("PINNED_PUBLIC_DOMAIN_YLT_SOURCE_REQUIRED") from exc
         digest.update((YLT_OVERLAY_REVISION + ":" + ylt_sha).encode("ascii"))
+    if olt_display_faces:
+        # The option creates a distinct immutable snapshot. Original CHES
+        # and YLT-only snapshots retain their existing IDs and bytes.
+        digest.update(OLT_DISPLAY_REVISION.encode("ascii"))
     edits_by_chapter = {}
     count_noun_edits = count_tense_edits = count_unmapped = count_ambiguous = 0
+    count_display_faces = 0
     unmapped_by_source_prefix: dict[str, int] = {}
     index_hashes: set[str] = set()
     seen_pdf_hashes: set[str] = set()
@@ -234,6 +259,20 @@ def build_private_reader(
                     stats["unmapped_verses_left_unchanged"]
                 )
             count_ambiguous += stats["ambiguous_verses_left_unchanged"]
+        if olt_display_faces:
+            active_ylt_edits = edits_by_chapter.get((prefix, chapter), {})
+            for verse in item["verses"]:
+                texts = [
+                    active_ylt_edits.get(
+                        (verse["reference"], i),
+                        span["original_ches_line_text"],
+                    )
+                    for i, span in enumerate(
+                        verse["source_ches_spans_NOT_OLT_TRANSLATION"], 1
+                    )
+                ]
+                _, changed = simplify_sur_faces_for_olt_view(texts)
+                count_display_faces += changed
         if len(records) > CHAPTERS_EXPECTED or len(chapters_by_prefix) > PREFIXES_EXPECTED:
             raise CHES015ReaderError("IMPOSSIBLE_SOURCE_ARCHIVE_SIZE")
     if not records:
@@ -269,15 +308,20 @@ def build_private_reader(
                     previous=before, following=after,
                     ylt_edits=edits_by_chapter.get((prefix, chapter)),
                     ylt_mode=use_ylt_authority,
+                    olt_display_faces=olt_display_faces,
                 ),
             )
         _write_once(
             final_dir / "index.html",
-            _render_index(records, missing, ylt_mode=use_ylt_authority),
+            _render_index(
+                records, missing, ylt_mode=use_ylt_authority,
+                olt_display_faces=olt_display_faces,
+            ),
         )
     return {
         "checkpoint": "CHES-015-DIRECT",
-        "mode": "PRIVATE_OFFLINE_ORIGINAL_SOURCE_READER",
+        "mode": ("PRIVATE_OLT_ENGLISH_DISPLAY" if olt_display_faces
+                 else "PRIVATE_OFFLINE_ORIGINAL_SOURCE_READER"),
         "observed_chapter_count": len(records),
         "expected_ot_chapter_count": CHAPTERS_EXPECTED,
         "observed_source_prefix_groups": len(chapters_by_prefix),
@@ -285,6 +329,9 @@ def build_private_reader(
         "observed_verse_count": total_verses,
         "observed_source_fragment_count": total_fragments,
         "ylt_1898_public_domain_verse_comparison_used": use_ylt_authority,
+        "olt_display_faces_enabled": olt_display_faces,
+        "olt_display_sur_faces_to_faces_count": count_display_faces,
+        "olt_display_hebrew_lemma_alignment_verified": False,
         "ylt_noun_edit_count": count_noun_edits,
         "ylt_tense_edit_count": count_tense_edits,
         "ylt_verses_unmapped_left_unchanged": count_unmapped,
@@ -298,7 +345,7 @@ def build_private_reader(
             len(records) == CHAPTERS_EXPECTED and len(chapters_by_prefix) == PREFIXES_EXPECTED
             and missing == 0,
         "source_fragment_text_linguistically_modified":
-            bool(count_noun_edits + count_tense_edits),
+            bool(count_noun_edits + count_tense_edits + count_display_faces),
         "original_pdf_bytes_independently_rehashed": False,
         "upstream_source_index_independently_checked": False,
         "independent_english_olt_translation_produced": False,
@@ -323,6 +370,11 @@ def main() -> int:
         help="Compare local CHES verse fragments to pinned public-domain YLT "
              "and apply only unique noun/tense decisions offline",
     )
+    parser.add_argument(
+        "--olt-display-faces", action="store_true",
+        help="Create a separate private English OLT display simplifying only "
+             "exact 'sur faces' to 'faces'; never rewrite CHES original data",
+    )
     args = parser.parse_args()
     if not args.confirm_machine_readable_use_permission:
         parser.error("Owner-reported private machine-readable use permission required")
@@ -331,6 +383,7 @@ def main() -> int:
             args.private_root,
             render=args.build_private_reader,
             use_ylt_authority=args.use_ylt_authority,
+            olt_display_faces=args.olt_display_faces,
         )
     except Exception:
         parser.exit(2, "CHES-015_PRIVATE_SOURCE_READER_VALIDATION_FAILED\n")
