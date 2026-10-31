@@ -27,7 +27,7 @@ from scripts.ches_private_alignment_review import private_file
 
 # Genesis 1's existing CHES-004 generator remains intact. Only extend the
 # existing lean approach to already pinned, independent chapter layouts.
-NEW_ENGLISH_CHAPTERS = frozenset({("Gen", 2), ("Gen", 3), ("Exod", 1), ("Gen", 4), ("Exod", 2)})
+NEW_ENGLISH_CHAPTERS = frozenset(key for key in PILOT if key != ("Gen", 1))
 REF_RE = re.compile(r"^(Gen|Exod)\.([1-9]\d*)\.([1-9]\d*)$")
 
 
@@ -88,7 +88,7 @@ def build_private_pinned_english_chapter(
     book, chapter = private_source.get("book"), private_source.get("chapter")
     if (type(book) is not str or type(chapter) is not int or
         (book, chapter) not in NEW_ENGLISH_CHAPTERS):
-        raise CHES007Error("Only five additional pinned private chapters are supported")
+        raise CHES007Error("Only explicitly pinned original OT source chapters are supported")
     verse_count, _ = PILOT[(book, chapter)]
     layout = measure_private_chapter_layout(private_source, root=root)
     sha = private_source["original_source_pdf_sha256"]
