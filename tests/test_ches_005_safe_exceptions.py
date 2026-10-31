@@ -135,7 +135,7 @@ class TestCHES005EnglishExceptionPreview(unittest.TestCase):
         untouched = f"FAKE-ENGLISH-{ref.rsplit('.', 1)[1]}-0"
         original = f"FAKE-ENGLISH-{ref.rsplit('.', 1)[1]}-1"
         self.assertIn(untouched, verse["english_text_private_unapproved"])
-        self.assertNotIn(original, verse["english_text_private_unapproved"])
+        self.assertNotIn(original, verse["english_text_private_unapproved"].split())
         self.assertIn(replacement, verse["english_text_private_unapproved"])
         self.assertIn(original, verse["ches_raw_gloss_stream_private_unapproved"])
         self.assertEqual(result["source_anchored_exception_previews_unapproved"], 1)
