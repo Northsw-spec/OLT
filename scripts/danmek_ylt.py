@@ -54,6 +54,9 @@ YLT_BOOK_ID_BY_SOURCE_PREFIX = {
     "1sa": "1sa", "2sa": "2sa", "1ki": "1ki", "2ki": "2ki",
     "1ch": "1ch", "2ch": "2ch", "ezr": "ezr", "neh": "neh",
     "est": "est", "job": "job", "psa": "psa", "pro": "pro",
+    # Scripture4All uses qoh/can; common YLT book IDs are ecc/sol.
+    # These are verse-lookup aliases only, never Hebrew-token alignment.
+    "qoh": "ecc", "can": "sol",
     "ecc": "ecc", "sol": "sol", "isa": "isa", "jer": "jer",
     "lam": "lam", "eze": "eze", "dan": "dan", "hos": "hos",
     "joe": "joe", "amo": "amo", "oba": "oba", "jon": "jon",
