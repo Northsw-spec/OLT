@@ -79,10 +79,16 @@ def invented_ylt() -> dict:
         {"id": "neh", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(7)
         ]},
+        {"id": "ecc", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(12)
+        ]},
+        {"id": "sol", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(8)
+        ]},
     ]
     books += [
         {"id": f"ot{i:02}", "testament": "OT",
-         "chapters": [["Synthetic neutral sentence"]]} for i in range(36)
+         "chapters": [["Synthetic neutral sentence"]]} for i in range(34)
     ]
     books += [
         {"id": f"nt{i:02}", "testament": "NT",
@@ -190,6 +196,20 @@ class TestYLTAuthority(unittest.TestCase):
         )
         self.assertNotIn(("gen.1.1", 1), candidate)
         self.assertEqual(counts["ambiguous_verses_left_unchanged"], 1)
+
+    def test_original_qoh_and_can_prefixes_use_specific_ylt_books(self):
+        self.assertEqual(
+            ylt_verse_for_source(self.ylt, prefix="qoh", chapter=12, verse=1),
+            "A door is found here",
+        )
+        self.assertEqual(
+            ylt_verse_for_source(self.ylt, prefix="can", chapter=8, verse=1),
+            "A door is found here",
+        )
+        for prefix, chapter in (("qoh", 13), ("can", 9)):
+            self.assertIsNone(ylt_verse_for_source(
+                self.ylt, prefix=prefix, chapter=chapter, verse=1,
+            ))
 
     def test_ylt_verse_missing_and_neh7_numerical_dispute_never_guess(self):
         source = invented_chapter("neh", 7, alternate_neh7=True)
