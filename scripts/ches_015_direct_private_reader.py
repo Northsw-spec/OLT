@@ -295,6 +295,7 @@ def build_private_reader(
     count_noun_edits = count_tense_edits = count_unmapped = count_ambiguous = 0
     count_display_faces = 0
     count_isolated_c = 0
+    count_standalone_c_letters = 0
     count_reviewed_orders = 0
     count_owner_candidates = count_owner_ambiguous = count_owner_ylt_conflicts = 0
     seen_order_references: set[str] = set()
@@ -393,8 +394,12 @@ def build_private_reader(
                     texts, changed = simplify_sur_faces_for_olt_view(texts)
                     count_display_faces += changed
                 if olt_owner_approved_candidates:
-                    _, hidden = hide_isolated_c(texts)
-                    count_isolated_c += hidden
+                    cleaned, hidden_letters = hide_isolated_c(texts)
+                    count_standalone_c_letters += hidden_letters
+                    count_isolated_c += sum(
+                        original is not None and changed is None
+                        for original, changed in zip(texts, cleaned)
+                    )
         if len(records) > CHAPTERS_EXPECTED or len(chapters_by_prefix) > PREFIXES_EXPECTED:
             raise CHES015ReaderError("IMPOSSIBLE_SOURCE_ARCHIVE_SIZE")
     if not records:
@@ -464,6 +469,7 @@ def build_private_reader(
         "olt_owner_approved_candidates_enabled": olt_owner_approved_candidates,
         "olt_owner_approved_candidate_reorders_applied": count_owner_candidates,
         "olt_isolated_lowercase_c_fragments_hidden": count_isolated_c,
+        "olt_standalone_lowercase_c_letters_hidden": count_standalone_c_letters,
         "olt_owner_candidate_ambiguous_verses_unchanged": count_owner_ambiguous,
         "olt_owner_candidate_ylt_conflicts_unchanged": count_owner_ylt_conflicts,
         "olt_owner_candidate_other_verses_unchanged":
@@ -491,7 +497,7 @@ def build_private_reader(
         "source_fragment_text_linguistically_modified":
             bool(count_noun_edits + count_tense_edits + count_display_faces +
                  count_reviewed_orders + count_owner_candidates +
-                 count_isolated_c),
+                 count_standalone_c_letters),
         "original_pdf_bytes_independently_rehashed": False,
         "upstream_source_index_independently_checked": False,
         "independent_english_olt_translation_produced": False,

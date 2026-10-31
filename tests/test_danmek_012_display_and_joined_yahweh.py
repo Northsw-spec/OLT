@@ -86,15 +86,17 @@ class TestDanMek012JoinedYahwehAndIsolatedC(unittest.TestCase):
         self.assertEqual(reason, "YLT_OVERLAP")
         self.assertEqual(actual, [edited])
 
-    def test_only_whole_isolated_lowercase_c_fragments_are_hidden(self):
+    def test_whole_and_inline_isolated_lowercase_c_fragments_are_hidden(self):
         original = [
             "c", " c ", "c\n", "C", "c.", "clock", "a c b",
             "city", "Yahweh", "", None,
         ]
         rendered, count = hide_isolated_c(original)
-        self.assertEqual(count, 3)
+        self.assertEqual(count, 4)
         self.assertEqual(rendered[:3], [None, None, None])
-        self.assertEqual(rendered[3:], original[3:])
+        self.assertEqual(rendered[3:6], original[3:6])
+        self.assertEqual(rendered[6], "a b")
+        self.assertEqual(rendered[7:], original[7:])
         self.assertEqual(original[0], "c")
         for invalid in ("c", [1], [False], [b"c"]):
             with self.subTest(invalid=invalid), self.assertRaises(DanMek012Error):
