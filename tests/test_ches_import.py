@@ -96,6 +96,17 @@ class TestCHESPrivateImport(unittest.TestCase):
         self.assertEqual(real["book"],"Gen")
         self.assertEqual(real["chapter"],1)
         self.assertEqual(real["verses_extracted"],31)
+        manifest=json.loads((Path(__file__).resolve().parents[1]/
+            "data/engine/olt_ches_source_manifest.json").read_text(encoding="utf-8"))
+        spec=manifest["source_reference"]
+        self.assertEqual(real["original_source_pdf_sha256"],spec["source_pdf_sha256"])
+        self.assertEqual(real["source_pdf_byte_length"],spec["source_pdf_bytes"])
+        self.assertEqual(real["source_pdf_page_count"],spec["source_pdf_pages"])
+        self.assertEqual(real["ches_pdf_green_spans"],spec["green_ches_pdf_spans_extracted"])
+        self.assertEqual(real["verses_extracted"],spec["printed_pdf_verses_confirmed_by_engineering"])
+        self.assertFalse(manifest["public_redistribution_rights_confirmed"])
+        self.assertFalse(manifest["downstream_amharic_derivative_rights_confirmed"])
+        self.assertEqual(manifest["current_active_translation_target"],"en")
         self.assertFalse(real["full_source_text_in_public_git_permitted"])
         self.assertFalse(real["alignment_with_oshb_words_verified"])
         self.assertFalse(real["olt_english_translation_approved"])
