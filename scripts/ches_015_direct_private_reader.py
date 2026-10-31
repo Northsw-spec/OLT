@@ -60,9 +60,17 @@ def _frame(title: str, body: str) -> str:
 def _render_chapter(source: dict, *, prefix: str, chapter: int,
                     previous: str | None, following: str | None,
                     ylt_edits: dict[tuple[str, int], str] | None = None,
-                    ylt_mode: bool = False) -> bytes:
+                    ylt_mode: bool = False,
+                    olt_display_faces: bool = False) -> bytes:
     ref = f"{prefix}.{chapter}"
-    if ylt_mode:
+    if olt_display_faces:
+        description = (
+            'Separate private OLT English display: exact "sur faces" is '
+            'simplified to "faces" for reading. The original CHES files '
+            'and source Hebrew word order are unchanged. Source-to-Hebrew '
+            'lemma correspondence is not verified. No public distribution.'
+        )
+    elif ylt_mode:
         description = (
             'YLT 1898 guided editorial overlay (nouns and tense only). '
             'Unchanged CHES fragments where no unique verse-level YLT match '
@@ -89,17 +97,20 @@ def _render_chapter(source: dict, *, prefix: str, chapter: int,
         alt = verse.get("original_pdf_alternate_verse_number_not_oshb_crosswalk")
         if alt is not None:
             label += f" (source alternate {alt})"
-        # Each fragment is kept exactly as extracted, with no normalization;
-        # HTML escaping is presentation encoding, NOT a translation edit.
-        fragments = "".join(
-            '<span class="gloss">' +
-            html.escape(
-                (ylt_edits or {}).get((verse["reference"], i),
-                                      span["original_ches_line_text"]), quote=True
-            ) + '</span>'
+        # The optional OLT display changes only a literal English phrase,
+        # after any YLT noun/tense edits. Original CHES JSON is untouched.
+        texts = [
+            (ylt_edits or {}).get((verse["reference"], i),
+                span["original_ches_line_text"])
             for i, span in enumerate(
                 verse["source_ches_spans_NOT_OLT_TRANSLATION"], 1
             )
+        ]
+        visible = (simplify_sur_faces_for_olt_view(texts)[0]
+                   if olt_display_faces else texts)
+        fragments = "".join(
+            '<span class="gloss">' + html.escape(text, quote=True) + '</span>'
+            for text in visible if text is not None
         )
         rows.append('<section class="verse"><span class="ref">' +
                     html.escape(label) + '</span>' + fragments + '</section>')
