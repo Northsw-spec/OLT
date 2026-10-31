@@ -78,7 +78,7 @@ def summarize_exact_pilot(reports: list[dict[str, Any]]) -> dict[str, Any]:
         **totals,
         "chapters_with_page_boundary_or_unassigned_ink_geometry_warnings":
             chapters_requiring_geometry_review,
-        "original_word_to_ch_es_span_links_independently_verified": 0,
+        "original_word_to_ches_span_links_independently_verified": 0,
         "original_pdf_filename_prefix_to_oshb_mapping_independently_verified": False,
         "pdf_span_word_count_differences_are_translation_errors": False,
         "english_grammar_rules_automatically_applied": False,
