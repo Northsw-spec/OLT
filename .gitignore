@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 build/
 *.tmp
+
+# Copyrighted Scripture4All CHES chapter PDFs and derived text: private only
+.olt-private/
+**/.olt-private/
