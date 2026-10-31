@@ -271,6 +271,27 @@ class TestYLTAuthority(unittest.TestCase):
         self.assertEqual(normal["ylt_noun_edit_count"], 0)
         self.assertFalse(normal["source_fragment_text_linguistically_modified"])
 
+    def test_ylt_unmapped_diagnostics_by_source_prefix_are_counts_only(self):
+        qoh = invented_chapter("qoh", 1)
+        can = invented_chapter("can", 1)
+        can["original_source_pdf_sha256"] = "f" * 64
+        write_private_json(qoh, self.source_root / "qoh.1.json")
+        write_private_json(can, self.source_root / "can.1.json")
+        with patch(
+            "scripts.ches_015_direct_private_reader.load_private_ylt",
+            return_value=(self.ylt, "8" * 40)
+        ), patch("urllib.request.urlopen", side_effect=AssertionError("NO NETWORK")):
+            summary = build_private_reader(
+                self.source_root, render=False, use_ylt_authority=True
+            )
+        self.assertEqual(summary["ylt_verses_unmapped_left_unchanged"], 2)
+        self.assertEqual(
+            summary["ylt_unmapped_verses_by_source_prefix"],
+            {"can": 1, "qoh": 1}
+        )
+        self.assertNotIn("SYNTHETIC-ONLY", json.dumps(summary))
+        self.assertNotIn(str(self.source_root), json.dumps(summary))
+
     def test_preparation_never_accepts_unpinned_public_domain_json(self):
         fake = json.dumps(self.ylt).encode()
         with self.assertRaises(DanMekYLTError):
