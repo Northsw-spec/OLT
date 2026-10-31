@@ -56,7 +56,7 @@ class TestCHES006PilotSummary(unittest.TestCase):
         self.assertEqual(output["unassigned_original_green_spans"], 0)
         self.assertEqual(
             output["chapters_with_page_boundary_or_unassigned_ink_geometry_warnings"], 3)
-        self.assertEqual(output["original_word_to_ch_es_span_links_independently_verified"], 0)
+        self.assertEqual(output["original_word_to_ches_span_links_independently_verified"], 0)
         self.assertFalse(output["english_translation_owner_approved"])
         self.assertFalse(output["whole_old_testament_imported"])
         self.assertFalse(output["pdf_span_word_count_differences_are_translation_errors"])
