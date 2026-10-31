@@ -41,7 +41,7 @@ SUBJECT = r"[A-Z][A-Za-z'’-]{1,49}"
 WHOLE_VERB = re.compile(VERB + r"\Z")
 WHOLE_SUBJECT = re.compile(SUBJECT + r"\Z")
 INLINE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>" + VERB + r")[ \t]+"
+    r"(?<![A-Za-z-])(?P<verb>" + VERB + r")[ \t]*"
     r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
 )
 
