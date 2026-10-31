@@ -42,7 +42,7 @@ CANDIDATES: tuple[tuple[str, str, str], ...] = (
     ("says", "saith", "TENSE"),
     ("said", "saith", "TENSE"),
 )
-REVISION = "DANMEK-003-YLT-VERSE-BOOK-ALIAS-AUDIT-v2"
+REVISION = "DANMEK-004-YLT-KINGS-NEH7-VERIFIED-v3"
 
 # The PDF source's filename prefixes are NOT original-language book IDs.
 # These familiar labels are permitted only to *look up a parallel English
@@ -52,9 +52,11 @@ YLT_BOOK_ID_BY_SOURCE_PREFIX = {
     "gen": "gen", "exo": "exo", "lev": "lev", "num": "num",
     "deu": "deu", "jos": "jos", "jdg": "jdg", "rut": "rut",
     "1sa": "1sa", "2sa": "2sa", "1ki": "1ki", "2ki": "2ki",
+    # Source filenames use 1kg/2kg for Kings; the pinned YLT uses 1ki/2ki.
+    "1kg": "1ki", "2kg": "2ki",
     "1ch": "1ch", "2ch": "2ch", "ezr": "ezr", "neh": "neh",
     "est": "est", "job": "job", "psa": "psa", "pro": "pro",
-    # Scripture4All uses qoh/can; common YLT book IDs are ecc/sol.
+    # Scripture4All uses qoh/can; pinned historic YLT IDs are ecc/sng.
     # These are verse-lookup aliases only, never Hebrew-token alignment.
     "qoh": "ecc", "can": "sng",
     "ecc": "ecc", "sol": "sng", "isa": "isa", "jer": "jer",
@@ -209,11 +211,17 @@ def _case_like(old: str, new: str) -> str:
 
 def ylt_verse_for_source(
     ylt: dict, *, prefix: str, chapter: int, verse: int,
+    original_pdf_alternate_verse: int | None = None,
 ) -> str | None:
-    if (prefix, chapter) == ("neh", 7):
-        # Source PDF prints an unusual primary/alternative 72/73 scheme.
-        # Never infer a Hebrew-YLT crosswalk for this chapter.
-        return None
+    """Match printed CHES primary verse to the same edition's YLT verse.
+
+    Nehemiah 7 has 72 original source markers: 1–67, then 69–73 with
+    separately printed Hebrew alternate labels 68–72. The YLT 1898 edition
+    has 73 verses and includes the extra 7:68 horses/mules. Permit the
+    existing primary printed labels ONLY when the YLT's verse inventory and
+    distinct horses/camels control verses match. Never fabricate 7:68 or
+    map the five alternate Hebrew labels to different YLT verse numbers.
+    """
     book_id = YLT_BOOK_ID_BY_SOURCE_PREFIX.get(prefix)
     if not book_id or type(chapter) is not int or type(verse) is not int:
         return None
@@ -226,6 +234,27 @@ def ylt_verse_for_source(
         return None
     verses = chapters[chapter - 1]
     if not 1 <= verse <= len(verses):
+        return None
+    if (prefix, chapter) == ("neh", 7):
+        if (len(verses) != 73 or
+            len(_word_matches(verses[67], "horses")) != 1 or
+            len(_word_matches(verses[68], "camels")) != 1):
+            return None
+        if verse == 68:
+            # There is no CHES primary 7:68 row in the original PDF.
+            return None
+        if verse <= 67:
+            if original_pdf_alternate_verse is not None:
+                return None
+        elif 69 <= verse <= 73:
+            if type(original_pdf_alternate_verse) is not int or (
+                original_pdf_alternate_verse != verse - 1
+            ):
+                return None
+        else:
+            return None
+    elif original_pdf_alternate_verse is not None:
+        # Alternative labels must only occur in the known source anomaly.
         return None
     return verses[verse - 1]
 
@@ -249,6 +278,9 @@ def propose_ylt_verse_overrides(
         number = int(ref.rsplit(".", 1)[1])
         parallel = ylt_verse_for_source(
             ylt, prefix=prefix, chapter=chapter, verse=number,
+            original_pdf_alternate_verse=row.get(
+                "original_pdf_alternate_verse_number_not_oshb_crosswalk"
+            ),
         )
         if parallel is None:
             counts["unmapped_verses_left_unchanged"] += 1
