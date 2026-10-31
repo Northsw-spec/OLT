@@ -8,6 +8,9 @@ SOURCE_HOST = "www." + SOURCE_BRAND + ".org"
 
 
 class TestPublicDiscoverability(unittest.TestCase):
+    def test_public_readme_is_exactly_zero_bytes(self):
+        self.assertEqual((ROOT / "README.md").read_bytes(), b"")
+
     def test_public_project_landing_pages_do_not_advertise_source_provider(self):
         for name in ("README.md", "docs/STATUS_CURRENT.md"):
             with self.subTest(path=name):

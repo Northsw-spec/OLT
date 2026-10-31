@@ -4,7 +4,7 @@
 
 ## Rules
 
-- Keep `README.md` and the first-line project status in `docs/STATUS_CURRENT.md` centered on OLT. Use the neutral term **third-party CHES source** rather than a provider name or original website links in these *landing pages*.
+- Keep `README.md` **completely empty (zero bytes)** at the owner's explicit request. Keep `docs/STATUS_CURRENT.md` project-centered and provider-neutral. Source origin is retained in the provenance documentation and source manifest.
 - Do **not** remove or falsify full bibliographic provenance, original URL, applicable terms, permission limitations, copyright attribution or safety checks from `docs/OLT_CHES_PRIVATE_INGEST.md`, the pinned source manifest, the importer's strict approved-host allowlist, CI integration or private chapter output.
 - CHES text and PDFs remain untracked and non-public. These landing-page edits are not a grant of redistribution, derived-language rights or release approval.
 - Do not attempt to evade source attribution obligations or misrepresent authorship. Anyone following source manifest references can still identify the provider.

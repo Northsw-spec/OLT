@@ -79,9 +79,9 @@ class TestOLTEnglishFirstOwnerGate(unittest.TestCase):
         self.assertIn("OLT_ENGLISH_FIRST_OWNER_GATE.md",status[:2600])
         self.assertIn("English is the only current translation target",
                       ARCH.read_text(encoding="utf-8")[:900])
-        readme=README.read_text(encoding="utf-8")[:1200]
-        self.assertIn("English only",readme)
-        self.assertIn("Japanese, Amharic",readme)
+        # Owner deliberately keeps the public GitHub landing page empty.
+        # The binding English-first scope remains testable in its policy file.
+        self.assertEqual(README.read_bytes(), b"")
         text=DOC.read_text(encoding="utf-8")
         self.assertIn("all 66 canonical books",text)
         self.assertIn("personally verify",text)
