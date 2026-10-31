@@ -1,5 +1,7 @@
 # Olund's Linked Translation
 
+**Binding active scope (2026-10-31): English only.** OLT is being built to translate original Biblical Hebrew/Aramaic/Greek into a complete **66-book English Bible**, subject to the owner's explicit verification and approval of the complete English translation. Japanese, Amharic and **all** other non-English translation work is postponed until that approval. Legacy multilingual schemas are future-only and do not authorize non-English translation work. **Practical next priority: a working, source-aligned English verse-translation prototype.** See [binding English-first policy](docs/OLT_ENGLISH_FIRST_OWNER_GATE.md) and [machine-readable owner gate](data/policy/olt_english_first_owner_verification.json). Current English completeness: NOT DONE; owner approval: NOT DONE; publication: BLOCKED.
+
 This is the entirely new **canonical project** at https://github.com/Northsw-spec/OLT.
 
 Status: **SOURCE IMPORTED / IDENTIFIERS VERIFIED / NO BIBLE CHAPTER RELEASED**.
