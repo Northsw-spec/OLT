@@ -37,7 +37,19 @@ class CHES010Error(ValueError):
     """Source index or original PDF failed a conservative discovery constraint."""
 
 
-def _source_urls_from_index(index_html: bytes) -> tuple[dict[tuple[str, int], str], dict[str, Any]]:
+def _source_urls_from_index(
+    index_html: bytes, *, targets: tuple[tuple[str, int, str, int], ...] = TARGETS,
+) -> tuple[dict[tuple[str, int], str], dict[str, Any]]:
+    """Select explicit original-index chapter links; filename mapping is a candidate."""
+    if (not isinstance(targets, tuple) or not 1 <= len(targets) <= 8 or
+        len({(b, n) for b, n, _, _ in targets}) != len(targets)):
+        raise CHES010Error("Unbounded or duplicate candidate chapter target")
+    for book, chapter, prefix, expected in targets:
+        if (type(book) is not str or type(chapter) is not int or
+            type(expected) is not int or expected < 1 or expected > 200 or
+            (book, prefix) not in (("Gen", "gen"), ("Exod", "exo")) or
+            chapter < 1 or chapter > 50):
+            raise CHES010Error("Unknown or false original-language chapter target")
     try:
         index = parse_index(index_html)
     except ValueError as exc:
@@ -55,7 +67,7 @@ def _source_urls_from_index(index_html: bytes) -> tuple[dict[tuple[str, int], st
     if len(by_key) != 929:
         raise CHES010Error("Duplicated original book prefix/chapter index identity")
     urls: dict[tuple[str, int], str] = {}
-    for book, chapter, source_prefix, _ in TARGETS:
+    for book, chapter, source_prefix, _ in targets:
         url = by_key.get((source_prefix, chapter))
         expected = f"https://{ALLOWED_HOST}{SOURCE_PDF_FOLDER}{source_prefix}{chapter}.pdf"
         if type(url) is not str or url != expected:
@@ -86,17 +98,19 @@ def _download_original_pdf(url: str) -> bytes:
 def examine_indexed_sources(
     index_html: bytes,
     *, fetch_pdf: Callable[[str], bytes] = _download_original_pdf,
+    targets: tuple[tuple[str, int, str, int], ...] = TARGETS,
 ) -> dict[str, Any]:
-    urls, index = _source_urls_from_index(index_html)
+    urls, index = _source_urls_from_index(index_html, targets=targets)
+    approved_targets = {(book, chapter): verses for book, chapter, _, verses in targets}
     records: list[dict[str, Any]] = []
-    for book, chapter, _, _ in TARGETS:
+    for book, chapter, _, _ in targets:
         original = fetch_pdf(urls[book, chapter])
         if (type(original) is not bytes or
             not 1000 <= len(original) <= PDF_MAX_BYTES or
             not original.startswith(b"%PDF-")):
             raise CHES010Error("Invalid candidate original PDF bytes")
         source = discover_source(
-            original, book, chapter, approved_targets=TARGET_MAP
+            original, book, chapter, approved_targets=approved_targets
         )
         if (source.get("scope") != f"{book}.{chapter}" or
             source.get("source_pin_status") != "DISCOVERY_ONLY_NOT_ENGINE_APPROVED" or
@@ -110,7 +124,8 @@ def examine_indexed_sources(
             "source_pdf_url": urls[book, chapter], **source
         })
     return {
-        "checkpoint": "CHES-010-SOURCE-INDEX-DISCOVERY",
+        "checkpoint": ("CHES-010-SOURCE-INDEX-DISCOVERY" if targets == TARGETS
+                       else "CHES-011-SOURCE-INDEX-DISCOVERY"),
         "source_index_html_sha256": index["source_index_html_sha256"],
         "original_chapter_index_links_confirmed": index["discovered_chapter_pdf_count"],
         "original_source_book_filename_prefixes_confirmed":
