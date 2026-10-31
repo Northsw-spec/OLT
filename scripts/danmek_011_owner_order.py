@@ -12,7 +12,7 @@ from scripts.danmek_009_english_order import (
     DanMek009Error, apply_reviewed_order,
 )
 
-REVISION = "DANMEK-011-OWNER-APPROVED-ENGLISH-CANDIDATES-v1"
+REVISION = "DANMEK-012-OWNER-APPROVED-GLUED-YAHWEH-v2"
 
 # Conservative typography patterns; NOT a linguistic parser.
 VERB = (r"(?:[Aa]nd[· ])?"
@@ -26,6 +26,14 @@ INLINE = re.compile(
     r"(?<![A-Za-z-])(?P<verb>" + VERB + r")[ \t]*"
     r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
 )
+# Bounded extra case, not a blanket 'And' + 'Yahweh' search: a name
+# immediately after this verb and immediately before 'from·' is the
+# user-supplied English editorial shape. 'Yahweh' elsewhere could be
+# the OBJECT, and must not be relocated by an ungrounded rule.
+JOINED_YAHWEH = re.compile(
+    r"\A(?P<verb>[Aa]nd[· ]he-shall-cut-off)[ \t]*"
+    r"(?P<subject>Yahweh)(?=from[· ])"
+)
 
 
 class DanMek011Error(ValueError):
@@ -38,6 +46,17 @@ def discover_candidates(
     """At most one proposed English reorder per verse; ambiguous => none."""
     found = []
     for index, text in enumerate(texts):
+        joined = JOINED_YAHWEH.match(text)
+        if joined:
+            found.append({
+                "reference": reference, "chapter_json_sha256": chapter_sha256,
+                "mode": "inline", "source_syntax_reviewed": False,
+                "review_note": "NOT_REVIEWED",
+                "verb_fragment_index": index + 1,
+                "original_fragment": text,
+                "original_verb": joined["verb"],
+                "original_subject": joined["subject"],
+            })
         if (index + 1 < len(texts) and WHOLE_VERB.fullmatch(text)
                 and WHOLE_SUBJECT.fullmatch(texts[index + 1])):
             found.append({
@@ -49,6 +68,24 @@ def discover_candidates(
                 "original_verb": text, "original_subject": texts[index + 1],
             })
         for match in INLINE.finditer(text):
+            # The generic capitalized-word pattern otherwise greedily calls
+            # the glued text "Yahwehfrom" a proper noun. Do not count such
+            # a false candidate: only JOINED_YAHWEH can authorize the safe,
+            # bounded Yahweh + from· clause shape above.
+            if (text[match.end():].startswith("·")
+                    and match["subject"].endswith(("from", "and"))):
+                # Greedy capitalized matching could otherwise absorb
+                # a following glued preposition/conjunction into the name.
+                continue
+            if (match["subject"] == "Yahweh"
+                    and match["verb"].rsplit("-", 1)[-1] in {
+                        "invited", "invite", "saw", "see", "met", "meet",
+                        "praised", "praise", "blessed", "bless",
+                        "worshipped", "worship", "loved", "love",
+                    }):
+                # These English verbs can take the name as an object.
+                # A phrase-level typography match cannot prove otherwise.
+                continue
             found.append({
                 "reference": reference, "chapter_json_sha256": chapter_sha256,
                 "mode": "inline", "source_syntax_reviewed": False,
@@ -97,4 +134,15 @@ def apply_owner_approved_candidates(
         raise DanMek011Error("OWNER_ORDER_CANDIDATE_INTERNAL_MISMATCH") from exc
     if count != 1:
         raise DanMek011Error("OWNER_ORDER_CANDIDATE_NOT_APPLIED")
+    if rule["mode"] == "inline":
+        joined = JOINED_YAHWEH.match(rule["original_fragment"])
+        if joined and (rule["original_verb"] == joined["verb"]
+                      and rule["original_subject"] == joined["subject"]):
+            # Keep the rest of the unverified gloss tail unchanged.
+            # English sentence-initial capitalization is not reverential.
+            tail = rule["original_fragment"][joined.end():]
+            expected = joined["verb"][:3] + " Yahweh — he-shall-cut-off" + tail
+            if rendered[i] != expected:
+                raise DanMek011Error("JOINED_YAHWEH_PRESENTATION_MISMATCH")
+            rendered[i] = "And Yahweh — he shall cut off " + tail
     return rendered, "APPLIED"
