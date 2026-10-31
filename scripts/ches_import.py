@@ -51,14 +51,26 @@ def page_spans(page: Any, pageno: int) -> list[dict[str, Any]]:
 
 
 def explicit_verse_markers(spans: list[dict[str, Any]], chapter: int) -> list[dict[str, Any]]:
-    marks = []
+    """Reassemble exact gray printed 1:1 labels from PDF's separate glyph spans.
+
+    The actual Genesis PDF stores chapter and verse digits as multiple gray
+    text spans (0x888888), which share one original PDF y coordinate.
+    Never infer missing verse labels from CHES lines or KJV prose.
+    """
+    groups: dict[tuple[int, float], list[dict[str, Any]]] = {}
     for row in spans:
-        if is_ches_green(row["color"]):
+        if row["color"] != 0x888888:
             continue
-        matched = MARKER.fullmatch(row["text"])
+        key = (row["page"], round(row["y"], 1))
+        groups.setdefault(key, []).append(row)
+    marks = []
+    for (page, y), pieces in groups.items():
+        pieces.sort(key=lambda x: x["x"])
+        raw = "".join(s["text"].strip() for s in pieces)
+        matched = MARKER.fullmatch(raw)
         if matched and int(matched.group(1)) == chapter:
-            marks.append({"page": row["page"], "y": row["y"],
-                          "x": row["x"], "verse": int(matched.group(2))})
+            marks.append({"page": page, "y": y, "x": pieces[0]["x"],
+                          "verse": int(matched.group(2))})
     marks.sort(key=lambda x: (x["page"], x["y"], x["x"]))
     return marks
 
