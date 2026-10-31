@@ -2,6 +2,7 @@
   "checkpoint": "OLT-CHES-001",
   "source": "Scripture4All Online Hebrew Interlinear Bible",
   "source_index_url": "https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm",
+  "source_terms_url": "https://scripture4all.org/about/termsofuse/index.html",
   "selected_source_line": "CHES 2.0 green English sublinear",
   "authorized_use_reported_by_owner": "machine-readable CHES source data",
   "public_redistribution_rights_confirmed": false,
