@@ -2,6 +2,10 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-006 — Capitalize He/Him when divine referent is confirmed
+
+**Owner rule (2026-10-31):** The derived OLT English presentation uses `He`, `Him`, `His`, `Himself` with an initial capital whenever those pronouns are demonstrably referring to God/the LORD (e.g. a verified `·he-is-making` → `·He-is-making`). Never infer the referent merely because the clause contains `Elohim` or `LORD`; human referents stay lowercase. A divine object pronoun is also capitalized even if God is not the grammatical subject. This is a bounded formatting helper for independently identified referent occurrences, **not** a corpus-wide auto-fix or source JSON change. [DANMEK-006](DANMEK_006_DIVINE_REFERENT_PRONOUN_CASING.md).
+
 ## DANMEK-005 — Hebrew interlinear correctness vs preferred OLT English order
 
 **Owner's clarification (2026-10-31):** The imported CHES JSON files and their Hebrew-order English interlinear are **not wrong**. The owner requests a **different editorial English OLT reading order**, specifically placing an explicit matched subject before the English verb phrase while preserving explicit referential pronouns (subject `·he-is-...` in suitable contexts). Do not rework source JSON, call source Hebrew word order defective, or simply reorder neighboring green text spans without verified source syntax. Keep two views: unchanged CHES reference and a separately versioned, reviewable OLT English reading. An isolated `c` can be a source morphology marker, and repeated `the` can reflect repeated Hebrew articles: distinguish source-faithful content from genuine extraction/display duplication before hiding anything. This is a **future implementation requirement**, not a completed full-929-chapter transformation. [Detailed owner rule](DANMEK_005_SOURCE_VALID_OLT_ENGLISH_ORDER.md).

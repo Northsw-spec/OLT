@@ -9,6 +9,10 @@
 
 **Artificial illustration only (not a CHES or Bible quotation):** source order `and·he-is-buildingLeader»the·house`; desired derived English order `and Leader ·he-is-building »the·house`. The illustration captures the owner's *English-order intention*, not a claim that any original Hebrew text or token alignment has been checked.
 
+## DANMEK-006 — Divine-referent pronoun capitalization
+
+The owner also requires capitalized initial letters on English pronouns that **refer to God/the LORD**, including `He`, `Him`, `His` and `Himself`. In a proven divine-subject construction, `·he-is-making` becomes `·He-is-making`. Do **not** apply this to human subjects/referents or use proximity to `God`/`Elohim` as proof. Even an object pronoun `Him` may denote God while a human is the grammatical subject. This is an OLT English-view style convention, never a CHES JSON correction. The helper is implemented for **explicit verified referent offsets**, but not yet integrated into a whole-OT English renderer. [Detailed decision and validation](DANMEK_006_DIVINE_REFERENT_PRONOUN_CASING.md).
+
 ## Safety and implementation contract
 
 - Never modify, replace, normalize or re-import the owner's 929 original private CHES chapter JSON files for this purpose.
