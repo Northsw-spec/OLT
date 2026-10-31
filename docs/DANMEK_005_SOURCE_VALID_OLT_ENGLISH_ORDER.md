@@ -24,4 +24,4 @@
 
 ## Current status and next implementation
 
-**Policy locked; full-corpus reordering NOT IMPLEMENTED or VALIDATED.** Next coding step is to provide a separately labeled OLT English view and an auditable, source-supported subject/verb reorder for confirmed cases, with negative tests for ambiguous cases and Hebrew-original unchanged assertions. Do not apply a global regex to every chapter or conflate a CI pass on synthetic cases with owner-approved English Bible verses.
+**Policy locked; full-corpus reordering NOT IMPLEMENTED or VALIDATED.** A bounded DANMEK-009 implementation can now apply only individually source-SHA-pinned, privately reviewed subject–verb pairs in a separate HTML view. Without an explicit approved private manifest, no English order changes. It neither discovers all subjects in the 929 chapters nor certifies Hebrew-to-PDF word alignment. [DANMEK-009 implementation](DANMEK_009_REVIEWED_SUBJECT_FIRST.md). Do not apply a global regex or conflate CI on synthetic cases with owner-approved Bible verses.
