@@ -40,7 +40,7 @@ class TestOLTSimpleEngineOwnerPriority(unittest.TestCase):
         self.assertIn("publication remains **BLOCKED**", master)
         self.assertIn("English is the only active target", policy)
         self.assertIn("OLT-SIMPLE-ENGINE-001", status)
-        self.assertIn("English-only", status)
+        self.assertIn("English-first", status)
         self.assertIn("entire", ENGLISH_GATE.read_text(encoding="utf-8").lower())
 
     def test_blank_readme_history_and_provenance_remain_preserved(self):
@@ -48,7 +48,7 @@ class TestOLTSimpleEngineOwnerPriority(unittest.TestCase):
         policy = POLICY.read_text(encoding="utf-8")
         self.assertIn("Retain the existing Git commit history", policy)
         self.assertIn("Do not force-push a rewritten history", policy)
-        self.assertIn("accurate attribution", MASTER.read_text(encoding="utf-8")[:4300])
+        self.assertIn("accurate source attribution", MASTER.read_text(encoding="utf-8")[:4300])
         self.assertTrue((ROOT / "docs/OLT_CHES_PRIVATE_INGEST.md").is_file())
 
 
