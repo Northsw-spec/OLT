@@ -53,7 +53,16 @@ jobs:
           gen = next(b for b in ot if b["id"] == "gen")
           assert len(gen["chapters"]) == 50
           assert len(gen["chapters"][0]) == 31
-          print("Exact YLT 1898 public-domain JSON verified with 39 OT + 27 NT books, no text emitted")
+          from scripts.danmek_ylt import YLT_BOOK_ID_BY_SOURCE_PREFIX
+          for original, ylt_id, chapter_count in (
+              ("qoh", "ecc", 12),
+              ("can", "sol", 8),
+          ):
+              assert YLT_BOOK_ID_BY_SOURCE_PREFIX[original] == ylt_id
+              target = next((b for b in ot if b["id"] == ylt_id), None)
+              assert target is not None, "MISSING_YLT_BOOK_ID_" + ylt_id
+              assert len(target["chapters"]) == chapter_count
+          print("Verified YLT 1898 public-domain JSON: 39 OT, 27 NT, qoh/can metadata aliases; no text emitted")
           PY
       - name: Run synthetic-only YLT noun/tense regression suite
         run: python -m unittest discover -s tests -p 'test_danmek_002_ylt_verse_authority.py' -v
