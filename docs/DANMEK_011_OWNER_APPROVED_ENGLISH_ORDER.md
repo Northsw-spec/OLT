@@ -54,6 +54,17 @@ Look at the metadata fields:
 
 The private HTML is written under `~/.olt-private/ches-direct-reader/<snapshot_id>/index.html` (not GitHub). CLI output is metadata-only.
 
+## DANMEK-012 targeted display repair
+
+The subsequent owner's report exposed a joined-name shape not recognized by the
+original English detector: a leading `and·he-shall-cut-off` followed
+immediately by `Yahwehfrom·…`. The owner-approved mode now renders that
+narrow form as `And Yahweh — he shall cut off from·…`, but it **does not**
+infer a subject whenever a verse merely contains `And` and `Yahweh`.
+The same private OLT mode suppresses a source fragment consisting of exactly
+lowercase `c`. Old CHES and YLT readings remain untouched.
+[Details](DANMEK_012_DISPLAY_JOINED_YAHWEH.md).
+
 ## Quality boundary and further accuracy work
 
 A capitalized English fragment can be an **object, place name, title, or other expression**; a hyphenated pronoun-verb can have different grammar from what a regex suggests. Explicit owner approval means these candidate **editorial transformations** are authorized, not that all are faithful to the Hebrew syntax. An entire OT can be covered by the *reader* while only a subset of verses are *reordered*. Never call that 100% sentence-order correction or Hebrew syntax certification.
