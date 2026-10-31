@@ -1,0 +1,55 @@
+{
+  "policy_id": "OLT-ENGLISH-FIRST-001",
+  "binding_owner_decision_date": "2026-10-31",
+  "owner_priority": "SINGLE_ACTIVE_TARGET_LANGUAGE_ENGLISH_UNTIL_COMPLETE_OWNER_VERIFIED_BIBLE",
+  "original_source_languages": [
+    "Biblical Hebrew",
+    "Biblical Aramaic",
+    "Koine Greek"
+  ],
+  "active_translation_target_language": "en",
+  "active_translation_target_language_name": "English",
+  "authoritative_translation_goal": "Complete original-language-to-English Old Testament and New Testament, all 66 books, with original-source provenance, morphology, context-linked lexical and syntactic decisions, consistent English draft generation, and explicit owner verification of the completed whole.",
+  "all_original_scripture_books_required": 66,
+  "original_testaments_required": [
+    "OT",
+    "NT"
+  ],
+  "active_source_to_target_direction": [
+    "hbo -> en",
+    "arc -> en",
+    "grc -> en"
+  ],
+  "other_target_language_translation_development_allowed_before_owner_verification": false,
+  "non_english_language_repo_creation_for_translation_allowed_before_owner_verification": false,
+  "non_english_bible_translation_generation_allowed_before_owner_verification": false,
+  "target_languages_deferred_until_owner_verifies_complete_english": [
+    "ja",
+    "am",
+    "is",
+    "zh-Hans",
+    "zh-Hant",
+    "sv",
+    "other non-English targets"
+  ],
+  "status_of_existing_non_english_locale_profiles": "HISTORICAL_SCHEMA_STUBS_ONLY_NO_TRANSLATION_WORK",
+  "existing_multilingual_architecture": "DEFERRED_NOT_DELETED",
+  "english_complete_bible_owner_verification_status": "NOT_DONE",
+  "source_to_english_final_complete_translation_status": "NOT_DONE",
+  "english_source_first_translation_engine_prototype_status": "NOT_DONE",
+  "owner_verification_must_be_explicit": true,
+  "verification_must_cover_complete_original_to_english_bible": true,
+  "github_ci_can_replace_owner_bible_approval": false,
+  "artificial_owner_approval_by_automation_forbidden": true,
+  "independent_philological_review_gates_still_apply": true,
+  "historical_source_corpus_research_kept": true,
+  "next_implementation_priority": [
+    "Build an actual runnable source-to-English OLT translation prototype for a small, verifiable set of original Greek and Hebrew/Aramaic source verses, preserving original IDs.",
+    "Evaluate literal yet balanced English rendering with morphology, source-word alignment and explicit preliminary/uncertain status.",
+    "Expand tested English generation across all 66 books only on verified source-text evidence and reviewable decisions.",
+    "Only after user explicitly verifies the COMPLETE source-language-to-English Bible may any additional target language development start."
+  ],
+  "english_verse_research_drafts_may_be_generated_before_full_owner_verification": true,
+  "english_verse_drafts_are_not_final_owner_approved_translation": true,
+  "bible_publication_status": "BLOCKED"
+}
