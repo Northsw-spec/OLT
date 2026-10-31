@@ -109,9 +109,14 @@ class TestCHESPrivateImport(unittest.TestCase):
         self.assertFalse(result["rights_for_public_CHES_data_export_confirmed"])
         self.assertEqual(result["publication_status"],"BLOCKED")
 
-    def test_external_unordered_duplicate_and_untrusted_pdf_index_urls_rejected(self):
+    def test_duplicate_index_navigation_link_is_safely_deduplicated(self):
+        source=b'<a href="OTpdf/gen1.pdf">1</a><a href="OTpdf/gen1.pdf">another menu</a>'
+        found=parse_index(source)
+        self.assertEqual(found["discovered_chapter_pdf_count"],1)
+        self.assertEqual(found["duplicate_index_pdf_link_occurrences_deduplicated"],1)
+
+    def test_external_unordered_untrusted_pdf_index_urls_rejected(self):
         for html in (
-            b'<a href="OTpdf/gen1.pdf">1</a><a href="OTpdf/gen1.pdf">again</a>',
             b'<a href="OTpdf/gen2.pdf">2</a>',
             b'<a href="https://evil.test/OnlineInterlinear/OTpdf/gen1.pdf">evil</a>',
             b'<a href="../OTpdf/gen1.pdf">path traversal</a>',
