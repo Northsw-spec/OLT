@@ -56,8 +56,8 @@ YLT_BOOK_ID_BY_SOURCE_PREFIX = {
     "est": "est", "job": "job", "psa": "psa", "pro": "pro",
     # Scripture4All uses qoh/can; common YLT book IDs are ecc/sol.
     # These are verse-lookup aliases only, never Hebrew-token alignment.
-    "qoh": "ecc", "can": "sol",
-    "ecc": "ecc", "sol": "sol", "isa": "isa", "jer": "jer",
+    "qoh": "ecc", "can": "sng",
+    "ecc": "ecc", "sol": "sng", "isa": "isa", "jer": "jer",
     "lam": "lam", "eze": "eze", "dan": "dan", "hos": "hos",
     "joe": "joe", "amo": "amo", "oba": "oba", "jon": "jon",
     "mic": "mic", "nah": "nah", "hab": "hab", "zep": "zep",
