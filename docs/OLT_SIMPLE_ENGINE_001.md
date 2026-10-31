@@ -2,9 +2,9 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
-## DANMEK-006 — Capitalize He/Him when divine referent is confirmed
+## DANMEK-007 — Permanent cancellation: no divine pronoun capitalization
 
-**Owner rule (2026-10-31):** The derived OLT English presentation uses `He`, `Him`, `His`, `Himself` with an initial capital whenever those pronouns are demonstrably referring to God/the LORD (e.g. a verified `·he-is-making` → `·He-is-making`). Never infer the referent merely because the clause contains `Elohim` or `LORD`; human referents stay lowercase. A divine object pronoun is also capitalized even if God is not the grammatical subject. This is a bounded formatting helper for independently identified referent occurrences, **not** a corpus-wide auto-fix or source JSON change. [DANMEK-006](DANMEK_006_DIVINE_REFERENT_PRONOUN_CASING.md).
+**Owner's latest instruction (2026-10-31):** Do **not** specially uppercase `he/him/his/himself` when the referent is God or the LORD. This overrides and revokes DANMEK-006 entirely. Use ordinary English casing only, not religious-referent-based casing; a divine subject does not turn `·he-is-making` into `·He-is-making`. The unused helper and tests are removed; do not create a referent detector for capitalization. The **separate** subject-before-verb English OLT editorial word-order rule and private unchanged CHES JSON remain in force. [Permanent owner cancellation](DANMEK_007_NO_DIVINE_PRONOUN_CAPITALIZATION.md).
 
 ## DANMEK-005 — Hebrew interlinear correctness vs preferred OLT English order
 
