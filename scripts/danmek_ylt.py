@@ -42,7 +42,7 @@ CANDIDATES: tuple[tuple[str, str, str], ...] = (
     ("says", "saith", "TENSE"),
     ("said", "saith", "TENSE"),
 )
-REVISION = "DANMEK-002-YLT-VERSE-GUARDED-v1"
+REVISION = "DANMEK-003-YLT-VERSE-BOOK-ALIAS-AUDIT-v2"
 
 # The PDF source's filename prefixes are NOT original-language book IDs.
 # These familiar labels are permitted only to *look up a parallel English
