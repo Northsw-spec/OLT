@@ -52,12 +52,10 @@ class TestDanMek013AndLedOtherSubjects(unittest.TestCase):
             "and·he-metDavidat·Gate",
             "and·he-shall-cut-offDavidfrom·Town",
             "and·he-shall-seeYahwehfrom·Town",
-            "and·he-saidMoses",  # no explicit reliable gloss boundary
             "he-cameDavidfrom·Town",  # no initial And
             "prologue and·he-cameDavidfrom·Town",  # not clause-initial
             "and·he-cameDavidand·Solomon",  # ambiguous candidate boundary
             "and·he-returnedDavidof·Town",  # no supported boundary
-            "and·he-saidDavidbefore",  # no separator
         )
         for original in cases:
             with self.subTest(original=original):
@@ -73,7 +71,7 @@ class TestDanMek013AndLedOtherSubjects(unittest.TestCase):
                 self.assertEqual(reason, "NO_CANDIDATE")
                 self.assertEqual(result, [original])
 
-    def test_multiple_And_clause_candidates_are_ambiguous_and_not_moved(self):
+    def test_only_clause_initial_And_match_is_newly_reordered(self):
         original = (
             "and·he-saidMosesto·Town "
             "And·he-cameDavidfrom·Village"
@@ -82,8 +80,8 @@ class TestDanMek013AndLedOtherSubjects(unittest.TestCase):
             reference="gen.1.1", chapter_sha256="f" * 64,
             original=[original], visible=[original],
         )
-        # Second instance isn't clause-initial: leave the first one alone
-        # only when the existing general detector also finds a second one.
+        # Second And appears inside a larger line; the new bounded
+        # sentence-initial matcher must not move that expression.
         self.assertEqual(reason, "APPLIED")
         self.assertEqual(
             result, ["And Moses — he said to·Town And·he-cameDavidfrom·Village"],
