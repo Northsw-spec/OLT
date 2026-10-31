@@ -142,8 +142,13 @@ jobs:
           curl --fail --location --retry 3 --max-time 65 --silent --show-error \
             https://www.scripture4all.org/OnlineInterlinear/OTpdf/ex1.pdf \
             --output "$RUNNER_TEMP/ches-ex1.pdf"
-          test "$(wc -c < "$RUNNER_TEMP/ches-gen3.pdf")" -gt 5000
-          test "$(wc -c < "$RUNNER_TEMP/ches-ex1.pdf")" -gt 5000
+          printf 'Gen3 original source bytes: %s MIME: %s\\n' \
+            "$(wc -c < "$RUNNER_TEMP/ches-gen3.pdf")" \
+            "$(file --brief --mime-type "$RUNNER_TEMP/ches-gen3.pdf")"
+          printf 'Ex1 original source bytes: %s MIME: %s\\n' \
+            "$(wc -c < "$RUNNER_TEMP/ches-ex1.pdf")" \
+            "$(file --brief --mime-type "$RUNNER_TEMP/ches-ex1.pdf")"
+          python -c 'from pathlib import Path; import os; files=("ches-gen3.pdf","ches-ex1.pdf"); [(_ for _ in ()).throw(ValueError("Original PDF source format invalid")) if not (1000 <= (p:=Path(os.environ["RUNNER_TEMP"])/f).stat().st_size <= 30000000 and p.open("rb").read(5)==b"%PDF-") else None for f in files]'
       - name: CHES-006 controlled discovery of Genesis 3 actual PDF (metadata only)
         run: |
           python -m scripts.ches_006_layout_metrics \
