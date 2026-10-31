@@ -49,7 +49,6 @@ def measure_private_chapter_layout(
     source: dict[str, Any], *,
     root: Path = ROOT,
     full_pdf_spans: list[dict[str, Any]] | None = None,
-    discovery_only_unpinned: bool = False,
 ) -> dict[str, Any]:
     """Check authentic OSHB IDs and page/verse layout; never verify word links.
 
@@ -84,27 +83,22 @@ def measure_private_chapter_layout(
     manifest = json.loads((root / "data/engine/olt_ches_source_manifest.json").read_text(
         encoding="utf-8"))
     pinned = manifest.get(source_key)
-    pin_state = "ORIGINAL_PDF_PINNED_EXACT"
-    if pinned is None:
-        if not discovery_only_unpinned:
-            raise CHESLayoutMetricsError("Missing source pin; require controlled discovery first")
-        pin_state = "DISCOVERY_UNPINNED_NOT_APPROVED_FOR_ENGINE"
-    else:
-        if not isinstance(pinned, dict) or (
-            pinned.get("original_book") != book or
-            type(pinned.get("original_chapter")) is not int or
-            pinned["original_chapter"] != chapter or
-            pinned.get("source_pdf_sha256") != digest or
-            type(pinned.get("source_pdf_bytes")) is not int or
-            pinned["source_pdf_bytes"] != size or
-            type(pinned.get("source_pdf_pages")) is not int or
-            pinned["source_pdf_pages"] != pages or
-            type(pinned.get("printed_pdf_verses_confirmed_by_engineering")) is not int or
-            pinned["printed_pdf_verses_confirmed_by_engineering"] != expected_verses or
-            pinned.get("full_source_text_in_public_git_permitted", pinned.get("source_text_in_public_repo")) is not False or
-            pinned.get("word_and_morpheme_alignment_verified", False) is not False
-        ):
-            raise CHESLayoutMetricsError("Pinned original PDF identity or permission mismatch")
+    if not isinstance(pinned, dict) or (
+        pinned.get("original_book") != book or
+        type(pinned.get("original_chapter")) is not int or
+        pinned["original_chapter"] != chapter or
+        pinned.get("source_pdf_sha256") != digest or
+        type(pinned.get("source_pdf_bytes")) is not int or
+        pinned["source_pdf_bytes"] != size or
+        type(pinned.get("source_pdf_pages")) is not int or
+        pinned["source_pdf_pages"] != pages or
+        type(pinned.get("printed_pdf_verses_confirmed_by_engineering")) is not int or
+        pinned["printed_pdf_verses_confirmed_by_engineering"] != expected_verses or
+        pinned.get("full_source_text_in_public_git_permitted", pinned.get("source_text_in_public_repo")) is not False or
+        pinned.get("word_and_morpheme_alignment_verified", False) is not False or
+        pinned.get("independent_pdf_filename_to_oshb_book_mapping_verified", False) is not False
+    ):
+        raise CHESLayoutMetricsError("Missing or changed exact original PDF pin, rights or source identity")
     book_source = load_ot_book(book, root, read_provenance(root))
     verse_lookup = {v["reference"]: v for v in book_source["verses"]
                     if v["reference"].startswith(f"{book}.{chapter}.")}
@@ -169,11 +163,14 @@ def measure_private_chapter_layout(
     if (type(source.get("ches_pdf_green_spans")) is not int or
         source["ches_pdf_green_spans"] != total_spans):
         raise CHESLayoutMetricsError("Original source span count contradicts verse contents")
-    if pinned is not None:
-        if (pinned.get("green_ches_pdf_spans_extracted") != total_spans or
-            "oshb_original_word_tokens_observed" in pinned and
-            pinned["oshb_original_word_tokens_observed"] != total_words):
-            raise CHESLayoutMetricsError("Pinned original span/word totals disagree")
+    if (pinned.get("green_ches_pdf_spans_extracted") != total_spans or
+        "oshb_original_word_tokens_observed" in pinned and
+        pinned["oshb_original_word_tokens_observed"] != total_words or
+        "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS" in pinned and
+        pinned["verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS"] != same_verse_span_word_count_differs or
+        "verses_with_green_fragments_on_multiple_pdf_pages" in pinned and
+        pinned["verses_with_green_fragments_on_multiple_pdf_pages"] != green_over_page_breaks):
+        raise CHESLayoutMetricsError("Pinned original source span, word or layout totals disagree")
     raw_green_count = None
     unassigned_green_count = None
     marker_count = None
@@ -196,13 +193,16 @@ def measure_private_chapter_layout(
             raise CHESLayoutMetricsError("More imported green fragments than in original PDF")
         if unassigned_green_count != green_before_first_printed_verse_marker:
             raise CHESLayoutMetricsError("Original green PDF fragment assignment lost/duplicated content")
+        if ("raw_original_pdf_unassigned_green_spans" in pinned and
+            pinned["raw_original_pdf_unassigned_green_spans"] != unassigned_green_count):
+            raise CHESLayoutMetricsError("Original PDF unassigned source ink changed")
     return {
         "checkpoint": "CHES-006",
         "scope": f"{book}.{chapter}",
         "source_pdf_sha256": digest,
         "source_pdf_byte_length": size,
         "source_pdf_page_count": pages,
-        "source_pin_status": pin_state,
+        "source_pin_status": "ORIGINAL_PDF_PINNED_EXACT",
         "printed_verse_markers_checked": marker_count,
         "authentic_oshb_verse_references_checked": len(rows),
         "authentic_oshb_word_tokens_observed_not_ches_aligned": total_words,
@@ -230,7 +230,6 @@ def measure_private_chapter_layout(
 
 def audit_real_pdf(
     original_bytes: bytes, *, book: str, chapter: int, root: Path = ROOT,
-    discovery_only_unpinned: bool = False,
 ) -> dict[str, Any]:
     expected, _ = PILOT.get((book, chapter), (None, None))
     if expected is None:
@@ -239,7 +238,6 @@ def audit_real_pdf(
     _, full_spans = _source_bytes_and_geometry(original_bytes)
     return measure_private_chapter_layout(
         chapter_source, root=root, full_pdf_spans=full_spans,
-        discovery_only_unpinned=discovery_only_unpinned,
     )
 
 
@@ -249,14 +247,11 @@ def main() -> int:
     parser.add_argument("--chapter", type=int, required=True)
     parser.add_argument("--pdf", type=Path, required=True)
     parser.add_argument("--confirm-machine-readable-use-permission", action="store_true")
-    parser.add_argument("--discovery-only-unpinned", action="store_true",
-                        help="Observe new source but do not treat it as pinned")
     args = parser.parse_args()
     if not args.confirm_machine_readable_use_permission:
         parser.error("Explicit original-source machine-readable permission required")
     result = audit_real_pdf(
         args.pdf.read_bytes(), book=args.book, chapter=args.chapter,
-        discovery_only_unpinned=args.discovery_only_unpinned,
     )
     print(json.dumps(result, sort_keys=True, indent=2))
     return 0
