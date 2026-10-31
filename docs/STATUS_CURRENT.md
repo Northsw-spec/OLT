@@ -23,6 +23,13 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## OWNER-VISUAL-VERIFIED LOCK — Private OLT English reading (2026-11-01)
+
+- **Status:** The owner personally inspected the current private Parrot English HTML reading and explicitly accepted it as **correct, visually verified, and LOCKED**. Protected `main` baseline commit `8e10a1b97f8dd98ed9a59deba31e9683b236ac5c` (DANMEK-013), with GitHub Actions foundation success [run 41251067681](https://github.com/Northsw-spec/OLT/actions/runs/41251067681). This records owner verification, not an assistant inference.
+- **Correction to evidence:** Missing spaces in the pasted chat excerpts came from the copy/paste process, **not** from OLT HTML. Do not change the accepted spacing or rework correct display code based on those copied excerpts. **No code changes are required for this acceptance.**
+- **Freeze:** Preserve this accepted reader behavior. Any future changes must use separate versioned snapshots and protected PR+CI without overwriting the accepted reading. Private snapshot ID and chapter coverage were not supplied to GitHub and are not claimed. Original CHES JSON remains unchanged.
+- **Scope:** The approval is of the **private reader presentation only**. Neither 66-book translation completion nor complete Hebrew-syntax correctness, owner sign-off of the finished Bible, redistribution rights, or publication is implied; publication remains BLOCKED. [Owner-verification lock](OLT_PRIVATE_READER_OWNER_VERIFIED_20261101.md).
+
 ## DANMEK-013 — And-led subjects beyond Yahweh (2026-11-01)
 
 - **Implemented as a bounded extension:** In `--olt-owner-approved-candidates`, additional clause-initial `And` patterns with selected non-direct-object pronoun–verb glosses followed by a joined proper name or `the·<role>` and an explicit prepositional gloss marker are reordered into English subject-first form. The dedicated `Yahweh` exception is preserved. [DANMEK-013](DANMEK_013_AND_LED_GENERAL_SUBJECTS.md).
