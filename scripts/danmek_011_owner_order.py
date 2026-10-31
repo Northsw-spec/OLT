@@ -72,8 +72,19 @@ def discover_candidates(
             # the glued text "Yahwehfrom" a proper noun. Do not count such
             # a false candidate: only JOINED_YAHWEH can authorize the safe,
             # bounded Yahweh + from· clause shape above.
-            if (match["subject"] == "Yahwehfrom"
-                    and text[match.end():].startswith("·")):
+            if (text[match.end():].startswith("·")
+                    and match["subject"].endswith(("from", "and"))):
+                # Greedy capitalized matching could otherwise absorb
+                # a following glued preposition/conjunction into the name.
+                continue
+            if (match["subject"] == "Yahweh"
+                    and match["verb"].rsplit("-", 1)[-1] in {
+                        "invited", "invite", "saw", "see", "met", "meet",
+                        "praised", "praise", "blessed", "bless",
+                        "worshipped", "worship", "loved", "love",
+                    }):
+                # These English verbs can take the name as an object.
+                # A phrase-level typography match cannot prove otherwise.
                 continue
             found.append({
                 "reference": reference, "chapter_json_sha256": chapter_sha256,
