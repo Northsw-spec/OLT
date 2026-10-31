@@ -1,12 +1,5 @@
 # OLT — CURRENT STATUS (2026-10-31)
 
-## DANMEK-009 — Subjekt före verb i separat OLT English view (limited private review rules)
-
-- **Root cause of unchanged word order:** DANMEK-008 only simplified `sur faces`; the original CHES-015 reader still keeps unreviewed PDF English fragments in their original Hebrew-interlinear order.
-- **New bounded mechanism:** opt-in `--olt-subject-first` reads privately approved, exact-CHES-source-SHA-pinned subject/verb rules, applies adjacent or inline reviewed pairs to a **new** private English snapshot, and stops on conflicting or stale rules. The original CHES JSON and faithful snapshots remain immutable. Ordinary English pronoun casing is preserved (no DANMEK-006).
-- **Not complete:** No reviewed rule manifest or private 929-chapter Hebrew syntax alignment is present on public Git. Unless the operator has supplied valid rules, no subject–verb reordering occurs; **full GT sentence-order conversion remains NOT IMPLEMENTED**. CI synthetic tests establish code behavior only, not Hebrew grammatical correctness. [Documentation](DANMEK_009_REVIEWED_SUBJECT_FIRST.md). Publication BLOCKED.
-
-
 **BINDING OWNER PRIORITY — OLT-ENGLISH-FIRST-001 (2026-10-31):** The **sole active target language is ENGLISH**. Build an actual working original Biblical **Hebrew/Aramaic/Greek → English OLT translation engine**, then a balanced-yet-literal **complete 66-book English Bible translation**. All Japanese and other non-English verse translation, lexicon/engine development, translation repositories and publications are **DEFERRED** until the owner personally verifies and explicitly approves the **entire** English Bible translation. A working English draft prototype now takes priority over further isolated lexicon-only checkpoints. Existing OLT-034 multilingual schemas remain **historical/future-only**. A CI PASS, partial completion, assistant output or hypothetical approval is NOT the owner's verification. This scope decision does NOT mark any original-language lemma, English verse or Scripture as approved. **English engine complete: NOT DONE. Complete 66-book English translation: NOT DONE. Owner approval: NOT DONE. Scripture publication: BLOCKED.** See [owner English-first policy](OLT_ENGLISH_FIRST_OWNER_GATE.md) and [locked machine-readable rule](../data/policy/olt_english_first_owner_verification.json). **This active owner direction supersedes any older NEXT checkpoint text proposing immediate work on non-English target languages.**
 
 ## DANMEK-001 — CHES supplies contextual English by default (OWNER-LOCKED 2026-10-31)
@@ -29,6 +22,20 @@
 - **Latest owner request:** Present CHES's English `sur faces` as `faces` in the OLT reading, without altering source JSON. Implemented an **opt-in** `--olt-display-faces` mode in the private CHES-015 reader. Source-faithful and previous YLT-only snapshots stay untouched; the new display gets an independent versioned snapshot ID.
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
+
+## DANMEK-010 — Offline private candidate discovery and review
+
+- **Implementation:** `scripts.danmek_010_order_review` scans local source-validated private CHES JSON, proposes conservative adjacent/inline English subject-first candidates, counts ambiguous cases and optionally writes **private** versioned review HTML + unapproved candidate JSON. No automatically inferred subject is treated as a proven Hebrew syntax role.
+- **Activation requires source-based review:** Candidates cannot be loaded directly into the OLT reading. An operator must inspect Hebrew/Aramaic grammar and original source layout, then explicitly attest one rule; the tool checks original chapter JSON SHA and exact fragment text again and appends it to `approved.json` with immutable prior-rule backup. DANMEK-009 then applies exactly such reviewed rules using `--olt-subject-first`. No code or test claims an automatic full-929-chapter conversion.
+- **Source and quality boundary:** Private CHES remains unchanged and offline. GitHub Actions validates synthetic functional/security scenarios only, not actual private corpus, grammatical correctness or translation approval. [DANMEK-010](DANMEK_010_PRIVATE_ORDER_DISCOVERY.md). Publication BLOCKED.
+
+
+## DANMEK-009 — Subjekt före verb i separat OLT English view (limited private review rules)
+
+- **Root cause of unchanged word order:** DANMEK-008 only simplified `sur faces`; the original CHES-015 reader still keeps unreviewed PDF English fragments in their original Hebrew-interlinear order.
+- **New bounded mechanism:** opt-in `--olt-subject-first` reads privately approved, exact-CHES-source-SHA-pinned subject/verb rules, applies adjacent or inline reviewed pairs to a **new** private English snapshot, and stops on conflicting or stale rules. The original CHES JSON and faithful snapshots remain immutable. Ordinary English pronoun casing is preserved (no DANMEK-006).
+- **Not complete:** No reviewed rule manifest or private 929-chapter Hebrew syntax alignment is present on public Git. Unless the operator has supplied valid rules, no subject–verb reordering occurs; **full GT sentence-order conversion remains NOT IMPLEMENTED**. CI synthetic tests establish code behavior only, not Hebrew grammatical correctness. [Documentation](DANMEK_009_REVIEWED_SUBJECT_FIRST.md). Publication BLOCKED.
+
 
 ## DANMEK-005 — Owner-confirmed stylistic English order, not a CHES defect (2026-10-31)
 

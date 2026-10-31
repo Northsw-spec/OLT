@@ -91,7 +91,7 @@ boundaries, no text leakage and the permanent no-special-capitalization rule.
 It **does not** validate any real CHES subject–verb relationship or produce a
 fully reordered private OT from the 929 source chapters.
 
-**Next:** use real private source examples, original Hebrew syntax evidence and
+**Next (DANMEK-010 now available):** `scripts.danmek_010_order_review` can scan real local CHES JSON offline for candidate patterns, create a private review HTML and collect explicit source-syntax attestation one case at a time. It does **not** autonomously verify a Hebrew subject or approve a rule; use [DANMEK-010](DANMEK_010_PRIVATE_ORDER_DISCOVERY.md). Then expand candidate coverage using actual private count-only results. See also the original task: use real private source examples, original Hebrew syntax evidence and
 local review to produce genuinely pinned entries, then expand measurable
 coverage by chapter. Do not represent a green CI run as 929-chapter completion,
 original-language alignment certification, owner approval or permission to
