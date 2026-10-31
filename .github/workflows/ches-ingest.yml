@@ -25,6 +25,8 @@ on:
       - "tests/test_ches_007_multichapter_english.py"
       - "scripts/ches_008_private_batch.py"
       - "tests/test_ches_008_private_batch.py"
+      - "scripts/ches_009_source_discovery.py"
+      - "tests/test_ches_009_source_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -55,6 +57,8 @@ on:
       - "tests/test_ches_007_multichapter_english.py"
       - "scripts/ches_008_private_batch.py"
       - "tests/test_ches_008_private_batch.py"
+      - "scripts/ches_009_source_discovery.py"
+      - "tests/test_ches_009_source_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -220,4 +224,39 @@ jobs:
           python -m scripts.ches_008_private_batch \
             --pdf-directory "$RUNNER_TEMP" \
             --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-009 original-language verse inventory and malformed source negative tests
+        run: python -m unittest discover -s tests -p 'test_ches_009_source_discovery.py' -v
+      - name: CHES-009 check two new PDF links exist in authoritative original chapter index
+        run: |
+          grep -Fq 'OTpdf/gen4.pdf' "$RUNNER_TEMP/ches-index.html"
+          grep -Fq 'OTpdf/exo2.pdf' "$RUNNER_TEMP/ches-index.html"
+      - name: CHES-009 fetch two authentic original chapter PDF candidates (ephemeral only)
+        run: |
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen4.pdf \
+            --output "$RUNNER_TEMP/ches-gen4.pdf"
+          curl --fail --location --retry 3 --max-time 65 --silent --show-error \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo2.pdf \
+            --output "$RUNNER_TEMP/ches-ex2.pdf"
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          for basename in ("ches-gen4.pdf", "ches-ex2.pdf"):
+              f = Path(os.environ["RUNNER_TEMP"]) / basename
+              if not f.is_file() or not 1000 <= f.stat().st_size <= 30_000_000:
+                  raise ValueError("Invalid original source PDF size")
+              with f.open("rb") as s:
+                  if s.read(5) != b"%PDF-":
+                      raise ValueError("Original chapter candidate is not PDF data")
+          PY
+      - name: CHES-009 metadata-only original Genesis 4 PDF source discovery
+        run: |
+          python -m scripts.ches_009_source_discovery \
+            --book Gen --chapter 4 --pdf "$RUNNER_TEMP/ches-gen4.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-009 metadata-only original Exodus 2 PDF source discovery
+        run: |
+          python -m scripts.ches_009_source_discovery \
+            --book Exod --chapter 2 --pdf "$RUNNER_TEMP/ches-ex2.pdf" \
             --confirm-machine-readable-use-permission
