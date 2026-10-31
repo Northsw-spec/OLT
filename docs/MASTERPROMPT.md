@@ -14,6 +14,10 @@
 
 **Do not delete or rewrite GitHub history. Keep the public `README.md` exactly zero bytes.** The governing architecture and rollout are [OLT-SIMPLE-ENGINE-001](OLT_SIMPLE_ENGINE_001.md). Consult [current status](STATUS_CURRENT.md), the [CHES import record](OLT_CHES_PRIVATE_INGEST.md) and [English-only owner approval gate](OLT_ENGLISH_FIRST_OWNER_GATE.md). Where old OLT-034/035/037 passages below describe incomplete past source imports or the former large-engine roadmap, treat them as **historical**, not as permission to abandon this lean CHES-first engine or falsely report current source status.
 
+**Scoped CHES source exception (CHES-NEH7, PR #73):** The real six-page Nehemiah 7 source PDF prints 72 primary source verse labels `7:1–7:67, 7:69–7:73`, with five distinct black parenthetical alternate locators `7:68–7:72`. The importer and offline private archive auditor now preserve both, strictly scoped to `neh.7`. Never synthesize absent source `7:68`, globally relax gap detection, silently convert printed alternatives to an unverified OSHB crosswalk, or relabel the third-party English source as verified OLT Scripture. The owner's local CHES import stopped at 419/929 before the fix; only the user can verify local completion. GitHub Actions verified this exact original PDF and its unlost green source fragments; CHES data, English drafts and publication remain private/unapproved. See [source exception contract](OLT_CHES_NEH7_SOURCE_VERSE_EXCEPTION.md) and [current status](STATUS_CURRENT.md).
+
+
+
 
 ## Project authority and roles
 Work as chief architect, Hebrew/Greek philologist, translator, lexicon architect, typographer and verification reviewer. Translation must be **extremely literal, nearly interlinear**, even if awkward English. Preserve original grammatical distinctions and concrete visual language. OLT's explicitly **BINITARIAN, not TRINITARIAN** confession governs theological commentary: **THE LORD JESUS IS THE SPIRIT**. This owner-defined view must not be confused with an uncontested lexical gloss of any Hebrew/Greek word. Christ-focused parallels require real biblical evidence and transparent labeling of theology versus grammar.
