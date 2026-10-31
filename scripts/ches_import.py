@@ -19,6 +19,14 @@ from typing import Any
 PDF_MIN = 1000
 PDF_MAX = 30_000_000
 MARKER = re.compile(r"^\s*(\d{1,3})\s*:\s*(\d{1,3})\s*$")
+# Exception only for the original Nehemiah 7 PDF: primary numbers skip 7:68,
+# while 7:69–73 explicitly display alternative numbers 7:68–72 in parentheses.
+# Never renumber the source, or infer a new missing Bible verse.
+NEH7_ALTERNATE_MARKER = re.compile(
+    r"^(\d{1,3}):(\d{1,3})\((\d{1,3}):(\d{1,3})\)$"
+)
+NEH7_PRIMARY_VERSES = tuple(range(1, 68)) + tuple(range(69, 74))
+
 BOOK = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{1,19}$")
 
 
@@ -50,12 +58,14 @@ def page_spans(page: Any, pageno: int) -> list[dict[str, Any]]:
     return result
 
 
-def explicit_verse_markers(spans: list[dict[str, Any]], chapter: int) -> list[dict[str, Any]]:
-    """Reassemble exact gray printed 1:1 labels from PDF's separate glyph spans.
+def explicit_verse_markers(
+    spans: list[dict[str, Any]], chapter: int, *,
+    source_book: str | None = None
+) -> list[dict[str, Any]]:
+    """Reconstruct gray chapter:verse labels without inventing source verses.
 
-    The actual Genesis PDF stores chapter and verse digits as multiple gray
-    text spans (0x888888), which share one original PDF y coordinate.
-    Never infer missing verse labels from CHES lines or KJV prose.
+    Nehemiah 7 has an *explicitly scoped* unusual primary/alternate verse
+    numbering. No other chapter gets a relaxed parser.
     """
     groups: dict[tuple[int, float], list[dict[str, Any]]] = {}
     for row in spans:
@@ -64,29 +74,58 @@ def explicit_verse_markers(spans: list[dict[str, Any]], chapter: int) -> list[di
         key = (row["page"], round(row["y"], 1))
         groups.setdefault(key, []).append(row)
     marks = []
+    neh7 = source_book == "neh" and chapter == 7
     for (page, y), pieces in groups.items():
         pieces.sort(key=lambda x: x["x"])
         raw = "".join(s["text"].strip() for s in pieces)
         matched = MARKER.fullmatch(raw)
+        alternate_verse = None
+        if not matched and neh7:
+            # Parentheses are present in the actual original PDF margin,
+            # sometimes as separate PDF glyphs. Keep both printed locators.
+            alternate = NEH7_ALTERNATE_MARKER.fullmatch("".join(raw.split()))
+            if alternate and int(alternate.group(1)) == 7:
+                primary = int(alternate.group(2))
+                if (int(alternate.group(3)) != 7 or
+                    primary not in range(69, 74) or
+                    int(alternate.group(4)) != primary - 1):
+                    raise ValueError("Invalid Nehemiah 7 printed alternative numbering")
+                matched = alternate
+                alternate_verse = primary - 1
         if matched and int(matched.group(1)) == chapter:
             marks.append({"page": page, "y": y, "x": pieces[0]["x"],
-                          "verse": int(matched.group(2))})
+                          "verse": int(matched.group(2)),
+                          "alternate_verse": alternate_verse})
     marks.sort(key=lambda x: (x["page"], x["y"], x["x"]))
     return marks
 
 
 def assign_ches_to_explicit_verses(spans: list[dict[str, Any]],
                                   chapter: int,
-                                  expected_verses: int | None = None) -> list[dict[str, Any]]:
-    """Reject missing/duplicate verse anchors; NEVER silently guess a join."""
-    marks = explicit_verse_markers(spans, chapter)
+                                  expected_verses: int | None = None, *,
+                                  source_book: str | None = None) -> list[dict[str, Any]]:
+    """Reject gaps except the explicitly printed Nehemiah 7 scheme."""
+    neh7 = source_book == "neh" and chapter == 7
+    marks = explicit_verse_markers(spans, chapter, source_book=source_book)
     numbers = [x["verse"] for x in marks]
-    if not marks or numbers != list(range(1, len(marks)+1)):
-        raise ValueError("Original PDF verse markers are absent, duplicate or out of sequence")
-    if expected_verses is not None and numbers != list(range(1, expected_verses+1)):
-        raise ValueError("Original PDF verse inventory disagrees with required verse count")
+    if neh7:
+        if tuple(numbers) != NEH7_PRIMARY_VERSES:
+            raise ValueError("Nehemiah 7 original primary numbering differs from known source")
+        if any((m["alternate_verse"] != m["verse"] - 1) for m in marks
+               if m["verse"] >= 69):
+            raise ValueError("Nehemiah 7 original alternate numbering missing or altered")
+        if any(m["alternate_verse"] is not None for m in marks if m["verse"] <= 67):
+            raise ValueError("Unexpected Nehemiah 7 alternate verse number")
+        if expected_verses is not None and expected_verses != len(NEH7_PRIMARY_VERSES):
+            raise ValueError("Original PDF verse count differs from required count")
+    else:
+        if not marks or numbers != list(range(1, len(marks) + 1)):
+            raise ValueError("Original PDF verse markers are absent, duplicate or out of sequence")
+        if expected_verses is not None and numbers != list(range(1, expected_verses + 1)):
+            raise ValueError("Original PDF verse inventory disagrees with required verse count")
     verses = [{"verse": m["verse"], "marker_page": m["page"],
-               "marker_y": m["y"], "ches_spans": []} for m in marks]
+               "marker_y": m["y"], "alternate_verse": m["alternate_verse"],
+               "ches_spans": []} for m in marks]
     green = [row for row in spans if is_ches_green(row["color"])]
     green.sort(key=lambda x: (x["page"], round(x["y"], 1), x["x"]))
     for row in green:
@@ -116,7 +155,9 @@ def import_private_pdf(original: bytes, book: str, chapter: int,
         if not 1 <= len(pdf) <= 100:
             raise ValueError("Unexpected source PDF page count")
         spans = [s for p, page in enumerate(pdf, 1) for s in page_spans(page, p)]
-        verses = assign_ches_to_explicit_verses(spans, chapter, expected_verses)
+        verses = assign_ches_to_explicit_verses(
+            spans, chapter, expected_verses, source_book=book
+        )
         result = {
             "source": "Scripture4All Online Hebrew Interlinear CHES 2.0",
             "original_source_pdf_sha256": hashlib.sha256(original).hexdigest(),
@@ -137,6 +178,8 @@ def import_private_pdf(original: bytes, book: str, chapter: int,
                 "reference": f"{book}.{chapter}.{v['verse']}",
                 "explicit_original_pdf_verse_anchor_page": v["marker_page"],
                 "explicit_original_pdf_verse_anchor_y": v["marker_y"],
+                **({"original_pdf_alternate_verse_number_not_oshb_crosswalk":
+                    v["alternate_verse"]} if v["alternate_verse"] is not None else {}),
                 "source_ches_spans_NOT_OLT_TRANSLATION": v["ches_spans"],
                 "english_draft_status": "CHES_SOURCE_ONLY_UNALIGNED",
                 "publication_status": "BLOCKED"
