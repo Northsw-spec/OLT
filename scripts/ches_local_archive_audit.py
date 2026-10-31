@@ -187,7 +187,7 @@ def audit_private_archive(directory: Path, *, require_929: bool = False) -> dict
     if len(index_hashes) != 1:
         raise CHESArchiveError("MIXED_ORIGINAL_SOURCE_INDEX_SNAPSHOTS")
     for chapters in records.values():
-        if chapters != list(range(1, len(chapters) + 1)):
+        if len(set(chapters)) != len(chapters) or sorted(chapters) != list(range(1, len(chapters) + 1)):
             raise CHESArchiveError("MISSING_DUPLICATE_OR_UNORDERED_SOURCE_CHAPTER")
     count_complete = (
         files == CHAPTERS_EXPECTED and len(records) == PREFIXES_EXPECTED
