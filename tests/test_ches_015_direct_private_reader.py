@@ -16,6 +16,10 @@ from scripts.ches_015_direct_private_reader import (
     CHES015ReaderError, build_private_reader, main,
 )
 from scripts.ches_import import NEH7_PRIMARY_VERSES, write_private_json
+from scripts.danmek_008_english_display import (
+    DanMek008DisplayError, simplify_sur_faces_for_olt_view,
+)
+
 
 ARTIFICIAL = 'FAKE-ENGLISH<ruby data-x="&">NO-LICENSED-WORDS</ruby>'
 
@@ -107,6 +111,95 @@ class TestPrivateDirectSourceReader(unittest.TestCase):
         self.assertEqual(output.stat().st_mode & 0o777, 0o700)
         self.assertEqual((output / "gen.1.html").stat().st_mode & 0o777, 0o600)
         self.assertEqual((self.source / "gen.1.json").read_bytes(), original)
+
+    def test_optional_faces_view_changes_only_display_not_original_or_prior_snapshot(self):
+        doc = invented_chapter("gen", 1)
+        first = doc["verses"][0]["source_ches_spans_NOT_OLT_TRANSLATION"][0]
+        first["original_ches_line_text"] = "Synthetic sur faces with c the the"
+        second = doc["verses"][1]["source_ches_spans_NOT_OLT_TRANSLATION"]
+        second[0]["original_ches_line_text"] = "sur"
+        split = dict(second[0])
+        split["pdf_x"] = second[0]["pdf_x"] + 15
+        split["original_ches_line_text"] = "faces"
+        second.append(split)
+        doc["ches_pdf_green_spans"] = 3
+        target = self.source / "gen.1.json"
+        write_private_json(doc, target)
+        original = target.read_bytes()
+
+        faithful = build_private_reader(self.source, render=True)
+        simplified = build_private_reader(
+            self.source, render=True, olt_display_faces=True,
+        )
+        self.assertNotEqual(faithful["snapshot_id"], simplified["snapshot_id"])
+        self.assertEqual(simplified["mode"], "PRIVATE_OLT_ENGLISH_DISPLAY")
+        self.assertEqual(simplified["olt_display_sur_faces_to_faces_count"], 2)
+        self.assertTrue(simplified["source_fragment_text_linguistically_modified"])
+        self.assertFalse(simplified["olt_display_hebrew_lemma_alignment_verified"])
+        self.assertEqual(target.read_bytes(), original)
+
+        base = self.base / "ches-direct-reader"
+        faithful_page = (base / faithful["snapshot_id"] / "gen.1.html").read_text()
+        derived_page = (base / simplified["snapshot_id"] / "gen.1.html").read_text()
+        self.assertIn("Synthetic sur faces with c the the", faithful_page)
+        self.assertIn('>sur</span><span class="gloss">faces</span>', faithful_page)
+        self.assertIn("Synthetic faces with c the the", derived_page)
+        self.assertEqual(derived_page.count('>faces</span>'), 1)
+        self.assertNotIn("Synthetic sur faces", derived_page)
+        self.assertIn("c the the", derived_page)
+        self.assertEqual(
+            build_private_reader(
+                self.source, render=True, olt_display_faces=True,
+            )["snapshot_id"], simplified["snapshot_id"],
+        )
+        self.assertEqual(target.read_bytes(), original)
+
+    def test_sur_faces_rule_is_exact_and_never_crosses_verses_or_erases_articles(self):
+        examples = [
+            (["sur faces"], ["faces"], 1),
+            (["Sur faces"], ["Faces"], 1),
+            (["sur", "faces"], [None, "faces"], 1),
+            (["Sur", "faces"], [None, "Faces"], 1),
+            (["the", "the", "c", "sur", "faces"],
+             ["the", "the", "c", None, "faces"], 1),
+            (["surfaces", "surface", "sur facing"],
+             ["surfaces", "surface", "sur facing"], 0),
+            (["sur", "the", "faces"], ["sur", "the", "faces"], 0),
+            (["sur", "faces!"], ["sur", "faces!"], 0),
+            (["abcsur faces"], ["abcsur faces"], 0),
+            (["sur faceless"], ["sur faceless"], 0),
+        ]
+        for original, expected, count in examples:
+            with self.subTest(original=original):
+                before = list(original)
+                result, changed = simplify_sur_faces_for_olt_view(original)
+                self.assertEqual((result, changed), (expected, count))
+                self.assertEqual(original, before)
+        self.assertEqual(simplify_sur_faces_for_olt_view(["sur"])[1], 0)
+        self.assertEqual(simplify_sur_faces_for_olt_view(["faces"])[1], 0)
+        for unsafe in ("sur faces", [None], [123], {}):
+            with self.assertRaises(DanMek008DisplayError):
+                simplify_sur_faces_for_olt_view(unsafe)
+
+    def test_faces_cli_audit_counts_without_creating_html(self):
+        doc = invented_chapter("gen", 1)
+        doc["verses"][0]["source_ches_spans_NOT_OLT_TRANSLATION"][0][
+            "original_ches_line_text"
+        ] = "Synthetic sur faces"
+        write_private_json(doc, self.source / "gen.1.json")
+        argv = ["reader", "--private-root", str(self.source),
+                "--confirm-machine-readable-use-permission",
+                "--audit-only", "--olt-display-faces"]
+        with patch("sys.argv", argv), patch(
+            "urllib.request.urlopen", side_effect=AssertionError("NO NETWORK")
+        ):
+            output = io.StringIO()
+            with redirect_stdout(output):
+                self.assertEqual(main(), 0)
+        result = json.loads(output.getvalue())
+        self.assertEqual(result["olt_display_sur_faces_to_faces_count"], 1)
+        self.assertEqual(result["private_html_pages_written_or_reused"], 0)
+        self.assertFalse((self.base / "ches-direct-reader").exists())
 
     def test_audit_only_has_no_filesystem_output_and_supports_partial_archive(self):
         self.add("gen", 1)
