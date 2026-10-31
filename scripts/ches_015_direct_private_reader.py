@@ -192,7 +192,8 @@ def build_private_reader(
     Only counts and status flags are returned. Partial archives are allowed
     but never called complete; any malformed chapter is a hard error.
     """
-    if type(render) is not bool or type(use_ylt_authority) is not bool:
+    if (type(render) is not bool or type(use_ylt_authority) is not bool
+            or type(olt_display_faces) is not bool):
         raise CHES015ReaderError("INVALID_RENDER_MODE")
     try:
         folder = _private_archive_root(source_root)
@@ -208,8 +209,13 @@ def build_private_reader(
         except DanMekYLTError as exc:
             raise CHES015ReaderError("PINNED_PUBLIC_DOMAIN_YLT_SOURCE_REQUIRED") from exc
         digest.update((YLT_OVERLAY_REVISION + ":" + ylt_sha).encode("ascii"))
+    if olt_display_faces:
+        # The option creates a distinct immutable snapshot. Original CHES
+        # and YLT-only snapshots retain their existing IDs and bytes.
+        digest.update(OLT_DISPLAY_REVISION.encode("ascii"))
     edits_by_chapter = {}
     count_noun_edits = count_tense_edits = count_unmapped = count_ambiguous = 0
+    count_display_faces = 0
     unmapped_by_source_prefix: dict[str, int] = {}
     index_hashes: set[str] = set()
     seen_pdf_hashes: set[str] = set()
