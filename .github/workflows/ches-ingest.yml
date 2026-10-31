@@ -39,7 +39,9 @@ jobs:
           test "$(wc -c < "$RUNNER_TEMP/ches-gen1.pdf")" -gt 5000
       - name: Inspect source PDF colors geometry and verse references without emitting source text
         run: python scripts/ches_pdf_probe.py --pdf "$RUNNER_TEMP/ches-gen1.pdf"
-      - name: Test private-safe importer contracts and physical original PDF sample
+      - name: Test private-safe importer contracts and actual hash-pinned Genesis PDF
+        env:
+          CHES_TEST_PDF: ${{ runner.temp }}/ches-gen1.pdf
         run: python -m unittest discover -s tests -p 'test_ches_import.py' -v
       - name: Verify 1-chapter extraction in memory; no copyrighted payload or stored artifacts
         run: python scripts/ches_import.py --pdf "$RUNNER_TEMP/ches-gen1.pdf" --book Gen --chapter 1 --audit
