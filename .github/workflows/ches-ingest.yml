@@ -34,6 +34,8 @@ on:
       - "scripts/ches_010_private_source_cache.py"
       - "tests/test_ches_010_pinned_registry.py"
       - "tests/test_ches_010_indexed_batch.py"
+      - "scripts/ches_011_source_discovery.py"
+      - "tests/test_ches_011_source_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -73,6 +75,8 @@ on:
       - "scripts/ches_010_private_source_cache.py"
       - "tests/test_ches_010_pinned_registry.py"
       - "tests/test_ches_010_indexed_batch.py"
+      - "scripts/ches_011_source_discovery.py"
+      - "tests/test_ches_011_source_discovery.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -351,3 +355,10 @@ jobs:
             --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
             --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
             --confirm-machine-readable-use-permission --indexed
+      - name: CHES-011 validate bounded four-source discovery against synthetic original-index and genuine OSHB word inventories
+        run: python -m unittest discover -s tests -p 'test_ches_011_source_discovery.py' -v
+      - name: CHES-011 inspect four MORE authentic original PDFs from chapter index, count-only
+        run: |
+          python -m scripts.ches_011_source_discovery \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --confirm-machine-readable-use-permission
