@@ -16,7 +16,7 @@ import re
 from typing import Any
 
 from olt_core.sources import ROOT, load_ot_book, read_provenance
-from scripts.ches_010_pin_registry import INDEXED_SOURCE_PINS, pinned_record
+from scripts.ches_010_pin_registry import INDEXED_SOURCE_PINS, NEXT_INDEXED_SOURCE_PINS, pinned_record
 from scripts.ches_import import (
     explicit_verse_markers, import_private_pdf, is_ches_green, page_spans,
 )
@@ -32,8 +32,12 @@ PILOT = {
 # Later chapters are source-pinned data, not hard-coded additional Python cases.
 PILOT.update({
     (row["original_book"], row["original_chapter"]):
-        (row["printed_pdf_verses_confirmed_by_engineering"], "indexed_original_source_pins")
-    for row in INDEXED_SOURCE_PINS
+        (row["printed_pdf_verses_confirmed_by_engineering"], pin_key)
+    for pin_key, records in (
+        ("indexed_original_source_pins", INDEXED_SOURCE_PINS),
+        ("additional_indexed_original_source_pins", NEXT_INDEXED_SOURCE_PINS),
+    )
+    for row in records
 })
 
 
@@ -90,7 +94,7 @@ def measure_private_chapter_layout(
     manifest = json.loads((root / "data/engine/olt_ches_source_manifest.json").read_text(
         encoding="utf-8"))
     pinned = (pinned_record(book, chapter, root)
-              if source_key == "indexed_original_source_pins"
+              if source_key in {"indexed_original_source_pins", "additional_indexed_original_source_pins"}
               else manifest.get(source_key))
     if not isinstance(pinned, dict) or (
         pinned.get("original_book") != book or

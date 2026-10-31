@@ -21,7 +21,7 @@ from scripts.ches_import import import_private_pdf, write_private_json
 from scripts.ches_lite_english import build_private_genesis_one_english_drafts
 from scripts.ches_007_multichapter_english import build_private_english_from_original_pdf
 from scripts.ches_private_alignment_review import private_file
-from scripts.ches_010_pin_registry import INDEXED_BATCH_ITEMS, pinned_record
+from scripts.ches_010_pin_registry import INDEXED_BATCH_ITEMS, NEXT_INDEXED_BATCH_ITEMS, pinned_record
 
 BATCH = (
     ("Gen", 1, "ches-gen1.pdf", "source_reference"),
@@ -36,6 +36,7 @@ EXTENDED_BATCH = BATCH + (
     ("Exod", 2, "ches-ex2.pdf", "sixth_chapter_layout_source_reference"),
 )
 INDEXED_BATCH = EXTENDED_BATCH + INDEXED_BATCH_ITEMS
+ALL_INDEXED_BATCH = INDEXED_BATCH + NEXT_INDEXED_BATCH_ITEMS
 CHECKPOINT = "CHES-008"
 STATE_FILE = "ches-008-state.json"
 VALID_STATE_KEYS = frozenset({"checkpoint", "publication_status", "chapters", "failures"})
@@ -55,7 +56,7 @@ def _source_pin(root: Path, pin_key: str, book: str, chapter: int) -> dict[str, 
         (root / "data/engine/olt_ches_source_manifest.json").read_text(encoding="utf-8")
     )
     pin = (pinned_record(book, chapter, root)
-           if pin_key == "indexed_original_source_pins"
+           if pin_key in ("indexed_original_source_pins", "additional_indexed_original_source_pins")
            else manifest.get(pin_key))
     if (not isinstance(pin, dict) or pin.get("original_book") != book
         or type(pin.get("original_chapter")) is not int or pin["original_chapter"] != chapter
@@ -191,7 +192,7 @@ def _state(outdir: Path) -> dict[str, Any]:
         data = json.loads(file.read_text(encoding="utf-8"))
     except (ValueError, UnicodeError, OSError) as exc:
         raise CHESBatchError("PRIVATE_BATCH_STATE_CORRUPT") from exc
-    valid_ids = {f"{b}.{c}" for b, c, _, _ in INDEXED_BATCH}
+    valid_ids = {f"{b}.{c}" for b, c, _, _ in ALL_INDEXED_BATCH}
     if (not isinstance(data, dict) or set(data) != VALID_STATE_KEYS or
         data["checkpoint"] != CHECKPOINT or data["publication_status"] != "BLOCKED" or
         not isinstance(data["chapters"], dict) or
@@ -241,16 +242,18 @@ def _verify_saved_output(
 def run_private_chapter_batch(
     pdf_directory: Path, private_output_directory: Path, *,
     root: Path = ROOT, limit: int | None = None,
-    extended: bool = False, indexed: bool = False,
+    extended: bool = False, indexed: bool = False, all_indexed: bool = False,
 ) -> dict[str, Any]:
     """Resume exact four/six-chapter work in stable order, preserving earlier output.
 
     The private state is updated after each chapter success or failure.
     No source text, edit note, private path or English verse is returned.
     """
-    if type(extended) is not bool or type(indexed) is not bool or (extended and indexed):
+    if (any(type(x) is not bool for x in (extended, indexed, all_indexed))
+        or sum((extended, indexed, all_indexed)) > 1):
         raise CHESBatchError("Invalid or conflicting batch scope")
-    selected = INDEXED_BATCH if indexed else EXTENDED_BATCH if extended else BATCH
+    selected = (ALL_INDEXED_BATCH if all_indexed else INDEXED_BATCH if indexed
+                else EXTENDED_BATCH if extended else BATCH)
     if limit is None:
         limit = len(selected)
     if type(limit) is not int or not 1 <= limit <= len(selected):
@@ -345,14 +348,17 @@ def main() -> int:
     scope.add_argument("--extended", action="store_true",
                        help="Opt into original six source-pinned PDFs")
     scope.add_argument("--indexed", action="store_true",
-                       help="Opt into all registry-pinned original chapter PDFs")
+                       help="Preserved original ten-source SHA-pinned batch")
+    scope.add_argument("--all-indexed", action="store_true",
+                       help="Opt in to all fourteen original source-pinned PDF chapters")
     p.add_argument("--limit", type=int, choices=range(1, 17))
     args = p.parse_args()
     if not args.confirm_machine_readable_use_permission:
         p.error("Owner-confirmed original machine-readable private use permission required")
     result = run_private_chapter_batch(
         args.pdf_directory, args.output_private_directory,
-        limit=args.limit, extended=args.extended, indexed=args.indexed
+        limit=args.limit, extended=args.extended, indexed=args.indexed,
+        all_indexed=args.all_indexed
     )
     print(json.dumps(result, sort_keys=True, indent=2))
     return int(bool(result["failed"]))

@@ -18,7 +18,8 @@ from olt_core.sources import ROOT
 from scripts.ches_010_indexed_discovery import (
     TARGETS, TARGET_MAP, _source_urls_from_index, _download_original_pdf,
 )
-from scripts.ches_010_pin_registry import pinned_record, read_indexed_source_pins
+from scripts.ches_010_pin_registry import pinned_record, read_indexed_source_pins, read_next_source_pins
+from scripts.ches_011_source_discovery import NEW_CHAPTERS
 from scripts.ches_009_source_discovery import discover_source
 from scripts.ches_private_alignment_review import private_file
 
@@ -84,24 +85,28 @@ def _write_safe_private_pdf(path: Path, data: bytes) -> str:
 def cache_indexed_originals(
     index_html: bytes, private_directory: Path, *,
     fetch_pdf: Callable[[str], bytes] = _download_original_pdf,
-    root: Path = ROOT,
+    root: Path = ROOT, next_group: bool = False,
 ) -> dict[str, Any]:
     directory = private_file(private_directory / "source-cache-sentinel").parent
-    urls, index = _source_urls_from_index(index_html)
-    pins = read_indexed_source_pins(root)
+    if type(next_group) is not bool:
+        raise CHES010CacheError("Invalid source cache group flag")
+    selected = NEW_CHAPTERS if next_group else TARGETS
+    approved_targets = {(book, chapter): verses for book, chapter, _, verses in selected}
+    urls, index = _source_urls_from_index(index_html, targets=selected)
+    pins = read_next_source_pins(root) if next_group else read_indexed_source_pins(root)
     keys = {(row["original_book"],row["original_chapter"]) for row in pins}
-    if keys != set(TARGET_MAP):
+    if keys != set(approved_targets):
         raise CHES010CacheError("Selected index discovery set differs from exact pinned source set")
     # Validate *all four* original source PDFs and their genuine verse/word
     # geometry BEFORE saving even one candidate.
     validated: list[tuple[dict[str, Any], bytes]] = []
-    for book, chapter, _, _ in TARGETS:
+    for book, chapter, _, _ in selected:
         pin = pinned_record(book, chapter, root)
         url = urls[book,chapter]
         pdf = fetch_pdf(url)
         try:
             source = discover_source(pdf, book, chapter, root=root,
-                                     approved_targets=TARGET_MAP)
+                                     approved_targets=approved_targets)
         except Exception as exc:
             raise CHES010CacheError("Authentic original PDF verse inspection failed") from exc
         _assert_source_evidence(pin, source, pdf, url)
@@ -118,7 +123,8 @@ def cache_indexed_originals(
             "private_cache_result": action,
         })
     return {
-        "checkpoint":"CHES-010-PINNED-PRIVATE-SOURCE-CACHE",
+        "checkpoint":("CHES-011-PINNED-PRIVATE-SOURCE-CACHE" if next_group
+                      else "CHES-010-PINNED-PRIVATE-SOURCE-CACHE"),
         "source_index_html_sha256":index["source_index_html_sha256"],
         "checked_original_source_pdfs":len(results),
         "new_private_source_files_created":sum(x["private_cache_result"]=="CREATED_PRIVATE" for x in results),
@@ -138,12 +144,15 @@ def main() -> int:
     parser.add_argument("--source-index",required=True,type=Path)
     parser.add_argument("--output-private-directory",required=True,type=Path)
     parser.add_argument("--confirm-machine-readable-use-permission",action="store_true")
+    parser.add_argument("--next-group",action="store_true",
+                        help="Add only the newly original-SHA-pinned next four chapters")
     a=parser.parse_args()
     if not a.confirm_machine_readable_use_permission:
         parser.error("Original source private machine-readable use permission confirmation required")
     try:
         result=cache_indexed_originals(
-            a.source_index.read_bytes(),a.output_private_directory
+            a.source_index.read_bytes(),a.output_private_directory,
+            next_group=a.next_group
         )
     except Exception:
         parser.error("CHES-010_PINNED_PRIVATE_SOURCE_CACHE_FAILED")

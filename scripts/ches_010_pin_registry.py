@@ -18,7 +18,14 @@ class CHES010PinError(ValueError):
     """Untrusted indexed source pin or original-source permission state."""
 
 
-def read_indexed_source_pins(root: Path = ROOT) -> list[dict[str, Any]]:
+def read_indexed_source_pins(
+    root: Path = ROOT, *, pin_key: str = "indexed_original_source_pins",
+) -> list[dict[str, Any]]:
+    if pin_key not in (
+        "indexed_original_source_pins",
+        "additional_indexed_original_source_pins",
+    ):
+        raise CHES010PinError("Unknown source pin registry scope")
     manifest = json.loads(
         (root / "data/engine/olt_ches_source_manifest.json").read_text(encoding="utf-8")
     )
@@ -26,7 +33,7 @@ def read_indexed_source_pins(root: Path = ROOT) -> list[dict[str, Any]]:
         manifest.get("public_redistribution_rights_confirmed") is not False or
         manifest.get("original_source_to_ches_morphological_alignment_human_verified") is not False):
         raise CHES010PinError("Original source manifest cannot authorize publication or alignment")
-    pins = manifest.get("indexed_original_source_pins")
+    pins = manifest.get(pin_key)
     if not isinstance(pins, list) or not 1 <= len(pins) <= 16:
         raise CHES010PinError("Source index pin group must be small and explicit")
     seen: set[tuple[str, int]] = set()
@@ -83,9 +90,28 @@ INDEXED_BATCH_ITEMS = tuple(
 )
 
 
+def read_next_source_pins(root: Path = ROOT) -> list[dict[str, Any]]:
+    return read_indexed_source_pins(
+        root, pin_key="additional_indexed_original_source_pins"
+    )
+
+
+NEXT_INDEXED_SOURCE_PINS = read_next_source_pins()
+NEXT_INDEXED_BATCH_ITEMS = tuple(
+    (row["original_book"], row["original_chapter"],
+     row["private_pdf_filename"], "additional_indexed_original_source_pins")
+    for row in NEXT_INDEXED_SOURCE_PINS
+)
+if (
+    {(r["original_book"], r["original_chapter"]) for r in INDEXED_SOURCE_PINS}
+    & {(r["original_book"], r["original_chapter"]) for r in NEXT_INDEXED_SOURCE_PINS}
+):
+    raise CHES010PinError("Duplicate source chapter across registry generations")
+
+
 def pinned_record(book: str, chapter: int, root: Path = ROOT) -> dict[str, Any]:
     matches = [
-        row for row in read_indexed_source_pins(root)
+        row for row in (read_indexed_source_pins(root) + read_next_source_pins(root))
         if row["original_book"] == book and row["original_chapter"] == chapter
     ]
     if len(matches) != 1:
