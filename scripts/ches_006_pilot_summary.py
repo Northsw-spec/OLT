@@ -11,7 +11,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from scripts.ches_006_layout_metrics import audit_real_pdf
+from olt_core.sources import ROOT
+from scripts.ches_006_layout_metrics import PILOT, audit_real_pdf
 
 CHAPTER_FILES = (
     ("Gen", 1, "ches-gen1.pdf"),
@@ -88,6 +89,42 @@ def summarize_exact_pilot(reports: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def assert_pinned_geometry_warning_baseline(
+    reports: list[dict[str, Any]], *, root: Path = ROOT,
+) -> None:
+    """Catch parser changes that silently alter the four real PDF layouts.
+
+    Source hashes/pinned byte sizes already establish exact file identity.
+    This extra check freezes *diagnostic counts*, not linguistic truth.
+    """
+    manifest = json.loads(
+        (root / "data/engine/olt_ches_source_manifest.json").read_text(encoding="utf-8")
+    )
+    by_scope = {r["scope"]: r for r in reports}
+    if len(by_scope) != len(CHAPTER_FILES):
+        raise CHESPilotSummaryError("Incomplete or duplicated source layout baseline")
+    pairs = {
+        "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS":
+            "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS",
+        "verses_with_green_fragments_on_multiple_pdf_pages":
+            "verses_with_green_fragments_on_multiple_pdf_pages",
+        "raw_original_pdf_unassigned_green_spans": "unassigned_original_green_spans",
+        "min_green_spans_in_one_verse": "min_green_spans_in_one_verse",
+        "max_green_spans_in_one_verse": "max_green_spans_in_one_verse",
+    }
+    for book, chapter, _ in CHAPTER_FILES:
+        _, manifest_key = PILOT[(book, chapter)]
+        pinned = manifest[manifest_key]
+        report = by_scope[f"{book}.{chapter}"]
+        for source_field, result_field in pairs.items():
+            expected, actual = pinned.get(source_field), report.get(result_field)
+            if type(expected) is not int or type(actual) is not int or actual != expected:
+                raise CHESPilotSummaryError(
+                    "Original PDF diagnostic geometry baseline changed: "
+                    f"{book}.{chapter} / {source_field}"
+                )
+
+
 def audit_exact_pilot_pdfs(folder: Path) -> dict[str, Any]:
     if not isinstance(folder, Path) or not folder.is_dir():
         raise CHESPilotSummaryError("Private original PDF working directory is absent")
@@ -97,7 +134,9 @@ def audit_exact_pilot_pdfs(folder: Path) -> dict[str, Any]:
         )
         for book, chapter, filename in CHAPTER_FILES
     ]
-    return summarize_exact_pilot(reports)
+    summary = summarize_exact_pilot(reports)
+    assert_pinned_geometry_warning_baseline(reports)
+    return summary
 
 
 def main() -> int:
