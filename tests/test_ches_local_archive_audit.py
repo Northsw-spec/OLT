@@ -111,7 +111,7 @@ class CHESLocalPrivateArchiveAuditTest(unittest.TestCase):
         )
         for index, wrong in (
             (67, {"reference": "neh.7.68"}),
-            (68, {"original_pdf_alternate_verse_number_not_oshb_crosswalk": 69}),
+            (68, {"original_pdf_alternate_verse_number_not_oshb_crosswalk": 70}),
             (71, {"original_pdf_alternate_verse_number_not_oshb_crosswalk": None}),
         ):
             with self.subTest(index=index):
