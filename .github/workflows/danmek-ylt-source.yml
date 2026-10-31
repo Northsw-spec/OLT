@@ -61,6 +61,9 @@ jobs:
           for original, ylt_id, chapter_count in (
               ("qoh", "ecc", 12),
               ("can", "sng", 8),
+              ("eze", "ezk", 48),
+              ("joe", "jol", 3),
+              ("nah", "nam", 3),
           ):
               assert YLT_BOOK_ID_BY_SOURCE_PREFIX[original] == ylt_id
               target = next((b for b in ot if b["id"] == ylt_id), None)
