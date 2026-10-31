@@ -15,6 +15,7 @@ from typing import Any
 
 from olt_core.english_drafts import (
     GENESIS_ONE_SIMPLE_PAST_FRAGMENTS,
+    build_genesis_one_drafts,
     verified_wayyiqtol,
 )
 from olt_core.sources import ROOT, load_ot_book, read_provenance
@@ -106,6 +107,15 @@ def apply_source_anchored_english_exceptions(
         f"Gen.1.{i}": row for i, row in enumerate(private_chapter["verses"], 1)
     }
     output_by_ref = {row["reference"]: row for row in drafts["verses"]}
+    # Reuse the small, already-source-checked OLT Genesis research fragments.
+    # This forbids attaching the right tense but the WRONG verb to a source ID.
+    research = build_genesis_one_drafts(root)
+    vetted_tense_by_token = {
+        (v["reference"], t["source_token_id"]):
+            t["english_fragment_simple_past_research"].casefold()
+        for v in research["verses"]
+        for t in v["verified_source_wayyiqtol_simple_past_fragment_checks"]
+    }
     changed_spans: dict[str, dict[int, str]] = {}
     used_tokens: set[tuple[str, str]] = set()
     private_proofs: dict[str, list[dict[str, Any]]] = {}
@@ -143,8 +153,10 @@ def apply_source_anchored_english_exceptions(
         if kind == "WAYYIQTOL_SIMPLE_PAST":
             if not verified_wayyiqtol(word["morph_raw"]):
                 raise CHESExceptionError("Simple past owner rule requires actual original wayyiqtol")
-            if rendered.casefold() not in GENESIS_ONE_SIMPLE_PAST_FRAGMENTS:
-                raise CHESExceptionError("Tense replacement is not in the small vetted Genesis pilot")
+            expected_research = vetted_tense_by_token.get((ref, word["source_id"]))
+            if (rendered.casefold() not in GENESIS_ONE_SIMPLE_PAST_FRAGMENTS or
+                rendered.casefold() != expected_research):
+                raise CHESExceptionError("Tense replacement disagrees with this exact original token")
         else:
             if verified_wayyiqtol(word["morph_raw"]):
                 raise CHESExceptionError("Lexical-only replacement cannot bypass a tense requirement")
