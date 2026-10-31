@@ -1,0 +1,54 @@
+name: CHES Nehemiah 7 original PDF verse scheme (no source text artifacts)
+
+on:
+  pull_request:
+    paths:
+      - scripts/ches_import.py
+      - scripts/ches_neh7_source_probe.py
+      - tests/test_ches_neh7_verse_scheme.py
+      - .github/workflows/ches-neh7-source.yml
+  push:
+    branches: [main]
+    paths:
+      - scripts/ches_import.py
+      - tests/test_ches_neh7_verse_scheme.py
+      - .github/workflows/ches-neh7-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  neh7-original-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned original PDF parser
+        run: python -m pip install PyMuPDF==1.26.5
+      - name: Fetch original Nehemiah 7 PDF over HTTPS with normal certificate validation
+        run: |
+          umask 077
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 3 --max-time 65 \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/neh7.pdf \
+            --output "$RUNNER_TEMP/olt-neh7-original.pdf"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          pdf = Path(os.environ["RUNNER_TEMP"]) / "olt-neh7-original.pdf"
+          assert pdf.stat().st_size >= 1000 and pdf.read_bytes().startswith(b"%PDF-")
+          print("Original PDF present in ephemeral private runner storage: true")
+          PY
+      - name: Inspect original Nehemiah 7 numeric verse-label glyph geometry only
+        run: python -m scripts.ches_neh7_source_probe --pdf "$RUNNER_TEMP/olt-neh7-original.pdf"
+      - name: Verify actual printed Nehemiah 7 primary and alternate verse numbering without exposing source text
+        env:
+          CHES_TEST_NEH7_PDF: ${{ runner.temp }}/olt-neh7-original.pdf
+        run: python -m unittest discover -s tests -p 'test_ches_neh7_verse_scheme.py' -v
+      - name: Destroy temporary original PDF
+        if: always()
+        run: rm -f "$RUNNER_TEMP/olt-neh7-original.pdf"
