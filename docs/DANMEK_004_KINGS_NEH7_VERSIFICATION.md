@@ -6,7 +6,7 @@ The owner successfully generated a local 929-chapter private CHES+YLT reading. T
 
 ## Book IDs
 
-The original Scripture4All CHES file prefixes `1kg` and `2kg` are the two Books of Kings. The exact pinned public-domain Young's Literal Translation JSON uses `1ki` and `2ki`, respectively, with **22 and 25 chapters**. Only the book-ID lookup is extended; this does not alter Hebrew lemmas, verses, CHES green-text data or PDF chapter imports.
+The original original CHES file prefixes `1kg` and `2kg` are the two Books of Kings. The exact pinned public-domain Young's Literal Translation JSON uses `1ki` and `2ki`, respectively, with **22 and 25 chapters**. Only the book-ID lookup is extended; this does not alter Hebrew lemmas, verses, CHES green-text data or PDF chapter imports.
 
 ## Nehemiah 7 (strictly numbered, no new verse)
 
