@@ -19,6 +19,8 @@ on:
       - "tests/test_ches_005_chapter_layout.py"
       - "scripts/ches_006_layout_metrics.py"
       - "tests/test_ches_006_layout_metrics.py"
+      - "scripts/ches_006_pilot_summary.py"
+      - "tests/test_ches_006_pilot_summary.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -43,6 +45,8 @@ on:
       - "tests/test_ches_005_chapter_layout.py"
       - "scripts/ches_006_layout_metrics.py"
       - "tests/test_ches_006_layout_metrics.py"
+      - "scripts/ches_006_pilot_summary.py"
+      - "tests/test_ches_006_pilot_summary.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -164,4 +168,11 @@ jobs:
         run: |
           python -m scripts.ches_006_layout_metrics \
             --book Exod --chapter 1 --pdf "$RUNNER_TEMP/ches-ex1.pdf" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-006 synthetic aggregate safety contract and negative tests
+        run: python -m unittest discover -s tests -p 'test_ches_006_pilot_summary.py' -v
+      - name: CHES-006 compare four SHA-pinned real original PDFs and OSHB without copyrighted text
+        run: |
+          python -m scripts.ches_006_pilot_summary \
+            --pdf-directory "$RUNNER_TEMP" \
             --confirm-machine-readable-use-permission
