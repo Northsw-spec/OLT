@@ -11,6 +11,8 @@ on:
       - "tests/test_ches_002_source_first.py"
       - "scripts/ches_private_alignment_review.py"
       - "tests/test_ches_003_private_review.py"
+      - "scripts/ches_lite_english.py"
+      - "tests/test_ches_004_lite_pipeline.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -27,6 +29,8 @@ on:
       - "tests/test_ches_002_source_first.py"
       - "scripts/ches_private_alignment_review.py"
       - "tests/test_ches_003_private_review.py"
+      - "scripts/ches_lite_english.py"
+      - "tests/test_ches_004_lite_pipeline.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -77,5 +81,12 @@ jobs:
       - name: Audit real Genesis PDF privately without writing or logging CHES text
         run: |
           python -m scripts.ches_private_alignment_review \
+            --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
+            --confirm-machine-readable-use-permission --audit
+      - name: Verify lightweight actual-English-source pipeline using invented green glosses and pinned Hebrew
+        run: python -m unittest discover -s tests -p 'test_ches_004_lite_pipeline.py' -v
+      - name: Audit real Genesis CHES English interlinear draft in memory (metadata only)
+        run: |
+          python -m scripts.ches_lite_english \
             --pdf "$RUNNER_TEMP/ches-gen1.pdf" \
             --confirm-machine-readable-use-permission --audit
