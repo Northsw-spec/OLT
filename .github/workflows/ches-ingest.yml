@@ -30,6 +30,10 @@ on:
       - "tests/test_ches_009_six_source_batch.py"
       - "scripts/ches_010_indexed_discovery.py"
       - "tests/test_ches_010_indexed_discovery.py"
+      - "scripts/ches_010_pin_registry.py"
+      - "scripts/ches_010_private_source_cache.py"
+      - "tests/test_ches_010_pinned_registry.py"
+      - "tests/test_ches_010_indexed_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -65,6 +69,10 @@ on:
       - "tests/test_ches_009_six_source_batch.py"
       - "scripts/ches_010_indexed_discovery.py"
       - "tests/test_ches_010_indexed_discovery.py"
+      - "scripts/ches_010_pin_registry.py"
+      - "scripts/ches_010_private_source_cache.py"
+      - "tests/test_ches_010_pinned_registry.py"
+      - "tests/test_ches_010_indexed_batch.py"
       - "data/engine/olt_ches_source_manifest.json"
       - "tests/test_ches_import.py"
       - ".github/workflows/ches-ingest.yml"
@@ -307,3 +315,39 @@ jobs:
           python -m scripts.ches_010_indexed_discovery \
             --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
             --confirm-machine-readable-use-permission
+      - name: CHES-010 verify original source pin registry, restricted cache and source tampering tests
+        run: python -m unittest discover -s tests -p 'test_ches_010_pinned_registry.py' -v
+      - name: CHES-010 verify six-to-ten source batch migration without losing older output
+        run: python -m unittest discover -s tests -p 'test_ches_010_indexed_batch.py' -v
+      - name: CHES-010 place original first six PDFs in ephemeral private PDF directory
+        run: |
+          umask 077
+          mkdir -p "$RUNNER_TEMP/.olt-private/ches010-pdfs"
+          for name in gen1 gen2 gen3 ex1 gen4 ex2; do
+            cp "$RUNNER_TEMP/ches-$name.pdf" "$RUNNER_TEMP/.olt-private/ches010-pdfs/ches-$name.pdf"
+            chmod 600 "$RUNNER_TEMP/.olt-private/ches010-pdfs/ches-$name.pdf"
+          done
+      - name: CHES-010 source-index fetch four additional genuinely SHA-pinned PRIVATE PDFs
+        run: |
+          python -m scripts.ches_010_private_source_cache \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-010 reverify index-selected private PDF cache and skip all four unchanged
+        run: |
+          python -m scripts.ches_010_private_source_cache \
+            --source-index "$RUNNER_TEMP/ches-hebrew-index.html" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --confirm-machine-readable-use-permission
+      - name: CHES-010 extend actual six-source English batch to ten pinned private chapters
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --indexed
+      - name: CHES-010 reverify and skip all ten original source-backed private English drafts
+        run: |
+          python -m scripts.ches_008_private_batch \
+            --pdf-directory "$RUNNER_TEMP/.olt-private/ches010-pdfs" \
+            --output-private-directory "$RUNNER_TEMP/.olt-private/ches-008" \
+            --confirm-machine-readable-use-permission --indexed
