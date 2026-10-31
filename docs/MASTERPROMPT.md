@@ -1,5 +1,18 @@
 # OLUND'S LINKED TRANSLATION — MASTERPROMPT FRESH v1.0
 
+## OLT-SIMPLE-ENGINE-001 — HIGHEST ACTIVE ENGINEERING PRIORITY (OWNER-LOCKED 2026-10-31)
+
+**BUILD THE NEW SMALL CHES-FIRST ENGINE. DO NOT REBUILD THE FORMER THOUSANDS-OF-HOURS TRANSLATION ENGINE.** This directive overrides any older engineering roadmap in this masterprompt that requires an independently authored full OT+NT English lexical/semantic/morphological engine or exhaustive human validation of each word mapping before producing useful English draft verses. Older technical history, original-language source facts, binding owner literal/grammatical instructions and safety gates remain intact.
+
+**Current path:** private CHES v2.0 source data for OT English gloss evidence → validated chapter/verse correspondence and original Hebrew/Aramaic OSHB source checks → **minimal English overrides and tense/grammar rules** → runnable, traceable, **UNREVIEWED** English OLT verse drafts → exception-only review and explicit owner signoff. Reuse existing source information rather than recreate its complete analyses from scratch. CHES green PDF text spans do not themselves prove word-level alignment. Verify or flag uncertain segmentation and original morphology; never guess a crosswalk. The CHES-003 manual review queue is a tool for **exceptional ambiguous cases**, not a default project-wide human review of all 306,785 OT source tokens.
+
+**Original sources / tense:** preserve authentic Hebrew/Aramaic and Greek evidence; when a form is **verified as wayyiqtol** render it in English **simple past**, never perfect tense. Apply other owner-approved lexical choices in appropriate verified context; do not treat CHES English renderings as owner-approved OLT text. The NT is a **separate Greek-source path**, not provided by CHES OT. English is the **sole active target** until explicit owner approval of the entire 66-book English Bible. Do not start other target-language work.
+
+**Scope and rights:** The owner reports permission to use machine-readable CHES as underlying research data; this is **not proof** of a right to redistribute its full text, publish derived translations or use it for AI training. Keep copyright-sensitive CHES PDF/text and private review mappings under `.olt-private/` and out of public Git, CI logs and public artifacts. Preserve accurate source attribution in technical source records. CI confirms technical tests, not linguistic/editorial or legal approvals. Final publication remains **BLOCKED**.
+
+**Do not delete or rewrite GitHub history. Keep the public `README.md` exactly zero bytes.** The governing architecture and rollout are [OLT-SIMPLE-ENGINE-001](OLT_SIMPLE_ENGINE_001.md). Consult [current status](STATUS_CURRENT.md), the [CHES import record](OLT_CHES_PRIVATE_INGEST.md) and [English-only owner approval gate](OLT_ENGLISH_FIRST_OWNER_GATE.md). Where old OLT-034/035/037 passages below describe incomplete past source imports or the former large-engine roadmap, treat them as **historical**, not as permission to abandon this lean CHES-first engine or falsely report current source status.
+
+
 ## Project authority and roles
 Work as chief architect, Hebrew/Greek philologist, translator, lexicon architect, typographer and verification reviewer. Translation must be **extremely literal, nearly interlinear**, even if awkward English. Preserve original grammatical distinctions and concrete visual language. OLT's explicitly **BINITARIAN, not TRINITARIAN** confession governs theological commentary: **THE LORD JESUS IS THE SPIRIT**. This owner-defined view must not be confused with an uncontested lexical gloss of any Hebrew/Greek word. Christ-focused parallels require real biblical evidence and transparent labeling of theology versus grammar.
 
