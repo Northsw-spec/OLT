@@ -4,6 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from unittest.mock import patch
+from scripts.ches_private_batch import private_batch, fetch_exact_source, validate_inventory
 from scripts.ches_index import parse_index, INDEX
 from scripts.ches_import import (
     is_ches_green, explicit_verse_markers, assign_ches_to_explicit_verses,
@@ -125,6 +127,53 @@ class TestCHESPrivateImport(unittest.TestCase):
             with self.subTest(html=html):
                 with self.assertRaises(ValueError):
                     parse_index(html)
+
+    def test_private_batch_rejects_untrusted_origins_and_uncertain_inventory(self):
+        for url in (
+            "https://evil.example/OnlineInterlinear/OTpdf/gen1.pdf",
+            "https://www.scripture4all.org/OnlineInterlinear/../secret.pdf",
+            "http://www.scripture4all.org/OnlineInterlinear/OTpdf/gen1.pdf",
+        ):
+            with self.subTest(url=url):
+                with self.assertRaises(ValueError):
+                    fetch_exact_source(url,5000)
+        with self.assertRaises(ValueError):
+            validate_inventory(b'<a href="OTpdf/gen1.pdf">1</a>')
+
+    def test_private_batch_is_sequential_resumable_and_still_unapproved(self):
+        index=parse_index(b'<a href="OTpdf/gen1.pdf">1</a>')
+        def fake_source(pdf,book,chapter):
+            self.assertEqual((pdf,book,chapter),(b"mock-only","gen",1))
+            return {"source_book_identifier_is_not_verified_oshb_book_mapping":True,
+                    "original_source_pdf_sha256":"a"*64,
+                    "verses":[{"reference":"gen.1.1"}],
+                    "verses_extracted":1,
+                    "ches_pdf_green_spans":2,
+                    "full_source_text_in_public_git_permitted":False,
+                    "publication_status":"BLOCKED"}
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)/".olt-private"/"ches"
+            calls=[]
+            def source(url,max_bytes):
+                calls.append((url,max_bytes))
+                return b"mock-only"
+            with patch("scripts.ches_private_batch.import_private_pdf",fake_source):
+                first=private_batch(index,root,limit=1,fetch=source)
+            self.assertEqual(first["newly_imported_to_private_storage"],1)
+            self.assertEqual(first["existing_private_chapters_validated_for_resume_only"],0)
+            self.assertFalse(first["amharic_translation_authorized"])
+            self.assertFalse(first["whole_old_testament_chapter_coverage_qa_complete"])
+            self.assertEqual(first["publication_status"],"BLOCKED")
+            self.assertEqual(len(calls),1)
+            self.assertTrue((root/"gen.1.json").is_file())
+            resumed=private_batch(index,root,limit=1,fetch=source)
+            self.assertEqual(resumed["newly_imported_to_private_storage"],0)
+            self.assertEqual(resumed["existing_private_chapters_validated_for_resume_only"],1)
+            self.assertEqual(len(calls),1)
+            with self.assertRaises(ValueError):
+                private_batch(index,Path(folder)/"public",limit=1,fetch=source)
+            with self.assertRaises(ValueError):
+                private_batch(index,root,limit=1,delay_seconds=0.01,fetch=source)
 
     def test_actual_chapter_original_pdf_integration_only_when_explicit(self):
         import os
