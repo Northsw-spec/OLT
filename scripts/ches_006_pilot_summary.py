@@ -69,7 +69,13 @@ def summarize_exact_pilot(reports: list[dict[str, Any]]) -> dict[str, Any]:
             raise CHESPilotSummaryError("Original source has no authentic verses")
         if report["verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS"] > report["authentic_oshb_verse_references_checked"]:
             raise CHESPilotSummaryError("Per-verse typography warning count exceeds source verses")
-        chapters_requiring_geometry_review += int(report.get("layout_requires_exception_review") is True)
+        warned = bool(report["verses_with_green_fragments_on_multiple_pdf_pages"] or
+                      report["unassigned_original_green_spans"])
+        if type(report.get("layout_requires_exception_review")) is not bool or (
+            report["layout_requires_exception_review"] != warned
+        ):
+            raise CHESPilotSummaryError("PDF layout review flag contradicts measured source geometry")
+        chapters_requiring_geometry_review += int(warned)
     if observed_scopes != expected_scopes:
         raise CHESPilotSummaryError("Exact four source chapters missing")
     return {
