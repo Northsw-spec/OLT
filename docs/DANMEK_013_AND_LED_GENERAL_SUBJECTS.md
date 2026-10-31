@@ -58,6 +58,19 @@ All uncertain structures require further evidence before widening automated
 changes. The remaining source text, CHES JSON, previous private snapshots,
 and original Hebrew-order/source-reader views are untouched.
 
+## Owner verification and baseline freeze (2026-11-01)
+
+The owner tested and **visually approved the actual private OLT English
+reading on Parrot** after DANMEK-013. Pasted chat examples lost whitespace
+in transmission; the displayed HTML was confirmed correct. Treat the
+DANMEK-013 private reader implementation as the owner-accepted baseline
+at protected `main` commit `8e10a1b97f8dd98ed9a59deba31e9683b236ac5c`.
+Do not add speculative word-spacing corrections based on pasted chat text.
+Future changes must not overwrite the accepted snapshot. This approval
+is specifically for rendered reading **presentation**, not final Bible
+translation approval or Hebrew syntax verification.
+[Owner verification and lock](OLT_PRIVATE_READER_OWNER_VERIFIED_20261101.md).
+
 ## Local operation
 
 The same command as DANMEK-011 and DANMEK-012 applies; there are no new
