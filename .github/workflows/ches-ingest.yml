@@ -140,7 +140,7 @@ jobs:
             https://www.scripture4all.org/OnlineInterlinear/OTpdf/gen3.pdf \
             --output "$RUNNER_TEMP/ches-gen3.pdf"
           curl --fail --location --retry 3 --max-time 65 --silent --show-error \
-            https://www.scripture4all.org/OnlineInterlinear/OTpdf/ex1.pdf \
+            https://www.scripture4all.org/OnlineInterlinear/OTpdf/exo1.pdf \
             --output "$RUNNER_TEMP/ches-ex1.pdf"
           printf 'Gen3 original source bytes: %s MIME: %s\\n' \
             "$(wc -c < "$RUNNER_TEMP/ches-gen3.pdf")" \
