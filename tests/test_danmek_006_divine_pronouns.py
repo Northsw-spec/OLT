@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import replace
+import re
 import unittest
 
 from scripts.danmek_006_divine_pronouns import (
@@ -13,9 +14,11 @@ from scripts.danmek_006_divine_pronouns import (
 def pin(text: str, surface: str, index: int = 0, *,
         ref: str = "gen.1.7", referent: str = "GOD",
         evidence: str = "synthetic-source-annotation") -> VerifiedDivinePronoun:
-    start = -1
-    for _ in range(index + 1):
-        start = text.index(surface, start + 1)
+    matches = list(re.finditer(
+        r"(?<![A-Za-z])" + re.escape(surface) + r"(?![A-Za-z])",
+        text,
+    ))
+    start = matches[index].start()
     return VerifiedDivinePronoun(
         start=start, surface=surface, referent=referent,
         verse_reference=ref, evidence_id=evidence,
@@ -114,7 +117,7 @@ class TestDivinePronouns(unittest.TestCase):
             capitalize_verified_divine_pronouns(
                 sample, verse_reference="gen.1.7", mentions=[human],
             )
-        good = pin(sample, "he", index=1)
+        good = pin(sample, "he", index=0)
         with self.assertRaises(DanMekPronounError):
             capitalize_verified_divine_pronouns(
                 sample, verse_reference="gen.1.7", mentions=[good, good],
