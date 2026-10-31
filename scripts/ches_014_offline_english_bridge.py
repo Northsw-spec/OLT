@@ -112,18 +112,16 @@ def _private_output_path(source_folder: Path, *, prefix: str, chapter: int) -> P
     return target
 
 
-def bridge_private_chapter(
-    private_root: Path, *, book: str, chapter: int,
-    write_private: bool = False, root: Path = ROOT,
-) -> dict[str, Any]:
-    """Generate one source-pinned *unapproved* English draft from local JSON.
+def build_private_english_draft_from_archived_chapter(
+    private_root: Path, *, book: str, chapter: int, root: Path = ROOT,
+) -> tuple[Path, str, dict[str, Any], dict[str, Any]]:
+    """Build verified-private-metadata source and unapproved English in memory.
 
-    The result contains allowlisted metadata only. Actual English stays in the
-    private output file, and existing differing drafts are never overwritten.
+    Returns private folder, source PDF prefix, untouched source document and
+    a new English working draft. No IO writes, no network or PDF re-fetch.
     """
     if (type(book) is not str or type(chapter) is not int or
-        book not in BOOK_TO_PREFIX or (book, chapter) not in PILOT or
-        type(write_private) is not bool):
+        book not in BOOK_TO_PREFIX or (book, chapter) not in PILOT):
         raise CHES014BridgeError("CHAPTER_NOT_IN_FOURTEEN_SOURCE_PINS")
     source_folder = _private_archive_root(private_root)
     prefix = BOOK_TO_PREFIX[book]
@@ -168,6 +166,21 @@ def bridge_private_chapter(
     draft["offline_private_archive_bridge_checkpoint"] = "CHES-014"
     draft["original_pdf_bytes_rehashed_by_offline_bridge"] = False
     draft["private_archive_source_used_without_network"] = True
+
+    return source_folder, prefix, source, draft
+
+
+def bridge_private_chapter(
+    private_root: Path, *, book: str, chapter: int,
+    write_private: bool = False, root: Path = ROOT,
+) -> dict[str, Any]:
+    """Return count-only QA and optionally write an unapproved private draft."""
+    if type(write_private) is not bool:
+        raise CHES014BridgeError("INVALID_PRIVATE_WRITE_MODE")
+    source_folder, prefix, source, draft = build_private_english_draft_from_archived_chapter(
+        private_root, book=book, chapter=chapter, root=root
+    )
+    verses = draft["genesis_verse_count"] if (book, chapter) == ("Gen", 1) else draft["verse_count"]
 
     state = "VALIDATED_AUDIT_ONLY_NOT_SAVED"
     if write_private:
