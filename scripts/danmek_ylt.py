@@ -102,7 +102,9 @@ def _validate_ylt_document(raw: bytes, *, original_pin: bool = True) -> dict:
         )
     except (UnicodeError, ValueError, TypeError) as exc:
         raise DanMekYLTError("INVALID_YLT_JSON") from exc
-    books = data.get("books") if isinstance(data, dict) else None
+    if not isinstance(data, dict):
+        raise DanMekYLTError("YLT_TOP_LEVEL_MUST_BE_OBJECT")
+    books = data.get("books")
     if (data.get("id") != "ylt" or data.get("year") != 1898 or
         not isinstance(books, list) or len(books) != 66):
         raise DanMekYLTError("UNEXPECTED_YLT_EDITION_OR_BOOK_COUNT")
