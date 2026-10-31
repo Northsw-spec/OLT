@@ -79,10 +79,25 @@ def invented_ylt() -> dict:
         {"id": "neh", "testament": "OT", "chapters": [
             ["A door is found here"] for _ in range(7)
         ]},
+        {"id": "ecc", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(12)
+        ]},
+        {"id": "sng", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(8)
+        ]},
+        {"id": "ezk", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(48)
+        ]},
+        {"id": "jol", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(3)
+        ]},
+        {"id": "nam", "testament": "OT", "chapters": [
+            ["A door is found here"] for _ in range(3)
+        ]},
     ]
     books += [
         {"id": f"ot{i:02}", "testament": "OT",
-         "chapters": [["Synthetic neutral sentence"]]} for i in range(36)
+         "chapters": [["Synthetic neutral sentence"]]} for i in range(31)
     ]
     books += [
         {"id": f"nt{i:02}", "testament": "NT",
@@ -191,6 +206,32 @@ class TestYLTAuthority(unittest.TestCase):
         self.assertNotIn(("gen.1.1", 1), candidate)
         self.assertEqual(counts["ambiguous_verses_left_unchanged"], 1)
 
+    def test_original_qoh_and_can_prefixes_use_specific_ylt_books(self):
+        self.assertEqual(
+            ylt_verse_for_source(self.ylt, prefix="qoh", chapter=12, verse=1),
+            "A door is found here",
+        )
+        self.assertEqual(
+            ylt_verse_for_source(self.ylt, prefix="can", chapter=8, verse=1),
+            "A door is found here",
+        )
+        for prefix, chapter in (("qoh", 13), ("can", 9)):
+            self.assertIsNone(ylt_verse_for_source(
+                self.ylt, prefix=prefix, chapter=chapter, verse=1,
+            ))
+
+    def test_verse_lookups_for_verified_ezekiel_joel_nahum_1898_ids(self):
+        for original, chapter in (("eze", 48), ("joe", 3), ("nah", 3)):
+            self.assertEqual(
+                ylt_verse_for_source(self.ylt, prefix=original, chapter=chapter,
+                                     verse=1),
+                "A door is found here",
+            )
+            self.assertIsNone(
+                ylt_verse_for_source(self.ylt, prefix=original,
+                                     chapter=chapter + 1, verse=1)
+            )
+
     def test_ylt_verse_missing_and_neh7_numerical_dispute_never_guess(self):
         source = invented_chapter("neh", 7, alternate_neh7=True)
         choices, totals = propose_ylt_verse_overrides(
@@ -250,6 +291,27 @@ class TestYLTAuthority(unittest.TestCase):
         self.assertIn("And he said", page)
         self.assertEqual(normal["ylt_noun_edit_count"], 0)
         self.assertFalse(normal["source_fragment_text_linguistically_modified"])
+
+    def test_ylt_unmapped_diagnostics_by_source_prefix_are_counts_only(self):
+        qoh = invented_chapter("qoh", 1)
+        can = invented_chapter("can", 1)
+        can["original_source_pdf_sha256"] = "f" * 64
+        write_private_json(qoh, self.source_root / "qoh.1.json")
+        write_private_json(can, self.source_root / "can.1.json")
+        with patch(
+            "scripts.ches_015_direct_private_reader.load_private_ylt",
+            return_value=(self.ylt, "8" * 40)
+        ), patch("urllib.request.urlopen", side_effect=AssertionError("NO NETWORK")):
+            summary = build_private_reader(
+                self.source_root, render=False, use_ylt_authority=True
+            )
+        self.assertEqual(summary["ylt_verses_unmapped_left_unchanged"], 2)
+        self.assertEqual(
+            summary["ylt_unmapped_verses_by_source_prefix"],
+            {"can": 1, "qoh": 1}
+        )
+        self.assertNotIn("SYNTHETIC-ONLY", json.dumps(summary))
+        self.assertNotIn(str(self.source_root), json.dumps(summary))
 
     def test_preparation_never_accepts_unpinned_public_domain_json(self):
         fake = json.dumps(self.ylt).encode()

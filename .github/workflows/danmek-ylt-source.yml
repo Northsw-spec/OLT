@@ -53,7 +53,33 @@ jobs:
           gen = next(b for b in ot if b["id"] == "gen")
           assert len(gen["chapters"]) == 50
           assert len(gen["chapters"][0]) == 31
-          print("Exact YLT 1898 public-domain JSON verified with 39 OT + 27 NT books, no text emitted")
+          print("YLT public-domain 1898 OT book metadata with 8 chapters:", [
+              (b["id"], b.get("name", ""))
+              for b in ot if len(b["chapters"]) == 8
+          ])
+          from scripts.danmek_ylt import YLT_BOOK_ID_BY_SOURCE_PREFIX
+          for original, ylt_id, chapter_count in (
+              ("qoh", "ecc", 12),
+              ("can", "sng", 8),
+              ("eze", "ezk", 48),
+              ("joe", "jol", 3),
+              ("nah", "nam", 3),
+          ):
+              assert YLT_BOOK_ID_BY_SOURCE_PREFIX[original] == ylt_id
+              target = next((b for b in ot if b["id"] == ylt_id), None)
+              assert target is not None, "MISSING_YLT_BOOK_ID_" + ylt_id
+              assert len(target["chapters"]) == chapter_count
+          # Book identifiers and names are public metadata, not Bible text.
+          known_ids = {b["id"] for b in ot}
+          unknown_targets = sorted(
+              {target for target in YLT_BOOK_ID_BY_SOURCE_PREFIX.values()
+               if target not in known_ids}
+          )
+          print("YLT historic OT book metadata:", [
+              (b["id"], b.get("name", "")) for b in ot
+          ])
+          assert not unknown_targets, "UNRECOGNIZED_YLT_BOOK_IDS_" + repr(unknown_targets)
+          print("Verified pinned YLT 1898: 39 OT, 27 NT; all configured book IDs valid; no verse text emitted")
           PY
       - name: Run synthetic-only YLT noun/tense regression suite
         run: python -m unittest discover -s tests -p 'test_danmek_002_ylt_verse_authority.py' -v

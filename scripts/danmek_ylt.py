@@ -42,7 +42,7 @@ CANDIDATES: tuple[tuple[str, str, str], ...] = (
     ("says", "saith", "TENSE"),
     ("said", "saith", "TENSE"),
 )
-REVISION = "DANMEK-002-YLT-VERSE-GUARDED-v1"
+REVISION = "DANMEK-003-YLT-VERSE-BOOK-ALIAS-AUDIT-v2"
 
 # The PDF source's filename prefixes are NOT original-language book IDs.
 # These familiar labels are permitted only to *look up a parallel English
@@ -54,10 +54,13 @@ YLT_BOOK_ID_BY_SOURCE_PREFIX = {
     "1sa": "1sa", "2sa": "2sa", "1ki": "1ki", "2ki": "2ki",
     "1ch": "1ch", "2ch": "2ch", "ezr": "ezr", "neh": "neh",
     "est": "est", "job": "job", "psa": "psa", "pro": "pro",
-    "ecc": "ecc", "sol": "sol", "isa": "isa", "jer": "jer",
-    "lam": "lam", "eze": "eze", "dan": "dan", "hos": "hos",
-    "joe": "joe", "amo": "amo", "oba": "oba", "jon": "jon",
-    "mic": "mic", "nah": "nah", "hab": "hab", "zep": "zep",
+    # Scripture4All uses qoh/can; common YLT book IDs are ecc/sol.
+    # These are verse-lookup aliases only, never Hebrew-token alignment.
+    "qoh": "ecc", "can": "sng",
+    "ecc": "ecc", "sol": "sng", "isa": "isa", "jer": "jer",
+    "lam": "lam", "eze": "ezk", "dan": "dan", "hos": "hos",
+    "joe": "jol", "amo": "amo", "oba": "oba", "jon": "jon",
+    "mic": "mic", "nah": "nam", "hab": "hab", "zep": "zep",
     "hag": "hag", "zec": "zec", "mal": "mal",
 }
 
