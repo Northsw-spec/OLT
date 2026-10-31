@@ -11,6 +11,12 @@
 
 ## OLT-SIMPLE-ENGINE-001 — Binding simplified CHES-first engine (ACTIVE ENGINEERING DIRECTION)
 
+## DANMEK-006 — Verified divine pronoun casing, separate OLT English layer (2026-10-31)
+
+- **New owner style:** English `He/Him/His/Himself` must use an uppercase initial where the pronoun **actually refers to God/the LORD**, e.g. `·He-is-making` for a verified divine subject. Human `he/him/his` remains lowercase, except normal English sentence capitalization; the antecedent must be reviewed, not inferred from the word `God` in the same verse.
+- **Implemented scope:** `scripts/danmek_006_divine_pronouns.py` is a **small, pure, separately tested formatting helper** taking an explicit verified divine-pronoun occurrence + verse and source-evidence reference. It does **not** guess antecedents and has NOT been connected to the still-future owner-preferred reordered English reading throughout 929 chapters. The CHES source JSON and source-faithful reader remain unchanged.
+- **Not done:** full OT referent identification, word order transformation, CHES `c` and article analysis, final English OLT verification, public-redistribution authorization. [Bounded owner rule](DANMEK_006_DIVINE_REFERENT_PRONOUN_CASING.md).
+
 ## DANMEK-005 — Owner-confirmed stylistic English order, not a CHES defect (2026-10-31)
 
 - **Owner clarification:** CHES private chapter JSONs are correct as source data; Hebrew word order is not `wrong`. The owner wants **an intentional OLT English reading style** placing the known subject before the English verb phrase while retaining the stylistically preferred explicit pronoun, in applicable verified verses. Keep the unchanged CHES interlinear as a **separate source view**, and derive OLT English into a separate, auditable private version.
