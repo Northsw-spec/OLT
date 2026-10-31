@@ -19,7 +19,7 @@ import stat
 import tempfile
 
 from scripts.ches_014_offline_english_bridge import (
-    _private_archive_root, _load_private_source,
+    CHES014BridgeError, _private_archive_root, _load_private_source,
 )
 from scripts.ches_local_archive_audit import CHAPTERS_EXPECTED, PREFIXES_EXPECTED
 
@@ -145,7 +145,10 @@ def build_private_reader(source_root: Path, *, render: bool = False) -> dict:
     """
     if type(render) is not bool:
         raise CHES015ReaderError("INVALID_RENDER_MODE")
-    folder = _private_archive_root(source_root)
+    try:
+        folder = _private_archive_root(source_root)
+    except CHES014BridgeError as exc:
+        raise CHES015ReaderError("UNSAFE_PRIVATE_ARCHIVE_ROOT") from exc
     records = []
     digest = hashlib.sha256(REVISION.encode("ascii"))
     index_hashes: set[str] = set()
@@ -180,6 +183,9 @@ def build_private_reader(source_root: Path, *, render: bool = False) -> dict:
             raise CHES015ReaderError("IMPOSSIBLE_SOURCE_ARCHIVE_SIZE")
     if not records:
         raise CHES015ReaderError("EMPTY_PRIVATE_SOURCE_ARCHIVE")
+    # Source-directory lexicographic filenames place chapter 10 before 2;
+    # read snapshots always display each source-book chapter numerically.
+    records.sort(key=lambda item: (item[0], item[1]))
     if len(index_hashes) != 1:
         raise CHES015ReaderError("MIXED_SOURCE_INDEX_SNAPSHOT_HASHES")
 
