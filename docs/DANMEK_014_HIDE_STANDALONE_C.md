@@ -33,13 +33,26 @@ No original CHES private JSON is altered. No text or private local paths
 are printed by the CLI, placed in the public repository, or sent to GitHub
 Actions. The offline reader generates a **new immutable, versioned private
 snapshot**, rather than editing or overwriting the **owner visually verified,
-LOCKED DANMEK-013** baseline. The latter remains certified **as presented
-at the time of the owner's approval**; the new cleanup is not retroactively
-declared owner-verified until the owner actually inspects it.
+LOCKED DANMEK-013** baseline. The earlier version remains certified **as
+presented at the time of that approval**. The owner has also separately
+inspected and verified the resulting DANMEK-014 English reading; see the
+verification section below.
 
 The original-faithful reader, YLT-only view, `sur faces` processing,
 existing sentence order and divine-pronoun capitalization policy are
 unchanged. Publication remains **BLOCKED**.
+
+## Subsequently verified and locked by the owner (2026-11-01)
+
+After running the new private English reading on Parrot, the owner confirmed
+**“godkänt. verifierat.”** The active DANMEK-014 view is therefore
+**OWNER VISUALLY VERIFIED / LOCKED** at protected `main` source-code baseline
+`2e56f446b707226c584269c88c50efab37e0ffc2`. This direct human
+acceptance supersedes the earlier pre-inspection status sentence above;
+it does not identify a public hash for the user's private HTML, certify
+Hebrew/Aramaic syntax or approve the final 66-book Bible.
+The synthetic DANMEK-015 regression gate safeguards the accepted behavior.
+[Canonical owner-verification lock](OLT_PRIVATE_READER_OWNER_VERIFIED_DANMEK014_20261101.md).
 
 ## Parrot operation
 

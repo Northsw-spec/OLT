@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## OWNER VERIFIED / LOCKED — DANMEK-014 private OLT English reading (2026-11-01)
+
+- **The owner expressly verified and approved the current DANMEK-014 HTML reading on Parrot** after the isolated lowercase `c` and duplicate-marker removal. Source-code checkpoint: protected `main` `2e56f446b707226c584269c88c50efab37e0ffc2` (PR #95); post-merge GitHub Actions [run 41252311520](https://github.com/Northsw-spec/OLT/actions/runs/41252311520) succeeded. This is direct owner visual sign-off of the **private English reader presentation**, NOT automated Hebrew syntax verification.
+- **DANMEK-015 regression freeze:** Synthetic GitHub tests now lock the accepted presentation invariants (bounded subject-first rendering, `faces`, isolation of lowercase `c`, ordinary pronoun casing, immutable private source/snapshots and publication block). Future changes require a distinct private snapshot and a new owner acceptance. The earlier DANMEK-013 baseline remains independently locked.
+- **Do not generalize approval:** The actual private snapshot ID and per-chapter content were not provided to GitHub; full OT/NT translation and final 66-book review are still NOT DONE and publication BLOCKED. [DANMEK-014 owner-verified checkpoint](OLT_PRIVATE_READER_OWNER_VERIFIED_DANMEK014_20261101.md).
+
 ## DANMEK-014 — Owner-requested standalone lowercase c cleanup (2026-11-01)
 
 - **Target:** In the private owner-approved OLT reading, suppress lowercase `c` as a **separate whitespace-delimited marker**, including when embedded within one PDF-text fragment at the start/middle/end of a line, and repeated `c c` or `cc`. Do not remove c inside real words or uppercase `C`, `c.`, `c·`, punctuation-attached annotations.
