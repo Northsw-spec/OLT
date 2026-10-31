@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-012 — Joined Yahweh word order and isolated c in private OLT (2026-10-31)
+
+- **Owner-reported defect addressed in a bounded source shape:** English source `and·he-shall-cut-offYahwehfrom·...` now yields `And Yahweh — he shall cut off from·...` in the distinct owner-approved private English reader. A generic `And` plus `Yahweh` search is intentionally *not* used: a name may be the object. Conflicting/ambiguous cases remain unchanged.
+- **Private display cleanup:** Suppress a whole text fragment containing exactly standalone lowercase `c`, not `C`, `c.` or a letter inside a word. Report `olt_isolated_lowercase_c_fragments_hidden`. Source CHES JSON, old snapshots and special divine-pronoun capitalization cancellation remain unchanged.
+- **Status boundary:** Only synthetic CI verification; counts and actual result of private imported OT require rebuilding the local owner-approved HTML. [DANMEK-012](DANMEK_012_DISPLAY_JOINED_YAHWEH.md). Publication BLOCKED.
+
 ## DANMEK-011 — Owner-approved English candidate reordering (2026-10-31)
 
 - **Owner explicitly approved every proposed DANMEK-010 English subject/verb connection as an editorial choice.** The opt-in reader `--olt-owner-approved-candidates` automatically reorders all uniquely detected candidate phrases in all locally present private OT CHES chapters, and reports applied/ambiguous/YLT-conflict/untouched counts. Original CHES source JSON remains unchanged.
