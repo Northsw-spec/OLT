@@ -23,16 +23,21 @@ def invented_chapter() -> list[dict]:
     rows = []
     for verse in PRIMARY:
         y = 30.0 + verse * 12
-        # Individual gray glyphs mimic the original PDF's fragment structure.
-        label = f"7:{verse}" + (f"(7:{verse - 1})" if verse >= 69 else "")
+        # Gray primary digits and nearby BLACK numeric alternatives mimic
+        # the actual printed original Nehemiah 7 PDF glyph geometry.
         rows.extend([
             {"text": "7", "page": 1, "x": 30, "y": y, "color": 0x888888},
-            {"text": label[1:], "page": 1, "x": 35, "y": y, "color": 0x888888},
+            {"text": f":{verse}", "page": 1, "x": 35, "y": y, "color": 0x888888},
             {"text": "ARTIFICIAL-ENGLISH-ONLY", "page": 1, "x": 90,
              "y": y + 4, "color": 0x008000},
             {"text": "Fake AV column", "page": 1, "x": 700, "y": y,
              "color": 0x000000},
         ])
+        if verse >= 69:
+            rows.append({
+                "text": f"(7:{verse - 1})", "page": 1, "x": 50,
+                "y": y + 1.5, "color": 0x000000
+            })
     return rows
 
 
@@ -68,17 +73,41 @@ class TestNehemiahSevenSourceNumbering(unittest.TestCase):
             ("(7:68)", "(7:69)"),
             ("(7:68)", ""),
             (":67", ":68"),
-            (":69(7:68)", ":68(7:67)"),
+            (":69", ":68"),
         ]:
             source = invented_chapter()
             for span in source:
-                if span["color"] == 0x888888 and original in span["text"]:
+                if original in span["text"] and (span["color"] == 0x888888 or
+                                                 span["text"].startswith("(")):
                     span["text"] = span["text"].replace(original, replacement, 1)
                     break
             with self.subTest(change=(original, replacement)), self.assertRaises(ValueError):
                 assign_ches_to_explicit_verses(
                     source, 7, expected_verses=72, source_book="neh"
                 )
+
+    def test_black_alternative_must_be_unique_nearby_and_exact(self):
+        for field, value in (
+            ("x", 550),
+            ("y", 9000),
+            ("color", 0x888888),
+        ):
+            with self.subTest(field=field):
+                source = invented_chapter()
+                alt = next(row for row in source if row["text"] == "(7:68)")
+                alt[field] = value
+                with self.assertRaises(ValueError):
+                    assign_ches_to_explicit_verses(
+                        source, 7, expected_verses=72, source_book="neh"
+                    )
+        duplicate = invented_chapter()
+        duplicate.append(next(
+            row.copy() for row in duplicate if row["text"] == "(7:68)"
+        ))
+        with self.assertRaises(ValueError):
+            assign_ches_to_explicit_verses(
+                duplicate, 7, expected_verses=72, source_book="neh"
+            )
 
     def test_gap_cannot_be_declared_73_verses_without_printed_source(self):
         with self.assertRaises(ValueError):
