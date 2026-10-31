@@ -7,20 +7,20 @@ import tempfile
 import unittest
 
 from scripts.ches_006_pilot_summary import (
-    CHESPilotSummaryError, CHAPTER_FILES, audit_exact_pilot_pdfs,
+    CHESPilotSummaryError, CHAPTER_FILES, assert_pinned_geometry_warning_baseline, audit_exact_pilot_pdfs,
     summarize_exact_pilot,
 )
 
 
 def numeric_reports():
     rows = [
-        ("Gen.1", 31, 434, 526, 24, 1),
-        ("Gen.2", 25, 328, 377, 18, 1),
-        ("Gen.3", 24, 347, 415, 19, 2),
-        ("Exod.1", 22, 240, 350, 16, 0),
+        ("Gen.1", 31, 434, 526, 24, 1, 6, 35),
+        ("Gen.2", 25, 328, 377, 18, 1, 7, 30),
+        ("Gen.3", 24, 347, 415, 19, 2, 8, 26),
+        ("Exod.1", 22, 240, 350, 16, 0, 3, 30),
     ]
     result = []
-    for ref, verses, words, green, different, crosspage in rows:
+    for ref, verses, words, green, different, crosspage, min_span, max_span in rows:
         result.append({
             "checkpoint": "CHES-006",
             "scope": ref,
@@ -38,6 +38,8 @@ def numeric_reports():
             "verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS": different,
             "verses_with_green_fragments_on_multiple_pdf_pages": crosspage,
             "layout_requires_exception_review": bool(crosspage),
+            "min_green_spans_in_one_verse": min_span,
+            "max_green_spans_in_one_verse": max_span,
         })
     return result
 
@@ -45,6 +47,7 @@ def numeric_reports():
 class TestCHES006PilotSummary(unittest.TestCase):
     def test_original_source_metric_aggregate_not_an_alignment_or_translation(self):
         output = summarize_exact_pilot(numeric_reports())
+        assert_pinned_geometry_warning_baseline(numeric_reports())
         self.assertEqual(output["original_pdf_chapters_checked_exact_source_hash"], 4)
         self.assertEqual(output["scope"], ["Gen.1", "Gen.2", "Gen.3", "Exod.1"])
         self.assertEqual(output["authentic_oshb_verse_references_checked"], 102)
@@ -88,6 +91,21 @@ class TestCHES006PilotSummary(unittest.TestCase):
                 candidate = copy.deepcopy(good)
                 candidate[0][key] = value
                 summarize_exact_pilot(candidate)
+
+    def test_pinned_actual_pdf_geometry_diagnostics_detect_parser_regressions(self):
+        original = numeric_reports()
+        assert_pinned_geometry_warning_baseline(original)
+        for key, value in (
+            ("verses_with_green_fragments_on_multiple_pdf_pages", 3),
+            ("verses_with_different_pdf_span_and_oshb_word_counts_NOT_TRANSLATION_ERRORS", 25),
+            ("unassigned_original_green_spans", 1),
+            ("min_green_spans_in_one_verse", 2),
+            ("max_green_spans_in_one_verse", 100),
+        ):
+            with self.subTest(metric=key), self.assertRaises(CHESPilotSummaryError):
+                changed = copy.deepcopy(original)
+                changed[0][key] = value
+                assert_pinned_geometry_warning_baseline(changed)
 
     def test_missing_real_pdf_directory_is_not_silently_accepted(self):
         with tempfile.TemporaryDirectory() as folder:
