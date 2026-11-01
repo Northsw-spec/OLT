@@ -115,7 +115,7 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
     def test_two_distinct_clause_moves_do_not_conflict(self):
         seq = (
             ["and·he-is-saying", "Rowan", "to", "Mira"] +
-            ["and·she-is-dying", "Talia", "and·he-is-coming"
+            ["and·she-is-dying", "Talia", "and·he-is-coming"]
         )
         new, moves, totals = apply_unmarked_english_roles(seq, " ".join(seq))
         self.assertEqual(len(moves), 2)
