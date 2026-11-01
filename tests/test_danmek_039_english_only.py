@@ -163,6 +163,17 @@ class TestDanMek039EnglishOnly(unittest.TestCase):
                 self.assertEqual(result, before)
                 self.assertEqual(stats.get("applied_subject_moves", 0), 0)
 
+    def test_counts_split_finite_english_predicates_independently(self):
+        src = [
+            "and·he-is-becoming", "as·which",
+            "he-", "instructed", "Rowan", "»", "Micah",
+        ]
+        result, stats = reorder_english_subjects(src)
+        self.assertEqual(stats["english_finite_predicates_seen"], 2)
+        self.assertEqual(stats["english_split_finite_predicates_seen"], 1)
+        self.assertEqual(stats["applied_subject_moves"], 1)
+        self.assertIn("Rowan - he- instructed", result)
+
     def test_unfinished_or_coordinated_nominative_is_not_truncated(self):
         cases = (
             ["and·they-are-anointing", "»·him", "Zadok",
@@ -212,6 +223,8 @@ class TestDanMek039EnglishOnly(unittest.TestCase):
         self.assertEqual(report["source_books"], 1)
         self.assertEqual(report["source_chapters"], 1)
         self.assertEqual(report["source_verses"], 2)
+        self.assertGreaterEqual(report["english_finite_predicates_seen"], 2)
+        self.assertGreaterEqual(report["english_split_finite_predicates_seen"], 0)
         self.assertEqual(report["mode"], "AUDIT_ONLY")
         self.assertGreater(report["subject_moves_applied"], 0)
         self.assertFalse(report["original_language_code_imported"])
