@@ -24,7 +24,7 @@ from scripts.danmek_030_reviewed_english_subject_order import (
 )
 from scripts.danmek_031_private_english_priority_triage import (
     REVISION as SOURCE_SCHEMA, HISTORICAL_WITH_PAIRS, HISTORICAL_NO_PAIRS,
-    triage_private_english_roles,
+    triage_private_english_roles, DanMek031Error,
 )
 
 REVISION = "DANMEK-032-PRIVATE-P1-BATCHED-REVIEW-v1"
