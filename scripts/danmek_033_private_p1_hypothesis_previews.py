@@ -47,6 +47,7 @@ class DanMek033Error(ValueError):
 
 def preview_one_unapproved_subject_hypothesis(
     *, verse_english: str, rule: dict,
+    trusted_reference: str, trusted_chapter_sha256: str,
 ) -> str:
     """Return *illustrative* subject-first English, never an approved edit.
 
@@ -54,8 +55,13 @@ def preview_one_unapproved_subject_hypothesis(
     source chapter SHA and complete displayed verse SHA. No normalization,
     guessed grammatical role, or overlapping/partial string replacement.
     """
-    if type(verse_english) is not str or type(rule) is not dict:
+    if (type(verse_english) is not str or type(rule) is not dict
+            or type(trusted_reference) is not str
+            or type(trusted_chapter_sha256) is not str):
         raise DanMek033Error("INVALID_UNAPPROVED_HYPOTHESIS_INPUT")
+    if (rule.get("reference") != trusted_reference
+            or rule.get("source_chapter_sha256") != trusted_chapter_sha256):
+        raise DanMek033Error("HYPOTHESIS_TRUSTED_SOURCE_CONTEXT_MISMATCH")
     if (rule.get("english_subject_role_reviewed") is not False
             or rule.get("review_note") != ""):
         raise DanMek033Error("HYPOTHESIS_MUST_REMAIN_UNAPPROVED")
@@ -105,6 +111,8 @@ def _generate_unapproved_hypotheses(cases: list[dict]) -> list[dict]:
         for rule in row["candidates"]:
             alternate = preview_one_unapproved_subject_hypothesis(
                 verse_english=english, rule=rule,
+                trusted_reference=row["reference"],
+                trusted_chapter_sha256=row["candidates"][0]["source_chapter_sha256"],
             )
             hypotheses.append({
                 "reference": row["reference"],
