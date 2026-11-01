@@ -43,53 +43,70 @@ def _load_priority_report(folder: Path, current: dict) -> tuple[dict, bytes]:
     if (root.is_symlink() or not root.is_dir()
             or stat.S_IMODE(root.stat().st_mode) & 0o077):
         raise DanMek032Error("PRIVATE_PRIORITY_REPORT_DIRECTORY_MISSING_OR_UNSAFE")
-    names = [p for p in root.iterdir() if PRIORITY_NAME.fullmatch(p.name)]
-    if len(names) != 1:
-        raise DanMek032Error("REQUIRE_ONE_PRIVATE_PRIORITY_JSON")
-    path = names[0]
-    if (path.is_symlink() or not path.is_file()
-            or stat.S_IMODE(path.stat().st_mode) & 0o077
-            or not 0 < path.stat().st_size <= MAX_SOURCE_BYTES):
-        raise DanMek032Error("PRIVATE_PRIORITY_JSON_MISSING_OR_UNSAFE")
-    blob = path.read_bytes()
-    if (len(blob) != path.stat().st_size
-            or hashlib.sha256(blob).hexdigest()[:20]
-            != path.name.removeprefix("priority-").removesuffix(".json")):
-        raise DanMek032Error("PRIVATE_PRIORITY_JSON_CONTENT_CHANGED")
-    try:
-        def no_duplicates(pairs: list[tuple[str, object]]) -> dict:
-            data: dict = {}
-            for name, value in pairs:
-                if name in data:
-                    raise DanMek032Error("PRIVATE_PRIORITY_DUPLICATE_JSON_KEY")
-                data[name] = value
-            return data
-        data = json.loads(
-            blob.decode("utf-8"), object_pairs_hook=no_duplicates,
-            parse_constant=lambda _x: (_ for _ in ()).throw(
-                DanMek032Error("PRIVATE_PRIORITY_NONFINITE_JSON")
-            ),
-        )
-    except (UnicodeError, ValueError, TypeError):
-        raise DanMek032Error("PRIVATE_PRIORITY_JSON_INVALID") from None
-    if (type(data) is not dict
-            or data.get("schema") != SOURCE_SCHEMA
-            or data.get("all_cases_unapproved") is not True
-            or data.get("publication_status") != "BLOCKED"
-            or data.get("source_owner_reader_snapshot") !=
+    names = sorted(
+        (p for p in root.iterdir() if PRIORITY_NAME.fullmatch(p.name)),
+        key=lambda p: p.name,
+    )
+    if not names:
+        raise DanMek032Error("PRIVATE_PRIORITY_JSON_NOT_FOUND")
+    if len(names) > 200:
+        raise DanMek032Error("TOO_MANY_PRIVATE_PRIORITY_REPORTS")
+
+    def no_duplicates(pairs: list[tuple[str, object]]) -> dict:
+        data: dict = {}
+        for name, value in pairs:
+            if name in data:
+                raise DanMek032Error("PRIVATE_PRIORITY_DUPLICATE_JSON_KEY")
+            data[name] = value
+        return data
+
+    matching: list[tuple[dict, bytes]] = []
+    for path in names:
+        if (path.is_symlink() or not path.is_file()
+                or stat.S_IMODE(path.stat().st_mode) & 0o077
+                or not 0 < path.stat().st_size <= MAX_SOURCE_BYTES):
+            raise DanMek032Error("PRIVATE_PRIORITY_JSON_MISSING_OR_UNSAFE")
+        blob = path.read_bytes()
+        if (len(blob) != path.stat().st_size
+                or hashlib.sha256(blob).hexdigest()[:20]
+                != path.name.removeprefix("priority-").removesuffix(".json")):
+            raise DanMek032Error("PRIVATE_PRIORITY_JSON_CONTENT_CHANGED")
+        try:
+            data = json.loads(
+                blob.decode("utf-8"), object_pairs_hook=no_duplicates,
+                parse_constant=lambda _x: (_ for _ in ()).throw(
+                    DanMek032Error("PRIVATE_PRIORITY_NONFINITE_JSON")
+                ),
+            )
+        except (UnicodeError, ValueError, TypeError):
+            raise DanMek032Error("PRIVATE_PRIORITY_JSON_INVALID") from None
+        if type(data) is not dict:
+            raise DanMek032Error("PRIVATE_PRIORITY_JSON_INVALID")
+        if data.get("source_owner_reader_snapshot") != (
             current["source_owner_reader_snapshot"]
-            or data.get("source_chapters_scanned") !=
-            current["source_chapters_scanned"]
-            or data.get("source_verses_scanned") != current["source_verses_scanned"]
-            or data.get("historical_english_ambiguities_seen") !=
-            current["historical_english_ambiguities_seen"]
-            or data.get("english_subject_review_candidates_seen") !=
-            current["all_role_candidates"]
-            or type(data.get("cases")) is not list
-            or len(data["cases"]) != current["review_verses_queued"]
-            or len(data["cases"]) > MAX_SOURCE_CASES):
+        ):
+            # Keep old valid snapshots available; never delete or overwrite.
+            continue
+        if (data.get("schema") != SOURCE_SCHEMA
+                or data.get("all_cases_unapproved") is not True
+                or data.get("publication_status") != "BLOCKED"
+                or data.get("source_chapters_scanned") !=
+                current["source_chapters_scanned"]
+                or data.get("source_verses_scanned") != current["source_verses_scanned"]
+                or data.get("historical_english_ambiguities_seen") !=
+                current["historical_english_ambiguities_seen"]
+                or data.get("english_subject_review_candidates_seen") !=
+                current["all_role_candidates"]
+                or type(data.get("cases")) is not list
+                or len(data["cases"]) != current["review_verses_queued"]
+                or len(data["cases"]) > MAX_SOURCE_CASES):
+            raise DanMek032Error("PRIVATE_PRIORITY_REPORT_STALE_OR_INCOMPLETE")
+        matching.append((data, blob))
+    if not matching:
         raise DanMek032Error("PRIVATE_PRIORITY_REPORT_STALE_OR_INCOMPLETE")
-    return data, blob
+    if len(matching) != 1:
+        raise DanMek032Error("MULTIPLE_CURRENT_PRIVATE_PRIORITY_JSON_REPORTS")
+    return matching[0]
 
 
 def _p1_only(
@@ -295,6 +312,8 @@ def build_private_p1_batches(
         }
     except DanMek032Error:
         raise
+    except DanMek031Error as exc:
+        raise DanMek032Error(str(exc)) from None
     except DanMek027Error as exc:
         raise DanMek032Error(str(exc)) from None
     except Exception:
