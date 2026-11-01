@@ -25,39 +25,54 @@ import stat
 import tempfile
 
 from scripts.ches_014_offline_english_bridge import _load_private_source, _private_archive_root
-from scripts.ches_015_direct_private_reader import NAME, build_private_reader
+from scripts.ches_015_direct_private_reader import NAME as CHES_FILE_NAME, build_private_reader
 from scripts.danmek_008_english_display import simplify_sur_faces_for_olt_view
-from scripts.danmek_011_owner_order import INLINE, apply_owner_approved_candidates
+from scripts.danmek_011_owner_order import (
+    INLINE, JOINED_YAHWEH, JOINED_AND_SUBJECT,
+    apply_owner_approved_candidates, discover_candidates,
+)
 from scripts.danmek_012_display import hide_isolated_c
 
-REVISION = "DANMEK-027-VERSIONED-MULTICLAUSE-SUBJECT-ORDER-v1"
+REVISION = "DANMEK-028-GUARDED-MULTICLAUSE-SUBJECT-ORDER-v2"
 MAX_CHAPTERS = 1000
 MAX_VERSE_CHARS = 50000
-SUBJECT = r"(?:[A-Z][A-Za-z'’-]{1,49}|the·(?:king|queen|priest|prophet|servant|messenger))"
-
-# This owner-provided *shape* disambiguates one specific ambiguous syntactic
-# configuration: plural hearers are followed by a "that ... was-anointed"
-# report. No proprietary source wording is stored in the test corpus.
-_REPORT_HEARER = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?they-are-hearing)[ \t]+"
-    r"(?P<subject>[A-Z][A-Za-z'’-]{1,49}s)"
-    r"(?=[ \t]+that[ \t]+(?:he|she)-was-anointed[ \t]+[A-Z])"
+# The same subject can have a title, a definite article, or two name parts.
+# Do not infer a subject from arbitrary lowercase nouns or from a bare object.
+PROPER_NAME = r"(?!And\b|That\b|When\b|But\b|For\b|If\b|Then\b|He\b|She\b|They\b)[A-Z][A-Za-z'’-]{1,49}"
+TITLE = r"(?:king|queen|priest|prophet|servant|messenger|men|women|people)"
+SUBJECT = (
+    r"(?:the[· ](?:" + PROPER_NAME + r"|" + TITLE + r")(?:[ ]" + PROPER_NAME + r")?"
+    r"|" + PROPER_NAME + r"(?:[ ]" + PROPER_NAME + r"){0,2})"
 )
 
-# Stronger English indication of a postposed subject than an unrestricted
-# transitive predicate. This is an editorial rule, NOT source certification.
+# The owner explicitly supplied the hearing/report construction. The group
+# ending -s is a constrained English plural, and the following that-clause
+# is a required *context cue*. Neither a bare hearer nor a transitive object
+# by itself licenses a movement.
+_REPORT_HEARER = re.compile(
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?they-(?:are|were)-hearing)[ \t]+"
+    r"(?P<subject>(?:the[· ])?[A-Z][A-Za-z'’-]{1,49}s)"
+    r"(?=[ \t]+that[ \t]+(?:he|she)-(?:was|is)-anointed[ \t]+(?:the[· ])?[A-Z])"
+)
+
+# Explicit passive wording can mark a postposed noun subject in the
+# owner's repeated-pronoun editorial style. Avoid "called" (e.g., "called
+# Rowan" can be a name complement), and never equate passive matching
+# with proof from Hebrew syntax.
 _PASSIVE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?"
-    r"(?:he|she|they)-(?:was|were)-"
-    r"(?:anointed|appointed|chosen|buried|crowned))[ \t]+"
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?"
+    r"(?:he|she|they|we)-(?:is|was|were)-"
+    r"(?:anointed|appointed|chosen|buried|crowned|killed|blessed))[ \t]+"
     r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
 )
 
-# Intransitives cannot take a direct object in their normal English reading.
+# Small list of *normally intransitive in this immediate context* predicates.
+# Exclude return/returned: "he-returned Rowan" may mean Rowan is an OBJECT.
 _INTRANSITIVE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?"
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?"
     r"(?:he|she|they|we|thou|you|ye)-"
-    r"(?:came|went|arose|rested|died|returned|lived|stood))[ \t]+"
+    r"(?:came|come|comes|went|goes|arose|rose|rests|rested|"
+    r"died|dies|lived|lives|stood|stands|slept|sleeps|sat|sits))[ \t]+"
     r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
 )
 
@@ -67,6 +82,49 @@ RULES = (
     ("POSTPOSED_INTRANSITIVE_SUBJECT", _INTRANSITIVE),
 )
 
+
+def _legacy_candidate_guard(
+    *, reference: str, chapter_sha256: str, original: list[str],
+) -> tuple[list[str], str, bool]:
+    """New reader guard: never inherit a *newly unknown* object-to-subject move.
+
+    The locked prior reader itself is unchanged. Its broad older typography
+    can move "he-saw Person" as if Person were the subject. That is not a
+    defensible automatic grammatical conclusion. Carry forward only:
+      - unmistakable intransitive/passive shapes also covered by this module;
+      - the two historical owner-explicit constructions from the old mode.
+    Everything else remains CHES source order in the NEW optional reader.
+    The skipped count is audit metadata, not proof of a semantic error.
+    """
+    proposals, ambiguous = discover_candidates(
+        reference, chapter_sha256, original,
+    )
+    visible, reason = apply_owner_approved_candidates(
+        reference=reference, chapter_sha256=chapter_sha256,
+        original=original, visible=list(original),
+    )
+    if reason != "APPLIED":
+        return visible, reason, False
+    if ambiguous or len(proposals) != 1:
+        raise DanMek027Error("LEGACY_ENGLISH_REORDER_CANDIDATE_INCONSISTENT")
+    candidate = proposals[0]
+    verb = candidate["original_verb"]
+    subject = candidate["original_subject"]
+    pair = verb + " " + subject
+    if (_INTRANSITIVE.fullmatch(pair) is not None
+            or _PASSIVE.fullmatch(pair) is not None):
+        return visible, reason, False
+    # These are *old, explicit owner authorizations* and therefore preserved.
+    # They are not a general authorization for similarly spelled verbs.
+    if verb in ("and·he-shaped", "And·he-shaped") and subject == "God":
+        return visible, reason, False
+    if (candidate["mode"] == "inline" and
+            (JOINED_YAHWEH.match(candidate["original_fragment"])
+             or JOINED_AND_SUBJECT.match(candidate["original_fragment"]))):
+        return visible, reason, False
+    # This is a separately versioned conservative new reader, not a
+    # retroactive modification of the previously approved HTML snapshot.
+    return list(original), "LEGACY_UNVERIFIED_SUBJECT_UNCHANGED", True
 
 class DanMek027Error(ValueError):
     """Fixed-code, private-data-safe failure."""
@@ -191,6 +249,7 @@ def build_subject_first_reader(
     """Produce a distinct reading, never mutate approved CHES/DANMEK snapshots."""
     if type(render) is not bool or type(require_311) is not bool:
         raise DanMek027Error("INVALID_POSTVERBAL_READER_OPTIONS")
+    stage = "SOURCE_VALIDATION"
     try:
         folder = _private_archive_root(private_root)
         prior = build_private_reader(
@@ -199,14 +258,16 @@ def build_subject_first_reader(
         )
         pages = []
         total_verses = changed_verses = total_changes = unresolved = old_ambiguous = 0
+        legacy_subject_risk_skipped = 0
         reason_totals: Counter[str] = Counter()
         digest = hashlib.sha256(
             (REVISION + ":" + prior["snapshot_id"]).encode("ascii")
         )
+        stage = "SOURCE_CHAPTER_SCAN"
         for file in sorted(folder.iterdir(), key=lambda path: path.name):
             if file.is_symlink() or not file.is_file():
                 raise DanMek027Error("PRIVATE_READER_SOURCE_ENTRY_UNSAFE")
-            match = NAME.fullmatch(file.name)
+            match = CHES_FILE_NAME.fullmatch(file.name)
             if match is None:
                 raise DanMek027Error("PRIVATE_READER_SOURCE_NAME_INVALID")
             prefix, chapter_text = match.groups()
@@ -220,13 +281,16 @@ def build_subject_first_reader(
                     part["original_ches_line_text"]
                     for part in verse["source_ches_spans_NOT_OLT_TRANSLATION"]
                 ]
-                prior_visible, old_reason = apply_owner_approved_candidates(
+                stage = "LEGACY_GUARD"
+                prior_visible, old_reason, skipped_legacy = _legacy_candidate_guard(
                     reference=verse["reference"], chapter_sha256=sha,
-                    original=original, visible=list(original),
+                    original=original,
                 )
+                legacy_subject_risk_skipped += int(skipped_legacy)
                 old_ambiguous += int(old_reason == "AMBIGUOUS")
                 prior_visible, _ = simplify_sur_faces_for_olt_view(prior_visible)
                 prior_visible, _ = hide_isolated_c(prior_visible)
+                stage = "NEW_ENGLISH_REORDER"
                 after, evidence, uncertain = reorder_postverbal_subjects(prior_visible)
                 unresolved += uncertain
                 total_changes += len(evidence)
@@ -249,14 +313,17 @@ def build_subject_first_reader(
                     "<h1>Private English " + html.escape(prefix + "." + chapter_text) +
                     "</h1><p class='muted'>New versioned, owner-directed subject-first "
                     "view. CHES authoritative; no Hebrew revalidation. "
-                    "Some verb-noun pairs remain unresolved to avoid moving "
-                    "objects as subjects. No publication rights.</p>"
+                    "Some verb-noun pairs remain unresolved and certain broad "
+                    "legacy typography movements are not inherited in this "
+                    "new reading, to avoid treating objects as subjects. "
+                    "The old approved reader remains unchanged. No publication rights.</p>"
                     '<nav><a href="index.html">Contents</a></nav>' +
                     "".join(sections),
                 ),
             ))
             if len(pages) > MAX_CHAPTERS:
                 raise DanMek027Error("PRIVATE_READER_CHAPTER_LIMIT")
+        stage = "COUNTS_CHECK"
         if total_verses != prior["observed_verse_count"]:
             raise DanMek027Error("PRIVATE_READER_VERSE_COUNT_MISMATCH")
         if old_ambiguous != prior["olt_owner_candidate_ambiguous_verses_unchanged"]:
@@ -269,6 +336,7 @@ def build_subject_first_reader(
         ):
             raise DanMek027Error("PRIVATE_READER_SOURCE_CHANGED_DURING_SCAN")
         snapshot = "snapshot-" + digest.hexdigest()[:24]
+        stage = "PRIVATE_RENDER"
         if render:
             root = folder.parent / "ches-subject-reading"
             _safe_dir(root)
@@ -281,7 +349,7 @@ def build_subject_first_reader(
             )
             index = _frame(
                 "DANMEK-027 private English reading",
-                "<h1>Owner-directed English subject-first reading</h1>"
+                "<h1>Owner-directed English subject-first reading v2</h1>"
                 "<p class='muted'>Separate from locked DANMEK-013/014 source "
                 "snapshots. Original CHES unchanged. English-only editorial "
                 "reorder, not Hebrew grammar verification. Publication BLOCKED.</p>"
@@ -300,6 +368,8 @@ def build_subject_first_reader(
             "source_verses_scanned": total_verses,
             "historical_ambiguous_english_verses": old_ambiguous,
             "new_postverbal_subject_pairs_reordered": total_changes,
+            "legacy_unverified_subject_moves_not_inherited": legacy_subject_risk_skipped,
+            "locked_legacy_html_remains_available_unchanged": True,
             "verses_with_new_reorders": changed_verses,
             "unresolved_verb_noun_shapes_not_reordered": unresolved,
             "by_bounded_reason": dict(sorted(reason_totals.items())),
@@ -311,8 +381,16 @@ def build_subject_first_reader(
         }
     except DanMek027Error:
         raise
-    except Exception:
-        raise DanMek027Error("PRIVATE_POSTVERBAL_READER_FAILED") from None
+    except Exception as exc:
+        # Fixed phase/class diagnostics only: never leak licensed text,
+        # sensitive paths or arbitrary exception strings into CLI/CI.
+        safe_types = {"KeyError", "TypeError", "ValueError", "IndexError",
+                      "AttributeError", "RuntimeError", "AssertionError"}
+        kind = type(exc).__name__
+        if kind not in safe_types:
+            kind = "OTHER"
+        raise DanMek027Error("PRIVATE_POSTVERBAL_READER_FAILED_" + stage +
+                             "_" + kind) from None
 
 
 def main() -> int:
