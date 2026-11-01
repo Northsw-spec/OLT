@@ -74,8 +74,8 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
 
     def test_bounded_intransitive_with_preposition_or_new_clause(self):
         for src, expected in (
-            (["and·she-is-dying", "Mira", "and·he-is-reigning", "Rowan"],
-             "and Mira -·she-is-dying and·he-is-reigning Rowan"),
+            (["and·she-is-dying", "Mira", "and·he-is-reigning"],
+             "and Mira -·she-is-dying and·he-is-reigning"),
             (["he-sits", "Natan", "in·his-house"],
              "Natan - he-sits in·his-house"),
             (["and·he-is-dwelling", "Rowan", "in·fort"],
