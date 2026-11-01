@@ -31,7 +31,7 @@ class TestDanMek027MulticlauseSubjects(unittest.TestCase):
         ] = "and·they-are-hearing Sailors that he-was-anointed Rowan"
         gen["verses"][1]["source_ches_spans_NOT_OLT_TRANSLATION"][0][
             "original_ches_line_text"
-        ] = "he-saw Sailors and the lantern — the merchant saw."
+        ] = "he-saw sailors and the lantern — the merchant saw."
         write_private_json(gen, self.chapters / "gen.1.json")
         self.original = (self.chapters / "gen.1.json").read_bytes()
         self.before = build_private_reader(
@@ -125,7 +125,7 @@ class TestDanMek027MulticlauseSubjects(unittest.TestCase):
         self.assertIn(
             "and Sailors -·they-are-hearing that Rowan - he-was-anointed", chapter
         )
-        self.assertIn("he-saw Sailors", chapter)
+        self.assertIn("he-saw sailors", chapter)
         self.assertIn("default-src 'none'", chapter)
         self.assertEqual(self.original, (self.chapters / "gen.1.json").read_bytes())
         self.assertEqual(
@@ -177,7 +177,7 @@ class TestDanMek027MulticlauseSubjects(unittest.TestCase):
         gen = invented_chapter("gen", 1)
         gen["verses"][0]["source_ches_spans_NOT_OLT_TRANSLATION"][0][
             "original_ches_line_text"
-        ] = "he-was-anointed Rowan <img src=x onerror=alert(1)>"
+        ] = "he-was-anointed Rowan and he-was-appointed Elias <img src=x onerror=alert(1)>"
         gen["verses"][1]["source_ches_spans_NOT_OLT_TRANSLATION"][0][
             "original_ches_line_text"
         ] = "No synthetic change"
@@ -192,7 +192,7 @@ class TestDanMek027MulticlauseSubjects(unittest.TestCase):
         self.assertNotIn("Rowan", output.getvalue())
         self.assertNotIn(str(self.chapters), output.getvalue())
         self.assertEqual(json.loads(output.getvalue())[
-            "new_postverbal_subject_pairs_reordered"], 1)
+            "new_postverbal_subject_pairs_reordered"], 2)
         report = build_subject_first_reader(self.chapters, render=True)
         html_data = (self.base / "ches-subject-reading" /
                      report["new_private_snapshot_id"] / "gen.1.html").read_text()
