@@ -1,0 +1,276 @@
+{
+  "checkpoint": "DANMEK-018-OWNER-REPORTED-LOCAL-OT-COVERAGE-2026-11-01",
+  "evidence_type": "Owner-pasted output from private Parrot DANMEK-016 CLI; NOT independently rerun against the private archive by GitHub",
+  "source_code_main_commit": "156eab909426e86ae0ab56db1d513a4f8f03892b",
+  "command_mode": {
+    "display_faces": true,
+    "owner_approved_english_candidates": true,
+    "optional_ylt_authority": false,
+    "render_html": false
+  },
+  "aggregate_reported": {
+    "chapters": 929,
+    "verses": 23144,
+    "source_english_fragments_not_verified_translation": 401460,
+    "source_filename_prefixes": 39,
+    "all_929_39_by_count_only": true,
+    "all_prefixes_internal_chapter_gaps_zero": true,
+    "owner_english_reorders_applied": 2990,
+    "ambiguous_english_reorders_left_unchanged": 311,
+    "verses_without_english_order_candidate": 19843,
+    "ylt_order_overlap_verses_unchanged_without_ylt_mode": 0,
+    "faces_simplifications": 2,
+    "lowercase_c_letters_hidden": 9540,
+    "verses_with_one_or_more_display_edits": 9368,
+    "publication_status": "BLOCKED"
+  },
+  "per_source_filename_prefix": [
+    {
+      "prefix": "1ch",
+      "chapters": 29,
+      "verses": 942,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "1kg",
+      "chapters": 22,
+      "verses": 816,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "1sa",
+      "chapters": 31,
+      "verses": 810,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "2ch",
+      "chapters": 36,
+      "verses": 822,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "2kg",
+      "chapters": 25,
+      "verses": 719,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "2sa",
+      "chapters": 24,
+      "verses": 695,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "amo",
+      "chapters": 9,
+      "verses": 146,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "can",
+      "chapters": 8,
+      "verses": 117,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "dan",
+      "chapters": 12,
+      "verses": 357,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "deu",
+      "chapters": 34,
+      "verses": 959,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "est",
+      "chapters": 10,
+      "verses": 167,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "exo",
+      "chapters": 40,
+      "verses": 1213,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "eze",
+      "chapters": 48,
+      "verses": 1273,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "ezr",
+      "chapters": 10,
+      "verses": 280,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "gen",
+      "chapters": 50,
+      "verses": 1533,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "hab",
+      "chapters": 3,
+      "verses": 56,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "hag",
+      "chapters": 2,
+      "verses": 38,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "hos",
+      "chapters": 14,
+      "verses": 197,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "isa",
+      "chapters": 66,
+      "verses": 1292,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "jdg",
+      "chapters": 21,
+      "verses": 618,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "jer",
+      "chapters": 52,
+      "verses": 1364,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "job",
+      "chapters": 42,
+      "verses": 1070,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "joe",
+      "chapters": 3,
+      "verses": 73,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "jon",
+      "chapters": 4,
+      "verses": 48,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "jos",
+      "chapters": 24,
+      "verses": 658,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "lam",
+      "chapters": 5,
+      "verses": 154,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "lev",
+      "chapters": 27,
+      "verses": 859,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "mal",
+      "chapters": 4,
+      "verses": 55,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "mic",
+      "chapters": 7,
+      "verses": 105,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "nah",
+      "chapters": 3,
+      "verses": 47,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "neh",
+      "chapters": 13,
+      "verses": 405,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "num",
+      "chapters": 36,
+      "verses": 1288,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "oba",
+      "chapters": 1,
+      "verses": 21,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "pro",
+      "chapters": 31,
+      "verses": 915,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "psa",
+      "chapters": 150,
+      "verses": 2461,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "qoh",
+      "chapters": 12,
+      "verses": 222,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "rut",
+      "chapters": 4,
+      "verses": 85,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "zec",
+      "chapters": 14,
+      "verses": 211,
+      "internal_chapter_number_gaps": 0
+    },
+    {
+      "prefix": "zep",
+      "chapters": 3,
+      "verses": 53,
+      "internal_chapter_number_gaps": 0
+    }
+  ],
+  "evidence_boundaries": {
+    "local_runtime_executed_by_owner": true,
+    "source_chapter_counts_verified_by_report_only": true,
+    "real_private_source_index_membership_verified": false,
+    "source_index_html_authenticity_independently_verified": false,
+    "source_prefixes_independently_verified_as_biblical_book_ids": false,
+    "each_verse_original_language_alignment_verified": false,
+    "whole_english_olt_translation_complete": false,
+    "full_corpus_translation_personally_approved": false,
+    "permission_to_publish": false,
+    "complete_private_reader_snapshot_id_supplied": false
+  },
+  "note": "23,144 observed verse rows are CHES source verse markers, not a claim of canonical Bible verse totals. Known Nehemiah 7 printed-source primary numbering omits 7:68 while retaining 7:69-73 alternative labels; never invent/renumber source verses."
+}
