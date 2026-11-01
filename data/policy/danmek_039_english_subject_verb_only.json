@@ -3,7 +3,7 @@
   "revision": "2026-11-01",
   "status": "ACTIVE",
   "authority": "OWNER_LATEST",
-  "masterprompt_path": "docs/MASTERPROMPT.md",
+  "masterprompt_path": "docs/DANMEK_MASTERPROMPT.md",
   "active_entrypoint": "scripts/danmek_039_english_only.py",
   "active_target": "CHES_ENGLISH_SUBJECT_VERB_ORDER_ALL_AVAILABLE_OT_VERSES",
   "source_of_text": "ORIGINAL_PRIVATE_CHES_ENGLISH_JSON_ONLY",
