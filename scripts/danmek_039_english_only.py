@@ -320,6 +320,10 @@ def _candidate_slots(tokens: list[str]):
         if first > 0 and tokens[first - 1] == "-":
             continue  # an explicitly preposed subject with a boundary
         lemma = _predicate_lemma(tokens, first, predicate_end)
+        prior_named_subject_in_same_clause = (
+            first > 0 and NAME.fullmatch(tokens[first - 1]) is not None
+            and not tokens[first].startswith(("and·", "And·"))
+        )
         subject_at = predicate_end
         post_object = False
         post_recipient = False
@@ -368,7 +372,7 @@ def _candidate_slots(tokens: list[str]):
             # the name Sheba: the name is a predicate complement, not an
             # agent. Likewise identification clauses can be ambiguous.
             if (lemma in NAMING_PREDICATES or
-                    (first > 0 and NAME.fullmatch(tokens[first - 1]))):
+                    prior_named_subject_in_same_clause):
                 yield None
                 continue
             role = "POSTPOSED_AGENT_AFTER_PRONOMINAL_OBJECT"
@@ -379,7 +383,7 @@ def _candidate_slots(tokens: list[str]):
             # distinct quotation-opening cue for reporting verbs.
             if (lemma in DATIVE_PREDICATES_WITH_MARKED_OBJECT
                     and following == "»"
-                    and not (first > 0 and NAME.fullmatch(tokens[first - 1]))):
+                    and not prior_named_subject_in_same_clause):
                 role = "DATIVE_AGENT_BEFORE_MARKED_OBJECT"
             elif (lemma in REPORTING_WITH_RECIPIENT
                   and tokens[predicate_end] in PRONOMINAL_RECIPIENT
@@ -391,7 +395,7 @@ def _candidate_slots(tokens: list[str]):
         elif closed_adjunct:
             # No automatic move when a named subject already precedes
             # this same predicate; the post-adjunct name can be an appositive.
-            if first > 0 and NAME.fullmatch(tokens[first - 1]):
+            if prior_named_subject_in_same_clause:
                 yield None
                 continue
             role = "INTRANSITIVE_AGENT_AFTER_CLOSED_ADJUNCT"
