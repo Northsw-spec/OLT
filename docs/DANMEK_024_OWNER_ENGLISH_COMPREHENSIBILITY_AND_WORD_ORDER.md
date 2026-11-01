@@ -4,6 +4,34 @@
 **Scope:** The private CHES-derived **DANMEK English Old Testament reading**,
 without changing the source material or switching to a wholesale new translation.
 
+## DANMEK-026 — Latest owner decision: accept CHES, do not revalidate its Hebrew equivalents (2026-11-01)
+
+**Binding engineering assumption (not an independently demonstrated philological
+claim): CHES is accepted as authoritative for the English lexical choices and
+the existing Hebrew/Aramaic correspondence in DANMEK's CHES-first reading.**
+Do **not** spend engineering time comparing CHES words, lemmas, meanings or
+their placement against the separately imported original-language corpus.
+Do **not** require a verified CHES-to-OSHB/WLC crosswalk, original-language
+word alignment, morphology inspection or Hebrew grammatical-subject
+identification before evaluating **English grammar**.
+
+The 311 historic ambiguity cases are English syntax-review candidates, **not**
+311 suspicious Hebrew translations. Keep their existing private immutable
+research records as historical evidence; stop the source-language alignment
+investigation as an **active DANMEK-025 prerequisite**. English grammatical
+review can use the actual CHES-derived English clause and English grammatical
+evidence. Its default decision is NO_CHANGE; only proven defects may lead to
+minimal, unapproved proposals. When evidence is insufficient, leave unchanged.
+
+This does not claim that CHES has been externally proved infallible or that
+the OT original-language scholarly editions should be deleted. Retain them for
+distinct original-language research, narrowly authorized OLT lexical/tense
+exceptions or future explicitly commissioned projects. Such work is **not**
+a recurring certification of CHES's Hebrew fidelity, nor a prerequisite to
+completing the DANMEK private English reader. All privacy, source-hash,
+import-integrity, licensing and locked-snapshot safeguards remain mandatory.
+The NT Greek work is independent of CHES OT.
+
 ## Latest owner clarification takes priority
 
 The owner explained that they are **already pleased with DANMEK as an
@@ -45,7 +73,8 @@ this rule is prospective and does not silently revoke past approvals.
 ## What is and is not the target
 
 - **YES:** Continue investigating the **311 ambiguous English typography
-  cases** with the available pinned Hebrew/Aramaic research evidence.
+  cases** strictly as English-grammar candidates, **without** any routine
+  comparison of CHES with pinned Hebrew/Aramaic sources.
 - **YES:** Assess other English readability issues that the existing
   regex candidate patterns may miss; 311 is not the complete set of
   potentially awkward English clauses.
@@ -58,8 +87,8 @@ this rule is prospective and does not silently revoke past approvals.
   proven Hebrew grammatical error or a required English correction.
 - **NO:** Equate a same-number OSHB verse or raw `HV`/`AV`
   morphology code with a verified CHES-to-original-word/subject
-  alignment. The original-source candidate crosswalk still needs
-  evidence.
+  alignment. Such an alignment is **not needed or to be pursued** in
+  DANMEK's English grammar-review workflow.
 - **NO:** Change `scripts/ches_015_direct_private_reader.py`,
   `scripts/danmek_011_owner_order.py`, or the **owner-verified
   DANMEK-013/014 English HTML snapshots** during research. Do not
@@ -109,12 +138,13 @@ The next stage should:
    agreement and syntactic roles). Generate a narrowly bounded word-order
    proposal **only after** that grammar threshold is satisfied. Preserve
    original order in cases that are unusual but grammatical.
-   Original-language morphology may be used as a *non-authoritative
-   research hint*; do not invent one-to-one CHES↔OSHB pairings.
+   Use English syntactic evidence only for this grammar workflow; do not
+   pursue original-language morphology or CHES↔OSHB word pairings as a
+   validation step.
 3. Emit a private, hashed, immutable side-by-side before/proposed
    comparison with **reason codes**, evidence status and an explicit
-   "no change" path. Keep English word-order improvement and
-   Hebrew-source grammatical certification as separate fields.
+   "no change" path. Do **not** make Hebrew-source grammatical
+   certification part of DANMEK-025.
 4. Include an **additional full-corpus grammatical-defect diagnostic**:
    the 311 count comes from a narrow ambiguity detector and does not
    prove all other 22,833 CHES verse readings are grammatically sound.

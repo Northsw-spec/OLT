@@ -59,7 +59,18 @@ verse may differ in source segmentation or numbering. Neither the
 candidate book-ID crosswalk nor the English fragment-to-original word
 relationship was authenticated by this run.
 
-## Next evidence-driven development
+## Superseding owner instruction — DANMEK-026 (2026-11-01)
+
+The research and figures below describe **historical work actually executed**,
+not a mandatory future plan. Owner has since decided CHES's English reading and
+its Hebrew/Aramaic correspondence are **accepted as authoritative for DANMEK**.
+Do **not** continue the comparative OSHB/WLC alignment, morphology or
+source-verse authentication campaign as part of DANMEK-025. The new priority is
+English-only grammatical-error triage with no-change by default. This avoids
+the unnecessary additional philological verification process. Retain the old
+results unchanged and do not claim they showed CHES errors.
+
+## Next evidence-driven development (historical, now superseded by DANMEK-026)
 
 The next useful step is **not** another read-only copy of the 311-case
 list. It is an **evidence-graded** and still non-mutating review engine

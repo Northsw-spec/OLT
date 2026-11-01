@@ -91,6 +91,35 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
         self.assertIn("only after", text)
         self.assertIn("stylistic awkwardness", text)
 
+    def test_ches_accepted_as_working_authority_no_hebrew_revalidation(self):
+        policy = json.loads(POLICY.read_text(encoding="utf-8"))
+        for key in (
+            "ches_english_and_hebrew_correspondence_owner_accepted_as_working_authority",
+            "english_grammar_review_uses_english_evidence_only",
+            "preserve_existing_original_language_imports_for_separate_research",
+            "grammatical_correction_does_not_require_hebrew_morphology_validation",
+            "historical_311_source_research_ledger_retained_unchanged",
+            "english_grammar_311_cases_not_hebrew_translation_error_claims",
+        ):
+            self.assertIs(policy[key], True, key)
+        for key in (
+            "ches_philological_infallibility_independently_proven",
+            "routine_ches_vs_oshb_wlc_word_or_translation_accuracy_audit_allowed",
+            "routine_source_word_alignment_as_english_grammar_prerequisite_allowed",
+        ):
+            self.assertIs(policy[key], False, key)
+        self.assertIn("NO CHES-vs-Hebrew audit",
+                      policy["next_engineering_scope"])
+        self.assertIn("without", DOC.read_text(encoding="utf-8"))
+        self.assertIn("stop the source-language alignment", DOC.read_text(encoding="utf-8"))
+        master = (ROOT / "docs/MASTERPROMPT.md").read_text(encoding="utf-8")
+        self.assertIn("NO HEBREW REVALIDATION", master)
+        self.assertIn("CHES's linguistic decisions", master)
+        engine = (ROOT / "docs/OLT_SIMPLE_ENGINE_001.md").read_text(encoding="utf-8")
+        self.assertIn("do **not** compare CHES lexical choices", engine)
+        status = (ROOT / "docs/STATUS_CURRENT.md").read_text(encoding="utf-8")
+        self.assertIn("no comparative Hebrew validation", status)
+
     def test_no_licensed_source_data_or_private_paths_in_new_policy(self):
         combined = POLICY.read_text() + DOC.read_text()
         for forbidden in (
