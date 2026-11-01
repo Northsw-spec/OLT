@@ -16,8 +16,8 @@ A separate local search for a saved index HTML with the original import
 SHA-256 reported **0 matches**; DANMEK-017 was correctly not run then.
 
 The owner subsequently executed the provided index-recovery script against
-the canonical public index URL
-`https://www.scripture4all.org/OnlineInterlinear/Hebrew_Index.htm`.
+the canonical public OT chapter index URL, as pinned in the technical
+source manifest (`data/engine/olt_ches_source_manifest.json`).
 It downloaded the index in the user's Parrot environment, refused URL
 redirects, parsed 929 PDF chapter links and 39 filename prefixes, and
 computed SHA-256 over the retrieved index bytes. **The SHA-256 matched
