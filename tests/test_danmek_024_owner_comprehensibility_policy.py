@@ -64,6 +64,33 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
         self.assertIn("DANMEK-025", doc)
         self.assertIn("publication", doc.lower())
 
+    def test_preserve_hebraic_order_unless_grammar_error_evidenced(self):
+        policy = json.loads(POLICY.read_text(encoding="utf-8"))
+        for field in (
+            "default_action_is_no_change",
+            "preserve_unusual_but_comprehensible_hebraic_order",
+            "proposals_require_evidenced_english_grammatical_defect",
+            "english_grammar_diagnosis_not_equal_hebrew_source_alignment",
+        ):
+            self.assertIs(policy[field], True, field)
+        for field in (
+            "stylistic_fluency_or_naturalness_optimization_allowed",
+            "heuristic_or_regex_hit_alone_authorizes_reorder",
+            "uncertain_grammar_authorizes_reorder",
+        ):
+            self.assertIs(policy[field], False, field)
+        self.assertIn("NO_CHANGE_VALID_HEBRAIC_SYNTAX",
+                      policy["proposed_candidate_statuses"])
+        self.assertIn("GRAMMAR_UNRESOLVED_NO_REORDER",
+                      policy["proposed_candidate_statuses"])
+        self.assertIn("EVIDENCED_ENGLISH_GRAMMATICAL_DEFECT_REVIEW_REQUIRED",
+                      policy["proposed_candidate_statuses"])
+        text = DOC.read_text(encoding="utf-8")
+        self.assertIn("NO_CHANGE is the default", text)
+        self.assertIn("not automatically faults", text)
+        self.assertIn("only after", text)
+        self.assertIn("stylistic awkwardness", text)
+
     def test_no_licensed_source_data_or_private_paths_in_new_policy(self):
         combined = POLICY.read_text() + DOC.read_text()
         for forbidden in (
