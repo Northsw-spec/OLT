@@ -22,6 +22,7 @@ import hashlib
 import html
 import json
 from pathlib import Path
+import re
 
 from scripts.ches_014_offline_english_bridge import (
     _load_private_source, _private_archive_root,
@@ -102,6 +103,11 @@ def identify_unmarked_english_roles(fragments: list[str]) -> list[dict]:
             if following == "»":
                 continue  # Handled separately by DANMEK-036.
             verb_ending = fragments[nominal - 1].rsplit("-", 1)[-1]
+            # A progressive English auxiliary must not be followed by a
+            # contradictory finite form (e.g., synthetic he-is-says).
+            if (re.search(r"-(?:is|are|was|were)-", predicate)
+                    and not verb_ending.endswith("ing")):
+                continue
             reason = None
             if verb_ending in SPEECH_VERBS and (
                 following == "to"
