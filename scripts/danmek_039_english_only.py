@@ -20,7 +20,7 @@ import stat
 import tempfile
 import zipfile
 
-REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v2"
+REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v3"
 CHAPTER = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.json\Z")
 REFERENCE = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.([1-9]\d*)\Z")
 FINITE = re.compile(
@@ -43,6 +43,23 @@ SPLIT_PRONOUN = re.compile(r"(?:(?:and|And)·)?(?:he|she|they|we|you|ye|thou)-\Z
 SPLIT_PREFIX = re.compile(r"[a-z]+-\Z")
 ATTACHED_OBJECT_PRONOUN = re.compile(r"»·(?:him|her|them|me|you|us|thee)\Z")
 SPEECH = frozenset({"said", "says", "saying", "speaking", "spoke"})
+# These extra predicates are used ONLY when the recipient is an explicitly
+# marked English pronoun and the post-recipient phrase opens demonstrable
+# direct speech. Do not broaden the existing nominal-adjacent rules.
+REPORTING_WITH_RECIPIENT = SPEECH | frozenset({
+    "responding", "responded", "answering", "answered", "telling", "told",
+})
+PRONOMINAL_RECIPIENT = frozenset({
+    "to·him", "to·her", "to·them",
+})
+# English "called it Sheba" can have a name COMPLEMENT, not a new agent.
+# A name after the object is not sufficient proof of subjecthood.
+NAMING_PREDICATES = frozenset({
+    "call", "calls", "called", "calling", "name", "names", "named", "naming",
+    "identified", "identifies", "identifying",
+})
+QUOTE_OPENERS = frozenset({"not", "must-not", "thus"})
+IMPERATIVE_YOU = re.compile(r"[a-z]+(?:-[a-z]+)*-you(?:\s*!|!)?\Z")
 INTRANSITIVE = frozenset({
     "came", "come", "coming", "went", "going", "arose", "rose",
     "standing", "stood", "resting", "lived", "dwelt", "dying",
@@ -239,6 +256,23 @@ def _predicate_lemma(tokens: list[str], start: int, end: int) -> str:
     return tokens[end - 1].rsplit("-", 1)[-1]
 
 
+def _explicit_direct_speech_start(tokens: list[str], i: int) -> bool:
+    """Conservative ENGLISH evidence that a speaker's quotation begins.
+
+    This is a necessary *additional* cue, not a proof from name adjacency.
+    For example, after "said to them Ahab he-served", Ahab can be the
+    subject inside the quotation, not the person who said it.
+    """
+    if i >= len(tokens):
+        return False
+    head = tokens[i]
+    if head in QUOTE_OPENERS or IMPERATIVE_YOU.fullmatch(head):
+        return True
+    if head in {"what", "why", "who", "how", "where"}:
+        return i + 1 < len(tokens) and tokens[i + 1] in {"?", "? !"}
+    return False
+
+
 def _candidate_slots(tokens: list[str]):
     """English-only subject evidence for each separate finite predicate.
 
@@ -253,13 +287,22 @@ def _candidate_slots(tokens: list[str]):
         lemma = _predicate_lemma(tokens, first, predicate_end)
         subject_at = predicate_end
         post_object = False
+        post_recipient = False
         if (subject_at < len(tokens) and
                 ATTACHED_OBJECT_PRONOUN.fullmatch(tokens[subject_at])):
-            # A *marked pronominal object* before a proper nominal is a
-            # structural clue to a delayed agent, even in a relative clause.
-            # It is NOT a cue for a general object + noun movement.
+            # This source-English marked object can precede a delayed
+            # subject. The predicate's semantic frame must ALSO allow an
+            # agent here; naming/identification verbs do not automatically.
             subject_at += 1
             post_object = True
+        elif (subject_at < len(tokens) and
+              tokens[subject_at] in PRONOMINAL_RECIPIENT and
+              lemma in REPORTING_WITH_RECIPIENT):
+            # English reporting verb + "to·them" + name is ambiguous:
+            # that name may be the speaker OR quoted-clause subject.
+            # Require a separately observable speech-opening cue below.
+            subject_at += 1
+            post_recipient = True
 
         subject_end = _subject_phrase(tokens, subject_at)
         if subject_end is None:
@@ -269,12 +312,23 @@ def _candidate_slots(tokens: list[str]):
             continue
         following = tokens[subject_end] if subject_end < len(tokens) else None
         if post_object:
-            # Refuse if an earlier adjacent noun already occupies the
-            # subject slot or if a coordinated/compound subject is present.
-            if first > 0 and NAME.fullmatch(tokens[first - 1]):
+            # "he called »·her Sheba" may mean that the OBJECT was given
+            # the name Sheba: the name is a predicate complement, not an
+            # agent. Likewise identification clauses can be ambiguous.
+            if (lemma in NAMING_PREDICATES or
+                    (first > 0 and NAME.fullmatch(tokens[first - 1]))):
                 yield None
                 continue
             role = "POSTPOSED_AGENT_AFTER_PRONOMINAL_OBJECT"
+        elif post_recipient:
+            # The name is NOT moved merely because it follows "to·them".
+            # A distinct English reporting/speech boundary must follow.
+            # This prevents "said to them Ahab he-served" from turning
+            # Ahab into the speaker.
+            if not _explicit_direct_speech_start(tokens, subject_end):
+                yield None
+                continue
+            role = "REPORTING_SPEAKER_AFTER_PRONOMINAL_RECIPIENT"
         elif following == "»":
             role = "FINITE_NOMINAL_EXPLICIT_OBJECT"
         elif (lemma in SPEECH and following is not None and (
@@ -374,6 +428,8 @@ def reorder_english_subjects(fragments: list[str]) -> tuple[str, dict]:
         counts["applied_subject_moves"] += 1
         counts["rule_" + role] += 1
     output = " ".join(display)
+    if output.count("»") != original.count("»"):
+        raise DanMekEnglishError("OBJECT_MARKER_INTEGRITY_FAILED")
     if not output and original:
         raise DanMekEnglishError("GRAMMAR_OUTPUT_EMPTY")
     return output, dict(sorted(counts.items()))
