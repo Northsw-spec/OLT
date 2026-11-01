@@ -382,6 +382,7 @@ def _candidate_slots(tokens: list[str]):
                     and not (first > 0 and NAME.fullmatch(tokens[first - 1]))):
                 role = "DATIVE_AGENT_BEFORE_MARKED_OBJECT"
             elif (lemma in REPORTING_WITH_RECIPIENT
+                  and tokens[predicate_end] in PRONOMINAL_RECIPIENT
                   and _explicit_direct_speech_start(tokens, subject_end)):
                 role = "REPORTING_SPEAKER_AFTER_PRONOMINAL_RECIPIENT"
             else:
