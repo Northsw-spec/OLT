@@ -13,7 +13,7 @@ Den nya **enda aktiva** motorn `scripts/danmek_039_english_only.py` återanvänd
 ## Gällande beslut om gammal kod
 
 - Tidigare DANMEK-008–038 körbara läsare, manuskriptbaserade jämförelseskript och rapporteringsköer är **icke-aktiva historiska implementationer**. Inget av dem finns i den aktiva 039-importkedjan.
-- Den gamla `docs/MASTERPROMPT.md` med cirka 87 kB motsägelsefulla DANMEK-regler är **ersatt** av en kort enda aktiv masterprompt.
+- Den gamla `docs/DANMEK_MASTERPROMPT.md` med cirka 87 kB motsägelsefulla DANMEK-regler är **ersatt** av en kort enda aktiv masterprompt.
 - Den gamla `data/policy/danmek_024_english_comprehensibility_owner_priority.json` är reducerad till en `SUPERSEDED`-post. Ett regressionstest förbjuder att dess gamla beteende återinförs.
 - `docs/STATUS_CURRENT.md` har rensats på äldre DANMEK-sektioner men behåller oberoende OLT-projektinformation.
 - Gammal historisk kod finns ännu i GitHub så länge den används av äldre tester eller separata OLT-forskningsverktyg. **Den är inte en aktiv DANMEK-motor.** Att radera den fysiskt utan importberoendegranskning riskerar att slå sönder andra OLT-delar; den får endast återanvändas efter en uttrycklig kodgranskning som visar att den inte återinför de gamla uppdragen.
