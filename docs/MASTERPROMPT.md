@@ -6,7 +6,7 @@ Denna fil ersätter samtliga tidigare DANMEK-masterpromptar och motstridiga DANM
 
 ## Det enda aktiva språk- och kodningsuppdraget
 
-**CHES engelska är DANMEK:s accepterade, kompletta textbas för Gamla testamentet (39 böcker).** Uppgiften är att korrigera **engelsk subjekt–verb-ordföljd genom hela denna text**, oberoende av hur långt ifrån varandra verb och subjekt står. Texten ska förbli mycket bokstavlig och begriplig. Korrekt ordföljd betyder att det *verkliga subjektet i respektive sats* identifieras, inte att alla namn efter verb flyttas.
+**CHES engelska är DANMEK:s accepterade, kompletta textbas för Gamla testamentet (39 böcker).** Uppgiften är att korrigera **engelsk subjekt–verb-ordföljd genom hela denna text**, oavsett hur långt ifrån varandra verb och subjekt står. Texten ska förbli mycket bokstavlig och begriplig. Korrekt ordföljd betyder att det *verkliga subjektet i respektive sats* identifieras, inte att alla namn efter verb flyttas.
 
 **NO HEBREW REVALIDATION.** Ingen jämförelse CHES↔hebreiska, CHES↔arameiska, CHES↔OSHB/WLC; ingen återkontroll av hebreiska ord, lemma, morfologi eller ordjustering som villkor för engelsk grammatik. **CHES's linguistic decisions** are accepted as the English working baseline. Forskning om grundspråk tillhör helt andra, separat beställda OLT-uppdrag och får inte importeras i DANMEK:s aktiva körväg.
 
