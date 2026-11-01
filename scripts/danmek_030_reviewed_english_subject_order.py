@@ -25,7 +25,7 @@ from scripts.ches_015_direct_private_reader import (
 )
 from scripts.danmek_027_multiclause_subject_first import (
     _legacy_candidate_guard, reorder_postverbal_subjects,
-    _format_subject_before_verb, _safe_dir, _write_once,
+    _format_subject_before_verb, _safe_dir, _write_once, DanMek027Error,
 )
 from scripts.danmek_008_english_display import simplify_sur_faces_for_olt_view
 from scripts.danmek_012_display import hide_isolated_c
@@ -454,6 +454,10 @@ def run_private_reviewed_subject_order(
         }
     except DanMek030Error:
         raise
+    except DanMek027Error as exc:
+        # The earlier immutable-output implementation emits only fixed error
+        # codes; pass those codes through the 030 surface without source text.
+        raise DanMek030Error(str(exc)) from None
     except Exception:
         raise DanMek030Error("PRIVATE_REVIEWED_SUBJECT_ORDER_FAILED") from None
 
