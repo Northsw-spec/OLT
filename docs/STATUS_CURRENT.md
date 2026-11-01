@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-028 — Expanded noun-subject detection with legacy ambiguity guard (2026-11-01)
+
+- **New optional subject-first reader v2:** additional article-marked plural groups, compound/title proper names, selected past tense hearing/report, passives and intransitives support multiple bounded subject–verb movements within one verse. The tool must not equate a capitalized noun following a transitive verb with an authenticated subject.
+- **Legacy safety:** the older DANMEK-011 source typography sometimes moves direct objects as subjects. The updated **new, separately versioned** reading does not inherit ungrounded legacy transitive reorders; it counts withheld cases. The older approved DANMEK-013/014 HTML is **unchanged** and still available. Owner-explicit older exceptional cases are preserved. New snapshot revision distinct from v1.
+- **Verification limits:** only synthetic GitHub Actions tests; real private CHES source and unresolved cases still not individually inspected by this assistant. No routine CHES↔Hebrew crosscheck, no publication/grammar certification. [DANMEK-028](DANMEK_028_GUARDED_EXPANDED_SUBJECT_FIRST.md). Publication BLOCKED.
+
 ## DANMEK-027 — Multi-clause postverbal subject ordering in a NEW private reader (2026-11-01)
 
 - **Latest owner-approved rule:** Where an English noun subject is genuinely identified after its associated pronoun-verb gloss, move that subject before its verb. Repeat for **every distinct clause**, including multiple matches in one verse. The owner-specified two-clause shape is tested synthetically; unlike DANMEK-011, it must not discard every candidate merely because two matches occur. Do not silently treat verb-following objects as subjects.
