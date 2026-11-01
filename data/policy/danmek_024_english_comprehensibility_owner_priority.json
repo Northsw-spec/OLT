@@ -32,7 +32,7 @@
     "LATER_EXPLICITLY_APPROVED_CHANGE"
   ],
   "next_engineering_checkpoint": "DANMEK-025-PRIVATE_ENGLISH_READABILITY_PROPOSALS",
-  "next_engineering_scope": "Offline private 311-case and whole-corpus grammatical-defect detection. Default NO_CHANGE; only evidenced subject/verb/syntactic defects may trigger bounded, unapproved proposals. Unverified suspicions do not authorize reordering. Aggregate metadata only on GitHub.",
+  "next_engineering_scope": "Offline private English-grammar review of 311 flagged and other suspect English clauses; preserve Hebrew-like syntax and default NO_CHANGE. Only evidenced English grammar defects allow minimal proposals; NO CHES-vs-Hebrew audit, alignment or morphology revalidation. No automatic reader modification, no public private data.",
   "original_ches_and_oshb_source_text_public_upload_allowed": false,
   "independent_hebrew_to_english_word_alignment_verified": false,
   "all_311_grammar_conclusions_verified": false,
@@ -44,5 +44,15 @@
   "proposals_require_evidenced_english_grammatical_defect": true,
   "heuristic_or_regex_hit_alone_authorizes_reorder": false,
   "uncertain_grammar_authorizes_reorder": false,
-  "english_grammar_diagnosis_not_equal_hebrew_source_alignment": true
+  "english_grammar_diagnosis_not_equal_hebrew_source_alignment": true,
+  "ches_english_and_hebrew_correspondence_owner_accepted_as_working_authority": true,
+  "ches_philological_infallibility_independently_proven": false,
+  "routine_ches_vs_oshb_wlc_word_or_translation_accuracy_audit_allowed": false,
+  "routine_source_word_alignment_as_english_grammar_prerequisite_allowed": false,
+  "english_grammar_review_uses_english_evidence_only": true,
+  "preserve_existing_original_language_imports_for_separate_research": true,
+  "grammatical_correction_does_not_require_hebrew_morphology_validation": true,
+  "historical_311_source_research_ledger_retained_unchanged": true,
+  "english_grammar_311_cases_not_hebrew_translation_error_claims": true,
+  "owner_clarification_chesscope": "CHES English sense and Hebrew correspondence are accepted by owner as the DANMEK working authority. No routine CHES-vs-OSHB/WLC auditing; grammar check English only. This is a workflow trust assumption, not a scholarly proof of perfection."
 }
