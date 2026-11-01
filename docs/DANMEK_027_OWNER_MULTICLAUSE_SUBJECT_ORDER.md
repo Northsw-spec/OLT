@@ -33,6 +33,15 @@ call a regex-recognized English noun a verified grammatical subject. For
 example, unqualified \`they-are-hearing Sailors\` remains unchanged unless
 the context or an approved exception justifies a subject role.
 
+## Latest successor — DANMEK-028 (2026-11-01)
+
+DANMEK-027 v1 remains historical. The current **v2** opt-in private reader
+adds bounded article/title/compound subjects and suppresses inheritance
+of certain legacy transitive-object reorders in the **new** reading.
+The previously approved reader and any v1 snapshot remain untouched.
+See [DANMEK-028](DANMEK_028_GUARDED_EXPANDED_SUBJECT_FIRST.md).
+This successor does not independently certify all English clauses.
+
 ## Implementation and limitations
 
 DANMEK-027 recognizes these bounded patterns initially:
