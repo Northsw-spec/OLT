@@ -16,6 +16,12 @@ Direkt engelskspråkig CHES-inventering visar **5 019** separata engelska pronom
 
 Korrigera endast fullständiga subjektfraser. Samordningar (person + `and·` + annan person), titlar, `-of`-kedjor och separata objekt är inte förenklade namn som får lossas från sin fras. Nytt v2-revisionsnummer i **samma enda aktiva `scripts/danmek_039_english_only.py`**; inga äldre motorer, inga språkkälljämförelser eller parallella läsarversioner. [Korpusbaserad analys](DANMEK_040_REAL_ENGLISH_SPLIT_CLAUSE_AUDIT.md).
 
+## DANMEK-041 — RÄTT SATSROLL EFTER MOTTAGARE OCH OBJEKT (2026-11-01)
+
+Den verkliga engelska CHES-korpusen har minst två avgörande tvetydigheter: ett namn efter `said to·them` kan vara **talaren** eller **subjektet inne i det citerade talet**, och ett namn efter `called »·her` kan vara objektets **namnkomplement** i stället för agent. Flytta **inte** ett namn baserat på mottagaren/objektmarkören ensam. DANMEK-041 kräver självständig engelsk evidens efter **hela** subjektfrasen; en imperativ eller en avgränsad talöppning kan styrka talarroll, medan `not` ensamt inte räcker. Namngivnings-/identifieringsverb efter markerade objekt behandlas som osäkra. Objektmarkörernas antal måste förbli oförändrat.
+
+Privat korpusskanning hittade 572 engelska talverb + tredje persons mottagarpronomen, varav 132 följdes av ett namnformat fragment; 25 uppfyllde den ytterligare konservativa talöppningsregeln. Det är **kandidatpositioner, inte 25 bevisat rättade verser**. Ingen grundtextkontroll. Endast den aktiva `scripts/danmek_039_english_only.py` får ändras. [Research](DANMEK_041_PRIVATE_ENGLISH_DIALOGUE_ROLE_AUDIT.md).
+
 ## Engelska satsroller
 
 1. Analysera de ursprungliga **engelska CHES-fragmentens ordningsföljd**. Identifiera engelska subjekt, finita verb/predikat, objekt, indirekta objekt, mottagare, prepositioner, inskjutna led, relativsatser, bisatser och satsgränser.
