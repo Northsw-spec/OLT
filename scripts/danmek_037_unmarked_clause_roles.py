@@ -130,7 +130,7 @@ def identify_unmarked_english_roles(fragments: list[str]) -> list[dict]:
             candidates.append({
                 "first": i,
                 "nominal": nominal,
-                "last": nominal + (1 if following is not None else 0),
+                "last": nominal,
                 "reason": reason,
             })
             break
@@ -151,25 +151,29 @@ def apply_unmarked_english_roles(
     for case in candidates:
         first, nominal, last = case["first"], case["nominal"], case["last"]
         original = " ".join(fragments[first:last+1])
-        if current_display.count(original) != 1:
+        boundary = (
+            " " + fragments[nominal+1]
+            if nominal+1 < len(fragments) else ""
+        )
+        # Check the next source token as a clause cue, but do NOT consume
+        # it in the edit. That token may itself begin the next finite
+        # clause, whose subject can be independently moved.
+        anchored = original + boundary
+        if current_display.count(anchored) != 1:
             skipped += 1
             continue
-        left = current_display.find(original)
+        left = current_display.find(anchored)
         right = left + len(original)
         if any(not (right <= a or left >= b) for a,b,_,_ in edits):
             conflicts += 1
             continue
         predicate = " ".join(fragments[first:nominal])
         name = fragments[nominal]
-        following = (
-            (" " + fragments[nominal+1])
-            if nominal+1 < len(fragments) else ""
-        )
         if predicate.startswith(("and·", "And·")):
             conjunction, after_dot = predicate.split("·", 1)
-            replacement = conjunction + " " + name + " -·" + after_dot + following
+            replacement = conjunction + " " + name + " -·" + after_dot
         else:
-            replacement = name + " - " + predicate + following
+            replacement = name + " - " + predicate
         edits.append((left, right, replacement, case["reason"]))
     derived = current_display
     for left, right, replacement, _ in sorted(edits, reverse=True):
