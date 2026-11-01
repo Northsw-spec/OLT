@@ -383,7 +383,7 @@ def build_current_english(
         raise DanMekEnglishError("EXPECTED_CHES_OT_INVENTORY_CHANGED")
     if render_current:
         output.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
-        os.chmod(output.parent, 0o700)
+        # Do not chmod an existing parent such as /tmp or the user's home.
         temp = Path(tempfile.mkdtemp(
             prefix=".danmek039-", dir=str(output.parent)
         ))
@@ -472,7 +472,7 @@ def build_current_english(
             k.removeprefix("rule_"): v for k, v in sorted(counts.items())
             if k.startswith("rule_")
         },
-        "source_ch es_modified".replace(" ", ""): False,
+        "source_ches_modified": False,
         "older_danmek_code_imported": False,
         "original_language_code_imported": False,
         "original_language_comparison_performed": False,
