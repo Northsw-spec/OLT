@@ -356,6 +356,13 @@ def _candidate_slots(tokens: list[str]):
                 yield None
             continue
         following = tokens[subject_end] if subject_end < len(tokens) else None
+        if (following == "-" and subject_end + 1 < len(tokens)
+                and (FINITE.fullmatch(tokens[subject_end + 1])
+                     or SPLIT_PRONOUN.fullmatch(tokens[subject_end + 1]))):
+            # NAME - finite predicate is already a complete *different*
+            # subject–verb clause. Do not steal NAME for an outer predicate.
+            yield None
+            continue
         if post_object:
             # "he called »·her Sheba" may mean that the OBJECT was given
             # the name Sheba: the name is a predicate complement, not an
