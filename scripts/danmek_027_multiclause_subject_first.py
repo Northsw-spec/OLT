@@ -50,7 +50,7 @@ SUBJECT = (
 # is a required *context cue*. Neither a bare hearer nor a transitive object
 # by itself licenses a movement.
 _REPORT_HEARER = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?they-(?:are|were)-hearing)[ \t]+"
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?they-(?:are|were)-hearing)[ \t]+"
     r"(?P<subject>(?:the[· ])?[A-Z][A-Za-z'’-]{1,49}s)"
     r"(?=[ \t]+that[ \t]+(?:he|she)-(?:was|is)-anointed[ \t]+(?:the[· ])?[A-Z])"
 )
@@ -60,7 +60,7 @@ _REPORT_HEARER = re.compile(
 # Rowan" can be a name complement), and never equate passive matching
 # with proof from Hebrew syntax.
 _PASSIVE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?"
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?"
     r"(?:he|she|they|we)-(?:is|was|were)-"
     r"(?:anointed|appointed|chosen|buried|crowned|killed|blessed))[ \t]+"
     r"(?P<subject>" + SUBJECT + r")(?![A-Za-z-])"
@@ -69,7 +69,7 @@ _PASSIVE = re.compile(
 # Small list of *normally intransitive in this immediate context* predicates.
 # Exclude return/returned: "he-returned Rowan" may mean Rowan is an OBJECT.
 _INTRANSITIVE = re.compile(
-    r"(?<![A-Za-z-])(?P<verb>(?:and[· ])?"
+    r"(?<![A-Za-z-])(?P<verb>(?:[Aa]nd[· ])?"
     r"(?:he|she|they|we|thou|you|ye)-"
     r"(?:came|come|comes|went|goes|arose|rose|rests|rested|"
     r"died|dies|lived|lives|stood|stands|slept|sleeps|sat|sits))[ \t]+"
@@ -249,6 +249,7 @@ def build_subject_first_reader(
     """Produce a distinct reading, never mutate approved CHES/DANMEK snapshots."""
     if type(render) is not bool or type(require_311) is not bool:
         raise DanMek027Error("INVALID_POSTVERBAL_READER_OPTIONS")
+    stage = "SOURCE_VALIDATION"
     try:
         folder = _private_archive_root(private_root)
         prior = build_private_reader(
@@ -262,6 +263,7 @@ def build_subject_first_reader(
         digest = hashlib.sha256(
             (REVISION + ":" + prior["snapshot_id"]).encode("ascii")
         )
+        stage = "SOURCE_CHAPTER_SCAN"
         for file in sorted(folder.iterdir(), key=lambda path: path.name):
             if file.is_symlink() or not file.is_file():
                 raise DanMek027Error("PRIVATE_READER_SOURCE_ENTRY_UNSAFE")
@@ -279,6 +281,7 @@ def build_subject_first_reader(
                     part["original_ches_line_text"]
                     for part in verse["source_ches_spans_NOT_OLT_TRANSLATION"]
                 ]
+                stage = "LEGACY_GUARD"
                 prior_visible, old_reason, skipped_legacy = _legacy_candidate_guard(
                     reference=verse["reference"], chapter_sha256=sha,
                     original=original,
@@ -287,6 +290,7 @@ def build_subject_first_reader(
                 old_ambiguous += int(old_reason == "AMBIGUOUS")
                 prior_visible, _ = simplify_sur_faces_for_olt_view(prior_visible)
                 prior_visible, _ = hide_isolated_c(prior_visible)
+                stage = "NEW_ENGLISH_REORDER"
                 after, evidence, uncertain = reorder_postverbal_subjects(prior_visible)
                 unresolved += uncertain
                 total_changes += len(evidence)
@@ -319,6 +323,7 @@ def build_subject_first_reader(
             ))
             if len(pages) > MAX_CHAPTERS:
                 raise DanMek027Error("PRIVATE_READER_CHAPTER_LIMIT")
+        stage = "COUNTS_CHECK"
         if total_verses != prior["observed_verse_count"]:
             raise DanMek027Error("PRIVATE_READER_VERSE_COUNT_MISMATCH")
         if old_ambiguous != prior["olt_owner_candidate_ambiguous_verses_unchanged"]:
@@ -331,6 +336,7 @@ def build_subject_first_reader(
         ):
             raise DanMek027Error("PRIVATE_READER_SOURCE_CHANGED_DURING_SCAN")
         snapshot = "snapshot-" + digest.hexdigest()[:24]
+        stage = "PRIVATE_RENDER"
         if render:
             root = folder.parent / "ches-subject-reading"
             _safe_dir(root)
@@ -375,8 +381,16 @@ def build_subject_first_reader(
         }
     except DanMek027Error:
         raise
-    except Exception:
-        raise DanMek027Error("PRIVATE_POSTVERBAL_READER_FAILED") from None
+    except Exception as exc:
+        # Fixed phase/class diagnostics only: never leak licensed text,
+        # sensitive paths or arbitrary exception strings into CLI/CI.
+        safe_types = {"KeyError", "TypeError", "ValueError", "IndexError",
+                      "AttributeError", "RuntimeError", "AssertionError"}
+        kind = type(exc).__name__
+        if kind not in safe_types:
+            kind = "OTHER"
+        raise DanMek027Error("PRIVATE_POSTVERBAL_READER_FAILED_" + stage +
+                             "_" + kind) from None
 
 
 def main() -> int:
