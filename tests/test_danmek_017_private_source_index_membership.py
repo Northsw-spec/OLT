@@ -128,9 +128,13 @@ class TestDanMek017PrivateSourceIndex(unittest.TestCase):
         self.assertFalse((self.base / "ches-direct-reader").exists())
 
     def test_refuse_index_sha_mismatch_even_when_all_chapter_ids_exist(self):
-        item = invented_chapter("gen", 1)
-        item["source_original_index_sha256"] = "a" * 64
-        write_private_json(item, self.source / "gen.1.json")
+        # The existing CHES reader rejects mixed-index archives first.
+        # Give *both* chapter files one internally consistent but wrong SHA
+        # so this test reaches DANMEK-017's supplied-index comparison.
+        for number in (1, 2):
+            item = invented_chapter("gen", number)
+            item["source_original_index_sha256"] = "a" * 64
+            write_private_json(item, self.source / f"gen.{number}.json")
         with self.assertRaisesRegex(DanMek017Error, "LOCAL_SOURCE_INDEX_SHA_MISMATCH"):
             audit_private_index_membership(self.source, self.index)
 
