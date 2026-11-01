@@ -190,27 +190,49 @@ def _predicates(tokens: list[str]):
 
 
 def _subject_phrase(tokens: list[str], i: int) -> int | None:
-    """Return end-exclusive for one complete, bounded English nominal."""
+    """End-exclusive for a COMPLETE bounded English nominal, else None.
+
+    Never silently truncate a coordinated name+title+and+second-person
+    nominal, a possessive "-of" head, or a following family/role modifier.
+    This guard also applies to nominal subjects after explicit object marks.
+    """
     if i >= len(tokens) or not NAME.fullmatch(tokens[i]):
         return None
-    if i + 1 < len(tokens):
-        nxt = tokens[i + 1]
+    head = tokens[i]
+    if head.endswith("-of"):
+        # e.g. a "name-of hosts" source phrase: head alone is not complete.
+        return None
+    end = i + 1
+    if end < len(tokens):
+        nxt = tokens[end]
         if nxt in SUBJECT_TITLES:
-            return i + 2
-        if nxt in {"son-of", "daughter-of", "king-of", "servant-of"}:
-            return i + 3 if (i + 2 < len(tokens)
-                             and NAME.fullmatch(tokens[i + 2])) else None
-        if nxt == "Elohim-of":
-            return i + 3 if (i + 2 < len(tokens)
-                             and NAME.fullmatch(tokens[i + 2])) else None
-        if (NAME.fullmatch(nxt) or nxt.startswith((
-            "the·", "son-of", "daughter-of", "king-of", "servant-of",
-            "woman-of", "father-of", "brother-of", "sister-of"
-        )) or (nxt.startswith("and·") and NAME.fullmatch(nxt[4:]))):
-            # Refuse a *partial* subject move: "Natan and Mira" and
-            # "Rowan woman-of..." are not one-word subjects.
+            end += 1
+        elif nxt in {"son-of", "daughter-of", "king-of", "servant-of",
+                     "prophet-of", "priest-of"}:
+            if end + 1 >= len(tokens) or not NAME.fullmatch(tokens[end + 1]):
+                return None
+            end += 2
+        elif nxt == "Elohim-of":
+            if end + 1 >= len(tokens) or not NAME.fullmatch(tokens[end + 1]):
+                return None
+            end += 2
+    if end < len(tokens):
+        next_part = tokens[end]
+        if (NAME.fullmatch(next_part)
+                or next_part.startswith((
+                    "the·", "son-of", "daughter-of", "king-of",
+                    "servant-of", "prophet-of", "priest-of",
+                    "woman-of", "father-of", "brother-of",
+                    "sister-of", "grandee-of", "sons-of", "daughters-of"
+                ))
+                or next_part.endswith("-of")
+                or (
+                    next_part.startswith("and·")
+                    and not (FINITE.fullmatch(next_part)
+                             or SPLIT_PRONOUN.fullmatch(next_part))
+                )):
             return None
-    return i + 1
+    return end
 
 
 def _predicate_lemma(tokens: list[str], start: int, end: int) -> str:
