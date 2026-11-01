@@ -69,10 +69,12 @@ def detect_source_nominal_roles(fragments: list[str]) -> list[dict]:
     Other nominal structures, intervening clauses, speech and ambiguous
     objects are deliberately left for review.
     """
-    if (type(fragments) is not list or not 3 <= len(fragments) <= MAX_FRAGMENTS
+    if (type(fragments) is not list or len(fragments) > MAX_FRAGMENTS
             or any(type(part) is not str for part in fragments)
             or len(" ".join(fragments)) > MAX_VERSE_CHARS):
         raise DanMek036Error("INVALID_PRIVATE_CHES_FRAGMENT_SEQUENCE")
+    if len(fragments) < 3:
+        return []
     matches = []
     for start, finite in enumerate(fragments):
         if _FINITE.fullmatch(finite) is None:
