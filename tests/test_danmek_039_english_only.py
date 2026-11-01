@@ -163,6 +163,23 @@ class TestDanMek039EnglishOnly(unittest.TestCase):
                 self.assertEqual(result, before)
                 self.assertEqual(stats.get("applied_subject_moves", 0), 0)
 
+    def test_unfinished_or_coordinated_nominative_is_not_truncated(self):
+        cases = (
+            ["and·they-are-anointing", "»·him", "Zadok",
+             "the·priest", "and·Nathan", "the·prophet"],
+            ["he-", "instructed", "»·him", "Rowan", "and·sons-of·him"],
+            ["he-", "instructed", "»·him", "Rowan", "grandee-of",
+             "the·king"],
+            ["thus", "he-says", "Rowan-of", "hosts"],
+            ["and·he-is-saying", "Mira", "the·priest", "and·Natan",
+             "to·Rowan"],
+        )
+        for fragments in cases:
+            with self.subTest(fragments=fragments):
+                actual, stats = reorder_english_subjects(fragments)
+                self.assertEqual(actual, " ".join(fragments))
+                self.assertEqual(stats.get("applied_subject_moves", 0), 0)
+
     def test_transitive_object_and_infinitive_are_not_moved(self):
         for tokens in (
             ["and·he-saw", "Rowan", "in·the·street"],
