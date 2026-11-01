@@ -20,6 +20,7 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
         self.assertEqual(policy["status"], "ACTIVE")
         true_fields = (
             "must_continue_review_of_311_ambiguous_english_order_cases",
+            "cases_311_are_not_asserted_translation_errors",
             "goal_is_not_wholesale_retranslation_of_DANMEK",
             "comprehensibility_review_covers_more_than_the_311_regex_ambiguities",
             "owner_previous_satisfaction_not_blanket_linguistic_certification",
@@ -38,7 +39,6 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
         for field in true_fields:
             self.assertIs(policy[field], True, field)
         false_fields = (
-            "cases_311_are_not_asserted_translation_errors",
             "automatic_application_to_owner_verified_english_reader_allowed",
             "automatic_unverified_grammar_signoff_allowed",
             "original_subject_identification_without_verified_source_alignment_allowed",
@@ -49,10 +49,6 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
         )
         for field in false_fields:
             self.assertIs(policy[field], False, field)
-        # An explicit non-error assertion must remain logically accurate:
-        self.assertIs(
-            policy["cases_311_are_not_asserted_translation_errors"], False
-        )
         self.assertEqual(policy["publication_status"], "BLOCKED")
         self.assertEqual(
             policy["next_engineering_checkpoint"],
