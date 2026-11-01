@@ -158,11 +158,12 @@ def apply_reviewed_english_subjects(
             raise DanMek030Error("REVIEWED_ENGLISH_CLAUSE_CONTEXT_CHANGED")
         edits.append((left, right, _format_subject_before_verb(verb, subject)))
 
-    for i, (left, right, _) in enumerate(sorted(edits)):
-        if i and left < sorted(edits)[i - 1][1]:
+    ordered_edits = sorted(edits)
+    for i, (left, right, _) in enumerate(ordered_edits):
+        if i and left < ordered_edits[i - 1][1]:
             raise DanMek030Error("REVIEWED_ENGLISH_CLAUSE_EDIT_OVERLAP")
     updated = text
-    for left, right, new in sorted(edits, reverse=True):
+    for left, right, new in reversed(ordered_edits):
         updated = updated[:left] + new + updated[right:]
     return updated, len(edits)
 
@@ -176,7 +177,7 @@ def _unique_json(pairs: list[tuple[str, object]]) -> dict:
     return data
 
 
-def _approved_manifest(folder: Path, *, expected_snapshot: str) -> dict:
+def _approved_manifest(folder: Path, *, expected_snapshot: str) -> tuple[dict, bytes]:
     """Only fixed private path, only 0700 parent/0600 JSON, no symlinks."""
     root = folder.parent / "ches-subject-review"
     target = root / "approved.json"
@@ -217,11 +218,12 @@ def _approved_manifest(folder: Path, *, expected_snapshot: str) -> dict:
                 or (ref, ordinal) in seen):
             raise DanMek030Error("PRIVATE_ENGLISH_APPROVAL_DUPLICATE_OR_REFERENCE")
         seen.add((ref, ordinal))
-    return data
+    return data, raw
 
 
 def _review_html(
     entries: list[dict], historically_ambiguous: list[tuple[str, str]],
+    english_contexts: dict[str, str],
     *, snapshot: str,
 ) -> bytes:
     cards = []
@@ -233,7 +235,9 @@ def _review_html(
             html.escape(rule["observed_verb_gloss"], quote=True) + " / " +
             html.escape(rule["observed_adjacent_noun_phrase"], quote=True) +
             " — " + html.escape(rule["english_role_class"], quote=True) +
-            " — UNAPPROVED</li>"
+            " — UNAPPROVED<pre>" +
+            html.escape(english_contexts[rule["reference"]], quote=True) +
+            "</pre></li>"
         )
     legacy = "".join(
         "<details><summary>" + html.escape(ref, quote=True) +
@@ -282,21 +286,19 @@ def run_private_reviewed_subject_order(
             olt_owner_approved_candidates=True,
         )
         snapshot = prior["snapshot_id"]
-        manifest = (
+        manifest, manifest_raw = (
             _approved_manifest(folder, expected_snapshot=snapshot)
-            if mode == "render" else None
+            if mode == "render" else (None, b"")
         )
         per_reference: dict[str, list[dict]] = {}
-        manifest_raw = b""
         if manifest is not None:
             for r in manifest["rules"]:
                 per_reference.setdefault(r["reference"], []).append(r)
-            path = folder.parent / "ches-subject-review" / "approved.json"
-            manifest_raw = path.read_bytes()
         count_chapters = count_verses = old_ambiguous = possible = 0
         approved = changed_verses = 0
         case_entries: list[dict] = []
         ambiguous_cases: list[tuple[str, str]] = []
+        english_contexts: dict[str, str] = {}
         pages: list[tuple[str, bytes]] = []
         seen: set[str] = set()
         digest = hashlib.sha256(
@@ -338,6 +340,8 @@ def run_private_reviewed_subject_order(
                 )
                 possible += len(entries)
                 if mode == "review":
+                    if entries:
+                        english_contexts[ref] = english
                     case_entries.extend(entries)
                     if len(case_entries) > MAX_RULES:
                         raise DanMek030Error("PRIVATE_SUBJECT_REVIEW_RULE_LIMIT")
@@ -395,7 +399,8 @@ def run_private_reviewed_subject_order(
                 + "\n"
             ).encode("utf-8")
             html_data = _review_html(
-                case_entries, ambiguous_cases, snapshot=snapshot_id,
+                case_entries, ambiguous_cases, english_contexts,
+                snapshot=snapshot_id,
             )
             root = folder.parent / "ches-subject-review"
             label = hashlib.sha256(json_data).hexdigest()[:20]
