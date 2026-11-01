@@ -123,6 +123,22 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
         self.assertIn("and Rowan -·he-is-saying to Mira", new)
         self.assertIn("and Talia -·she-is-dying and·he-is-coming", new)
 
+    def test_adjacent_finite_clauses_each_with_subject_do_not_overlap(self):
+        fragments = [
+            "and·he-is-dying", "Mira",
+            "and·he-is-reigning", "Rowan",
+        ]
+        actual, changes, counts = apply_unmarked_english_roles(
+            fragments, " ".join(fragments),
+        )
+        self.assertEqual(counts["new_unmarked_grammar_candidates"], 2)
+        self.assertEqual(counts["new_unmarked_grammar_moves"], 2)
+        self.assertEqual(counts["unmarked_clause_overlap_conflicts"], 0)
+        self.assertEqual(
+            actual,
+            "and Mira -·he-is-dying and Rowan -·he-is-reigning",
+        )
+
     def test_duplicate_source_alignment_skips_no_guess(self):
         one = " ".join(self.speech)
         actual, evidence, counts = apply_unmarked_english_roles(
