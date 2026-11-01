@@ -64,7 +64,7 @@ class TestDanMek041ClauseRoles(unittest.TestCase):
             ["and·he-is-saying", "to·them", "Oren",
              "Elohim-of", "fathers", "he-", "appeared"],
             ["and·he-is-saying", "to·him", "Rowan",
-             "he-tore", "Mira", "»", "the·land"],
+             "he-tore", "»", "the·land"],
             # Second-person recipient can contain a name in vocative:
             # "he spoke to you, Daniel..."
             ["and·he-is-", "speaking", "to·you", "Mira",
