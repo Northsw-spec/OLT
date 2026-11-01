@@ -22,6 +22,12 @@ Den verkliga engelska CHES-korpusen har minst två avgörande tvetydigheter: ett
 
 Privat korpusskanning hittade 572 engelska talverb + tredje persons mottagarpronomen, varav 132 följdes av ett namnformat fragment; 25 uppfyllde den ytterligare konservativa talöppningsregeln. Det är **kandidatpositioner, inte 25 bevisat rättade verser**. Ingen grundtextkontroll. Endast den aktiva `scripts/danmek_039_english_only.py` får ändras. [Research](DANMEK_041_PRIVATE_ENGLISH_DIALOGUE_ROLE_AUDIT.md).
 
+## DANMEK-042 — SLUTNA ENGELSKA PREPOSITIONSLED OCH MARKERADE DATIVOBJEKT (2026-11-01)
+
+Korrigera subjektet i **samma engelska sats** även när ett redan fullständigt prepositions-/adverbialled står mellan det finita verbet och den *kompletta* subjektfrasen. Förflytta inte ett namn om prepositionen saknar eget objekt, om subjektfrasen är ofullständig/samordnad, eller om namnet redan hör till ett annat `NAME - verb`-led. Separat kategori: finit dative-/rapporteringsverb + slutet mottagarpronomen + fullständigt subjekt + uttryckligt fristående `»` för ett **annat objekt**. Den strukturen får korrigeras, men **inte** när objektmarkör saknas och inte heller med enbart namn när en talare/ett citerat subjekt är tvetydigt.
+
+Den privata genomgången av 929 engelska CHES-kapitel ger **9 + 12 = 21** snäva källkandidater efter syntax-/frasgränskontroller. Detta är *varken* 21 säkerställda fel *eller* 21 verifierade utdataändringar. **Endast** `scripts/danmek_039_english_only.py` uppdateras som den aktiva motorn, med positiv och negativ syntetisk GitHub-CI och utan originalspråkskontroll. [Avgränsad korpusanalys](DANMEK_042_ENGLISH_CLOSED_ADJUNCT_AND_DATIVE_SUBJECTS.md).
+
 ## Engelska satsroller
 
 1. Analysera de ursprungliga **engelska CHES-fragmentens ordningsföljd**. Identifiera engelska subjekt, finita verb/predikat, objekt, indirekta objekt, mottagare, prepositioner, inskjutna led, relativsatser, bisatser och satsgränser.
