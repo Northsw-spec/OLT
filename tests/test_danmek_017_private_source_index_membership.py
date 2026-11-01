@@ -25,7 +25,7 @@ def invented_full_index() -> bytes:
     # 55 + 38*23 = 929. These do NOT assert real Biblical chapter counts.
     entries = []
     for prefix, limit in (
-        [("gen", 55)] + [(f"f{n:02d}", 23) for n in range(1, 39)]
+        [("gen", 55)] + [(f"f{chr(97 + n // 26)}{chr(97 + n % 26)}", 23) for n in range(38)]
     ):
         for number in range(1, limit + 1):
             entries.append(
@@ -100,7 +100,7 @@ class TestDanMek017PrivateSourceIndex(unittest.TestCase):
             },
         )
         self.assertEqual(
-            result["per_source_filename_prefix"]["f38"][
+            result["per_source_filename_prefix"]["fbl"][
                 "index_chapters_missing_locally"
             ], 23,
         )
