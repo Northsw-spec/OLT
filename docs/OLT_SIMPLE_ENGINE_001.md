@@ -2,6 +2,27 @@
 
 **Owner direction, 2026-10-31. This is the current engineering architecture.** It supersedes older directions to implement a large original-language-to-English lexicon/sense/morphology translation engine as the active build path. Historical source research and tested utilities remain valid evidence but are **not** an instruction to rebuild that old engine.
 
+## DANMEK-026 — Latest owner change to the operational architecture (2026-11-01)
+
+The owner **accepts CHES as authoritative for DANMEK's English words and the
+existing underlying Hebrew/Aramaic correspondence**. The current goal is NOT
+to independently prove CHES correct against the OSHB/WLC source corpus.
+Stop the former comparative Hebrew↔CHES validation plan and any requirement
+to authenticate morphology, lemma-to-English alignments, source grammatical
+subjects or a verse crosswalk **before detecting grammatical errors in English**.
+Treat the earlier source-check projects as historical research and keep their
+data and records unchanged. Their future Hebrew-verification recommendations
+are superseded for this DANMEK English-grammar scope.
+
+DANMEK-025 proceeds directly from verified *CHES source file integrity* to
+English grammar checks (including the 311 flagged clauses) without changing
+Hebraic/poetic order when grammatically comprehensible. Only evidenced English
+grammar defects permit small private proposed edits, with no automatic
+application to the locked reader. Hebrew/Greek source editions remain available
+for a distinctly authorized OLT lexical/tense study and NT work. This is the
+owner's editorial assumption of CHES authority, not academic proof that no
+CHES error can exist. Keep licensed data private; publication BLOCKED.
+
 ## DANMEK-007 — Permanent cancellation: no divine pronoun capitalization
 
 **Owner's latest instruction (2026-10-31):** Do **not** specially uppercase `he/him/his/himself` when the referent is God or the LORD. This overrides and revokes DANMEK-006 entirely. Use ordinary English casing only, not religious-referent-based casing; a divine subject does not turn `·he-is-making` into `·He-is-making`. The unused helper and tests are removed; do not create a referent detector for capitalization. The **separate** subject-before-verb English OLT editorial word-order rule and private unchanged CHES JSON remain in force. [Permanent owner cancellation](DANMEK_007_NO_DIVINE_PRONOUN_CAPITALIZATION.md).
@@ -60,7 +81,7 @@ Create a **small, working, deterministic Hebrew/Aramaic → English OLT draft sy
 1. **Reuse first.** Extract and normalize existing authorized CHES information, preserving source boundaries. Do not recreate full lexical entry/sense inventories, exhaustive etymology, generalized grammatical generation or every contextual English decision as prerequisites to the first working chapter.
 2. **Automate routine QA.** Validate chapter/verse inventory, original file hashes, exact verse references, morphology where available, known owner override rules, integrity, retry/resume and negative tests. Never equate a PDF green *text span* to a Hebrew *word* without evidence.
 3. **Exception-based review.** Generate conservative candidate links/outputs and flag only ambiguous segmentation, unsupported source correspondence, textual variants, conflicting English rules, lexical uncertainties and explicit release-critical issues for manual inspection. A CHES-003-style review ledger is an **exception pathway**, **not** a requirement that a human independently reconstruct hundreds of thousands of word-to-gloss links.
-4. **Bounded proof before scaling.** Test a genuine Genesis sample across multiple verse layouts and compare the real source Hebrew against CHES; record error/exception categories. Only then expand incrementally chapter by chapter. Fail closed or mark unresolved portions instead of manufacturing mappings or silently assuming correctness.
+4. **Owner-accepted CHES baseline before scaling.** Verify actual CHES file/reader integrity, chapter boundaries, verse references and English output handling, but do **not** compare CHES lexical choices or morphology against the separate Hebrew corpus as a release prerequisite. Trust CHES as the owner's working translation authority; perform targeted **English grammar** checks without invented original-language mappings.
 5. **Avoid expensive parallel redesign.** Do not resume the former full standalone engine, huge per-lemma scholarly queue or permanent token-by-token human validation as the default implementation roadmap. Introduce complex components only with documented, reproducible blockers and measured benefit.
 
 ## Legal, source, publication and version-control boundaries
