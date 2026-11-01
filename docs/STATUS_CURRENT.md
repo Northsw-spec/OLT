@@ -6,6 +6,8 @@
 
 **SOLE ACTIVE DANMEK CONTRACT:** [MASTERPROMPT](DANMEK_MASTERPROMPT.md) and [machine policy](../data/policy/danmek_039_english_subject_verb_only.json).
 
+**DANMEK-040 source-English correction (2026-11-01):** An original CHES English fragment scan identified 5,019 detached English finite pronoun-prefix fragments, including 4,586 two-/three-fragment finite predicates; these are observed grammar structures, not 4,586 proven errors or edits. The earlier v1 synthetic long-distance relative-anchor rule could steal a subject from its own embedded clause and assign it to the outer verb. It has been removed; the active `danmek_039_english_only.py` now recognizes independent split English finite groups and refuses incomplete/coordinated nominal movements. No comparison against Hebrew, OSHB, WLC, Aramaic or Greek. [Research and limits](DANMEK_040_REAL_ENGLISH_SPLIT_CLAUSE_AUDIT.md).
+
 The CHES English is the complete **Old Testament source** (39 books / 929 chapters / 23,144 verses). The *only currently requested DANMEK editorial correction* is **English subject-before-verb grammar regardless of distance or intervening clauses**, based on CHES English alone. **No CHES↔Hebrew/Aramaic/OSHB/WLC checking. No morphology, Hebrew lemma or lexical-source revalidation.** The only supported current engine entrypoint is `scripts/danmek_039_english_only.py`, standalone stdlib only, not the older code import chain.
 
 Older DANMEK-008–038 readers, review batches, policies, code paths, approvals and chapter-specific exceptions are **historical prototypes and explicitly nonbinding**. Previous v2–v8 snapshot protection is no longer a DANMEK editing objective. Original private CHES JSON must stay unchanged, and no licensed source text may enter public GitHub or Actions.
