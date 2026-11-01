@@ -28,6 +28,14 @@ Korrigera subjektet i **samma engelska sats** även när ett redan fullständigt
 
 Den privata genomgången av 929 engelska CHES-kapitel ger **9 + 12 = 21** snäva källkandidater efter syntax-/frasgränskontroller. Detta är *varken* 21 säkerställda fel *eller* 21 verifierade utdataändringar. **Endast** `scripts/danmek_039_english_only.py` uppdateras som den aktiva motorn, med positiv och negativ syntetisk GitHub-CI och utan originalspråkskontroll. [Avgränsad korpusanalys](DANMEK_042_ENGLISH_CLOSED_ADJUNCT_AND_DATIVE_SUBJECTS.md).
 
+## DANMEK-043 — HELA FINITA ENGELSKA VERBGRUPPEN OCH FLERA SLUTNA SATSLED (2026-11-02)
+
+Den faktiska privata CHES-engelskan innehåller **1 641** finita verbgrupper med **tre källfragment**, t.ex. `and·he-is-` + `go` + `ing-up`. Tidigare parser kunde felaktigt behandla `go` som hela verbet. Korrigera verbets *fragmentgränser* innan något subjekt analyseras. Bevara **exakt samma engelska ordfragment** i läsutgåvan; sammansättningen används enbart som internt engelskt rollbevis. Det är 1 641 fragmentstrukturer, inte 1 641 bevisade subjektflyttar.
+
+Subjekt kan finnas efter en följd av **flera fullständiga engelska adverbial**, utan absolut maxavstånd. Flytta endast en hel, identifierad subjektfras inom samma sats. En fristående ofullständig preposition, relativ satsgräns, inskjutet subjekt till annat finit verb, samordning eller objekt utan självständig objektmarkör får aldrig ge skäl att flytta namn. Efter platsadverbial tillåts även en transitive agent endast om ett **separat `»`-markerat objekt** står efter subjektfrasen och verbet inte är namngivning/identifiering. Den privata korpusen visade 25 initiala plats-/tidsadverbial + namnpositioner som måste filtreras efter satsroll; de är **inte 25 automatiskt korrigerade verser**.
+
+Endast samma aktiva engelska motor `scripts/danmek_039_english_only.py` uppdateras (v5). [CHES-baserad analys](DANMEK_043_ENGLISH_MULTIPART_FINITE_AND_ADJUNCTS.md). Ingen jämförelse med hebreiskan eller tidigare motorer.
+
 ## Engelska satsroller
 
 1. Analysera de ursprungliga **engelska CHES-fragmentens ordningsföljd**. Identifiera engelska subjekt, finita verb/predikat, objekt, indirekta objekt, mottagare, prepositioner, inskjutna led, relativsatser, bisatser och satsgränser.
