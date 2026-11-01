@@ -51,6 +51,17 @@ universal subject classifier. Additional English constructions can be
 added in tested increments; no claim is made that all postverbal subjects
 across the Bible are already detected.
 
+**Legacy caution revealed by CI:** DANMEK-011 already contains previously
+owner-approved, typography-based single-candidate reorders. For example,
+a bare English `he-saw Sailors` pattern can be transformed by that
+earlier layer even though Sailors could be its **object**. This is a
+pre-existing limitation of the locked reader, not evidence of a new
+DANMEK-027 safe grammatical identification. DANMEK-027 inherits that
+older, owner-accepted display as its baseline but adds **no new**
+unqualified transitive verb/object movements. Any audit or later editorial
+review must evaluate the inherited order independently; passing CI does
+not certify the old candidates. No silent mutation of the locked reader.
+
 The owner's CHES-first trust policy remains intact. There is **no**
 comparison to independently imported Hebrew or Aramaic editions. This rule
 is an English presentation decision, not a claim that Hebrew syntax was
