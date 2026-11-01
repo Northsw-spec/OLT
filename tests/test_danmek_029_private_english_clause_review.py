@@ -229,7 +229,7 @@ class TestDanMek029EnglishClauseReview(unittest.TestCase):
         file.write_text("OWNER_MANUAL_NOTE_MUST_SURVIVE", encoding="utf-8")
         file.chmod(0o600)
         with self.assertRaisesRegex(
-            DanMek029Error, "PRIVATE_CLAUSE_REVIEW_FAILED",
+            DanMek029Error, "PRIVATE_ENGLISH_CLAUSE_REVIEW_FAILED",
         ):
             review_private_english_clauses(self.source, write_private_report=True)
         self.assertEqual(file.read_text(), "OWNER_MANUAL_NOTE_MUST_SURVIVE")
