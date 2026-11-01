@@ -72,6 +72,9 @@ class TestDanMek041ClauseRoles(unittest.TestCase):
             ["and·he-is-saying", "to·me", "Talia",
              "must-not", "you-go"],
             # No separate direct-speech cue after the name.
+            # Bare negation can start a statement about the named person.
+            ["and·he-is-saying", "to·them", "Ahab", "not",
+             "he-served", "»", "the·altar"],
             ["and·he-is-saying", "to·them", "Rowan", "in·the·city"],
             # Multiword noun phrase cannot be partially moved.
             ["and·he-is-saying", "to·them", "Rowan",
