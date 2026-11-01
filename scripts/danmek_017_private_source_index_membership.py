@@ -28,7 +28,7 @@ class DanMek017Error(ValueError):
 
 
 def _read_private_index(index_path: Path, source_folder: Path) -> bytes:
-    if type(index_path) is not Path:
+    if not isinstance(index_path, Path):
         raise DanMek017Error("PRIVATE_SOURCE_INDEX_PATH_REQUIRED")
     path = index_path.expanduser()
     if (not path.is_absolute() or ".olt-private" not in path.parts
@@ -114,7 +114,7 @@ def audit_private_index_membership(
             raise DanMek017Error("LOCAL_SOURCE_INDEX_NOT_FULLY_IMPORTED")
 
         repeated = build_private_reader(folder, render=False)
-        if baseline != repeated or index_path.read_bytes() != raw:
+        if baseline != repeated or index_path.expanduser().read_bytes() != raw:
             raise DanMek017Error("PRIVATE_INDEX_OR_SOURCE_CHANGED_DURING_AUDIT")
 
         result_by_prefix = {}
