@@ -37,9 +37,9 @@ class TestDanMek041ClauseRoles(unittest.TestCase):
                 "and Talia - ·she-is- responding to·them sing-you ! to·Lord",
             ),
             (
-                ["he-", "told", "to·her", "Natan", "not",
+                ["he-", "told", "to·her", "Natan", "must-not",
                  "you-shall-come"],
-                "Natan - he- told to·her not you-shall-come",
+                "Natan - he- told to·her must-not you-shall-come",
             ),
         )
         for source, expected in fixtures:
