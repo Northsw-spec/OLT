@@ -91,7 +91,7 @@ IMPERATIVE_YOU = re.compile(r"[a-z]+(?:-[a-z]+)*-you(?:\s*!|!)?\Z")
 INTRANSITIVE = frozenset({
     "came", "come", "coming", "went", "going", "arose", "rose",
     "standing", "stood", "resting", "lived", "dwelt", "dying",
-    "reigned", "sitting", "sat", "appeared", "encamped", "encamping",
+    "reigned", "reigning", "sitting", "sat", "appeared", "encamped", "encamping",
     "sojourned", "dwelling", "rejoicing", "fell",
 })
 SUBJECT_TITLES = frozenset({
