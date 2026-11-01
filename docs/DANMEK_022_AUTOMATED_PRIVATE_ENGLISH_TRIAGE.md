@@ -115,6 +115,20 @@ Hebrew/Aramaic strings**. Regression cases cover:
   altered queue JSON, inappropriate permissions, unsafe locations;
 - sanitized terminal JSON without private text.
 
+## Actual owner-run acceptance (DANMEK-023, 2026-11-01)
+
+The owner executed the real DANMEK-022 Parrot CLI with
+`--require-311 --write-private-html` after updating to the merged
+implementation on `main`. It reported **311 ambiguous cases
+revalidated**, **311 provisional original-language verse references
+present**, **0 missing**, **701 unreviewed original `HV`/`AV`
+morphology code-prefix occurrences**, **0 verified grammatical
+subjects**, **0 English changes**, and
+`private_review_html_status=NEW_PRIVATE_QUEUE`. The private HTML was
+created offline, not uploaded to GitHub. This is a **technical
+source-integrity triage PASS**, not a completed word-level linguistic
+review. See [owner-run evidence](DANMEK_023_REAL_PRIVATE_AUTOMATED_TRIAGE_PASS.md).
+
 The owner-verified DANMEK-013/014 English reader remains **LOCKED**.
 Full 66-book translation **NOT DONE**. Copyright/publication
 rights **NOT VERIFIED**. Publication **BLOCKED**.
