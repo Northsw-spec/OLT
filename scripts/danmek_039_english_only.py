@@ -58,7 +58,7 @@ NAMING_PREDICATES = frozenset({
     "call", "calls", "called", "calling", "name", "names", "named", "naming",
     "identified", "identifies", "identifying",
 })
-QUOTE_OPENERS = frozenset({"not", "must-not", "thus"})
+QUOTE_OPENERS = frozenset({"must-not", "thus"})
 IMPERATIVE_YOU = re.compile(r"[a-z]+(?:-[a-z]+)*-you(?:\s*!|!)?\Z")
 INTRANSITIVE = frozenset({
     "came", "come", "coming", "went", "going", "arose", "rose",
