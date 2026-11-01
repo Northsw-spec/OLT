@@ -20,7 +20,7 @@ import stat
 import tempfile
 import zipfile
 
-REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v4"
+REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v5"
 CHAPTER = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.json\Z")
 REFERENCE = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.([1-9]\d*)\Z")
 FINITE = re.compile(
@@ -201,11 +201,12 @@ def _read_chapter(raw: bytes, book: str, chapter: int) -> dict:
 
 
 def _predicates(tokens: list[str]):
-    """Finite English pronoun–verb groups, even when source PDF split them.
+    """English finite groups including *all* source-split predicate fragments.
 
-    The actual private CHES source repeatedly has he- / instructed or
-    and·he- / spoke. Failing to parse these loses the subject of an embedded
-    clause and encourages false movement into an outer relative clause.
+    The CHES English line may split one progressive verb into three PDF
+    fragments: "and·he-is-" / "go" / "ing-up". The old parser consumed
+    "go" first, thereby leaving "ing-up" outside the predicate. Recognize
+    the two-fragment lexical continuation BEFORE the one-word case.
     """
     for i, token in enumerate(tokens):
         whole = FINITE.fullmatch(token) is not None
@@ -213,25 +214,69 @@ def _predicates(tokens: list[str]):
         if not (whole or split):
             continue
         end = i + 1
-        if split:
-            if end >= len(tokens):
-                continue
-            if LOWER_LEXICAL.fullmatch(tokens[end]):
-                end += 1
-            elif (end + 1 < len(tokens) and
-                  SPLIT_PREFIX.fullmatch(tokens[end]) and
-                  LOWER_LEXICAL.fullmatch(tokens[end + 1])):
-                end += 2
-            else:
-                continue
-        elif token.endswith("-") and end < len(tokens):
-            if LOWER_LEXICAL.fullmatch(tokens[end]):
-                end += 1
-            elif (end + 1 < len(tokens)
-                  and PREDICATE_STEM.fullmatch(tokens[end])
-                  and ING_TAIL.fullmatch(tokens[end + 1])):
-                end += 2
+        if not token.endswith("-"):
+            yield i, end
+            continue
+        if end >= len(tokens):
+            if whole:
+                yield i, end
+            continue
+        if (end + 1 < len(tokens)
+                and LOWER_LEXICAL.fullmatch(tokens[end])
+                and ING_TAIL.fullmatch(tokens[end + 1])):
+            # e.g. is- go ing-forth / is- be ing-hot.
+            end += 2
+        elif LOWER_LEXICAL.fullmatch(tokens[end]):
+            end += 1
+        elif (end + 1 < len(tokens)
+              and SPLIT_PREFIX.fullmatch(tokens[end])
+              and LOWER_LEXICAL.fullmatch(tokens[end + 1])):
+            end += 2
+        elif split:
+            # An unattached "he-" by itself is not a complete verb.
+            continue
         yield i, end
+
+
+def _english_intransitive_lemma(lemma: str) -> bool:
+    """English-only motion and state predicates; exclude transitive 'bring'."""
+    return lemma in INTRANSITIVE or lemma.startswith(("going-", "coming-"))
+
+
+CLOSED_LOCATION_ADVERBS = frozenset({"there", "here"})
+CLOSED_DEICTIC_ADJUNCTS = frozenset({
+    "to·him", "to·her", "to·them", "to·me", "to·you", "to·us",
+    "from·him", "from·her", "from·them", "from·there", "from·here",
+    "in·him", "in·her", "in·them", "with·him", "with·her", "with·them",
+    "after·him", "after·her", "after·them",
+    "before·him", "before·her", "before·them",
+    "instead-of·him", "instead-of·her", "instead-of·them",
+})
+
+
+def _complete_english_adjunct_end(tokens: list[str], at: int,
+                                  lemma: str) -> int:
+    """Skip independently CLOSED English adjuncts without a distance cap.
+
+    Never consume a free-standing 'from' / 'to' / 'in' whose complement
+    may be the following name. Never traverse a finite verb or a clause
+    boundary; each accepted piece already contains its own complement.
+    """
+    if not _english_intransitive_lemma(lemma):
+        return at
+    pos = at
+    while pos < len(tokens):
+        tok = tokens[pos]
+        if tok in (CLOSED_LOCATION_ADVERBS | CLOSED_DEICTIC_ADJUNCTS |
+                   CLOSED_INTRANSITIVE_ADJUNCT_FRAMES.get(lemma, frozenset())):
+            pos += 1
+            continue
+        if (lemma in {"going-up", "coming-up"}
+                and tokens[pos:pos+2] == ["in·", "·first"]):
+            pos += 2
+            continue
+        break
+    return pos
 
 
 def _subject_phrase(tokens: list[str], i: int) -> int | None:
@@ -288,6 +333,11 @@ def _subject_phrase(tokens: list[str], i: int) -> int | None:
 
 
 def _predicate_lemma(tokens: list[str], start: int, end: int) -> str:
+    if (end >= start + 3 and
+            ING_TAIL.fullmatch(tokens[end - 1]) and
+            LOWER_LEXICAL.fullmatch(tokens[end - 2])):
+        # Only classify the lexical English phrase; never rewrite the source.
+        return tokens[end - 2] + tokens[end - 1]
     return tokens[end - 1].rsplit("-", 1)[-1]
 
 
@@ -328,6 +378,7 @@ def _candidate_slots(tokens: list[str]):
         post_object = False
         post_recipient = False
         closed_adjunct = False
+        locative_marked_object = False
         if (subject_at < len(tokens) and
                 ATTACHED_OBJECT_PRONOUN.fullmatch(tokens[subject_at])):
             # This source-English marked object can precede a delayed
@@ -344,14 +395,20 @@ def _candidate_slots(tokens: list[str]):
             # role evidence. Both require independent subsequent cues.
             subject_at += 1
             post_recipient = True
-        elif (subject_at < len(tokens) and
-              tokens[subject_at] in
-              CLOSED_INTRANSITIVE_ADJUNCT_FRAMES.get(lemma, ())):
-            # The first following token is a COMPLETE closed adverbial/
-            # prepositional complement, not a second noun. The later named
-            # subject is thus linked to THIS same intransitive predicate.
-            subject_at += 1
+        elif (adjunct_end := _complete_english_adjunct_end(
+                tokens, subject_at, lemma)) > subject_at:
+            # One or several complete adjuncts; no maximum subject
+            # distance, but every traversed piece must itself be closed.
+            subject_at = adjunct_end
             closed_adjunct = True
+        elif (subject_at < len(tokens)
+              and tokens[subject_at] in CLOSED_LOCATION_ADVERBS
+              and lemma not in NAMING_PREDICATES):
+            # A transitively acting agent may follow "there" only when
+            # a DIFFERENT object is explicitly marked AFTER its entire
+            # nominal phrase. No such guess for "serve there God other..."
+            subject_at += 1
+            locative_marked_object = True
 
         subject_end = _subject_phrase(tokens, subject_at)
         if subject_end is None:
@@ -399,6 +456,11 @@ def _candidate_slots(tokens: list[str]):
                 yield None
                 continue
             role = "INTRANSITIVE_AGENT_AFTER_CLOSED_ADJUNCT"
+        elif locative_marked_object:
+            if (following != "»" or prior_named_subject_in_same_clause):
+                yield None
+                continue
+            role = "LOCATIVE_AGENT_BEFORE_SEPARATE_MARKED_OBJECT"
         elif following == "»":
             role = "FINITE_NOMINAL_EXPLICIT_OBJECT"
         elif (lemma in SPEECH and following is not None and (
