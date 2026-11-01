@@ -317,6 +317,14 @@ def reorder_english_subjects(fragments: list[str]) -> tuple[str, dict]:
     original = " ".join(tokens)
     changes = []
     counts = Counter()
+    # Corpus-wide counters distinguish observed English finite structures
+    # from grammatically supported and actually moved subjects.
+    identified_finite = list(_predicates(tokens))
+    counts["english_finite_predicates_seen"] = len(identified_finite)
+    counts["english_split_finite_predicates_seen"] = sum(
+        SPLIT_PRONOUN.fullmatch(tokens[first]) is not None
+        for first, _ in identified_finite
+    )
     for match in _candidate_slots(tokens):
         counts["reviewed_finite_noun_contexts"] += 1
         if match is None:
@@ -511,6 +519,10 @@ def build_current_english(
         "source_verses": counts["verses_scanned"],
         "subject_role_candidates": counts["recognized_subject_roles"],
         "subject_moves_applied": counts["applied_subject_moves"],
+        "english_finite_predicates_seen":
+            counts["english_finite_predicates_seen"],
+        "english_split_finite_predicates_seen":
+            counts["english_split_finite_predicates_seen"],
         "unresolved_subject_roles": counts["unresolved_subject_roles"],
         "subject_rule_counts": {
             k.removeprefix("rule_"): v for k, v in sorted(counts.items())
