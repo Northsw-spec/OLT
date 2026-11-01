@@ -1,8 +1,10 @@
 # OLT — CURRENT STATUS (2026-10-31)
 
+**BINDING OWNER PRIORITY — OLT-ENGLISH-FIRST-001 (2026-10-31):** The **sole active target language is ENGLISH**. Build an actual working original Biblical **Hebrew/Aramaic/Greek → English OLT translation engine**, then a balanced-yet-literal **complete 66-book English Bible translation**. All Japanese and other non-English verse translation, lexicon/engine development, translation repositories and publications are **DEFERRED** until the owner personally verifies and explicitly approves the **entire** English Bible translation. A working English draft prototype now takes priority over further isolated lexicon-only checkpoints. Existing OLT-034 multilingual schemas remain **historical/future-only**. A CI PASS, partial completion, assistant output or hypothetical approval is NOT the owner's verification. This scope decision does NOT mark any original-language lemma, English verse or Scripture as approved. **English engine complete: NOT DONE. Complete 66-book English translation: NOT DONE. Owner approval: NOT DONE. Scripture publication: BLOCKED.** See [owner English-first policy](OLT_ENGLISH_FIRST_OWNER_GATE.md) and [locked machine-readable rule](../data/policy/olt_english_first_owner_verification.json). **This active owner direction supersedes any older NEXT checkpoint text proposing immediate work on non-English target languages.**
+
 ## DANMEK — CURRENT ACTIVE STATUS: DANMEK-039 (2026-11-01)
 
-**SOLE ACTIVE DANMEK CONTRACT:** [MASTERPROMPT](MASTERPROMPT.md) and [machine policy](../data/policy/danmek_039_english_subject_verb_only.json).
+**SOLE ACTIVE DANMEK CONTRACT:** [MASTERPROMPT](DANMEK_MASTERPROMPT.md) and [machine policy](../data/policy/danmek_039_english_subject_verb_only.json).
 
 The CHES English is the complete **Old Testament source** (39 books / 929 chapters / 23,144 verses). The *only currently requested DANMEK editorial correction* is **English subject-before-verb grammar regardless of distance or intervening clauses**, based on CHES English alone. **No CHES↔Hebrew/Aramaic/OSHB/WLC checking. No morphology, Hebrew lemma or lexical-source revalidation.** The only supported current engine entrypoint is `scripts/danmek_039_english_only.py`, standalone stdlib only, not the older code import chain.
 
@@ -10,18 +12,10 @@ Older DANMEK-008–038 readers, review batches, policies, code paths, approvals 
 
 The owner has given positive feedback on shown English reading; this is not evidence that all 23,144 verses are syntactically verified. The raw CHES ZIP contains 39 OT books; **the 27 NT books are not supplied**. The public publishing gate is still BLOCKED pending actual applicable rights. GitHub Actions green means engineering checks passed, not verified whole-Bible grammar.
 
+
 ---
 
-
-**BINDING OWNER PRIORITY — OLT-ENGLISH-FIRST-001 (2026-10-31):** The **sole active target language is ENGLISH**. Build an actual working original Biblical **Hebrew/Aramaic/Greek → English OLT translation engine**, then a balanced-yet-literal **complete 66-book English Bible translation**. All Japanese and other non-English verse translation, lexicon/engine development, translation repositories and publications are **DEFERRED** until the owner personally verifies and explicitly approves the **entire** English Bible translation. A working English draft prototype now takes priority over further isolated lexicon-only checkpoints. Existing OLT-034 multilingual schemas remain **historical/future-only**. A CI PASS, partial completion, assistant output or hypothetical approval is NOT the owner's verification. This scope decision does NOT mark any original-language lemma, English verse or Scripture as approved. **English engine complete: NOT DONE. Complete 66-book English translation: NOT DONE. Owner approval: NOT DONE. Scripture publication: BLOCKED.** See [owner English-first policy](OLT_ENGLISH_FIRST_OWNER_GATE.md) and [locked machine-readable rule](../data/policy/olt_english_first_owner_verification.json). **This active owner direction supersedes any older NEXT checkpoint text proposing immediate work on non-English target languages.**
-
 ## OLT-SIMPLE-ENGINE-001 — Binding simplified CHES-first engine (ACTIVE ENGINEERING DIRECTION)
-
-## OWNER VERIFIED / LOCKED — DANMEK-014 private OLT English reading (2026-11-01)
-
-- **The owner expressly verified and approved the current DANMEK-014 HTML reading on Parrot** after the isolated lowercase `c` and duplicate-marker removal. Source-code checkpoint: protected `main` `2e56f446b707226c584269c88c50efab37e0ffc2` (PR #95); post-merge GitHub Actions [run 41252311520](https://github.com/Northsw-spec/OLT/actions/runs/41252311520) succeeded. This is direct owner visual sign-off of the **private English reader presentation**, NOT automated Hebrew syntax verification.
-- **DANMEK-015 regression freeze:** Synthetic GitHub tests now lock the accepted presentation invariants (bounded subject-first rendering, `faces`, isolation of lowercase `c`, ordinary pronoun casing, immutable private source/snapshots and publication block). Future changes require a distinct private snapshot and a new owner acceptance. The earlier DANMEK-013 baseline remains independently locked.
-- **Do not generalize approval:** The actual private snapshot ID and per-chapter content were not provided to GitHub; full OT/NT translation and final 66-book review are still NOT DONE and publication BLOCKED. [DANMEK-014 owner-verified checkpoint](OLT_PRIVATE_READER_OWNER_VERIFIED_DANMEK014_20261101.md).
 
 ## OWNER-VISUAL-VERIFIED LOCK — Private OLT English reading (2026-11-01)
 
@@ -29,19 +23,6 @@ The owner has given positive feedback on shown English reading; this is not evid
 - **Correction to evidence:** Missing spaces in the pasted chat excerpts came from the copy/paste process, **not** from OLT HTML. Do not change the accepted spacing or rework correct display code based on those copied excerpts. **No code changes are required for this acceptance.**
 - **Freeze:** Preserve this accepted reader behavior. Any future changes must use separate versioned snapshots and protected PR+CI without overwriting the accepted reading. Private snapshot ID and chapter coverage were not supplied to GitHub and are not claimed. Original CHES JSON remains unchanged.
 - **Scope:** The approval is of the **private reader presentation only**. Neither 66-book translation completion nor complete Hebrew-syntax correctness, owner sign-off of the finished Bible, redistribution rights, or publication is implied; publication remains BLOCKED. [Owner-verification lock](OLT_PRIVATE_READER_OWNER_VERIFIED_20261101.md).
-
-## DANMEK-JSON-001 — Direct CHES JSON input confirmed by owner (2026-10-31)
-
-- **Owner confirms permission to use CHES and authorizes the simplest path: use existing private chapter `.json` files directly.** No new CHES imitation, complex dictionary, token-level word correspondence or fresh PDF re-download is a prerequisite for a working *private* English reading application.
-- **Already implemented:** `scripts/ches_015_direct_private_reader.py` consumes the `.olt-private/ches/` JSON collection, validates input per chapter and produces offline private HTML, keeping original CHES English fragments. It is not a new independent English translation or a word-aligned sublinear. Incomplete chapter count is reported.
-- **Next shortest code path:** optional small, exact-occurrence, non-destructive English word/tense overrides layered onto this JSON-direct reader. Do not modify source JSONs, create a separate lemma-sense engine, require owner confirmation for every development PR, or imply that all 929 private chapters are locally present.
-- **Rights/provenance:** record owner-confirmed permission for CHES use; do not claim the content is automatically open for public derivative distribution from that statement alone. Keep source/HTML privately, GitHub code and synthetic tests only.
-
-
-- The owner requires the **small CHES-first original-language-checked English OLT engine**, **NOT** the old from-scratch thousands-of-hours lexicon/translation engine. This is the **highest active engineering priority**. Existing verified sources, tools and owner grammatical policies remain, while previous full-engine development planning is superseded.
-- Architecture: **privately authorized CHES OT data → authenticated original Hebrew/Aramaic OSHB chapter/verse evidence → small deterministic English rule/override layer → reviewable source-linked English drafts**. Prefer automated QA and exception-based manual review, never requiring every green PDF text span to be individually reconstructed as an OSHB word. PDF spans are not words, and ambiguous source mappings remain unresolved.
-- **CHES-012 delivered via PR #69:** the compact CHES-first English pipeline now includes independent real-PDF, exact-source-pin baseline checks and count-only per-chapter exception/geometry rates across ALL FOURTEEN original chapters. Source SHA, page/verse/word counts, CHES green PDF typography spans, page crossings and zero-loss measurements are revalidated against immutable source evidence. **CHES-013 and CHES-014 now delivered:** the optional source-structure recovery and offline private JSON → English draft bridge follow this CHES-012 source baseline. **NEXT CHES-015:** source-evidenced bounded English lexical/tense overrides and exception-only editorial QA. Continue the SMALL private engine; do not restart the old enormous independent lexical translation engine. Keep owner approval, copyright, English-only, and publication BLOCKED gates; never revive the old large lexicon engine. A full 929-chapter private import has **NOT** been completed; the Greek NT requires a separate compact English design. English-first, original-source evidence, copyright boundaries, owner review and **publication BLOCKED** remain binding.
-- [Binding policy](OLT_SIMPLE_ENGINE_001.md) · [updated masterprompt](MASTERPROMPT.md). Public `README.md` remains exactly **zero bytes**; preserve existing Git history.
 
 ## CHES-LOCAL-002 — 929/929 private OT JSON chapters completed (OWNER-OBSERVED 2026-10-31)
 
