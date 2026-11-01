@@ -3,7 +3,7 @@
   "status": "SUPERSEDED",
   "is_active": false,
   "superseded_by": "DANMEK-039-ENGLISH-SUBJECT-VERB-ONLY",
-  "authoritative_masterprompt": "docs/MASTERPROMPT.md",
+  "authoritative_masterprompt": "docs/DANMEK_MASTERPROMPT.md",
   "authoritative_machine_policy": "data/policy/danmek_039_english_subject_verb_only.json",
   "legacy_grammar_constraints_must_not_govern_current_danmek": true,
   "retired_due_to_conflicting_english_word_order_priorities": true
