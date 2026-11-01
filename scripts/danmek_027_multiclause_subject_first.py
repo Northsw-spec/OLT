@@ -38,7 +38,7 @@ MAX_CHAPTERS = 1000
 MAX_VERSE_CHARS = 50000
 # The same subject can have a title, a definite article, or two name parts.
 # Do not infer a subject from arbitrary lowercase nouns or from a bare object.
-NAME = r"(?!And\\b|That\\b|When\\b|But\\b|For\\b|If\\b|Then\\b|He\\b|She\\b|They\\b)[A-Z][A-Za-z'’-]{1,49}"
+NAME = r"(?!And\b|That\b|When\b|But\b|For\b|If\b|Then\b|He\b|She\b|They\b)[A-Z][A-Za-z'’-]{1,49}"
 TITLE = r"(?:king|queen|priest|prophet|servant|messenger|men|women|people)"
 SUBJECT = (
     r"(?:the[· ](?:" + NAME + r"|" + TITLE + r")(?:[ ]" + NAME + r")?"
