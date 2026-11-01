@@ -20,7 +20,7 @@ from scripts.danmek_039_english_only import (
 ROOT = Path(__file__).resolve().parents[1]
 ENGINE = ROOT / "scripts/danmek_039_english_only.py"
 POLICY = ROOT / "data/policy/danmek_039_english_subject_verb_only.json"
-MASTER = ROOT / "docs/MASTERPROMPT.md"
+MASTER = ROOT / "docs/DANMEK_MASTERPROMPT.md"
 
 
 def chapter(book="gen", ch=1, lines=None):
