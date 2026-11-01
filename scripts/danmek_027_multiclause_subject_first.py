@@ -25,7 +25,7 @@ import stat
 import tempfile
 
 from scripts.ches_014_offline_english_bridge import _load_private_source, _private_archive_root
-from scripts.ches_015_direct_private_reader import NAME, build_private_reader
+from scripts.ches_015_direct_private_reader import NAME as CHES_FILE_NAME, build_private_reader
 from scripts.danmek_008_english_display import simplify_sur_faces_for_olt_view
 from scripts.danmek_011_owner_order import (
     INLINE, JOINED_YAHWEH, JOINED_AND_SUBJECT,
@@ -38,11 +38,11 @@ MAX_CHAPTERS = 1000
 MAX_VERSE_CHARS = 50000
 # The same subject can have a title, a definite article, or two name parts.
 # Do not infer a subject from arbitrary lowercase nouns or from a bare object.
-NAME = r"(?!And\b|That\b|When\b|But\b|For\b|If\b|Then\b|He\b|She\b|They\b)[A-Z][A-Za-z'’-]{1,49}"
+PROPER_NAME = r"(?!And\b|That\b|When\b|But\b|For\b|If\b|Then\b|He\b|She\b|They\b)[A-Z][A-Za-z'’-]{1,49}"
 TITLE = r"(?:king|queen|priest|prophet|servant|messenger|men|women|people)"
 SUBJECT = (
-    r"(?:the[· ](?:" + NAME + r"|" + TITLE + r")(?:[ ]" + NAME + r")?"
-    r"|" + NAME + r"(?:[ ]" + NAME + r"){0,2})"
+    r"(?:the[· ](?:" + PROPER_NAME + r"|" + TITLE + r")(?:[ ]" + PROPER_NAME + r")?"
+    r"|" + PROPER_NAME + r"(?:[ ]" + PROPER_NAME + r"){0,2})"
 )
 
 # The owner explicitly supplied the hearing/report construction. The group
@@ -267,7 +267,7 @@ def build_subject_first_reader(
         for file in sorted(folder.iterdir(), key=lambda path: path.name):
             if file.is_symlink() or not file.is_file():
                 raise DanMek027Error("PRIVATE_READER_SOURCE_ENTRY_UNSAFE")
-            match = NAME.fullmatch(file.name)
+            match = CHES_FILE_NAME.fullmatch(file.name)
             if match is None:
                 raise DanMek027Error("PRIVATE_READER_SOURCE_NAME_INVALID")
             prefix, chapter_text = match.groups()
