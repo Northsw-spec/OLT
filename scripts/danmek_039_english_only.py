@@ -20,7 +20,7 @@ import stat
 import tempfile
 import zipfile
 
-REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v3"
+REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v4"
 CHAPTER = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.json\Z")
 REFERENCE = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.([1-9]\d*)\Z")
 FINITE = re.compile(
@@ -52,6 +52,34 @@ REPORTING_WITH_RECIPIENT = SPEECH | frozenset({
 PRONOMINAL_RECIPIENT = frozenset({
     "to·him", "to·her", "to·them",
 })
+CLOSED_ENGLISH_RECIPIENT = frozenset({
+    "to·him", "to·her", "to·them", "to·me", "to·you", "to·us",
+})
+# Closed English adjuncts are complete without consuming the next nominal.
+# They support a delayed subject ONLY for compatible intransitive predicates.
+# This is a grammatical frame, not a biblical name/verse exception.
+CLOSED_INTRANSITIVE_ADJUNCT_FRAMES = {
+    "reigning": frozenset({"instead-of·him", "instead-of·her", "instead-of·them"}),
+    "reigned": frozenset({"instead-of·him", "instead-of·her", "instead-of·them"}),
+    "came": frozenset(CLOSED_ENGLISH_RECIPIENT),
+    "coming": frozenset(CLOSED_ENGLISH_RECIPIENT),
+    "appeared": frozenset(CLOSED_ENGLISH_RECIPIENT),
+    "appearing": frozenset(CLOSED_ENGLISH_RECIPIENT),
+    "went": frozenset({"from·there", "from·here"} | CLOSED_ENGLISH_RECIPIENT),
+    "going": frozenset({"from·there", "from·here"} | CLOSED_ENGLISH_RECIPIENT),
+    "dwelt": frozenset({"in·them", "in·him", "in·her"}),
+    "dwelling": frozenset({"in·them", "in·him", "in·her"}),
+}
+# Recipient + named nominal + separate marked object establishes an English
+# dative/agent/object frame, absent any already-preposed overt subject.
+DATIVE_PREDICATES_WITH_MARKED_OBJECT = frozenset({
+    "giving", "gave", "gives", "taking", "took",
+    "telling", "told", "relating", "related",
+    "saying", "said", "says", "speaking", "spoke",
+})
+# PDF fragment markers are NOT grammatical suffixes of a noun phrase.
+# Refuse moving a name ahead of an unseen title after such markers.
+INTERPOSED_SOURCE_MARKERS = frozenset({"c", "m", "n", "(p)", "(s)", "(n)"})
 # English "called it Sheba" can have a name COMPLEMENT, not a new agent.
 # A name after the object is not sufficient proof of subjecthood.
 NAMING_PREDICATES = frozenset({
@@ -235,6 +263,13 @@ def _subject_phrase(tokens: list[str], i: int) -> int | None:
             end += 2
     if end < len(tokens):
         next_part = tokens[end]
+        if (next_part in INTERPOSED_SOURCE_MARKERS
+                and end + 1 < len(tokens)
+                and (tokens[end + 1].startswith((
+                    "son-of", "daughter-of", "king-of", "servant-of",
+                    "priest-of", "prophet-of", "the·", "woman-of"
+                )) or NAME.fullmatch(tokens[end + 1]))):
+            return None
         if (NAME.fullmatch(next_part)
                 or next_part.startswith((
                     "the·", "son-of", "daughter-of", "king-of",
@@ -288,6 +323,7 @@ def _candidate_slots(tokens: list[str]):
         subject_at = predicate_end
         post_object = False
         post_recipient = False
+        closed_adjunct = False
         if (subject_at < len(tokens) and
                 ATTACHED_OBJECT_PRONOUN.fullmatch(tokens[subject_at])):
             # This source-English marked object can precede a delayed
@@ -296,13 +332,22 @@ def _candidate_slots(tokens: list[str]):
             subject_at += 1
             post_object = True
         elif (subject_at < len(tokens) and
-              tokens[subject_at] in PRONOMINAL_RECIPIENT and
-              lemma in REPORTING_WITH_RECIPIENT):
-            # English reporting verb + "to·them" + name is ambiguous:
-            # that name may be the speaker OR quoted-clause subject.
-            # Require a separately observable speech-opening cue below.
+              tokens[subject_at] in CLOSED_ENGLISH_RECIPIENT and
+              lemma in (REPORTING_WITH_RECIPIENT |
+                        DATIVE_PREDICATES_WITH_MARKED_OBJECT)):
+            # A reporter after "to·them" can be the quoted-clause subject.
+            # Dative verbs also permit NAME + standalone » as strong English
+            # role evidence. Both require independent subsequent cues.
             subject_at += 1
             post_recipient = True
+        elif (subject_at < len(tokens) and
+              tokens[subject_at] in
+              CLOSED_INTRANSITIVE_ADJUNCT_FRAMES.get(lemma, ())):
+            # The first following token is a COMPLETE closed adverbial/
+            # prepositional complement, not a second noun. The later named
+            # subject is thus linked to THIS same intransitive predicate.
+            subject_at += 1
+            closed_adjunct = True
 
         subject_end = _subject_phrase(tokens, subject_at)
         if subject_end is None:
@@ -321,14 +366,27 @@ def _candidate_slots(tokens: list[str]):
                 continue
             role = "POSTPOSED_AGENT_AFTER_PRONOMINAL_OBJECT"
         elif post_recipient:
-            # The name is NOT moved merely because it follows "to·them".
-            # A distinct English reporting/speech boundary must follow.
-            # This prevents "said to them Ahab he-served" from turning
-            # Ahab into the speaker.
-            if not _explicit_direct_speech_start(tokens, subject_end):
+            # A following standalone » marks a DIFFERENT object after the
+            # entire named nominal. That licenses a dative/agent/object
+            # frame for compatible English verbs. Otherwise, require a
+            # distinct quotation-opening cue for reporting verbs.
+            if (lemma in DATIVE_PREDICATES_WITH_MARKED_OBJECT
+                    and following == "»"
+                    and not (first > 0 and NAME.fullmatch(tokens[first - 1]))):
+                role = "DATIVE_AGENT_BEFORE_MARKED_OBJECT"
+            elif (lemma in REPORTING_WITH_RECIPIENT
+                  and _explicit_direct_speech_start(tokens, subject_end)):
+                role = "REPORTING_SPEAKER_AFTER_PRONOMINAL_RECIPIENT"
+            else:
                 yield None
                 continue
-            role = "REPORTING_SPEAKER_AFTER_PRONOMINAL_RECIPIENT"
+        elif closed_adjunct:
+            # No automatic move when a named subject already precedes
+            # this same predicate; the post-adjunct name can be an appositive.
+            if first > 0 and NAME.fullmatch(tokens[first - 1]):
+                yield None
+                continue
+            role = "INTRANSITIVE_AGENT_AFTER_CLOSED_ADJUNCT"
         elif following == "»":
             role = "FINITE_NOMINAL_EXPLICIT_OBJECT"
         elif (lemma in SPEECH and following is not None and (
