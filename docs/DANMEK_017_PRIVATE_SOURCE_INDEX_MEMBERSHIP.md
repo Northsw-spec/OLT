@@ -56,6 +56,17 @@ references. The audit writes **zero** source or output files and makes
 **zero** network calls. All public CI tests use a wholly invented
 929-link/39-prefix index, not any original third-party HTML or CHES.
 
+## Real owner-run acceptance (DANMEK-019, 2026-11-01)
+
+The owner subsequently obtained the OT source index HTML from the canonical
+source URL in their private Parrot environment and verified that its
+SHA-256 exactly equalled the import's recorded index SHA. DANMEK-017 was
+then actually run with `--require-index-complete` and reported
+**929 present; 0 missing; all source-chapter identities and SHA records
+matching**. This is a successful owner-reported local index-membership
+check, not independent PDF content or Hebrew word-alignment certification.
+[Owner-run evidence checkpoint](DANMEK_019_OWNER_REPORTED_INDEX_MEMBERSHIP_PASS.md).
+
 ## Parrot operation
 
 This command is relevant only **if the authentic index HTML is already
