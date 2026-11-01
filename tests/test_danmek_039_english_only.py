@@ -77,30 +77,119 @@ class TestDanMek039EnglishOnly(unittest.TestCase):
         self.assertEqual(after.count("Mira"), 1)
         self.assertIn("» the·light", after)
 
-    def test_identified_relative_subject_crosses_clause_boundaries(self):
+    def test_embedded_split_finite_has_its_own_subject_not_the_matrix_subject(self):
         tokens = [
-            "and·he-is-becoming", "as·which", "Natan", "-",
-            "he-sits", "in·house-of·him",
-            "and·he-is-saying", "Natan", "to", "Mira",
+            "and·he-is-becoming", "as·which",
+            "he-", "instructed", "Rowan", "»", "Micah",
+            "and·he-is-saying", "Talia", "to", "Natan",
         ]
         after, summary = reorder_english_subjects(tokens)
         self.assertEqual(
             after,
-            "and Natan - ·he-is-becoming as·which - he-sits "
-            "in·house-of·him and Natan - ·he-is-saying to Mira",
+            "and·he-is-becoming as·which "
+            "Rowan - he- instructed » Micah "
+            "and Talia - ·he-is-saying to Natan",
         )
         self.assertEqual(summary["applied_subject_moves"], 2)
-        self.assertIn("DISTANT_RELATIVE_CLAUSE_SUBJECT",
-                      " ".join(summary.keys()))
+        self.assertEqual(summary["rule_FINITE_NOMINAL_EXPLICIT_OBJECT"], 1)
+        self.assertNotIn("and Rowan - ·he-is-becoming", after)
 
-    def test_no_distance_limit_for_anchored_relative_subject(self):
-        words = ["and·he-is-becoming", "as·which"]
-        words += ["formerly"] * 150
-        words += ["Rowan", "-", "he-sits", "quietly"]
-        after, stats = reorder_english_subjects(words)
+    def test_distant_relative_antecedent_is_never_stolen_by_matrix_clause(self):
+        tokens = ["and·he-is-becoming", "as·which"]
+        tokens += ["formerly"] * 150
+        tokens += ["he-", "instructed", "Rowan", "»", "Micah"]
+        after, stats = reorder_english_subjects(tokens)
         self.assertEqual(stats["applied_subject_moves"], 1)
-        self.assertTrue(after.startswith("and Rowan - ·he-is-becoming"))
+        self.assertTrue(after.startswith("and·he-is-becoming as·which"))
+        self.assertTrue(after.endswith("Rowan - he- instructed » Micah"))
         self.assertEqual(after.count("formerly"), 150)
+
+    def test_split_finite_clauses_with_recipient_and_object_markers(self):
+        samples = (
+            (
+                ["he-", "instructed", "Rowan", "»", "the·city"],
+                "Rowan - he- instructed » the·city",
+                "FINITE_NOMINAL_EXPLICIT_OBJECT",
+            ),
+            (
+                ["and·he-", "spoke", "Mira", "to", "Natan"],
+                "and Mira - ·he- spoke to Natan",
+                "SPEAKER_WITH_RECIPIENT",
+            ),
+            (
+                ["she-", "gave-", "birth", "Talia", "»", "Mira"],
+                "Talia - she- gave- birth » Mira",
+                "FINITE_NOMINAL_EXPLICIT_OBJECT",
+            ),
+            (
+                ["he-", "appeared", "Rowan", "to·Mira"],
+                "Rowan - he- appeared to·Mira",
+                "INTRANSITIVE_SUBJECT_BOUNDARY",
+            ),
+        )
+        for source, expected, reason in samples:
+            with self.subTest(source=source):
+                actual, counts = reorder_english_subjects(source)
+                self.assertEqual(actual, expected)
+                self.assertEqual(counts["applied_subject_moves"], 1)
+                self.assertEqual(counts["rule_" + reason], 1)
+
+    def test_attached_object_pronoun_precedes_delayed_nominative_agent(self):
+        source = ["as·which", "he-", "instructed", "»·him",
+                  "Rowan", "the·prophet"]
+        after, counts = reorder_english_subjects(source)
+        self.assertEqual(
+            after,
+            "as·which Rowan the·prophet - he- instructed »·him",
+        )
+        self.assertEqual(
+            counts["rule_POSTPOSED_AGENT_AFTER_PRONOMINAL_OBJECT"], 1,
+        )
+
+    def test_no_false_postponed_subject_or_compound_subject_truncation(self):
+        cases = (
+            ["he-", "instructed", "»·him", "Rowan", "and·Mira"],
+            ["he-", "instructed", "»·him", "Rowan", "woman-of·him"],
+            ["Rowan", "he-", "instructed", "»·him", "Mira"],
+            ["he-", "said", "Rowan", "to·to-build-of", "the·city"],
+            ["he-", "saw", "Rowan", "at·the·gate"],
+            ["and·he-is-becoming", "as·which", "Natan",
+             "-", "he-sits", "in·house-of·him"],
+        )
+        for source in cases:
+            with self.subTest(source=source):
+                before = " ".join(source)
+                result, stats = reorder_english_subjects(source)
+                self.assertEqual(result, before)
+                self.assertEqual(stats.get("applied_subject_moves", 0), 0)
+
+    def test_counts_split_finite_english_predicates_independently(self):
+        src = [
+            "and·he-is-becoming", "as·which",
+            "he-", "instructed", "Rowan", "»", "Micah",
+        ]
+        result, stats = reorder_english_subjects(src)
+        self.assertEqual(stats["english_finite_predicates_seen"], 2)
+        self.assertEqual(stats["english_split_finite_predicates_seen"], 1)
+        self.assertEqual(stats["applied_subject_moves"], 1)
+        self.assertIn("Rowan - he- instructed", result)
+
+    def test_unfinished_or_coordinated_nominative_is_not_truncated(self):
+        cases = (
+            ["and·they-are-anointing", "»·him", "Zadok",
+             "the·priest", "and·Nathan", "the·prophet"],
+            ["he-", "instructed", "»·him", "Rowan", "and·sons-of·him"],
+            ["he-", "instructed", "»·him", "Rowan", "grandee-of",
+             "the·king"],
+            ["thus", "he-says", "Rowan-of", "hosts"],
+            ["and·he-is-saying", "Mira", "the·priest", "and·Natan",
+             "to·Rowan"],
+        )
+        for fragments in cases:
+            with self.subTest(fragments=fragments):
+                actual, stats = reorder_english_subjects(fragments)
+                self.assertEqual(actual, " ".join(fragments))
+                self.assertEqual(stats.get("applied_subject_moves", 0), 0)
 
     def test_transitive_object_and_infinitive_are_not_moved(self):
         for tokens in (
@@ -134,6 +223,8 @@ class TestDanMek039EnglishOnly(unittest.TestCase):
         self.assertEqual(report["source_books"], 1)
         self.assertEqual(report["source_chapters"], 1)
         self.assertEqual(report["source_verses"], 2)
+        self.assertGreaterEqual(report["english_finite_predicates_seen"], 2)
+        self.assertGreaterEqual(report["english_split_finite_predicates_seen"], 0)
         self.assertEqual(report["mode"], "AUDIT_ONLY")
         self.assertGreater(report["subject_moves_applied"], 0)
         self.assertFalse(report["original_language_code_imported"])

@@ -10,6 +10,12 @@ Denna fil ersätter samtliga tidigare DANMEK-masterpromptar och motstridiga DANM
 
 **NO HEBREW REVALIDATION.** Ingen jämförelse CHES↔hebreiska, CHES↔arameiska, CHES↔OSHB/WLC; ingen återkontroll av hebreiska ord, lemma, morfologi eller ordjustering som villkor för engelsk grammatik. **CHES's linguistic decisions** are accepted as the English working baseline. Forskning om grundspråk tillhör helt andra, separat beställda OLT-uppdrag och får inte importeras i DANMEK:s aktiva körväg.
 
+## DANMEK-040 — KORRIGERAD SATSKOPPLING OCH UPPDELAT ENGELSKT VERB (2026-11-01)
+
+Direkt engelskspråkig CHES-inventering visar **5 019** separata engelska pronomenprefixfragment, av vilka **4 586** kan paras med en eller två efterföljande lexikala verbdelar. Det är verbgrupper, inte bevisade ordföljdsfel. Den tidigare DANMEK-039 v1-regeln som kunde flytta ett **inbäddat bisatssubjekt till huvudverbets position** är utraderad: den saknade identifierade träffar i det undersökta faktiska relativsatsmönstret och var grammatiskt osäker. Varje identifierat subjekt ska kopplas till sin *egen* finita engelska verbgrupp, även om föregående huvudsats ligger långt bort.
+
+Korrigera endast fullständiga subjektfraser. Samordningar (person + `and·` + annan person), titlar, `-of`-kedjor och separata objekt är inte förenklade namn som får lossas från sin fras. Nytt v2-revisionsnummer i **samma enda aktiva `scripts/danmek_039_english_only.py`**; inga äldre motorer, inga språkkälljämförelser eller parallella läsarversioner. [Korpusbaserad analys](DANMEK_040_REAL_ENGLISH_SPLIT_CLAUSE_AUDIT.md).
+
 ## Engelska satsroller
 
 1. Analysera de ursprungliga **engelska CHES-fragmentens ordningsföljd**. Identifiera engelska subjekt, finita verb/predikat, objekt, indirekta objekt, mottagare, prepositioner, inskjutna led, relativsatser, bisatser och satsgränser.

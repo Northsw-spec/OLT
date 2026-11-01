@@ -20,7 +20,7 @@ import stat
 import tempfile
 import zipfile
 
-REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v1"
+REVISION = "DANMEK-039-ENGLISH-ONLY-SUBJECT-VERB-v2"
 CHAPTER = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.json\Z")
 REFERENCE = re.compile(r"([a-z0-9]{3})\.([1-9]\d*)\.([1-9]\d*)\Z")
 FINITE = re.compile(
@@ -36,12 +36,17 @@ NAME = re.compile(
 LOWER_LEXICAL = re.compile(r"[a-z]+(?:-[a-z]+)*\Z")
 PREDICATE_STEM = re.compile(r"[a-z]{2,8}\Z")
 ING_TAIL = re.compile(r"ing(?:-[a-z]+)*\Z")
-RELATIVE_ANCHOR = frozenset({"as·which", "that·which", "as·whom"})
+# The outer verb and the embedded finite clause have separate subjects.
+# A preceding relative marker alone must NOT make the embedded subject the
+# subject of the main clause.
+SPLIT_PRONOUN = re.compile(r"(?:(?:and|And)·)?(?:he|she|they|we|you|ye|thou)-\Z")
+SPLIT_PREFIX = re.compile(r"[a-z]+-\Z")
+ATTACHED_OBJECT_PRONOUN = re.compile(r"»·(?:him|her|them|me|you|us|thee)\Z")
 SPEECH = frozenset({"said", "says", "saying", "speaking", "spoke"})
 INTRANSITIVE = frozenset({
     "came", "come", "coming", "went", "going", "arose", "rose",
     "standing", "stood", "resting", "lived", "dwelt", "dying",
-    "reigned", "sitting", "sat",
+    "reigned", "sitting", "sat", "appeared",
 })
 SUBJECT_TITLES = frozenset({
     "the·king", "the·prophet", "the·priest", "the·queen", "the·servant",
@@ -151,12 +156,30 @@ def _read_chapter(raw: bytes, book: str, chapter: int) -> dict:
 
 
 def _predicates(tokens: list[str]):
-    """Finite pronoun-verb English spans, including split lexical predicates."""
+    """Finite English pronoun–verb groups, even when source PDF split them.
+
+    The actual private CHES source repeatedly has he- / instructed or
+    and·he- / spoke. Failing to parse these loses the subject of an embedded
+    clause and encourages false movement into an outer relative clause.
+    """
     for i, token in enumerate(tokens):
-        if not FINITE.fullmatch(token):
+        whole = FINITE.fullmatch(token) is not None
+        split = SPLIT_PRONOUN.fullmatch(token) is not None
+        if not (whole or split):
             continue
         end = i + 1
-        if token.endswith("-") and end < len(tokens):
+        if split:
+            if end >= len(tokens):
+                continue
+            if LOWER_LEXICAL.fullmatch(tokens[end]):
+                end += 1
+            elif (end + 1 < len(tokens) and
+                  SPLIT_PREFIX.fullmatch(tokens[end]) and
+                  LOWER_LEXICAL.fullmatch(tokens[end + 1])):
+                end += 2
+            else:
+                continue
+        elif token.endswith("-") and end < len(tokens):
             if LOWER_LEXICAL.fullmatch(tokens[end]):
                 end += 1
             elif (end + 1 < len(tokens)
@@ -167,24 +190,49 @@ def _predicates(tokens: list[str]):
 
 
 def _subject_phrase(tokens: list[str], i: int) -> int | None:
-    """Return end-exclusive for one complete, bounded English nominal."""
+    """End-exclusive for a COMPLETE bounded English nominal, else None.
+
+    Never silently truncate a coordinated name+title+and+second-person
+    nominal, a possessive "-of" head, or a following family/role modifier.
+    This guard also applies to nominal subjects after explicit object marks.
+    """
     if i >= len(tokens) or not NAME.fullmatch(tokens[i]):
         return None
-    if i + 1 < len(tokens):
-        nxt = tokens[i + 1]
+    head = tokens[i]
+    if head.endswith("-of"):
+        # e.g. a "name-of hosts" source phrase: head alone is not complete.
+        return None
+    end = i + 1
+    if end < len(tokens):
+        nxt = tokens[end]
         if nxt in SUBJECT_TITLES:
-            return i + 2
-        if nxt in {"son-of", "daughter-of", "king-of", "servant-of"}:
-            return i + 3 if (i + 2 < len(tokens)
-                             and NAME.fullmatch(tokens[i + 2])) else None
-        if nxt == "Elohim-of":
-            return i + 3 if (i + 2 < len(tokens)
-                             and NAME.fullmatch(tokens[i + 2])) else None
-        if (NAME.fullmatch(nxt) or nxt.startswith((
-            "the·", "son-of", "daughter-of", "king-of", "servant-of"
-        ))):
+            end += 1
+        elif nxt in {"son-of", "daughter-of", "king-of", "servant-of",
+                     "prophet-of", "priest-of"}:
+            if end + 1 >= len(tokens) or not NAME.fullmatch(tokens[end + 1]):
+                return None
+            end += 2
+        elif nxt == "Elohim-of":
+            if end + 1 >= len(tokens) or not NAME.fullmatch(tokens[end + 1]):
+                return None
+            end += 2
+    if end < len(tokens):
+        next_part = tokens[end]
+        if (NAME.fullmatch(next_part)
+                or next_part.startswith((
+                    "the·", "son-of", "daughter-of", "king-of",
+                    "servant-of", "prophet-of", "priest-of",
+                    "woman-of", "father-of", "brother-of",
+                    "sister-of", "grandee-of", "sons-of", "daughters-of"
+                ))
+                or next_part.endswith("-of")
+                or (
+                    next_part.startswith("and·")
+                    and not (FINITE.fullmatch(next_part)
+                             or SPLIT_PRONOUN.fullmatch(next_part))
+                )):
             return None
-    return i + 1
+    return end
 
 
 def _predicate_lemma(tokens: list[str], start: int, end: int) -> str:
@@ -192,53 +240,49 @@ def _predicate_lemma(tokens: list[str], start: int, end: int) -> str:
 
 
 def _candidate_slots(tokens: list[str]):
-    """Return role-evidenced proposals; never move a name solely by location.
+    """English-only subject evidence for each separate finite predicate.
 
-    Distant candidates use bounded *clause evidence* rather than a maximum
-    token-distance parameter. No fixed window, no hardcoded biblical names.
+    Roles may be supported by marked objects and recipient phrases. A named
+    noun in a DIFFERENT relative/embedded clause is NEVER borrowed as the
+    subject of the first predicate. The independent clause can be found
+    anywhere in the verse; no arbitrary character-distance window is used.
     """
-    finite = list(_predicates(tokens))
-    starts = {i for i, _ in finite}
-    for first, predicate_end in finite:
+    for first, predicate_end in _predicates(tokens):
         if first > 0 and tokens[first - 1] == "-":
-            continue   # already an explicit subject–verb pairing
+            continue  # an explicitly preposed subject with a boundary
         lemma = _predicate_lemma(tokens, first, predicate_end)
-        noun_at = predicate_end
-        relative = False
+        subject_at = predicate_end
+        post_object = False
+        if (subject_at < len(tokens) and
+                ATTACHED_OBJECT_PRONOUN.fullmatch(tokens[subject_at])):
+            # A *marked pronominal object* before a proper nominal is a
+            # structural clue to a delayed agent, even in a relative clause.
+            # It is NOT a cue for a general object + noun movement.
+            subject_at += 1
+            post_object = True
 
-        # Relative clause subject thread: an introductory verb whose named
-        # subject is present after an 'as·which' group and immediately before
-        # the explicit '- finite-verb' embedded-clause boundary.
-        if noun_at < len(tokens) and tokens[noun_at] in RELATIVE_ANCHOR:
-            for k in range(noun_at + 1, len(tokens)):
-                if k in starts or tokens[k] in {"»", "and·»"}:
-                    break
-                phrase_end = _subject_phrase(tokens, k)
-                if (phrase_end is not None and
-                    phrase_end + 1 < len(tokens) and
-                    tokens[phrase_end] == "-" and
-                    phrase_end + 1 in starts):
-                    noun_at = k
-                    relative = True
-                    break
-            if not relative:
-                yield None
-                continue
-
-        end = _subject_phrase(tokens, noun_at)
-        if end is None:
-            if noun_at < len(tokens) and NAME.fullmatch(tokens[noun_at]):
+        subject_end = _subject_phrase(tokens, subject_at)
+        if subject_end is None:
+            if (subject_at < len(tokens) and
+                    NAME.fullmatch(tokens[subject_at])):
                 yield None
             continue
-        following = tokens[end] if end < len(tokens) else None
-        if relative:
-            role = "DISTANT_RELATIVE_CLAUSE_SUBJECT"
+        following = tokens[subject_end] if subject_end < len(tokens) else None
+        if post_object:
+            # Refuse if an earlier adjacent noun already occupies the
+            # subject slot or if a coordinated/compound subject is present.
+            if first > 0 and NAME.fullmatch(tokens[first - 1]):
+                yield None
+                continue
+            role = "POSTPOSED_AGENT_AFTER_PRONOMINAL_OBJECT"
         elif following == "»":
             role = "FINITE_NOMINAL_EXPLICIT_OBJECT"
-        elif (lemma in SPEECH and following is not None and
-              (following == "to" or
-               following.startswith("to·") and
-               not following.startswith("to·to-"))):
+        elif (lemma in SPEECH and following is not None and (
+            following == "to" or (
+                following.startswith("to·") and
+                not following.startswith("to·to-")
+            )
+        )):
             role = "SPEAKER_WITH_RECIPIENT"
         elif (lemma in SPEECH and following is not None and
               following.startswith(("and·he-", "and·she-", "he-", "she-"))):
@@ -255,7 +299,7 @@ def _candidate_slots(tokens: list[str]):
         else:
             yield None
             continue
-        yield (first, predicate_end, noun_at, end, role)
+        yield (first, predicate_end, subject_at, subject_end, role)
 
 
 def reorder_english_subjects(fragments: list[str]) -> tuple[str, dict]:
@@ -273,6 +317,14 @@ def reorder_english_subjects(fragments: list[str]) -> tuple[str, dict]:
     original = " ".join(tokens)
     changes = []
     counts = Counter()
+    # Corpus-wide counters distinguish observed English finite structures
+    # from grammatically supported and actually moved subjects.
+    identified_finite = list(_predicates(tokens))
+    counts["english_finite_predicates_seen"] = len(identified_finite)
+    counts["english_split_finite_predicates_seen"] = sum(
+        SPLIT_PRONOUN.fullmatch(tokens[first]) is not None
+        for first, _ in identified_finite
+    )
     for match in _candidate_slots(tokens):
         counts["reviewed_finite_noun_contexts"] += 1
         if match is None:
@@ -298,13 +350,13 @@ def reorder_english_subjects(fragments: list[str]) -> tuple[str, dict]:
             result = " ".join(lead + dash + verb)
         else:
             result = " ".join(nominal) + " - " + " ".join(predicate)
-        if role == "DISTANT_RELATIVE_CLAUSE_SUBJECT":
-            # Move the distant noun but keep the subordinate '-' separator.
-            interior = tokens[end_pred:start_name]
+        # A delayed source subject can follow a *marked object pronoun*.
+        # Preserve intervening English source fragments AFTER the predicate
+        # without deleting, flattening, or reinterpreting their meaning.
+        interior = tokens[end_pred:start_name]
+        if interior:
             result += " " + " ".join(interior)
-            source_end = end_name
-        else:
-            source_end = end_name
+        source_end = end_name
         begin = start
         old = " ".join(tokens[begin:source_end])
         if old == result:
@@ -467,6 +519,10 @@ def build_current_english(
         "source_verses": counts["verses_scanned"],
         "subject_role_candidates": counts["recognized_subject_roles"],
         "subject_moves_applied": counts["applied_subject_moves"],
+        "english_finite_predicates_seen":
+            counts["english_finite_predicates_seen"],
+        "english_split_finite_predicates_seen":
+            counts["english_split_finite_predicates_seen"],
         "unresolved_subject_roles": counts["unresolved_subject_roles"],
         "subject_rule_counts": {
             k.removeprefix("rule_"): v for k, v in sorted(counts.items())
