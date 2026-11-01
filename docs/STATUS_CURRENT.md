@@ -23,6 +23,12 @@
 - The display rule matches exact `sur faces` inside one English text fragment or exact consecutive `sur`/`faces` source fragments **within one verse**. It does not edit `surfaces`, independent `sur`, adjacent `the`, the source grammatical `c` or Hebrew word order. It reports `olt_display_sur_faces_to_faces_count` without CHES text in logs. No automatic proof of `pnei` original-language token alignment is claimed.
 - **Unrelated owner reversal remains permanent:** No capitalization of pronouns merely because they refer to God/the LORD (DANMEK-007). No full-OT English-order reorder or pub rights certified; `publication_status=BLOCKED`. [Owner display rule](DANMEK_008_SUR_FACES_DISPLAY_ONLY.md).
 
+## DANMEK-029 — Private English clause-role classifier (2026-11-01)
+
+- **Implemented:** stand-alone `scripts.danmek_029_private_english_clause_review` scans every locally available original CHES English verse, without a CHES-vs-Hebrew audit, and classifies adjacent English pronoun–verb plus noun-phrase *candidates* by bounded subject pattern, transitive object risk, or unresolved grammatical role. Multiple clauses in one verse are retained separately. No regex is represented as grammatical proof or a complete corpus certification.
+- **311 historical English ambiguity cases:** separately counted against locked existing reader and included in the optional private report even without a detectable adjacent noun-phrase candidate. No blanket errors/approvals. In-memory DANMEK-028 comparison tracks old unsafe movement suppression without changing any existing snapshot.
+- **Output and privacy:** default aggregated metadata only; opt-in content-addressed 0600 private JSON and offline HTML under `.olt-private/ches-clause-review`; never licensed text in public Git/Actions/logs. **Real private corpus run not observed in CI.** Next stage DANMEK-030: evidence-led *new tested* bounded grammar recognition, never automatic object moves. [DANMEK-029 details](DANMEK_029_ENGLISH_CLAUSE_ROLE_REVIEW.md). Publication BLOCKED.
+
 ## DANMEK-028 — Expanded noun-subject detection with legacy ambiguity guard (2026-11-01)
 
 - **New optional subject-first reader v2:** additional article-marked plural groups, compound/title proper names, selected past tense hearing/report, passives and intransitives support multiple bounded subject–verb movements within one verse. The tool must not equate a capitalized noun following a transitive verb with an authenticated subject.
