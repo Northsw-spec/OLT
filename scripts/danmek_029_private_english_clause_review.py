@@ -56,7 +56,7 @@ _TRANSITIVE_VERB_HINTS = frozenset({
     "met", "meet", "meets", "meeting", "called", "call", "calls", "calling",
     "loved", "love", "loves", "loving", "made", "make", "makes", "making",
     "blessed", "bless", "blesses", "blessing", "found", "find", "finds",
-    "took", "take", "takes", "taking", "built", "build", "builds",
+    "took", "take", "takes", "taking", "built", "build", "builds", "building",
     "returned", "return", "returns", "returning",
     "sent", "send", "sends", "sending",
     "cut", "invited", "invite", "invites", "inviting",
