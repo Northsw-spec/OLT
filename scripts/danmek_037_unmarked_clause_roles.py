@@ -193,7 +193,7 @@ def apply_unmarked_english_roles(
     }
 
 
-def _html(name: str, rows: list[tuple[str,str]]) -> bytes:
+def _html(name: str, rows: list[tuple[str,str]], *, edition: str = "v7") -> bytes:
     body = "".join(
         "<section><b>" + html.escape(ref, quote=True) + "</b> <span>" +
         html.escape(text, quote=True) + "</span></section>"
@@ -205,12 +205,12 @@ def _html(name: str, rows: list[tuple[str,str]]) -> bytes:
         '<meta http-equiv="Content-Security-Policy" content="default-src '
         "'none'; style-src 'unsafe-inline'; img-src 'none'; object-src "
         "'none'; base-uri 'none'; form-action 'none'\">"
-        '<title>Private DANMEK v7 English</title>'
+        '<title>Private DANMEK ' + edition + ' English</title>'
         '<style>body{font:17px/1.55 Georgia,serif;max-width:960px;'
         'margin:2rem auto;padding:1rem;background:#faf9f7;color:#222}'
         'section{padding:.5rem 0;border-bottom:1px solid #ddd}'
         'b{font:13px system-ui}span{white-space:pre-wrap;overflow-wrap:anywhere}'
-        '</style></head><body><h1>Private v7 English — ' +
+        '</style></head><body><h1>Private ' + edition + ' English — ' +
         html.escape(name, quote=True) + '</h1>'
         '<p>Finite, nominal, recipient, object-marker and clause-boundary '
         'roles from source English fragments only. Not complete grammar '
@@ -221,8 +221,10 @@ def _html(name: str, rows: list[tuple[str,str]]) -> bytes:
 
 def build_private_unmarked_clause_reader(
     private_root: Path, *, render: bool = False, require_311: bool = False,
+    include_speech_frames_v8: bool = False,
 ) -> dict:
-    if type(render) is not bool or type(require_311) is not bool:
+    if (type(render) is not bool or type(require_311) is not bool
+            or type(include_speech_frames_v8) is not bool):
         raise DanMek037Error("INVALID_PRIVATE_UNMARKED_READER_OPTIONS")
     try:
         root = _private_archive_root(private_root)
@@ -230,12 +232,22 @@ def build_private_unmarked_clause_reader(
             root, render=False, olt_display_faces=True,
             olt_owner_approved_candidates=True,
         )
+        revision = REVISION
+        if include_speech_frames_v8:
+            # Intentional lazy import: v8 is an opt-in new edition only.
+            # This leaves the legacy v7 function's output, ID and caller
+            # behavior untouched when the flag is absent.
+            from scripts.danmek_038_speech_subject_frames import (
+                REVISION as REVISION_038, apply_speech_subject_frames,
+            )
+            revision = REVISION_038
         digest = hashlib.sha256(
-            (REVISION + ":" + baseline["snapshot_id"]).encode("ascii")
+            (revision + ":" + baseline["snapshot_id"]).encode("ascii")
         )
         pages = []
         counts: Counter[str] = Counter()
         by_new_rule: Counter[str] = Counter()
+        v8_by_rule: Counter[str] = Counter()
         verses_scanned = historical = verses_changed = 0
         for file in sorted(root.iterdir(), key=lambda x: x.name):
             if file.is_symlink() or not file.is_file():
@@ -263,6 +275,13 @@ def build_private_unmarked_clause_reader(
                 text, v5, _ = reorder_structurally_supported_subjects(text)
                 text, v6, _ = apply_source_nominal_roles(source, text)
                 text, v7, result = apply_unmarked_english_roles(source, text)
+                v8 = []
+                if include_speech_frames_v8:
+                    text, v8, v8_stats = apply_speech_subject_frames(source, text)
+                    for key, value in v8_stats.items():
+                        counts["v8_" + key] += value
+                    for event in v8:
+                        v8_by_rule[event["reason_code"]] += 1
                 counts["older_v4_contexts_retained"] += len(v4)
                 counts["older_v5_structures_retained"] += len(v5)
                 counts["older_v6_structures_retained"] += len(v6)
@@ -270,12 +289,13 @@ def build_private_unmarked_clause_reader(
                     counts[key] += value
                 for edit in v7:
                     by_new_rule[edit["rule_code"]] += 1
-                verses_changed += int(bool(v4 or v5 or v6 or v7))
+                verses_changed += int(bool(v4 or v5 or v6 or v7 or v8))
                 verses.append((verse["reference"], text))
             if len(pages) >= MAX_CHAPTERS:
                 raise DanMek037Error("PRIVATE_SOURCE_CHAPTER_LIMIT")
             pages.append((file.name[:-5] + ".html",
-                          _html(prefix+"."+number, verses)))
+                          _html(prefix+"."+number, verses,
+                                edition="v8" if include_speech_frames_v8 else "v7")))
         if verses_scanned != baseline["observed_verse_count"]:
             raise DanMek037Error("SOURCE_VERSE_COUNT_DRIFT")
         if historical != baseline[
@@ -295,9 +315,18 @@ def build_private_unmarked_clause_reader(
             + counts["unmarked_clause_overlap_conflicts"]
         ):
             raise DanMek037Error("UNMARKED_CANDIDATE_ACCOUNTING")
+        if include_speech_frames_v8 and counts["v8_raw_source_speech_frames"] != (
+            counts["v8_new_v8_speech_subject_moves"]
+            + counts["v8_already_changed_or_ambiguous_source_alignment"]
+            + counts["v8_edit_overlap_conflicts"]
+        ):
+            raise DanMek037Error("V8_COMPOUND_SPEECH_FRAME_ACCOUNTING")
         snapshot = "snapshot-" + digest.hexdigest()[:24]
         if render:
-            parent = root.parent / "ches-english-clause-roles"
+            parent = root.parent / (
+                "ches-english-speech-formula-v8" if include_speech_frames_v8
+                else "ches-english-clause-roles"
+            )
             _safe_dir(parent)
             folder = parent / snapshot
             _safe_dir(folder)
@@ -312,15 +341,23 @@ def build_private_unmarked_clause_reader(
                 '<!doctype html><html lang="en"><head><meta charset="utf-8">'
                 '<meta http-equiv="Content-Security-Policy" content="'
                 "default-src 'none'; base-uri 'none'; form-action 'none'\">"
-                '<title>Private English v7</title></head><body>'
-                '<h1>English clause roles v7</h1>'
+                '<title>Private English ' +
+                ('v8' if include_speech_frames_v8 else 'v7') +
+                '</title></head><body>'
+                '<h1>English clause roles ' +
+                ('v8' if include_speech_frames_v8 else 'v7') +
+                '</h1>'
                 '<p>CHES and previous snapshots unchanged, publication BLOCKED.'
                 '</p><ul>' + links + '</ul></body></html>\n'
             ).encode("utf-8")
             _write_once(folder, "index.html", index)
-        return {
-            "checkpoint": REVISION,
+        report = {
+            "checkpoint": revision,
             "mode": (
+                "SEPARATE_PRIVATE_ENGLISH_SPEECH_READING_V8"
+                if include_speech_frames_v8 and render else
+                "PRIVATE_ENGLISH_SPEECH_V8_AUDIT_NO_FILES"
+                if include_speech_frames_v8 else
                 "SEPARATE_PRIVATE_ENGLISH_CLAUSE_READING_V7" if render
                 else "PRIVATE_CLAUSE_AUDIT_METADATA_ONLY"
             ),
@@ -352,6 +389,20 @@ def build_private_unmarked_clause_reader(
             "private_english_on_stdout": False,
             "publication_status": "BLOCKED",
         }
+        if include_speech_frames_v8:
+            report.update({
+                "private_v8_snapshot": snapshot,
+                "source_v8_speech_subject_frames":
+                    counts["v8_raw_source_speech_frames"],
+                "new_v8_speech_subject_moves":
+                    counts["v8_new_v8_speech_subject_moves"],
+                "v8_already_changed_or_nonunique":
+                    counts["v8_already_changed_or_ambiguous_source_alignment"],
+                "v8_conflicting_edits": counts["v8_edit_overlap_conflicts"],
+                "new_v8_moves_by_class": dict(sorted(v8_by_rule.items())),
+                "older_v7_reader_output_modified": False,
+            })
+        return report
     except DanMek037Error:
         raise
     except (DanMek027Error, DanMek034Error, DanMek035Error, DanMek036Error) as exc:
