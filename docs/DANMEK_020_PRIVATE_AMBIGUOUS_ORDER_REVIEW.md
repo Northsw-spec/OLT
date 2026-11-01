@@ -89,8 +89,12 @@ grant editorial approval, or modify the verified reading.
   including contradictory and missing candidate references. GitHub
   Actions cannot inspect the user's private 311 real cases.
 
-**Current state:** The 311 is an owner-reported real audit total.
-The exact DANMEK-020 real queue is **NOT YET GENERATED** until the
-owner runs the command on Parrot. All cases remain unapproved.
+**Owner-run update (2026-11-01):** The owner actually executed
+`--require-311 --write-private-queue` on Parrot, reporting **311**
+English ambiguity cases and **311** provisional same-reference
+original-language candidates with **0** missing references. A new
+private ledger was created (`NEW_PRIVATE_QUEUE`). Philological
+verification and English corrections remain **NOT DONE**. See
+[DANMEK-021](DANMEK_021_OWNER_REPORTED_PRIVATE_311_QUEUE.md).
 DANMEK-013/014 visually verified presentation remains LOCKED.
 Complete 66-book OLT translation NOT APPROVED. Publication BLOCKED.
