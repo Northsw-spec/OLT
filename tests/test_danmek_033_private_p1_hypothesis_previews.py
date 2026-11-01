@@ -61,12 +61,16 @@ class TestDanMek033PrivateP1HypothesisPreviews(unittest.TestCase):
         self.assertEqual(
             preview_one_unapproved_subject_hypothesis(
                 verse_english=original, rule=rules[0],
+                trusted_reference="gen.1.1",
+                trusted_chapter_sha256="a" * 64,
             ),
             "Sailors - he-saw and he-loved Rowan",
         )
         self.assertEqual(
             preview_one_unapproved_subject_hypothesis(
                 verse_english=original, rule=rules[1],
+                trusted_reference="gen.1.1",
+                trusted_chapter_sha256="a" * 64,
             ),
             "he-saw Sailors and Rowan - he-loved",
         )
@@ -84,6 +88,8 @@ class TestDanMek033PrivateP1HypothesisPreviews(unittest.TestCase):
         self.assertEqual(rows[0]["english_role_class"], UNRESOLVED)
         alternate = preview_one_unapproved_subject_hypothesis(
             verse_english=english, rule=rows[0],
+            trusted_reference="gen.1.1",
+            trusted_chapter_sha256="a" * 64,
         )
         self.assertEqual(alternate, "And Rowan -·he-mused")
         self.assertEqual(english, "And·he-mused Rowan")
@@ -108,11 +114,15 @@ class TestDanMek033PrivateP1HypothesisPreviews(unittest.TestCase):
                 with self.assertRaises(DanMek033Error):
                     preview_one_unapproved_subject_hypothesis(
                         verse_english=english, rule=altered,
+                        trusted_reference="gen.1.1",
+                        trusted_chapter_sha256="a" * 64,
                     )
         with self.assertRaises(DanMek033Error):
             preview_one_unapproved_subject_hypothesis(
                 verse_english="he-saw Other and he-loved Rowan",
                 rule=row,
+                trusted_reference="gen.1.1",
+                trusted_chapter_sha256="a" * 64,
             )
 
     def test_requires_existing_031_private_report(self):
