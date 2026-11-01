@@ -29,7 +29,7 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
         self.root.mkdir(mode=0o700)
         self.speech = ["and·he-is-saying", "Rowan", "to", "Mira"]
         self.dying = [
-            "and·she-is-dying", "Mira", "and·he-is-reigning", "Rowan",
+            "and·she-is-dying", "Mira", "and·he-is-reigning",
         ]
         doc = invented_chapter("gen", 1)
         doc["verses"][0]["source_ches_spans_NOT_OLT_TRANSLATION"] = [
@@ -40,7 +40,7 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
             {"original_ches_line_text": v, "page": 1, "pdf_x": 20+i*15,
              "pdf_y": 95} for i, v in enumerate(self.dying)
         ]
-        doc["ches_pdf_green_spans"] = 8
+        doc["ches_pdf_green_spans"] = 7
         write_private_json(doc, self.root / "gen.1.json")
         self.bytes = (self.root / "gen.1.json").read_bytes()
         self.old = build_private_reader(
@@ -115,7 +115,7 @@ class TestDanMek037UnmarkedClauseRoles(unittest.TestCase):
     def test_two_distinct_clause_moves_do_not_conflict(self):
         seq = (
             ["and·he-is-saying", "Rowan", "to", "Mira"] +
-            ["and·she-is-dying", "Talia", "and·he-is-coming", "Natan"]
+            ["and·she-is-dying", "Talia", "and·he-is-coming"
         )
         new, moves, totals = apply_unmarked_english_roles(seq, " ".join(seq))
         self.assertEqual(len(moves), 2)
