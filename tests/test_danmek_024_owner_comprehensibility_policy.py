@@ -60,7 +60,7 @@ class TestDanMek024OwnerComprehensibilityGate(unittest.TestCase):
                       policy["proposed_candidate_statuses"])
         doc = DOC.read_text(encoding="utf-8")
         self.assertIn("311", doc)
-        self.assertIn("NOT a command to stop grammar", doc)
+        self.assertIn("a command to stop grammar/reordering work", doc)
         self.assertIn("DANMEK-025", doc)
         self.assertIn("publication", doc.lower())
 
